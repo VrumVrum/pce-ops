@@ -1,0 +1,58 @@
+name: daily-ops
+# Runs the project's data + health jobs on GitHub's servers instead of the owner's PC.
+# Public repo => Actions minutes are free and unlimited. Results are committed here and
+# read by the cloud operating loop via raw.githubusercontent.com (which it CAN reach).
+on:
+  schedule:
+    - cron: '30 4 * * *'   # 04:30 UTC daily
+    - cron: '30 16 * * *'  # 16:30 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ops:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch Google Search Console data
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+          GSC_OUT: data/gsc_dump.json
+        run: |
+          mkdir -p data
+          python scripts/gsc_dump.py || echo "GSC step failed (non-fatal)"
+
+      - name: Build metrics snapshot (GSC + Supabase)
+        env:
+          GSC_OUT: data/gsc_dump.json
+          METRICS_OUT: data/METRICS.json
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE: ${{ secrets.SUPABASE_SERVICE_ROLE }}
+        run: python scripts/metrics.py || echo "metrics step failed (non-fatal)"
+
+      - name: Install Playwright (functional smoke test)
+        run: npx --yes playwright@1.49.0 install --with-deps chromium
+
+      - name: Run functional smoke test against production
+        env:
+          SMOKE_OUT: data/SMOKE.json
+        run: node scripts/smoke.cjs || echo "smoke step failed (non-fatal)"
+
+      - name: Commit results
+        run: |
+          git config user.name "pce-ops-bot"
+          git config user.email "ops@projectcostestimator.com"
+          git add data/ || true
+          git diff --staged --quiet || git commit -m "data: ops snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push || echo "nothing to push"
