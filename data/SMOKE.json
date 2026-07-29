@@ -1,0 +1,49 @@
+{
+  "generated_utc": "2026-07-29T07:47:32.486Z",
+  "passed": 8,
+  "total": 8,
+  "all_green": true,
+  "checks": [
+    {
+      "name": "load /",
+      "ok": true,
+      "detail": "HTTP 200, 10773 chars, 0 JS err"
+    },
+    {
+      "name": "load /calculator",
+      "ok": true,
+      "detail": "HTTP 200, 1615 chars, 0 JS err"
+    },
+    {
+      "name": "load /tools/rfp-generator",
+      "ok": true,
+      "detail": "HTTP 200, 8999 chars, 0 JS err"
+    },
+    {
+      "name": "load /tools/freelancer-quote-generator",
+      "ok": true,
+      "detail": "HTTP 200, 8237 chars, 0 JS err"
+    },
+    {
+      "name": "load /cost/industry/dentist",
+      "ok": true,
+      "detail": "HTTP 200, 5658 chars, 0 JS err"
+    },
+    {
+      "name": "load /cost/app-like/uber",
+      "ok": true,
+      "detail": "HTTP 200, 6032 chars, 0 JS err"
+    },
+    {
+      "name": "load /cost/hire/india",
+      "ok": true,
+      "detail": "HTTP 200, 7760 chars, 0 JS err"
+    },
+    {
+      "name": "uber calculator reacts to clicks",
+      "ok": true,
+      "detail": "$57,500–$131,000 -> $18,000–$41,500"
+    }
+  ],
+  "note": "Desktop functional smoke test (real browser). The cloud loop reads this to know functionality status without being able to reach production."
+}
