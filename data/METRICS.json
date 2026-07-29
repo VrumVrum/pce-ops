@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-07-29T08:57:49.295056Z",
+  "generated_utc": "2026-07-29T17:48:49.897028Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-07-29",
     "totals_28d": {
-      "clicks": 58,
-      "impressions": 18308,
-      "ctr": 0.317,
-      "position": 27.59
+      "clicks": 61,
+      "impressions": 19314,
+      "ctr": 0.316,
+      "position": 27.32
     },
     "totals_7d": {
-      "clicks": 32,
-      "impressions": 6376,
-      "ctr": 0.502,
-      "position": 25.62
+      "clicks": 35,
+      "impressions": 7382,
+      "ctr": 0.474,
+      "position": 25.18
     },
     "totals_90d": {
-      "clicks": 81,
-      "impressions": 28579,
-      "ctr": 0.283,
-      "position": 29.08
+      "clicks": 84,
+      "impressions": 29585,
+      "ctr": 0.284,
+      "position": 28.85
     }
   },
   "supabase": {
@@ -58,7 +58,7 @@
     },
     "/cost/ai/": {
       "pages_with_data": 2,
-      "impressions": 6,
+      "impressions": 7,
       "clicks": 0
     },
     "/cost/hire/": {
@@ -67,14 +67,14 @@
       "clicks": 0
     },
     "/cost/app-like/": {
-      "pages_with_data": 12,
-      "impressions": 35,
+      "pages_with_data": 14,
+      "impressions": 43,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 120,
-      "impressions": 386,
-      "clicks": 1
+      "pages_with_data": 127,
+      "impressions": 444,
+      "clicks": 3
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -83,17 +83,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 2776,
-      "clicks": 7
+      "impressions": 2992,
+      "clicks": 8
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 665,
+      "impressions": 716,
       "clicks": 7
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 633,
+      "impressions": 654,
       "clicks": 7
     }
   }
