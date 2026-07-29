@@ -1,0 +1,28 @@
+{
+  "generated_utc": "2026-07-29T07:40:14.954558Z",
+  "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
+  "gsc": {
+    "error": "no _gsc_dump.json"
+  },
+  "supabase": {
+    "leads_total": 52,
+    "leads_by_context": {
+      "results": 7,
+      "api_key": 5,
+      "sys:lastrun": 11,
+      "drip:1": 4,
+      "pack": 1,
+      "app-like-uber": 2,
+      "drip:2": 3,
+      "hero": 16,
+      "unsub": 1,
+      "drip:3": 2
+    },
+    "real_human_leads": 26,
+    "api_keys": 5,
+    "sales_total": 0
+  },
+  "shipped_asset_performance": {
+    "error": "no _gsc_dump.json"
+  }
+}
