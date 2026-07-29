@@ -55,6 +55,11 @@ jobs:
           SMOKE_OUT: data/SMOKE.json
         run: node scripts/smoke.cjs || echo "smoke step failed (non-fatal)"
 
+      - name: Submit new URLs to Google + IndexNow
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+        run: python scripts/ping_index.py || echo "index ping failed (non-fatal)"
+
       - name: Commit results
         run: |
           git config user.name "pce-ops-bot"
