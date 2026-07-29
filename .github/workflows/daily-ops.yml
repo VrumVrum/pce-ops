@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install Python deps
+        run: pip install --quiet cryptography
+
       - name: Fetch Google Search Console data
         env:
           GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
@@ -42,7 +45,10 @@ jobs:
         run: python scripts/metrics.py || echo "metrics step failed (non-fatal)"
 
       - name: Install Playwright (functional smoke test)
-        run: npx --yes playwright@1.49.0 install --with-deps chromium
+        run: |
+          npm init -y >/dev/null 2>&1 || true
+          npm install --no-save playwright@1.49.0
+          npx playwright install --with-deps chromium
 
       - name: Run functional smoke test against production
         env:
@@ -57,4 +63,3 @@ jobs:
           git diff --staged --quiet || git commit -m "data: ops snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           git push || echo "nothing to push"
 
-# re-scan trigger
