@@ -56,3 +56,5 @@ jobs:
           git add data/ || true
           git diff --staged --quiet || git commit -m "data: ops snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           git push || echo "nothing to push"
+
+# re-scan trigger
