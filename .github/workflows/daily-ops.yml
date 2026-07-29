@@ -44,6 +44,12 @@ jobs:
           SUPABASE_SERVICE_ROLE: ${{ secrets.SUPABASE_SERVICE_ROLE }}
         run: python scripts/metrics.py || echo "metrics step failed (non-fatal)"
 
+      - name: Pull GA4 (AI-assistant channel — the GEO bet's scoreboard)
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+          GA4_OUT: data/GA4.json
+        run: python scripts/ga4.py || echo "GA4 step failed (non-fatal)"
+
       - name: Install Playwright (functional smoke test)
         run: |
           npm init -y >/dev/null 2>&1 || true
