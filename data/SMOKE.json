@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-07-30T05:04:40.725Z",
-  "passed": 8,
-  "total": 8,
+  "generated_utc": "2026-07-30T06:06:13.365Z",
+  "passed": 14,
+  "total": 14,
   "all_green": true,
   "checks": [
     {
@@ -43,6 +43,36 @@
       "name": "uber calculator reacts to clicks",
       "ok": true,
       "detail": "$57,500–$131,000 -> $18,000–$41,500"
+    },
+    {
+      "name": "mobile menu iPhone SE /",
+      "ok": true,
+      "detail": "drawer=true links=12"
+    },
+    {
+      "name": "mobile menu iPhone SE /calculator",
+      "ok": true,
+      "detail": "drawer=true links=12"
+    },
+    {
+      "name": "mobile menu iPhone SE /cost/industry/dentist",
+      "ok": true,
+      "detail": "drawer=true links=12"
+    },
+    {
+      "name": "mobile menu iPhone 14 /",
+      "ok": true,
+      "detail": "drawer=true links=12"
+    },
+    {
+      "name": "mobile menu iPhone 14 /calculator",
+      "ok": true,
+      "detail": "drawer=true links=12"
+    },
+    {
+      "name": "mobile menu iPhone 14 /cost/industry/dentist",
+      "ok": true,
+      "detail": "drawer=true links=12"
     }
   ],
   "note": "Desktop functional smoke test (real browser). The cloud loop reads this to know functionality status without being able to reach production."
