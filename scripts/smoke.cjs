@@ -58,6 +58,35 @@ const readCalcPrice = (page) => page.evaluate(() => {
     await ctx.close();
   } catch (e) { add('uber calculator reacts to clicks', false, String(e).slice(0, 90)); }
 
+  // ---- MOBILE NAVIGATION (added 2026-07-30) ----
+  // The owner found the mobile menu missing on ~250 pages and this test did not
+  // catch it, because it only checked that pages LOAD. A visitor on a phone with
+  // no navigation cannot reach the calculator at all — that is a revenue bug.
+  // Checks the drawer actually slides in AND contains links, on 2 real viewports.
+  for (const vp of [{ w: 375, h: 667, n: 'iPhone SE' }, { w: 390, h: 844, n: 'iPhone 14' }]) {
+    for (const p of ['/', '/calculator', '/cost/industry/dentist']) {
+      try {
+        const ctx = await browser.newContext({ viewport: { width: vp.w, height: vp.h }, isMobile: true, hasTouch: true });
+        const page = await ctx.newPage();
+        await page.goto(BASE + p, { waitUntil: 'domcontentloaded', timeout: 40000 });
+        await page.waitForTimeout(1200);
+        const btn = page.locator('button[aria-label="Open menu"]').first();
+        if (!(await btn.count())) { add(`mobile menu ${vp.n} ${p}`, false, 'no hamburger button'); await ctx.close(); continue; }
+        await btn.click();
+        await page.waitForTimeout(1400); // 300ms transform + paint headroom
+        const r = await page.evaluate(() => {
+          const d = document.getElementById('mobile-menu-drawer');
+          if (!d) return { ok: false, links: 0 };
+          const b = d.getBoundingClientRect();
+          const links = [...d.querySelectorAll('a')].filter(a => a.getBoundingClientRect().width > 0).length;
+          return { ok: b.left < window.innerWidth - 10, links };
+        });
+        add(`mobile menu ${vp.n} ${p}`, r.ok && r.links >= 5, `drawer=${r.ok} links=${r.links}`);
+        await ctx.close();
+      } catch (e) { add(`mobile menu ${vp.n} ${p}`, false, String(e).slice(0, 70)); }
+    }
+  }
+
   await browser.close();
 
   const pass = checks.filter(c => c.ok).length;
