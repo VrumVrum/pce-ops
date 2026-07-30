@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-07-30T07:13:49.301436Z",
+  "generated_utc": "2026-07-30T17:57:18.431335Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-07-30",
     "totals_28d": {
-      "clicks": 59,
-      "impressions": 18884,
-      "ctr": 0.312,
-      "position": 27.23
+      "clicks": 64,
+      "impressions": 20150,
+      "ctr": 0.318,
+      "position": 26.9
     },
     "totals_7d": {
-      "clicks": 29,
-      "impressions": 6596,
-      "ctr": 0.44,
-      "position": 25.04
+      "clicks": 34,
+      "impressions": 7862,
+      "ctr": 0.432,
+      "position": 24.55
     },
     "totals_90d": {
-      "clicks": 84,
-      "impressions": 29579,
-      "ctr": 0.284,
-      "position": 28.85
+      "clicks": 89,
+      "impressions": 30845,
+      "ctr": 0.289,
+      "position": 28.57
     }
   },
   "supabase": {
@@ -52,8 +52,8 @@
       "clicks": 0
     },
     "/tools/fixed-price-vs-time-and-materials": {
-      "pages_with_data": 0,
-      "impressions": 0,
+      "pages_with_data": 1,
+      "impressions": 1,
       "clicks": 0
     },
     "/cost/ai/": {
@@ -62,19 +62,19 @@
       "clicks": 0
     },
     "/cost/hire/": {
-      "pages_with_data": 0,
-      "impressions": 0,
+      "pages_with_data": 7,
+      "impressions": 25,
       "clicks": 0
     },
     "/cost/app-like/": {
-      "pages_with_data": 14,
-      "impressions": 43,
+      "pages_with_data": 17,
+      "impressions": 52,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 127,
-      "impressions": 444,
-      "clicks": 3
+      "pages_with_data": 132,
+      "impressions": 501,
+      "clicks": 4
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -83,18 +83,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 2992,
+      "impressions": 3306,
       "clicks": 8
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 703,
+      "impressions": 764,
       "clicks": 7
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 637,
-      "clicks": 7
+      "impressions": 687,
+      "clicks": 8
     }
   }
 }

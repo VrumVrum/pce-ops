@@ -1,13 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-07-30T07:13:51Z",
+  "generated_utc": "2026-07-30T17:57:20Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "144",
+      "sessions": "145",
       "users": "141",
-      "engagementRate": "0.375",
-      "avgDuration": "52.481966472222226"
+      "engagementRate": "0.3724137931034483",
+      "avgDuration": "52.120021875862072"
     },
     {
       "channel": "Organic Search",
@@ -55,10 +55,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "619",
+      "sessions": "620",
       "users": "604",
-      "engagementRate": "0.24878836833602586",
-      "avgDuration": "33.75415755250404"
+      "engagementRate": "0.24838709677419354",
+      "avgDuration": "33.699715362903227"
     },
     {
       "channel": "Organic Search",
@@ -72,7 +72,7 @@
       "sessions": "64",
       "users": "39",
       "engagementRate": "0.46875",
-      "avgDuration": "118.845847765625"
+      "avgDuration": "118.84584776562498"
     },
     {
       "channel": "Unassigned",
@@ -139,8 +139,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "619",
-      "engagementRate": "0.24878836833602586"
+      "sessions": "620",
+      "engagementRate": "0.24838709677419354"
     },
     {
       "source": "google",
@@ -245,14 +245,14 @@
       "engagementRate": "0.0625"
     },
     {
+      "landing": "",
+      "sessions": "15",
+      "engagementRate": "0"
+    },
+    {
       "landing": "/web-app-development-cost",
       "sessions": "15",
       "engagementRate": "0.53333333333333333"
-    },
-    {
-      "landing": "",
-      "sessions": "14",
-      "engagementRate": "0"
     },
     {
       "landing": "/blog/canva-pro-cost-2026",
