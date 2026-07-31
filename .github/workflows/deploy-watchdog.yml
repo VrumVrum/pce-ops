@@ -1,0 +1,52 @@
+name: deploy-watchdog
+# Git-triggered Vercel deploys have repeatedly stalled (production kept serving
+# stale code while builds sat UNKNOWN; a human had to run `vercel --prod` by
+# hand 4+ times). This watchdog runs every 2 hours: if production's commit
+# (/api/build-info) differs from origin/master, it forces a production deploy.
+# PC-independent self-healing — the owner never has to force a deploy again.
+on:
+  schedule:
+    - cron: '15 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compare production commit vs master
+        id: check
+        run: |
+          MASTER_SHA=$(git ls-remote https://x-access-token:${{ secrets.GH_PAT }}@github.com/VrumVrum/scopebit.git refs/heads/master | cut -f1)
+          LIVE_SHA=$(curl -s --max-time 20 "https://projectcostestimator.com/api/build-info?cb=$(date +%s)" | python3 -c "import sys,json;print(json.load(sys.stdin).get('sha','?'))" 2>/dev/null || echo "unreachable")
+          echo "master=$MASTER_SHA"
+          echo "live=$LIVE_SHA"
+          if [ "$LIVE_SHA" = "unreachable" ] || [ "$LIVE_SHA" = "?" ]; then
+            # Probe not deployed yet or site down — deploy to be safe.
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          elif [ "$MASTER_SHA" = "$LIVE_SHA" ]; then
+            echo "Production is fresh."
+            echo "stale=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Production is STALE — forcing deploy."
+            echo "stale=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Clone site repo
+        if: steps.check.outputs.stale == 'true'
+        run: git clone --depth 1 https://x-access-token:${{ secrets.GH_PAT }}@github.com/VrumVrum/scopebit.git site
+
+      - name: Force production deploy on Vercel
+        if: steps.check.outputs.stale == 'true'
+        working-directory: site
+        env:
+          VERCEL_ORG_ID: team_EYsBGTIrOl0OsIw1lXEKUOym
+          VERCEL_PROJECT_ID: prj_g7em4XOg9FdHspy4AnZxodZ9AdS4
+        run: |
+          npx --yes vercel@latest pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          npx --yes vercel@latest deploy --prod --token=${{ secrets.VERCEL_TOKEN }} 2>&1 | tail -3
+
+      - name: Verify
+        if: steps.check.outputs.stale == 'true'
+        run: |
+          sleep 45
+          curl -s --max-time 20 "https://projectcostestimator.com/api/build-info?cb=$(date +%s)" || true
