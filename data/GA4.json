@@ -1,20 +1,27 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-02T07:07:00Z",
+  "generated_utc": "2026-08-02T17:32:51Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "181",
-      "users": "177",
-      "engagementRate": "0.4585635359116022",
-      "avgDuration": "20.515644287292819"
+      "sessions": "183",
+      "users": "179",
+      "engagementRate": "0.453551912568306",
+      "avgDuration": "20.291429595628415"
     },
     {
       "channel": "Organic Search",
-      "sessions": "48",
-      "users": "42",
-      "engagementRate": "0.47916666666666669",
-      "avgDuration": "178.32855162500002"
+      "sessions": "49",
+      "users": "43",
+      "engagementRate": "0.46938775510204084",
+      "avgDuration": "174.68919342857143"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "16",
+      "users": "16",
+      "engagementRate": "0",
+      "avgDuration": "100.9874495"
     },
     {
       "channel": "Organic Social",
@@ -22,13 +29,6 @@
       "users": "13",
       "engagementRate": "0.46666666666666667",
       "avgDuration": "107.98496926666667"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "15",
-      "users": "15",
-      "engagementRate": "0",
-      "avgDuration": "107.71994613333332"
     },
     {
       "channel": "AI Assistant",
@@ -55,17 +55,17 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "697",
-      "users": "677",
-      "engagementRate": "0.30416068866571017",
-      "avgDuration": "31.4625553758967"
+      "sessions": "699",
+      "users": "679",
+      "engagementRate": "0.3032904148783977",
+      "avgDuration": "31.372533758226034"
     },
     {
       "channel": "Organic Search",
-      "sessions": "140",
-      "users": "117",
-      "engagementRate": "0.51428571428571423",
-      "avgDuration": "190.40980764999998"
+      "sessions": "141",
+      "users": "118",
+      "engagementRate": "0.51063829787234039",
+      "avgDuration": "189.05938348226948"
     },
     {
       "channel": "AI Assistant",
@@ -76,10 +76,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "28",
-      "users": "26",
-      "engagementRate": "0.10714285714285714",
-      "avgDuration": "106.68951739285714"
+      "sessions": "29",
+      "users": "27",
+      "engagementRate": "0.10344827586206896",
+      "avgDuration": "103.01056851724137"
     },
     {
       "channel": "Organic Social",
@@ -139,8 +139,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "697",
-      "engagementRate": "0.30416068866571017"
+      "sessions": "699",
+      "engagementRate": "0.3032904148783977"
     },
     {
       "source": "google",
@@ -154,8 +154,8 @@
     },
     {
       "source": "bing",
-      "sessions": "29",
-      "engagementRate": "0.48275862068965519"
+      "sessions": "30",
+      "engagementRate": "0.46666666666666667"
     },
     {
       "source": "news.ycombinator.com",
@@ -169,7 +169,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "16",
+      "sessions": "17",
       "engagementRate": "0"
     },
     {
@@ -201,8 +201,8 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "211",
-      "engagementRate": "0.65876777251184837"
+      "sessions": "212",
+      "engagementRate": "0.65566037735849059"
     },
     {
       "landing": "/freelance-website-cost",
@@ -260,6 +260,11 @@
       "engagementRate": "0.33333333333333331"
     },
     {
+      "landing": "",
+      "sessions": "11",
+      "engagementRate": "0"
+    },
+    {
       "landing": "/blog/web-project-cost-index-2026",
       "sessions": "11",
       "engagementRate": "0.090909090909090912"
@@ -270,19 +275,14 @@
       "engagementRate": "0.27272727272727271"
     },
     {
-      "landing": "",
-      "sessions": "10",
-      "engagementRate": "0"
+      "landing": "/real-estate-website-cost",
+      "sessions": "11",
+      "engagementRate": "0.45454545454545453"
     },
     {
       "landing": "/blog/ecommerce-website-cost-by-platform-2026",
       "sessions": "10",
       "engagementRate": "0.2"
-    },
-    {
-      "landing": "/real-estate-website-cost",
-      "sessions": "10",
-      "engagementRate": "0.5"
     },
     {
       "landing": "/website-cost",
