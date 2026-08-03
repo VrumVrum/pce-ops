@@ -1,33 +1,33 @@
 {
-  "generated_utc": "2026-08-02T17:32:48.171812Z",
+  "generated_utc": "2026-08-03T07:57:09.610384Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-02",
+    "generated": "2026-08-03",
     "totals_28d": {
-      "clicks": 81,
-      "impressions": 22667,
-      "ctr": 0.357,
-      "position": 25.99
+      "clicks": 85,
+      "impressions": 23242,
+      "ctr": 0.366,
+      "position": 25.85
     },
     "totals_7d": {
-      "clicks": 39,
-      "impressions": 9113,
-      "ctr": 0.428,
-      "position": 22.7
+      "clicks": 40,
+      "impressions": 9308,
+      "ctr": 0.43,
+      "position": 22.65
     },
     "totals_90d": {
-      "clicks": 107,
-      "impressions": 34882,
-      "ctr": 0.307,
-      "position": 27.63
+      "clicks": 112,
+      "impressions": 36008,
+      "ctr": 0.311,
+      "position": 27.49
     }
   },
   "supabase": {
-    "leads_total": 64,
+    "leads_total": 65,
     "leads_by_context": {
       "results": 9,
       "api_key": 5,
-      "sys:lastrun": 14,
+      "sys:lastrun": 15,
       "drip:1": 4,
       "pack": 1,
       "app-like-uber": 2,
@@ -43,7 +43,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 7,
+      "impressions": 11,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -63,17 +63,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 183,
+      "impressions": 197,
       "clicks": 0
     },
     "/cost/app-like/": {
-      "pages_with_data": 25,
-      "impressions": 103,
+      "pages_with_data": 26,
+      "impressions": 112,
       "clicks": 3
     },
     "/cost/industry/": {
-      "pages_with_data": 141,
-      "impressions": 659,
+      "pages_with_data": 145,
+      "impressions": 704,
       "clicks": 5
     },
     "/software-development-budget-2027": {
@@ -83,17 +83,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4408,
+      "impressions": 4666,
       "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 894,
+      "impressions": 926,
       "clicks": 9
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 742,
+      "impressions": 759,
       "clicks": 10
     }
   }
