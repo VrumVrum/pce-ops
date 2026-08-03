@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-03T07:57:09.610384Z",
+  "generated_utc": "2026-08-03T18:17:30.157003Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-03",
@@ -23,15 +23,15 @@
     }
   },
   "supabase": {
-    "leads_total": 65,
+    "leads_total": 83,
     "leads_by_context": {
       "results": 9,
       "api_key": 5,
       "sys:lastrun": 15,
-      "drip:1": 4,
+      "drip:1": 9,
       "pack": 1,
       "app-like-uber": 2,
-      "drip:2": 3,
+      "drip:2": 16,
       "hero": 22,
       "unsub": 1,
       "drip:3": 3
