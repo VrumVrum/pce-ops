@@ -60,6 +60,11 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python scripts/routines_scorecard.py || echo "non-fatal"
 
+      - name: OS lint (structural checks on the OS ledgers, ~0 false positives)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python scripts/os_lint.py || echo "non-fatal"
+
       - name: Due-experiment radar (verify dates that arrived)
         env:
           GH_PAT: ${{ secrets.GH_PAT }}

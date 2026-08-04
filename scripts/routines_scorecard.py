@@ -31,6 +31,18 @@ COMMIT_HEURISTIC = (
     'variants). Best-effort only: a routine that never names itself in commit messages '
     'scores 0 here even when it shipped, and shared words can over-match. Not ground truth.')
 
+# F12 guard (proxy optimization / reward hacking): every process metric this
+# scorecard emits is a PROXY. This static map names each proxy's TRUE objective
+# and where the truth lives, so the supervisor can check they still move together.
+PROXY_MAP = {
+    'reports_filed': 'visibility (true: supervisor claims-vs-artifacts pass rate)',
+    'llms-coverage': 'AI citability (true: GA4 ai_landings sessions)',
+    'prompt_critiques_present': 'prompt evolution quality (true: P-series win-rate + reverts)',
+    'commits_attributable': 'output (true: EXPERIMENTS win-rate, clicks_clean trend)',
+}
+DECOUPLING_NOTE = ('supervisor checks proxy-vs-true divergence; 3 weeks divergence = '
+                   'freeze + FAILURE-CLASSES row')
+
 
 def fetch(url):
     headers = {'User-Agent': 'pce-ops-scorecard'}
@@ -73,6 +85,8 @@ def main():
     out = {'generated_utc': now.isoformat(timespec='seconds'),
            'source': {'reports': RAW_REPORTS, 'commits': API_COMMITS + '?since=30d'},
            'commit_heuristic': COMMIT_HEURISTIC,
+           'proxy_map': PROXY_MAP,
+           'decoupling_note': DECOUPLING_NOTE,
            'note': ('runs_30d counts report headers in routine-reports.md, NOT trigger fires — '
                     'a run that filed no report is invisible here (failure class F10). '
                     'null = data not derivable, never a fabricated count.')}
