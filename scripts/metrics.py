@@ -21,6 +21,12 @@ OUT = os.environ.get('METRICS_OUT', os.path.join(ROOT, 'docs', 'OS', 'ledger', '
 NON_LEAD = {'sys:lastrun', 'unsub'}
 DRIP = re.compile(r'^drip:')
 
+# The site's llms.txt designated citation pages (/api/cost-data excluded — no GSC
+# footprint). If any drops under 10 impressions/28d the AI-citation funnel is
+# decaying and the loop must react (audit 08-06 tripwire).
+CITATION_PAGES = ['/website-costs-2026-report', '/website-cost', '/cost-index',
+                  '/rate-database', '/website-cost-calculator', '/freelance-website-cost']
+
 
 def env(*names):
     for n in names:                      # Actions: secrets injected as env vars
@@ -73,13 +79,20 @@ def supabase():
 
 def detect_junk(queries):
     """AI-fanout junk detector (KPIS.md 'junk impressions' — nemin.io / vercel /
-    freelance-rate permutation clusters). Two signatures, both requiring 0 clicks:
+    freelance-rate permutation clusters). Five signatures, all requiring 0 clicks:
     (1) >=3 queries whose word SETS are identical (pure word-order permutations);
-    (2) queries containing quoted strings ("december 2021"-style scraper probes).
+    (2) queries containing quoted strings ("december 2021"-style scraper probes);
+    (3) competitor-brand suffix ('… on nemin io' — 820 imps, audit 08-06);
+    (4) dual-year ('… 2025 2026 hourly');
+    (5) 'official' + year ('official 2026 …').
     Returns (junk_impressions, junk_query_count, sample)."""
     from collections import defaultdict
+    FANOUT = (re.compile(r'\bon [a-z0-9-]+ ?(io|com|net|app)\b'),
+              re.compile(r'\b20\d\d 20\d\d\b'),
+              re.compile(r'\bofficial 20\d\d\b'))
     groups = defaultdict(list)
     quoted = []
+    fanout = []
     for q in queries or []:
         text = (q.get('keys') or [q.get('query', '')])[0]
         clicks = q.get('clicks', 0)
@@ -87,6 +100,9 @@ def detect_junk(queries):
             continue
         if '"' in text:
             quoted.append(q)
+            continue
+        if any(p.search(text.lower()) for p in FANOUT):
+            fanout.append(q)
             continue
         # Normalize so permutation-variants collapse to one signature:
         # drop digits/years, singularize, drop glue words.
@@ -99,7 +115,7 @@ def detect_junk(queries):
             if w and w not in STOP:
                 words.append(w)
         groups[frozenset(words)].append(q)
-    junk = list(quoted)
+    junk = quoted + fanout
     for members in groups.values():
         if len(members) >= 4:
             junk.extend(members)
@@ -130,6 +146,18 @@ def gsc():
         }
     except Exception as e:
         out['junk_28d'] = {'error': str(e)}
+    # Citation-floor tripwire: exact-path impressions for every llms.txt
+    # citation page; empty list = healthy.
+    try:
+        by_path = {}
+        for p in d.get('pages_28d') or []:
+            path = (p.get('page') or '').replace('https://projectcostestimator.com', '').rstrip('/') or '/'
+            by_path[path] = by_path.get(path, 0) + (p.get('impressions') or 0)
+        out['citation_floor_alerts'] = [
+            {'page': pg, 'impressions': by_path.get(pg, 0)}
+            for pg in CITATION_PAGES if by_path.get(pg, 0) < 10]
+    except Exception as e:
+        out['citation_floor_alerts'] = {'error': str(e)}
     return out
 
 

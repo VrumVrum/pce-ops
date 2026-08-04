@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Ping search engines to crawl the new pages. Reads the LIVE sitemap-cost.xml,
-extracts every /cost/industry/ URL, then:
-  1. Google Indexing API urlNotifications:publish (URL_UPDATED) per URL
-  2. IndexNow batch (Bing + Yandex) — instant
+Ping search engines to crawl the pages. Two URL sets, two quotas:
+  1. IndexNow batch (Bing + Yandex) — the FULL sitemap tree, every URL, daily.
+     IndexNow takes up to 10k URLs per POST and Bing is ChatGPT's index; the
+     old industry-only filter starved the homepage/money pages/blog/report out
+     of it (audit 08-06 — measured AI-citation decline).
+  2. Google Indexing API urlNotifications:publish (URL_UPDATED) per URL —
+     stays on the filtered /cost/ + /tools/ list (quota ~200/day).
   3. Resubmit the master sitemap to GSC
 
 Run AFTER deploy: python automation/_ping_index.py
@@ -40,10 +43,31 @@ def token():
     return json.loads(urllib.request.urlopen(urllib.request.Request(sa['token_uri'], data=data, method='POST')).read())['access_token']
 
 
-def fetch_industry_urls():
-    req = urllib.request.Request('https://projectcostestimator.com/sitemap-cost.xml', headers={'User-Agent': UA})
+def fetch_sitemap(url):
+    req = urllib.request.Request(url, headers={'User-Agent': UA})
     xml = urllib.request.urlopen(req, timeout=20).read().decode('utf-8', 'ignore')
-    urls = re.findall(r'<loc>([^<]+)</loc>', xml)
+    return re.findall(r'<loc>([^<]+)</loc>', xml)
+
+
+def fetch_all_urls():
+    """Every page URL in the full sitemap tree (master index + sub-sitemaps),
+    deduped, capped at IndexNow's 10k-per-POST limit."""
+    urls, seen = [], set()
+    for loc in fetch_sitemap(f'https://{HOST}/sitemap.xml'):
+        subs = [loc]
+        if loc.endswith('.xml'):                      # sitemap index entry — follow it
+            try:
+                subs = fetch_sitemap(loc)
+            except Exception as e:
+                print('  sitemap fail', loc.rsplit('/', 1)[-1], str(e)[:50]); continue
+        for u in subs:
+            if not u.endswith('.xml') and u not in seen:
+                seen.add(u); urls.append(u)
+    return urls[:10000]
+
+
+def fetch_industry_urls():
+    urls = fetch_sitemap('https://projectcostestimator.com/sitemap-cost.xml')
     return [u for u in urls if '/cost/industry/' in u or '/cost/app-like/' in u or '/cost/ai/' in u or '/tools/' in u]
 
 
@@ -87,12 +111,13 @@ def resubmit_sitemaps(tok):
 
 
 if __name__ == '__main__':
+    all_urls = fetch_all_urls()
     urls = fetch_industry_urls()
-    print(f'Found {len(urls)} /cost/industry/ URLs live in sitemap-cost.xml')
-    if not urls:
-        print('No industry URLs yet — deploy first.'); sys.exit(0)
+    print(f'Found {len(all_urls)} URLs in the full sitemap tree ({len(urls)} filtered for Google)')
+    if not all_urls:
+        print('Sitemap empty — deploy first.'); sys.exit(0)
     tok = token()
-    indexnow(urls)              # instant, unlimited
+    indexnow(all_urls)          # FULL set -> Bing/Yandex (= ChatGPT's index), one batch
     resubmit_sitemaps(tok)      # tells Google to recrawl the whole set
-    google_index(tok, urls)     # per-URL nudge (quota ~200/day)
+    google_index(tok, urls)     # per-URL nudge, filtered list only (quota ~200/day)
     print('Done.')
