@@ -1,0 +1,85 @@
+{
+ "generated_utc": "2026-08-04T11:02:54+00:00",
+ "quota": {
+  "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
+  "DailyQuota": 100,
+  "MonthlyQuota": 2800
+ },
+ "crawl_stats_recent": [],
+ "query_stats": [],
+ "page_stats": [],
+ "url_info": {
+  "/": {
+   "error": "HTTP Error 400: Bad Request"
+  },
+  "/website-costs-2026-report": {
+   "LastCrawledDate": "2026-07-31",
+   "IsPage": true,
+   "DocumentSize": 0,
+   "HttpStatus": 0
+  },
+  "/website-cost": {
+   "LastCrawledDate": "2026-08-03",
+   "IsPage": true,
+   "DocumentSize": 291181,
+   "HttpStatus": 0
+  },
+  "/cost-index": {
+   "LastCrawledDate": "2026-05-26",
+   "IsPage": true,
+   "DocumentSize": 0,
+   "HttpStatus": 0
+  },
+  "/rate-database": {
+   "LastCrawledDate": "2026-08-01",
+   "IsPage": true,
+   "DocumentSize": 0,
+   "HttpStatus": 0
+  },
+  "/website-cost-calculator": {
+   "LastCrawledDate": "2026-08-01",
+   "IsPage": true,
+   "DocumentSize": 148577,
+   "HttpStatus": 0
+  },
+  "/freelance-website-cost": {
+   "LastCrawledDate": "2026-07-05",
+   "IsPage": true,
+   "DocumentSize": 0,
+   "HttpStatus": 0
+  },
+  "/calculator": {
+   "LastCrawledDate": "2026-06-26",
+   "IsPage": true,
+   "DocumentSize": 74341,
+   "HttpStatus": 0
+  },
+  "/blog/nonprofit-website-cost-2026": {
+   "LastCrawledDate": "2026-07-23",
+   "IsPage": true,
+   "DocumentSize": 101095,
+   "HttpStatus": 0
+  },
+  "/blog/restaurant-website-cost-2026": {
+   "LastCrawledDate": "2026-07-09",
+   "IsPage": true,
+   "DocumentSize": 121592,
+   "HttpStatus": 0
+  },
+  "/blog/mvp-cost-2026": {
+   "LastCrawledDate": null,
+   "IsPage": true,
+   "DocumentSize": 0,
+   "HttpStatus": 0
+  },
+  "/blog/landing-page-cost-2026": {
+   "error": "HTTP Error 400: Bad Request"
+  },
+  "/blog/website-migration-cost-2026": {
+   "error": "HTTP Error 400: Bad Request"
+  }
+ },
+ "citation_alerts": [
+  "/"
+ ]
+}
