@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # gsc_trends.py walks the git history of data/gsc_dump.json
 
       - uses: actions/setup-python@v5
         with:
@@ -43,6 +45,9 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE: ${{ secrets.SUPABASE_SERVICE_ROLE }}
         run: python scripts/metrics.py || echo "metrics step failed (non-fatal)"
+
+      - name: GSC trends (git-history longitudinal deltas — decay + title/meta-refit radar)
+        run: python scripts/gsc_trends.py || echo "trends step failed (non-fatal)"
 
       - name: Pull GA4 (AI-assistant channel — the GEO bet's scoreboard)
         env:

@@ -1,0 +1,64 @@
+name: visual-regression
+# Pixel-compares the 5 money pages against a committed baseline (shot-scraper
+# pattern, $0). Text gates (smoke.cjs) prove pages load; they are blind to a
+# broken stylesheet or an unreadable hero. Comparator: pixelmatch@5 + pngjs
+# via npm — pure JS, no native deps, pinned (chosen over ImageMagick because
+# the runner's IM version/policy drifts; pixelmatch pins exactly).
+#
+# Outputs (committed):
+#   shots/baseline/*.png   first run (or workflow_dispatch reseed=true) seeds it
+#   shots/current/*.png    today's screenshots
+#   shots/diff/*.png       diff overlays, only for pages >5%
+#   data/VISUAL-ALERT.json status green|seeded|red + per-page diff_pct
+#
+# The RED ROW the supervisor reads: data/VISUAL-ALERT.json via
+# https://raw.githubusercontent.com/VrumVrum/pce-ops/master/data/VISUAL-ALERT.json
+# (pce-supervisor STEP 0 reads the data/ directory of this repo). The last step
+# also fails the run AFTER committing, so the Actions history + routine
+# scorecard show red without ever losing the evidence.
+on:
+  schedule:
+    - cron: '15 5 * * *'   # 05:15 UTC daily (offset from daily-ops 04:30/16:30 to avoid push races)
+  workflow_dispatch:
+    inputs:
+      reseed:
+        description: 'Overwrite baselines with today''s screenshots (accept current look as the new reference)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + pixel comparator
+        run: |
+          npm init -y >/dev/null 2>&1 || true
+          npm install --no-save playwright@1.49.0 pixelmatch@5.3.0 pngjs@7.0.0
+          npx playwright install --with-deps chromium
+
+      - name: Screenshot + compare money pages
+        env:
+          RESEED: ${{ inputs.reseed && '1' || '0' }}
+        run: node scripts/visual_regression.cjs || echo "visual step failed (non-fatal — commit what we have)"
+
+      - name: Commit shots + alert file
+        run: |
+          git config user.name "pce-ops-bot"
+          git config user.email "ops@projectcostestimator.com"
+          git add shots/ data/VISUAL-ALERT.json || true
+          git diff --staged --quiet || git commit -m "data: visual regression $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase || true
+          git push || echo "nothing to push"
+
+      - name: Fail red AFTER committing evidence
+        run: |
+          node -e "const a=require('./data/VISUAL-ALERT.json'); if(a.status==='red'){console.error('VISUAL REGRESSION:',JSON.stringify(a.alerts));process.exit(1)} console.log('visual status:',a.status)"
