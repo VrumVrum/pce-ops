@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-04T18:12:02+00:00",
+ "generated_utc": "2026-08-04T19:02:50+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -16,6 +16,15 @@
  "commits_30d_total": 300,
  "routines": {
   "pce-supervisor (Verifier)": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-04"
+  },
+  "pce-authority-traffic (Acquisition Engine)": {
    "runs_30d": 1,
    "reports_filed": 1,
    "prompt_critiques_present": 1,

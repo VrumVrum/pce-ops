@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-04T18:11:53+00:00",
+ "generated_utc": "2026-08-04T19:02:39+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -70,22 +70,13 @@
    "HttpStatus": 0
   },
   "/blog/mvp-cost-2026": {
-   "LastCrawledDate": null,
-   "IsPage": true,
-   "DocumentSize": 0,
-   "HttpStatus": 0
+   "error": "HTTP Error 400: Bad Request"
   },
   "/blog/landing-page-cost-2026": {
-   "LastCrawledDate": "2026-07-28",
-   "IsPage": true,
-   "DocumentSize": 97151,
-   "HttpStatus": 0
+   "error": "HTTP Error 400: Bad Request"
   },
   "/blog/website-migration-cost-2026": {
-   "LastCrawledDate": "2026-07-30",
-   "IsPage": true,
-   "DocumentSize": 131373,
-   "HttpStatus": 0
+   "error": "HTTP Error 400: Bad Request"
   }
  },
  "citation_alerts": []
