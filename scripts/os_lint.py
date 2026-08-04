@@ -35,7 +35,7 @@ OUT = os.path.join(ROOT, 'data', 'OS-LINT.json')
 CRITIQUE_RULE_START = '2026-08-04'   # transparency rule went live; older entries exempt
 P_REQUIRED = ('Routine', 'Evidence', 'Diff', 'Metric', 'Verify', 'Status', 'Approver')
 ROW_RE = re.compile(r'^\d{4}-\d{2}-\d{2}\|[^|]+\|(OK|FAIL|PARTIAL)\|\d+\|.+$')
-VERSION_RE = re.compile(r'^<!--\s*v\d+\s*[·.]\s*\d{4}-\d{2}-\d{2}\b.*-->\s*$')
+VERSION_RE = re.compile(r'^<!--\s*v\d+(?:\.\d+)?\s*[·.]\s*\d{4}-\d{2}-\d{2}\b.*-->\s*$')
 
 
 def fetch(url, accept=None):
