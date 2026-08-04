@@ -1,0 +1,12 @@
+{
+ "generated_utc": "2026-08-04T11:33:28+00:00",
+ "source": {
+  "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
+  "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
+ },
+ "commit_heuristic": "commits_attributable = scopebit commits (last 30d, default branch) whose message contains the routine name as a fingerprint (case-insensitive; space/hyphen/underscore variants). Best-effort only: a routine that never names itself in commit messages scores 0 here even when it shipped, and shared words can over-match. Not ground truth.",
+ "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
+ "commits_30d_total": 300,
+ "routines": {},
+ "routines_note": "routine-reports.md has no entries yet \u2014 nothing to score, nothing invented"
+}
