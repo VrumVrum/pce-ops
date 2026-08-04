@@ -89,6 +89,59 @@ const readCalcPrice = (page) => page.evaluate(() => {
 
   await browser.close();
 
+  // ---- LLMS.TXT COVERAGE (added 2026-08-04) ----
+  // Third recurrence of the same drift: a new page cluster ships without being
+  // added to llms.txt / llms-full.txt, so AI crawlers never learn it exists.
+  // This compares the live sitemap against the live llms files so the loop can
+  // SEE the gap in SMOKE.json instead of relying on anyone's memory.
+  try {
+    const get = async (url) => {
+      const r = await fetch(url, { signal: AbortSignal.timeout(30000) });
+      if (!r.ok) throw new Error(`HTTP ${r.status} on ${url}`);
+      return r.text();
+    };
+    const locs = (xml) => [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map(m => m[1]);
+
+    const index = await get(BASE + '/sitemap.xml');
+    let urls = [];
+    if (index.includes('<sitemapindex')) {
+      for (const sm of locs(index)) urls.push(...locs(await get(sm)));
+    } else {
+      urls = locs(index);
+    }
+    urls = urls.filter(u => !u.endsWith('.xml'));
+
+    // cluster rules: /blog/* -> "blog"; /compare/* -> "compare"; /cost/X/* -> "cost/X";
+    // everything else -> first segment; bare top-level pages ("(root)") are skipped.
+    const clusters = {};
+    for (const u of urls) {
+      let path; try { path = new URL(u).pathname; } catch { continue; }
+      const segs = path.split('/').filter(Boolean);
+      if (segs.length === 0) continue; // homepage
+      let key = null;
+      if (segs[0] === 'blog') key = 'blog';
+      else if (segs[0] === 'compare') key = 'compare';
+      else if (segs[0] === 'cost') key = segs.length >= 2 ? `cost/${segs[1]}` : null;
+      else if (segs.length >= 2) key = segs[0];
+      if (!key) continue;
+      (clusters[key] = clusters[key] || []).push(path);
+    }
+
+    let llms = '';
+    for (const f of ['/llms.txt', '/llms-full.txt']) {
+      try { llms += await get(BASE + f) + '\n'; } catch { /* one missing file is tolerable */ }
+    }
+    if (!llms.trim()) throw new Error('llms.txt AND llms-full.txt both unreadable');
+
+    // a cluster counts as cited if the llms text mentions its path prefix or any of its pages
+    const big = Object.entries(clusters).filter(([, v]) => v.length >= 3);
+    const missing = big
+      .filter(([k, v]) => !llms.includes('/' + k) && !v.some(p => llms.includes(p)))
+      .map(([k, v]) => `/${k} (${v.length} pages)`);
+    add('llms-coverage', missing.length === 0,
+      missing.length ? `NOT cited in llms files: ${missing.join(', ')}` : `all ${big.length} clusters cited`);
+  } catch (e) { add('llms-coverage', false, String(e).slice(0, 120)); }
+
   const pass = checks.filter(c => c.ok).length;
   const summary = {
     generated_utc: new Date().toISOString(),
