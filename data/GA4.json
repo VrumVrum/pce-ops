@@ -1,13 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-04T07:14:12Z",
+  "generated_utc": "2026-08-04T09:01:28Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "188",
-      "users": "185",
-      "engagementRate": "0.48404255319148937",
-      "avgDuration": "25.251315867021276"
+      "sessions": "189",
+      "users": "186",
+      "engagementRate": "0.48148148148148145",
+      "avgDuration": "25.11771102116402"
     },
     {
       "channel": "Organic Search",
@@ -21,7 +21,7 @@
       "sessions": "16",
       "users": "16",
       "engagementRate": "0",
-      "avgDuration": "26.1270124375"
+      "avgDuration": "26.50111"
     },
     {
       "channel": "Organic Social",
@@ -55,10 +55,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "721",
-      "users": "702",
-      "engagementRate": "0.31206657420249651",
-      "avgDuration": "32.246502699029129"
+      "sessions": "722",
+      "users": "703",
+      "engagementRate": "0.31163434903047094",
+      "avgDuration": "32.201839952908585"
     },
     {
       "channel": "Organic Search",
@@ -79,7 +79,7 @@
       "sessions": "28",
       "users": "27",
       "engagementRate": "0.071428571428571425",
-      "avgDuration": "38.646181321428571"
+      "avgDuration": "38.859951357142855"
     },
     {
       "channel": "Organic Social",
@@ -139,8 +139,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "721",
-      "engagementRate": "0.31206657420249651"
+      "sessions": "722",
+      "engagementRate": "0.31163434903047094"
     },
     {
       "source": "google",

@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-08-04T07:15:06.900Z",
-  "passed": 14,
-  "total": 14,
+  "generated_utc": "2026-08-04T09:02:16.168Z",
+  "passed": 15,
+  "total": 15,
   "all_green": true,
   "checks": [
     {
@@ -73,6 +73,11 @@
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
       "ok": true,
       "detail": "drawer=true links=12"
+    },
+    {
+      "name": "llms-coverage",
+      "ok": true,
+      "detail": "all 11 clusters cited"
     }
   ],
   "note": "Desktop functional smoke test (real browser). The cloud loop reads this to know functionality status without being able to reach production."

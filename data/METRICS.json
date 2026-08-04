@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-04T07:14:11.018029Z",
+  "generated_utc": "2026-08-04T09:01:27.017772Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-04",
@@ -20,15 +20,29 @@
       "impressions": 37143,
       "ctr": 0.31,
       "position": 27.28
+    },
+    "junk_28d": {
+      "impressions": 181,
+      "queries": 25,
+      "sample": [
+        "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
+        "\"december 2021\" \"how much does this website cost\"",
+        "\"how much does it cost to run this website\" december 2021"
+      ]
+    },
+    "totals_28d_clean": {
+      "clicks": 88,
+      "impressions": 23697,
+      "ctr": 0.371
     }
   },
   "supabase": {
-    "leads_total": 84,
+    "leads_total": 85,
     "leads_by_context": {
       "results": 9,
       "api_key": 5,
       "sys:lastrun": 16,
-      "drip:1": 9,
+      "drip:1": 10,
       "pack": 1,
       "app-like-uber": 2,
       "drip:2": 16,
