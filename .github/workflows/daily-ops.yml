@@ -55,6 +55,16 @@ jobs:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: python scripts/bing.py || echo "Bing step failed (non-fatal)"
 
+      - name: Routine scorecard (self-improvement loop eyes)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python scripts/routines_scorecard.py || echo "non-fatal"
+
+      - name: Due-experiment radar (verify dates that arrived)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python scripts/due_experiments.py || echo "non-fatal"
+
       - name: Install Playwright (functional smoke test)
         run: |
           npm init -y >/dev/null 2>&1 || true
