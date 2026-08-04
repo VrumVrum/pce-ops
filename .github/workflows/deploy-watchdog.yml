@@ -27,8 +27,20 @@ jobs:
             echo "Production is fresh."
             echo "stale=false" >> "$GITHUB_OUTPUT"
           else
-            echo "Production is STALE — forcing deploy."
-            echo "stale=true" >> "$GITHUB_OUTPUT"
+            # Docs-only drift is NOT stale: the site's ignoreCommand deliberately
+            # skips ledger/docs commits, so forcing a deploy for them wastes a
+            # build AND resets the ISR cache (the Aug 2026 fluid-CPU incident).
+            FILES=$(curl -s -H "Authorization: Bearer ${{ secrets.GH_PAT }}" \
+              "https://api.github.com/repos/VrumVrum/scopebit/compare/$LIVE_SHA...$MASTER_SHA" \
+              | python3 -c "import sys,json;print('\n'.join(f['filename'] for f in json.load(sys.stdin).get('files',[])))" 2>/dev/null || echo "__compare_failed__")
+            if [ "$FILES" != "__compare_failed__" ] && [ -n "$FILES" ] && \
+               ! echo "$FILES" | grep -qvE '^(docs/|automation/|\.claude/|\.gitignore$|[^/]*\.md$)'; then
+              echo "Drift is docs-only ($(echo "$FILES" | wc -l) files) — production stays."
+              echo "stale=false" >> "$GITHUB_OUTPUT"
+            else
+              echo "Production is STALE (code drift) — forcing deploy."
+              echo "stale=true" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       - name: Clone site repo
