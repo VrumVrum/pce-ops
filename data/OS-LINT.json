@@ -1,0 +1,13 @@
+{
+ "generated_utc": "2026-08-04T11:50:52+00:00",
+ "source": "VrumVrum/scopebit@master",
+ "note": "structure only, never style — every check here is chosen for ~0 false-positive rate (SWE-agent ACI / EVOLUTION.md meta-rule); a missing file is reported, not guessed at",
+ "files_checked": [
+  "docs/OS/ledger/routine-reports.md",
+  "docs/OS/ledger/prompt-experiments.md",
+  "docs/OS/ledger/run-status.md",
+  "docs/OS/prompts/README.md"
+ ],
+ "violations": [],
+ "ok": true
+}
