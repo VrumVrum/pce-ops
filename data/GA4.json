@@ -1,6 +1,6 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-04T09:01:28Z",
+  "generated_utc": "2026-08-04T09:25:02Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -198,6 +198,133 @@
       "engagementRate": "0.25"
     }
   ],
+  "ai_landings_28d": [
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/mvp-development-cost-2026",
+      "sessions": "9"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/",
+      "sessions": "6"
+    },
+    {
+      "source": "gemini.google.com",
+      "landing": "/",
+      "sessions": "3"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "(not set)",
+      "sessions": "2"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/nonprofit-website-cost",
+      "sessions": "2"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/restaurant-website-cost",
+      "sessions": "2"
+    },
+    {
+      "source": "copilot.com",
+      "landing": "/blog/small-business-website-cost-2026",
+      "sessions": "2"
+    },
+    {
+      "source": "gemini.google.com",
+      "landing": "(not set)",
+      "sessions": "2"
+    },
+    {
+      "source": "gemini.google.com",
+      "landing": "/blog/wcag-accessibility-cost-2026",
+      "sessions": "2"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/api-integration-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/hidden-website-costs-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/idx-website-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/travel-agency-website-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/vercel-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/blog/website-hosting-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/calculator",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/calculators",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/cost/shopify/australia",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/healthcare-website-cost",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/law-firm-website-cost",
+      "sessions": "1"
+    },
+    {
+      "source": "chatgpt.com",
+      "landing": "/website-cost-calculator",
+      "sessions": "1"
+    },
+    {
+      "source": "claude.ai",
+      "landing": "(not set)",
+      "sessions": "1"
+    },
+    {
+      "source": "claude.ai",
+      "landing": "/blog/calendly-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "claude.ai",
+      "landing": "/blog/vercel-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "claude.ai",
+      "landing": "/freelance-website-cost",
+      "sessions": "1"
+    }
+  ],
   "top_landing_28d": [
     {
       "landing": "/",
@@ -299,5 +426,6 @@
       "sessions": "9",
       "engagementRate": "0.77777777777777779"
     }
-  ]
+  ],
+  "ai_wow_alerts": []
 }
