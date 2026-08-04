@@ -71,14 +71,66 @@ def supabase():
     return out
 
 
+def detect_junk(queries):
+    """AI-fanout junk detector (KPIS.md 'junk impressions' — nemin.io / vercel /
+    freelance-rate permutation clusters). Two signatures, both requiring 0 clicks:
+    (1) >=3 queries whose word SETS are identical (pure word-order permutations);
+    (2) queries containing quoted strings ("december 2021"-style scraper probes).
+    Returns (junk_impressions, junk_query_count, sample)."""
+    from collections import defaultdict
+    groups = defaultdict(list)
+    quoted = []
+    for q in queries or []:
+        text = (q.get('keys') or [q.get('query', '')])[0]
+        clicks = q.get('clicks', 0)
+        if clicks:
+            continue
+        if '"' in text:
+            quoted.append(q)
+            continue
+        # Normalize so permutation-variants collapse to one signature:
+        # drop digits/years, singularize, drop glue words.
+        STOP = {'a', 'the', 'in', 'for', 'per', 'to', 'of', 'and', 'or',
+                'how', 'much', 'does', 'what', 'is', 'are', 'on', 'an', 'my'}
+        words = []
+        for w in text.lower().split():
+            w = ''.join(c for c in w if not c.isdigit())
+            w = w.rstrip('s') if len(w) > 3 else w
+            if w and w not in STOP:
+                words.append(w)
+        groups[frozenset(words)].append(q)
+    junk = list(quoted)
+    for members in groups.values():
+        if len(members) >= 4:
+            junk.extend(members)
+    impr = sum(q.get('impressions', 0) for q in junk)
+    sample = [(q.get('keys') or [q.get('query', '')])[0] for q in junk[:3]]
+    return impr, len(junk), sample
+
+
 def gsc():
     if not os.path.exists(GSC):
         return {'error': 'no _gsc_dump.json'}
     d = json.load(io.open(GSC, encoding='utf-8'))
-    return {'generated': d.get('generated'),
-            'totals_28d': d.get('totals_28d'),
-            'totals_7d': d.get('totals_7d'),
-            'totals_90d': d.get('totals_90d')}
+    out = {'generated': d.get('generated'),
+           'totals_28d': d.get('totals_28d'),
+           'totals_7d': d.get('totals_7d'),
+           'totals_90d': d.get('totals_90d')}
+    # Clean totals: junk carries 0 clicks, so only impressions/CTR change.
+    # Position is left as-is (recomputing it without per-query weighting would lie).
+    try:
+        impr, n, sample = detect_junk(d.get('queries_28d'))
+        t = d.get('totals_28d') or {}
+        clean_impr = max((t.get('impressions') or 0) - impr, 1)
+        out['junk_28d'] = {'impressions': impr, 'queries': n, 'sample': sample}
+        out['totals_28d_clean'] = {
+            'clicks': t.get('clicks'),
+            'impressions': clean_impr,
+            'ctr': round((t.get('clicks') or 0) / clean_impr * 100, 3),
+        }
+    except Exception as e:
+        out['junk_28d'] = {'error': str(e)}
+    return out
 
 
 def shipped_asset_performance():
