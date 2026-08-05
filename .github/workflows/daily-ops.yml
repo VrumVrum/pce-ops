@@ -97,5 +97,9 @@ jobs:
           git config user.email "ops@projectcostestimator.com"
           git add data/ || true
           git diff --staged --quiet || git commit -m "data: ops snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push || echo "nothing to push"
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase && continue
+            echo "push race unresolved after rebase (attempt $i)"
+          done
 
