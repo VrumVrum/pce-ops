@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-08-04T18:57:24.944Z",
-  "status": "seeded",
+  "generated_utc": "2026-08-05T07:49:32.300Z",
+  "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
   "comparator": "pixelmatch@5 (pure JS; per-pixel threshold 0.1)",
@@ -9,32 +9,32 @@
     {
       "page": "/",
       "name": "home",
-      "seeded": true,
-      "diff_pct": null
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/calculator",
       "name": "calculator",
-      "seeded": true,
-      "diff_pct": null
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/website-cost",
       "name": "website-cost",
-      "seeded": true,
-      "diff_pct": null
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/pricing",
       "name": "pricing",
-      "seeded": true,
-      "diff_pct": null
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
-      "seeded": true,
-      "diff_pct": null
+      "seeded": false,
+      "diff_pct": 0
     }
   ],
   "note": "Pixel diff of money pages vs committed baseline. status=red -> a page changed >5% visually (or failed to shoot); baseline is kept until re-seeded via workflow_dispatch reseed=true. Supervisor: treat red as a finding — text gates cannot see rendering."
