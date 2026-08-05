@@ -1,10 +1,164 @@
 {
- "generated_utc": "2026-08-04T19:02:54+00:00",
+ "generated_utc": "2026-08-05T07:15:43+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-04",
- "gsc_pages_rows": 380,
+ "gsc_generated": "2026-08-05",
+ "gsc_pages_rows": 379,
  "gsc_truncated": false,
- "due_count": 0,
- "due": []
+ "due_count": 3,
+ "due": [
+  {
+   "id": "E-011",
+   "title": "Close the 4 funnel leaks from the money audit (blank app-like emails, zero-capture industry pages, drip exclusion, orpha",
+   "due": "2026-08-05",
+   "target_paths": [
+    "/cost/industry/*",
+    "/",
+    "/industry-"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/cost/industry/*": {
+     "pages_matched": 148,
+     "impressions_28d": 748,
+     "clicks_28d": 5
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 316,
+     "clicks_28d": 2
+    },
+    "/industry-": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 1064,
+    "clicks": 7
+   }
+  },
+  {
+   "id": "E-012",
+   "title": "/cost/ai/chatbot` — bespoke page riding the July 2026 AI-repricing wave (ALLOCATION #2, D-01)",
+   "due": "2026-08-05",
+   "target_paths": [
+    "/cost/ai/agent",
+    "/",
+    "/saas-cost-estimator",
+    "/web-app-development-cost",
+    "/mvp-cost-calculator",
+    "/cost/ai/*",
+    "/cost/ai/chatbot",
+    "/quote-analyzer",
+    "/healthcare-website-cost",
+    "/results",
+    "/report",
+    "/calculator"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/cost/ai/agent": {
+     "pages_matched": 1,
+     "impressions_28d": 4,
+     "clicks_28d": 0
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 316,
+     "clicks_28d": 2
+    },
+    "/saas-cost-estimator": {
+     "pages_matched": 1,
+     "impressions_28d": 164,
+     "clicks_28d": 0
+    },
+    "/web-app-development-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 1678,
+     "clicks_28d": 9
+    },
+    "/mvp-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 1327,
+     "clicks_28d": 0
+    },
+    "/cost/ai/*": {
+     "pages_matched": 2,
+     "impressions_28d": 7,
+     "clicks_28d": 0
+    },
+    "/cost/ai/chatbot": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    },
+    "/quote-analyzer": {
+     "pages_matched": 1,
+     "impressions_28d": 110,
+     "clicks_28d": 1
+    },
+    "/healthcare-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 182,
+     "clicks_28d": 0
+    },
+    "/results": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/report": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 105,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 3896,
+    "clicks": 12
+   }
+  },
+  {
+   "id": "E-027",
+   "title": "Fix A2: $15-unlock/drip CTAs restored a GENERIC estimate on both 227-page clusters, despite being logged done on 2026-07",
+   "due": "2026-08-05",
+   "target_paths": [
+    "/cost/app-like/*",
+    "/",
+    "/lib/types"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/cost/app-like/*": {
+     "pages_matched": 26,
+     "impressions_28d": 120,
+     "clicks_28d": 3
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 316,
+     "clicks_28d": 2
+    },
+    "/lib/types": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 436,
+    "clicks": 5
+   }
+  }
+ ]
 }

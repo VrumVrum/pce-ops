@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-04T19:02:50+00:00",
+ "generated_utc": "2026-08-05T07:15:40+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,14 +15,41 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
-  "pce-supervisor (Verifier)": {
-   "runs_30d": 2,
-   "reports_filed": 2,
-   "prompt_critiques_present": 2,
+  "pce-deep-verify (Deep System Verification)": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
    "commits_attributable": 0,
    "failed_runs": 0,
    "stamps_unparsed": 0,
-   "last_report": "2026-08-04"
+   "last_report": "2026-08-05"
+  },
+  "LESSONS (candidate additions for pce-deep-verify.md's own LESSONS block, not yet appended": {
+   "runs_30d": null,
+   "reports_filed": 1,
+   "prompt_critiques_present": 0,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 1,
+   "last_report": null
+  },
+  "pce-supervisor (Verifier)": {
+   "runs_30d": 3,
+   "reports_filed": 3,
+   "prompt_critiques_present": 3,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-05"
+  },
+  "pce-operating-loop (CEO Brain)": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-05"
   },
   "pce-authority-traffic (Acquisition Engine)": {
    "runs_30d": 1,

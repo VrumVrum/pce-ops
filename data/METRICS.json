@@ -1,28 +1,28 @@
 {
-  "generated_utc": "2026-08-04T19:02:34.215416Z",
+  "generated_utc": "2026-08-05T07:15:27.866320Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-04",
+    "generated": "2026-08-05",
     "totals_28d": {
       "clicks": 88,
-      "impressions": 23878,
-      "ctr": 0.369,
-      "position": 25.51
+      "impressions": 23314,
+      "ctr": 0.377,
+      "position": 25.39
     },
     "totals_7d": {
-      "clicks": 36,
-      "impressions": 9532,
-      "ctr": 0.378,
-      "position": 21.95
+      "clicks": 34,
+      "impressions": 8625,
+      "ctr": 0.394,
+      "position": 21.35
     },
     "totals_90d": {
       "clicks": 115,
-      "impressions": 37143,
+      "impressions": 37129,
       "ctr": 0.31,
       "position": 27.28
     },
     "junk_28d": {
-      "impressions": 1478,
+      "impressions": 1399,
       "queries": 56,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
@@ -32,8 +32,8 @@
     },
     "totals_28d_clean": {
       "clicks": 88,
-      "impressions": 22400,
-      "ctr": 0.393
+      "impressions": 21915,
+      "ctr": 0.402
     },
     "citation_floor_alerts": [
       {
@@ -47,11 +47,11 @@
     ]
   },
   "supabase": {
-    "leads_total": 85,
+    "leads_total": 86,
     "leads_by_context": {
       "results": 9,
       "api_key": 5,
-      "sys:lastrun": 16,
+      "sys:lastrun": 17,
       "drip:1": 10,
       "pack": 1,
       "app-like-uber": 2,
@@ -112,12 +112,12 @@
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 959,
+      "impressions": 947,
       "clicks": 9
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 773,
+      "impressions": 767,
       "clicks": 11
     }
   }
