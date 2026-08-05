@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-05T07:15:33+00:00",
+ "generated_utc": "2026-08-05T18:05:50+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -10,15 +10,15 @@
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-04",
+   "LastCrawledDate": "2026-08-05",
    "IsPage": true,
    "DocumentSize": 220514,
    "HttpStatus": 0
   },
   "/website-costs-2026-report": {
-   "LastCrawledDate": "2026-07-31",
+   "LastCrawledDate": "2026-08-05",
    "IsPage": true,
-   "DocumentSize": 0,
+   "DocumentSize": 154350,
    "HttpStatus": 0
   },
   "/website-cost": {

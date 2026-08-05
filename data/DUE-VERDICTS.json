@@ -1,9 +1,9 @@
 {
- "generated_utc": "2026-08-05T07:15:43+00:00",
+ "generated_utc": "2026-08-05T18:06:06+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-05",
- "gsc_pages_rows": 379,
+ "gsc_pages_rows": 385,
  "gsc_truncated": false,
  "due_count": 3,
  "due": [
@@ -20,13 +20,13 @@
    "proposed": "needs-routine-judgment",
    "metrics_28d": {
     "/cost/industry/*": {
-     "pages_matched": 148,
-     "impressions_28d": 748,
+     "pages_matched": 152,
+     "impressions_28d": 797,
      "clicks_28d": 5
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 316,
+     "impressions_28d": 320,
      "clicks_28d": 2
     },
     "/industry-": {
@@ -36,7 +36,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 1064,
+    "impressions": 1117,
     "clicks": 7
    }
   },
@@ -68,22 +68,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 316,
+     "impressions_28d": 320,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 164,
+     "impressions_28d": 178,
      "clicks_28d": 0
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1678,
+     "impressions_28d": 1719,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1327,
+     "impressions_28d": 1381,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -98,12 +98,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 110,
+     "impressions_28d": 118,
      "clicks_28d": 1
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 182,
+     "impressions_28d": 188,
      "clicks_28d": 0
     },
     "/results": {
@@ -123,7 +123,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 3896,
+    "impressions": 4023,
     "clicks": 12
    }
   },
@@ -140,13 +140,13 @@
    "proposed": "needs-routine-judgment",
    "metrics_28d": {
     "/cost/app-like/*": {
-     "pages_matched": 26,
-     "impressions_28d": 120,
+     "pages_matched": 27,
+     "impressions_28d": 138,
      "clicks_28d": 3
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 316,
+     "impressions_28d": 320,
      "clicks_28d": 2
     },
     "/lib/types": {
@@ -156,7 +156,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 436,
+    "impressions": 458,
     "clicks": 5
    }
   }
