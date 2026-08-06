@@ -1,0 +1,46 @@
+name: dataset-refresh
+# Monthly re-publish of the CC-BY cost dataset to Kaggle + Hugging Face.
+# Source of truth is the live https://projectcostestimator.com/api/cost-data;
+# scripts/dataset_refresh.py hashes it against data/DATASET-PUBLISH-STATE.json
+# and only pushes a new version to both platforms when the content actually
+# changed. Unchanged upstream = clean green no-op, no version churn.
+# Secrets used: KAGGLE_USERNAME, KAGGLE_KEY, HF_TOKEN.
+on:
+  schedule:
+    - cron: '0 8 1 * *'   # 08:00 UTC, 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install publish clients
+        run: pip install --quiet kaggle huggingface_hub
+
+      - name: Refresh dataset (hash-gated)
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python scripts/dataset_refresh.py
+
+      - name: Commit publish state
+        run: |
+          git config user.name "pce-ops-bot"
+          git config user.email "ops@projectcostestimator.com"
+          git add data/DATASET-PUBLISH-STATE.json || true
+          git diff --staged --quiet || git commit -m "data: dataset publish state $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase && continue
+            echo "push race unresolved after rebase (attempt $i)"
+          done
