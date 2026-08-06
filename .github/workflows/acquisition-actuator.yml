@@ -1,0 +1,49 @@
+name: acquisition-actuator
+# Executes acquisition specs written by the decide-only cloud routine to
+# VrumVrum/scopebit:docs/OS/worklog/acquisition-queue.json (the sandbox cannot open
+# PRs on external repos or POST to non-GitHub hosts; this workflow can).
+# github-pr items: fork/branch/insert/PR with the disclosure line enforced.
+# form-post items: plain curl POST, HTTP status recorded.
+# Results land in data/ACQUISITION-RESULTS.json; the routine reconciles them into
+# the queue + offsite-submissions.md tracker on its next cycle.
+# Anti-spam: the script caps github-pr executions at 2 per run and skips ids
+# already present in the results file. Empty queue = clean green no-op.
+on:
+  schedule:
+    - cron: '0 10 * * *'   # 10:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actuate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify gh auth (GH_PAT drives every fork/PR)
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh auth status
+
+      - name: Run actuator
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: python scripts/acquisition_actuator.py
+
+      - name: Commit results
+        run: |
+          git config user.name "pce-ops-bot"
+          git config user.email "ops@projectcostestimator.com"
+          git add data/ACQUISITION-RESULTS.json || true
+          git diff --staged --quiet || git commit -m "data: acquisition results $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase && continue
+            echo "push race unresolved after rebase (attempt $i)"
+          done
