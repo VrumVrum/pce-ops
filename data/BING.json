@@ -1,16 +1,16 @@
 {
- "generated_utc": "2026-08-05T18:05:50+00:00",
+ "generated_utc": "2026-08-06T07:16:18+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
-  "MonthlyQuota": 2700
+  "MonthlyQuota": 2600
  },
  "crawl_stats_recent": [],
  "query_stats": [],
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-05",
+   "LastCrawledDate": "2026-08-06",
    "IsPage": true,
    "DocumentSize": 220514,
    "HttpStatus": 0
@@ -22,9 +22,9 @@
    "HttpStatus": 0
   },
   "/website-cost": {
-   "LastCrawledDate": "2026-08-03",
+   "LastCrawledDate": "2026-08-06",
    "IsPage": true,
-   "DocumentSize": 291181,
+   "DocumentSize": 294832,
    "HttpStatus": 0
   },
   "/cost-index": {

@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-05T18:06:06+00:00",
+ "generated_utc": "2026-08-06T07:16:34+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-05",
- "gsc_pages_rows": 385,
+ "gsc_generated": "2026-08-06",
+ "gsc_pages_rows": 389,
  "gsc_truncated": false,
- "due_count": 3,
+ "due_count": 4,
  "due": [
   {
    "id": "E-011",
@@ -20,13 +20,13 @@
    "proposed": "needs-routine-judgment",
    "metrics_28d": {
     "/cost/industry/*": {
-     "pages_matched": 152,
-     "impressions_28d": 797,
-     "clicks_28d": 5
+     "pages_matched": 157,
+     "impressions_28d": 857,
+     "clicks_28d": 6
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 320,
+     "impressions_28d": 315,
      "clicks_28d": 2
     },
     "/industry-": {
@@ -36,8 +36,8 @@
     }
    },
    "totals_28d": {
-    "impressions": 1117,
-    "clicks": 7
+    "impressions": 1172,
+    "clicks": 8
    }
   },
   {
@@ -68,22 +68,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 320,
+     "impressions_28d": 315,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 178,
+     "impressions_28d": 181,
      "clicks_28d": 0
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1719,
+     "impressions_28d": 1710,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1381,
+     "impressions_28d": 1409,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -98,12 +98,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 118,
+     "impressions_28d": 120,
      "clicks_28d": 1
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 188,
+     "impressions_28d": 190,
      "clicks_28d": 0
     },
     "/results": {
@@ -123,7 +123,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 4023,
+    "impressions": 4044,
     "clicks": 12
    }
   },
@@ -141,12 +141,12 @@
    "metrics_28d": {
     "/cost/app-like/*": {
      "pages_matched": 27,
-     "impressions_28d": 138,
+     "impressions_28d": 145,
      "clicks_28d": 3
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 320,
+     "impressions_28d": 315,
      "clicks_28d": 2
     },
     "/lib/types": {
@@ -156,8 +156,59 @@
     }
    },
    "totals_28d": {
-    "impressions": 458,
+    "impressions": 460,
     "clicks": 5
+   }
+  },
+  {
+   "id": "E-015",
+   "title": "/cost/ai/agent` — sibling to `/cost/ai/chatbot`, D-01/D-02 continuation",
+   "due": "2026-08-06",
+   "target_paths": [
+    "/cost/ai/chatbot",
+    "/",
+    "/cost/ai/agent",
+    "/saas-cost-estimator",
+    "/web-app-development-cost",
+    "/mvp-cost-calculator"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/cost/ai/chatbot": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 315,
+     "clicks_28d": 2
+    },
+    "/cost/ai/agent": {
+     "pages_matched": 1,
+     "impressions_28d": 4,
+     "clicks_28d": 0
+    },
+    "/saas-cost-estimator": {
+     "pages_matched": 1,
+     "impressions_28d": 181,
+     "clicks_28d": 0
+    },
+    "/web-app-development-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 1710,
+     "clicks_28d": 9
+    },
+    "/mvp-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 1409,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 3622,
+    "clicks": 11
    }
   }
  ]
