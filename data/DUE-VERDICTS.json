@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-07T05:56:28+00:00",
+ "generated_utc": "2026-08-07T17:24:45+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-07",
@@ -35,22 +35,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 299,
+     "impressions_28d": 305,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 174,
+     "impressions_28d": 190,
      "clicks_28d": 0
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1655,
+     "impressions_28d": 1719,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1390,
+     "impressions_28d": 1482,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -65,12 +65,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 117,
+     "impressions_28d": 122,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 181,
+     "impressions_28d": 192,
      "clicks_28d": 0
     },
     "/results": {
@@ -90,7 +90,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 3935,
+    "impressions": 4129,
     "clicks": 11
    }
   }

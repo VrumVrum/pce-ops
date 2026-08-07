@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-07T05:56:16+00:00",
+ "generated_utc": "2026-08-07T17:24:31+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -22,7 +22,7 @@
    "HttpStatus": 0
   },
   "/website-cost": {
-   "LastCrawledDate": "2026-08-06",
+   "LastCrawledDate": "2026-08-07",
    "IsPage": true,
    "DocumentSize": 298768,
    "HttpStatus": 0

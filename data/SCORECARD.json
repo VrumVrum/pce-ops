@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-07T05:56:24+00:00",
+ "generated_utc": "2026-08-07T17:24:39+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,6 +15,33 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
+  "pce-operating-loop (CEO Brain)": {
+   "runs_30d": 7,
+   "reports_filed": 7,
+   "prompt_critiques_present": 6,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-07"
+  },
+  "pce-content-engine": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-07"
+  },
+  "pce-keyword-scout": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-07"
+  },
   "GROWTH MORNING BRIEF": {
    "runs_30d": 2,
    "reports_filed": 2,
@@ -32,24 +59,6 @@
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-07"
-  },
-  "pce-operating-loop (CEO Brain)": {
-   "runs_30d": 6,
-   "reports_filed": 6,
-   "prompt_critiques_present": 5,
-   "commits_attributable": 0,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-07"
-  },
-  "pce-content-engine": {
-   "runs_30d": 1,
-   "reports_filed": 1,
-   "prompt_critiques_present": 1,
-   "commits_attributable": 0,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-06"
   },
   "REVENUE EXECUTOR": {
    "runs_30d": 1,
