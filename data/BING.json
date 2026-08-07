@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-08-06T07:16:18+00:00",
+ "generated_utc": "2026-08-07T05:56:16+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
-  "MonthlyQuota": 2600
+  "MonthlyQuota": 2500
  },
  "crawl_stats_recent": [],
  "query_stats": [],
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-06",
+   "LastCrawledDate": "2026-08-07",
    "IsPage": true,
-   "DocumentSize": 220514,
+   "DocumentSize": 220894,
    "HttpStatus": 0
   },
   "/website-costs-2026-report": {
@@ -24,7 +24,7 @@
   "/website-cost": {
    "LastCrawledDate": "2026-08-06",
    "IsPage": true,
-   "DocumentSize": 294832,
+   "DocumentSize": 298768,
    "HttpStatus": 0
   },
   "/cost-index": {
@@ -34,9 +34,9 @@
    "HttpStatus": 0
   },
   "/rate-database": {
-   "LastCrawledDate": "2026-08-01",
+   "LastCrawledDate": "2026-08-07",
    "IsPage": true,
-   "DocumentSize": 0,
+   "DocumentSize": 204426,
    "HttpStatus": 0
   },
   "/website-cost-calculator": {

@@ -1,28 +1,28 @@
 {
-  "generated_utc": "2026-08-06T07:16:13.111316Z",
+  "generated_utc": "2026-08-07T05:56:11.586836Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-06",
+    "generated": "2026-08-07",
     "totals_28d": {
-      "clicks": 98,
-      "impressions": 24663,
-      "ctr": 0.397,
-      "position": 24.64
+      "clicks": 97,
+      "impressions": 23844,
+      "ctr": 0.407,
+      "position": 24.62
     },
     "totals_7d": {
-      "clicks": 42,
-      "impressions": 9734,
-      "ctr": 0.431,
-      "position": 20.22
+      "clicks": 37,
+      "impressions": 8468,
+      "ctr": 0.437,
+      "position": 19.95
     },
     "totals_90d": {
       "clicks": 126,
-      "impressions": 39240,
+      "impressions": 39232,
       "ctr": 0.321,
       "position": 26.71
     },
     "junk_28d": {
-      "impressions": 1318,
+      "impressions": 1136,
       "queries": 61,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 98,
-      "impressions": 23345,
-      "ctr": 0.42
+      "clicks": 97,
+      "impressions": 22708,
+      "ctr": 0.427
     },
     "citation_floor_alerts": [
       {
@@ -47,7 +47,7 @@
     ]
   },
   "supabase": {
-    "leads_total": 87,
+    "leads_total": 92,
     "leads_by_context": {
       "results": 9,
       "api_key": 5,
@@ -55,7 +55,7 @@
       "drip:1": 10,
       "pack": 1,
       "app-like-uber": 2,
-      "drip:2": 16,
+      "drip:2": 21,
       "hero": 22,
       "unsub": 1,
       "drip:3": 3
@@ -107,17 +107,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 5379,
+      "impressions": 5243,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1024,
+      "impressions": 1004,
       "clicks": 10
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 825,
+      "impressions": 798,
       "clicks": 12
     }
   }
