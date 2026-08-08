@@ -1,9 +1,9 @@
 {
- "generated_utc": "2026-08-08T05:21:11+00:00",
+ "generated_utc": "2026-08-08T17:03:34+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-08",
- "gsc_pages_rows": 385,
+ "gsc_pages_rows": 388,
  "gsc_truncated": false,
  "due_count": 3,
  "due": [
@@ -35,22 +35,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 295,
+     "impressions_28d": 299,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 185,
-     "clicks_28d": 0
+     "impressions_28d": 198,
+     "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1641,
+     "impressions_28d": 1711,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1449,
+     "impressions_28d": 1506,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -65,13 +65,13 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 120,
+     "impressions_28d": 123,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 189,
-     "clicks_28d": 0
+     "impressions_28d": 196,
+     "clicks_28d": 1
     },
     "/results": {
      "pages_matched": 0,
@@ -90,8 +90,8 @@
     }
    },
    "totals_28d": {
-    "impressions": 3995,
-    "clicks": 11
+    "impressions": 4149,
+    "clicks": 13
    }
   },
   {
@@ -106,7 +106,8 @@
     "/ecommerce-cost-calculator",
     "/cost/ai/chatbot",
     "/software-development-budget-2027",
-    "/"
+    "/",
+    "/cost/ai/*"
    ],
    "delta_prev_28d": null,
    "proposed": "needs-routine-judgment",
@@ -118,23 +119,23 @@
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1449,
+     "impressions_28d": 1506,
      "clicks_28d": 0
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 185,
-     "clicks_28d": 0
+     "impressions_28d": 198,
+     "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1641,
+     "impressions_28d": 1711,
      "clicks_28d": 9
     },
     "/ecommerce-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 221,
-     "clicks_28d": 3
+     "impressions_28d": 229,
+     "clicks_28d": 4
     },
     "/cost/ai/chatbot": {
      "pages_matched": 1,
@@ -148,13 +149,18 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 295,
+     "impressions_28d": 299,
      "clicks_28d": 2
+    },
+    "/cost/ai/*": {
+     "pages_matched": 2,
+     "impressions_28d": 7,
+     "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 3798,
-    "clicks": 14
+    "impressions": 3957,
+    "clicks": 16
    }
   },
   {
@@ -177,12 +183,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 120,
+     "impressions_28d": 123,
      "clicks_28d": 0
     },
     "/website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1031,
+     "impressions_28d": 1078,
      "clicks_28d": 0
     },
     "/tools/fixed-price-vs-time-and-materials": {
@@ -192,7 +198,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 1155,
+    "impressions": 1205,
     "clicks": 0
    }
   }

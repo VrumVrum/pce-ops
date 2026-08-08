@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-08T05:21:06+00:00",
+ "generated_utc": "2026-08-08T17:03:30+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,19 +15,28 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
-  "pce-deep-verify (Deep System Verification)": {
-   "runs_30d": 2,
-   "reports_filed": 2,
-   "prompt_critiques_present": 2,
+  "pce-supervisor (Verifier)": {
+   "runs_30d": 10,
+   "reports_filed": 10,
+   "prompt_critiques_present": 10,
    "commits_attributable": 0,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-08"
   },
-  "pce-supervisor (Verifier)": {
-   "runs_30d": 9,
-   "reports_filed": 9,
-   "prompt_critiques_present": 9,
+  "GROWTH MORNING BRIEF": {
+   "runs_30d": 3,
+   "reports_filed": 3,
+   "prompt_critiques_present": 3,
+   "commits_attributable": 18,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-08"
+  },
+  "pce-deep-verify (Deep System Verification)": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
    "commits_attributable": 0,
    "failed_runs": 0,
    "stamps_unparsed": 0,
@@ -65,15 +74,6 @@
    "reports_filed": 1,
    "prompt_critiques_present": 1,
    "commits_attributable": 0,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-07"
-  },
-  "GROWTH MORNING BRIEF": {
-   "runs_30d": 2,
-   "reports_filed": 2,
-   "prompt_critiques_present": 2,
-   "commits_attributable": 17,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-07"
