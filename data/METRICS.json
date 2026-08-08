@@ -1,28 +1,28 @@
 {
-  "generated_utc": "2026-08-07T17:24:26.367576Z",
+  "generated_utc": "2026-08-08T05:20:38.523781Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-07",
+    "generated": "2026-08-08",
     "totals_28d": {
-      "clicks": 100,
-      "impressions": 25226,
-      "ctr": 0.396,
-      "position": 24.3
+      "clicks": 98,
+      "impressions": 24422,
+      "ctr": 0.401,
+      "position": 24.13
     },
     "totals_7d": {
-      "clicks": 40,
-      "impressions": 9850,
-      "ctr": 0.406,
-      "position": 19.78
+      "clicks": 30,
+      "impressions": 8534,
+      "ctr": 0.352,
+      "position": 19.9
     },
     "totals_90d": {
       "clicks": 129,
-      "impressions": 40614,
+      "impressions": 40602,
       "ctr": 0.318,
-      "position": 26.44
+      "position": 26.43
     },
     "junk_28d": {
-      "impressions": 1083,
+      "impressions": 914,
       "queries": 68,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 100,
-      "impressions": 24143,
-      "ctr": 0.414
+      "clicks": 98,
+      "impressions": 23508,
+      "ctr": 0.417
     },
     "citation_floor_alerts": [
       {
@@ -107,17 +107,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 5561,
+      "impressions": 5426,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1077,
+      "impressions": 1060,
       "clicks": 10
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 825,
+      "impressions": 800,
       "clicks": 12
     }
   }

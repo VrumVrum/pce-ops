@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-07T17:24:45+00:00",
+ "generated_utc": "2026-08-08T05:21:11+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-07",
+ "gsc_generated": "2026-08-08",
  "gsc_pages_rows": 385,
  "gsc_truncated": false,
- "due_count": 1,
+ "due_count": 3,
  "due": [
   {
    "id": "E-012",
@@ -35,22 +35,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 305,
+     "impressions_28d": 295,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 190,
+     "impressions_28d": 185,
      "clicks_28d": 0
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1719,
+     "impressions_28d": 1641,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1482,
+     "impressions_28d": 1449,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -65,12 +65,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 122,
+     "impressions_28d": 120,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 192,
+     "impressions_28d": 189,
      "clicks_28d": 0
     },
     "/results": {
@@ -85,13 +85,115 @@
     },
     "/calculator": {
      "pages_matched": 1,
-     "impressions_28d": 105,
+     "impressions_28d": 102,
      "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 4129,
+    "impressions": 3995,
     "clicks": 11
+   }
+  },
+  {
+   "id": "E-016",
+   "title": "/software-development-budget-2027` — FY2027 software-budget hub (ALLOCATION #5, D-04)",
+   "due": "2026-08-08",
+   "target_paths": [
+    "/cost/ai/agent",
+    "/mvp-cost-calculator",
+    "/saas-cost-estimator",
+    "/web-app-development-cost",
+    "/ecommerce-cost-calculator",
+    "/cost/ai/chatbot",
+    "/software-development-budget-2027",
+    "/"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/cost/ai/agent": {
+     "pages_matched": 1,
+     "impressions_28d": 4,
+     "clicks_28d": 0
+    },
+    "/mvp-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 1449,
+     "clicks_28d": 0
+    },
+    "/saas-cost-estimator": {
+     "pages_matched": 1,
+     "impressions_28d": 185,
+     "clicks_28d": 0
+    },
+    "/web-app-development-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 1641,
+     "clicks_28d": 9
+    },
+    "/ecommerce-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 221,
+     "clicks_28d": 3
+    },
+    "/cost/ai/chatbot": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    },
+    "/software-development-budget-2027": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 295,
+     "clicks_28d": 2
+    }
+   },
+   "totals_28d": {
+    "impressions": 3798,
+    "clicks": 14
+   }
+  },
+  {
+   "id": "E-017",
+   "title": "/tools/fixed-price-vs-time-and-materials` — interactive contract-model chooser (ALLOCATION #7)",
+   "due": "2026-08-08",
+   "target_paths": [
+    "/tools/rfp-generator",
+    "/quote-analyzer",
+    "/website-cost",
+    "/tools/fixed-price-vs-time-and-materials"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/tools/rfp-generator": {
+     "pages_matched": 1,
+     "impressions_28d": 1,
+     "clicks_28d": 0
+    },
+    "/quote-analyzer": {
+     "pages_matched": 1,
+     "impressions_28d": 120,
+     "clicks_28d": 0
+    },
+    "/website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 1031,
+     "clicks_28d": 0
+    },
+    "/tools/fixed-price-vs-time-and-materials": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 1155,
+    "clicks": 0
    }
   }
  ]
