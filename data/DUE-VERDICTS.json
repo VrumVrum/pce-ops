@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-09T05:29:22+00:00",
+ "generated_utc": "2026-08-09T17:06:13+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-09",
@@ -272,6 +272,7 @@
    "target_paths": [
     "/",
     "/cost/app-like/*",
+    "/cost/app-like",
     "/apps"
    ],
    "delta_prev_28d": null,
@@ -287,6 +288,11 @@
      "impressions_28d": 166,
      "clicks_28d": 4
     },
+    "/cost/app-like": {
+     "pages_matched": 1,
+     "impressions_28d": 5,
+     "clicks_28d": 0
+    },
     "/apps": {
      "pages_matched": 0,
      "impressions_28d": 0,
@@ -294,7 +300,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 456,
+    "impressions": 461,
     "clicks": 6
    }
   }

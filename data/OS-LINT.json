@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-09T05:29:19+00:00",
+ "generated_utc": "2026-08-09T17:06:09+00:00",
  "source": "VrumVrum/scopebit@master",
  "note": "structure only, never style — every check here is chosen for ~0 false-positive rate (SWE-agent ACI / EVOLUTION.md meta-rule); a missing file is reported, not guessed at",
  "files_checked": [
@@ -22,31 +22,25 @@
    "file": "docs/OS/ledger/routine-reports.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## LESSONS (candidate additions for pce-deep-verify.md's own LESSONS block, not yet appended — first fire, no prior lessons to compare against)",
-   "line": 1325
+   "line": 1537
   },
   {
    "file": "docs/OS/ledger/routine-reports.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## pce-operating-loop (CEO Brain) — 2026-08-05T00:00Z (12h cloud cycle)' has no '### Prompt critique' subsection",
-   "line": 1467
+   "line": 1679
   },
   {
    "file": "docs/OS/ledger/routine-reports.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## AUTONOMOUS FOUNDER (CEO Brain) — 2026-08-04T12:39:13Z (later fire, 12h cloud cycle)' has no '### Prompt critique' subsection",
-   "line": 1828
+   "line": 2040
   },
   {
    "file": "docs/OS/ledger/prompt-experiments.md",
    "rule": "p-entry-fields-missing",
-   "evidence": "## P-005 — pce-morning-brief.md STEP 2: P-003's `search.json` fallback targets the wrong failure layer (network block, not search-index gap) lacks required field(s): Approver",
-   "line": 424
-  },
-  {
-   "file": "docs/OS/ledger/prompt-experiments.md",
-   "rule": "p-entry-fields-missing",
-   "evidence": "## P-006 — pce-supervisor.md STEP 3: make the calibration-set weekly replay an imperative, tracked STEP, not just a described downstream effect lacks required field(s): Approver",
-   "line": 477
+   "evidence": "## P-007 — pce-content-engine.md STEP 0: scope the weekly throttle to the two files it actually counts lacks required field(s): Approver",
+   "line": 618
   }
  ],
  "ok": false
