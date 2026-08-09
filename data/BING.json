@@ -1,16 +1,16 @@
 {
- "generated_utc": "2026-08-08T17:03:23+00:00",
+ "generated_utc": "2026-08-09T05:29:07+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
-  "MonthlyQuota": 2400
+  "MonthlyQuota": 2300
  },
  "crawl_stats_recent": [],
  "query_stats": [],
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-08",
+   "LastCrawledDate": "2026-08-09",
    "IsPage": true,
    "DocumentSize": 220894,
    "HttpStatus": 0

@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-08T17:03:34+00:00",
+ "generated_utc": "2026-08-09T05:29:22+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-08",
- "gsc_pages_rows": 388,
+ "gsc_generated": "2026-08-09",
+ "gsc_pages_rows": 390,
  "gsc_truncated": false,
- "due_count": 3,
+ "due_count": 5,
  "due": [
   {
    "id": "E-012",
@@ -35,22 +35,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 299,
+     "impressions_28d": 290,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 198,
+     "impressions_28d": 206,
      "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1711,
+     "impressions_28d": 1782,
      "clicks_28d": 9
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1506,
+     "impressions_28d": 1552,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -65,7 +65,7 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 123,
+     "impressions_28d": 119,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
@@ -85,12 +85,12 @@
     },
     "/calculator": {
      "pages_matched": 1,
-     "impressions_28d": 102,
+     "impressions_28d": 100,
      "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 4149,
+    "impressions": 4259,
     "clicks": 13
    }
   },
@@ -119,22 +119,22 @@
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1506,
+     "impressions_28d": 1552,
      "clicks_28d": 0
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 198,
+     "impressions_28d": 206,
      "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1711,
+     "impressions_28d": 1782,
      "clicks_28d": 9
     },
     "/ecommerce-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 229,
+     "impressions_28d": 237,
      "clicks_28d": 4
     },
     "/cost/ai/chatbot": {
@@ -149,7 +149,7 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 299,
+     "impressions_28d": 290,
      "clicks_28d": 2
     },
     "/cost/ai/*": {
@@ -159,7 +159,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 3957,
+    "impressions": 4081,
     "clicks": 16
    }
   },
@@ -183,13 +183,13 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 123,
+     "impressions_28d": 119,
      "clicks_28d": 0
     },
     "/website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1078,
-     "clicks_28d": 0
+     "impressions_28d": 1045,
+     "clicks_28d": 1
     },
     "/tools/fixed-price-vs-time-and-materials": {
      "pages_matched": 1,
@@ -198,8 +198,104 @@
     }
    },
    "totals_28d": {
-    "impressions": 1205,
-    "clicks": 0
+    "impressions": 1168,
+    "clicks": 1
+   }
+  },
+  {
+   "id": "E-018",
+   "title": "Fix internal-link orphan on `/cost-by-industry` + new `/cost/app-like` hub (227-page cluster)",
+   "due": "2026-08-09",
+   "target_paths": [
+    "/calculators",
+    "/cost-by-industry",
+    "/cost/app-like/*",
+    "/cost/app-like",
+    "/",
+    "/cost/app-like/[app]",
+    "/cost/ai/chatbot",
+    "/cost/ai/agent"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/calculators": {
+     "pages_matched": 1,
+     "impressions_28d": 196,
+     "clicks_28d": 1
+    },
+    "/cost-by-industry": {
+     "pages_matched": 1,
+     "impressions_28d": 1,
+     "clicks_28d": 0
+    },
+    "/cost/app-like/*": {
+     "pages_matched": 27,
+     "impressions_28d": 166,
+     "clicks_28d": 4
+    },
+    "/cost/app-like": {
+     "pages_matched": 1,
+     "impressions_28d": 5,
+     "clicks_28d": 0
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 290,
+     "clicks_28d": 2
+    },
+    "/cost/app-like/[app]": {
+     "pages_matched": 27,
+     "impressions_28d": 166,
+     "clicks_28d": 4
+    },
+    "/cost/ai/chatbot": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    },
+    "/cost/ai/agent": {
+     "pages_matched": 1,
+     "impressions_28d": 4,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 831,
+    "clicks": 11
+   }
+  },
+  {
+   "id": "E-019",
+   "title": "App-like wave 2: 12 new apps (CRM/business-software/e-commerce/marketplace/education) (ALLOCATION #9)",
+   "due": "2026-08-09",
+   "target_paths": [
+    "/",
+    "/cost/app-like/*",
+    "/apps"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 290,
+     "clicks_28d": 2
+    },
+    "/cost/app-like/*": {
+     "pages_matched": 27,
+     "impressions_28d": 166,
+     "clicks_28d": 4
+    },
+    "/apps": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 456,
+    "clicks": 6
    }
   }
  ]

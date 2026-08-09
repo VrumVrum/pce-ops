@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-08T17:03:30+00:00",
+ "generated_utc": "2026-08-09T05:29:17+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -16,9 +16,36 @@
  "commits_30d_total": 300,
  "routines": {
   "pce-supervisor (Verifier)": {
-   "runs_30d": 10,
-   "reports_filed": 10,
-   "prompt_critiques_present": 10,
+   "runs_30d": 11,
+   "reports_filed": 11,
+   "prompt_critiques_present": 11,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-09"
+  },
+  "pce-operating-loop (CEO Brain, 12h)": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 0,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-09"
+  },
+  "pce-content-engine": {
+   "runs_30d": 3,
+   "reports_filed": 3,
+   "prompt_critiques_present": 3,
+   "commits_attributable": 1,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-08"
+  },
+  "pce-keyword-scout": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
    "commits_attributable": 0,
    "failed_runs": 0,
    "stamps_unparsed": 0,
@@ -55,24 +82,6 @@
    "runs_30d": 3,
    "reports_filed": 3,
    "prompt_critiques_present": 3,
-   "commits_attributable": 0,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-07"
-  },
-  "pce-content-engine": {
-   "runs_30d": 2,
-   "reports_filed": 2,
-   "prompt_critiques_present": 2,
-   "commits_attributable": 1,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-07"
-  },
-  "pce-keyword-scout": {
-   "runs_30d": 1,
-   "reports_filed": 1,
-   "prompt_critiques_present": 1,
    "commits_attributable": 0,
    "failed_runs": 0,
    "stamps_unparsed": 0,
