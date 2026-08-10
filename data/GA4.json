@@ -1,27 +1,27 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-10T05:57:31Z",
+  "generated_utc": "2026-08-10T17:26:25Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "156",
-      "users": "154",
-      "engagementRate": "0.47435897435897434",
-      "avgDuration": "40.607493474358975"
+      "sessions": "149",
+      "users": "146",
+      "engagementRate": "0.46308724832214765",
+      "avgDuration": "38.025809550335573"
     },
     {
       "channel": "Organic Search",
-      "sessions": "59",
-      "users": "50",
-      "engagementRate": "0.423728813559322",
-      "avgDuration": "89.077399627118638"
+      "sessions": "62",
+      "users": "49",
+      "engagementRate": "0.37096774193548387",
+      "avgDuration": "77.8886916935484"
     },
     {
       "channel": "Unassigned",
-      "sessions": "22",
-      "users": "21",
-      "engagementRate": "0.045454545454545456",
-      "avgDuration": "35.955377500000004"
+      "sessions": "27",
+      "users": "26",
+      "engagementRate": "0.037037037037037035",
+      "avgDuration": "64.972622629629626"
     },
     {
       "channel": "Email",
@@ -32,10 +32,10 @@
     },
     {
       "channel": "AI Assistant",
-      "sessions": "4",
-      "users": "4",
-      "engagementRate": "0.25",
-      "avgDuration": "10.94942325"
+      "sessions": "5",
+      "users": "5",
+      "engagementRate": "0.2",
+      "avgDuration": "12.383291400000001"
     },
     {
       "channel": "Referral",
@@ -55,31 +55,31 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "634",
-      "users": "615",
-      "engagementRate": "0.42902208201892744",
-      "avgDuration": "42.377337362776025"
+      "sessions": "644",
+      "users": "624",
+      "engagementRate": "0.422360248447205",
+      "avgDuration": "41.808502152173908"
     },
     {
       "channel": "Organic Search",
-      "sessions": "186",
-      "users": "149",
-      "engagementRate": "0.5268817204301075",
-      "avgDuration": "165.05084307526883"
+      "sessions": "193",
+      "users": "152",
+      "engagementRate": "0.50259067357512954",
+      "avgDuration": "149.021331746114"
     },
     {
       "channel": "AI Assistant",
-      "sessions": "41",
-      "users": "34",
-      "engagementRate": "0.6097560975609756",
-      "avgDuration": "164.01844063414634"
+      "sessions": "39",
+      "users": "33",
+      "engagementRate": "0.61538461538461542",
+      "avgDuration": "168.44397102564102"
     },
     {
       "channel": "Unassigned",
-      "sessions": "34",
-      "users": "33",
-      "engagementRate": "0.058823529411764705",
-      "avgDuration": "33.913104294117652"
+      "sessions": "39",
+      "users": "38",
+      "engagementRate": "0.05128205128205128",
+      "avgDuration": "54.2637962051282"
     },
     {
       "channel": "Organic Social",
@@ -106,8 +106,8 @@
   "ai_sources_28d": [
     {
       "source": "chatgpt.com",
-      "sessions": "16",
-      "engagementRate": "0.6875"
+      "sessions": "13",
+      "engagementRate": "0.76923076923076927"
     },
     {
       "source": "gemini.google.com",
@@ -116,8 +116,8 @@
     },
     {
       "source": "copilot.com",
-      "sessions": "7",
-      "engagementRate": "0.2857142857142857"
+      "sessions": "8",
+      "engagementRate": "0.25"
     },
     {
       "source": "perplexity",
@@ -135,22 +135,22 @@
       "engagementRate": "1"
     }
   ],
-  "ai_sessions_28d": 51,
+  "ai_sessions_28d": 49,
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "634",
-      "engagementRate": "0.42902208201892744"
+      "sessions": "644",
+      "engagementRate": "0.422360248447205"
     },
     {
       "source": "google",
-      "sessions": "138",
-      "engagementRate": "0.55072463768115942"
+      "sessions": "144",
+      "engagementRate": "0.52083333333333337"
     },
     {
       "source": "bing",
-      "sessions": "34",
-      "engagementRate": "0.44117647058823528"
+      "sessions": "35",
+      "engagementRate": "0.42857142857142855"
     },
     {
       "source": "drip",
@@ -158,19 +158,19 @@
       "engagementRate": "0.6333333333333333"
     },
     {
+      "source": "(not set)",
+      "sessions": "25",
+      "engagementRate": "0"
+    },
+    {
       "source": "news.ycombinator.com",
       "sessions": "23",
       "engagementRate": "0.65217391304347827"
     },
     {
-      "source": "(not set)",
-      "sessions": "20",
-      "engagementRate": "0"
-    },
-    {
       "source": "chatgpt.com",
-      "sessions": "16",
-      "engagementRate": "0.6875"
+      "sessions": "13",
+      "engagementRate": "0.76923076923076927"
     },
     {
       "source": "gemini.google.com",
@@ -179,8 +179,8 @@
     },
     {
       "source": "copilot.com",
-      "sessions": "7",
-      "engagementRate": "0.2857142857142857"
+      "sessions": "8",
+      "engagementRate": "0.25"
     },
     {
       "source": "perplexity",
@@ -202,17 +202,12 @@
     {
       "source": "chatgpt.com",
       "landing": "/",
-      "sessions": "4"
+      "sessions": "3"
     },
     {
       "source": "gemini.google.com",
       "landing": "/",
       "sessions": "3"
-    },
-    {
-      "source": "chatgpt.com",
-      "landing": "/blog/mvp-development-cost-2026",
-      "sessions": "2"
     },
     {
       "source": "chatgpt.com",
@@ -316,6 +311,11 @@
     },
     {
       "source": "copilot.com",
+      "landing": "/blog/website-maintenance-cost-2026",
+      "sessions": "1"
+    },
+    {
+      "source": "copilot.com",
       "landing": "/blog/wordpress-vs-drupal-cost-2026",
       "sessions": "1"
     },
@@ -328,8 +328,8 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "263",
-      "engagementRate": "0.70722433460076051"
+      "sessions": "262",
+      "engagementRate": "0.70610687022900764"
     },
     {
       "landing": "/freelance-website-cost",
@@ -348,8 +348,8 @@
     },
     {
       "landing": "/calculator",
-      "sessions": "26",
-      "engagementRate": "0.46153846153846156"
+      "sessions": "27",
+      "engagementRate": "0.44444444444444442"
     },
     {
       "landing": "/restaurant-website-cost",
@@ -363,23 +363,28 @@
     },
     {
       "landing": "/nonprofit-website-cost",
-      "sessions": "21",
-      "engagementRate": "0.52380952380952384"
+      "sessions": "22",
+      "engagementRate": "0.5"
     },
     {
       "landing": "/web-app-development-cost",
-      "sessions": "16",
-      "engagementRate": "0.5625"
+      "sessions": "20",
+      "engagementRate": "0.45"
     },
     {
       "landing": "/blog/website-builder-comparison-2026",
-      "sessions": "15",
-      "engagementRate": "0.066666666666666666"
+      "sessions": "16",
+      "engagementRate": "0.0625"
     },
     {
       "landing": "/blog/web-project-cost-index-2026",
-      "sessions": "12",
+      "sessions": "13",
       "engagementRate": "0"
+    },
+    {
+      "landing": "/real-estate-website-cost",
+      "sessions": "12",
+      "engagementRate": "0.41666666666666669"
     },
     {
       "landing": "/blog/canva-pro-cost-2026",
@@ -392,9 +397,9 @@
       "engagementRate": "0.90909090909090906"
     },
     {
-      "landing": "/real-estate-website-cost",
+      "landing": "/landing-page-cost",
       "sessions": "11",
-      "engagementRate": "0.45454545454545453"
+      "engagementRate": "0.27272727272727271"
     },
     {
       "landing": "/website-cost-calculator",
@@ -412,19 +417,14 @@
       "engagementRate": "0.3"
     },
     {
-      "landing": "/landing-page-cost",
-      "sessions": "10",
-      "engagementRate": "0.3"
-    },
-    {
       "landing": "/results",
       "sessions": "10",
       "engagementRate": "0.6"
     },
     {
-      "landing": "/expert-review",
-      "sessions": "8",
-      "engagementRate": "0.75"
+      "landing": "/quote-analyzer",
+      "sessions": "9",
+      "engagementRate": "0.44444444444444442"
     }
   ],
   "ai_wow_alerts": []
