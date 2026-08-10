@@ -6,7 +6,8 @@ wolf gets ignored — so ONLY checks with ~0 false positives live here; style is
 never flagged, structure only).
 
 Wave 2 of the self-improvement loop. Validates:
-  - routine-reports.md   : '## <name> — <timestamp>' headers parse (dated),
+  - routine-reports.md + monthly routine-reports-YYYY-MM.md rollover files
+                         : '## <name> — <timestamp>' headers parse (dated),
                            '### Prompt critique' present per entry dated on/after
                            the rule's start (2026-08-04); CONDENSATION blocks exempt
   - prompt-experiments.md: every P-entry heading carries the required fields
@@ -14,7 +15,12 @@ Wave 2 of the self-improvement loop. Validates:
                            date|routine|OK/FAIL/PARTIAL|commits|note
   - docs/OS/prompts/*.md : version header '<!-- vN · YYYY-MM-DD ... -->' on line 1,
                            LESSONS block <= 10 bullets (README.md exempt: canon doc,
-                           not a routine prompt)
+                           not a routine prompt); no references to the deleted
+                           committed data mirrors (single data plane, 2026-08-10)
+  - report headers dated >= 2026-08-11 must be canonical
+    '## <prompt-filename-stem> — <UTC ISO>' (alias fragmentation fix)
+  - remote fetches use the contents API at ref=master (raw CDN cache caused
+    3 stale-read false positives)
 
 scopebit is PRIVATE — fetch uses the GH_PAT repo secret, same auth pattern as
 routines_scorecard.py (raw.githubusercontent.com + api.github.com honor token
@@ -33,9 +39,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'data', 'OS-LINT.json')
 
 CRITIQUE_RULE_START = '2026-08-04'   # transparency rule went live; older entries exempt
+HEADER_RULE_START = '2026-08-11'     # canonical report headers '## <prompt-stem> — <UTC ISO>' (batch 2026-08-10; entries from the 11th on)
 P_REQUIRED = ('Routine', 'Evidence', 'Diff', 'Metric', 'Verify', 'Status', 'Approver')
 ROW_RE = re.compile(r'^\d{4}-\d{2}-\d{2}\|[^|]+\|(OK|FAIL|PARTIAL)\|\d+\|.+$')
 VERSION_RE = re.compile(r'^<!--\s*v\d+(?:\.\d+)?\s*[·.]\s*\d{4}-\d{2}-\d{2}\b.*-->\s*$')
+ISO_STAMP_RE = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?Z$')
+# single data plane (2026-08-10): these committed mirrors were deleted from scopebit;
+# a prompt telling a routine to read them is a violation (data lives ONLY at
+# raw.githubusercontent.com/VrumVrum/pce-ops/master/data/)
+STALE_DATA_REFS = ('ledger/METRICS.json', 'ledger/SMOKE.json', '_gsc_dump.json')
 
 
 def fetch(url, accept=None):
@@ -62,8 +74,13 @@ class Source:
             if not os.path.exists(p):
                 return None
             return open(p, encoding='utf-8').read().lstrip('﻿')
+        # contents API with ref=master + raw accept — always the file at HEAD.
+        # raw.githubusercontent.com serves a ~5-min CDN cache, which produced
+        # 3 stale-read false positives (lint flagged text already fixed at HEAD).
         try:
-            return fetch(f'{RAW}/{relpath}').lstrip('﻿')
+            return fetch(
+                f'https://api.github.com/repos/{REPO}/contents/{relpath}?ref=master',
+                accept='application/vnd.github.raw').lstrip('﻿')
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return None
@@ -89,8 +106,8 @@ def v(violations, file, rule, evidence, line=None):
     violations.append(row)
 
 
-def lint_reports(text, violations):
-    f = 'docs/OS/ledger/routine-reports.md'
+def lint_reports(text, violations, stems=(), fname='docs/OS/ledger/routine-reports.md'):
+    f = fname
     lines = text.split('\n')
     heads = [(i, l) for i, l in enumerate(lines, 1) if l.startswith('## ')]
     for idx, (ln, head) in enumerate(heads):
@@ -107,6 +124,15 @@ def lint_reports(text, violations):
             continue
         if name.upper().startswith('CONDENSATION'):
             continue  # condensed memory blocks carry no critique by design
+        if dm.group(0) >= HEADER_RULE_START and stems:
+            # canonical header: '## <prompt-filename-stem> — <UTC ISO>' exactly
+            if name not in stems:
+                v(violations, f, 'report-header-not-canonical',
+                  f"header name {name!r} is not a docs/OS/prompts/ filename stem "
+                  f"(aliases fragment the scorecard): {head}", ln)
+            if not ISO_STAMP_RE.match(m.group(2).strip()):
+                v(violations, f, 'report-header-not-canonical',
+                  f"stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): {head}", ln)
         if dm.group(0) < CRITIQUE_RULE_START:
             continue  # entry predates the critique rule
         end_ln = heads[idx + 1][0] - 1 if idx + 1 < len(heads) else len(lines)
@@ -155,6 +181,19 @@ def lint_prompt_file(name, text, violations):
         v(violations, f, 'prompt-version-header-missing',
           f'first line is not <!-- vN · YYYY-MM-DD · P-### -->: '
           f'{(lines[0] if lines else "")!r}', 1)
+    # single-data-plane rule (2026-08-10): prompt DUTY text (above ## CHANGELOG)
+    # must not point routines at the deleted committed mirrors
+    in_history = False
+    for i, l in enumerate(lines, 1):
+        if re.match(r'^##\s+(CHANGELOG|LESSONS)\b', l):
+            in_history = True
+        if in_history:
+            continue
+        for ref in STALE_DATA_REFS:
+            if ref in l:
+                v(violations, f, 'stale-data-plane-ref',
+                  f'references deleted mirror {ref!r} — data lives only in '
+                  f'pce-ops raw data/ URLs: {l.strip()}', i)
     for i, l in enumerate(lines, 1):
         if re.match(r'^##\s+LESSONS\b', l):
             bullets = 0
@@ -195,8 +234,29 @@ def main():
 
     checked, missing = [], []
     try:
+        prompt_names = src.list_prompts()
+        stems = tuple(n[:-3] for n in prompt_names
+                      if n.endswith('.md') and n != 'README.md')
+        # Rotation 2026-08-10: routine-reports.md is a pointer; reports live in
+        # monthly routine-reports-YYYY-MM.md files. Lint the pointer (legacy
+        # appends still land there until every routine catches up) plus the
+        # current and previous monthly files (previous may 404 — that's fine).
+        now = datetime.datetime.now(datetime.timezone.utc)
+        prev = (now.replace(day=1) - datetime.timedelta(days=1))
+        report_files = ['docs/OS/ledger/routine-reports.md'] + [
+            f'docs/OS/ledger/routine-reports-{d.strftime("%Y-%m")}.md'
+            for d in (now, prev)]
+        for relpath in report_files:
+            text = src.read(relpath)
+            if text is None:
+                if relpath.endswith('/routine-reports.md'):
+                    missing.append(relpath)
+                    v(violations, relpath, 'file-missing',
+                      'expected ledger file absent')
+                continue  # a monthly file that doesn't exist yet is not an error
+            checked.append(relpath)
+            lint_reports(text, violations, stems, relpath)
         for relpath, linter in (
-                ('docs/OS/ledger/routine-reports.md', lint_reports),
                 ('docs/OS/ledger/prompt-experiments.md', lint_p_entries),
                 ('docs/OS/ledger/run-status.md', lint_run_status)):
             text = src.read(relpath)
@@ -206,7 +266,7 @@ def main():
                 continue
             checked.append(relpath)
             linter(text, violations)
-        for name in src.list_prompts():
+        for name in prompt_names:
             relpath = f'docs/OS/prompts/{name}'
             checked.append(relpath)
             if name == 'README.md':

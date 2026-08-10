@@ -21,6 +21,17 @@ OUT = os.environ.get('METRICS_OUT', os.path.join(ROOT, 'docs', 'OS', 'ledger', '
 NON_LEAD = {'sys:lastrun', 'unsub'}
 DRIP = re.compile(r'^drip:')
 
+# Affiliate /go/[slug] clicks live in provider_clicks against 4 SYSTEM provider
+# rows (no DDL access — see scopebit src/lib/affiliateLane.ts, checked-in truth,
+# ids stable in production). usageLane.ts system rows (__api_usage__/__embed_usage__)
+# are distribution events, NOT affiliate clicks — excluded by the id filter.
+AFFILIATE_PROVIDER_IDS = {
+    'a7255fb7-cb58-4b8c-a5f3-ff6eaa04967d': 'fiverr',
+    'fb5103d9-4583-4bdc-a318-e1dde707280d': 'hostinger',
+    '3f81c793-e1b3-4d00-aae0-12724cdac3db': 'wix',
+    '0a66e383-7088-42d1-ada9-d26502bd34b2': 'shopify',
+}
+
 # The site's llms.txt designated citation pages (/api/cost-data excluded — no GSC
 # footprint). If any drops under 10 impressions/28d the AI-citation funnel is
 # decaying and the loop must react (audit 08-06 tripwire).
@@ -72,6 +83,37 @@ def supabase():
     out['real_human_leads'] = sum(v for k, v in c.items()
                                   if k not in NON_LEAD and not DRIP.match(k) and k != 'api_key')
     out['api_keys'] = c.get('api_key', 0)
+    # build-intent leads: the R2 tripwire counts contexts ending ':build'
+    # (active-buyer checkbox, live since 2026-08-10) — test rows already excluded
+    out['build_intent_count'] = sum(v for k, v in c.items() if k.endswith(':build'))
+    # drip funnel visibility: how many leads sit at each drip:N stage
+    out['drip_stages'] = {k: v for k, v in sorted(c.items()) if DRIP.match(k)}
+    # affiliate /go/[slug] clicks (same REST pattern; human-only per is_bot flag
+    # the /go route stamps on every insert — same filter affiliate-stats uses)
+    try:
+        ids = ','.join(AFFILIATE_PROVIDER_IDS)
+        _, body = sb_get(
+            f'{url}/rest/v1/provider_clicks'
+            f'?select=provider_id,user_inputs,created_at'
+            f'&provider_id=in.({ids})&order=created_at.desc&limit=10000', key)
+        clicks = [x for x in json.loads(body)
+                  if not (x.get('user_inputs') or {}).get('is_bot')]
+        cutoff7 = (datetime.datetime.now(datetime.timezone.utc)
+                   .replace(tzinfo=None) - datetime.timedelta(days=7)).isoformat()
+        by_slug = {}
+        for x in clicks:
+            slug = ((x.get('user_inputs') or {}).get('slug')
+                    or AFFILIATE_PROVIDER_IDS.get(x.get('provider_id'), '?'))
+            by_slug[slug] = by_slug.get(slug, 0) + 1
+        out['affiliate_clicks'] = {
+            'total': len(clicks),
+            'last7d': sum(1 for x in clicks
+                          if (x.get('created_at') or '') >= cutoff7),
+            'by_slug': dict(sorted(by_slug.items(),
+                                   key=lambda kv: -kv[1])),
+        }
+    except Exception as e:
+        out['affiliate_clicks'] = {'error': str(e)[:200]}
     # sales
     try:
         r, _ = sb_get(f'{url}/rest/v1/sales?select=count', key, 'count=exact')

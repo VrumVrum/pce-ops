@@ -76,6 +76,47 @@ def name_variants(name):
             base.replace('-', ' '), base.replace('_', ' ')}
 
 
+# Canonical identity = docs/OS/prompts/ filename stem (batch 2026-08-10).
+# Historical report headers used prose aliases ('AUTONOMOUS FOUNDER (CEO Brain)',
+# 'GROWTH MORNING BRIEF', ...) which fragmented one routine into several rows.
+# os_lint enforces canonical headers from 2026-08-11; this map folds history in.
+PROMPT_STEMS = ('pce-operating-loop', 'pce-supervisor', 'pce-deep-verify',
+                'pce-morning-brief', 'pce-seo-audit', 'pce-keyword-scout',
+                'pce-content-engine', 'pce-revenue-executor',
+                'pce-authority-traffic')
+ALIASES = {
+    'autonomous founder': 'pce-operating-loop',
+    'ceo brain': 'pce-operating-loop',
+    'growth morning brief': 'pce-morning-brief',
+    'morning brief': 'pce-morning-brief',
+    'revenue executor': 'pce-revenue-executor',
+    'deep verify': 'pce-deep-verify',
+    'deep system verification': 'pce-deep-verify',
+    'adversarial recurring audit': 'pce-seo-audit',
+    'seo audit': 'pce-seo-audit',
+    'keyword scout': 'pce-keyword-scout',
+    'content engine': 'pce-content-engine',
+    'authority traffic': 'pce-authority-traffic',
+    'supervisor': 'pce-supervisor',
+    'verifier': 'pce-supervisor',
+}
+
+
+def normalize_routine(name):
+    """Fold any header alias onto its prompt filename stem; unknown names pass
+    through raw (visible as their own row — never silently merged by guess)."""
+    n = re.sub(r'\(.*?\)', ' ', name).lower()
+    n = re.sub(r'\s+', ' ', n).strip()
+    hyph = n.replace(' ', '-')
+    for stem in PROMPT_STEMS:
+        if hyph == stem or stem in hyph:
+            return stem
+    for alias, stem in ALIASES.items():
+        if alias in n:
+            return stem
+    return name.strip()
+
+
 def main():
     if not PAT:
         print('routines_scorecard.py: no GH_PAT, skipping')
@@ -91,9 +132,20 @@ def main():
                     'a run that filed no report is invisible here (failure class F10). '
                     'null = data not derivable, never a fabricated count.')}
 
-    # 1) the report ledger (the routines' own words)
+    # 1) the report ledger (the routines' own words). Rotation 2026-08-10:
+    # routine-reports.md holds only ~7 days; monthly rollover files
+    # (routine-reports-YYYY-MM.md) hold the rest of the 30d window.
     try:
-        entries = parse_reports(fetch(RAW_REPORTS))
+        text = fetch(RAW_REPORTS)
+        base = RAW_REPORTS.rsplit('/', 1)[0]
+        for months_back in (0, 1):
+            m_date = (now.replace(day=1) - datetime.timedelta(days=months_back * 27))
+            suffix = m_date.strftime('%Y-%m')
+            try:
+                text += '\n' + fetch(f'{base}/routine-reports-{suffix}.md')
+            except Exception:
+                pass  # rollover file may not exist yet — fine
+        entries = parse_reports(text)
     except Exception as e:
         entries = None
         out['reports_error'] = str(e)[:200]
@@ -119,10 +171,13 @@ def main():
 
     routines = {}
     for e in entries or []:
-        r = routines.setdefault(e['routine'], {
+        key = normalize_routine(e['routine'])
+        r = routines.setdefault(key, {
             'runs_30d': 0, 'reports_filed': 0, 'prompt_critiques_present': 0,
             'commits_attributable': None, 'failed_runs': 0,
-            'stamps_unparsed': 0, 'last_report': None})
+            'stamps_unparsed': 0, 'last_report': None, 'aliases_seen': []})
+        if e['routine'] != key and e['routine'] not in r['aliases_seen']:
+            r['aliases_seen'].append(e['routine'])
         r['reports_filed'] += 1
         d = stamp_date(e['stamp_raw'])
         if d is None:
@@ -137,7 +192,9 @@ def main():
             r['failed_runs'] += 1
     for name, r in routines.items():
         if not commits_error:
-            variants = name_variants(name)
+            variants = set(name_variants(name))
+            for alias in r.get('aliases_seen', []):
+                variants |= name_variants(alias)
             r['commits_attributable'] = sum(1 for m in messages
                                             if any(v in m for v in variants))
         if r['stamps_unparsed'] and r['runs_30d'] == 0:
