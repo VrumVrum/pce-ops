@@ -60,9 +60,13 @@ def supabase():
     r, _ = sb_get(f'{url}/rest/v1/leads?select=count', key, 'count=exact')
     out['leads_total'] = int(r.headers.get('content-range', '/0').split('/')[-1])
     # by context (all rows, context only)
-    _, body = sb_get(f'{url}/rest/v1/leads?select=context&limit=2000', key)
+    _, body = sb_get(f'{url}/rest/v1/leads?select=context,email&limit=2000', key)
     rows = json.loads(body)
     from collections import Counter
+    # Owner/agent test rows never count as leads (F18 — 14 test rows polluted
+    # the human-lead count until the 2026-08-08 purge).
+    TEST_EMAIL = re.compile(r'florin\.florea84|\+(test|apilive|probe)@')
+    rows = [x for x in rows if not TEST_EMAIL.search(x.get('email') or '')]
     c = Counter((x.get('context') or '?') for x in rows)
     out['leads_by_context'] = dict(c)
     out['real_human_leads'] = sum(v for k, v in c.items()
