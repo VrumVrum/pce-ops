@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-10T17:26:22.523116Z",
+  "generated_utc": "2026-08-10T17:55:39.324691Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-10",
@@ -61,6 +61,22 @@
     },
     "real_human_leads": 26,
     "api_keys": 3,
+    "build_intent_count": 0,
+    "drip_stages": {
+      "drip:1": 9,
+      "drip:2": 21,
+      "drip:3": 20
+    },
+    "affiliate_clicks": {
+      "total": 35,
+      "last7d": 31,
+      "by_slug": {
+        "fiverr": 15,
+        "shopify": 8,
+        "wix": 6,
+        "hostinger": 6
+      }
+    },
     "sales_total": 0
   },
   "shipped_asset_performance": {

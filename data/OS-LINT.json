@@ -1,9 +1,10 @@
 {
- "generated_utc": "2026-08-10T17:26:37+00:00",
+ "generated_utc": "2026-08-10T17:55:52+00:00",
  "source": "VrumVrum/scopebit@master",
  "note": "structure only, never style — every check here is chosen for ~0 false-positive rate (SWE-agent ACI / EVOLUTION.md meta-rule); a missing file is reported, not guessed at",
  "files_checked": [
   "docs/OS/ledger/routine-reports.md",
+  "docs/OS/ledger/routine-reports-2026-08.md",
   "docs/OS/ledger/prompt-experiments.md",
   "docs/OS/ledger/run-status.md",
   "docs/OS/prompts/README.md",
@@ -19,22 +20,22 @@
  ],
  "violations": [
   {
-   "file": "docs/OS/ledger/routine-reports.md",
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## LESSONS (candidate additions for pce-deep-verify.md's own LESSONS block, not yet appended — first fire, no prior lessons to compare against)",
-   "line": 1944
+   "line": 1948
   },
   {
-   "file": "docs/OS/ledger/routine-reports.md",
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## pce-operating-loop (CEO Brain) — 2026-08-05T00:00Z (12h cloud cycle)' has no '### Prompt critique' subsection",
-   "line": 2086
+   "line": 2090
   },
   {
-   "file": "docs/OS/ledger/routine-reports.md",
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## AUTONOMOUS FOUNDER (CEO Brain) — 2026-08-04T12:39:13Z (later fire, 12h cloud cycle)' has no '### Prompt critique' subsection",
-   "line": 2447
+   "line": 2451
   },
   {
    "file": "docs/OS/ledger/prompt-experiments.md",
