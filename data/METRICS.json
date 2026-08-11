@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-11T05:35:16.375101Z",
+  "generated_utc": "2026-08-11T17:28:52.858479Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-11",
@@ -47,25 +47,25 @@
     ]
   },
   "supabase": {
-    "leads_total": 107,
+    "leads_total": 114,
     "leads_by_context": {
-      "sys:lastrun": 22,
-      "api_key": 8,
+      "sys:lastrun": 23,
+      "api_key": 12,
       "drip:1": 9,
       "pack": 1,
       "drip:2": 21,
-      "unsub": 1,
-      "drip:3": 20,
+      "unsub": 2,
+      "drip:3": 21,
       "results": 3,
       "hero": 22
     },
     "real_human_leads": 26,
-    "api_keys": 8,
+    "api_keys": 12,
     "build_intent_count": 0,
     "drip_stages": {
       "drip:1": 9,
       "drip:2": 21,
-      "drip:3": 20
+      "drip:3": 21
     },
     "affiliate_clicks": {
       "total": 36,

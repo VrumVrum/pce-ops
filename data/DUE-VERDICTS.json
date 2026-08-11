@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-11T05:35:33+00:00",
+ "generated_utc": "2026-08-11T17:29:16+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-11",
  "gsc_pages_rows": 397,
  "gsc_truncated": false,
- "due_count": 7,
+ "due_count": 5,
  "due": [
   {
    "id": "E-012",
@@ -302,96 +302,6 @@
    "totals_28d": {
     "impressions": 460,
     "clicks": 7
-   }
-  },
-  {
-   "id": "E-022",
-   "title": "/tools/freelancer-quote-generator` — seller-side proposal/quote generator (ALLOCATION #12)",
-   "due": "2026-08-11",
-   "target_paths": [
-    "/cost/ai/*",
-    "/tools/rfp-generator",
-    "/",
-    "/embed",
-    "/freelance-website-cost",
-    "/tools/freelancer-quote-generator"
-   ],
-   "delta_prev_28d": null,
-   "proposed": "needs-routine-judgment",
-   "metrics_28d": {
-    "/cost/ai/*": {
-     "pages_matched": 2,
-     "impressions_28d": 7,
-     "clicks_28d": 0
-    },
-    "/tools/rfp-generator": {
-     "pages_matched": 1,
-     "impressions_28d": 1,
-     "clicks_28d": 0
-    },
-    "/": {
-     "pages_matched": 1,
-     "impressions_28d": 282,
-     "clicks_28d": 2
-    },
-    "/embed": {
-     "pages_matched": 0,
-     "impressions_28d": 0,
-     "clicks_28d": 0
-    },
-    "/freelance-website-cost": {
-     "pages_matched": 1,
-     "impressions_28d": 6189,
-     "clicks_28d": 16
-    },
-    "/tools/freelancer-quote-generator": {
-     "pages_matched": 1,
-     "impressions_28d": 1,
-     "clicks_28d": 0
-    }
-   },
-   "totals_28d": {
-    "impressions": 6480,
-    "clicks": 18
-   }
-  },
-  {
-   "id": "E-024",
-   "title": "Close the cross-link gap: 81 orphaned `/cost/industry/*` pages now link to the flagship `/freelance-website-cost` winner",
-   "due": "2026-08-11",
-   "target_paths": [
-    "/cost/industry/*",
-    "/freelance-website-cost",
-    "/healthcare-website-cost",
-    "/restaurant-website-cost"
-   ],
-   "delta_prev_28d": null,
-   "proposed": "needs-routine-judgment",
-   "metrics_28d": {
-    "/cost/industry/*": {
-     "pages_matched": 162,
-     "impressions_28d": 1056,
-     "clicks_28d": 7
-    },
-    "/freelance-website-cost": {
-     "pages_matched": 1,
-     "impressions_28d": 6189,
-     "clicks_28d": 16
-    },
-    "/healthcare-website-cost": {
-     "pages_matched": 1,
-     "impressions_28d": 196,
-     "clicks_28d": 1
-    },
-    "/restaurant-website-cost": {
-     "pages_matched": 1,
-     "impressions_28d": 1238,
-     "clicks_28d": 12
-    }
-   },
-   "totals_28d": {
-    "impressions": 8679,
-    "clicks": 36
    }
   }
  ]

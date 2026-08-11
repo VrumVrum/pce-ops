@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-11T05:35:21+00:00",
+ "generated_utc": "2026-08-11T17:28:59+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -53,7 +53,10 @@
    "HttpStatus": 0
   },
   "/rate-database": {
-   "error": "Expecting value: line 1 column 1 (char 0)"
+   "LastCrawledDate": "2026-08-07",
+   "IsPage": true,
+   "DocumentSize": 204426,
+   "HttpStatus": 0
   },
   "/website-cost-calculator": {
    "LastCrawledDate": "2026-08-01",
@@ -86,10 +89,7 @@
    "HttpStatus": 0
   },
   "/blog/mvp-cost-2026": {
-   "LastCrawledDate": null,
-   "IsPage": true,
-   "DocumentSize": 0,
-   "HttpStatus": 0
+   "error": "HTTP Error 400: Bad Request"
   },
   "/blog/landing-page-cost-2026": {
    "error": "HTTP Error 400: Bad Request"
@@ -98,7 +98,5 @@
    "error": "HTTP Error 400: Bad Request"
   }
  },
- "citation_alerts": [
-  "/rate-database"
- ]
+ "citation_alerts": []
 }
