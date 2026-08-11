@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-10T17:55:41Z",
+ "generated_utc": "2026-08-11T05:35:19Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "8b04590e591e",
+    "sha": "10a02e06ecb4",
     "generated": "2026-08-10"
    },
    {
@@ -35,23 +35,23 @@
    "impressions_28d": 5974,
    "position": 13.8,
    "ctr_pct": 0.27,
-   "site_clean_ctr_pct": 0.424,
-   "headroom_clicks_28d_at_clean_ctr": 9.2
+   "site_clean_ctr_pct": 0.426,
+   "headroom_clicks_28d_at_clean_ctr": 9.3
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 1741,
    "position": 8.1,
    "ctr_pct": 0.06,
-   "site_clean_ctr_pct": 0.424,
-   "headroom_clicks_28d_at_clean_ctr": 6.3
+   "site_clean_ctr_pct": 0.426,
+   "headroom_clicks_28d_at_clean_ctr": 6.4
   },
   {
    "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
    "impressions_28d": 274,
    "position": 11.2,
    "ctr_pct": 0.36,
-   "site_clean_ctr_pct": 0.424,
+   "site_clean_ctr_pct": 0.426,
    "headroom_clicks_28d_at_clean_ctr": 0.2
   },
   {
@@ -59,7 +59,7 @@
    "impressions_28d": 232,
    "position": 9.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.424,
+   "site_clean_ctr_pct": 0.426,
    "headroom_clicks_28d_at_clean_ctr": 1.0
   },
   {
@@ -67,7 +67,7 @@
    "impressions_28d": 122,
    "position": 11.8,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.424,
+   "site_clean_ctr_pct": 0.426,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   },
   {
@@ -75,7 +75,7 @@
    "impressions_28d": 111,
    "position": 11.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.424,
+   "site_clean_ctr_pct": 0.426,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   }
  ],
