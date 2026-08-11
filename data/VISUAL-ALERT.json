@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-10T06:22:24.709Z",
+  "generated_utc": "2026-08-11T06:03:15.381Z",
   "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -10,7 +10,7 @@
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 3.38
     },
     {
       "page": "/calculator",
