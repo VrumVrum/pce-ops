@@ -1,29 +1,29 @@
 {
-  "generated_utc": "2026-08-11T17:28:52.858479Z",
+  "generated_utc": "2026-08-12T05:55:52.332763Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-11",
+    "generated": "2026-08-12",
     "totals_28d": {
-      "clicks": 114,
-      "impressions": 27105,
-      "ctr": 0.421,
-      "position": 22.86
+      "clicks": 113,
+      "impressions": 26563,
+      "ctr": 0.425,
+      "position": 22.61
     },
     "totals_7d": {
-      "clicks": 37,
-      "impressions": 9284,
-      "ctr": 0.399,
-      "position": 18.61
+      "clicks": 34,
+      "impressions": 8121,
+      "ctr": 0.419,
+      "position": 18.3
     },
     "totals_90d": {
       "clicks": 149,
-      "impressions": 45184,
+      "impressions": 45168,
       "ctr": 0.33,
-      "position": 25.66
+      "position": 25.65
     },
     "junk_28d": {
-      "impressions": 364,
-      "queries": 85,
+      "impressions": 426,
+      "queries": 86,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"december 2021\" \"how much does this website cost\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 114,
-      "impressions": 26741,
-      "ctr": 0.426
+      "clicks": 113,
+      "impressions": 26137,
+      "ctr": 0.432
     },
     "citation_floor_alerts": [
       {
@@ -47,10 +47,10 @@
     ]
   },
   "supabase": {
-    "leads_total": 114,
+    "leads_total": 118,
     "leads_by_context": {
       "sys:lastrun": 23,
-      "api_key": 12,
+      "api_key": 16,
       "drip:1": 9,
       "pack": 1,
       "drip:2": 21,
@@ -60,7 +60,7 @@
       "hero": 22
     },
     "real_human_leads": 26,
-    "api_keys": 12,
+    "api_keys": 16,
     "build_intent_count": 0,
     "drip_stages": {
       "drip:1": 9,
@@ -69,7 +69,7 @@
     },
     "affiliate_clicks": {
       "total": 36,
-      "last7d": 26,
+      "last7d": 24,
       "by_slug": {
         "fiverr": 16,
         "shopify": 8,
@@ -122,17 +122,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 6189,
+      "impressions": 6077,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1240,
+      "impressions": 1234,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 850,
+      "impressions": 838,
       "clicks": 12
     }
   }

@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-11T17:28:56Z",
+ "generated_utc": "2026-08-12T05:55:55Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "bfd8d5b4d4d9",
+    "sha": "6f63e824582b",
     "generated": "2026-08-11"
    },
    {
@@ -35,23 +35,23 @@
    "impressions_28d": 6189,
    "position": 13.7,
    "ctr_pct": 0.26,
-   "site_clean_ctr_pct": 0.426,
-   "headroom_clicks_28d_at_clean_ctr": 10.3
+   "site_clean_ctr_pct": 0.432,
+   "headroom_clicks_28d_at_clean_ctr": 10.6
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 1923,
    "position": 8.1,
    "ctr_pct": 0.05,
-   "site_clean_ctr_pct": 0.426,
-   "headroom_clicks_28d_at_clean_ctr": 7.2
+   "site_clean_ctr_pct": 0.432,
+   "headroom_clicks_28d_at_clean_ctr": 7.3
   },
   {
    "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
    "impressions_28d": 285,
    "position": 12.7,
    "ctr_pct": 0.35,
-   "site_clean_ctr_pct": 0.426,
+   "site_clean_ctr_pct": 0.432,
    "headroom_clicks_28d_at_clean_ctr": 0.2
   },
   {
@@ -59,15 +59,31 @@
    "impressions_28d": 240,
    "position": 9.1,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.426,
+   "site_clean_ctr_pct": 0.432,
    "headroom_clicks_28d_at_clean_ctr": 1.0
+  },
+  {
+   "page": "https://projectcostestimator.com/saas-cost-estimator",
+   "impressions_28d": 234,
+   "position": 11.3,
+   "ctr_pct": 0.43,
+   "site_clean_ctr_pct": 0.432,
+   "headroom_clicks_28d_at_clean_ctr": 0.0
+  },
+  {
+   "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
+   "impressions_28d": 232,
+   "position": 13.4,
+   "ctr_pct": 0.43,
+   "site_clean_ctr_pct": 0.432,
+   "headroom_clicks_28d_at_clean_ctr": 0.0
   },
   {
    "page": "https://projectcostestimator.com/cost/hire/bulgaria",
    "impressions_28d": 133,
    "position": 11.7,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.426,
+   "site_clean_ctr_pct": 0.432,
    "headroom_clicks_28d_at_clean_ctr": 0.6
   },
   {
@@ -75,7 +91,7 @@
    "impressions_28d": 107,
    "position": 11.9,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.426,
+   "site_clean_ctr_pct": 0.432,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   }
  ],
