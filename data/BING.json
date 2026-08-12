@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-12T05:55:58+00:00",
+ "generated_utc": "2026-08-12T17:30:04+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -23,15 +23,33 @@
    "DnsFailures": 0,
    "InIndex": 485,
    "InLinks": 38
+  },
+  {
+   "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+   "AllOtherCodes": 18,
+   "BlockedByRobotsTxt": 0,
+   "Code2xx": 506,
+   "Code301": 0,
+   "Code302": 3,
+   "Code4xx": 1,
+   "Code5xx": 0,
+   "ConnectionTimeout": 0,
+   "ContainsMalware": 0,
+   "CrawlErrors": 1,
+   "CrawledPages": 208,
+   "Date": "2026-08-11",
+   "DnsFailures": 0,
+   "InIndex": 487,
+   "InLinks": 40
   }
  ],
  "query_stats": [],
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-11",
+   "LastCrawledDate": "2026-08-12",
    "IsPage": true,
-   "DocumentSize": 221060,
+   "DocumentSize": 221306,
    "HttpStatus": 0
   },
   "/website-costs-2026-report": {
@@ -89,10 +107,7 @@
    "HttpStatus": 0
   },
   "/blog/mvp-cost-2026": {
-   "LastCrawledDate": null,
-   "IsPage": true,
-   "DocumentSize": 0,
-   "HttpStatus": 0
+   "error": "HTTP Error 400: Bad Request"
   },
   "/blog/landing-page-cost-2026": {
    "error": "HTTP Error 400: Bad Request"

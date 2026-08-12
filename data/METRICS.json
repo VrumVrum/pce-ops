@@ -1,29 +1,29 @@
 {
-  "generated_utc": "2026-08-12T05:55:52.332763Z",
+  "generated_utc": "2026-08-12T17:29:59.203042Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-12",
     "totals_28d": {
-      "clicks": 113,
-      "impressions": 26563,
-      "ctr": 0.425,
-      "position": 22.61
+      "clicks": 115,
+      "impressions": 28053,
+      "ctr": 0.41,
+      "position": 22.38
     },
     "totals_7d": {
-      "clicks": 34,
-      "impressions": 8121,
-      "ctr": 0.419,
+      "clicks": 36,
+      "impressions": 9611,
+      "ctr": 0.375,
       "position": 18.3
     },
     "totals_90d": {
-      "clicks": 149,
-      "impressions": 45168,
-      "ctr": 0.33,
-      "position": 25.65
+      "clicks": 151,
+      "impressions": 46658,
+      "ctr": 0.324,
+      "position": 25.41
     },
     "junk_28d": {
-      "impressions": 426,
-      "queries": 86,
+      "impressions": 395,
+      "queries": 92,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"december 2021\" \"how much does this website cost\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 113,
-      "impressions": 26137,
-      "ctr": 0.432
+      "clicks": 115,
+      "impressions": 27658,
+      "ctr": 0.416
     },
     "citation_floor_alerts": [
       {
@@ -47,10 +47,10 @@
     ]
   },
   "supabase": {
-    "leads_total": 118,
+    "leads_total": 123,
     "leads_by_context": {
-      "sys:lastrun": 23,
-      "api_key": 16,
+      "sys:lastrun": 24,
+      "api_key": 20,
       "drip:1": 9,
       "pack": 1,
       "drip:2": 21,
@@ -60,7 +60,7 @@
       "hero": 22
     },
     "real_human_leads": 26,
-    "api_keys": 16,
+    "api_keys": 20,
     "build_intent_count": 0,
     "drip_stages": {
       "drip:1": 9,
@@ -69,7 +69,7 @@
     },
     "affiliate_clicks": {
       "total": 36,
-      "last7d": 24,
+      "last7d": 23,
       "by_slug": {
         "fiverr": 16,
         "shopify": 8,
@@ -82,7 +82,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 4,
-      "impressions": 13,
+      "impressions": 16,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -102,17 +102,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 292,
+      "impressions": 320,
       "clicks": 0
     },
     "/cost/app-like/": {
       "pages_with_data": 30,
-      "impressions": 173,
+      "impressions": 176,
       "clicks": 5
     },
     "/cost/industry/": {
-      "pages_with_data": 162,
-      "impressions": 1056,
+      "pages_with_data": 166,
+      "impressions": 1093,
       "clicks": 7
     },
     "/software-development-budget-2027": {
@@ -122,18 +122,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 6077,
+      "impressions": 6494,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1234,
+      "impressions": 1291,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 838,
-      "clicks": 12
+      "impressions": 883,
+      "clicks": 13
     }
   }
 }
