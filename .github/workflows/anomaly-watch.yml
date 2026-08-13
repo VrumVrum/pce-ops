@@ -7,10 +7,17 @@ name: anomaly-watch
 # 0.36% where 2-4% is normal. None of them tripped anything, because every
 # existing guard only checks what somebody once thought to ask about.
 #
-# This job asks the same six open questions every day -- geo anomaly,
+# This job asks the same eight open questions every day -- geo anomaly,
 # CTR vs expected-by-position, junk-query share, growth plateau, revenue
-# silence, signup-vs-usage -- and answers them from live GSC / GA4 / Supabase
-# data. Any HIGH-severity answer fails the job, and GitHub emails the owner.
+# silence, signup-vs-usage, funnel break, bot-KPI contamination -- and answers
+# them from live GSC / GA4 / Supabase data. Any HIGH-severity answer fails the
+# job, and GitHub emails the owner.
+#
+# The last two arrived on 2026-08-13, when an audit found the same blindness one
+# level up: the KPIs themselves were measuring bots. "26 real human leads" was 23
+# rows from a single user_agent across 45 IPs, and nothing measured the path from
+# opening the calculator to paying. Guarding the inputs while never questioning
+# the scoreboard is guarding the wrong thing.
 #
 # It lives on GitHub Actions for the same reason routine-heartbeat does:
 # Actions kept running perfectly through the Anthropic outage, so a watchdog
@@ -36,7 +43,7 @@ jobs:
       - name: Install Python deps
         run: pip install --quiet cryptography
 
-      - name: Ask the six questions
+      - name: Ask the eight questions
         id: watch
         env:
           GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}

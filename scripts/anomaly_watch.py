@@ -17,9 +17,17 @@ Every guard already in this repo checks something a human once thought to ask
 about (routine silence, citation floor, visual diffs, smoke tests). Nothing
 scanned for "what looks WRONG that nobody asked about". This does.
 
-It asks the same six questions EVERY day and answers them from live data:
+It asks the same eight questions EVERY day and answers them from live data:
 geo anomaly, CTR-vs-expected-by-position, junk-query share, growth plateau,
-revenue silence, signup-vs-usage ratio.
+revenue silence, signup-vs-usage ratio, funnel break, bot-KPI contamination.
+
+The last two were added on 2026-08-13 after an audit found the same failure a
+level up: the system was not only missing anomalies, it was OPTIMISING numbers
+that measured bots. "26 real human leads" was 23 rows from one user_agent across
+45 IPs, and nothing anywhere measured the path from opening the calculator to
+paying (316 users started it in 28 days; 31 saw a result; 0 bought). A watchdog
+that guards the inputs but never questions the KPI itself is guarding the wrong
+thing.
 
 WHY IT LIVES IN pce-ops AND NOT IN A ROUTINE PROMPT
 ---------------------------------------------------
@@ -52,6 +60,9 @@ import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from metrics import detect_junk   # noqa: E402  — 5-signature AI-fanout detector, reused verbatim
+from metrics import (             # noqa: E402  — one definition of "is this a person"
+    BOT_UA_MIN_IPS, TEST_EMAIL, split_human_leads)
+from ga4 import FUNNEL_STEPS      # noqa: E402  — one definition of the funnel, shared with the pull
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.environ.get('ANOMALY_OUT', os.path.join(ROOT, 'data', 'ANOMALIES.json'))
@@ -122,6 +133,10 @@ PLATEAU_FLAT_PCT = 8.0      # within +/-8% week-over-week counts as "flat"
 PLATEAU_IMPR_RISE = 15.0    # ... while impressions rose at least this much
 API_KEY_MIN_ISSUED = 5      # below this the ratio is meaningless
 API_USAGE_RATIO_ALERT = 0.20
+FUNNEL_MIN_CONVERSION = 20.0   # % of users who must survive each step-to-step hop
+FUNNEL_MIN_TOP = 10            # below this many wizard starts in 7d, rates are noise
+BOT_LEAD_SHARE_ALERT = 50.0    # % of the headline lead count supplied by bot fleets
+STRICT_LEAD_SILENCE_DAYS = 7   # days with zero de-botted human leads before alarm
 
 
 def finding(fid, severity, question, answer, why, **extra):
@@ -658,6 +673,179 @@ def check_api_harvest(g):
                     valid_usage_events_7d=ok, usage_per_issue=round(ratio, 3))]
 
 
+# =========================================================================== 7
+def _funnel_users(g, days):
+    """Distinct users + events per funnel step over `days`. One undated query:
+    summing a per-day user count would count the same person once per day."""
+    rows = g.ga4({'dateRanges': [{'startDate': '%ddaysAgo' % days, 'endDate': 'yesterday'}],
+                  'dimensions': [{'name': 'eventName'}],
+                  'metrics': [{'name': 'eventCount'}, {'name': 'totalUsers'}],
+                  'dimensionFilter': {'filter': {
+                      'fieldName': 'eventName',
+                      'inListFilter': {'values': [n for n, _ in FUNNEL_STEPS]}}},
+                  'limit': 50})
+    by = {r['eventName']: r for r in rows}
+    # An event GA4 has never recorded returns NO ROW. The query succeeded, so
+    # that is a true zero, not an unknown -- and saying so is the whole point of
+    # this check. A query that FAILS raises, and main() converts it to a null.
+    return [{'event': n, 'means': m,
+             'users': int(num((by.get(n) or {}).get('totalUsers'))),
+             'events': int(num((by.get(n) or {}).get('eventCount')))}
+            for n, m in FUNNEL_STEPS]
+
+
+def check_funnel(g):
+    """Q: of the people who open the calculator, how many reach an answer and pay?"""
+    q = ('Of the people who open the calculator in the last 7 days, how many reach a '
+         'result screen, leave an email, and pay -- and at which step do they vanish?')
+    why = ('This is the question that answers "why is revenue zero", and until 2026-08-13 '
+           'no file in either repo contained the number. Everything the system optimised -- '
+           'impressions, sessions, lead counts -- measures the TOP of a funnel whose middle '
+           'is falling out. A step that drops below %.0f%% of the step above it, or a step '
+           'sitting at zero while the one above it is not, is a broken product path: more '
+           'traffic poured into it changes nothing, and shipping more content is the wrong '
+           'response.' % FUNNEL_MIN_CONVERSION)
+    seven = _funnel_users(g, 7)
+    try:
+        month = _funnel_users(g, 28)
+    except Exception:
+        month = None        # context only; the verdict is a 7d verdict
+
+    ladder = ' -> '.join('%s %d users' % (s['event'], s['users']) for s in seven)
+    top = seven[0]['users']
+
+    # A funnel whose TOP is zero is not "no breaks found" -- it is either nobody
+    # opening the product or GA4 tracking that stopped firing. Both are HIGH, and
+    # without this branch the loop below would find nothing and report health.
+    if top == 0:
+        return [finding('funnel_break', 'high', q,
+                        'ZERO users fired %s in the last 7 days. Either nobody opened the '
+                        'calculator at all, or the analytics that measure the product '
+                        'stopped reporting. Both are emergencies and they are not '
+                        'distinguishable from inside GA4 -- check the live site before '
+                        'reading any other number in this file. Full ladder: %s'
+                        % (FUNNEL_STEPS[0][0], ladder), why,
+                        window_days=7, steps=seven, steps_28d=month,
+                        breaks=None, weak_steps=None)]
+
+    breaks, weak, rates = [], [], []
+    for i in range(1, len(seven)):
+        above, below = seven[i - 1], seven[i]
+        if above['users'] == 0:
+            rates.append({'from': above['event'], 'to': below['event'],
+                          'users_pct': None,
+                          'note': 'undefined: the step above is itself zero'})
+            continue
+        pct = round(below['users'] / above['users'] * 100, 1)
+        rates.append({'from': above['event'], 'to': below['event'], 'users_pct': pct})
+        if below['users'] == 0:
+            breaks.append({'from': above['event'], 'from_users': above['users'],
+                           'to': below['event'], 'means': below['means']})
+        elif pct < FUNNEL_MIN_CONVERSION:
+            weak.append({'from': above['event'], 'to': below['event'], 'users_pct': pct,
+                         'from_users': above['users'], 'to_users': below['users']})
+
+    thin = top < FUNNEL_MIN_TOP
+    sev = 'high' if (breaks or weak) and not thin else 'low' if not (breaks or weak) else 'medium'
+    parts = ['Last 7 days: %s.' % ladder]
+    if month:
+        parts.append('Last 28 days: %s.'
+                     % ' -> '.join('%s %d users' % (s['event'], s['users']) for s in month))
+    for b in breaks:
+        parts.append('BROKEN: %d users reached %s and %d went on to %s (%s) -- the step is '
+                     'at zero while the one above it is not.'
+                     % (b['from_users'], b['from'], 0, b['to'], b['means']))
+    for w in weak:
+        parts.append('WEAK: only %.1f%% of %s users (%d of %d) survive to %s, against a %.0f%% floor.'
+                     % (w['users_pct'], w['from'], w['to_users'], w['from_users'],
+                        w['to'], FUNNEL_MIN_CONVERSION))
+    if thin and (breaks or weak):
+        parts.append('Downgraded to medium: only %d users entered the funnel this week '
+                     '(floor %d), so these rates are small-sample noise as much as signal.'
+                     % (top, FUNNEL_MIN_TOP))
+    if not breaks and not weak:
+        parts.append('No step lost more than %.0f%% of the step above it and no step is at '
+                     'zero below a live one.' % (100 - FUNNEL_MIN_CONVERSION))
+    return [finding('funnel_break', sev, q, ' '.join(parts), why,
+                    window_days=7, steps=seven, steps_28d=month,
+                    step_to_step_users_pct=rates, breaks=breaks, weak_steps=weak,
+                    note=('Users are distinct per window (undated GA4 query). A ratio above '
+                          '100%% is not a bug: GA4 de-duplicates users per event, and a '
+                          'visitor can reach a result from a shared config link without '
+                          'firing the step above it.'))]
+
+
+# =========================================================================== 8
+def check_bot_kpi_contamination(g):
+    """Q: are the rows we call "real human leads" people, or one bot fleet?"""
+    q = ('Are the rows counted as "real human leads" actually people -- or is a single '
+         'bot fleet supplying the headline conversion KPI?')
+    why = ('On 2026-08-13 the headline "26 real human leads" turned out to be 23 rows from '
+           'ONE byte-identical user_agent seen across 45 distinct ip_hash values, plus 3 '
+           'genuine captures. The system had even run a three-fire investigation into why '
+           'the number was STUCK at 26 without ever asking whether the 26 were people. A '
+           'KPI that measures a bot sends every downstream decision -- content, pricing, '
+           'drip, roadmap -- chasing an audience that will never buy anything, and it does '
+           'it silently, because the number looks healthy.')
+    _, raw = sb('leads?select=created_at,email,context,user_agent,ip_hash'
+                '&order=created_at.desc&limit=5000')
+    rows = [x for x in raw if not TEST_EMAIL.search(x.get('email') or '')]
+    human, strict, fleets = split_human_leads(rows)
+
+    if not human:
+        return [finding('bot_kpi_contamination', 'high', q,
+                        'There are ZERO lead-context rows in the table at all (%d rows total '
+                        'after test-row exclusion). The conversion KPI is not contaminated; '
+                        'it is empty.' % len(rows), why,
+                        headline_leads=0, strict_human_leads=0, bot_lead_share_pct=None,
+                        last_strict_human_lead_utc=None)]
+
+    bot_leads = len(human) - len(strict)
+    share = round(bot_leads / len(human) * 100, 1)
+    cut = NOW - datetime.timedelta(days=STRICT_LEAD_SILENCE_DAYS)
+    recent = [x for x in strict
+              if (x.get('created_at') or '') >= cut.strftime('%Y-%m-%dT%H:%M:%S')]
+    last = strict[0]['created_at'][:19] if strict else None
+    days_since = None
+    if last:
+        try:
+            days_since = (NOW - datetime.datetime.fromisoformat(
+                last).replace(tzinfo=datetime.timezone.utc)).days
+        except ValueError:
+            days_since = None
+
+    silent = len(recent) == 0
+    sev = 'high' if (silent or share > BOT_LEAD_SHARE_ALERT) else 'low'
+    fleet_txt = '; '.join('%d distinct ip_hash / %d lead rows: %s'
+                          % (n, sum(1 for x in human if (x.get('user_agent') or '') == ua),
+                             (ua or '(empty)')[:90])
+                          for ua, n in sorted(fleets.items(), key=lambda kv: -kv[1])[:3])
+    ans = ('%d leads carry a human context. %d of them come from %d bot fleet(s) -- a '
+           'user_agent shared across >=%d distinct ip_hash values -- leaving %d genuine '
+           'capture(s), %.1f%% bot. %s'
+           % (len(human), bot_leads, len(fleets), BOT_UA_MIN_IPS, len(strict), share,
+              ('Fleets: ' + fleet_txt) if fleets else 'No fleet detected.'))
+    if silent:
+        ans += (' No de-botted human lead in the last %d days (last was %s%s). The lead KPI '
+                'has been moving on bot traffic alone.'
+                % (STRICT_LEAD_SILENCE_DAYS, last or 'never',
+                   '' if days_since is None else ', %d days ago' % days_since))
+    else:
+        ans += (' %d genuine capture(s) in the last %d days.'
+                % (len(recent), STRICT_LEAD_SILENCE_DAYS))
+    if share > BOT_LEAD_SHARE_ALERT:
+        ans += (' Above the %.0f%% contamination bar: the headline number is majority bot '
+                'and must not be quoted as conversion.' % BOT_LEAD_SHARE_ALERT)
+    return [finding('bot_kpi_contamination', sev, q, ans, why,
+                    headline_leads=len(human), strict_human_leads=len(strict),
+                    bot_leads=bot_leads, bot_lead_share_pct=share,
+                    strict_human_leads_7d=len(recent),
+                    last_strict_human_lead_utc=last,
+                    days_since_last_strict_human_lead=days_since,
+                    fleets=[{'distinct_ip_hashes': n, 'user_agent': (ua or '(empty)')[:160]}
+                            for ua, n in sorted(fleets.items(), key=lambda kv: -kv[1])])]
+
+
 CHECKS = [
     ('geo_anomaly', check_geo,
      'Is any single country over-represented and behaving unlike a human audience?',
@@ -677,6 +865,12 @@ CHECKS = [
     ('signup_vs_usage', check_api_harvest,
      'Are the API keys we hand out ever actually used?',
      'Keys issued but never used are harvesting, not signups.'),
+    ('funnel_break', check_funnel,
+     'Of the people who open the calculator, how many reach a result, leave an email, and pay?',
+     'This is the number that answers "why is revenue zero"; before 2026-08-13 it existed nowhere.'),
+    ('bot_kpi_contamination', check_bot_kpi_contamination,
+     'Are the rows we call "real human leads" actually people?',
+     'A conversion KPI made of bot traffic sends every downstream decision chasing an audience that cannot buy.'),
 ]
 
 
@@ -777,12 +971,13 @@ def main():
         },
         'findings': findings,
         'note': ('The self-questioning layer. Every other guard in this repo checks '
-                 'something a human once thought to ask about; this one asks the same six '
+                 'something a human once thought to ask about; this one asks the same %d '
                  'open questions every day and answers them from live data, so a problem '
                  'nobody anticipated still surfaces. Runs on GitHub Actions so it survives '
                  'an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails '
                  '-> GitHub emails the owner. A check that cannot reach its data reports '
-                 'answer=null and says so; it is never silently counted as healthy.'),
+                 'answer=null and says so; it is never silently counted as healthy.'
+                 % len(CHECKS)),
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps(snap, indent=1) + '\n')
@@ -871,4 +1066,25 @@ if __name__ == '__main__':
 #  * PLATEAU_FLAT_PCT 8%: organic weeks ran 41 -> 54 -> 55 -> 55. A stricter 0%
 #    bar would miss the 54->55 step; a looser 20% would call genuine growth a
 #    plateau.
+#
+#  * FUNNEL_MIN_CONVERSION 20%: on 28d live data the real ladder is
+#    begin_checkout 316 users -> step_completed 32 -> view_item 31 ->
+#    generate_lead 22 -> purchase 0. The only hop under 20% is the first one
+#    (10.1%), which is precisely the defect: 90% of the people who open the
+#    calculator never advance a step. view_item->generate_lead at 71% and
+#    step_completed->view_item at 97% stay quiet, so the bar is not a blanket
+#    alarm on a small funnel -- it isolates the one hop that is actually broken.
+#    FUNNEL_MIN_TOP 10 downgrades the verdict to medium on a week too thin to
+#    judge, so a quiet holiday week cannot manufacture a HIGH.
+#
+#  * BOT_LEAD_SHARE_ALERT 50%: today the share is 88.5% (23 of 26 leads from one
+#    fleet). Any bar between ~30% and ~85% fires on this data; 50% is chosen
+#    because "the majority of our customers are not people" is the point at
+#    which the KPI stops being usable at all, which is the actual claim being
+#    made. STRICT_LEAD_SILENCE_DAYS 7 matches the drip cadence -- the last
+#    genuine capture was 2026-08-01, twelve days before this check existed.
+#
+#  * BOT_UA_MIN_IPS lives in metrics.py (5) so the de-botting has ONE definition
+#    shared by the KPI and the watchdog. A watchdog using a different rule than
+#    the metric it audits will eventually disagree with it and be believed less.
 # ---------------------------------------------------------------------------

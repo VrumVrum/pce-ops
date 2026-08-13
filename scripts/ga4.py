@@ -24,6 +24,26 @@ ENGINES = {'chatgpt': ('chatgpt', 'openai'), 'perplexity': ('perplexity',),
            'claude': ('claude', 'anthropic'), 'gemini': ('gemini', 'bard'),
            'copilot': ('copilot', 'bing.com/chat'), 'other': ('you.com', 'phind')}
 
+# --- the buying funnel (F31, 2026-08-13) ------------------------------------
+# Until today NOTHING in either repo measured the path from "opened the
+# calculator" to "paid". Every dashboard, ledger and routine was scored on
+# traffic, impressions and lead counts, so the system optimised the top of a
+# funnel whose middle was falling out: on 2026-08-13, 316 users started the
+# wizard in 28 days and 31 reached a result screen. Ninety percent of the people
+# who touch the product never see an answer, and that number existed nowhere.
+#
+# The GA4 names are the ecommerce aliases src/lib/analytics.ts maps onto:
+#   wizard_started -> begin_checkout, step_completed -> step_completed,
+#   results_viewed -> view_item, email_capture_submitted -> generate_lead,
+#   paywall_converted -> purchase.
+FUNNEL_STEPS = [
+    ('begin_checkout', 'opened the calculator (wizard_started)'),
+    ('step_completed', 'advanced past a wizard step'),
+    ('view_item', 'reached a result screen (results_viewed)'),
+    ('generate_lead', 'submitted an email (email_capture_submitted)'),
+    ('purchase', 'paid (paywall_converted)'),
+]
+
 
 def token():
     k = os.environ.get('GSC_KEY_JSON')
@@ -90,6 +110,79 @@ def wow_alerts(per_engine, hist):
             alerts.append({'engine': eng, 'sessions_then': old, 'sessions_now': now,
                            'ref_date': ref['date'], 'drop_pct': round((old - now) / old * 100, 1)})
     return alerts
+
+
+def funnel(tok, days):
+    """events + DISTINCT users per funnel step over `days`, with step-to-step rates.
+
+    Two queries on purpose. The per-day series (eventName x date) is what shows
+    the shape, but summing totalUsers across dates would count the same person
+    once per active day and inflate every step — so the window totals come from
+    a SECOND, undated query where GA4 does the de-duplication itself. Quoting a
+    summed-daily user count as "users" is exactly the kind of number that reads
+    fine and is wrong.
+
+    An event GA4 has never recorded returns no row at all; that is a real zero
+    (the query succeeded, the event never fired) and is reported as 0, not null.
+    A failed query is reported as an error and never as a zero.
+    """
+    names = [n for n, _ in FUNNEL_STEPS]
+    filt = {'filter': {'fieldName': 'eventName',
+                       'inListFilter': {'values': names}}}
+    rng = [{'startDate': f'{days}daysAgo', 'endDate': 'yesterday'}]
+
+    tot = run(tok, {'dateRanges': rng, 'dimensions': [{'name': 'eventName'}],
+                    'metrics': [{'name': 'eventCount'}, {'name': 'totalUsers'}],
+                    'dimensionFilter': filt, 'limit': 50})
+    by_name = {r['eventName']: r for r in rows(tot, ['eventName'], ['eventCount', 'totalUsers'])}
+
+    day = run(tok, {'dateRanges': rng,
+                    'dimensions': [{'name': 'eventName'}, {'name': 'date'}],
+                    'metrics': [{'name': 'eventCount'}],
+                    'dimensionFilter': filt, 'limit': 2000})
+    series = {}
+    for r in rows(day, ['eventName', 'date'], ['eventCount']):
+        series.setdefault(r['eventName'], {})[r['date']] = int(float(r['eventCount'] or 0))
+
+    def n(name, met):
+        return int(float((by_name.get(name) or {}).get(met) or 0))
+
+    steps, prev_u, prev_e = [], None, None
+    for i, (name, means) in enumerate(FUNNEL_STEPS):
+        u, e = n(name, 'totalUsers'), n(name, 'eventCount')
+        steps.append({
+            'step': i + 1, 'event': name, 'means': means, 'events': e, 'users': u,
+            # null on step 1 (nothing above it) and whenever the step above is
+            # itself 0 — x/0 is undefined, not 0% and not 100%.
+            'users_from_prev_pct': (None if prev_u in (None, 0)
+                                    else round(u / prev_u * 100, 1)),
+            'events_from_prev_pct': (None if prev_e in (None, 0)
+                                     else round(e / prev_e * 100, 1)),
+            'fired_on_days': len(series.get(name, {})),
+            'by_date': dict(sorted(series.get(name, {}).items())),
+        })
+        prev_u, prev_e = u, e
+
+    top = steps[0]['users']
+    for s in steps:
+        s['users_from_top_pct'] = (None if not top else round(s['users'] / top * 100, 1))
+    drops = [s for s in steps[1:] if s['users_from_prev_pct'] is not None]
+    worst = min(drops, key=lambda s: s['users_from_prev_pct']) if drops else None
+    return {
+        'window_days': days,
+        'date_range': f'{days}daysAgo..yesterday',
+        'steps': steps,
+        'worst_step_to_step': ({'from': FUNNEL_STEPS[worst['step'] - 2][0],
+                                'to': worst['event'],
+                                'users_pct': worst['users_from_prev_pct']}
+                               if worst else None),
+        'headline': ' -> '.join('%s %d users (%d ev)' % (s['event'], s['users'], s['events'])
+                                for s in steps),
+        'note': ('Users are DISTINCT per window (separate undated query); events are raw '
+                 'counts. A step with 0 is a genuine zero: the query succeeded and GA4 has '
+                 'no such event in the window. Percentages are of the step immediately '
+                 'above, null where that step is itself 0.'),
+    }
 
 
 import urllib.parse  # noqa: E402 (used in token())
@@ -169,7 +262,18 @@ if __name__ == '__main__':
     except Exception as e:
         snap['ai_wow_alerts'] = {'error': str(e)[:120]}
 
+    # 5) The buying funnel — the number that answers "why is revenue zero".
+    for days, label in ((28, 'funnel_28d'), (7, 'funnel_7d')):
+        try:
+            snap[label] = funnel(t, days)
+        except Exception as e:
+            # Honest null: a funnel that could not be pulled is unknown, not healthy.
+            snap[label] = {'error': str(e)[:200], 'steps': None}
+
     os.makedirs(os.path.dirname(OUT) or '.', exist_ok=True)
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps(snap, indent=2) + '\n')
     print('wrote', OUT, '| AI sessions 28d:', snap.get('ai_sessions_28d'),
           '| WoW alerts:', snap.get('ai_wow_alerts'))
+    for label in ('funnel_28d', 'funnel_7d'):
+        f = snap.get(label) or {}
+        print('%s: %s' % (label, f.get('headline') or ('ERROR ' + str(f.get('error')))))

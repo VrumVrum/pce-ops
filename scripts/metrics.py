@@ -21,6 +21,64 @@ OUT = os.environ.get('METRICS_OUT', os.path.join(ROOT, 'docs', 'OS', 'ledger', '
 NON_LEAD = {'sys:lastrun', 'unsub'}
 DRIP = re.compile(r'^drip:')
 
+# Owner/agent test rows never count as leads (F18 — 14 test rows polluted the
+# human-lead count until the 2026-08-08 purge).
+TEST_EMAIL = re.compile(r'florin\.florea84|\+(test|apilive|probe)@')
+
+# --- bot-fleet fingerprint (F30, 2026-08-13) --------------------------------
+# Every `leads` row carries the submitter's user_agent AND ip_hash, in the same
+# row, and `real_human_leads` looked at NEITHER: it filtered on context name and
+# a test-email regex only. The result was a headline KPI of "26 real human
+# leads" of which 23 came from ONE byte-identical user_agent seen across 45
+# distinct ip_hash values — a single bot fleet — leaving 3 genuine captures.
+# The fleet was invisible for weeks and the system even ran a three-fire
+# investigation into why the number was STUCK at 26, never asking whether the
+# 26 were people.
+#
+# Threshold: a user_agent shared across >= 5 distinct ip_hash values is a fleet,
+# not a person. Measured on live data 2026-08-13: the fleet spans 45 IPs, the
+# busiest genuine user_agent spans 2 (3 across the two iPhone UA variants). The
+# bar sits an order of magnitude away from both sides, so it is not a knife edge.
+#
+# `real_human_leads` is NEVER overwritten by this — a metric that silently
+# changes meaning is its own failure mode. Both numbers are emitted side by side
+# with the bot share between them, and the ledger has to state which it means.
+BOT_UA_MIN_IPS = 5
+
+
+def is_lead_context(ctx):
+    """True for contexts that represent a person leaving an email."""
+    ctx = ctx or '?'
+    return ctx not in NON_LEAD and not DRIP.match(ctx) and ctx != 'api_key'
+
+
+def bot_user_agents(rows, min_ips=BOT_UA_MIN_IPS):
+    """{user_agent: distinct_ip_count} for UAs spanning >= min_ips ip_hash values.
+
+    Only non-null ip_hash values count. A NULL ip is not evidence of a new
+    device, and treating it as one would invent a fleet out of missing data.
+    The map is built from ALL rows (including drip/system contexts) because a
+    fleet that also touched a non-lead endpoint is still the same fleet.
+    """
+    from collections import defaultdict
+    seen = defaultdict(set)
+    for x in rows:
+        if x.get('ip_hash'):
+            seen[x.get('user_agent') or ''].add(x['ip_hash'])
+    return {ua: len(ips) for ua, ips in seen.items() if len(ips) >= min_ips}
+
+
+def split_human_leads(rows, min_ips=BOT_UA_MIN_IPS):
+    """(human_rows, strict_rows, fleets) — shared with scripts/anomaly_watch.py.
+
+    `human_rows` is the OLD definition (context filter only). `strict_rows` is
+    the same set minus every row submitted by a bot-fleet user_agent.
+    """
+    fleets = bot_user_agents(rows, min_ips)
+    human = [x for x in rows if is_lead_context(x.get('context'))]
+    strict = [x for x in human if (x.get('user_agent') or '') not in fleets]
+    return human, strict, fleets
+
 # Affiliate /go/[slug] clicks live in provider_clicks against 4 SYSTEM provider
 # rows (no DDL access — see scopebit src/lib/affiliateLane.ts, checked-in truth,
 # ids stable in production). usageLane.ts system rows (__api_usage__/__embed_usage__)
@@ -70,19 +128,56 @@ def supabase():
     # total leads
     r, _ = sb_get(f'{url}/rest/v1/leads?select=count', key, 'count=exact')
     out['leads_total'] = int(r.headers.get('content-range', '/0').split('/')[-1])
-    # by context (all rows, context only)
-    _, body = sb_get(f'{url}/rest/v1/leads?select=context,email&limit=2000', key)
+    # by context — user_agent and ip_hash come along now, because the bot-fleet
+    # test below needs them and they were sitting in the same row all along.
+    _, body = sb_get(f'{url}/rest/v1/leads'
+                     f'?select=created_at,context,email,user_agent,ip_hash'
+                     f'&order=created_at.desc&limit=5000', key)
     rows = json.loads(body)
     from collections import Counter
-    # Owner/agent test rows never count as leads (F18 — 14 test rows polluted
-    # the human-lead count until the 2026-08-08 purge).
-    TEST_EMAIL = re.compile(r'florin\.florea84|\+(test|apilive|probe)@')
     rows = [x for x in rows if not TEST_EMAIL.search(x.get('email') or '')]
     c = Counter((x.get('context') or '?') for x in rows)
     out['leads_by_context'] = dict(c)
     out['real_human_leads'] = sum(v for k, v in c.items()
                                   if k not in NON_LEAD and not DRIP.match(k) and k != 'api_key')
     out['api_keys'] = c.get('api_key', 0)
+
+    # --- strict human leads: the same set, minus the bot fleet (F30) --------
+    # real_human_leads above is left EXACTLY as it was. It is now knowingly a
+    # gross number; the net is beside it and the share between them says how
+    # much of the headline was never a person.
+    try:
+        human, strict, fleets = split_human_leads(rows)
+        bot_leads = len(human) - len(strict)
+        out['real_human_leads_strict'] = len(strict)
+        out['bot_lead_share'] = round(bot_leads / max(len(human), 1) * 100, 1)
+        out['bot_leads'] = bot_leads
+        out['last_strict_human_lead_utc'] = (strict[0]['created_at'][:19] if strict else None)
+        for days, key_ in ((7, 'real_human_leads_strict_7d'), (28, 'real_human_leads_strict_28d')):
+            cut = (datetime.datetime.now(datetime.timezone.utc)
+                   - datetime.timedelta(days=days)).strftime('%Y-%m-%dT%H:%M:%S')
+            out[key_] = sum(1 for x in strict if (x.get('created_at') or '') >= cut)
+        out['bot_lead_fleets'] = [
+            {'distinct_ip_hashes': n,
+             'lead_rows': sum(1 for x in human if (x.get('user_agent') or '') == ua),
+             'rows_all_contexts': sum(1 for x in rows if (x.get('user_agent') or '') == ua),
+             'user_agent': (ua or '(empty)')[:160]}
+            for ua, n in sorted(fleets.items(), key=lambda kv: -kv[1])]
+        out['real_human_leads_note'] = (
+            'real_human_leads (%d) is the ORIGINAL field and still counts every '
+            'lead-context row regardless of who sent it. real_human_leads_strict '
+            '(%d) additionally drops every row whose user_agent is shared across '
+            '>=%d distinct ip_hash values, i.e. a bot fleet. %s%% of the headline '
+            'was that fleet. Quote the strict number as the conversion KPI; the '
+            'gross number is kept only so the two can be compared over time.'
+            % (out['real_human_leads'], out['real_human_leads_strict'],
+               BOT_UA_MIN_IPS, out['bot_lead_share']))
+    except Exception as e:
+        # Honest null (§3): a failed de-botting must never look like a clean run.
+        out['real_human_leads_strict'] = None
+        out['bot_lead_share'] = None
+        out['last_strict_human_lead_utc'] = None
+        out['real_human_leads_note'] = 'strict de-botting FAILED: %s' % str(e)[:200]
     # build-intent leads: the R2 tripwire counts contexts ending ':build'
     # (active-buyer checkbox, live since 2026-08-10) — test rows already excluded
     out['build_intent_count'] = sum(v for k, v in c.items() if k.endswith(':build'))
@@ -94,10 +189,18 @@ def supabase():
         ids = ','.join(AFFILIATE_PROVIDER_IDS)
         _, body = sb_get(
             f'{url}/rest/v1/provider_clicks'
-            f'?select=provider_id,user_inputs,created_at'
+            f'?select=provider_id,user_inputs,created_at,user_agent,user_ip_hash'
             f'&provider_id=in.({ids})&order=created_at.desc&limit=10000', key)
-        clicks = [x for x in json.loads(body)
+        raw = json.loads(body)
+        clicks = [x for x in raw
                   if not (x.get('user_inputs') or {}).get('is_bot')]
+        # Second layer: a self-declaring non-browser user_agent is a click by
+        # nothing. The /go route's is_bot flag catches these today, but it is one
+        # regex on one code path — if it ever regresses, the KPI must not quietly
+        # absorb curl and aiohttp as customers again.
+        UA_BOT = re.compile(r'curl/|wget|python|aiohttp|httpx|okhttp|go-http|java/|libwww|'
+                            r'bot|spider|crawler|headless|scrapy|axios|node-fetch', re.I)
+        residual = [x for x in clicks if UA_BOT.search(x.get('user_agent') or '')]
         cutoff7 = (datetime.datetime.now(datetime.timezone.utc)
                    .replace(tzinfo=None) - datetime.timedelta(days=7)).isoformat()
         by_slug = {}
@@ -105,12 +208,29 @@ def supabase():
             slug = ((x.get('user_inputs') or {}).get('slug')
                     or AFFILIATE_PROVIDER_IDS.get(x.get('provider_id'), '?'))
             by_slug[slug] = by_slug.get(slug, 0) + 1
+        with_ip = sum(1 for x in raw if x.get('user_ip_hash'))
         out['affiliate_clicks'] = {
             'total': len(clicks),
             'last7d': sum(1 for x in clicks
                           if (x.get('created_at') or '') >= cutoff7),
             'by_slug': dict(sorted(by_slug.items(),
                                    key=lambda kv: -kv[1])),
+            'rows_before_bot_filter': len(raw),
+            'excluded_by_is_bot_flag': len(raw) - len(clicks),
+            'residual_bot_ua_after_filter': len(residual),
+            'distinct_ip_hashes': (None if not with_ip else
+                                   len({x['user_ip_hash'] for x in raw if x.get('user_ip_hash')})),
+            'ip_hash_coverage_pct': round(with_ip / max(len(raw), 1) * 100, 1),
+            'note': (
+                'user_ip_hash is NULL on %d of %d rows (%.0f%% coverage), so these '
+                'clicks CANNOT be de-duplicated per visitor: "total" is click '
+                'events, never unique people, and no unique-clicker number can '
+                'honestly be derived until the /go route starts stamping the hash. '
+                'is_bot excluded %d row(s); %d row(s) still carry a non-browser '
+                'user_agent after that filter.'
+                % (len(raw) - with_ip, len(raw),
+                   with_ip / max(len(raw), 1) * 100,
+                   len(raw) - len(clicks), len(residual))),
         }
     except Exception as e:
         out['affiliate_clicks'] = {'error': str(e)[:200]}
