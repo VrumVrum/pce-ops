@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-13T10:23:19Z",
+ "generated_utc": "2026-08-13T10:36:09Z",
  "gsc_window_end": "2026-08-10",
  "all_clear": false,
  "unanswered_questions": [],
@@ -7,6 +7,20 @@
   "high": 4,
   "medium": 1,
   "low": 3
+ },
+ "alert": {
+  "firing": true,
+  "new": [],
+  "escalated": [],
+  "weekly_reminder": [
+   "ctr_vs_expected_pages",
+   "ctr_vs_expected_sitewide",
+   "revenue_silence",
+   "signup_vs_usage"
+  ],
+  "persisting_silently": [],
+  "resolved_since_last_run": [],
+  "policy": "Mail fires on NEW, ESCALATED, or once every 7 days while a HIGH stays open. Persisting findings remain in this file and remain binding on pce-operating-loop STEP 0A-bis; they simply stop re-mailing daily, because an alert that arrives every morning stops being read."
  },
  "findings": [
   {
@@ -56,7 +70,10 @@
      "expected_clicks": 14.7,
      "ratio_of_expected": 0.34
     }
-   ]
+   ],
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-13T10:36:09Z",
+   "state": "persisting"
   },
   {
    "id": "ctr_vs_expected_sitewide",
@@ -71,7 +88,10 @@
    "expected_clicks": 451,
    "expected_ctr_pct": 1.616,
    "ratio_of_expected": 0.255,
-   "ratio_of_expected_7d": 0.18
+   "ratio_of_expected_7d": 0.18,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-13T10:36:09Z",
+   "state": "persisting"
   },
   {
    "id": "revenue_silence",
@@ -82,7 +102,10 @@
    "sales_total": 0,
    "days_since_last_sale": null,
    "sessions_28d": 1074,
-   "organic_sessions_28d": 204
+   "organic_sessions_28d": 204,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-13T10:36:09Z",
+   "state": "persisting"
   },
   {
    "id": "signup_vs_usage",
@@ -93,7 +116,10 @@
    "keys_issued_7d": 26,
    "usage_events_7d": 1,
    "valid_usage_events_7d": 0,
-   "usage_per_issue": 0.038
+   "usage_per_issue": 0.038,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-13T10:36:09Z",
+   "state": "persisting"
   },
   {
    "id": "junk_in_good_positions",
@@ -103,7 +129,9 @@
    "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
    "good_position_impressions": 2688,
    "junk_impressions": 998,
-   "junk_share_pct": 37.1
+   "junk_share_pct": 37.1,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": null
   },
   {
    "id": "geo_anomaly:iran",
@@ -118,7 +146,9 @@
    "site_engagement_pct": 50.8,
    "deviation_points": 25.8,
    "direct_unassigned_pct": 100.0,
-   "share_pct_last2d": 36.9
+   "share_pct_last2d": 36.9,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": null
   },
   {
    "id": "growth_plateau",
@@ -150,7 +180,9 @@
    "impressions_change_pct": 29.8,
    "sessions_change_pct": 28.6,
    "sessions_flat": false,
-   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-10), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence."
+   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-10), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence.",
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": null
   },
   {
    "id": "junk_query_share",
@@ -168,7 +200,9 @@
     "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
     "\"december 2021\" \"how much does this website cost\"",
     "\"how much does it cost to run this website\" december 2021"
-   ]
+   ],
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": null
   }
  ],
  "note": "The self-questioning layer. Every other guard in this repo checks something a human once thought to ask about; this one asks the same six open questions every day and answers them from live data, so a problem nobody anticipated still surfaces. Runs on GitHub Actions so it survives an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails -> GitHub emails the owner. A check that cannot reach its data reports answer=null and says so; it is never silently counted as healthy."
