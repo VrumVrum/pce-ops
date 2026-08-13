@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-13T05:57:26+00:00",
+ "generated_utc": "2026-08-13T11:00:20+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -65,7 +65,7 @@
  "page_stats": [],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-12",
+   "LastCrawledDate": "2026-08-13",
    "IsPage": true,
    "DocumentSize": 221306,
    "HttpStatus": 0
@@ -107,7 +107,7 @@
    "HttpStatus": 0
   },
   "/calculator": {
-   "LastCrawledDate": "2026-06-26",
+   "LastCrawledDate": "2026-08-13",
    "IsPage": true,
    "DocumentSize": 74341,
    "HttpStatus": 0
