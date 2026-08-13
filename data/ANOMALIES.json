@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-13T10:36:09Z",
+ "generated_utc": "2026-08-13T10:36:58Z",
  "gsc_window_end": "2026-08-10",
  "all_clear": false,
  "unanswered_questions": [],
@@ -9,16 +9,16 @@
   "low": 3
  },
  "alert": {
-  "firing": true,
+  "firing": false,
   "new": [],
   "escalated": [],
-  "weekly_reminder": [
+  "weekly_reminder": [],
+  "persisting_silently": [
    "ctr_vs_expected_pages",
    "ctr_vs_expected_sitewide",
    "revenue_silence",
    "signup_vs_usage"
   ],
-  "persisting_silently": [],
   "resolved_since_last_run": [],
   "policy": "Mail fires on NEW, ESCALATED, or once every 7 days while a HIGH stays open. Persisting findings remain in this file and remain binding on pce-operating-loop STEP 0A-bis; they simply stop re-mailing daily, because an alert that arrives every morning stops being read."
  },
