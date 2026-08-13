@@ -861,7 +861,80 @@ def check_bot_kpi_contamination(g):
                             for ua, n in sorted(fleets.items(), key=lambda kv: -kv[1])])]
 
 
+RECON_MAX_GAP_PCT = 35.0
+
+
+def check_reconciliation(g):
+    """Q: do two independent sources agree on how many people Google sent us?"""
+    q = ('Does Search Console agree with Analytics on how many people Google actually '
+         'sent us, and does Analytics claim MORE visitors than Google says it sent?')
+    why = ('These are independent systems: GSC counts clicks at the search result, GA4 '
+           'counts sessions on the page. GA4 should land slightly BELOW GSC (consent '
+           'banners, people who leave before the tag loads). GA4 reading ABOVE GSC is '
+           'structurally impossible for real organic traffic and means the number is '
+           'inflated. On 2026-08-13 the raw figure was +33% over GSC and the excess was '
+           'exactly the bot fleet arriving with a google referrer, while the '
+           'human-filtered figure landed at -4%. So this is two guards in one: it catches '
+           'a broken analytics tag AND it re-validates the bot filter every day against a '
+           'source the bots do not control. The owner spotted this reconciliation by hand; '
+           'it should never have needed a human to notice.')
+    end = GSC_END
+    start = end - datetime.timedelta(days=27)
+    gr = g.gsc({'startDate': str(start), 'endDate': str(end),
+                'dimensions': [], 'dataState': 'all'})
+    clicks = int(num((gr[0] if gr else {}).get('clicks')))
+    rng = [{'startDate': str(start), 'endDate': str(end)}]
+    goog_org = [{'filter': {'fieldName': 'sessionSource',
+                            'stringFilter': {'value': 'google'}}},
+                {'filter': {'fieldName': 'sessionDefaultChannelGroup',
+                            'stringFilter': {'value': 'Organic Search'}}}]
+    human = goog_org + [
+        {'notExpression': {'filter': {'fieldName': 'country',
+                                      'stringFilter': {'value': 'Iran'}}}},
+        {'notExpression': {'andGroup': {'expressions': [
+            {'filter': {'fieldName': 'deviceCategory',
+                        'stringFilter': {'value': 'desktop'}}},
+            {'filter': {'fieldName': 'operatingSystem',
+                        'stringFilter': {'value': 'Macintosh'}}}]}}}]
+
+    def sess(exprs):
+        rr = g.ga4({'dateRanges': rng, 'metrics': [{'name': 'sessions'}],
+                    'dimensionFilter': {'andGroup': {'expressions': exprs}}, 'limit': 1})
+        return int(num(rr[0].get('sessions'))) if rr else 0
+
+    raw, hum = sess(goog_org), sess(human)
+    if not clicks:
+        return [finding('tracking_reconciliation', 'low', q,
+                        'GSC reported 0 Google clicks in the window - nothing to '
+                        'reconcile against.', why,
+                        gsc_clicks=0, ga4_raw=raw, ga4_human=hum)]
+    gap_raw = (raw - clicks) / clicks * 100.0
+    gap_hum = (hum - clicks) / clicks * 100.0
+    sev = 'high' if abs(gap_hum) > RECON_MAX_GAP_PCT else 'low'
+    a = ('Search Console: %d Google clicks (28d). Analytics google/organic: %d raw '
+         '(%+.0f%% vs GSC), %d after removing the bot slice (%+.0f%%). '
+         % (clicks, raw, gap_raw, hum, gap_hum))
+    if sev == 'high':
+        a += ('The HUMAN figure is more than %.0f%% away from GSC - either the analytics '
+              'tag is broken or double-firing, or the bot filter has stopped matching what '
+              'the bots now look like. Every human-traffic number on the site is suspect '
+              'until this is explained.' % RECON_MAX_GAP_PCT)
+    else:
+        a += ('Within normal drift, so the human-traffic numbers are corroborated by a '
+              'source the bots do not control.')
+        if gap_raw > RECON_MAX_GAP_PCT:
+            a += (' Note: the RAW figure is %+.0f%% over GSC, which is impossible for real '
+                  'organic traffic - the excess of %d sessions is the bot fleet arriving '
+                  'with a google referrer.' % (gap_raw, raw - hum))
+    return [finding('tracking_reconciliation', sev, q, a, why,
+                    gsc_clicks=clicks, ga4_raw=raw, ga4_human=hum,
+                    gap_raw_pct=round(gap_raw, 1), gap_human_pct=round(gap_hum, 1))]
+
+
 CHECKS = [
+    ('tracking_reconciliation', check_reconciliation,
+     'Do Search Console and Analytics agree on how many people Google sent us?',
+     'Two independent sources disagreeing means either the analytics tag is broken or the bot filter has gone stale, and every human number depends on both.'),
     ('geo_anomaly', check_geo,
      'Is any single country over-represented and behaving unlike a human audience?',
      'A bot farm poisons every downstream metric and can be a scrape/harvest campaign.'),
