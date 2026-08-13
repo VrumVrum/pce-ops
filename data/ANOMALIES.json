@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-08-13T11:03:26Z",
+ "generated_utc": "2026-08-13T11:22:45Z",
  "gsc_window_end": "2026-08-10",
  "all_clear": false,
  "unanswered_questions": [],
  "counts": {
   "high": 6,
   "medium": 1,
-  "low": 3
+  "low": 4
  },
  "alert": {
   "firing": false,
@@ -121,28 +121,28 @@
   {
    "id": "funnel_break",
    "severity": "high",
-   "question": "Of the people who open the calculator in the last 7 days, how many reach a result screen, leave an email, and pay -- and at which step do they vanish?",
-   "answer": "Last 7 days: begin_checkout 112 users -> step_completed 6 users -> view_item 7 users -> generate_lead 0 users -> purchase 0 users. Last 28 days: begin_checkout 316 users -> step_completed 32 users -> view_item 31 users -> generate_lead 22 users -> purchase 0 users. BROKEN: 7 users reached view_item and 0 went on to generate_lead (submitted an email (email_capture_submitted)) -- the step is at zero while the one above it is not. WEAK: only 5.4% of begin_checkout users (6 of 112) survive to step_completed, against a 20% floor.",
+   "question": "Of the REAL people (bot fleet excluded) who open the calculator in the last 7 days, how many reach a result screen, leave an email, and pay -- and at which step do they vanish?",
+   "answer": "Last 7 days: begin_checkout 14 users -> step_completed 4 users -> view_item 6 users -> generate_lead 0 users -> purchase 0 users. Last 28 days: begin_checkout 69 users -> step_completed 22 users -> view_item 24 users -> generate_lead 2 users -> purchase 0 users. BROKEN: 6 users reached view_item and 0 went on to generate_lead (submitted an email (email_capture_submitted)) -- the step is at zero while the one above it is not.",
    "why_it_matters": "This is the question that answers \"why is revenue zero\", and until 2026-08-13 no file in either repo contained the number. Everything the system optimised -- impressions, sessions, lead counts -- measures the TOP of a funnel whose middle is falling out. A step that drops below 20% of the step above it, or a step sitting at zero while the one above it is not, is a broken product path: more traffic poured into it changes nothing, and shipping more content is the wrong response.",
    "window_days": 7,
    "steps": [
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 112,
-     "events": 132
+     "users": 14,
+     "events": 16
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 6,
-     "events": 22
+     "users": 4,
+     "events": 16
     },
     {
      "event": "view_item",
      "means": "reached a result screen (results_viewed)",
-     "users": 7,
-     "events": 8
+     "users": 6,
+     "events": 7
     },
     {
      "event": "generate_lead",
@@ -161,26 +161,26 @@
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 316,
-     "events": 401
+     "users": 69,
+     "events": 91
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 32,
-     "events": 102
+     "users": 22,
+     "events": 66
     },
     {
      "event": "view_item",
      "means": "reached a result screen (results_viewed)",
-     "users": 31,
-     "events": 36
+     "users": 24,
+     "events": 28
     },
     {
      "event": "generate_lead",
      "means": "submitted an email (email_capture_submitted)",
-     "users": 22,
-     "events": 23
+     "users": 2,
+     "events": 3
     },
     {
      "event": "purchase",
@@ -193,12 +193,12 @@
     {
      "from": "begin_checkout",
      "to": "step_completed",
-     "users_pct": 5.4
+     "users_pct": 28.6
     },
     {
      "from": "step_completed",
      "to": "view_item",
-     "users_pct": 116.7
+     "users_pct": 150.0
     },
     {
      "from": "view_item",
@@ -215,20 +215,12 @@
    "breaks": [
     {
      "from": "view_item",
-     "from_users": 7,
+     "from_users": 6,
      "to": "generate_lead",
      "means": "submitted an email (email_capture_submitted)"
     }
    ],
-   "weak_steps": [
-    {
-     "from": "begin_checkout",
-     "to": "step_completed",
-     "users_pct": 5.4,
-     "from_users": 112,
-     "to_users": 6
-    }
-   ],
+   "weak_steps": [],
    "note": "Users are distinct per window (undated GA4 query). A ratio above 100%% is not a bug: GA4 de-duplicates users per event, and a visitor can reach a result from a shared config link without firing the step above it.",
    "first_seen_utc": "2026-08-13T11:00:12Z",
    "last_alerted_utc": "2026-08-13T11:00:12Z",
@@ -344,7 +336,21 @@
    ],
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": null
+  },
+  {
+   "id": "tracking_reconciliation",
+   "severity": "low",
+   "question": "Does Search Console agree with Analytics on how many people Google actually sent us, and does Analytics claim MORE visitors than Google says it sent?",
+   "answer": "Search Console: 113 Google clicks (28d). Analytics google/organic: 150 raw (+33% vs GSC), 108 after removing the bot slice (-4%). Within normal drift, so the human-traffic numbers are corroborated by a source the bots do not control.",
+   "why_it_matters": "These are independent systems: GSC counts clicks at the search result, GA4 counts sessions on the page. GA4 should land slightly BELOW GSC (consent banners, people who leave before the tag loads). GA4 reading ABOVE GSC is structurally impossible for real organic traffic and means the number is inflated. On 2026-08-13 the raw figure was +33% over GSC and the excess was exactly the bot fleet arriving with a google referrer, while the human-filtered figure landed at -4%. So this is two guards in one: it catches a broken analytics tag AND it re-validates the bot filter every day against a source the bots do not control. The owner spotted this reconciliation by hand; it should never have needed a human to notice.",
+   "gsc_clicks": 113,
+   "ga4_raw": 150,
+   "ga4_human": 108,
+   "gap_raw_pct": 32.7,
+   "gap_human_pct": -4.4,
+   "first_seen_utc": "2026-08-13T11:22:45Z",
+   "last_alerted_utc": null
   }
  ],
- "note": "The self-questioning layer. Every other guard in this repo checks something a human once thought to ask about; this one asks the same 8 open questions every day and answers them from live data, so a problem nobody anticipated still surfaces. Runs on GitHub Actions so it survives an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails -> GitHub emails the owner. A check that cannot reach its data reports answer=null and says so; it is never silently counted as healthy."
+ "note": "The self-questioning layer. Every other guard in this repo checks something a human once thought to ask about; this one asks the same 9 open questions every day and answers them from live data, so a problem nobody anticipated still surfaces. Runs on GitHub Actions so it survives an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails -> GitHub emails the owner. A check that cannot reach its data reports answer=null and says so; it is never silently counted as healthy."
 }
