@@ -1,0 +1,45 @@
+name: calc-functional
+# Does what gets built actually WORK?
+#
+# The owner asked it plainly on 2026-08-13: "verifica cineva daca tot ce se
+# creaza functioneaza?" The honest answer was almost-no. Pages were verified as
+# "HTTP 200 and N buttons in the HTML", which proves a widget rendered and
+# proves nothing about whether it computes. Four calculators shipped that day
+# had never been driven by anything.
+#
+# This drives every calculator in a real browser: reads the price, clicks or
+# types a different option, and asserts the price MOVED. A widget that prints a
+# constant fails here and passes every other gate in the repo.
+on:
+  schedule:
+    - cron: '40 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  functional:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm i -D playwright@latest --silent && npx playwright install --with-deps chromium
+      - name: Drive every calculator
+        id: run
+        continue-on-error: true
+        run: |
+          node scripts/calc_functional.cjs | tee calc.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - name: Commit snapshot
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "actions@github.com"
+          git add data/CALC-FUNCTIONAL.json
+          git diff --staged --quiet || git commit -m "data: calculator functional test $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          git push -q origin HEAD:master || echo "push skipped"
+      - name: Fail loudly if a calculator is broken
+        if: steps.run.outputs.code != '0'
+        run: |
+          echo "::error::A calculator on the live site does not compute."
+          cat calc.log
+          exit 1

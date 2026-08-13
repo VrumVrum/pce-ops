@@ -1,0 +1,101 @@
+{
+ "generated_utc": "2026-08-13T15:31:06Z",
+ "base": "https://projectcostestimator.com",
+ "total": 13,
+ "passed": 13,
+ "failed": [],
+ "results": [
+  {
+   "page": "/website-cost-calculator",
+   "ok": true,
+   "detail": "3650 -> 2100 on \"Landing page\"",
+   "price_before": 3650,
+   "price_after": 2100
+  },
+  {
+   "page": "/wordpress-website-cost",
+   "ok": true,
+   "detail": "3500 -> 4400 on \"Customised theme\"",
+   "price_before": 3500,
+   "price_after": 4400
+  },
+  {
+   "page": "/shopify-store-cost",
+   "ok": true,
+   "detail": "5600 -> 6900 on \"Customised theme\"",
+   "price_before": 5600,
+   "price_after": 6900
+  },
+  {
+   "page": "/magento-website-cost",
+   "ok": true,
+   "detail": "14750 -> 26200 on \"Migration to Magento\"",
+   "price_before": 14750,
+   "price_after": 26200
+  },
+  {
+   "page": "/restaurant-website-cost",
+   "ok": true,
+   "detail": "2600 -> 4250 on \"Reservations\"",
+   "price_before": 2600,
+   "price_after": 4250
+  },
+  {
+   "page": "/nonprofit-website-cost",
+   "ok": true,
+   "detail": "2600 -> 3450 on \"Mid-size org\"",
+   "price_before": 2600,
+   "price_after": 3450
+  },
+  {
+   "page": "/law-firm-website-cost",
+   "ok": true,
+   "detail": "3200 -> 4000 on \"Practice areas\"",
+   "price_before": 3200,
+   "price_after": 4000
+  },
+  {
+   "page": "/ecommerce-cost-calculator",
+   "ok": true,
+   "detail": "5600 -> 6000 on \"50–500 products\"",
+   "price_before": 5600,
+   "price_after": 6000
+  },
+  {
+   "page": "/real-estate-website-cost",
+   "ok": true,
+   "detail": "3650 -> 5800 on \"IDX / MLS search\"",
+   "price_before": 3650,
+   "price_after": 5800
+  },
+  {
+   "page": "/freelance-website-cost",
+   "ok": true,
+   "detail": "3650 -> 20100 on \"Web app\"",
+   "price_before": 3650,
+   "price_after": 20100
+  },
+  {
+   "page": "/landing-page-cost",
+   "ok": true,
+   "detail": "2100 -> 2750 on \"Product launch\"",
+   "price_before": 2100,
+   "price_after": 2750
+  },
+  {
+   "page": "/saas-cost-estimator",
+   "ok": true,
+   "detail": "27150 -> 31850 on \"Growth app\"",
+   "price_before": 27150,
+   "price_after": 31850
+  },
+  {
+   "page": "/tools/cloudflare-cost-calculator",
+   "ok": true,
+   "detail": "43 -> 180 on \"typed 507\"",
+   "price_before": 43,
+   "price_after": 180
+  }
+ ],
+ "note": "Functional proof that every calculator COMPUTES and reacts to input, not merely that buttons appear in the HTML. Discovery is repo-derived so new calculators are covered automatically. Any failure exits 1 -> owner email."
+}
