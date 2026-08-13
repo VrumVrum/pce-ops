@@ -1,0 +1,71 @@
+name: anomaly-watch
+# The self-questioning layer.
+#
+# On 2026-08-13 the owner personally caught three problems the system should
+# have caught itself: a 29h fleet outage, a bot country at 27.6% of traffic
+# with 25 API keys harvested against one real call, and a sitewide CTR of
+# 0.36% where 2-4% is normal. None of them tripped anything, because every
+# existing guard only checks what somebody once thought to ask about.
+#
+# This job asks the same six open questions every day -- geo anomaly,
+# CTR vs expected-by-position, junk-query share, growth plateau, revenue
+# silence, signup-vs-usage -- and answers them from live GSC / GA4 / Supabase
+# data. Any HIGH-severity answer fails the job, and GitHub emails the owner.
+#
+# It lives on GitHub Actions for the same reason routine-heartbeat does:
+# Actions kept running perfectly through the Anthropic outage, so a watchdog
+# here survives the failures it exists to detect.
+on:
+  schedule:
+    - cron: '30 6 * * *'   # 06:30 UTC, after daily-ops has refreshed data/
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python deps
+        run: pip install --quiet cryptography
+
+      - name: Ask the six questions
+        id: watch
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE: ${{ secrets.SUPABASE_SERVICE_ROLE }}
+        # continue-on-error so the snapshot is still committed on an alert --
+        # the failure is re-raised in the final step, after the commit.
+        continue-on-error: true
+        run: |
+          python scripts/anomaly_watch.py 2>&1 | tee anomaly.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit snapshot
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "ops@projectcostestimator.com"
+          git add data/ANOMALIES.json
+          git diff --staged --quiet || git commit -m "data: anomaly watch $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          git push -q origin HEAD:master || echo "push skipped"
+
+      - name: Fail loudly on any high-severity finding
+        if: steps.watch.outputs.code != '0'
+        run: |
+          echo "::error::The anomaly watch answered at least one of its questions badly."
+          echo "Full answers, with numbers, are in data/ANOMALIES.json on master."
+          echo "Each finding carries the question it asked, what the data said, and why it matters."
+          echo "A finding with answer=null means that question could NOT be answered today:"
+          echo "treat it as unknown, never as healthy."
+          echo ""
+          cat anomaly.log
+          exit 1

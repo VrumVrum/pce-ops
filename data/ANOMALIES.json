@@ -1,0 +1,175 @@
+{
+ "generated_utc": "2026-08-13T10:22:33Z",
+ "gsc_window_end": "2026-08-10",
+ "all_clear": false,
+ "unanswered_questions": [],
+ "counts": {
+  "high": 4,
+  "medium": 1,
+  "low": 3
+ },
+ "findings": [
+  {
+   "id": "ctr_vs_expected_pages",
+   "severity": "high",
+   "question": "Which specific pages rank but do not get clicked?",
+   "answer": "4 of the top 15 pages by impressions (judged only where avg position is inside 20, so this is a click problem and not a ranking problem) earn under 40% of the clicks their position predicts. Worst by lost clicks: /blog/cloudflare-cost-2026 -- 2145 impressions at avg position 8.1, 1 clicks where ~86 were expected (0.05% vs 4.00% CTR). Total missing clicks across the 4 flagged pages: ~226 in 28 days.",
+   "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
+   "pages": [
+    {
+     "page": "/blog/cloudflare-cost-2026",
+     "impressions": 2145,
+     "clicks": 1,
+     "avg_position": 8.1,
+     "actual_ctr_pct": 0.05,
+     "expected_ctr_pct": 4.0,
+     "expected_clicks": 85.8,
+     "ratio_of_expected": 0.01
+    },
+    {
+     "page": "/freelance-website-cost",
+     "impressions": 6393,
+     "clicks": 16,
+     "avg_position": 13.4,
+     "actual_ctr_pct": 0.25,
+     "expected_ctr_pct": 1.5,
+     "expected_clicks": 95.9,
+     "ratio_of_expected": 0.17
+    },
+    {
+     "page": "/restaurant-website-cost",
+     "impressions": 1274,
+     "clicks": 12,
+     "avg_position": 6.4,
+     "actual_ctr_pct": 0.94,
+     "expected_ctr_pct": 5.0,
+     "expected_clicks": 63.7,
+     "ratio_of_expected": 0.19
+    },
+    {
+     "page": "/website-cost-calculator",
+     "impressions": 979,
+     "clicks": 5,
+     "avg_position": 20.0,
+     "actual_ctr_pct": 0.51,
+     "expected_ctr_pct": 1.5,
+     "expected_clicks": 14.7,
+     "ratio_of_expected": 0.34
+    }
+   ]
+  },
+  {
+   "id": "ctr_vs_expected_sitewide",
+   "severity": "high",
+   "question": "For the positions we already hold, are we getting the clicks those positions should produce?",
+   "answer": "Sitewide 28d: 115 clicks on 27910 impressions = 0.41% CTR. Weighting every page by its own average position, that traffic should have produced ~451 clicks (1.62% CTR). Actual is 25% of expected. Last 7d: 31 clicks vs ~172 expected (18% of expected, 0.36% CTR).",
+   "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
+   "window": "2026-07-14..2026-08-10",
+   "clicks": 115,
+   "impressions": 27910,
+   "actual_ctr_pct": 0.412,
+   "expected_clicks": 451,
+   "expected_ctr_pct": 1.616,
+   "ratio_of_expected": 0.255,
+   "ratio_of_expected_7d": 0.18
+  },
+  {
+   "id": "revenue_silence",
+   "severity": "high",
+   "question": "How many days since the last sale, and how much traffic arrived in that time?",
+   "answer": "The `sales` table has NEVER contained a row -- 0 sales, all time. Days since last sale is therefore undefined (null), not a large number. Against that: 1074 sessions in the last 28 days (204 of them organic). Every visitor so far has been free.",
+   "why_it_matters": "Rule #1 is revenue. Traffic that produces no sale for weeks is not a marketing problem to optimise around the edges -- it is the whole business failing, and it must be stated plainly instead of being buried under impression charts.",
+   "sales_total": 0,
+   "days_since_last_sale": null,
+   "sessions_28d": 1074,
+   "organic_sessions_28d": 204
+  },
+  {
+   "id": "signup_vs_usage",
+   "severity": "high",
+   "question": "How many API keys were issued in the last 7 days, and how many API calls were actually made with them?",
+   "answer": "26 API keys issued in the last 7 days against 1 recorded API usage event(s) -- 0 of which were valid calls. Usage/issue ratio 0.04. Distinct signup domains: 14. A key that is never called is not a user. This is the harvesting signature: the endpoint is handing out quota to something that only wants the key.",
+   "why_it_matters": "Keys issued but never used are not signups -- they are email harvesting or credential scraping against a free endpoint. It inflates the lead count, poisons the drip list, and hands an unauthenticated scraper a free quota. A real signup uses the key within hours.",
+   "keys_issued_7d": 26,
+   "usage_events_7d": 1,
+   "valid_usage_events_7d": 0,
+   "usage_per_issue": 0.038
+  },
+  {
+   "id": "junk_in_good_positions",
+   "severity": "medium",
+   "question": "How much of our position 1-10 visibility is junk?",
+   "answer": "37.1% of position 1-10 impressions are junk queries (998 of 2688 impressions, 103 of 547 queries). Those rankings produce no clicks by construction, so the top-10 footprint is 37% smaller than it looks.",
+   "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
+   "good_position_impressions": 2688,
+   "junk_impressions": 998,
+   "junk_share_pct": 37.1
+  },
+  {
+   "id": "geo_anomaly:iran",
+   "severity": "low",
+   "question": "Is any single country more than 12% of the last 7 days of sessions while engaging with the site in a way that does not look human?",
+   "answer": "Iran = 25.2% of 7d sessions (77 of 305) at 76.6% engagement vs the site average of 50.8% (+25.8 points). 100% of those sessions are Direct/Unassigned. Last 2 days: 36.9% of sessions. KNOWN + MITIGATED: blocked 2026-08-13 via Vercel firewall deny rule, 0 day(s) ago -- the 7d window still contains pre-block traffic, so this is expected to decay. Re-check: if it has not fallen below 12% by 2026-08-20, the rule is not working.",
+   "why_it_matters": "A bot farm shows up as one country dominating traffic on Direct/Unassigned with engagement far off the site average -- abnormally HIGH engagement is the giveaway, because real Direct traffic engages LESS than organic, not more. It poisons every metric downstream and can be a scrape/harvest campaign.",
+   "country": "Iran",
+   "share_pct_7d": 25.2,
+   "sessions_7d": 77,
+   "engagement_pct": 76.6,
+   "site_engagement_pct": 50.8,
+   "deviation_points": 25.8,
+   "direct_unassigned_pct": 100.0,
+   "share_pct_last2d": 36.9
+  },
+  {
+   "id": "growth_plateau",
+   "severity": "low",
+   "question": "Have organic sessions been flat or falling for 3 weeks or more WHILE search impressions rose?",
+   "answer": "No plateau. Over the last 3 weeks organic sessions moved +29% (49 -> 53 -> 63) against +30% on impressions -- sessions are keeping up with visibility, which is the healthy side of this divergence. Full series: w/e 2026-07-13: 18 sessions, 4686 impressions | w/e 2026-07-20: 37 sessions, 3647 impressions | w/e 2026-07-27: 49 sessions, 6596 impressions | w/e 2026-08-03: 53 sessions, 8668 impressions | w/e 2026-08-10: 63 sessions, 8562 impressions",
+   "why_it_matters": "Rising impressions with flat sessions is the signature of \"visible but not clicked\": more content is indexed, more queries match, and none of it converts into a visit. Chasing more content in that state makes the divergence worse. It is only detectable by looking at the two curves TOGETHER, which no existing guard did.",
+   "weeks_ending": [
+    "2026-07-13",
+    "2026-07-20",
+    "2026-07-27",
+    "2026-08-03",
+    "2026-08-10"
+   ],
+   "organic_sessions_by_week": [
+    18,
+    37,
+    49,
+    53,
+    63
+   ],
+   "impressions_by_week": [
+    4686,
+    3647,
+    6596,
+    8668,
+    8562
+   ],
+   "impressions_change_pct": 29.8,
+   "sessions_change_pct": 28.6,
+   "sessions_flat": false,
+   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-10), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence."
+  },
+  {
+   "id": "junk_query_share",
+   "severity": "low",
+   "question": "What share of our impressions comes from queries that are AI/LLM fanout rather than human searches -- and how much of that sits in the GOOD positions we congratulate ourselves for?",
+   "answer": "22.1% of visible query impressions are AI-fanout junk (2870 impressions across 206 queries, all with zero clicks). Denominator is the 12976 impressions GSC exposes at query level = 47% of the 27473 sitewide (the rest are anonymised and cannot be judged). Sample: \"dealerrater\" \"google business profile\" \"third-party reviews\"; \"december 2021\" \"how much does this website cost\"; \"how much does it cost to run this website\" december 2021",
+   "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
+   "junk_impressions": 2870,
+   "junk_queries": 206,
+   "visible_query_impressions": 12976,
+   "sitewide_impressions": 27473,
+   "query_dimension_coverage_pct": 47.2,
+   "junk_share_pct": 22.1,
+   "sample": [
+    "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
+    "\"december 2021\" \"how much does this website cost\"",
+    "\"how much does it cost to run this website\" december 2021"
+   ]
+  }
+ ],
+ "note": "The self-questioning layer. Every other guard in this repo checks something a human once thought to ask about; this one asks the same six open questions every day and answers them from live data, so a problem nobody anticipated still surfaces. Runs on GitHub Actions so it survives an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails -> GitHub emails the owner. A check that cannot reach its data reports answer=null and says so; it is never silently counted as healthy."
+}

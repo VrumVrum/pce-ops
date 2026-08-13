@@ -1,0 +1,788 @@
+# -*- coding: utf-8 -*-
+"""
+Anomaly watch — the self-questioning layer.
+
+WHY THIS EXISTS
+---------------
+On 2026-08-13 the owner personally noticed three separate problems that the
+system should have found on its own:
+
+  1. All 9 cloud routines had been dead ~29h (403 after a subscription lapse).
+  2. Iran was 27.6% of traffic, ~200/208 sessions "Direct" at 92% engagement
+     (a bot signature), while 25 API keys were harvested in 4 days against
+     exactly ONE real API call.
+  3. Sitewide CTR is 0.36% where 2-4% is normal.
+
+Every guard already in this repo checks something a human once thought to ask
+about (routine silence, citation floor, visual diffs, smoke tests). Nothing
+scanned for "what looks WRONG that nobody asked about". This does.
+
+It asks the same six questions EVERY day and answers them from live data:
+geo anomaly, CTR-vs-expected-by-position, junk-query share, growth plateau,
+revenue silence, signup-vs-usage ratio.
+
+WHY IT LIVES IN pce-ops AND NOT IN A ROUTINE PROMPT
+---------------------------------------------------
+Same reason as routine_heartbeat.py: GitHub Actions kept running perfectly
+through the Anthropic outage. A watchdog that runs on the platform it must
+watch shares the failure it is supposed to detect.
+
+ALERT CHANNEL: any HIGH-severity finding => exit 1 => the workflow fails =>
+GitHub emails the repo owner. That path does not depend on Anthropic.
+
+HONEST NULLS (§3): every check is wrapped. A check whose data cannot be
+reached emits a finding with answer=None and the error text. It is NEVER
+silently dropped and NEVER estimated, because a watchdog that quietly reports
+"all clear" when it is blind is worse than no watchdog.
+
+Output: data/ANOMALIES.json
+Env: GSC_KEY_JSON (or GSC_KEY_PATH), SUPABASE_URL, SUPABASE_SERVICE_ROLE
+"""
+import base64
+import datetime
+import io
+import json
+import os
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from metrics import detect_junk   # noqa: E402  — 5-signature AI-fanout detector, reused verbatim
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.environ.get('ANOMALY_OUT', os.path.join(ROOT, 'data', 'ANOMALIES.json'))
+SITE = 'sc-domain:projectcostestimator.com'
+GA4_PROPERTY = os.environ.get('GA4_PROPERTY', '532207725')
+API_PROVIDER_ID = '8f3b107d-53b5-4e20-93c6-dfce70c3793d'   # usageLane __api_usage__ system row
+
+NOW = datetime.datetime.now(datetime.timezone.utc)
+TODAY = NOW.date()
+# GSC finalises data ~3 days late. Ending a range any later silently mixes
+# a partial day into every comparison and manufactures a fake "decline".
+GSC_END = TODAY - datetime.timedelta(days=3)
+
+# Expected organic CTR by SERP position. Public aggregate curves (Advanced Web
+# Ranking / Backlinko / Sistrix all land within a point or two of these); the
+# absolute values matter far less than the shape, and everything downstream is
+# expressed as a RATIO to expectation, so a 20% error in the curve moves a
+# ratio of 0.26 to 0.31 — it does not flip a verdict.
+EXPECTED_CTR = {1: .28, 2: .15, 3: .11, 4: .08, 5: .07,
+                6: .05, 7: .045, 8: .04, 9: .035, 10: .03}
+
+
+def expected_ctr(pos):
+    if pos is None:
+        return None
+    p = int(round(pos))
+    if p <= 0:
+        p = 1
+    if p <= 10:
+        return EXPECTED_CTR[p]
+    if p <= 20:
+        return .015
+    if p <= 50:
+        return .003
+    return .001
+
+
+# ---------------------------------------------------------------------------
+# Known, DATED mitigations.
+#
+# Suppressing a country by name forever is how a detector goes blind: if the
+# firewall rule is ever dropped the alarm never comes back. Instead a mitigation
+# is recorded with the date it went live, and the check then does the OPPOSITE
+# of suppressing — it VERIFIES the fix. Before the block lands in the data the
+# finding is downgraded to `low` (it is already handled); once the traffic
+# should have decayed out of the 7-day window and has not, it escalates back to
+# `high` with "the mitigation is NOT working" as the answer.
+# ---------------------------------------------------------------------------
+MITIGATED_COUNTRIES = {
+    'Iran': {'blocked_utc': '2026-08-13', 'via': 'Vercel firewall deny rule'},
+}
+
+# --- thresholds (tuned against real 2026-08-13 data; see the tuning notes at
+#     the bottom of this file for why each number is where it is) -------------
+GEO_MIN_SHARE = 12.0        # % of 7d sessions before a country is worth judging
+GEO_MIN_SESSIONS = 30       # below this, engagement rate is coin-flip noise
+GEO_ENG_DEVIATION = 20.0    # percentage POINTS from the site average
+CTR_RATIO_ALERT = 0.40      # actual CTR below 40% of expected-by-position
+CTR_PAGE_MIN_IMPR = 300     # per-page floor: fewer impressions => not a signal
+CTR_PAGE_MIN_EXPECTED = 3.0 # ... and at least 3 clicks should have been expected
+CTR_PAGE_MAX_POSITION = 20.5  # past page 2 the curve is a flat guess and a miss is
+                              # a RANKING problem, not a click-through problem
+JUNK_SHARE_ALERT = 25.0     # % of visible query impressions that are AI fanout
+JUNK_GOOD_POS_ALERT = 30.0  # % of position 1-10 impressions that are junk
+JUNK_GOOD_POS_HIGH = 50.0
+PLATEAU_WEEKS = 3           # consecutive flat/declining weeks
+PLATEAU_FLAT_PCT = 8.0      # within +/-8% week-over-week counts as "flat"
+PLATEAU_IMPR_RISE = 15.0    # ... while impressions rose at least this much
+API_KEY_MIN_ISSUED = 5      # below this the ratio is meaningless
+API_USAGE_RATIO_ALERT = 0.20
+
+
+def finding(fid, severity, question, answer, why, **extra):
+    f = {'id': fid, 'severity': severity, 'question': question,
+         'answer': answer, 'why_it_matters': why}
+    f.update(extra)
+    return f
+
+
+def blind(fid, question, why, err):
+    """A check that could not run. Reported, never dropped, never guessed."""
+    return finding(fid, 'medium', question, None,
+                   why + ' -- this question could NOT be answered today, so the '
+                         'absence of a finding here is NOT evidence of health.',
+                   error=str(err)[:300])
+
+
+# --------------------------------------------------------------------------- auth
+def _sa():
+    k = os.environ.get('GSC_KEY_JSON')
+    if k:
+        return json.loads(k)
+    with open(os.environ.get('GSC_KEY_PATH', 'C:/Users/Flo/Downloads/gsc-key.json')) as f:
+        return json.load(f)
+
+
+def token(scope):
+    """Service-account JWT -> access token. Same pattern as gsc_dump.py / ga4.py."""
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import padding
+    sa = _sa()
+    hdr = base64.urlsafe_b64encode(json.dumps({'alg': 'RS256', 'typ': 'JWT'}).encode()).rstrip(b'=')
+    now = int(time.time())
+    claims = {'iss': sa['client_email'], 'scope': scope,
+              'aud': sa['token_uri'], 'iat': now, 'exp': now + 3600}
+    pb = base64.urlsafe_b64encode(json.dumps(claims).encode()).rstrip(b'=')
+    pk = serialization.load_pem_private_key(sa['private_key'].encode(), password=None)
+    sig = pk.sign(hdr + b'.' + pb, padding.PKCS1v15(), hashes.SHA256())
+    jwt = (hdr + b'.' + pb + b'.' + base64.urlsafe_b64encode(sig).rstrip(b'=')).decode()
+    data = urllib.parse.urlencode({'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+                                   'assertion': jwt}).encode()
+    return json.loads(urllib.request.urlopen(
+        urllib.request.Request(sa['token_uri'], data=data, method='POST'), timeout=30
+    ).read())['access_token']
+
+
+class Google(object):
+    """Lazily-authenticated GSC + GA4 clients (one token per scope, reused)."""
+
+    def __init__(self):
+        self._gsc = None
+        self._ga4 = None
+
+    def gsc(self, body):
+        if self._gsc is None:
+            self._gsc = token('https://www.googleapis.com/auth/webmasters')
+        site = urllib.parse.quote(SITE, safe='')
+        req = urllib.request.Request(
+            f'https://www.googleapis.com/webmasters/v3/sites/{site}/searchAnalytics/query',
+            method='POST', headers={'Authorization': f'Bearer {self._gsc}',
+                                    'Content-Type': 'application/json'},
+            data=json.dumps(body).encode())
+        return json.loads(urllib.request.urlopen(req, timeout=90).read()).get('rows', [])
+
+    def ga4(self, body):
+        if self._ga4 is None:
+            self._ga4 = token('https://www.googleapis.com/auth/analytics.readonly')
+        req = urllib.request.Request(
+            f'https://analyticsdata.googleapis.com/v1beta/properties/{GA4_PROPERTY}:runReport',
+            method='POST', headers={'Authorization': f'Bearer {self._ga4}',
+                                    'Content-Type': 'application/json'},
+            data=json.dumps(body).encode())
+        res = json.loads(urllib.request.urlopen(req, timeout=60).read())
+        dims = [d['name'] for d in body.get('dimensions', [])]
+        mets = [m['name'] for m in body.get('metrics', [])]
+        out = []
+        for r in res.get('rows', []):
+            row = {dims[i]: v.get('value') for i, v in enumerate(r.get('dimensionValues', []))}
+            row.update({mets[i]: v.get('value') for i, v in enumerate(r.get('metricValues', []))})
+            out.append(row)
+        return out
+
+
+def num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+# --------------------------------------------------------------------------- supabase
+def sb_env(*names):
+    for n in names:
+        if os.environ.get(n):
+            return os.environ[n]
+    envf = os.environ.get('ENV_FILE')
+    if envf and os.path.exists(envf):
+        t = io.open(envf, encoding='utf-8', errors='ignore').read()
+        for n in names:
+            m = re.search(rf'^{n}="?([^"\n]+)"?$', t, re.M)
+            if m:
+                return m.group(1).strip()
+    return None
+
+
+def sb(path, prefer=None):
+    url = sb_env('SUPABASE_URL', 'NEXT_PUBLIC_SUPABASE_URL')
+    key = sb_env('SUPABASE_SERVICE_ROLE', 'SUPABASE_SERVICE_ROLE_KEY', 'SERVICE_ROLE_KEY')
+    if not url or not key:
+        raise RuntimeError('no Supabase credentials (SUPABASE_URL / SUPABASE_SERVICE_ROLE)')
+    req = urllib.request.Request(f'{url}/rest/v1/{path}', headers={
+        'apikey': key, 'Authorization': f'Bearer {key}',
+        **({'Prefer': prefer} if prefer else {})})
+    r = urllib.request.urlopen(req, timeout=30)
+    body = r.read().decode('utf-8', 'replace')
+    return r, (json.loads(body) if body.strip() else [])
+
+
+def iso(dt):
+    """PostgREST filter value — the '+' in an offset would decode as a space."""
+    return urllib.parse.quote(dt.strftime('%Y-%m-%dT%H:%M:%SZ'))
+
+
+# =========================================================================== 1
+def check_geo(g):
+    """Q: is any country over-represented AND behaving unlike a human audience?"""
+    q = ('Is any single country more than %.0f%% of the last 7 days of sessions '
+         'while engaging with the site in a way that does not look human?' % GEO_MIN_SHARE)
+    why = ('A bot farm shows up as one country dominating traffic on Direct/Unassigned '
+           'with engagement far off the site average -- abnormally HIGH engagement is the '
+           'giveaway, because real Direct traffic engages LESS than organic, not more. '
+           'It poisons every metric downstream and can be a scrape/harvest campaign.')
+    rows = g.ga4({'dateRanges': [{'startDate': '7daysAgo', 'endDate': 'yesterday'}],
+                  'dimensions': [{'name': 'country'}],
+                  'metrics': [{'name': 'sessions'}, {'name': 'engagementRate'}],
+                  'orderBys': [{'metric': {'metricName': 'sessions'}, 'desc': True}],
+                  'limit': 50})
+    total = sum(num(r['sessions']) for r in rows)
+    if total < 50:
+        return [finding('geo_anomaly', 'low', q,
+                        'Only %d sessions in the last 7 days -- too few for any country '
+                        'share to mean anything. No judgement made.' % total, why)]
+    site_eng = (sum(num(r['sessions']) * num(r['engagementRate']) for r in rows)
+                / max(total, 1) * 100)
+
+    ch = g.ga4({'dateRanges': [{'startDate': '7daysAgo', 'endDate': 'yesterday'}],
+                'dimensions': [{'name': 'country'}, {'name': 'sessionDefaultChannelGroup'}],
+                'metrics': [{'name': 'sessions'}],
+                'orderBys': [{'metric': {'metricName': 'sessions'}, 'desc': True}],
+                'limit': 200})
+    by_country = {}
+    for r in ch:
+        d = by_country.setdefault(r['country'], {'total': 0.0, 'nonref': 0.0})
+        d['total'] += num(r['sessions'])
+        if r['sessionDefaultChannelGroup'] in ('Direct', 'Unassigned'):
+            d['nonref'] += num(r['sessions'])
+
+    # a 2-day tail, to tell "still happening" from "already decaying out of the window"
+    recent = g.ga4({'dateRanges': [{'startDate': '2daysAgo', 'endDate': 'yesterday'}],
+                    'dimensions': [{'name': 'country'}], 'metrics': [{'name': 'sessions'}],
+                    'limit': 50})
+    rtot = sum(num(r['sessions']) for r in recent)
+    rshare = {r['country']: num(r['sessions']) / max(rtot, 1) * 100 for r in recent}
+
+    out = []
+    for r in rows:
+        s = num(r['sessions'])
+        share = s / total * 100
+        eng = num(r['engagementRate']) * 100
+        dev = eng - site_eng
+        if share < GEO_MIN_SHARE or s < GEO_MIN_SESSIONS or abs(dev) < GEO_ENG_DEVIATION:
+            continue
+        country = r['country']
+        c = by_country.get(country, {'total': 0.0, 'nonref': 0.0})
+        direct_pct = c['nonref'] / max(c['total'], 1) * 100
+        ans = ('%s = %.1f%% of 7d sessions (%d of %d) at %.1f%% engagement vs the site '
+               'average of %.1f%% (%+.1f points). %.0f%% of those sessions are '
+               'Direct/Unassigned. Last 2 days: %.1f%% of sessions.'
+               % (country, share, int(s), int(total), eng, site_eng, dev,
+                  direct_pct, rshare.get(country, 0.0)))
+        sev = 'high' if dev > 0 else 'medium'
+        mit = MITIGATED_COUNTRIES.get(country)
+        if mit:
+            blocked = datetime.date.fromisoformat(mit['blocked_utc'])
+            days_since = (TODAY - blocked).days
+            if days_since < 7:
+                # The block cannot have washed out of a 7-day window yet.
+                sev = 'low'
+                ans += (' KNOWN + MITIGATED: blocked %s via %s, %d day(s) ago -- the 7d '
+                        'window still contains pre-block traffic, so this is expected to '
+                        'decay. Re-check: if it has not fallen below %.0f%% by %s, the '
+                        'rule is not working.'
+                        % (mit['blocked_utc'], mit['via'], days_since, GEO_MIN_SHARE,
+                           (blocked + datetime.timedelta(days=7)).isoformat()))
+            else:
+                sev = 'high'
+                ans += (' MITIGATION FAILED: %s was blocked %s via %s, %d days ago, and it '
+                        'is STILL above the threshold. The rule is not doing anything.'
+                        % (country, mit['blocked_utc'], mit['via'], days_since))
+        out.append(finding('geo_anomaly:' + country.lower().replace(' ', '_'), sev, q, ans, why,
+                           country=country, share_pct_7d=round(share, 1), sessions_7d=int(s),
+                           engagement_pct=round(eng, 1), site_engagement_pct=round(site_eng, 1),
+                           deviation_points=round(dev, 1),
+                           direct_unassigned_pct=round(direct_pct, 1),
+                           share_pct_last2d=round(rshare.get(country, 0.0), 1)))
+    if not out:
+        out.append(finding('geo_anomaly', 'low', q,
+                           'No country clears all three bars (>=%.0f%% share, >=%d sessions, '
+                           '>=%.0f point engagement deviation). Site average engagement '
+                           '%.1f%% over %d sessions.'
+                           % (GEO_MIN_SHARE, GEO_MIN_SESSIONS, GEO_ENG_DEVIATION,
+                              site_eng, int(total)), why))
+    return out
+
+
+# =========================================================================== 2
+def check_ctr(g):
+    """Q: are we earning the clicks our RANKINGS should already be earning?"""
+    q = ('For the positions we already hold, are we getting the clicks those '
+         'positions should produce?')
+    why = ('Impressions without clicks means the ranking is real but the result is not '
+           'worth clicking -- title, meta, SERP feature theft, or a query the page does '
+           'not actually answer. It is the cheapest growth lever on the site and it is '
+           'invisible unless you compare CTR against what the POSITION predicts, which '
+           'is exactly the comparison nobody was making.')
+    out = []
+    s28 = (GSC_END - datetime.timedelta(days=27)).isoformat()
+    s7 = (GSC_END - datetime.timedelta(days=6)).isoformat()
+    end = GSC_END.isoformat()
+
+    # Pages, not queries: GSC anonymises rare queries, so the query dimension
+    # holds ~47% of impressions but almost none of the clicks. Page rows carry
+    # essentially 100% of both, which is the only honest denominator for CTR.
+    pages = g.gsc({'startDate': s28, 'endDate': end, 'dimensions': ['page'], 'rowLimit': 2000})
+    if not pages:
+        raise RuntimeError('GSC returned no page rows for %s..%s' % (s28, end))
+    impr = sum(p['impressions'] for p in pages)
+    clicks = sum(p['clicks'] for p in pages)
+    exp_clicks = sum(p['impressions'] * expected_ctr(p['position']) for p in pages)
+    ratio = clicks / max(exp_clicks, 1e-9)
+
+    p7 = g.gsc({'startDate': s7, 'endDate': end, 'dimensions': ['page'], 'rowLimit': 2000})
+    i7 = sum(p['impressions'] for p in p7)
+    c7 = sum(p['clicks'] for p in p7)
+    e7 = sum(p['impressions'] * expected_ctr(p['position']) for p in p7)
+
+    ans = ('Sitewide 28d: %d clicks on %d impressions = %.2f%% CTR. Weighting every page '
+           'by its own average position, that traffic should have produced ~%.0f clicks '
+           '(%.2f%% CTR). Actual is %.0f%% of expected. Last 7d: %d clicks vs ~%.0f '
+           'expected (%.0f%% of expected, %.2f%% CTR).'
+           % (clicks, impr, clicks / max(impr, 1) * 100, exp_clicks,
+              exp_clicks / max(impr, 1) * 100, ratio * 100,
+              c7, e7, c7 / max(e7, 1e-9) * 100, c7 / max(i7, 1) * 100))
+    out.append(finding('ctr_vs_expected_sitewide',
+                       'high' if ratio < CTR_RATIO_ALERT else 'low', q, ans, why,
+                       window='%s..%s' % (s28, end),
+                       clicks=clicks, impressions=impr,
+                       actual_ctr_pct=round(clicks / max(impr, 1) * 100, 3),
+                       expected_clicks=round(exp_clicks),
+                       expected_ctr_pct=round(exp_clicks / max(impr, 1) * 100, 3),
+                       ratio_of_expected=round(ratio, 3),
+                       ratio_of_expected_7d=round(c7 / max(e7, 1e-9), 3)))
+
+    # per-page offenders among the 15 biggest impression earners
+    pages.sort(key=lambda p: -p['impressions'])
+    bad = []
+    for p in pages[:15]:
+        e = p['impressions'] * expected_ctr(p['position'])
+        if (p['impressions'] < CTR_PAGE_MIN_IMPR or e < CTR_PAGE_MIN_EXPECTED
+                or p['position'] > CTR_PAGE_MAX_POSITION):
+            continue
+        r = p['clicks'] / max(e, 1e-9)
+        if r < CTR_RATIO_ALERT:
+            bad.append({'page': p['keys'][0].replace('https://projectcostestimator.com', '') or '/',
+                        'impressions': p['impressions'], 'clicks': p['clicks'],
+                        'avg_position': round(p['position'], 1),
+                        'actual_ctr_pct': round(p['clicks'] / p['impressions'] * 100, 2),
+                        'expected_ctr_pct': round(expected_ctr(p['position']) * 100, 2),
+                        'expected_clicks': round(e, 1),
+                        'ratio_of_expected': round(r, 2)})
+    pq = 'Which specific pages rank but do not get clicked?'
+    if bad:
+        bad.sort(key=lambda b: -(b['expected_clicks'] - b['clicks']))
+        lead = bad[0]
+        ans = ('%d of the top 15 pages by impressions (judged only where avg position is '
+               'inside %.0f, so this is a click problem and not a ranking problem) earn '
+               'under %.0f%% of the clicks their position predicts. Worst by lost clicks: '
+               '%s -- %d impressions at avg position %.1f, %d clicks where ~%.0f were '
+               'expected (%.2f%% vs %.2f%% CTR). Total missing clicks across the %d '
+               'flagged pages: ~%.0f in 28 days.'
+               % (len(bad), CTR_PAGE_MAX_POSITION, CTR_RATIO_ALERT * 100, lead['page'],
+                  lead['impressions'], lead['avg_position'], lead['clicks'],
+                  lead['expected_clicks'], lead['actual_ctr_pct'],
+                  lead['expected_ctr_pct'], len(bad),
+                  sum(b['expected_clicks'] - b['clicks'] for b in bad)))
+        out.append(finding('ctr_vs_expected_pages', 'high' if len(bad) >= 3 else 'medium',
+                           pq, ans, why, pages=bad))
+    else:
+        out.append(finding('ctr_vs_expected_pages', 'low', pq,
+                           'No page in the top 15 by impressions that ranks inside position '
+                           '%.0f is under %.0f%% of its position-expected CTR.'
+                           % (CTR_PAGE_MAX_POSITION, CTR_RATIO_ALERT * 100), why))
+    return out
+
+
+# =========================================================================== 3
+def check_junk(g):
+    """Q: how much of what we 'rank for' is machine noise nobody will ever click?"""
+    q = ('What share of our impressions comes from queries that are AI/LLM fanout '
+         'rather than human searches -- and how much of that sits in the GOOD '
+         'positions we congratulate ourselves for?')
+    why = ('Junk impressions inflate every visibility number while producing exactly zero '
+           'clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting '
+           'in positions 1-10 is the worst case: it looks like we won, and it converts '
+           'nothing. It also explains a chunk of the CTR gap above, so the two findings '
+           'must be read together.')
+    s28 = (GSC_END - datetime.timedelta(days=27)).isoformat()
+    end = GSC_END.isoformat()
+    rows = g.gsc({'startDate': s28, 'endDate': end, 'dimensions': ['query'], 'rowLimit': 25000})
+    if not rows:
+        raise RuntimeError('GSC returned no query rows for %s..%s' % (s28, end))
+    site = g.gsc({'startDate': s28, 'endDate': end, 'dimensions': []})
+    site_impr = site[0]['impressions'] if site else 0
+    visible = sum(r['impressions'] for r in rows)
+    coverage = visible / max(site_impr, 1) * 100
+
+    junk_impr, junk_n, sample = detect_junk(rows)
+    share = junk_impr / max(visible, 1) * 100
+
+    good = [r for r in rows if r['position'] <= 10.5]
+    good_impr = sum(r['impressions'] for r in good)
+    gj_impr, gj_n, _ = detect_junk(good)
+    gshare = gj_impr / max(good_impr, 1) * 100
+
+    out = []
+    ans = ('%.1f%% of visible query impressions are AI-fanout junk (%d impressions across '
+           '%d queries, all with zero clicks). Denominator is the %d impressions GSC '
+           'exposes at query level = %.0f%% of the %d sitewide (the rest are anonymised '
+           'and cannot be judged). Sample: %s'
+           % (share, junk_impr, junk_n, visible, coverage, site_impr,
+              '; '.join(sample) if sample else '(none)'))
+    out.append(finding('junk_query_share',
+                       'medium' if share > JUNK_SHARE_ALERT else 'low', q, ans, why,
+                       junk_impressions=junk_impr, junk_queries=junk_n,
+                       visible_query_impressions=visible, sitewide_impressions=site_impr,
+                       query_dimension_coverage_pct=round(coverage, 1),
+                       junk_share_pct=round(share, 1), sample=sample))
+
+    gq = 'How much of our position 1-10 visibility is junk?'
+    sev = ('high' if gshare > JUNK_GOOD_POS_HIGH else
+           'medium' if gshare > JUNK_GOOD_POS_ALERT else 'low')
+    gans = ('%.1f%% of position 1-10 impressions are junk queries (%d of %d impressions, '
+            '%d of %d queries). Those rankings produce no clicks by construction, so the '
+            'top-10 footprint is %.0f%% smaller than it looks.'
+            % (gshare, gj_impr, good_impr, gj_n, len(good), gshare))
+    out.append(finding('junk_in_good_positions', sev, gq, gans, why,
+                       good_position_impressions=good_impr, junk_impressions=gj_impr,
+                       junk_share_pct=round(gshare, 1)))
+    return out
+
+
+# =========================================================================== 4
+def check_plateau(g):
+    """Q: are we becoming more visible without becoming more visited?"""
+    q = ('Have organic sessions been flat or falling for %d weeks or more WHILE '
+         'search impressions rose?' % PLATEAU_WEEKS)
+    why = ('Rising impressions with flat sessions is the signature of "visible but not '
+           'clicked": more content is indexed, more queries match, and none of it converts '
+           'into a visit. Chasing more content in that state makes the divergence worse. '
+           'It is only detectable by looking at the two curves TOGETHER, which no existing '
+           'guard did.')
+    weeks = PLATEAU_WEEKS + 2
+    # Both series end on the same day (GSC_END) or the comparison is meaningless.
+    start = GSC_END - datetime.timedelta(days=weeks * 7 - 1)
+    daily = g.gsc({'startDate': start.isoformat(), 'endDate': GSC_END.isoformat(),
+                   'dimensions': ['date'], 'rowLimit': 200})
+    impr_w = [0] * weeks
+    for r in daily:
+        b = (GSC_END - datetime.date.fromisoformat(r['keys'][0])).days // 7
+        if 0 <= b < weeks:
+            impr_w[b] += r['impressions']
+
+    ga = g.ga4({'dateRanges': [{'startDate': start.isoformat(), 'endDate': GSC_END.isoformat()}],
+                'dimensions': [{'name': 'date'}, {'name': 'sessionDefaultChannelGroup'}],
+                'metrics': [{'name': 'sessions'}], 'limit': 5000})
+    sess_w = [0] * weeks
+    for r in ga:
+        if r['sessionDefaultChannelGroup'] != 'Organic Search':
+            continue
+        d = r['date']
+        dt = datetime.date(int(d[:4]), int(d[4:6]), int(d[6:8]))
+        b = (GSC_END - dt).days // 7
+        if 0 <= b < weeks:
+            sess_w[b] += int(num(r['sessions']))
+
+    # index 0 = most recent completed week; flip to chronological for reading
+    sess = list(reversed(sess_w))
+    impr = list(reversed(impr_w))
+    labels = [(GSC_END - datetime.timedelta(days=(weeks - 1 - i) * 7)).isoformat()
+              for i in range(weeks)]
+
+    tail = sess[-PLATEAU_WEEKS:]
+    flat = all(tail[i + 1] <= tail[i] * (1 + PLATEAU_FLAT_PCT / 100)
+               for i in range(len(tail) - 1))
+    itail = impr[-PLATEAU_WEEKS:]
+    rise = (itail[-1] - itail[0]) / max(itail[0], 1) * 100
+    srise = (tail[-1] - tail[0]) / max(tail[0], 1) * 100
+
+    series = ' | '.join('w/e %s: %d sessions, %d impressions' % (labels[i], sess[i], impr[i])
+                        for i in range(weeks))
+    if flat and rise >= PLATEAU_IMPR_RISE:
+        sev = 'high'
+        ans = ('Yes. Organic sessions %s over the last %d weeks (no week gained more than '
+               '%.0f%%) while impressions rose %.0f%% over the same weeks. Full series: %s'
+               % (' -> '.join(str(x) for x in tail), PLATEAU_WEEKS, PLATEAU_FLAT_PCT,
+                  rise, series))
+    elif flat:
+        sev = 'medium'
+        ans = ('Sessions are flat (%s over %d weeks) but impressions are NOT rising '
+               '(%+.0f%%), so this is a visibility problem rather than a click problem. '
+               'Full series: %s'
+               % (' -> '.join(str(x) for x in tail), PLATEAU_WEEKS, rise, series))
+    else:
+        sev = 'low'
+        ans = ('No plateau. Over the last %d weeks organic sessions moved %+.0f%% (%s) '
+               'against %+.0f%% on impressions -- sessions are keeping up with visibility, '
+               'which is the healthy side of this divergence. Full series: %s'
+               % (PLATEAU_WEEKS, srise, ' -> '.join(str(x) for x in tail), rise, series))
+    return [finding('growth_plateau', sev, q, ans, why,
+                    weeks_ending=labels, organic_sessions_by_week=sess,
+                    impressions_by_week=impr, impressions_change_pct=round(rise, 1),
+                    sessions_change_pct=round(srise, 1), sessions_flat=flat,
+                    note=('Both series are cut to the same days and end on the GSC window '
+                          'end (%s), because comparing a fresh GA4 week against a '
+                          '3-day-lagged GSC week manufactures a fake divergence.'
+                          % GSC_END.isoformat()))]
+
+
+# =========================================================================== 5
+def check_revenue(g):
+    """Q: has anyone paid us, ever, recently -- and how much traffic went unmonetised?"""
+    q = 'How many days since the last sale, and how much traffic arrived in that time?'
+    why = ('Rule #1 is revenue. Traffic that produces no sale for weeks is not a marketing '
+           'problem to optimise around the edges -- it is the whole business failing, and '
+           'it must be stated plainly instead of being buried under impression charts.')
+    r, _ = sb('sales?select=count', 'count=exact')
+    total = int(r.headers.get('content-range', '/0').split('/')[-1])
+
+    # Total sessions include the bot country, so organic is quoted alongside it:
+    # organic is the hardest number for a bot farm to fake and is the honest
+    # floor for "real humans who could have bought something".
+    sessions_28d = organic_28d = None
+    try:
+        rows = g.ga4({'dateRanges': [{'startDate': '28daysAgo', 'endDate': 'yesterday'}],
+                      'dimensions': [{'name': 'sessionDefaultChannelGroup'}],
+                      'metrics': [{'name': 'sessions'}]})
+        sessions_28d = int(sum(num(r['sessions']) for r in rows))
+        organic_28d = int(sum(num(r['sessions']) for r in rows
+                              if r['sessionDefaultChannelGroup'] == 'Organic Search'))
+    except Exception:
+        sessions_28d = organic_28d = None      # honest null; never invented
+
+    ctx = ('%s sessions in the last 28 days (%s of them organic)'
+           % (sessions_28d if sessions_28d is not None else 'an unknown number of',
+              organic_28d if organic_28d is not None else 'an unknown number'))
+    if total == 0:
+        return [finding('revenue_silence', 'high', q,
+                        'The `sales` table has NEVER contained a row -- 0 sales, all time. '
+                        'Days since last sale is therefore undefined (null), not a large '
+                        'number. Against that: %s. Every visitor so far has been free.' % ctx,
+                        why, sales_total=0, days_since_last_sale=None,
+                        sessions_28d=sessions_28d, organic_sessions_28d=organic_28d)]
+
+    _, rows = sb('sales?select=created_at&order=created_at.desc&limit=1')
+    last = rows[0]['created_at'] if rows else None
+    if not last:
+        return [finding('revenue_silence', 'medium', q,
+                        'The `sales` table reports %d rows but no readable created_at on '
+                        'the newest one -- cannot compute the gap. Not guessing.' % total,
+                        why, sales_total=total, days_since_last_sale=None,
+                        sessions_28d=sessions_28d)]
+    dt = datetime.datetime.fromisoformat(last.replace('Z', '+00:00'))
+    days = (NOW - dt).days
+    sev = 'high' if days >= 14 else 'medium' if days >= 7 else 'low'
+    return [finding('revenue_silence', sev, q,
+                    '%d days since the last sale (%s). %d sales all time. Against that: %s.'
+                    % (days, last[:19], total, ctx), why,
+                    sales_total=total, days_since_last_sale=days,
+                    last_sale_utc=last[:19], sessions_28d=sessions_28d,
+                    organic_sessions_28d=organic_28d)]
+
+
+# =========================================================================== 6
+def check_api_harvest(g):
+    """Q: are the API keys we hand out ever actually used?"""
+    q = ('How many API keys were issued in the last 7 days, and how many API calls '
+         'were actually made with them?')
+    why = ('Keys issued but never used are not signups -- they are email harvesting or '
+           'credential scraping against a free endpoint. It inflates the lead count, '
+           'poisons the drip list, and hands an unauthenticated scraper a free quota. '
+           'A real signup uses the key within hours.')
+    cut = iso(NOW - datetime.timedelta(days=7))
+    _, leads = sb('leads?select=created_at,email,context&context=eq.api_key'
+                  f'&created_at=gte.{cut}&order=created_at.desc&limit=500')
+    # Owner/agent test rows are not signups (F18).
+    TEST = re.compile(r'florin\.florea84|\+(test|apilive|probe)@')
+    issued = [x for x in leads if not TEST.search(x.get('email') or '')]
+
+    _, clicks = sb('provider_clicks?select=created_at,user_inputs'
+                   f'&provider_id=eq.{API_PROVIDER_ID}&created_at=gte.{cut}'
+                   '&order=created_at.desc&limit=1000')
+    used = len(clicks)
+    ok = sum(1 for c in clicks
+             if (c.get('user_inputs') or {}).get('status') not in ('bad_key', 'no_key', 'rate_limited'))
+    ratio = used / max(len(issued), 1)
+
+    if len(issued) < API_KEY_MIN_ISSUED:
+        return [finding('signup_vs_usage', 'low', q,
+                        '%d API keys issued in the last 7 days and %d usage events -- '
+                        'too few issues to judge a ratio.' % (len(issued), used), why,
+                        keys_issued_7d=len(issued), usage_events_7d=used)]
+    sev = 'high' if ratio <= API_USAGE_RATIO_ALERT else 'low'
+    ans = ('%d API keys issued in the last 7 days against %d recorded API usage event(s) '
+           '-- %d of which were valid calls. Usage/issue ratio %.2f. Distinct signup '
+           'domains: %d.'
+           % (len(issued), used, ok, ratio,
+              len({(x.get('email') or '@').split('@')[-1] for x in issued})))
+    if sev == 'high':
+        ans += (' A key that is never called is not a user. This is the harvesting '
+                'signature: the endpoint is handing out quota to something that only '
+                'wants the key.')
+    return [finding('signup_vs_usage', sev, q, ans, why,
+                    keys_issued_7d=len(issued), usage_events_7d=used,
+                    valid_usage_events_7d=ok, usage_per_issue=round(ratio, 3))]
+
+
+CHECKS = [
+    ('geo_anomaly', check_geo,
+     'Is any single country over-represented and behaving unlike a human audience?',
+     'A bot farm poisons every downstream metric and can be a scrape/harvest campaign.'),
+    ('ctr_vs_expected', check_ctr,
+     'Are we earning the clicks our existing rankings should already produce?',
+     'Impressions without clicks is the cheapest growth lever on the site.'),
+    ('junk_query_share', check_junk,
+     'What share of our impressions is AI-fanout junk rather than human search?',
+     'Junk impressions inflate visibility while converting nothing.'),
+    ('growth_plateau', check_plateau,
+     'Are we becoming more visible without becoming more visited?',
+     'Rising impressions with flat sessions means more content will not help.'),
+    ('revenue_silence', check_revenue,
+     'How long has it been since anyone paid us?',
+     'Rule #1 is revenue; traffic without sales is the whole business failing.'),
+    ('signup_vs_usage', check_api_harvest,
+     'Are the API keys we hand out ever actually used?',
+     'Keys issued but never used are harvesting, not signups.'),
+]
+
+
+def main():
+    g = Google()
+    findings = []
+    for fid, fn, q, why in CHECKS:
+        try:
+            findings.extend(fn(g))
+        except Exception as e:
+            findings.append(blind(fid, q, why, e))
+
+    rank = {'high': 0, 'medium': 1, 'low': 2}
+    findings.sort(key=lambda f: (rank.get(f['severity'], 3), f['id']))
+    high = [f for f in findings if f['severity'] == 'high']
+    # A single unreachable API is not an emergency, but a watchdog that cannot
+    # see anything must never look like a quiet, healthy day (the F29 lesson).
+    unanswered = [f for f in findings if f['answer'] is None]
+    mostly_blind = len(unanswered) >= max(3, len(CHECKS) // 2)
+
+    snap = {
+        'generated_utc': NOW.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'gsc_window_end': GSC_END.isoformat(),
+        'all_clear': not high and not unanswered,
+        'unanswered_questions': [f['id'] for f in unanswered],
+        'counts': {s: sum(1 for f in findings if f['severity'] == s)
+                   for s in ('high', 'medium', 'low')},
+        'findings': findings,
+        'note': ('The self-questioning layer. Every other guard in this repo checks '
+                 'something a human once thought to ask about; this one asks the same six '
+                 'open questions every day and answers them from live data, so a problem '
+                 'nobody anticipated still surfaces. Runs on GitHub Actions so it survives '
+                 'an Anthropic-side outage. Any HIGH finding exits 1 -> the workflow fails '
+                 '-> GitHub emails the owner. A check that cannot reach its data reports '
+                 'answer=null and says so; it is never silently counted as healthy.'),
+    }
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    io.open(OUT, 'w', encoding='utf-8').write(json.dumps(snap, indent=1) + '\n')
+
+    print('ANOMALY WATCH  %s   (GSC window ends %s)'
+          % (snap['generated_utc'], snap['gsc_window_end']))
+    print('=' * 78)
+    for f in findings:
+        print('[%-6s] %s' % (f['severity'].upper(), f['id']))
+        print('   Q: %s' % f['question'])
+        print('   A: %s' % (f['answer'] if f['answer'] is not None else
+                            'NO ANSWER -- %s' % f.get('error', 'data unavailable')))
+        for p in f.get('pages', [])[:6]:
+            print('      - %-46s %5d impr  pos %4.1f  %5.2f%% vs %4.2f%% expected (%.0f%%)'
+                  % (p['page'], p['impressions'], p['avg_position'],
+                     p['actual_ctr_pct'], p['expected_ctr_pct'],
+                     p['ratio_of_expected'] * 100))
+        print('')
+    print('=' * 78)
+    print('high=%d  medium=%d  low=%d  unanswered=%d   -> %s'
+          % (snap['counts']['high'], snap['counts']['medium'], snap['counts']['low'],
+             len(unanswered), 'wrote ' + OUT))
+    if high:
+        print('\nANOMALY ALERT: %d high-severity finding(s): %s'
+              % (len(high), ', '.join(f['id'] for f in high)), file=sys.stderr)
+        return 1
+    if mostly_blind:
+        print('\nANOMALY WATCH IS BLIND: %d of %d questions could not be answered (%s). '
+              'Reporting this as a failure on purpose -- a watchdog that cannot see must '
+              'not look like a healthy day.'
+              % (len(unanswered), len(CHECKS), ', '.join(f['id'] for f in unanswered)),
+              file=sys.stderr)
+        return 1
+    print('\nno high-severity anomalies')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())
+
+# ---------------------------------------------------------------------------
+# THRESHOLD TUNING NOTES (2026-08-13, against real data)
+#
+# A detector that cries wolf is worse than none, so every number above was set
+# by running the checks against the live site and asking "would this fire on
+# normal variation?".
+#
+#  * GEO_MIN_SHARE 12% + GEO_MIN_SESSIONS 30 + 25-point deviation: on today's
+#    data the US (34.5% share, 40.4% engagement, 10 points off) does NOT fire,
+#    and Singapore (-45 points off, but only 6.3% share / 18 sessions) does NOT
+#    fire. Only the actual bot country clears all three bars. Dropping the share
+#    bar to 5% would have fired on Singapore, Germany and Luxembourg -- noise.
+#
+#  * CTR is measured on the PAGE dimension, not the query dimension. GSC
+#    anonymises rare queries: on 28d the query dimension held 12,976 of 27,473
+#    impressions (47%) but only 6 of 113 clicks, which would have understated
+#    CTR by ~9x and produced a spectacular false alarm. Page rows carry 27,910
+#    impressions and 115 clicks -- effectively complete.
+#
+#  * CTR_RATIO_ALERT 0.40 with a 300-impression / 3-expected-click floor: the
+#    floor is what stops a page sitting at position 45 with 40 impressions and
+#    0 clicks from being "0% of expected" every single day.
+#
+#  * JUNK_SHARE_ALERT 25%: today's overall junk share is 22.1%, deliberately
+#    just UNDER the bar -- the overall number is not yet the problem. The real
+#    signal is junk concentrated in positions 1-10 (37.1%), which gets its own
+#    threshold at 30% (medium) / 50% (high). Junk is a contributing explanation
+#    for the CTR finding, not an independent emergency, so it is capped at
+#    medium unless it passes half of all top-10 impressions.
+#
+#  * PLATEAU_FLAT_PCT 8%: organic weeks ran 41 -> 54 -> 55 -> 55. A stricter 0%
+#    bar would miss the 54->55 step; a looser 20% would call genuine growth a
+#    plateau.
+# ---------------------------------------------------------------------------
