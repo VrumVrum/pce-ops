@@ -112,7 +112,7 @@ def wow_alerts(per_engine, hist):
     return alerts
 
 
-def funnel(tok, days):
+def funnel(tok, days, human_only=False):
     """events + DISTINCT users per funnel step over `days`, with step-to-step rates.
 
     Two queries on purpose. The per-day series (eventName x date) is what shows
@@ -127,8 +127,26 @@ def funnel(tok, days):
     A failed query is reported as an error and never as a zero.
     """
     names = [n for n, _ in FUNNEL_STEPS]
-    filt = {'filter': {'fieldName': 'eventName',
-                       'inListFilter': {'values': names}}}
+    ev = {'filter': {'fieldName': 'eventName',
+                     'inListFilter': {'values': names}}}
+    if human_only:
+        # 2026-08-13: the all-traffic funnel read 316 entrants -> 10.1% engagement
+        # and looked like a catastrophic leak. Sliced by device it was 247 of those
+        # 316 from the Macintosh-desktop bot fleet engaging at 4%, while real mobile
+        # visitors engaged at 52.4% and non-Mac desktop at 22.9%. Measuring product
+        # quality on a bot-contaminated denominator is FAILURE CLASS F30 repeating
+        # inside the guard built to catch F30, so the human slice is reported too.
+        # DELIBERATELY CONSERVATIVE: it drops genuine macOS visitors along with the
+        # fleet, so treat it as a floor on human behaviour, never as a headcount.
+        ev = {'andGroup': {'expressions': [ev,
+              {'notExpression': {'filter': {'fieldName': 'country',
+                                            'stringFilter': {'value': 'Iran'}}}},
+              {'notExpression': {'andGroup': {'expressions': [
+                  {'filter': {'fieldName': 'deviceCategory',
+                              'stringFilter': {'value': 'desktop'}}},
+                  {'filter': {'fieldName': 'operatingSystem',
+                              'stringFilter': {'value': 'Macintosh'}}}]}}}]}}
+    filt = ev
     rng = [{'startDate': f'{days}daysAgo', 'endDate': 'yesterday'}]
 
     tot = run(tok, {'dateRanges': rng, 'dimensions': [{'name': 'eventName'}],
@@ -263,9 +281,10 @@ if __name__ == '__main__':
         snap['ai_wow_alerts'] = {'error': str(e)[:120]}
 
     # 5) The buying funnel — the number that answers "why is revenue zero".
-    for days, label in ((28, 'funnel_28d'), (7, 'funnel_7d')):
+    for days, label in ((28, 'funnel_28d'), (7, 'funnel_7d'),
+                        (28, 'funnel_28d_human'), (7, 'funnel_7d_human')):
         try:
-            snap[label] = funnel(t, days)
+            snap[label] = funnel(t, days, human_only=label.endswith('_human'))
         except Exception as e:
             # Honest null: a funnel that could not be pulled is unknown, not healthy.
             snap[label] = {'error': str(e)[:200], 'steps': None}

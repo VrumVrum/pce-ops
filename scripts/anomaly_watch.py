@@ -680,9 +680,24 @@ def _funnel_users(g, days):
     rows = g.ga4({'dateRanges': [{'startDate': '%ddaysAgo' % days, 'endDate': 'yesterday'}],
                   'dimensions': [{'name': 'eventName'}],
                   'metrics': [{'name': 'eventCount'}, {'name': 'totalUsers'}],
-                  'dimensionFilter': {'filter': {
-                      'fieldName': 'eventName',
-                      'inListFilter': {'values': [n for n, _ in FUNNEL_STEPS]}}},
+                  'dimensionFilter': {'andGroup': {'expressions': [
+                      {'filter': {'fieldName': 'eventName',
+                                  'inListFilter': {'values': [n for n, _ in FUNNEL_STEPS]}}},
+                      # HUMANS ONLY. The all-traffic funnel reads 316 entrants at 10.1%
+                      # engagement and looks like a catastrophic leak; 247 of those 316
+                      # are the Macintosh-desktop bot fleet engaging at 4%, while real
+                      # mobile visitors engage at 52.4%. Judging the product on a
+                      # bot-contaminated denominator would be FAILURE CLASS F30 repeating
+                      # inside the guard built to catch F30. Conservative on purpose: this
+                      # also drops genuine macOS visitors, so it is a FLOOR on human
+                      # behaviour, never a headcount -- and it must never be quoted as one.
+                      {'notExpression': {'filter': {'fieldName': 'country',
+                                                    'stringFilter': {'value': 'Iran'}}}},
+                      {'notExpression': {'andGroup': {'expressions': [
+                          {'filter': {'fieldName': 'deviceCategory',
+                                      'stringFilter': {'value': 'desktop'}}},
+                          {'filter': {'fieldName': 'operatingSystem',
+                                      'stringFilter': {'value': 'Macintosh'}}}]}}}]}},
                   'limit': 50})
     by = {r['eventName']: r for r in rows}
     # An event GA4 has never recorded returns NO ROW. The query succeeded, so
@@ -696,7 +711,7 @@ def _funnel_users(g, days):
 
 def check_funnel(g):
     """Q: of the people who open the calculator, how many reach an answer and pay?"""
-    q = ('Of the people who open the calculator in the last 7 days, how many reach a '
+    q = ('Of the REAL people (bot fleet excluded) who open the calculator in the last 7 days, how many reach a '
          'result screen, leave an email, and pay -- and at which step do they vanish?')
     why = ('This is the question that answers "why is revenue zero", and until 2026-08-13 '
            'no file in either repo contained the number. Everything the system optimised -- '
