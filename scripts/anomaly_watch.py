@@ -680,6 +680,65 @@ CHECKS = [
 ]
 
 
+# --- alert state: signal without fatigue -------------------------------------
+# The first live run mailed the owner 4 HIGH findings. Every one is real, and
+# every one will still be true tomorrow (revenue silence lasts until the first
+# sale; a CTR gap lasts until the rewrites land). Mailing the same four every
+# morning would train the owner to delete the mail unread, which costs more than
+# the guard is worth. So: findings persist in the JSON (the operating loop still
+# reads them and STEP 0A-bis still binds it to act), but the ALERT fires only on a
+# real change of state -- something new, something worse, or a weekly reminder so
+# nothing quietly rots forever.
+REMIND_AFTER_DAYS = 7
+RANK = {'high': 0, 'medium': 1, 'low': 2}
+
+
+def load_prev():
+    try:
+        return json.loads(io.open(OUT, encoding='utf-8').read())
+    except Exception:
+        return {}
+
+
+def apply_state(findings, prev):
+    """Carry first_seen/last_alerted forward; classify each HIGH vs the last run."""
+    prev_by_id = {f['id']: f for f in prev.get('findings', [])}
+    now_s = NOW.strftime('%Y-%m-%dT%H:%M:%SZ')
+    new, escalated, persisting, due = [], [], [], []
+    for f in findings:
+        p = prev_by_id.get(f['id'])
+        f['first_seen_utc'] = (p or {}).get('first_seen_utc') or now_s
+        f['last_alerted_utc'] = (p or {}).get('last_alerted_utc')
+        if f['severity'] != 'high':
+            continue
+        if p is None:
+            f['state'] = 'new'
+            new.append(f)
+        elif RANK.get(p.get('severity'), 3) > RANK['high']:
+            f['state'] = 'escalated'
+            escalated.append(f)
+        else:
+            f['state'] = 'persisting'
+            persisting.append(f)
+            la = f['last_alerted_utc']
+            stale = True
+            if la:
+                try:
+                    d = datetime.datetime.strptime(la, '%Y-%m-%dT%H:%M:%SZ')
+                    d = d.replace(tzinfo=datetime.timezone.utc)
+                    stale = (NOW - d).days >= REMIND_AFTER_DAYS
+                except ValueError:
+                    stale = True
+            if stale:
+                due.append(f)
+    cur = {f['id']: f['severity'] for f in findings}
+    resolved = [pid for pid, pf in prev_by_id.items()
+                if pf.get('severity') == 'high'
+                and RANK.get(cur.get(pid, 'gone'), 3) > 0]
+    return {'new': new, 'escalated': escalated, 'persisting': persisting,
+            'due_reminder': due, 'resolved': resolved}
+
+
 def main():
     g = Google()
     findings = []
@@ -689,9 +748,11 @@ def main():
         except Exception as e:
             findings.append(blind(fid, q, why, e))
 
-    rank = {'high': 0, 'medium': 1, 'low': 2}
+    rank = RANK
     findings.sort(key=lambda f: (rank.get(f['severity'], 3), f['id']))
     high = [f for f in findings if f['severity'] == 'high']
+    prev = load_prev()
+    st = apply_state(findings, prev)
     # A single unreachable API is not an emergency, but a watchdog that cannot
     # see anything must never look like a quiet, healthy day (the F29 lesson).
     unanswered = [f for f in findings if f['answer'] is None]
@@ -704,6 +765,16 @@ def main():
         'unanswered_questions': [f['id'] for f in unanswered],
         'counts': {s: sum(1 for f in findings if f['severity'] == s)
                    for s in ('high', 'medium', 'low')},
+        'alert': {
+            'firing': bool(st['new'] or st['escalated'] or st['due_reminder']),
+            'new': [f['id'] for f in st['new']],
+            'escalated': [f['id'] for f in st['escalated']],
+            'weekly_reminder': [f['id'] for f in st['due_reminder']],
+            'persisting_silently': [f['id'] for f in st['persisting']
+                                    if f not in st['due_reminder']],
+            'resolved_since_last_run': st['resolved'],
+            'policy': ('Mail fires on NEW, ESCALATED, or once every %d days while a HIGH stays open. Persisting findings remain in this file and remain binding on pce-operating-loop STEP 0A-bis; they simply stop re-mailing daily, because an alert that arrives every morning stops being read.' % REMIND_AFTER_DAYS),
+        },
         'findings': findings,
         'note': ('The self-questioning layer. Every other guard in this repo checks '
                  'something a human once thought to ask about; this one asks the same six '
@@ -734,10 +805,24 @@ def main():
     print('high=%d  medium=%d  low=%d  unanswered=%d   -> %s'
           % (snap['counts']['high'], snap['counts']['medium'], snap['counts']['low'],
              len(unanswered), 'wrote ' + OUT))
-    if high:
-        print('\nANOMALY ALERT: %d high-severity finding(s): %s'
-              % (len(high), ', '.join(f['id'] for f in high)), file=sys.stderr)
+    firing = st['new'] or st['escalated'] or st['due_reminder']
+    if st['resolved']:
+        print('RESOLVED since last run: %s' % ', '.join(st['resolved']))
+    if firing:
+        for f in st['new'] + st['escalated'] + st['due_reminder']:
+            f['last_alerted_utc'] = snap['generated_utc']
+        io.open(OUT, 'w', encoding='utf-8').write(json.dumps(snap, indent=1) + chr(10))
+        bits = []
+        if st['new']:
+            bits.append('NEW: ' + ', '.join(f['id'] for f in st['new']))
+        if st['escalated']:
+            bits.append('WORSE: ' + ', '.join(f['id'] for f in st['escalated']))
+        if st['due_reminder']:
+            bits.append('STILL OPEN after %dd: %s' % (REMIND_AFTER_DAYS, ', '.join(f['id'] for f in st['due_reminder'])))
+        print('ANOMALY ALERT -- ' + ' | '.join(bits), file=sys.stderr)
         return 1
+    if high:
+        print('%d high-severity finding(s) still open (%s) -- no mail sent: unchanged since the last alert. They stay binding on the operating loop; next reminder in <=%d days.' % (len(high), ', '.join(f['id'] for f in high), REMIND_AFTER_DAYS))
     if mostly_blind:
         print('\nANOMALY WATCH IS BLIND: %d of %d questions could not be answered (%s). '
               'Reporting this as a failure on purpose -- a watchdog that cannot see must '
@@ -745,7 +830,8 @@ def main():
               % (len(unanswered), len(CHECKS), ', '.join(f['id'] for f in unanswered)),
               file=sys.stderr)
         return 1
-    print('\nno high-severity anomalies')
+    if not high:
+        print('no high-severity anomalies')
     return 0
 
 
