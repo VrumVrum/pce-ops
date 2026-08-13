@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-08-12T17:29:59.203042Z",
+  "generated_utc": "2026-08-13T05:57:22.027309Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-12",
+    "generated": "2026-08-13",
     "totals_28d": {
-      "clicks": 115,
-      "impressions": 28053,
-      "ctr": 0.41,
-      "position": 22.38
+      "clicks": 113,
+      "impressions": 27473,
+      "ctr": 0.411,
+      "position": 22.2
     },
     "totals_7d": {
-      "clicks": 36,
-      "impressions": 9611,
-      "ctr": 0.375,
-      "position": 18.3
+      "clicks": 31,
+      "impressions": 8562,
+      "ctr": 0.362,
+      "position": 18.48
     },
     "totals_90d": {
       "clicks": 151,
-      "impressions": 46658,
+      "impressions": 46637,
       "ctr": 0.324,
       "position": 25.41
     },
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 115,
-      "impressions": 27658,
-      "ctr": 0.416
+      "clicks": 113,
+      "impressions": 27078,
+      "ctr": 0.417
     },
     "citation_floor_alerts": [
       {
@@ -47,10 +47,10 @@
     ]
   },
   "supabase": {
-    "leads_total": 123,
+    "leads_total": 129,
     "leads_by_context": {
       "sys:lastrun": 24,
-      "api_key": 20,
+      "api_key": 26,
       "drip:1": 9,
       "pack": 1,
       "drip:2": 21,
@@ -60,7 +60,7 @@
       "hero": 22
     },
     "real_human_leads": 26,
-    "api_keys": 20,
+    "api_keys": 26,
     "build_intent_count": 0,
     "drip_stages": {
       "drip:1": 9,
@@ -68,10 +68,10 @@
       "drip:3": 21
     },
     "affiliate_clicks": {
-      "total": 36,
+      "total": 38,
       "last7d": 23,
       "by_slug": {
-        "fiverr": 16,
+        "fiverr": 18,
         "shopify": 8,
         "wix": 6,
         "hostinger": 6
@@ -122,18 +122,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 6494,
+      "impressions": 6393,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1291,
+      "impressions": 1276,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 883,
-      "clicks": 13
+      "impressions": 859,
+      "clicks": 12
     }
   }
 }
