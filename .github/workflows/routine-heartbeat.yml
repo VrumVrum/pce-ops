@@ -1,0 +1,56 @@
+name: routine-heartbeat
+# Guard for F29 — silent fleet death.
+#
+# 2026-08-12/13: the Anthropic subscription lapsed. All 9 cloud routines kept
+# firing, spun up their sandboxes, cloned the repo, then died in ~14s on
+# `403 authentication_failed` before writing a single byte. SCORECARD.json
+# counts report headers, so a run that dies before reporting is invisible to
+# it by design; pce-supervisor is itself a routine, so it was dead too. The
+# owner discovered the outage by noticing the silence, ~2 days later.
+#
+# This watchdog deliberately lives on GitHub Actions — which kept running
+# perfectly all through that outage. When a routine goes silent past its
+# threshold the job FAILS, and GitHub emails the repo owner. That alert path
+# does not depend on Anthropic being up, which is the entire point.
+on:
+  schedule:
+    - cron: '35 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check fleet heartbeat
+        id: beat
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        # continue-on-error so the snapshot is still committed on an alert —
+        # the failure is re-raised in the final step, after the commit.
+        continue-on-error: true
+        run: |
+          python3 scripts/routine_heartbeat.py | tee beat.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit snapshot
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "actions@github.com"
+          git add data/ROUTINE-HEARTBEAT.json
+          git diff --staged --quiet || git commit -m "data: routine heartbeat $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          git push -q origin HEAD:master || echo "push skipped"
+
+      - name: Fail loudly if any routine is silent
+        if: steps.beat.outputs.code != '0'
+        run: |
+          echo "::error::A cloud routine has gone silent past its threshold."
+          echo "First thing to check: is the Anthropic subscription active?"
+          echo "A lapsed subscription kills every routine at once — each run dies"
+          echo "in ~14 seconds on 403 authentication_failed, writing nothing."
+          echo "Verify with: RemoteTrigger list_runs + get_run_log on any routine."
+          echo ""
+          cat beat.log
+          exit 1

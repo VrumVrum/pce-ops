@@ -1,0 +1,89 @@
+{
+ "generated_utc": "2026-08-13T09:55:33Z",
+ "all_alive": true,
+ "silent": [],
+ "routines": {
+  "pce-operating-loop": {
+   "cron": "23 */12 * * *",
+   "expected_every_h": 12,
+   "alert_after_h": 30,
+   "last_report_utc": "2026-08-11T00:35:00Z",
+   "last_commit_utc": "2026-08-12T04:16:00Z",
+   "hours_since": 29.7,
+   "silent": false
+  },
+  "pce-supervisor": {
+   "cron": "0 3 * * *",
+   "expected_every_h": 24,
+   "alert_after_h": 54,
+   "last_report_utc": "2026-08-11T03:07:00Z",
+   "last_commit_utc": "2026-08-12T04:04:00Z",
+   "hours_since": 29.9,
+   "silent": false
+  },
+  "pce-content-engine": {
+   "cron": "20 8 * * *",
+   "expected_every_h": 24,
+   "alert_after_h": 54,
+   "last_report_utc": "2026-08-10T08:24:00Z",
+   "last_commit_utc": "2026-08-11T13:19:00Z",
+   "hours_since": 44.6,
+   "silent": false
+  },
+  "pce-authority-traffic": {
+   "cron": "0 13 */2 * *",
+   "expected_every_h": 48,
+   "alert_after_h": 108,
+   "last_report_utc": null,
+   "last_commit_utc": "2026-08-11T13:29:00Z",
+   "hours_since": 44.4,
+   "silent": false
+  },
+  "pce-morning-brief": {
+   "cron": "30 5 * * 1,4",
+   "expected_every_h": 96,
+   "alert_after_h": 192,
+   "last_report_utc": "2026-08-13T09:48:00Z",
+   "last_commit_utc": "2026-08-13T09:51:00Z",
+   "hours_since": 0.1,
+   "silent": false
+  },
+  "pce-revenue-executor": {
+   "cron": "0 9 * * 1,4",
+   "expected_every_h": 96,
+   "alert_after_h": 192,
+   "last_report_utc": null,
+   "last_commit_utc": "2026-08-11T03:10:00Z",
+   "hours_since": 54.8,
+   "silent": false
+  },
+  "pce-deep-verify": {
+   "cron": "0 4 * * 3,6",
+   "expected_every_h": 96,
+   "alert_after_h": 192,
+   "last_report_utc": "2026-08-12T04:32:00Z",
+   "last_commit_utc": "2026-08-12T04:04:00Z",
+   "hours_since": 29.4,
+   "silent": false
+  },
+  "pce-keyword-scout": {
+   "cron": "40 6 * * 2",
+   "expected_every_h": 168,
+   "alert_after_h": 204,
+   "last_report_utc": "2026-08-11T06:45:00Z",
+   "last_commit_utc": "2026-08-11T13:16:00Z",
+   "hours_since": 44.7,
+   "silent": false
+  },
+  "pce-seo-audit": {
+   "cron": "0 5 * * 1",
+   "expected_every_h": 168,
+   "alert_after_h": 204,
+   "last_report_utc": null,
+   "last_commit_utc": "2026-08-10T05:40:00Z",
+   "hours_since": 76.3,
+   "silent": false
+  }
+ },
+ "note": "Guard for F29 (silent fleet death). Runs on GitHub Actions so it survives the Anthropic-side outage it exists to detect. A run that dies before writing its report leaves no trace in SCORECARD.json \u2014 this file is the only place that absence becomes visible. Exit 1 = owner email."
+}
