@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-13T11:00:12Z",
+ "generated_utc": "2026-08-13T11:03:26Z",
  "gsc_window_end": "2026-08-10",
  "all_clear": false,
  "unanswered_questions": [],
@@ -9,16 +9,15 @@
   "low": 3
  },
  "alert": {
-  "firing": true,
-  "new": [
-   "bot_kpi_contamination",
-   "funnel_break"
-  ],
+  "firing": false,
+  "new": [],
   "escalated": [],
   "weekly_reminder": [],
   "persisting_silently": [
+   "bot_kpi_contamination",
    "ctr_vs_expected_pages",
    "ctr_vs_expected_sitewide",
+   "funnel_break",
    "revenue_silence",
    "signup_vs_usage"
   ],
@@ -47,7 +46,7 @@
    ],
    "first_seen_utc": "2026-08-13T11:00:12Z",
    "last_alerted_utc": "2026-08-13T11:00:12Z",
-   "state": "new"
+   "state": "persisting"
   },
   {
    "id": "ctr_vs_expected_pages",
@@ -233,7 +232,7 @@
    "note": "Users are distinct per window (undated GA4 query). A ratio above 100%% is not a bug: GA4 de-duplicates users per event, and a visitor can reach a result from a shared config link without firing the step above it.",
    "first_seen_utc": "2026-08-13T11:00:12Z",
    "last_alerted_utc": "2026-08-13T11:00:12Z",
-   "state": "new"
+   "state": "persisting"
   },
   {
    "id": "revenue_silence",
