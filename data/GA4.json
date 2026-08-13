@@ -1,6 +1,6 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-13T11:11:21Z",
+  "generated_utc": "2026-08-13T17:29:27Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -446,14 +446,14 @@
       "engine": "chatgpt",
       "sessions_then": 27,
       "sessions_now": 13,
-      "ref_date": "2026-08-06",
+      "ref_date": "2026-08-07",
       "drop_pct": 51.9
     },
     {
       "engine": "copilot",
       "sessions_then": 8,
       "sessions_now": 5,
-      "ref_date": "2026-08-06",
+      "ref_date": "2026-08-07",
       "drop_pct": 37.5
     }
   ],

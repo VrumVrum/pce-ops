@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-13T11:00:15.695368Z",
+  "generated_utc": "2026-08-13T17:29:24.886264Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-13",
@@ -47,9 +47,9 @@
     ]
   },
   "supabase": {
-    "leads_total": 132,
+    "leads_total": 134,
     "leads_by_context": {
-      "api_key": 28,
+      "api_key": 30,
       "sys:lastrun": 25,
       "unsub": 2,
       "drip:3": 21,
@@ -60,7 +60,7 @@
       "pack": 1
     },
     "real_human_leads": 26,
-    "api_keys": 28,
+    "api_keys": 30,
     "real_human_leads_strict": 3,
     "bot_lead_share": 88.5,
     "bot_leads": 23,
@@ -69,9 +69,9 @@
     "real_human_leads_strict_28d": 3,
     "bot_lead_fleets": [
       {
-        "distinct_ip_hashes": 45,
+        "distinct_ip_hashes": 47,
         "lead_rows": 23,
-        "rows_all_contexts": 51,
+        "rows_all_contexts": 53,
         "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
       }
     ],
