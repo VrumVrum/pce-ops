@@ -141,10 +141,39 @@ def newest_report(text, names):
     return best
 
 
-def newest_commit(commits, names):
+def is_supervisor_audit_commit(raw_msg):
+    """pce-supervisor's own verification-pass commits systematically name-check OTHER
+    routines by way of auditing them, in the commit's own subject line — e.g.
+    'filed 2 new non-severe findings (pce-content-engine stall, ...)' or
+    'false-positived on pce-revenue-executor'. Bare substring matching in
+    newest_commit() then misreads that MENTION as the named routine's own fresh
+    activity. Caught live 2026-08-14 (pce-tech-scan 2nd fire): pce-content-engine's
+    true last commit was ~72h old (2026-08-11T~08:20Z, already past its own 54h
+    alert_after_h - a genuine, currently-active F29 condition, independently also
+    flagged by pce-supervisor itself the same day) but the heartbeat read it as
+    5.3h old because pce-supervisor's own commit happened to say 'pce-content-engine
+    stall' - the exact silent-routine incident this guard exists to catch, masked by
+    its own matching logic. Same class hit pce-revenue-executor's displayed
+    last_commit_utc via a different pce-supervisor commit the same way.
+    Scoped narrowly to the 'supervisor:' subject prefix (not a general stopword
+    filter) so it does not touch pce-seo-audit's genuine self-mention ('audit:
+    recurring adversarial SEO audit ... pce-seo-audit.md v1.2's first confirmed
+    fire...') or any other routine's own commits - verified against 50 real commits
+    spanning 2026-07-25..08-14, only the two known false positives changed."""
+    first_line = raw_msg.strip().splitlines()[0] if raw_msg.strip() else ''
+    m = re.match(r'\s*([a-zA-Z][a-zA-Z0-9]*)\s*:', first_line)
+    return bool(m) and m.group(1).lower() == 'supervisor'
+
+
+def newest_commit(commits, names, routine_key):
     best = None
     for c in commits:
-        msg = norm(c.get('commit', {}).get('message') or '')
+        raw_msg = c.get('commit', {}).get('message') or ''
+        # Don't let pce-supervisor's audit commentary about OTHER routines count as
+        # those routines' own activity (see is_supervisor_audit_commit docstring).
+        if routine_key != 'pce-supervisor' and is_supervisor_audit_commit(raw_msg):
+            continue
+        msg = norm(raw_msg)
         if not any(n in msg for n in names):
             continue
         dt = parse_dt(c.get('commit', {}).get('committer', {}).get('date', ''))
@@ -199,7 +228,7 @@ def main():
     for name, cfg in ROUTINES.items():
         names = [norm(name)] + [norm(a) for a in ALIASES.get(name, [])]
         rep = newest_report(ledger, names)
-        com = newest_commit(commits, names)
+        com = newest_commit(commits, names, name)
         last = max([d for d in (rep, com) if d], default=None)
         age = round((NOW - last).total_seconds() / 3600, 1) if last else None
         is_silent = (age is None) or (age > cfg['alert_h'])
