@@ -29,7 +29,7 @@ last_report_utc=None + silent=true. Nothing is estimated or back-filled.
 Output: data/ROUTINE-HEARTBEAT.json
 Requires: GH_PAT (read access to the private VrumVrum/scopebit).
 """
-import json, os, re, sys, urllib.request, urllib.error, datetime
+import io, json, os, re, sys, urllib.request, urllib.error, datetime
 
 PAT = os.environ.get('GH_PAT')
 REPO = 'VrumVrum/scopebit'
@@ -153,6 +153,23 @@ def newest_commit(commits, names):
     return best
 
 
+# Remind at most once a day while a routine stays silent. The FIRST version of this
+# guard mailed on every run - every 6 hours, forever, for as long as the condition
+# held. The owner got the same alert repeatedly within hours and asked why. An alert
+# that arrives four times a day is deleted unread, which costs more than the guard is
+# worth; the anomaly layer had already learned this and this file had not. A dead
+# routine is more urgent than a slow business problem, so the reminder is 24h here
+# rather than the 7 days used for anomalies.
+REMIND_AFTER_H = 24
+
+
+def load_prev():
+    try:
+        return json.loads(io.open(OUT, encoding='utf-8').read())
+    except Exception:
+        return {}
+
+
 def main():
     ledger = report_ledger()
     if not ledger.strip():
@@ -165,11 +182,18 @@ def main():
         return 1
 
     since = (NOW - datetime.timedelta(days=14)).strftime('%Y-%m-%dT%H:%M:%SZ')
-    commits = []
+    # Commits corroborate the report ledger. If that fetch fails the guard is PARTIALLY
+    # BLIND: a routine that committed but whose report header the parser missed then
+    # looks dead. Observed for real - a truncated GitHub response (IncompleteRead) made
+    # pce-seo-audit read as silent when it was not. Alerting on that trains the owner to
+    # ignore the mail, so a blind run reports the state and withholds the alarm.
+    commits, commits_ok = [], True
     try:
         commits = json.loads(fetch(f'{API_COMMITS}?since={since}&per_page=100') or '[]')
-    except Exception as e:                                   # commits are corroboration only
-        print(f'warn: commit list unavailable ({e})', file=sys.stderr)
+    except Exception as e:
+        commits_ok = False
+        print(f'warn: commit list unavailable ({e}) - alert withheld this run',
+              file=sys.stderr)
 
     out, silent = {}, []
     for name, cfg in ROUTINES.items():
@@ -201,18 +225,58 @@ def main():
                  'writing its report leaves no trace in SCORECARD.json — this file is the '
                  'only place that absence becomes visible. Exit 1 = owner email.'),
     }
+    # Alert on a CHANGE of state, not on repetition of one.
+    prev = load_prev()
+    prev_r = prev.get('routines', {})
+    new_silent, due, still = [], [], []
+    for n in silent:
+        was = prev_r.get(n, {})
+        la = was.get('last_alerted_utc')
+        if not was.get('silent'):
+            new_silent.append(n)
+        elif la:
+            try:
+                d = datetime.datetime.strptime(la, '%Y-%m-%dT%H:%M:%SZ').replace(
+                    tzinfo=datetime.timezone.utc)
+                (due if (NOW - d).total_seconds() / 3600 >= REMIND_AFTER_H
+                 else still).append(n)
+            except ValueError:
+                due.append(n)
+        else:
+            due.append(n)
+    recovered = [n for n, v in prev_r.items()
+                 if v.get('silent') and not out.get(n, {}).get('silent', False)]
+    firing = (new_silent + due) if commits_ok else []
+    snap_blind = not commits_ok
+    for n in out:
+        prior = prev_r.get(n, {}).get('last_alerted_utc')
+        out[n]['last_alerted_utc'] = (snap['generated_utc'] if n in firing else prior)
+    snap['alert'] = {'firing': bool(firing), 'partially_blind': snap_blind,
+                     'new_silent': new_silent,
+                     'daily_reminder': due, 'silent_but_already_reported': still,
+                     'recovered_since_last_run': recovered,
+                     'policy': 'Mail fires when a routine goes silent, or once every %dh '
+                               'while it stays silent. Repetition alone never mails.'
+                               % REMIND_AFTER_H}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(snap, open(OUT, 'w', encoding='utf-8'), indent=1)
 
     for n, r in out.items():
         print(f"{'SILENT ' if r['silent'] else 'alive  '} {n:<24} "
               f"{r['hours_since']}h ago (alert >{r['alert_after_h']}h)")
-    if silent:
-        print(f'\nFLEET ALERT: {len(silent)} routine(s) silent past threshold: '
-              f'{", ".join(silent)}', file=sys.stderr)
-        print('Check the Anthropic subscription/billing first — a lapsed subscription kills '
-              'every routine at once with 403 authentication_failed (F29).', file=sys.stderr)
+    if recovered:
+        print('RECOVERED since last run: ' + ', '.join(recovered))
+    if firing:
+        print('FLEET ALERT: ' + ', '.join(firing) + ' silent past threshold.',
+              file=sys.stderr)
+        print('Check the Anthropic subscription/billing first - a lapsed subscription '
+              'kills every routine at once with 403 authentication_failed (F29).',
+              file=sys.stderr)
         return 1
+    if silent:
+        print('%d routine(s) still silent (%s) - no mail: already reported, next '
+              'reminder in <=%dh.' % (len(silent), ', '.join(silent), REMIND_AFTER_H))
+        return 0
     print('\nall routines alive')
     return 0
 

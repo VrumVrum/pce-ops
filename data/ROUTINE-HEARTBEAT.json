@@ -1,36 +1,37 @@
 {
- "generated_utc": "2026-08-13T21:08:10Z",
- "all_alive": false,
- "silent": [
-  "pce-content-engine"
- ],
+ "generated_utc": "2026-08-14T08:26:48Z",
+ "all_alive": true,
+ "silent": [],
  "routines": {
   "pce-operating-loop": {
    "cron": "23 */12 * * *",
    "expected_every_h": 12,
    "alert_after_h": 26,
-   "last_report_utc": "2026-08-13T17:22:00Z",
+   "last_report_utc": "2026-08-14T01:02:00Z",
    "last_commit_utc": "2026-08-13T17:24:00Z",
-   "hours_since": 3.7,
-   "silent": false
+   "hours_since": 7.4,
+   "silent": false,
+   "last_alerted_utc": null
   },
   "pce-supervisor": {
    "cron": "0 3 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
    "last_report_utc": "2026-08-11T03:07:00Z",
-   "last_commit_utc": "2026-08-12T04:04:00Z",
-   "hours_since": 41.1,
-   "silent": false
+   "last_commit_utc": "2026-08-14T03:10:00Z",
+   "hours_since": 5.3,
+   "silent": false,
+   "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
   "pce-content-engine": {
    "cron": "20 8 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
    "last_report_utc": "2026-08-10T08:24:00Z",
-   "last_commit_utc": "2026-08-11T13:19:00Z",
-   "hours_since": 55.8,
-   "silent": true
+   "last_commit_utc": "2026-08-14T03:10:00Z",
+   "hours_since": 5.3,
+   "silent": false,
+   "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
   "pce-authority-traffic": {
    "cron": "0 13 */2 * *",
@@ -38,8 +39,9 @@
    "alert_after_h": 108,
    "last_report_utc": "2026-08-13T14:41:00Z",
    "last_commit_utc": "2026-08-13T21:03:00Z",
-   "hours_since": 0.1,
-   "silent": false
+   "hours_since": 11.4,
+   "silent": false,
+   "last_alerted_utc": null
   },
   "pce-morning-brief": {
    "cron": "30 5 * * 1,4",
@@ -47,8 +49,9 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-13T09:48:00Z",
    "last_commit_utc": "2026-08-13T21:03:00Z",
-   "hours_since": 0.1,
-   "silent": false
+   "hours_since": 11.4,
+   "silent": false,
+   "last_alerted_utc": null
   },
   "pce-revenue-executor": {
    "cron": "0 9 * * 1,4",
@@ -56,8 +59,9 @@
    "alert_after_h": 192,
    "last_report_utc": null,
    "last_commit_utc": "2026-08-11T03:10:00Z",
-   "hours_since": 66.0,
-   "silent": false
+   "hours_since": 77.3,
+   "silent": false,
+   "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
   "pce-deep-verify": {
    "cron": "0 4 * * 3,6",
@@ -65,8 +69,9 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-12T04:32:00Z",
    "last_commit_utc": "2026-08-12T04:04:00Z",
-   "hours_since": 40.6,
-   "silent": false
+   "hours_since": 51.9,
+   "silent": false,
+   "last_alerted_utc": null
   },
   "pce-keyword-scout": {
    "cron": "40 6 * * 2",
@@ -74,8 +79,9 @@
    "alert_after_h": 204,
    "last_report_utc": "2026-08-11T06:45:00Z",
    "last_commit_utc": "2026-08-13T21:03:00Z",
-   "hours_since": 0.1,
-   "silent": false
+   "hours_since": 11.4,
+   "silent": false,
+   "last_alerted_utc": null
   },
   "pce-seo-audit": {
    "cron": "0 5 * * 1",
@@ -83,9 +89,19 @@
    "alert_after_h": 204,
    "last_report_utc": null,
    "last_commit_utc": "2026-08-10T05:40:00Z",
-   "hours_since": 87.5,
-   "silent": false
+   "hours_since": 98.8,
+   "silent": false,
+   "last_alerted_utc": "2026-08-14T08:25:25Z"
   }
  },
- "note": "Guard for F29 (silent fleet death). Runs on GitHub Actions so it survives the Anthropic-side outage it exists to detect. A run that dies before writing its report leaves no trace in SCORECARD.json \u2014 this file is the only place that absence becomes visible. Exit 1 = owner email."
+ "note": "Guard for F29 (silent fleet death). Runs on GitHub Actions so it survives the Anthropic-side outage it exists to detect. A run that dies before writing its report leaves no trace in SCORECARD.json \u2014 this file is the only place that absence becomes visible. Exit 1 = owner email.",
+ "alert": {
+  "firing": false,
+  "partially_blind": false,
+  "new_silent": [],
+  "daily_reminder": [],
+  "silent_but_already_reported": [],
+  "recovered_since_last_run": [],
+  "policy": "Mail fires when a routine goes silent, or once every 24h while it stays silent. Repetition alone never mails."
+ }
 }
