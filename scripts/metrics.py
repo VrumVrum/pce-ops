@@ -23,7 +23,15 @@ DRIP = re.compile(r'^drip:')
 
 # Owner/agent test rows never count as leads (F18 — 14 test rows polluted the
 # human-lead count until the 2026-08-08 purge).
-TEST_EMAIL = re.compile(r'florin\.florea84|\+(test|apilive|probe)@')
+# Known non-customers, permanently excluded from every lead count (F18).
+# 2026-08-14: the owner identified the last two 'real' leads in the database as
+# friends who tried the site. That took the all-time genuine-lead count from 3 to
+# ZERO. Their rows were deleted, but the pattern stays here so a re-submission or a
+# restored backup can never re-inflate the number: the counter's job is to be true,
+# not to be comforting. Add to this list whenever a non-customer is identified.
+TEST_EMAIL = re.compile(
+    r'florin\.florea84|\+(test|apilive|probe)@'
+    r'|^luc328371@gmail\.com$|^john_mamutel@yahoo\.com$', re.I)
 
 # --- bot-fleet fingerprint (F30, 2026-08-13) --------------------------------
 # Every `leads` row carries the submitter's user_agent AND ip_hash, in the same
