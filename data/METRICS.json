@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-14T05:56:23.936806Z",
+  "generated_utc": "2026-08-14T17:29:38.045307Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-14",
@@ -47,41 +47,23 @@
     ]
   },
   "supabase": {
-    "leads_total": 139,
+    "leads_total": 28,
     "leads_by_context": {
-      "api_key": 35,
-      "sys:lastrun": 25,
-      "unsub": 2,
-      "drip:3": 21,
-      "drip:2": 21,
-      "drip:1": 9,
-      "results": 3,
-      "hero": 22,
-      "pack": 1
+      "api_key": 2,
+      "sys:lastrun": 26
     },
-    "real_human_leads": 26,
-    "api_keys": 35,
-    "real_human_leads_strict": 3,
-    "bot_lead_share": 88.5,
-    "bot_leads": 23,
-    "last_strict_human_lead_utc": "2026-08-01T15:31:59",
+    "real_human_leads": 0,
+    "api_keys": 2,
+    "real_human_leads_strict": 0,
+    "bot_lead_share": 0.0,
+    "bot_leads": 0,
+    "last_strict_human_lead_utc": null,
     "real_human_leads_strict_7d": 0,
-    "real_human_leads_strict_28d": 3,
-    "bot_lead_fleets": [
-      {
-        "distinct_ip_hashes": 52,
-        "lead_rows": 23,
-        "rows_all_contexts": 58,
-        "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
-      }
-    ],
-    "real_human_leads_note": "real_human_leads (26) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (3) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 88.5% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
+    "real_human_leads_strict_28d": 0,
+    "bot_lead_fleets": [],
+    "real_human_leads_note": "real_human_leads (0) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (0) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 0,
-    "drip_stages": {
-      "drip:1": 9,
-      "drip:2": 21,
-      "drip:3": 21
-    },
+    "drip_stages": {},
     "affiliate_clicks": {
       "total": 38,
       "last7d": 12,

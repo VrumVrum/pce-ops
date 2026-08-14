@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-14T05:56:42+00:00",
+ "generated_utc": "2026-08-14T17:30:00+00:00",
  "source": "VrumVrum/scopebit@master",
  "note": "structure only, never style — every check here is chosen for ~0 false-positive rate (SWE-agent ACI / EVOLUTION.md meta-rule); a missing file is reported, not guessed at",
  "files_checked": [
@@ -24,116 +24,128 @@
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
-   "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-14T~03:05Z (2x/day, seventeenth fire)",
+   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-tech-scan — 2026-08-14T16:55:00Z (daily 15:00 UTC / 18:00 RO, 2nd fire)",
    "line": 16
+  },
+  {
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
+   "rule": "report-header-not-canonical",
+   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-14T08:16:00Z (daily 06:00 UTC / 09:00 RO, 2nd fire)",
+   "line": 86
+  },
+  {
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
+   "rule": "report-header-not-canonical",
+   "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-14T~03:05Z (2x/day, seventeenth fire)",
+   "line": 120
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor (Verifier) — 2026-08-14T~03:05Z (2x/day, seventeenth fire)",
-   "line": 16
+   "line": 120
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'acquisition-lane (desktop, buyer-intent traffic audit)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## acquisition-lane (desktop, buyer-intent traffic audit)",
-   "line": 154
+   "line": 258
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-13T~16:20Z (daily 06:00 UTC / 09:00 RO, first-ever fire)",
-   "line": 259
+   "line": 363
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'GROWTH MORNING BRIEF' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## GROWTH MORNING BRIEF — 2026-08-13T09:48:00Z (daily, 05:30 UTC cycle)",
-   "line": 317
+   "line": 421
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## GROWTH MORNING BRIEF — 2026-08-13T09:48:00Z (daily, 05:30 UTC cycle)",
-   "line": 317
+   "line": 421
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-deep-verify — 2026-08-12T04:32:00Z (2x/week, 3rd fire)",
-   "line": 349
+   "line": 453
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-12T~01:15Z (2x/day, sixteenth fire)",
-   "line": 381
+   "line": 485
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor (Verifier) — 2026-08-12T~01:15Z (2x/day, sixteenth fire)",
-   "line": 381
+   "line": 485
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-12T~08:00Z (12h cloud cycle)",
-   "line": 446
+   "line": 550
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-12T~08:00Z (12h cloud cycle)",
-   "line": 446
+   "line": 550
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-authority-traffic — 2026-08-11T~06:40Z (Acquisition Engine, every 2 days, v1.4 decide-only + actuation queue)",
-   "line": 490
+   "line": 594
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-content-engine — 2026-08-11T~08:20Z (Daily, 08:20 UTC, throttled)",
-   "line": 527
+   "line": 631
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-11T~07:10Z (12h cloud cycle, later fi",
-   "line": 564
+   "line": 668
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-11T~07:10Z (12h cloud cycle, later fire)",
-   "line": 564
+   "line": 668
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-11T03:07Z (2x/day, fifteenth fire)",
-   "line": 627
+   "line": 731
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor (Verifier) — 2026-08-11T03:07Z (2x/day, fifteenth fire)",
-   "line": 627
+   "line": 731
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-11T00:35Z (12h cloud cycle)",
-   "line": 670
+   "line": 774
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-11T00:35Z (12h cloud cycle)",
-   "line": 670
+   "line": 774
   },
   {
    "file": "docs/OS/ledger/prompt-experiments.md",
