@@ -1,9 +1,9 @@
 {
- "generated_utc": "2026-08-13T17:29:32+00:00",
+ "generated_utc": "2026-08-14T05:56:32+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
-  "MonthlyQuota": 1900
+  "MonthlyQuota": 1800
  },
  "crawl_stats_recent": [
   {
@@ -58,6 +58,24 @@
    "Date": "2026-08-12",
    "DnsFailures": 0,
    "InIndex": 487,
+   "InLinks": 40
+  },
+  {
+   "__type": "CrawlStats:#Microsoft.Bing.Webmaster.Api",
+   "AllOtherCodes": 21,
+   "BlockedByRobotsTxt": 0,
+   "Code2xx": 504,
+   "Code301": 0,
+   "Code302": 3,
+   "Code4xx": 2,
+   "Code5xx": 0,
+   "ConnectionTimeout": 0,
+   "ContainsMalware": 0,
+   "CrawlErrors": 2,
+   "CrawledPages": 157,
+   "Date": "2026-08-13",
+   "DnsFailures": 0,
+   "InIndex": 488,
    "InLinks": 40
   }
  ],

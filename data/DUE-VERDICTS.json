@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-13T17:29:50+00:00",
+ "generated_utc": "2026-08-14T05:56:46+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-13",
- "gsc_pages_rows": 408,
+ "gsc_generated": "2026-08-14",
+ "gsc_pages_rows": 409,
  "gsc_truncated": false,
- "due_count": 11,
+ "due_count": 14,
  "due": [
   {
    "id": "E-012",
@@ -35,22 +35,22 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 251,
+     "impressions_28d": 253,
      "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1936,
-     "clicks_28d": 10
+     "impressions_28d": 1991,
+     "clicks_28d": 11
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1720,
+     "impressions_28d": 1766,
      "clicks_28d": 0
     },
     "/cost/ai/*": {
@@ -65,12 +65,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 127,
+     "impressions_28d": 129,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 200,
+     "impressions_28d": 202,
      "clicks_28d": 1
     },
     "/results": {
@@ -85,13 +85,13 @@
     },
     "/calculator": {
      "pages_matched": 1,
-     "impressions_28d": 73,
+     "impressions_28d": 70,
      "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 4574,
-    "clicks": 14
+    "impressions": 4676,
+    "clicks": 15
    }
   },
   {
@@ -119,22 +119,22 @@
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1720,
+     "impressions_28d": 1766,
      "clicks_28d": 0
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 251,
+     "impressions_28d": 253,
      "clicks_28d": 1
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1936,
-     "clicks_28d": 10
+     "impressions_28d": 1991,
+     "clicks_28d": 11
     },
     "/ecommerce-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 256,
+     "impressions_28d": 270,
      "clicks_28d": 4
     },
     "/cost/ai/chatbot": {
@@ -149,7 +149,7 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/cost/ai/*": {
@@ -159,8 +159,8 @@
     }
    },
    "totals_28d": {
-    "impressions": 4430,
-    "clicks": 17
+    "impressions": 4545,
+    "clicks": 18
    }
   },
   {
@@ -183,12 +183,12 @@
     },
     "/quote-analyzer": {
      "pages_matched": 1,
-     "impressions_28d": 127,
+     "impressions_28d": 129,
      "clicks_28d": 0
     },
     "/website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1001,
+     "impressions_28d": 990,
      "clicks_28d": 1
     },
     "/tools/fixed-price-vs-time-and-materials": {
@@ -198,7 +198,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 1133,
+    "impressions": 1124,
     "clicks": 1
    }
   },
@@ -221,7 +221,7 @@
    "metrics_28d": {
     "/calculators": {
      "pages_matched": 1,
-     "impressions_28d": 139,
+     "impressions_28d": 142,
      "clicks_28d": 1
     },
     "/cost-by-industry": {
@@ -230,23 +230,23 @@
      "clicks_28d": 0
     },
     "/cost/app-like/*": {
-     "pages_matched": 31,
-     "impressions_28d": 179,
+     "pages_matched": 32,
+     "impressions_28d": 190,
      "clicks_28d": 6
     },
     "/cost/app-like": {
      "pages_matched": 1,
-     "impressions_28d": 5,
+     "impressions_28d": 6,
      "clicks_28d": 0
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/cost/app-like/[app]": {
-     "pages_matched": 31,
-     "impressions_28d": 179,
+     "pages_matched": 32,
+     "impressions_28d": 190,
      "clicks_28d": 6
     },
     "/cost/ai/chatbot": {
@@ -261,7 +261,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 764,
+    "impressions": 788,
     "clicks": 15
    }
   },
@@ -280,17 +280,17 @@
    "metrics_28d": {
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/cost/app-like/*": {
-     "pages_matched": 31,
-     "impressions_28d": 179,
+     "pages_matched": 32,
+     "impressions_28d": 190,
      "clicks_28d": 6
     },
     "/cost/app-like": {
      "pages_matched": 1,
-     "impressions_28d": 5,
+     "impressions_28d": 6,
      "clicks_28d": 0
     },
     "/apps": {
@@ -300,7 +300,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 437,
+    "impressions": 447,
     "clicks": 8
    }
   },
@@ -330,32 +330,32 @@
    "metrics_28d": {
     "/freelance-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 6760,
+     "impressions_28d": 7042,
      "clicks_28d": 16
     },
     "/website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1001,
+     "impressions_28d": 990,
      "clicks_28d": 1
     },
     "/website-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1032,
+     "impressions_28d": 1055,
      "clicks_28d": 5
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1936,
-     "clicks_28d": 10
+     "impressions_28d": 1991,
+     "clicks_28d": 11
     },
     "/saas-cost-estimator": {
      "pages_matched": 1,
-     "impressions_28d": 251,
+     "impressions_28d": 253,
      "clicks_28d": 1
     },
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1720,
+     "impressions_28d": 1766,
      "clicks_28d": 0
     },
     "/software-development-budget-2027": {
@@ -375,7 +375,7 @@
     },
     "/restaurant-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1349,
+     "impressions_28d": 1418,
      "clicks_28d": 14
     },
     "/tools/rfp-generator": {
@@ -390,7 +390,7 @@
     },
     "/cost/hire/*": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -399,14 +399,14 @@
      "clicks_28d": 0
     },
     "/cost/app-like/*": {
-     "pages_matched": 31,
-     "impressions_28d": 179,
+     "pages_matched": 32,
+     "impressions_28d": 190,
      "clicks_28d": 6
     }
    },
    "totals_28d": {
-    "impressions": 14608,
-    "clicks": 53
+    "impressions": 15111,
+    "clicks": 54
    }
   },
   {
@@ -427,17 +427,17 @@
    "metrics_28d": {
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/cost/hire/[country]": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     },
     "/tools/rfp-generator/[variant]": {
      "pages_matched": 3,
-     "impressions_28d": 14,
+     "impressions_28d": 15,
      "clicks_28d": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -446,13 +446,13 @@
      "clicks_28d": 0
     },
     "/cost/industry/*": {
-     "pages_matched": 170,
-     "impressions_28d": 1145,
+     "pages_matched": 172,
+     "impressions_28d": 1172,
      "clicks_28d": 7
     },
     "/cost/hire/*": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     },
     "/countries": {
@@ -462,7 +462,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 2147,
+    "impressions": 2225,
     "clicks": 9
    }
   },
@@ -483,37 +483,37 @@
    "metrics_28d": {
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/blog/vercel-cost-2026": {
      "pages_matched": 1,
-     "impressions_28d": 148,
+     "impressions_28d": 192,
      "clicks_28d": 0
     },
     "/healthcare-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 200,
+     "impressions_28d": 202,
      "clicks_28d": 1
     },
     "/law-firm-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 557,
+     "impressions_28d": 566,
      "clicks_28d": 4
     },
     "/freelance-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 6760,
+     "impressions_28d": 7042,
      "clicks_28d": 16
     },
     "/restaurant-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1349,
+     "impressions_28d": 1418,
      "clicks_28d": 14
     }
    },
    "totals_28d": {
-    "impressions": 9267,
+    "impressions": 9671,
     "clicks": 37
    }
   },
@@ -539,63 +539,63 @@
    "metrics_28d": {
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1720,
+     "impressions_28d": 1766,
      "clicks_28d": 0
     },
     "/cost/industry/*": {
-     "pages_matched": 170,
-     "impressions_28d": 1145,
+     "pages_matched": 172,
+     "impressions_28d": 1172,
      "clicks_28d": 7
     },
     "/calculators": {
      "pages_matched": 1,
-     "impressions_28d": 139,
+     "impressions_28d": 142,
      "clicks_28d": 1
     },
     "/freelance-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 6760,
+     "impressions_28d": 7042,
      "clicks_28d": 16
     },
     "/web-app-development-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1936,
-     "clicks_28d": 10
+     "impressions_28d": 1991,
+     "clicks_28d": 11
     },
     "/restaurant-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1349,
+     "impressions_28d": 1418,
      "clicks_28d": 14
     },
     "/nonprofit-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 836,
+     "impressions_28d": 845,
      "clicks_28d": 10
     },
     "/real-estate-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 569,
+     "impressions_28d": 587,
      "clicks_28d": 4
     },
     "/law-firm-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 557,
+     "impressions_28d": 566,
      "clicks_28d": 4
     },
     "/blog/website-security-cost-2026": {
      "pages_matched": 1,
-     "impressions_28d": 312,
-     "clicks_28d": 1
+     "impressions_28d": 333,
+     "clicks_28d": 2
     },
     "/cost/hire/*": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 15690,
-    "clicks": 67
+    "impressions": 16255,
+    "clicks": 69
    }
   },
   {
@@ -612,18 +612,18 @@
    "proposed": "needs-routine-judgment",
    "metrics_28d": {
     "/cost/industry/*": {
-     "pages_matched": 170,
-     "impressions_28d": 1145,
+     "pages_matched": 172,
+     "impressions_28d": 1172,
      "clicks_28d": 7
     },
     "/cost/hire/*": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/api/cost-data": {
@@ -633,7 +633,7 @@
     }
    },
    "totals_28d": {
-    "impressions": 1765,
+    "impressions": 1816,
     "clicks": 9
    }
   },
@@ -655,43 +655,208 @@
    "metrics_28d": {
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 253,
+     "impressions_28d": 251,
      "clicks_28d": 2
     },
     "/website-migration-cost": {
      "pages_matched": 1,
-     "impressions_28d": 80,
+     "impressions_28d": 82,
      "clicks_28d": 0
     },
     "/blog/website-migration-cost-2026": {
      "pages_matched": 1,
-     "impressions_28d": 13,
+     "impressions_28d": 12,
      "clicks_28d": 0
     },
     "/website-redesign-cost": {
      "pages_matched": 1,
-     "impressions_28d": 581,
-     "clicks_28d": 4
+     "impressions_28d": 574,
+     "clicks_28d": 3
     },
     "/restaurant-website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 1349,
+     "impressions_28d": 1418,
      "clicks_28d": 14
     },
     "/cost/industry/*": {
-     "pages_matched": 170,
-     "impressions_28d": 1145,
+     "pages_matched": 172,
+     "impressions_28d": 1172,
      "clicks_28d": 7
     },
     "/cost/hire/*": {
      "pages_matched": 10,
-     "impressions_28d": 367,
+     "impressions_28d": 393,
      "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 3788,
-    "clicks": 27
+    "impressions": 3902,
+    "clicks": 26
+   }
+  },
+  {
+   "id": "E-033",
+   "title": "Plumber/HVAC blog-vs-industry cannibalization: route equity to the outranking guide (ALLOCATION #18)",
+   "due": "2026-08-14",
+   "target_paths": [
+    "/",
+    "/cost/ai/",
+    "/cost/hire/",
+    "/blog/plumber-website-cost-2026",
+    "/cost/industry/plumber",
+    "/blog/hvac-company-website-cost-2026",
+    "/cost/industry/hvac",
+    "/freelance-website-cost",
+    "/healthcare-website-cost"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 251,
+     "clicks_28d": 2
+    },
+    "/cost/ai/": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/cost/hire/": {
+     "pages_matched": 1,
+     "impressions_28d": 18,
+     "clicks_28d": 0
+    },
+    "/blog/plumber-website-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 18,
+     "clicks_28d": 0
+    },
+    "/cost/industry/plumber": {
+     "pages_matched": 1,
+     "impressions_28d": 12,
+     "clicks_28d": 0
+    },
+    "/blog/hvac-company-website-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 7,
+     "clicks_28d": 0
+    },
+    "/cost/industry/hvac": {
+     "pages_matched": 1,
+     "impressions_28d": 13,
+     "clicks_28d": 0
+    },
+    "/freelance-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 7042,
+     "clicks_28d": 16
+    },
+    "/healthcare-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 202,
+     "clicks_28d": 1
+    }
+   },
+   "totals_28d": {
+    "impressions": 7563,
+    "clicks": 19
+   }
+  },
+  {
+   "id": "E-034",
+   "title": "/website-costs-2026-report`: the flagship citable data report",
+   "due": "2026-08-14",
+   "target_paths": [
+    "/website-cost",
+    "/freelance-website-cost",
+    "/calculators",
+    "/cost-index",
+    "/api/cost-data",
+    "/website-costs-2026-report"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 990,
+     "clicks_28d": 1
+    },
+    "/freelance-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 7042,
+     "clicks_28d": 16
+    },
+    "/calculators": {
+     "pages_matched": 1,
+     "impressions_28d": 142,
+     "clicks_28d": 1
+    },
+    "/cost-index": {
+     "pages_matched": 1,
+     "impressions_28d": 33,
+     "clicks_28d": 1
+    },
+    "/api/cost-data": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/website-costs-2026-report": {
+     "pages_matched": 1,
+     "impressions_28d": 2,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 8209,
+    "clicks": 19
+   }
+  },
+  {
+   "id": "E-035",
+   "title": "Real-estate orphan siblings: wire 3 zero-inbound-link pages into the earning hub (ALLOCATION #19)",
+   "due": "2026-08-14",
+   "target_paths": [
+    "/",
+    "/real-estate-website-cost",
+    "/commercial-real-estate-website-cost",
+    "/luxury-real-estate-website-cost",
+    "/real-estate-team-website-cost"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 251,
+     "clicks_28d": 2
+    },
+    "/real-estate-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 587,
+     "clicks_28d": 4
+    },
+    "/commercial-real-estate-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 3,
+     "clicks_28d": 0
+    },
+    "/luxury-real-estate-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 4,
+     "clicks_28d": 0
+    },
+    "/real-estate-team-website-cost": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 845,
+    "clicks": 6
    }
   }
  ]
