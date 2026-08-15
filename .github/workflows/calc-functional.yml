@@ -15,6 +15,21 @@ on:
     - cron: '40 7 * * *'
   workflow_dispatch:
 
+# F33's root cause, recurring here (found by pce-tech-scan 3rd fire, 2026-08-15,
+# cross-checking this workflow after F33's fix on routine-heartbeat.yml): this
+# block was missing, so the default GITHUB_TOKEN was read-only and every
+# scheduled run's snapshot push died on "Permission to VrumVrum/pce-ops.git
+# denied to github-actions[bot]" (403) -- swallowed by the old
+# `|| echo "push skipped"`. Confirmed via both runs' own logs (2026-08-14T08:47Z,
+# 2026-08-15T07:57Z): both drove all 13/13 calculators and PASSED, both hit the
+# identical 403, both stayed green anyway. data/CALC-FUNCTIONAL.json had been
+# silently stuck at its 2026-08-13T15:31Z snapshot for 2 full scheduled runs
+# (~48h) -- the one guard proving calculators actually COMPUTE, not just
+# render, was reporting a healthy day off data that could not have reflected
+# either day's real commits.
+permissions:
+  contents: write
+
 jobs:
   functional:
     runs-on: ubuntu-latest
@@ -36,7 +51,15 @@ jobs:
           git add data/CALC-FUNCTIONAL.json
           git diff --staged --quiet || git commit -m "data: calculator functional test $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --autostash -q origin master || true
-          git push -q origin HEAD:master || echo "push skipped"
+          # One retry for a concurrent-push race, then FAIL LOUDLY -- the old
+          # `|| echo "push skipped"` let 2 consecutive green, 13/13-passing runs
+          # land nothing (this class already named F33 on a sibling workflow): a
+          # functional-compute guard whose own data plane fails silently reports
+          # a healthy day off stale data, which is worse than not running at all.
+          git push -q origin HEAD:master || {
+            git pull --rebase --autostash -q origin master
+            git push -q origin HEAD:master
+          }
       - name: Fail loudly if a calculator is broken
         if: steps.run.outputs.code != '0'
         run: |
