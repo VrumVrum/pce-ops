@@ -1,0 +1,29 @@
+{
+ "generated_utc": "2026-08-15T14:04:17Z",
+ "base": "https://nonexistent.invalid-xyz",
+ "pass": 0,
+ "fail": [],
+ "unknown": [
+  "breakdown_reconciles",
+  "paid_no_fake_success",
+  "admin_endpoint_protected"
+ ],
+ "results": [
+  {
+   "id": "breakdown_reconciles",
+   "status": "UNKNOWN",
+   "detail": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://nonexistent.invalid-xyz/calculator\nCall log:\n\u001b[2m  "
+  },
+  {
+   "id": "paid_no_fake_success",
+   "status": "UNKNOWN",
+   "detail": "apiRequestContext.post: getaddrinfo ENOTFOUND nonexistent.invalid-xyz\nCall log:\n"
+  },
+  {
+   "id": "admin_endpoint_protected",
+   "status": "UNKNOWN",
+   "detail": "apiRequestContext.get: getaddrinfo ENOTFOUND nonexistent.invalid-xyz\nCall log:\n\u001b"
+  }
+ ],
+ "note": "Live-site invariants the fleet regressed this month (breakdown sums, currency consistency, paid-path no-fake-success, admin endpoint protected). A FAIL or a majority-UNKNOWN exits 1 -> owner email. UNKNOWN is never counted as a pass."
+}

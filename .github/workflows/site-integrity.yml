@@ -1,0 +1,41 @@
+name: site-integrity
+# The invariants the fleet regressed this month, asserted on the LIVE site every
+# few hours and on demand. Each was a money-losing bug the OWNER found, not the
+# system: a breakdown whose rows didn't add up, a $0 in a euro table, a paid
+# endpoint faking success, an admin secret in a URL. This makes the next
+# regression of any of them fail loudly instead of shipping silently.
+on:
+  schedule:
+    - cron: '25 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm i -D playwright@latest --silent && npx playwright install --with-deps chromium
+      - name: Assert live invariants
+        id: run
+        continue-on-error: true
+        run: |
+          node scripts/site_integrity.cjs | tee integ.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - name: Commit snapshot
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "actions@github.com"
+          git add data/SITE-INTEGRITY.json
+          git diff --staged --quiet || git commit -m "data: site integrity $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          git push -q origin HEAD:master || { git pull --rebase --autostash -q origin master; git push -q origin HEAD:master; }
+      - name: Fail loudly on a broken invariant
+        if: steps.run.outputs.code != '0'
+        run: |
+          echo "::error::A live-site invariant is broken (see the log). This is a class the owner had to catch by hand before."
+          cat integ.log
+          exit 1
+permissions:
+  contents: write
