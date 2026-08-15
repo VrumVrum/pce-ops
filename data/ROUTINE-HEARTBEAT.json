@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-15T13:09:42Z",
+ "generated_utc": "2026-08-15T18:58:40Z",
  "all_alive": true,
  "silent": [],
  "routines": {
@@ -7,9 +7,9 @@
    "cron": "23 */12 * * *",
    "expected_every_h": 12,
    "alert_after_h": 26,
-   "last_report_utc": "2026-08-15T00:56:00Z",
+   "last_report_utc": "2026-08-15T14:04:00Z",
    "last_commit_utc": "2026-08-15T03:15:00Z",
-   "hours_since": 9.9,
+   "hours_since": 4.9,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -19,7 +19,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-15T00:00:00Z",
    "last_commit_utc": "2026-08-15T04:20:00Z",
-   "hours_since": 8.8,
+   "hours_since": 14.6,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -27,9 +27,9 @@
    "cron": "20 8 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
-   "last_report_utc": "2026-08-14T08:45:00Z",
-   "last_commit_utc": "2026-08-14T17:35:00Z",
-   "hours_since": 19.6,
+   "last_report_utc": "2026-08-15T08:27:00Z",
+   "last_commit_utc": "2026-08-15T14:06:00Z",
+   "hours_since": 4.9,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -39,7 +39,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-15T06:13:00Z",
    "last_commit_utc": "2026-08-15T06:15:00Z",
-   "hours_since": 6.9,
+   "hours_since": 12.7,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -47,9 +47,9 @@
    "cron": "0 15 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
-   "last_report_utc": "2026-08-14T16:55:00Z",
+   "last_report_utc": "2026-08-15T15:22:00Z",
    "last_commit_utc": "2026-08-14T17:35:00Z",
-   "hours_since": 19.6,
+   "hours_since": 3.6,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -59,7 +59,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-10T00:00:00Z",
    "last_commit_utc": "2026-08-15T12:05:00Z",
-   "hours_since": 1.1,
+   "hours_since": 6.9,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -68,8 +68,8 @@
    "expected_every_h": 96,
    "alert_after_h": 192,
    "last_report_utc": "2026-08-15T00:00:00Z",
-   "last_commit_utc": "2026-08-15T04:20:00Z",
-   "hours_since": 8.8,
+   "last_commit_utc": "2026-08-15T14:06:00Z",
+   "hours_since": 4.9,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -79,7 +79,7 @@
    "alert_after_h": 204,
    "last_report_utc": "2026-08-10T00:00:00Z",
    "last_commit_utc": "2026-08-10T05:40:00Z",
-   "hours_since": 127.5,
+   "hours_since": 133.3,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   }
