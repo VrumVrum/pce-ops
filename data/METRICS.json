@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-08-14T17:29:38.045307Z",
+  "generated_utc": "2026-08-15T04:57:32.747528Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-14",
+    "generated": "2026-08-15",
     "totals_28d": {
-      "clicks": 119,
-      "impressions": 29937,
-      "ctr": 0.398,
-      "position": 21.88
+      "clicks": 118,
+      "impressions": 29482,
+      "ctr": 0.4,
+      "position": 21.72
     },
     "totals_7d": {
-      "clicks": 32,
-      "impressions": 10442,
-      "ctr": 0.306,
-      "position": 19.23
+      "clicks": 29,
+      "impressions": 9060,
+      "ctr": 0.32,
+      "position": 19.31
     },
     "totals_90d": {
       "clicks": 158,
-      "impressions": 49560,
+      "impressions": 49530,
       "ctr": 0.319,
-      "position": 25.1
+      "position": 25.09
     },
     "junk_28d": {
       "impressions": 442,
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 119,
-      "impressions": 29495,
-      "ctr": 0.403
+      "clicks": 118,
+      "impressions": 29040,
+      "ctr": 0.406
     },
     "citation_floor_alerts": [
       {
@@ -47,38 +47,45 @@
     ]
   },
   "supabase": {
-    "leads_total": 28,
+    "leads_total": 32,
     "leads_by_context": {
-      "api_key": 2,
+      "api_key": 6,
       "sys:lastrun": 26
     },
     "real_human_leads": 0,
-    "api_keys": 2,
+    "api_keys": 6,
     "real_human_leads_strict": 0,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
     "last_strict_human_lead_utc": null,
     "real_human_leads_strict_7d": 0,
     "real_human_leads_strict_28d": 0,
-    "bot_lead_fleets": [],
+    "bot_lead_fleets": [
+      {
+        "distinct_ip_hashes": 5,
+        "lead_rows": 0,
+        "rows_all_contexts": 5,
+        "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
+      }
+    ],
     "real_human_leads_note": "real_human_leads (0) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (0) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 0,
     "drip_stages": {},
     "affiliate_clicks": {
-      "total": 38,
-      "last7d": 12,
+      "total": 40,
+      "last7d": 11,
       "by_slug": {
         "fiverr": 18,
+        "wix": 8,
         "shopify": 8,
-        "wix": 6,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 49,
+      "rows_before_bot_filter": 51,
       "excluded_by_is_bot_flag": 11,
       "residual_bot_ua_after_filter": 0,
       "distinct_ip_hashes": null,
       "ip_hash_coverage_pct": 0.0,
-      "note": "user_ip_hash is NULL on 49 of 49 rows (0% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 11 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "note": "user_ip_hash is NULL on 51 of 51 rows (0% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 11 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -125,18 +132,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 7042,
+      "impressions": 6962,
       "clicks": 16
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1420,
+      "impressions": 1413,
       "clicks": 14
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 897,
-      "clicks": 12
+      "impressions": 872,
+      "clicks": 11
     }
   }
 }

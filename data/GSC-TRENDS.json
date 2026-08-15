@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-14T17:29:40Z",
+ "generated_utc": "2026-08-15T04:57:36Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "911e96d6a46a",
+    "sha": "0eeeb49f0ea5",
     "generated": "2026-08-14"
    },
    {
@@ -35,23 +35,23 @@
    "impressions_28d": 7042,
    "position": 13.2,
    "ctr_pct": 0.23,
-   "site_clean_ctr_pct": 0.403,
-   "headroom_clicks_28d_at_clean_ctr": 12.2
+   "site_clean_ctr_pct": 0.406,
+   "headroom_clicks_28d_at_clean_ctr": 12.4
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 2461,
    "position": 8.2,
    "ctr_pct": 0.04,
-   "site_clean_ctr_pct": 0.403,
-   "headroom_clicks_28d_at_clean_ctr": 8.9
+   "site_clean_ctr_pct": 0.406,
+   "headroom_clicks_28d_at_clean_ctr": 9.0
   },
   {
    "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
    "impressions_28d": 275,
    "position": 9.1,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.403,
+   "site_clean_ctr_pct": 0.406,
    "headroom_clicks_28d_at_clean_ctr": 1.1
   },
   {
@@ -59,7 +59,7 @@
    "impressions_28d": 268,
    "position": 13.1,
    "ctr_pct": 0.37,
-   "site_clean_ctr_pct": 0.403,
+   "site_clean_ctr_pct": 0.406,
    "headroom_clicks_28d_at_clean_ctr": 0.1
   },
   {
@@ -67,7 +67,7 @@
    "impressions_28d": 253,
    "position": 10.3,
    "ctr_pct": 0.4,
-   "site_clean_ctr_pct": 0.403,
+   "site_clean_ctr_pct": 0.406,
    "headroom_clicks_28d_at_clean_ctr": 0.0
   },
   {
@@ -75,7 +75,7 @@
    "impressions_28d": 192,
    "position": 11.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.403,
+   "site_clean_ctr_pct": 0.406,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -83,7 +83,7 @@
    "impressions_28d": 152,
    "position": 11.4,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.403,
+   "site_clean_ctr_pct": 0.406,
    "headroom_clicks_28d_at_clean_ctr": 0.6
   }
  ],
