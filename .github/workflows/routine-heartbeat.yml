@@ -17,6 +17,15 @@ on:
     - cron: '35 */6 * * *'
   workflow_dispatch:
 
+# F33 root cause (2026-08-15): this block was missing. The default GITHUB_TOKEN
+# is read-only, so every scheduled run's snapshot push died on
+# "Permission to VrumVrum/pce-ops.git denied to github-actions[bot]" (403) —
+# swallowed by the old `|| echo "push skipped"` — and NO "data: routine
+# heartbeat" commit ever landed between the workflow's creation (5b791d8,
+# 2026-08-13) and this fix, while the runs themselves stayed green.
+permissions:
+  contents: write
+
 jobs:
   heartbeat:
     runs-on: ubuntu-latest
@@ -41,7 +50,14 @@ jobs:
           git add data/ROUTINE-HEARTBEAT.json
           git diff --staged --quiet || git commit -m "data: routine heartbeat $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase --autostash -q origin master || true
-          git push -q origin HEAD:master || echo "push skipped"
+          # One retry for a concurrent-push race, then FAIL LOUDLY. The old
+          # `|| echo "push skipped"` let 8 consecutive green runs land nothing
+          # (F33): a watchdog whose own data plane fails silently has the exact
+          # disease it exists to detect.
+          git push -q origin HEAD:master || {
+            git pull --rebase --autostash -q origin master
+            git push -q origin HEAD:master
+          }
 
       - name: Fail loudly if any routine is silent
         if: steps.beat.outputs.code != '0'

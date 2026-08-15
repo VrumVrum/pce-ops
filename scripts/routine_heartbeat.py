@@ -51,29 +51,36 @@ ROUTINES = {
     'pce-operating-loop':    {'cron': '23 */12 * * *',  'every_h': 12,  'alert_h': 26},
     'pce-supervisor':        {'cron': '0 3 * * *',      'every_h': 24,  'alert_h': 54},
     'pce-content-engine':    {'cron': '20 8 * * *',     'every_h': 24,  'alert_h': 54},
-    # RETIRED 2026-08-13 (0 product output in 30 days) — kept in the roster because
-    # each still files a minimal report; a silent retired routine would look like a
-    # dead one. Remove the row entirely once its trigger is disabled.
-    'pce-authority-traffic': {'cron': '0 13 */2 * *',   'every_h': 48,  'alert_h': 108},
-    # RETIRED 2026-08-13 (0 product output in 30 days) — kept in the roster because
-    # each still files a minimal report; a silent retired routine would look like a
-    # dead one. Remove the row entirely once its trigger is disabled.
-    'pce-morning-brief':     {'cron': '30 5 * * 1,4',   'every_h': 96,  'alert_h': 192},
+    # New fleet members, created 2026-08-13 on owner order (docs/OS/TRIGGERS.md).
+    # Absent from this roster until 2026-08-15 — the guard was blind to both.
+    'pce-growth-engine':     {'cron': '0 6 * * *',      'every_h': 24,  'alert_h': 54},
+    'pce-tech-scan':         {'cron': '0 15 * * *',     'every_h': 24,  'alert_h': 54},
     'pce-revenue-executor':  {'cron': '0 9 * * 1,4',    'every_h': 96,  'alert_h': 192},
     'pce-deep-verify':       {'cron': '0 4 * * 3,6',    'every_h': 96,  'alert_h': 192},
-    # RETIRED 2026-08-13 (0 product output in 30 days) — kept in the roster because
-    # each still files a minimal report; a silent retired routine would look like a
-    # dead one. Remove the row entirely once its trigger is disabled.
-    'pce-keyword-scout':     {'cron': '40 6 * * 2',     'every_h': 168, 'alert_h': 204},
     'pce-seo-audit':         {'cron': '0 5 * * 1',      'every_h': 168, 'alert_h': 204},
+    # pce-authority-traffic / pce-morning-brief / pce-keyword-scout: RETIRED
+    # 2026-08-13 and DROPPED from this roster 2026-08-15 per the owner action
+    # recorded in docs/OS/TRIGGERS.md ("disable trigger + drop from
+    # routine-heartbeat roster"). Evidence at drop time: zero run-status rows,
+    # zero report headers, zero commits from any of the three since the
+    # retirement commit (scopebit c6a18ba, 2026-08-13T21:03Z) — their roster
+    # rows read "alive" only because that OWNER commit's message name-checks
+    # them (the F32 mention-vs-activity class, different authorship). Keeping
+    # the rows would start mailing the owner about deliberately-retired
+    # routines from ~2026-08-18 onward.
 }
 # Some routines commit under a different display name than their trigger name.
 ALIASES = {'pce-revenue-executor': ['pce-money-hunt', 'revenue executor'],
-           'pce-morning-brief': ['growth morning brief'],
            'pce-seo-audit': ['pce-seo-audit-3day']}
 
 NOW = datetime.datetime.now(datetime.timezone.utc)
 TS = re.compile(r'(20\d{2}-\d{2}-\d{2})[T ](\d{2}):(\d{2})')
+# Date with no time-of-day. Real ledger headers ship without one — e.g.
+# '## pce-seo-audit (Adversarial Recurring Audit) — 2026-08-10 (weekly Mon...'.
+# Before 2026-08-15 such headers parsed as None, so a routine whose only
+# recent trace was a date-only header read as never-seen ('Noneh ago') and
+# false-alarmed SILENT (live instance: pce-seo-audit, run 31871189129).
+DATE_ONLY = re.compile(r'(20\d{2})-(\d{2})-(\d{2})')
 
 
 def norm(s):
@@ -100,11 +107,21 @@ def fetch(url, accept=None):
 
 def parse_dt(s):
     m = TS.search(s)
+    if m:
+        try:
+            return datetime.datetime(int(m.group(1)[:4]), int(m.group(1)[5:7]), int(m.group(1)[8:10]),
+                                     int(m.group(2)), int(m.group(3)), tzinfo=datetime.timezone.utc)
+        except ValueError:
+            return None
+    # Date-only fallback: midnight UTC. Conservative — it makes the entry look
+    # OLDER than it probably is (never fresher), so it can only delay an
+    # all-clear, never fake one.
+    m = DATE_ONLY.search(s)
     if not m:
         return None
     try:
-        return datetime.datetime(int(m.group(1)[:4]), int(m.group(1)[5:7]), int(m.group(1)[8:10]),
-                                 int(m.group(2)), int(m.group(3)), tzinfo=datetime.timezone.utc)
+        return datetime.datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)),
+                                 tzinfo=datetime.timezone.utc)
     except ValueError:
         return None
 
@@ -216,9 +233,18 @@ def main():
     # looks dead. Observed for real - a truncated GitHub response (IncompleteRead) made
     # pce-seo-audit read as silent when it was not. Alerting on that trains the owner to
     # ignore the mail, so a blind run reports the state and withholds the alarm.
+    # Paginate: a single per_page=100 call silently shrinks the "14-day" window
+    # to the ~100 newest commits (3-4 days on this repo). That aged
+    # pce-seo-audit's Aug-10 commits out of view between the 02:00 and 07:08
+    # runs of 2026-08-15 and helped fire the false SILENT alarm.
     commits, commits_ok = [], True
     try:
-        commits = json.loads(fetch(f'{API_COMMITS}?since={since}&per_page=100') or '[]')
+        for page in range(1, 11):
+            batch = json.loads(
+                fetch(f'{API_COMMITS}?since={since}&per_page=100&page={page}') or '[]')
+            commits.extend(batch)
+            if len(batch) < 100:
+                break
     except Exception as e:
         commits_ok = False
         print(f'warn: commit list unavailable ({e}) - alert withheld this run',
