@@ -1,0 +1,1418 @@
+{
+ "generated_utc": "2026-08-16T15:24:56+00:00",
+ "site": "projectcostestimator.com",
+ "summary": {
+  "queries_checked": 36,
+  "measured_queries": 36,
+  "pce_surface_rate": 0.028,
+  "pce_surfaced_count": 1,
+  "engines_measured": [
+   "bing_webmaster"
+  ],
+  "engines_unmeasured": [
+   "bing_web",
+   "perplexity",
+   "openai",
+   "gemini",
+   "anthropic"
+  ],
+  "top_competitors": []
+ },
+ "engine_status": {
+  "bing_web": {
+   "coverage": "not_measured",
+   "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+  },
+  "perplexity": {
+   "coverage": "not_measured",
+   "reason": "no PERPLEXITY_API_KEY"
+  },
+  "openai": {
+   "coverage": "not_measured",
+   "reason": "no OPENAI_API_KEY"
+  },
+  "gemini": {
+   "coverage": "not_measured",
+   "reason": "no GEMINI_API_KEY"
+  },
+  "anthropic": {
+   "coverage": "not_measured",
+   "reason": "no ANTHROPIC_API_KEY"
+  },
+  "bing_webmaster": {
+   "coverage": "measured",
+   "queries_measured": 36,
+   "note": "presence = PCE earned Bing impressions for a query equal to or containing the phrase; no competitor data available from Webmaster API"
+  }
+ },
+ "queries": [
+  {
+   "query": "how much does a website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "website cost calculator",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a website cost to build",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "small business website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "ecommerce website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "shopify website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "wordpress website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does web design cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "freelance web developer rates",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "web development cost estimate",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "restaurant website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "real estate website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a website cost per month",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "website maintenance cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does it cost to build an app",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "mobile app development cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "website redesign cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "custom website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a landing page cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "web design pricing",
+   "pce_present": true,
+   "pce_rank": 1,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": true,
+     "pce_rank": 1,
+     "competitors": [],
+     "bing_impressions": 5,
+     "matched_bing_queries": 2
+    }
+   }
+  },
+  {
+   "query": "how much does it cost to hire a web developer",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "saas website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "nonprofit website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a wix website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "squarespace website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "website cost estimator",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does an ecommerce store cost to build",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "average cost of a website for small business",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "web developer hourly rate",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a business website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "website design cost breakdown",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a website cost 2026",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "dental website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "law firm website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "how much does a portfolio website cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  },
+  {
+   "query": "mvp development cost",
+   "pce_present": false,
+   "pce_rank": null,
+   "competitors": [],
+   "engine": "bing_webmaster",
+   "coverage": "measured",
+   "engines": {
+    "bing_web": {
+     "coverage": "not_measured",
+     "reason": "Web Search API not authenticated: HTTP 401: {\"error\":{\"code\":\"401\",\"message\":\"Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoi"
+    },
+    "perplexity": {
+     "coverage": "not_measured",
+     "reason": "no PERPLEXITY_API_KEY"
+    },
+    "openai": {
+     "coverage": "not_measured",
+     "reason": "no OPENAI_API_KEY"
+    },
+    "gemini": {
+     "coverage": "not_measured",
+     "reason": "no GEMINI_API_KEY"
+    },
+    "anthropic": {
+     "coverage": "not_measured",
+     "reason": "no ANTHROPIC_API_KEY"
+    },
+    "bing_webmaster": {
+     "coverage": "measured",
+     "pce_present": false,
+     "pce_rank": null,
+     "competitors": [],
+     "bing_impressions": 0,
+     "matched_bing_queries": 0
+    }
+   }
+  }
+ ]
+}
