@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-15T05:39:01.170Z",
+  "generated_utc": "2026-08-16T05:41:44.552Z",
   "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -34,7 +34,7 @@
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 1.01
     }
   ],
   "note": "Pixel diff of money pages vs committed baseline. status=red -> a page changed >5% visually (or failed to shoot); baseline is kept until re-seeded via workflow_dispatch reseed=true. Supervisor: treat red as a finding — text gates cannot see rendering."
