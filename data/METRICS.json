@@ -1,29 +1,29 @@
 {
-  "generated_utc": "2026-08-16T05:01:10.848111Z",
+  "generated_utc": "2026-08-16T16:51:43.424913Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-16",
     "totals_28d": {
-      "clicks": 122,
-      "impressions": 30816,
-      "ctr": 0.396,
-      "position": 22.04
+      "clicks": 125,
+      "impressions": 31786,
+      "ctr": 0.393,
+      "position": 21.91
     },
     "totals_7d": {
-      "clicks": 24,
-      "impressions": 9562,
-      "ctr": 0.251,
-      "position": 21.51
+      "clicks": 27,
+      "impressions": 10532,
+      "ctr": 0.256,
+      "position": 21.17
     },
     "totals_90d": {
-      "clicks": 163,
-      "impressions": 51266,
+      "clicks": 166,
+      "impressions": 52236,
       "ctr": 0.318,
-      "position": 25.22
+      "position": 25.08
     },
     "junk_28d": {
-      "impressions": 473,
-      "queries": 102,
+      "impressions": 493,
+      "queries": 105,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"december 2021\" \"how much does this website cost\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 122,
-      "impressions": 30343,
-      "ctr": 0.402
+      "clicks": 125,
+      "impressions": 31293,
+      "ctr": 0.399
     },
     "citation_floor_alerts": [
       {
@@ -47,12 +47,12 @@
     ]
   },
   "supabase": {
-    "leads_total": 39,
+    "leads_total": 40,
     "leads_by_context": {
+      "sys:lastrun": 28,
       "api_key": 10,
       "e2e_walk": 1,
-      "results": 1,
-      "sys:lastrun": 27
+      "results": 1
     },
     "real_human_leads": 2,
     "api_keys": 10,
@@ -114,18 +114,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 422,
+      "impressions": 439,
       "clicks": 0
     },
     "/cost/app-like/": {
       "pages_with_data": 32,
-      "impressions": 192,
+      "impressions": 194,
       "clicks": 6
     },
     "/cost/industry/": {
-      "pages_with_data": 173,
-      "impressions": 1216,
-      "clicks": 7
+      "pages_with_data": 174,
+      "impressions": 1239,
+      "clicks": 8
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -134,17 +134,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 7226,
-      "clicks": 17
+      "impressions": 7473,
+      "clicks": 18
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1464,
-      "clicks": 15
+      "impressions": 1516,
+      "clicks": 16
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 907,
+      "impressions": 926,
       "clicks": 11
     }
   }
