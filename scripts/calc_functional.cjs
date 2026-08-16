@@ -20,10 +20,13 @@
 //   5. for platform pages, the page does not name a competing platform as its
 //      recommendation (a WordPress calculator must not answer "Shopify").
 //
-// DISCOVERY IS AUTOMATIC: the page list is derived from the repo (any page that
-// mounts NicheCalculator, plus /tools/*), so a calculator shipped next month is
-// covered without anyone remembering to add it here. That is the difference
-// between a test and a checklist.
+// DISCOVERY IS **NOT** AUTOMATIC (corrected 2026-08-16, system audit): this
+// header used to claim the list was "derived from the repo" — it never was. The
+// list below is HAND-MAINTAINED, and that false claim cost real coverage: six
+// calculators mounted Aug 14–16 ran unwatched for days because everyone believed
+// the header. Until repo-derived discovery is actually implemented, the rule is:
+// every new calculator page is added here IN THE SAME PR that ships it, and this
+// guard's header must never claim more than the code does.
 //
 // Exit 1 on any failure -> the workflow fails -> GitHub emails the owner.
 // Usage: node scripts/calc_functional.cjs [--base https://...] [--out path]
@@ -56,6 +59,16 @@ const PAGES = [
   '/landing-page-cost',
   '/saas-cost-estimator',
   '/tools/cloudflare-cost-calculator',
+  // System-audit 2026-08-16: the 6 calculators mounted Aug 14–16 were unwatched —
+  // the one guard proving calculators compute missed a third of them. Until the
+  // "discovery is automatic" claim is actually implemented (repo-derived list),
+  // every new calculator page MUST be added here in the same PR that ships it.
+  '/mvp-cost-calculator',
+  '/web-app-development-cost',
+  '/website-redesign-cost',
+  '/marketplace-cost-estimator',
+  '/mobile-app-cost',
+  '/tools/vercel-cost-calculator',
 ];
 
 // A page whose calculator must never recommend a competitor's platform.
