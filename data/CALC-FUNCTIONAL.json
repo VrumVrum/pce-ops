@@ -1,8 +1,8 @@
 {
- "generated_utc": "2026-08-16T08:00:08Z",
+ "generated_utc": "2026-08-16T19:26:43Z",
  "base": "https://projectcostestimator.com",
- "total": 13,
- "passed": 13,
+ "total": 19,
+ "passed": 19,
  "failed": [],
  "results": [
   {
@@ -95,6 +95,48 @@
    "detail": "43 -> 180 on \"typed 507\"",
    "price_before": 43,
    "price_after": 180
+  },
+  {
+   "page": "/mvp-cost-calculator",
+   "ok": true,
+   "detail": "17700 -> 1950 on \"Landing + waitlist\"",
+   "price_before": 17700,
+   "price_after": 1950
+  },
+  {
+   "page": "/web-app-development-cost",
+   "ok": true,
+   "detail": "16100 -> 36300 on \"Enterprise (real-time, AI)\"",
+   "price_before": 16100,
+   "price_after": 36300
+  },
+  {
+   "page": "/website-redesign-cost",
+   "ok": true,
+   "detail": "4300 -> 5850 on \"Redesign + new content\"",
+   "price_before": 4300,
+   "price_after": 5850
+  },
+  {
+   "page": "/marketplace-cost-estimator",
+   "ok": true,
+   "detail": "22050 -> 19900 on \"UK\"",
+   "price_before": 22050,
+   "price_after": 19900
+  },
+  {
+   "page": "/mobile-app-cost",
+   "ok": true,
+   "detail": "16100 -> 18500 on \"Simple app (5-10 screens)\"",
+   "price_before": 16100,
+   "price_after": 18500
+  },
+  {
+   "page": "/tools/vercel-cost-calculator",
+   "ok": true,
+   "detail": "20 -> 340 on \"typed 17\"",
+   "price_before": 20,
+   "price_after": 340
   }
  ],
  "note": "Functional proof that every calculator COMPUTES and reacts to input, not merely that buttons appear in the HTML. Discovery is repo-derived so new calculators are covered automatically. Any failure exits 1 -> owner email."
