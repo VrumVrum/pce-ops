@@ -1,88 +1,74 @@
 {
- "generated_utc": "2026-08-15T07:04:18Z",
- "gsc_window_end": "2026-08-12",
+ "generated_utc": "2026-08-16T07:06:48Z",
+ "gsc_window_end": "2026-08-13",
  "all_clear": false,
  "unanswered_questions": [],
  "counts": {
-  "high": 7,
+  "high": 4,
   "medium": 1,
-  "low": 3
+  "low": 6
  },
  "alert": {
-  "firing": true,
+  "firing": false,
   "new": [],
-  "escalated": [
-   "growth_plateau"
-  ],
+  "escalated": [],
   "weekly_reminder": [],
   "persisting_silently": [
-   "bot_kpi_contamination",
    "ctr_vs_expected_pages",
    "ctr_vs_expected_sitewide",
    "funnel_break",
-   "revenue_silence",
+   "revenue_silence"
+  ],
+  "resolved_since_last_run": [
+   "bot_kpi_contamination",
+   "growth_plateau",
    "signup_vs_usage"
   ],
-  "resolved_since_last_run": [],
   "policy": "Mail fires on NEW, ESCALATED, or once every 7 days while a HIGH stays open. Persisting findings remain in this file and remain binding on pce-operating-loop STEP 0A-bis; they simply stop re-mailing daily, because an alert that arrives every morning stops being read."
  },
  "findings": [
   {
-   "id": "bot_kpi_contamination",
-   "severity": "high",
-   "question": "Are the rows counted as \"real human leads\" actually people -- or is a single bot fleet supplying the headline conversion KPI?",
-   "answer": "There are ZERO lead-context rows in the table at all (33 rows total after test-row exclusion). The conversion KPI is not contaminated; it is empty.",
-   "why_it_matters": "On 2026-08-13 the headline \"26 real human leads\" turned out to be 23 rows from ONE byte-identical user_agent seen across 45 distinct ip_hash values, plus 3 genuine captures. The system had even run a three-fire investigation into why the number was STUCK at 26 without ever asking whether the 26 were people. A KPI that measures a bot sends every downstream decision -- content, pricing, drip, roadmap -- chasing an audience that will never buy anything, and it does it silently, because the number looks healthy.",
-   "headline_leads": 0,
-   "strict_human_leads": 0,
-   "bot_lead_share_pct": null,
-   "last_strict_human_lead_utc": null,
-   "first_seen_utc": "2026-08-13T11:00:12Z",
-   "last_alerted_utc": "2026-08-13T11:00:12Z",
-   "state": "persisting"
-  },
-  {
    "id": "ctr_vs_expected_pages",
    "severity": "high",
    "question": "Which specific pages rank but do not get clicked?",
-   "answer": "4 of the top 15 pages by impressions (judged only where avg position is inside 20, so this is a click problem and not a ranking problem) earn under 40% of the clicks their position predicts. Worst by lost clicks: /blog/cloudflare-cost-2026 -- 2461 impressions at avg position 8.2, 1 clicks where ~98 were expected (0.04% vs 4.00% CTR). Total missing clicks across the 4 flagged pages: ~252 in 28 days.",
+   "answer": "4 of the top 15 pages by impressions (judged only where avg position is inside 20, so this is a click problem and not a ranking problem) earn under 40% of the clicks their position predicts. Worst by lost clicks: /blog/cloudflare-cost-2026 -- 2645 impressions at avg position 8.1, 1 clicks where ~106 were expected (0.04% vs 4.00% CTR). Total missing clicks across the 4 flagged pages: ~265 in 28 days.",
    "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
    "pages": [
     {
      "page": "/blog/cloudflare-cost-2026",
-     "impressions": 2461,
+     "impressions": 2645,
      "clicks": 1,
-     "avg_position": 8.2,
+     "avg_position": 8.1,
      "actual_ctr_pct": 0.04,
      "expected_ctr_pct": 4.0,
-     "expected_clicks": 98.4,
+     "expected_clicks": 105.8,
      "ratio_of_expected": 0.01
     },
     {
      "page": "/freelance-website-cost",
-     "impressions": 6962,
-     "clicks": 16,
-     "avg_position": 13.2,
-     "actual_ctr_pct": 0.23,
+     "impressions": 7226,
+     "clicks": 17,
+     "avg_position": 13.0,
+     "actual_ctr_pct": 0.24,
      "expected_ctr_pct": 1.5,
-     "expected_clicks": 104.4,
-     "ratio_of_expected": 0.15
+     "expected_clicks": 108.4,
+     "ratio_of_expected": 0.16
     },
     {
      "page": "/restaurant-website-cost",
-     "impressions": 1411,
-     "clicks": 14,
+     "impressions": 1463,
+     "clicks": 15,
      "avg_position": 6.4,
-     "actual_ctr_pct": 0.99,
+     "actual_ctr_pct": 1.03,
      "expected_ctr_pct": 5.0,
-     "expected_clicks": 70.5,
-     "ratio_of_expected": 0.2
+     "expected_clicks": 73.2,
+     "ratio_of_expected": 0.21
     },
     {
      "page": "/website-cost-calculator",
-     "impressions": 1015,
+     "impressions": 1011,
      "clicks": 5,
-     "avg_position": 18.2,
+     "avg_position": 17.9,
      "actual_ctr_pct": 0.49,
      "expected_ctr_pct": 1.5,
      "expected_clicks": 15.2,
@@ -97,16 +83,16 @@
    "id": "ctr_vs_expected_sitewide",
    "severity": "high",
    "question": "For the positions we already hold, are we getting the clicks those positions should produce?",
-   "answer": "Sitewide 28d: 120 clicks on 29891 impressions = 0.40% CTR. Weighting every page by its own average position, that traffic should have produced ~494 clicks (1.65% CTR). Actual is 24% of expected. Last 7d: 29 clicks vs ~173 expected (17% of expected, 0.32% CTR).",
+   "answer": "Sitewide 28d: 124 clicks on 31223 impressions = 0.40% CTR. Weighting every page by its own average position, that traffic should have produced ~515 clicks (1.65% CTR). Actual is 24% of expected. Last 7d: 24 clicks vs ~171 expected (14% of expected, 0.25% CTR).",
    "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
-   "window": "2026-07-16..2026-08-12",
-   "clicks": 120,
-   "impressions": 29891,
-   "actual_ctr_pct": 0.401,
-   "expected_clicks": 494,
-   "expected_ctr_pct": 1.653,
-   "ratio_of_expected": 0.243,
-   "ratio_of_expected_7d": 0.168,
+   "window": "2026-07-17..2026-08-13",
+   "clicks": 124,
+   "impressions": 31223,
+   "actual_ctr_pct": 0.397,
+   "expected_clicks": 515,
+   "expected_ctr_pct": 1.65,
+   "ratio_of_expected": 0.241,
+   "ratio_of_expected_7d": 0.14,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": "2026-08-13T10:36:09Z",
    "state": "persisting"
@@ -115,27 +101,27 @@
    "id": "funnel_break",
    "severity": "high",
    "question": "Of the REAL people (bot fleet excluded) who open the calculator in the last 7 days, how many reach a result screen, leave an email, and pay -- and at which step do they vanish?",
-   "answer": "Last 7 days: begin_checkout 12 users -> step_completed 2 users -> view_item 2 users -> generate_lead 0 users -> purchase 0 users. Last 28 days: begin_checkout 65 users -> step_completed 20 users -> view_item 22 users -> generate_lead 1 users -> purchase 0 users. BROKEN: 2 users reached view_item and 0 went on to generate_lead (submitted an email (email_capture_submitted)) -- the step is at zero while the one above it is not. WEAK: only 16.7% of begin_checkout users (2 of 12) survive to step_completed, against a 20% floor.",
+   "answer": "Last 7 days: begin_checkout 17 users -> step_completed 7 users -> view_item 3 users -> generate_lead 0 users -> purchase 0 users. Last 28 days: begin_checkout 67 users -> step_completed 23 users -> view_item 23 users -> generate_lead 1 users -> purchase 0 users. BROKEN: 3 users reached view_item and 0 went on to generate_lead (submitted an email (email_capture_submitted)) -- the step is at zero while the one above it is not.",
    "why_it_matters": "This is the question that answers \"why is revenue zero\", and until 2026-08-13 no file in either repo contained the number. Everything the system optimised -- impressions, sessions, lead counts -- measures the TOP of a funnel whose middle is falling out. A step that drops below 20% of the step above it, or a step sitting at zero while the one above it is not, is a broken product path: more traffic poured into it changes nothing, and shipping more content is the wrong response.",
    "window_days": 7,
    "steps": [
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 12,
-     "events": 15
+     "users": 17,
+     "events": 23
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 2,
-     "events": 8
+     "users": 7,
+     "events": 28
     },
     {
      "event": "view_item",
      "means": "reached a result screen (results_viewed)",
-     "users": 2,
-     "events": 2
+     "users": 3,
+     "events": 3
     },
     {
      "event": "generate_lead",
@@ -154,20 +140,20 @@
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 65,
-     "events": 88
+     "users": 67,
+     "events": 93
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 20,
-     "events": 58
+     "users": 23,
+     "events": 75
     },
     {
      "event": "view_item",
      "means": "reached a result screen (results_viewed)",
-     "users": 22,
-     "events": 26
+     "users": 23,
+     "events": 27
     },
     {
      "event": "generate_lead",
@@ -186,12 +172,12 @@
     {
      "from": "begin_checkout",
      "to": "step_completed",
-     "users_pct": 16.7
+     "users_pct": 41.2
     },
     {
      "from": "step_completed",
      "to": "view_item",
-     "users_pct": 100.0
+     "users_pct": 42.9
     },
     {
      "from": "view_item",
@@ -208,84 +194,27 @@
    "breaks": [
     {
      "from": "view_item",
-     "from_users": 2,
+     "from_users": 3,
      "to": "generate_lead",
      "means": "submitted an email (email_capture_submitted)"
     }
    ],
-   "weak_steps": [
-    {
-     "from": "begin_checkout",
-     "to": "step_completed",
-     "users_pct": 16.7,
-     "from_users": 12,
-     "to_users": 2
-    }
-   ],
+   "weak_steps": [],
    "note": "Users are distinct per window (undated GA4 query). A ratio above 100%% is not a bug: GA4 de-duplicates users per event, and a visitor can reach a result from a shared config link without firing the step above it.",
    "first_seen_utc": "2026-08-13T11:00:12Z",
    "last_alerted_utc": "2026-08-13T11:00:12Z",
    "state": "persisting"
   },
   {
-   "id": "growth_plateau",
-   "severity": "high",
-   "question": "Have organic sessions been flat or falling for 3 weeks or more WHILE search impressions rose?",
-   "answer": "Yes. Organic sessions 54 -> 55 -> 58 over the last 3 weeks (no week gained more than 8%) while impressions rose 23% over the same weeks. Full series: w/e 2026-07-15: 21 sessions, 4000 impressions | w/e 2026-07-22: 41 sessions, 4523 impressions | w/e 2026-07-29: 54 sessions, 7365 impressions | w/e 2026-08-05: 55 sessions, 8534 impressions | w/e 2026-08-12: 58 sessions, 9060 impressions",
-   "why_it_matters": "Rising impressions with flat sessions is the signature of \"visible but not clicked\": more content is indexed, more queries match, and none of it converts into a visit. Chasing more content in that state makes the divergence worse. It is only detectable by looking at the two curves TOGETHER, which no existing guard did.",
-   "weeks_ending": [
-    "2026-07-15",
-    "2026-07-22",
-    "2026-07-29",
-    "2026-08-05",
-    "2026-08-12"
-   ],
-   "organic_sessions_by_week": [
-    21,
-    41,
-    54,
-    55,
-    58
-   ],
-   "impressions_by_week": [
-    4000,
-    4523,
-    7365,
-    8534,
-    9060
-   ],
-   "impressions_change_pct": 23.0,
-   "sessions_change_pct": 7.4,
-   "sessions_flat": true,
-   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-12), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence.",
-   "first_seen_utc": "2026-08-13T10:36:09Z",
-   "last_alerted_utc": "2026-08-15T07:04:18Z",
-   "state": "escalated"
-  },
-  {
    "id": "revenue_silence",
    "severity": "high",
    "question": "How many days since the last sale, and how much traffic arrived in that time?",
-   "answer": "The `sales` table has NEVER contained a row -- 0 sales, all time. Days since last sale is therefore undefined (null), not a large number. Against that: 1112 sessions in the last 28 days (219 of them organic). Every visitor so far has been free.",
+   "answer": "The `sales` table has NEVER contained a row -- 0 sales, all time. Days since last sale is therefore undefined (null), not a large number. Against that: 1101 sessions in the last 28 days (224 of them organic). Every visitor so far has been free.",
    "why_it_matters": "Rule #1 is revenue. Traffic that produces no sale for weeks is not a marketing problem to optimise around the edges -- it is the whole business failing, and it must be stated plainly instead of being buried under impression charts.",
    "sales_total": 0,
    "days_since_last_sale": null,
-   "sessions_28d": 1112,
-   "organic_sessions_28d": 219,
-   "first_seen_utc": "2026-08-13T10:36:09Z",
-   "last_alerted_utc": "2026-08-13T10:36:09Z",
-   "state": "persisting"
-  },
-  {
-   "id": "signup_vs_usage",
-   "severity": "high",
-   "question": "How many API keys were issued in the last 7 days, and how many API calls were actually made with them?",
-   "answer": "6 API keys issued in the last 7 days against 1 recorded API usage event(s) -- 0 of which were valid calls. Usage/issue ratio 0.17. Distinct signup domains: 6. A key that is never called is not a user. This is the harvesting signature: the endpoint is handing out quota to something that only wants the key.",
-   "why_it_matters": "Keys issued but never used are not signups -- they are email harvesting or credential scraping against a free endpoint. It inflates the lead count, poisons the drip list, and hands an unauthenticated scraper a free quota. A real signup uses the key within hours.",
-   "keys_issued_7d": 6,
-   "usage_events_7d": 1,
-   "valid_usage_events_7d": 0,
-   "usage_per_issue": 0.167,
+   "sessions_28d": 1101,
+   "organic_sessions_28d": 224,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": "2026-08-13T10:36:09Z",
    "state": "persisting"
@@ -294,43 +223,99 @@
    "id": "junk_in_good_positions",
    "severity": "medium",
    "question": "How much of our position 1-10 visibility is junk?",
-   "answer": "36.2% of position 1-10 impressions are junk queries (1084 of 2995 impressions, 112 of 601 queries). Those rankings produce no clicks by construction, so the top-10 footprint is 36% smaller than it looks.",
+   "answer": "36.2% of position 1-10 impressions are junk queries (1135 of 3134 impressions, 119 of 627 queries). Those rankings produce no clicks by construction, so the top-10 footprint is 36% smaller than it looks.",
    "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
-   "good_position_impressions": 2995,
-   "junk_impressions": 1084,
+   "good_position_impressions": 3134,
+   "junk_impressions": 1135,
    "junk_share_pct": 36.2,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": null
   },
   {
+   "id": "bot_kpi_contamination",
+   "severity": "low",
+   "question": "Are the rows counted as \"real human leads\" actually people -- or is a single bot fleet supplying the headline conversion KPI?",
+   "answer": "2 leads carry a human context. 0 of them come from 1 bot fleet(s) -- a user_agent shared across >=5 distinct ip_hash values -- leaving 2 genuine capture(s), 0.0% bot. Fleets: 8 distinct ip_hash / 0 lead rows: \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Ch 2 genuine capture(s) in the last 7 days.",
+   "why_it_matters": "On 2026-08-13 the headline \"26 real human leads\" turned out to be 23 rows from ONE byte-identical user_agent seen across 45 distinct ip_hash values, plus 3 genuine captures. The system had even run a three-fire investigation into why the number was STUCK at 26 without ever asking whether the 26 were people. A KPI that measures a bot sends every downstream decision -- content, pricing, drip, roadmap -- chasing an audience that will never buy anything, and it does it silently, because the number looks healthy.",
+   "headline_leads": 2,
+   "strict_human_leads": 2,
+   "bot_leads": 0,
+   "bot_lead_share_pct": 0.0,
+   "strict_human_leads_7d": 2,
+   "last_strict_human_lead_utc": "2026-08-15T12:04:28",
+   "days_since_last_strict_human_lead": 0,
+   "fleets": [
+    {
+     "distinct_ip_hashes": 8,
+     "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
+    }
+   ],
+   "first_seen_utc": "2026-08-13T11:00:12Z",
+   "last_alerted_utc": "2026-08-13T11:00:12Z"
+  },
+  {
    "id": "geo_anomaly:iran",
    "severity": "low",
    "question": "Is any single country more than 12% of the last 7 days of sessions while engaging with the site in a way that does not look human?",
-   "answer": "Iran = 29.3% of 7d sessions (88 of 300) at 86.4% engagement vs the site average of 56.3% (+30.0 points). 100% of those sessions are Direct/Unassigned. Last 2 days: 30.2% of sessions. KNOWN + MITIGATED: blocked 2026-08-13 via Vercel firewall deny rule, 2 day(s) ago -- the 7d window still contains pre-block traffic, so this is expected to decay. Re-check: if it has not fallen below 12% by 2026-08-20, the rule is not working.",
+   "answer": "Iran = 28.9% of 7d sessions (85 of 294) at 90.6% engagement vs the site average of 57.5% (+33.1 points). 100% of those sessions are Direct/Unassigned. Last 2 days: 32.8% of sessions. KNOWN + MITIGATED: blocked 2026-08-13 via Vercel firewall deny rule, 3 day(s) ago -- the 7d window still contains pre-block traffic, so this is expected to decay. Re-check: if it has not fallen below 12% by 2026-08-20, the rule is not working.",
    "why_it_matters": "A bot farm shows up as one country dominating traffic on Direct/Unassigned with engagement far off the site average -- abnormally HIGH engagement is the giveaway, because real Direct traffic engages LESS than organic, not more. It poisons every metric downstream and can be a scrape/harvest campaign.",
    "country": "Iran",
-   "share_pct_7d": 29.3,
-   "sessions_7d": 88,
-   "engagement_pct": 86.4,
-   "site_engagement_pct": 56.3,
-   "deviation_points": 30.0,
+   "share_pct_7d": 28.9,
+   "sessions_7d": 85,
+   "engagement_pct": 90.6,
+   "site_engagement_pct": 57.5,
+   "deviation_points": 33.1,
    "direct_unassigned_pct": 100.0,
-   "share_pct_last2d": 30.2,
+   "share_pct_last2d": 32.8,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": null
+  },
+  {
+   "id": "growth_plateau",
+   "severity": "low",
+   "question": "Have organic sessions been flat or falling for 3 weeks or more WHILE search impressions rose?",
+   "answer": "No plateau. Over the last 3 weeks organic sessions moved +2% (51 -> 65 -> 52) against +20% on impressions -- sessions are keeping up with visibility, which is the healthy side of this divergence. Full series: w/e 2026-07-16: 20 sessions, 3676 impressions | w/e 2026-07-23: 48 sessions, 5077 impressions | w/e 2026-07-30: 51 sessions, 7974 impressions | w/e 2026-08-06: 65 sessions, 8203 impressions | w/e 2026-08-13: 52 sessions, 9562 impressions",
+   "why_it_matters": "Rising impressions with flat sessions is the signature of \"visible but not clicked\": more content is indexed, more queries match, and none of it converts into a visit. Chasing more content in that state makes the divergence worse. It is only detectable by looking at the two curves TOGETHER, which no existing guard did.",
+   "weeks_ending": [
+    "2026-07-16",
+    "2026-07-23",
+    "2026-07-30",
+    "2026-08-06",
+    "2026-08-13"
+   ],
+   "organic_sessions_by_week": [
+    20,
+    48,
+    51,
+    65,
+    52
+   ],
+   "impressions_by_week": [
+    3676,
+    5077,
+    7974,
+    8203,
+    9562
+   ],
+   "impressions_change_pct": 19.9,
+   "sessions_change_pct": 2.0,
+   "sessions_flat": false,
+   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-13), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence.",
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-15T07:04:18Z"
   },
   {
    "id": "junk_query_share",
    "severity": "low",
    "question": "What share of our impressions comes from queries that are AI/LLM fanout rather than human searches -- and how much of that sits in the GOOD positions we congratulate ourselves for?",
-   "answer": "22.0% of visible query impressions are AI-fanout junk (3032 impressions across 221 queries, all with zero clicks). Denominator is the 13755 impressions GSC exposes at query level = 47% of the 29482 sitewide (the rest are anonymised and cannot be judged). Sample: \"dealerrater\" \"google business profile\" \"third-party reviews\"; \"december 2021\" \"how much does this website cost\"; \"how much does it cost to run this website\" december 2021",
+   "answer": "21.5% of visible query impressions are AI-fanout junk (3103 impressions across 228 queries, all with zero clicks). Denominator is the 14403 impressions GSC exposes at query level = 47% of the 30816 sitewide (the rest are anonymised and cannot be judged). Sample: \"dealerrater\" \"google business profile\" \"third-party reviews\"; \"december 2021\" \"how much does this website cost\"; \"how much does it cost to run this website\" december 2021",
    "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
-   "junk_impressions": 3032,
-   "junk_queries": 221,
-   "visible_query_impressions": 13755,
-   "sitewide_impressions": 29482,
+   "junk_impressions": 3103,
+   "junk_queries": 228,
+   "visible_query_impressions": 14403,
+   "sitewide_impressions": 30816,
    "query_dimension_coverage_pct": 46.7,
-   "junk_share_pct": 22.0,
+   "junk_share_pct": 21.5,
    "sample": [
     "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
     "\"december 2021\" \"how much does this website cost\"",
@@ -340,16 +325,29 @@
    "last_alerted_utc": null
   },
   {
+   "id": "signup_vs_usage",
+   "severity": "low",
+   "question": "How many API keys were issued in the last 7 days, and how many API calls were actually made with them?",
+   "answer": "10 API keys issued in the last 7 days against 4 recorded API usage event(s) -- 2 of which were valid calls. Usage/issue ratio 0.40. Distinct signup domains: 6.",
+   "why_it_matters": "Keys issued but never used are not signups -- they are email harvesting or credential scraping against a free endpoint. It inflates the lead count, poisons the drip list, and hands an unauthenticated scraper a free quota. A real signup uses the key within hours.",
+   "keys_issued_7d": 10,
+   "usage_events_7d": 4,
+   "valid_usage_events_7d": 2,
+   "usage_per_issue": 0.4,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-13T10:36:09Z"
+  },
+  {
    "id": "tracking_reconciliation",
    "severity": "low",
    "question": "Does Search Console agree with Analytics on how many people Google actually sent us, and does Analytics claim MORE visitors than Google says it sent?",
-   "answer": "Search Console: 118 Google clicks (28d). Analytics google/organic: 154 raw (+31% vs GSC), 110 after removing the bot slice (-7%). Within normal drift, so the human-traffic numbers are corroborated by a source the bots do not control.",
+   "answer": "Search Console: 122 Google clicks (28d). Analytics google/organic: 163 raw (+34% vs GSC), 117 after removing the bot slice (-4%). Within normal drift, so the human-traffic numbers are corroborated by a source the bots do not control.",
    "why_it_matters": "These are independent systems: GSC counts clicks at the search result, GA4 counts sessions on the page. GA4 should land slightly BELOW GSC (consent banners, people who leave before the tag loads). GA4 reading ABOVE GSC is structurally impossible for real organic traffic and means the number is inflated. On 2026-08-13 the raw figure was +33% over GSC and the excess was exactly the bot fleet arriving with a google referrer, while the human-filtered figure landed at -4%. So this is two guards in one: it catches a broken analytics tag AND it re-validates the bot filter every day against a source the bots do not control. The owner spotted this reconciliation by hand; it should never have needed a human to notice.",
-   "gsc_clicks": 118,
-   "ga4_raw": 154,
-   "ga4_human": 110,
-   "gap_raw_pct": 30.5,
-   "gap_human_pct": -6.8,
+   "gsc_clicks": 122,
+   "ga4_raw": 163,
+   "ga4_human": 117,
+   "gap_raw_pct": 33.6,
+   "gap_human_pct": -4.1,
    "first_seen_utc": "2026-08-13T11:22:45Z",
    "last_alerted_utc": null
   }
