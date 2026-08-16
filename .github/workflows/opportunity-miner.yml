@@ -1,0 +1,52 @@
+name: opportunity-miner
+# Search Opportunity Engine — the autonomous "what do I optimise next" decision.
+# Reads the committed GSC dump (produced by daily-ops) and ranks striking-distance
+# pages by commercial-intent impressions x proximity-to-page-1, demoting junk /
+# AI-Overview-eaten demand. Output: data/PAGE-OPPORTUNITIES.json. Deterministic,
+# no LLM, no external API. Runs weekly (the dump refreshes daily; opportunities
+# don't move fast enough to mine more often).
+on:
+  schedule:
+    - cron: '15 7 * * 1'   # Mondays 07:15 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Mine opportunities from the GSC dump
+        id: mine
+        continue-on-error: true
+        run: |
+          python3 scripts/opportunity_miner.py | tee mine.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit opportunities snapshot
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "actions@github.com"
+          git add data/PAGE-OPPORTUNITIES.json
+          git diff --staged --quiet || git commit -m "data: page opportunities $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          git push -q origin HEAD:master || {
+            git pull --rebase --autostash -q origin master
+            git push -q origin HEAD:master
+          }
+
+      - name: Fail loud if the miner was blind (missing/stale dump)
+        # exit 2 = the dump is missing or stale beyond threshold, i.e. we'd be
+        # mining nothing. A blind guard must never read green (F29).
+        if: steps.mine.outputs.code == '2'
+        run: |
+          echo "::error::opportunity-miner is BLIND — the GSC dump is missing or stale."
+          echo "Check that daily-ops committed a fresh data/gsc_dump.json."
+          cat mine.log
+          exit 1

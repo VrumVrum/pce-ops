@@ -1,0 +1,593 @@
+{
+ "generated_utc": "2026-08-16T18:45:31Z",
+ "dump_generated": "2026-08-16",
+ "dump_age_days": 0,
+ "totals_28d": {
+  "clicks": 125,
+  "impressions": 31786,
+  "ctr": 0.393,
+  "position": 21.91
+ },
+ "method": "score = tool-intent impressions x proximity-to-page-1. info (AI-Overview-eaten) and junk (LLM query-fanout) impressions are NOT counted. Only commercial/tool queries where a click is winnable.",
+ "opportunity_count": 35,
+ "opportunities": [
+  {
+   "page": "/freelance-website-cost",
+   "position": 13.0,
+   "impressions": 7473,
+   "clicks": 18,
+   "score": 5231.1,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 11,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/restaurant-website-cost",
+   "position": 6.4,
+   "impressions": 1515,
+   "clicks": 16,
+   "score": 1515.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 4,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/website-cost-calculator",
+   "position": 17.8,
+   "impressions": 1043,
+   "clicks": 5,
+   "score": 730.1,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 6,
+   "tool_impr": 6,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "website calculator price",
+     "impr": 6,
+     "pos": 8.2,
+     "clicks": 1
+    }
+   ]
+  },
+  {
+   "page": "/nonprofit-website-cost",
+   "position": 12.3,
+   "impressions": 877,
+   "clicks": 9,
+   "score": 613.9,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/real-estate-website-cost",
+   "position": 11.6,
+   "impressions": 608,
+   "clicks": 4,
+   "score": 608.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/cloudflare-cost-2026",
+   "position": 8.2,
+   "impressions": 2796,
+   "clicks": 1,
+   "score": 419.4,
+   "recommended_action": "noindex / refocus - impressions are LLM-fanout junk, wrong intent",
+   "intent_coverage_impr": 1312,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 1311,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/wcag-accessibility-cost-2026",
+   "position": 21.7,
+   "impressions": 859,
+   "clicks": 4,
+   "score": 300.6,
+   "recommended_action": "capture the tool-intent click (informational share is AI-Overview-eaten)",
+   "intent_coverage_impr": 323,
+   "tool_impr": 5,
+   "info_impr_ai_overview_risk": 14,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "how much does it cost to make a website accessible?",
+     "impr": 3,
+     "pos": 4,
+     "clicks": 0
+    },
+    {
+     "q": "ada pricing",
+     "impr": 1,
+     "pos": 8,
+     "clicks": 0
+    },
+    {
+     "q": "how much do ecommerce accessibility platforms cost for stores with thousands of skus?",
+     "impr": 1,
+     "pos": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/blog/website-builder-comparison-2026",
+   "position": 9.0,
+   "impressions": 290,
+   "clicks": 0,
+   "score": 290.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 6,
+   "tool_impr": 3,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "best website builder software pricing",
+     "impr": 3,
+     "pos": 4.7,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/saas-cost-estimator",
+   "position": 10.5,
+   "impressions": 276,
+   "clicks": 1,
+   "score": 276.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/web-app-development-cost",
+   "position": 45.4,
+   "impressions": 2084,
+   "clicks": 13,
+   "score": 250.1,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/mvp-cost-calculator",
+   "position": 47.0,
+   "impressions": 1787,
+   "clicks": 0,
+   "score": 214.4,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/landing-page-cost",
+   "position": 26.0,
+   "impressions": 602,
+   "clicks": 2,
+   "score": 210.7,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/progressive-web-app-cost-2026",
+   "position": 13.0,
+   "impressions": 293,
+   "clicks": 1,
+   "score": 205.1,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 62,
+   "tool_impr": 7,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "powaweb pricing",
+     "impr": 4,
+     "pos": 59,
+     "clicks": 0
+    },
+    {
+     "q": "hire progressive web app developers",
+     "impr": 1,
+     "pos": 1,
+     "clicks": 0
+    },
+    {
+     "q": "powatag pricing",
+     "impr": 1,
+     "pos": 91,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/law-firm-website-cost",
+   "position": 24.9,
+   "impressions": 584,
+   "clicks": 3,
+   "score": 204.4,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/website-redesign-cost",
+   "position": 27.7,
+   "impressions": 563,
+   "clicks": 3,
+   "score": 197.0,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/ecommerce-cost-calculator",
+   "position": 18.4,
+   "impressions": 281,
+   "clicks": 4,
+   "score": 196.7,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/webflow-vs-framer-cost-2026",
+   "position": 10.2,
+   "impressions": 173,
+   "clicks": 1,
+   "score": 173.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 23,
+   "tool_impr": 21,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 1,
+   "top_commercial_queries": [
+    {
+     "q": "framer vs webflow pricing",
+     "impr": 10,
+     "pos": 8.1,
+     "clicks": 0
+    },
+    {
+     "q": "webflow vs framer pricing",
+     "impr": 10,
+     "pos": 8.3,
+     "clicks": 0
+    },
+    {
+     "q": "framer landing page pricing 2026",
+     "impr": 1,
+     "pos": 6,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/cost/hire/bulgaria",
+   "position": 11.4,
+   "impressions": 152,
+   "clicks": 0,
+   "score": 152.0,
+   "recommended_action": "optimise + internal-link to climb into top-10; add linkable asset",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/healthcare-website-cost",
+   "position": 17.9,
+   "impressions": 212,
+   "clicks": 1,
+   "score": 148.4,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/website-security-cost-2026",
+   "position": 20.1,
+   "impressions": 369,
+   "clicks": 2,
+   "score": 129.2,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/website-cost",
+   "position": 32.9,
+   "impressions": 969,
+   "clicks": 1,
+   "score": 116.3,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/quote-analyzer",
+   "position": 14.9,
+   "impressions": 138,
+   "clicks": 0,
+   "score": 96.6,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/wordpress-website-cost",
+   "position": 42.1,
+   "impressions": 771,
+   "clicks": 0,
+   "score": 92.5,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/web-app-cost-estimation-2026",
+   "position": 18.8,
+   "impressions": 130,
+   "clicks": 0,
+   "score": 91.0,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 122,
+   "tool_impr": 36,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "web app cost estimator",
+     "impr": 36,
+     "pos": 15.7,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/cost/industry/hotel",
+   "position": 14.8,
+   "impressions": 122,
+   "clicks": 2,
+   "score": 85.4,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/magento-website-cost",
+   "position": 48.2,
+   "impressions": 654,
+   "clicks": 0,
+   "score": 78.5,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/shopify-store-cost",
+   "position": 41.1,
+   "impressions": 574,
+   "clicks": 0,
+   "score": 68.9,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/marketplace-cost-estimator",
+   "position": 20.9,
+   "impressions": 196,
+   "clicks": 1,
+   "score": 68.6,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/mobile-app-cost",
+   "position": 34.8,
+   "impressions": 534,
+   "clicks": 1,
+   "score": 64.1,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/klaviyo-cost-2026",
+   "position": 26.8,
+   "impressions": 151,
+   "clicks": 1,
+   "score": 52.8,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 34,
+   "tool_impr": 26,
+   "info_impr_ai_overview_risk": 1,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "klaviyo pricing calculator",
+     "impr": 12,
+     "pos": 34.8,
+     "clicks": 0
+    },
+    {
+     "q": "klaviyo cost calculator",
+     "impr": 7,
+     "pos": 9.1,
+     "clicks": 1
+    },
+    {
+     "q": "klaviyo cdp pricing",
+     "impr": 5,
+     "pos": 63.4,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/woocommerce-website-cost",
+   "position": 26.4,
+   "impressions": 150,
+   "clicks": 3,
+   "score": 52.5,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/calculators",
+   "position": 24.1,
+   "impressions": 149,
+   "clicks": 1,
+   "score": 52.1,
+   "recommended_action": "strengthen content + internal links to reach page 1",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/compare/woocommerce-vs-shopify-cost",
+   "position": 73.9,
+   "impressions": 393,
+   "clicks": 0,
+   "score": 47.2,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 0,
+   "tool_impr": 0,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": []
+  },
+  {
+   "page": "/blog/vercel-cost-2026",
+   "position": 11.1,
+   "impressions": 304,
+   "clicks": 0,
+   "score": 45.6,
+   "recommended_action": "noindex / refocus - impressions are LLM-fanout junk, wrong intent",
+   "intent_coverage_impr": 80,
+   "tool_impr": 1,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 77,
+   "top_commercial_queries": [
+    {
+     "q": "pricing comparison",
+     "impr": 1,
+     "pos": 9,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/",
+   "position": 33.0,
+   "impressions": 245,
+   "clicks": 2,
+   "score": 29.4,
+   "recommended_action": "content/relevance rebuild (ranks far from page 1 despite demand)",
+   "intent_coverage_impr": 167,
+   "tool_impr": 154,
+   "info_impr_ai_overview_risk": 0,
+   "junk_impr": 0,
+   "top_commercial_queries": [
+    {
+     "q": "project price calculator",
+     "impr": 47,
+     "pos": 26.5,
+     "clicks": 0
+    },
+    {
+     "q": "project cost estimator",
+     "impr": 24,
+     "pos": 31.2,
+     "clicks": 0
+    },
+    {
+     "q": "website cost calculator",
+     "impr": 22,
+     "pos": 53.0,
+     "clicks": 0
+    }
+   ]
+  }
+ ]
+}
