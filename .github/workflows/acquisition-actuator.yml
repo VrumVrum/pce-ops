@@ -10,7 +10,15 @@ name: acquisition-actuator
 # already present in the results file. Empty queue = clean green no-op.
 on:
   schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC daily
+    # NEGATIVE-LEARNING THROTTLE (2026-08-16): was daily ('0 10 * * *'). The
+    # channel's entire lifetime output is 1 PR — eferrares/awesome-startup-
+    # resources#56 — still OPEN, unmerged, 0 comments, 4 days on = 0 links
+    # earned (see data/LEARNING.json + data/ACQUISITION-RESULTS.json). Cold
+    # awesome-list PRs without a compelling linkable asset to offer get
+    # ignored, so daily effort here is wasted. Deprioritized to WEEKLY — NOT
+    # deleted: one data point isn't proof it can never work. Revisit / restore
+    # cadence once the Cost Index ships a real asset worth linking.
+    - cron: '0 10 * * 1'   # 10:00 UTC every Monday (was daily)
   workflow_dispatch:
 
 permissions:
