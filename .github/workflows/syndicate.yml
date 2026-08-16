@@ -1,0 +1,87 @@
+name: syndicate
+# Autonomous multi-surface syndication — the owner asked for agents that publish
+# and earn brand surfaces by THEMSELVES, daily, with zero clicks from him.
+#
+# Each run, in one place off the Anthropic platform (so it survives the F29
+# outage class the same way the heartbeat does):
+#   1. dev.to     — publishes the next un-published article from the queue via
+#                   the official API (full post, canonical to the owner domain,
+#                   16 brand mentions). Idempotent via syndication-log.jsonl.
+#   2. Mastodon   — toots each newly-published article once, linking to the
+#                   owner domain. Idempotent via mastodon-log.jsonl.
+# dev.to runs FIRST so Mastodon sees the fresh log entry in the same run.
+#
+# HONESTY: these links are nofollow. The value is a real brand surface + an
+# AI-crawlable citation source (ChatGPT/Perplexity read both), not a dofollow
+# backlink — stated plainly, never oversold. 5 dofollow domains/day is not
+# legitimately automatable; this is the honest maximum: genuine owner-queued
+# content, published once each, never sprayed.
+#
+# Hashnode was evaluated and DROPPED: its GraphQL API went Pro-only on
+# 2026-05-13 (a free token 301s straight to the paywall).
+on:
+  schedule:
+    - cron: '20 13 * * *'   # 13:20 UTC daily (~16:20 Europe/Bucharest)
+  workflow_dispatch:
+
+# Same F33 lesson as routine-heartbeat: the default GITHUB_TOKEN is read-only,
+# so without this the log commit that preserves idempotency would silently fail
+# and every run would re-attempt the same article.
+permissions:
+  contents: write
+
+jobs:
+  syndicate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Publish to every surface
+        id: pub
+        # Both publishers use ONLY the Python stdlib (urllib/json/glob) — no pip
+        # install. continue-on-error so the updated logs are still committed
+        # before we decide pass/fail (mirrors the heartbeat's ordering).
+        continue-on-error: true
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          MASTODON_INSTANCE: https://mastodon.social
+        run: |
+          set +e
+          python3 syndication/devto_publish.py    | tee devto.log ; DEVTO=${PIPESTATUS[0]}
+          python3 syndication/mastodon_publish.py  | tee masto.log ; MASTO=${PIPESTATUS[0]}
+          echo "devto=$DEVTO" >> "$GITHUB_OUTPUT"
+          echo "masto=$MASTO" >> "$GITHUB_OUTPUT"
+          echo "-- exit codes: devto=$DEVTO masto=$MASTO --"
+
+      - name: Commit syndication logs
+        run: |
+          git config user.name  "pce-ops-bot"
+          git config user.email "actions@github.com"
+          git add syndication/syndication-log.jsonl syndication/mastodon-log.jsonl
+          git diff --staged --quiet || git commit -m "data: syndication $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash -q origin master || true
+          # One retry for a concurrent-push race, then FAIL LOUDLY — never the old
+          # silent `|| echo skipped` that let F33 land nothing for days.
+          git push -q origin HEAD:master || {
+            git pull --rebase --autostash -q origin master
+            git push -q origin HEAD:master
+          }
+
+      - name: Fail loudly on a real publish failure or a blind (missing-secret) run
+        # exit 0 = published OR nothing-to-do (both healthy). exit 1 = a live
+        # publish/toot FAILED. exit 2 = a secret is missing, i.e. the run is BLIND
+        # — and a blind guard must never read green (the F29 discipline).
+        if: steps.pub.outputs.devto != '0' || steps.pub.outputs.masto != '0'
+        run: |
+          echo "::error::syndication run is not healthy (devto=${{ steps.pub.outputs.devto }} masto=${{ steps.pub.outputs.masto }})."
+          echo "  exit 1 = a live publish/toot failed (check the API response below)."
+          echo "  exit 2 = a repo secret (DEVTO_API_KEY / MASTODON_TOKEN) is missing -> the run is BLIND."
+          echo ""
+          echo "--- dev.to ---";   cat devto.log
+          echo "--- mastodon ---"; cat masto.log
+          exit 1
