@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-17T05:09:16+00:00",
+ "generated_utc": "2026-08-17T16:56:55+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
  "gsc_generated": "2026-08-17",
@@ -944,7 +944,9 @@
    "target_paths": [
     "/landing-page-cost",
     "/blog/plumber-website-cost-2026",
-    "/blog/hvac-company-website-cost-2026"
+    "/blog/hvac-company-website-cost-2026",
+    "/mvp-cost-calculator",
+    "/website-redesign-cost"
    ],
    "delta_prev_28d": null,
    "proposed": "needs-routine-judgment",
@@ -963,11 +965,21 @@
      "pages_matched": 1,
      "impressions_28d": 7,
      "clicks_28d": 0
+    },
+    "/mvp-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 1803,
+     "clicks_28d": 0
+    },
+    "/website-redesign-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 563,
+     "clicks_28d": 3
     }
    },
    "totals_28d": {
-    "impressions": 621,
-    "clicks": 2
+    "impressions": 2987,
+    "clicks": 5
    }
   },
   {
@@ -1026,7 +1038,8 @@
     "/compare/*",
     "/cost/app-like",
     "/",
-    "/cost/*"
+    "/cost/*",
+    "/cost/ai/*"
    ],
    "delta_prev_28d": null,
    "proposed": "needs-routine-judgment",
@@ -1065,10 +1078,15 @@
      "pages_matched": 246,
      "impressions_28d": 2087,
      "clicks_28d": 16
+    },
+    "/cost/ai/*": {
+     "pages_matched": 2,
+     "impressions_28d": 7,
+     "clicks_28d": 0
     }
    },
    "totals_28d": {
-    "impressions": 3276,
+    "impressions": 3283,
     "clicks": 29
    }
   },

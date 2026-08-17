@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-17T05:09:08+00:00",
+ "generated_utc": "2026-08-17T16:56:48+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,6 +15,134 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
+  "pce-tech-scan": {
+   "runs_30d": 5,
+   "reports_filed": 5,
+   "prompt_critiques_present": 5,
+   "commits_attributable": 10,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": []
+  },
+  "pce-operating-loop": {
+   "runs_30d": 12,
+   "reports_filed": 12,
+   "prompt_critiques_present": 11,
+   "commits_attributable": 18,
+   "failed_runs": 5,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": [
+    "pce-operating-loop (CEO Brain)"
+   ]
+  },
+  "pce-authority-traffic": {
+   "runs_30d": 5,
+   "reports_filed": 5,
+   "prompt_critiques_present": 5,
+   "commits_attributable": 9,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": [
+    "pce-authority-traffic (Acquisition Engine)"
+   ]
+  },
+  "pce-link-hunter": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 4,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": []
+  },
+  "pce-revenue-executor": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 3,
+   "failed_runs": 1,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": []
+  },
+  "pce-growth-engine": {
+   "runs_30d": 5,
+   "reports_filed": 5,
+   "prompt_critiques_present": 2,
+   "commits_attributable": 9,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": []
+  },
+  "STEP 0": {
+   "runs_30d": null,
+   "reports_filed": 2,
+   "prompt_critiques_present": 0,
+   "commits_attributable": 33,
+   "failed_runs": 0,
+   "stamps_unparsed": 2,
+   "last_report": null,
+   "aliases_seen": []
+  },
+  "STEP 1": {
+   "runs_30d": null,
+   "reports_filed": 3,
+   "prompt_critiques_present": 0,
+   "commits_attributable": 16,
+   "failed_runs": 0,
+   "stamps_unparsed": 3,
+   "last_report": null,
+   "aliases_seen": []
+  },
+  "STEP 2": {
+   "runs_30d": null,
+   "reports_filed": 3,
+   "prompt_critiques_present": 0,
+   "commits_attributable": 10,
+   "failed_runs": 0,
+   "stamps_unparsed": 3,
+   "last_report": null,
+   "aliases_seen": []
+  },
+  "STEP 3": {
+   "runs_30d": null,
+   "reports_filed": 4,
+   "prompt_critiques_present": 4,
+   "commits_attributable": 5,
+   "failed_runs": 0,
+   "stamps_unparsed": 4,
+   "last_report": null,
+   "aliases_seen": []
+  },
+  "pce-morning-brief": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
+   "commits_attributable": 14,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": [
+    "GROWTH MORNING BRIEF"
+   ]
+  },
+  "pce-seo-audit": {
+   "runs_30d": 1,
+   "reports_filed": 1,
+   "prompt_critiques_present": 1,
+   "commits_attributable": 5,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-17",
+   "aliases_seen": [
+    "pce-seo-audit (Adversarial Recurring Audit)"
+   ]
+  },
   "pce-supervisor": {
    "runs_30d": 8,
    "reports_filed": 8,
@@ -28,33 +156,11 @@
     "fleet-verifier (desktop, on-demand)"
    ]
   },
-  "pce-operating-loop": {
-   "runs_30d": 11,
-   "reports_filed": 11,
-   "prompt_critiques_present": 10,
-   "commits_attributable": 17,
-   "failed_runs": 4,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-17",
-   "aliases_seen": [
-    "pce-operating-loop (CEO Brain)"
-   ]
-  },
   "pce-content-engine": {
    "runs_30d": 4,
    "reports_filed": 4,
    "prompt_critiques_present": 4,
-   "commits_attributable": 12,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-16",
-   "aliases_seen": []
-  },
-  "pce-tech-scan": {
-   "runs_30d": 4,
-   "reports_filed": 4,
-   "prompt_critiques_present": 4,
-   "commits_attributable": 9,
+   "commits_attributable": 13,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-16",
@@ -120,68 +226,6 @@
    "last_report": null,
    "aliases_seen": []
   },
-  "STEP 3": {
-   "runs_30d": null,
-   "reports_filed": 3,
-   "prompt_critiques_present": 3,
-   "commits_attributable": 3,
-   "failed_runs": 0,
-   "stamps_unparsed": 3,
-   "last_report": null,
-   "aliases_seen": []
-  },
-  "pce-growth-engine": {
-   "runs_30d": 4,
-   "reports_filed": 4,
-   "prompt_critiques_present": 2,
-   "commits_attributable": 9,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-16",
-   "aliases_seen": []
-  },
-  "STEP 0": {
-   "runs_30d": null,
-   "reports_filed": 1,
-   "prompt_critiques_present": 0,
-   "commits_attributable": 32,
-   "failed_runs": 0,
-   "stamps_unparsed": 1,
-   "last_report": null,
-   "aliases_seen": []
-  },
-  "STEP 1": {
-   "runs_30d": null,
-   "reports_filed": 2,
-   "prompt_critiques_present": 0,
-   "commits_attributable": 14,
-   "failed_runs": 0,
-   "stamps_unparsed": 2,
-   "last_report": null,
-   "aliases_seen": []
-  },
-  "STEP 2": {
-   "runs_30d": null,
-   "reports_filed": 2,
-   "prompt_critiques_present": 0,
-   "commits_attributable": 7,
-   "failed_runs": 0,
-   "stamps_unparsed": 2,
-   "last_report": null,
-   "aliases_seen": []
-  },
-  "pce-authority-traffic": {
-   "runs_30d": 4,
-   "reports_filed": 4,
-   "prompt_critiques_present": 4,
-   "commits_attributable": 7,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-15",
-   "aliases_seen": [
-    "pce-authority-traffic (Acquisition Engine)"
-   ]
-  },
   "pce-deep-verify": {
    "runs_30d": 2,
    "reports_filed": 2,
@@ -201,18 +245,6 @@
    "stamps_unparsed": 0,
    "last_report": "2026-08-13",
    "aliases_seen": []
-  },
-  "pce-morning-brief": {
-   "runs_30d": 1,
-   "reports_filed": 1,
-   "prompt_critiques_present": 1,
-   "commits_attributable": 14,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-13",
-   "aliases_seen": [
-    "GROWTH MORNING BRIEF"
-   ]
   },
   "pce-keyword-scout": {
    "runs_30d": 1,

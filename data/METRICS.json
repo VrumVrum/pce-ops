@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-17T05:08:49.922361Z",
+  "generated_utc": "2026-08-17T16:56:30.756529Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-17",
@@ -47,15 +47,15 @@
     ]
   },
   "supabase": {
-    "leads_total": 41,
+    "leads_total": 43,
     "leads_by_context": {
-      "api_key": 11,
-      "sys:lastrun": 28,
+      "sys:lastrun": 29,
+      "api_key": 12,
       "e2e_walk": 1,
       "results": 1
     },
     "real_human_leads": 2,
-    "api_keys": 11,
+    "api_keys": 12,
     "real_human_leads_strict": 2,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
@@ -64,9 +64,9 @@
     "real_human_leads_strict_28d": 2,
     "bot_lead_fleets": [
       {
-        "distinct_ip_hashes": 9,
+        "distinct_ip_hashes": 10,
         "lead_rows": 0,
-        "rows_all_contexts": 9,
+        "rows_all_contexts": 10,
         "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
       }
     ],
@@ -75,7 +75,7 @@
     "drip_stages": {},
     "affiliate_clicks": {
       "total": 50,
-      "last7d": 16,
+      "last7d": 15,
       "by_slug": {
         "fiverr": 26,
         "shopify": 9,
