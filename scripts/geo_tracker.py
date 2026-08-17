@@ -333,6 +333,46 @@ def run_anthropic():
     return {'coverage': 'not_measured', 'reason': 'anthropic web-citation check not implemented'}, {}
 
 
+# ---------------------------------------------------------------------------
+# Site-level Ahrefs block (NOT per-query): their v3 API counts, per AI engine,
+# how many AI responses cite the target — the direct measurement of the AI-
+# citation channel. Key added 2026-08-17 (owner); at add time every endpoint
+# returned Unauthorized (likely pending Ahrefs-side verification of the
+# analytics-snippet install shipped the same day), so this block degrades
+# honestly and LIGHTS UP AUTOMATICALLY on the first weekly run after Ahrefs
+# accepts the key. Unauthorized is never reported as "0 citations".
+# ---------------------------------------------------------------------------
+def run_ahrefs_site():
+    key = os.environ.get('AHREFS_API_KEY')
+    if not key:
+        return {'coverage': 'not_measured', 'reason': 'no AHREFS_API_KEY'}
+    def call(path):
+        req = urllib.request.Request(
+            f'https://api.ahrefs.com/v3/{path}',
+            headers={'Authorization': f'Bearer {key}', 'Accept': 'application/json'})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
+    out = {'coverage': 'not_measured'}
+    try:
+        sel = ('chatgpt,google_ai_overviews,google_ai_overviews_keywords,'
+               'google_ai_mode,gemini,perplexity,copilot,grok')
+        data = call('site-explorer/ai-responses-count?select='
+                    + urllib.parse.quote(sel) + '&target='
+                    + urllib.parse.quote(SITE_DOMAIN + '/'))
+        out = {'coverage': 'measured', 'ai_responses_count': data}
+        try:
+            today = datetime.date.today().isoformat()
+            dr = call('site-explorer/domain-rating?target='
+                      + urllib.parse.quote(SITE_DOMAIN) + f'&date={today}')
+            out['domain_rating'] = dr
+        except Exception as e:
+            out['domain_rating_error'] = str(e)[:120]
+    except Exception as e:
+        out = {'coverage': 'not_measured',
+               'reason': f'ahrefs api rejected: {str(e)[:160]}'}
+    return out
+
+
 # Engine registry. Flat per-query fields are taken from the first engine in this
 # order that "measured" that query (bing_web first — it carries competitors).
 ENGINES = [
@@ -409,6 +449,8 @@ def main():
             'top_competitors': [{'domain': d, 'seen_in_queries': n} for d, n in top_comps],
         },
         'engine_status': engine_status,
+        # Site-level direct AI-citation counts from Ahrefs (see run_ahrefs_site).
+        'ahrefs': run_ahrefs_site(),
         'queries': queries_out,
     }
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
