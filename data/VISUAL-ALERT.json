@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-16T05:41:44.552Z",
+  "generated_utc": "2026-08-17T05:48:55.499Z",
   "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -16,7 +16,7 @@
       "page": "/calculator",
       "name": "calculator",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 0.23
     },
     {
       "page": "/website-cost",
