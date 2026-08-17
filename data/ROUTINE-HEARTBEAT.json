@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-17T07:35:16Z",
+ "generated_utc": "2026-08-17T13:23:09Z",
  "all_alive": true,
  "silent": [],
  "routines": {
@@ -8,7 +8,7 @@
    "expected_every_h": 12,
    "alert_after_h": 26,
    "last_report_utc": "2026-08-17T00:27:00Z",
-   "last_commit_utc": "2026-08-17T03:15:00Z",
+   "last_commit_utc": "2026-08-17T09:03:00Z",
    "hours_since": 4.3,
    "silent": false,
    "last_alerted_utc": null
@@ -19,7 +19,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-17T03:15:00Z",
    "last_commit_utc": "2026-08-17T03:15:00Z",
-   "hours_since": 4.3,
+   "hours_since": 10.1,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -29,7 +29,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-16T08:24:00Z",
    "last_commit_utc": "2026-08-17T00:30:00Z",
-   "hours_since": 7.1,
+   "hours_since": 12.9,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -39,7 +39,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-17T06:24:00Z",
    "last_commit_utc": "2026-08-16T19:24:00Z",
-   "hours_since": 1.2,
+   "hours_since": 7.0,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -49,7 +49,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-16T15:21:00Z",
    "last_commit_utc": "2026-08-17T03:15:00Z",
-   "hours_since": 4.3,
+   "hours_since": 10.1,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -57,9 +57,9 @@
    "cron": "0 9 * * 1,4",
    "expected_every_h": 96,
    "alert_after_h": 192,
-   "last_report_utc": "2026-08-10T00:00:00Z",
+   "last_report_utc": "2026-08-17T09:35:00Z",
    "last_commit_utc": "2026-08-17T00:30:00Z",
-   "hours_since": 7.1,
+   "hours_since": 3.8,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -69,7 +69,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-15T00:00:00Z",
    "last_commit_utc": "2026-08-15T14:06:00Z",
-   "hours_since": 41.5,
+   "hours_since": 47.3,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -79,7 +79,7 @@
    "alert_after_h": 204,
    "last_report_utc": "2026-08-17T05:30:00Z",
    "last_commit_utc": "2026-08-17T05:34:00Z",
-   "hours_since": 2.0,
+   "hours_since": 7.8,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   }
