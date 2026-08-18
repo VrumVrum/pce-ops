@@ -1,0 +1,104 @@
+name: bot-pr-autopilot
+# Closes the last mile of the CONTENT pipeline, which runs in the OTHER repo.
+#
+# WHY THIS EXISTS (2026-08-18): the cloud routines write articles, open a PR on a
+# `bot/article-*` branch in VrumVrum/scopebit, self-verify (build + honesty gate),
+# then subscribe a check-in that re-arms hourly forever reporting "still open,
+# nothing changed" — because the final merge waited on a human click. PR #108 sat
+# green and unmerged for 26 hours, #109 for 2. Articles were being written and
+# never shipped: "everything is automatic" was false at exactly one step.
+#
+# WHY IT LIVES HERE AND NOT IN scopebit: every workflow ever attempted in
+# scopebit ends in `startup_failure` (_test-actions 2026-07-29, an unnamed run
+# 2026-07-21, three dispatches on 2026-08-18) — the signature of an exhausted
+# private-repo Actions quota. pce-ops is public, so its minutes are free. It
+# already reaches into scopebit with GH_PAT for the acquisition actuator; this is
+# the same proven pattern.
+#
+# CHEAP BY DESIGN: it does NOT rebuild — Vercel already builds every scopebit PR
+# and that preview check IS the build proof. This polls for that check, runs the
+# fast honesty gate (§3) on the PR head, and merges.
+on:
+  schedule:
+    - cron: '25 */2 * * *'   # every 2h — a bot PR is never more than 2h from shipping
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  autopilot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate and merge eligible bot PRs in scopebit
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          TARGET: VrumVrum/scopebit
+        run: |
+          set -uo pipefail
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::error::GH_PAT missing — cannot reach $TARGET. Blind run, failing loud."
+            exit 1
+          fi
+
+          PRS=$(gh pr list --repo "$TARGET" --state open --limit 20 \
+                --json number,headRefName \
+                -q '.[] | select(.headRefName | startswith("bot/article-")) | .number')
+          if [ -z "$PRS" ]; then echo "no open bot/article-* PRs — nothing to ship"; exit 0; fi
+
+          WORK=$(mktemp -d)
+          git clone -q --depth 50 "https://x-access-token:${GH_TOKEN}@github.com/${TARGET}.git" "$WORK/repo"
+          cd "$WORK/repo"
+
+          MERGED=0
+          for PR in $PRS; do
+            echo "::group::PR #$PR"
+            META=$(gh pr view "$PR" --repo "$TARGET" --json headRefName,isDraft,mergeable,state,files)
+            BRANCH=$(echo "$META" | jq -r .headRefName)
+            [ "$(echo "$META" | jq -r .state)" = "OPEN" ] || { echo "SKIP: not open"; echo "::endgroup::"; continue; }
+            [ "$(echo "$META" | jq -r .isDraft)" = "false" ] || { echo "SKIP: draft"; echo "::endgroup::"; continue; }
+            if [ "$(echo "$META" | jq -r .mergeable)" != "MERGEABLE" ]; then
+              echo "SKIP: conflicts — a human resolves those"; echo "::endgroup::"; continue
+            fi
+
+            # PATH ALLOWLIST — content and its wiring only. A bot PR touching the
+            # pricing config (§6 frozen canon), the calculation engines, build
+            # config or CI is NEVER auto-merged; it gets a comment instead.
+            BAD=$(echo "$META" | jq -r '.files[].path' | grep -vE \
+              '^(docs/|src/content/|public/|automation/|src/app/.*/(page|layout)\.tsx$|src/lib/sitemap-data\.ts$)' || true)
+            if [ -n "$BAD" ]; then
+              echo "SKIP: outside content allowlist:"; echo "$BAD"
+              BODY=$(printf 'autopilot: not auto-merged — this PR touches files outside the content allowlist (engine / pricing config / build / CI). A human should review it.\n\n%s\n' "$BAD")
+              gh pr comment "$PR" --repo "$TARGET" --body "$BODY" || true
+              echo "::endgroup::"; continue
+            fi
+
+            # HONESTY GATE (§3) on the PR's own head.
+            git fetch -q origin "pull/$PR/head:pr-$PR" || { echo "SKIP: fetch failed"; echo "::endgroup::"; continue; }
+            git checkout -q "pr-$PR"
+            if ! bash automation/honesty-check.sh; then
+              echo "SKIP: honesty gate FAILED"
+              gh pr comment "$PR" --repo "$TARGET" --body "autopilot: not auto-merged — automation/honesty-check.sh failed on this branch (§3 no fabricated data). Fix the flagged claim and it merges on the next run." || true
+              git checkout -q master; echo "::endgroup::"; continue
+            fi
+            git checkout -q master
+
+            # BUILD PROOF = Vercel's own preview check. Poll ~6 min; never force-merge.
+            OK=""
+            for i in $(seq 1 12); do
+              ROLLUP=$(gh pr view "$PR" --repo "$TARGET" --json statusCheckRollup \
+                       -q '[.statusCheckRollup[]? | select(.name != null) | "\(.name)=\(.conclusion // .state)"] | join(",")')
+              echo "  checks: ${ROLLUP:-none}"
+              case "$ROLLUP" in *FAILURE*|*ERROR*) echo "SKIP: a check failed"; OK="no"; break ;; esac
+              echo "$ROLLUP" | grep -qiE 'vercel[^=]*=(SUCCESS|success)' && { OK="yes"; break; }
+              sleep 30
+            done
+            [ "$OK" = "yes" ] || { echo "SKIP: no green Vercel build in window"; echo "::endgroup::"; continue; }
+
+            echo "MERGING #$PR ($BRANCH)"
+            if gh pr merge "$PR" --repo "$TARGET" --squash --delete-branch; then
+              MERGED=$((MERGED+1))
+            fi
+            echo "::endgroup::"
+          done
+          echo "merged $MERGED PR(s)"
