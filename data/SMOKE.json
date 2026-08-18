@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-18T05:04:01.151Z",
+  "generated_utc": "2026-08-18T16:59:56.879Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -7,12 +7,12 @@
     {
       "name": "load /",
       "ok": true,
-      "detail": "HTTP 200, 12795 chars, 0 JS err"
+      "detail": "HTTP 200, 13029 chars, 0 JS err"
     },
     {
       "name": "load /calculator",
       "ok": true,
-      "detail": "HTTP 200, 1641 chars, 0 JS err"
+      "detail": "HTTP 200, 1875 chars, 0 JS err"
     },
     {
       "name": "load /tools/rfp-generator",
