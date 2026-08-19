@@ -1,0 +1,28 @@
+{
+ "generated_utc": "2026-08-19T12:27:49Z",
+ "coverage": "measured",
+ "account": {
+  "Id": "7193504",
+  "Name": "Florin Florea",
+  "Status": "ACTIVE",
+  "Currency": "USD"
+ },
+ "programs": [
+  {
+   "name": "Shopify",
+   "id": "13624",
+   "status": "Active",
+   "tracking_link": "https://shopify.pxf.io/c/7193504/1061744/13624"
+  }
+ ],
+ "programs_active": [
+  "Shopify"
+ ],
+ "conversions": {
+  "count": 0,
+  "total_payout": 0.0,
+  "currency": "USD",
+  "by_program": {},
+  "window": "all time (Impact caps dated queries at 45 days; undated returns full history)"
+ }
+}

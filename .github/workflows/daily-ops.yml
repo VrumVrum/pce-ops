@@ -60,6 +60,16 @@ jobs:
           BING_API_KEY: ${{ secrets.BING_API_KEY }}
         run: python scripts/bing.py || echo "Bing step failed (non-fatal)"
 
+      - name: Impact.com affiliate eyes (programs + real commission)
+        # The only place affiliate REVENUE exists. provider_clicks counts clicks
+        # leaving the site; whether any earned a cent lives at Impact. Also
+        # catches a program flipping to Active while the site still sends
+        # untracked traffic (partners.ts affiliateUrl: null).
+        env:
+          IMPACT_ACCOUNT_SID: ${{ secrets.IMPACT_ACCOUNT_SID }}
+          IMPACT_AUTH_TOKEN: ${{ secrets.IMPACT_AUTH_TOKEN }}
+        run: python scripts/impact.py || echo "Impact step failed (non-fatal, writes not_measured)"
+
       - name: Routine scorecard (self-improvement loop eyes)
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
