@@ -33,6 +33,24 @@ TEST_EMAIL = re.compile(
     r'florin\.florea84|\+(test|apilive|probe)@'
     r'|^luc328371@gmail\.com$|^john_mamutel@yahoo\.com$', re.I)
 
+# Gmail dot-alias spam (2026-08-19). Gmail ignores dots, so one mailbox can mint
+# unlimited unique-looking addresses: t.hea.k.i.r.a.ti@, b.ill..c.l.em.e.nt.sc.lan@,
+# ja.c.k.s.onjhar.t15@ — eight of these signed up for free API keys in four days
+# and every one landed in the lead count the owner reads. The source hole is now
+# closed in /api/keys and /api/email-capture, but the counter must be able to
+# reject the shape on its own: a restored backup or a new vector must never
+# re-inflate the number. Four+ dots (or any '..', which Gmail does not even
+# accept) in a gmail local part is a generated alias, not a person who typed
+# their own address.
+SPAM_ALIAS = re.compile(r'^(?=[^@]*\.[^@]*\.[^@]*\.[^@]*\.)[^@]+@(gmail|googlemail)\.com$'
+                        r'|^[^@]*\.\.[^@]*@(gmail|googlemail)\.com$', re.I)
+
+
+def is_junk_lead(email: str) -> bool:
+    """True for a row that must never count as a lead (test, friend, or spam alias)."""
+    e = email or ''
+    return bool(TEST_EMAIL.search(e) or SPAM_ALIAS.match(e))
+
 # --- bot-fleet fingerprint (F30, 2026-08-13) --------------------------------
 # Every `leads` row carries the submitter's user_agent AND ip_hash, in the same
 # row, and `real_human_leads` looked at NEITHER: it filtered on context name and
@@ -143,7 +161,7 @@ def supabase():
                      f'&order=created_at.desc&limit=5000', key)
     rows = json.loads(body)
     from collections import Counter
-    rows = [x for x in rows if not TEST_EMAIL.search(x.get('email') or '')]
+    rows = [x for x in rows if not is_junk_lead(x.get('email'))]
     c = Counter((x.get('context') or '?') for x in rows)
     out['leads_by_context'] = dict(c)
     out['real_human_leads'] = sum(v for k, v in c.items()
