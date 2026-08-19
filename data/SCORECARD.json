@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-19T12:29:44+00:00",
+ "generated_utc": "2026-08-19T16:56:51+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,11 +15,45 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
+  "pce-tech-scan": {
+   "runs_30d": 7,
+   "reports_filed": 7,
+   "prompt_critiques_present": 7,
+   "commits_attributable": 14,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-19",
+   "aliases_seen": []
+  },
+  "pce-authority-traffic": {
+   "runs_30d": 5,
+   "reports_filed": 5,
+   "prompt_critiques_present": 5,
+   "commits_attributable": 10,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-19",
+   "aliases_seen": [
+    "pce-authority-traffic (Acquisition Engine)"
+   ]
+  },
+  "pce-operating-loop": {
+   "runs_30d": 13,
+   "reports_filed": 13,
+   "prompt_critiques_present": 12,
+   "commits_attributable": 21,
+   "failed_runs": 4,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-19",
+   "aliases_seen": [
+    "pce-operating-loop (CEO Brain)"
+   ]
+  },
   "pce-content-engine": {
    "runs_30d": 6,
    "reports_filed": 6,
    "prompt_critiques_present": 6,
-   "commits_attributable": 16,
+   "commits_attributable": 17,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-19",
@@ -49,7 +83,7 @@
    "runs_30d": null,
    "reports_filed": 5,
    "prompt_critiques_present": 0,
-   "commits_attributable": 17,
+   "commits_attributable": 19,
    "failed_runs": 0,
    "stamps_unparsed": 5,
    "last_report": null,
@@ -59,7 +93,7 @@
    "runs_30d": null,
    "reports_filed": 5,
    "prompt_critiques_present": 0,
-   "commits_attributable": 13,
+   "commits_attributable": 15,
    "failed_runs": 0,
    "stamps_unparsed": 5,
    "last_report": null,
@@ -98,28 +132,6 @@
     "fleet-verifier (desktop, on-demand)"
    ]
   },
-  "pce-operating-loop": {
-   "runs_30d": 12,
-   "reports_filed": 12,
-   "prompt_critiques_present": 11,
-   "commits_attributable": 20,
-   "failed_runs": 4,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-19",
-   "aliases_seen": [
-    "pce-operating-loop (CEO Brain)"
-   ]
-  },
-  "pce-tech-scan": {
-   "runs_30d": 6,
-   "reports_filed": 6,
-   "prompt_critiques_present": 6,
-   "commits_attributable": 12,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-18",
-   "aliases_seen": []
-  },
   "pce-keyword-scout": {
    "runs_30d": 1,
    "reports_filed": 1,
@@ -140,18 +152,6 @@
    "last_report": "2026-08-18",
    "aliases_seen": []
   },
-  "pce-authority-traffic": {
-   "runs_30d": 4,
-   "reports_filed": 4,
-   "prompt_critiques_present": 4,
-   "commits_attributable": 9,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-17",
-   "aliases_seen": [
-    "pce-authority-traffic (Acquisition Engine)"
-   ]
-  },
   "pce-revenue-executor": {
    "runs_30d": 1,
    "reports_filed": 1,
@@ -166,7 +166,7 @@
    "runs_30d": 2,
    "reports_filed": 2,
    "prompt_critiques_present": 2,
-   "commits_attributable": 11,
+   "commits_attributable": 10,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-17",
@@ -210,7 +210,7 @@
    "runs_30d": null,
    "reports_filed": 1,
    "prompt_critiques_present": 0,
-   "commits_attributable": 5,
+   "commits_attributable": 6,
    "failed_runs": 0,
    "stamps_unparsed": 1,
    "last_report": null,
