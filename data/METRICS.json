@@ -1,38 +1,38 @@
 {
-  "generated_utc": "2026-08-18T16:58:30.825805Z",
+  "generated_utc": "2026-08-19T05:02:47.203235Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-18",
+    "generated": "2026-08-19",
     "totals_28d": {
-      "clicks": 122,
-      "impressions": 32995,
+      "clicks": 120,
+      "impressions": 32429,
       "ctr": 0.37,
-      "position": 21.76
+      "position": 21.6
     },
     "totals_7d": {
-      "clicks": 25,
-      "impressions": 10620,
-      "ctr": 0.235,
-      "position": 21.96
+      "clicks": 20,
+      "impressions": 9307,
+      "ctr": 0.215,
+      "position": 21.95
     },
     "totals_90d": {
       "clicks": 169,
-      "impressions": 54323,
+      "impressions": 54289,
       "ctr": 0.311,
-      "position": 24.95
+      "position": 24.92
     },
     "junk_28d": {
-      "impressions": 518,
-      "queries": 106,
+      "impressions": 513,
+      "queries": 104,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
-        "\"december 2021\" \"how much does this website cost\"",
-        "\"nonprofit website redesign\""
+        "\"stripe connect\" payouts \"tutoring platform\"",
+        "cloudflare bot management pricing official 2026"
       ]
     },
     "totals_28d_clean": {
-      "clicks": 122,
-      "impressions": 32477,
+      "clicks": 120,
+      "impressions": 31916,
       "ctr": 0.376
     },
     "citation_floor_alerts": [
@@ -47,15 +47,15 @@
     ]
   },
   "supabase": {
-    "leads_total": 52,
+    "leads_total": 58,
     "leads_by_context": {
-      "api_key": 20,
+      "api_key": 26,
       "sys:lastrun": 30,
       "e2e_walk": 1,
       "results": 1
     },
     "real_human_leads": 2,
-    "api_keys": 20,
+    "api_keys": 26,
     "real_human_leads_strict": 2,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
@@ -64,9 +64,9 @@
     "real_human_leads_strict_28d": 2,
     "bot_lead_fleets": [
       {
-        "distinct_ip_hashes": 18,
+        "distinct_ip_hashes": 22,
         "lead_rows": 0,
-        "rows_all_contexts": 18,
+        "rows_all_contexts": 24,
         "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
       }
     ],
@@ -134,17 +134,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 7788,
+      "impressions": 7695,
       "clicks": 17
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1596,
+      "impressions": 1574,
       "clicks": 16
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 955,
+      "impressions": 937,
       "clicks": 11
     }
   }
