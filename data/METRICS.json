@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-08-20T17:02:03.007841Z",
+  "generated_utc": "2026-08-21T05:05:13.489071Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-20",
+    "generated": "2026-08-21",
     "totals_28d": {
-      "clicks": 123,
-      "impressions": 34406,
-      "ctr": 0.357,
-      "position": 21.33
+      "clicks": 120,
+      "impressions": 33509,
+      "ctr": 0.358,
+      "position": 21.19
     },
     "totals_7d": {
-      "clicks": 27,
-      "impressions": 10580,
-      "ctr": 0.255,
-      "position": 21.87
+      "clicks": 23,
+      "impressions": 9102,
+      "ctr": 0.253,
+      "position": 22.29
     },
     "totals_90d": {
       "clicks": 178,
-      "impressions": 57026,
+      "impressions": 56991,
       "ctr": 0.312,
-      "position": 24.64
+      "position": 24.61
     },
     "junk_28d": {
       "impressions": 558,
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 123,
-      "impressions": 33848,
-      "ctr": 0.363
+      "clicks": 120,
+      "impressions": 32951,
+      "ctr": 0.364
     },
     "citation_floor_alerts": [
       {
@@ -47,15 +47,15 @@
     ]
   },
   "supabase": {
-    "leads_total": 63,
+    "leads_total": 67,
     "leads_by_context": {
-      "api_key": 27,
+      "api_key": 31,
       "sys:lastrun": 32,
       "e2e_walk": 1,
       "results": 1
     },
     "real_human_leads": 2,
-    "api_keys": 27,
+    "api_keys": 31,
     "real_human_leads_strict": 2,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
@@ -64,9 +64,9 @@
     "real_human_leads_strict_28d": 2,
     "bot_lead_fleets": [
       {
-        "distinct_ip_hashes": 25,
+        "distinct_ip_hashes": 28,
         "lead_rows": 0,
-        "rows_all_contexts": 25,
+        "rows_all_contexts": 29,
         "user_agent": "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\""
       }
     ],
@@ -74,20 +74,20 @@
     "build_intent_count": 0,
     "drip_stages": {},
     "affiliate_clicks": {
-      "total": 53,
-      "last7d": 15,
+      "total": 55,
+      "last7d": 17,
       "by_slug": {
-        "fiverr": 27,
+        "fiverr": 28,
+        "shopify": 11,
         "wix": 10,
-        "shopify": 10,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 68,
-      "excluded_by_is_bot_flag": 15,
+      "rows_before_bot_filter": 72,
+      "excluded_by_is_bot_flag": 17,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 5,
-      "ip_hash_coverage_pct": 8.8,
-      "note": "user_ip_hash is NULL on 62 of 68 rows (9% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 15 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 9,
+      "ip_hash_coverage_pct": 13.9,
+      "note": "user_ip_hash is NULL on 62 of 72 rows (14% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 17 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -134,18 +134,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8300,
-      "clicks": 19
+      "impressions": 8088,
+      "clicks": 18
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1615,
-      "clicks": 14
+      "impressions": 1553,
+      "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 981,
-      "clicks": 11
+      "impressions": 936,
+      "clicks": 10
     }
   }
 }
