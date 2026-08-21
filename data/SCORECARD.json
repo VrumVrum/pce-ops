@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-21T05:05:33+00:00",
+ "generated_utc": "2026-08-21T17:02:19+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,6 +15,18 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
+  "pce-authority-traffic": {
+   "runs_30d": 5,
+   "reports_filed": 5,
+   "prompt_critiques_present": 5,
+   "commits_attributable": 11,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-21",
+   "aliases_seen": [
+    "pce-authority-traffic (Acquisition Engine)"
+   ]
+  },
   "pce-tech-scan": {
    "runs_30d": 7,
    "reports_filed": 7,
@@ -106,18 +118,6 @@
    "stamps_unparsed": 7,
    "last_report": null,
    "aliases_seen": []
-  },
-  "pce-authority-traffic": {
-   "runs_30d": 4,
-   "reports_filed": 4,
-   "prompt_critiques_present": 4,
-   "commits_attributable": 10,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-19",
-   "aliases_seen": [
-    "pce-authority-traffic (Acquisition Engine)"
-   ]
   },
   "pce-deep-verify": {
    "runs_30d": 2,
