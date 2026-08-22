@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-08-21T17:02:02.634540Z",
+  "generated_utc": "2026-08-22T05:00:06.485825Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-21",
+    "generated": "2026-08-22",
     "totals_28d": {
-      "clicks": 130,
-      "impressions": 35150,
-      "ctr": 0.37,
-      "position": 20.93
+      "clicks": 128,
+      "impressions": 34234,
+      "ctr": 0.374,
+      "position": 20.85
     },
     "totals_7d": {
-      "clicks": 33,
-      "impressions": 10743,
-      "ctr": 0.307,
-      "position": 21.27
+      "clicks": 30,
+      "impressions": 9275,
+      "ctr": 0.323,
+      "position": 21.22
     },
     "totals_90d": {
       "clicks": 188,
-      "impressions": 58632,
+      "impressions": 58568,
       "ctr": 0.321,
-      "position": 24.36
+      "position": 24.31
     },
     "junk_28d": {
       "impressions": 586,
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 130,
-      "impressions": 34564,
-      "ctr": 0.376
+      "clicks": 128,
+      "impressions": 33648,
+      "ctr": 0.38
     },
     "citation_floor_alerts": [
       {
@@ -74,20 +74,20 @@
     "build_intent_count": 0,
     "drip_stages": {},
     "affiliate_clicks": {
-      "total": 55,
-      "last7d": 17,
+      "total": 56,
+      "last7d": 16,
       "by_slug": {
-        "fiverr": 28,
+        "fiverr": 29,
         "shopify": 11,
         "wix": 10,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 72,
-      "excluded_by_is_bot_flag": 17,
+      "rows_before_bot_filter": 74,
+      "excluded_by_is_bot_flag": 18,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 9,
-      "ip_hash_coverage_pct": 13.9,
-      "note": "user_ip_hash is NULL on 62 of 72 rows (14% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 17 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 11,
+      "ip_hash_coverage_pct": 16.2,
+      "note": "user_ip_hash is NULL on 62 of 74 rows (16% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -123,8 +123,8 @@
       "clicks": 6
     },
     "/cost/industry/": {
-      "pages_with_data": 177,
-      "impressions": 1389,
+      "pages_with_data": 174,
+      "impressions": 1355,
       "clicks": 8
     },
     "/software-development-budget-2027": {
@@ -134,17 +134,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8534,
+      "impressions": 8363,
       "clicks": 19
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1640,
+      "impressions": 1585,
       "clicks": 14
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 987,
+      "impressions": 958,
       "clicks": 11
     }
   }

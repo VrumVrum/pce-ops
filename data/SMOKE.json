@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-21T17:03:12.642Z",
+  "generated_utc": "2026-08-22T05:01:14.443Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -37,7 +37,7 @@
     {
       "name": "load /cost/hire/india",
       "ok": true,
-      "detail": "HTTP 200, 7840 chars, 0 JS err"
+      "detail": "HTTP 200, 7857 chars, 0 JS err"
     },
     {
       "name": "uber calculator reacts to clicks",

@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-21T17:02:19+00:00",
+ "generated_utc": "2026-08-22T05:00:22+00:00",
  "source": {
   "reports": "https://raw.githubusercontent.com/VrumVrum/scopebit/master/docs/OS/ledger/routine-reports.md",
   "commits": "https://api.github.com/repos/VrumVrum/scopebit/commits?since=30d"
@@ -15,6 +15,41 @@
  "note": "runs_30d counts report headers in routine-reports.md, NOT trigger fires \u2014 a run that filed no report is invisible here (failure class F10). null = data not derivable, never a fabricated count.",
  "commits_30d_total": 300,
  "routines": {
+  "pce-deep-verify": {
+   "runs_30d": 2,
+   "reports_filed": 2,
+   "prompt_critiques_present": 2,
+   "commits_attributable": 9,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-22",
+   "aliases_seen": []
+  },
+  "pce-supervisor": {
+   "runs_30d": 7,
+   "reports_filed": 7,
+   "prompt_critiques_present": 7,
+   "commits_attributable": 37,
+   "failed_runs": 0,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-22",
+   "aliases_seen": [
+    "pce-supervisor (Verifier)",
+    "fleet-verifier (desktop, on-demand)"
+   ]
+  },
+  "pce-operating-loop": {
+   "runs_30d": 12,
+   "reports_filed": 12,
+   "prompt_critiques_present": 11,
+   "commits_attributable": 25,
+   "failed_runs": 2,
+   "stamps_unparsed": 0,
+   "last_report": "2026-08-22",
+   "aliases_seen": [
+    "pce-operating-loop (CEO Brain)"
+   ]
+  },
   "pce-authority-traffic": {
    "runs_30d": 5,
    "reports_filed": 5,
@@ -28,26 +63,14 @@
    ]
   },
   "pce-tech-scan": {
-   "runs_30d": 7,
-   "reports_filed": 7,
-   "prompt_critiques_present": 7,
+   "runs_30d": 6,
+   "reports_filed": 6,
+   "prompt_critiques_present": 6,
    "commits_attributable": 15,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-20",
    "aliases_seen": []
-  },
-  "pce-operating-loop": {
-   "runs_30d": 14,
-   "reports_filed": 14,
-   "prompt_critiques_present": 13,
-   "commits_attributable": 23,
-   "failed_runs": 4,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-20",
-   "aliases_seen": [
-    "pce-operating-loop (CEO Brain)"
-   ]
   },
   "pce-revenue-executor": {
    "runs_30d": 2,
@@ -60,9 +83,9 @@
    "aliases_seen": []
   },
   "pce-content-engine": {
-   "runs_30d": 7,
-   "reports_filed": 7,
-   "prompt_critiques_present": 7,
+   "runs_30d": 6,
+   "reports_filed": 6,
+   "prompt_critiques_present": 6,
    "commits_attributable": 17,
    "failed_runs": 0,
    "stamps_unparsed": 0,
@@ -70,10 +93,10 @@
    "aliases_seen": []
   },
   "pce-growth-engine": {
-   "runs_30d": 7,
-   "reports_filed": 7,
-   "prompt_critiques_present": 1,
-   "commits_attributable": 14,
+   "runs_30d": 6,
+   "reports_filed": 6,
+   "prompt_critiques_present": 0,
+   "commits_attributable": 15,
    "failed_runs": 0,
    "stamps_unparsed": 0,
    "last_report": "2026-08-20",
@@ -83,7 +106,7 @@
    "runs_30d": null,
    "reports_filed": 5,
    "prompt_critiques_present": 0,
-   "commits_attributable": 43,
+   "commits_attributable": 45,
    "failed_runs": 0,
    "stamps_unparsed": 5,
    "last_report": null,
@@ -113,34 +136,11 @@
    "runs_30d": null,
    "reports_filed": 7,
    "prompt_critiques_present": 7,
-   "commits_attributable": 10,
+   "commits_attributable": 11,
    "failed_runs": 0,
    "stamps_unparsed": 7,
    "last_report": null,
    "aliases_seen": []
-  },
-  "pce-deep-verify": {
-   "runs_30d": 2,
-   "reports_filed": 2,
-   "prompt_critiques_present": 2,
-   "commits_attributable": 7,
-   "failed_runs": 0,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-19",
-   "aliases_seen": []
-  },
-  "pce-supervisor": {
-   "runs_30d": 8,
-   "reports_filed": 8,
-   "prompt_critiques_present": 8,
-   "commits_attributable": 35,
-   "failed_runs": 1,
-   "stamps_unparsed": 0,
-   "last_report": "2026-08-19",
-   "aliases_seen": [
-    "pce-supervisor (Verifier)",
-    "fleet-verifier (desktop, on-demand)"
-   ]
   },
   "pce-keyword-scout": {
    "runs_30d": 1,
@@ -228,7 +228,7 @@
    "runs_30d": null,
    "reports_filed": 1,
    "prompt_critiques_present": 0,
-   "commits_attributable": 6,
+   "commits_attributable": 8,
    "failed_runs": 0,
    "stamps_unparsed": 1,
    "last_report": null,
@@ -245,13 +245,13 @@
    "aliases_seen": []
   },
   "CONDENSATION": {
-   "runs_30d": 10,
-   "reports_filed": 10,
+   "runs_30d": 12,
+   "reports_filed": 12,
    "prompt_critiques_present": 1,
    "commits_attributable": 7,
    "failed_runs": 1,
    "stamps_unparsed": 0,
-   "last_report": "2026-08-13",
+   "last_report": "2026-08-15",
    "aliases_seen": []
   }
  }
