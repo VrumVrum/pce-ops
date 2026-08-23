@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-23T05:02:36+00:00",
+ "generated_utc": "2026-08-23T16:53:18+00:00",
  "quota": {
   "__type": "UrlSubmissionQuota:#Microsoft.Bing.Webmaster.Api",
   "DailyQuota": 100,
@@ -249,6 +249,24 @@
    "Clicks": 1,
    "Date": "2026-08-14",
    "Impressions": 1,
+   "Query": "what is the cost of a new website for a nonprofit"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 1,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "i have a 700 sku online business. what would it cost to create a website on wordpress and move all data from shopify"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 1,
+   "Date": "2026-08-14",
+   "Impressions": 1,
    "Query": "freelancer rates for full website redesign (15\u201320 pages, ui/ux, admin dashboard, mysql, forms, pdf management, deployment) in malaysia not by hour"
   },
   {
@@ -268,24 +286,6 @@
    "Date": "2026-08-14",
    "Impressions": 1,
    "Query": "why does it cost extra to add a canva pro member to your team reddit"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 1,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "i have a 700 sku online business. what would it cost to create a website on wordpress and move all data from shopify"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 1,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "what is the cost of a new website for a nonprofit"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -321,16 +321,7 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 8,
-   "Query": "estimated development cost for woocommerce vs shopify"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 8,
-   "Query": "europe basic portfolio website landing page ecommerce freelancer price 2026"
+   "Query": "website pricing landing page ecommerce agency 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -348,7 +339,7 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 8,
-   "Query": "vercel pricing hobby pro official"
+   "Query": "whats a good price for a landing page? build with astro"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -357,7 +348,7 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 8,
-   "Query": "website pricing landing page ecommerce agency 2026"
+   "Query": "estimated development cost for woocommerce vs shopify"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -366,7 +357,16 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 8,
-   "Query": "whats a good price for a landing page? build with astro"
+   "Query": "vercel pricing hobby pro official"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 8,
+   "Query": "europe basic portfolio website landing page ecommerce freelancer price 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -398,15 +398,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 5,
-   "Query": "how expensive is an online project in eu vs usa"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -421,6 +412,15 @@
    "Date": "2026-08-14",
    "Impressions": 5,
    "Query": "agency landing page pricing with 2 revisions and monthly content updates"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 5,
+   "Query": "how expensive is an online project in eu vs usa"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -443,6 +443,15 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 3,
+   "Query": "canva team pricing"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 3,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -455,8 +464,35 @@
    "AvgImpressionPosition": 8,
    "Clicks": 0,
    "Date": "2026-08-14",
-   "Impressions": 3,
-   "Query": "canva team pricing"
+   "Impressions": 2,
+   "Query": "landing page cost"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "canva pricing teams non-profit"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 3,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "fix email alert location saving [project] mvp build cost estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "projectestimate.com"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -465,7 +501,7 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 2,
-   "Query": "portfolio redesign cost"
+   "Query": "what would be the rough cost for real-time, two-way integration api between stripe and sage online accounting?"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -488,6 +524,33 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "portfolio redesign cost"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "clickup business plus plan seats"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "is 12000 a good quote from a web agency to produce a wordpress site on a template"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 4,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -506,78 +569,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "landing page price"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "what would be the rough cost for real-time, two-way integration api between stripe and sage accounting?"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "what would be the rough cost for real-time, two-way integration api between stripe and sage online accounting?"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "projectestimate.com"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "canva pro teams"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "provide chart download of prayer time for locations mvp build cost estimate"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "fix email alert location saving [project] mvp build cost estimate"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "is 12000 a good quote from a web agency to produce a wordpress site on a template"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 7,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -587,11 +578,11 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
+   "AvgImpressionPosition": 10,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 2,
-   "Query": "landing page cost"
+   "Query": "calendly"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -614,11 +605,38 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "canva pro teams"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 8,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 2,
-   "Query": "canva pricing teams non-profit"
+   "Query": "landing page price"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "provide chart download of prayer time for locations mvp build cost estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "what would be the rough cost for real-time, two-way integration api between stripe and sage accounting?"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -641,29 +659,83 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "clickup business plus plan seats"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "calendly"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 3,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "machines hosting real cost exists sits future"
+   "Query": "sellanycarfast messaging system up mvp build cost estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "webflow pricing 2026 plans per month framer pricing free mini mini+"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 11,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "shopify cost uk"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "calendly pro"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "notion pricing servizi ets"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "my calendly"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "web design pricing"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "calendly pricing 2026 free standard pro per seat monthly"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "ghost cms pricing plans 2025 2026 ghost pro features"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -672,16 +744,7 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "need to store ip and web agent in tickets mvp build cost estimate"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "canva price increase 2026"
+   "Query": "canva pro cost"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -704,74 +767,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "need to store ip and web agent in tickets mvp build cost estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 4,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "what is the normal hourly cost for a web design"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "how much is an api cost per call for a startup app/site"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "vercel postgres pricinh"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "web design a la carte price list \"image sourcing\" or \"photo sourcing\" add on cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "ghost cms ghost pro pricing plans 2025 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "ghost cms pricing plans 2025 2026 ghost pro features"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "calendly pro"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "notion pricing servizi ets"
+   "Query": "2026 stripe paypal free alternative international payment personal low cost"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -803,6 +812,123 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "italian phrases for travelers"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "how much is canva teams account"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "configurator website tool cost estimate range"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "calendly costs"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "what is the cost difference for support using wix website builder opposed to shopify"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "canva price increase 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "reddit web agency \"maintenance plan\" or \"care plan\" client wordpress \"too expensive\" or \"spreadsheet\" 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "what is the normal hourly cost for a web design"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "how much is an api cost per call for a startup app/site"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "ghost cms ghost pro pricing plans 2025 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "vercel postgres pricinh"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 3,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "machines hosting real cost exists sits future"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 1,
+   "Query": "web design a la carte price list \"image sourcing\" or \"photo sourcing\" add on cost"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 8,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -825,15 +951,6 @@
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "calendly costs"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
    "Query": "vercel kv on hobby"
   },
   {
@@ -844,78 +961,6 @@
    "Date": "2026-08-14",
    "Impressions": 1,
    "Query": "law firm website design costs"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "web design pricing"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "reddit web agency \"maintenance plan\" or \"care plan\" client wordpress \"too expensive\" or \"spreadsheet\" 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "calendly pricing 2026 free standard pro per seat monthly"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "2026 stripe paypal free alternative international payment personal low cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "canva pro cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 11,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "shopify cost uk"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "sellanycarfast messaging system up mvp build cost estimate"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "webflow pricing 2026 plans per month framer pricing free mini mini+"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -956,51 +1001,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "my calendly"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "italian phrases for travelers"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "what is the cost difference for support using wix website builder opposed to shopify"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "how much is canva teams account"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 1,
-   "Query": "configurator website tool cost estimate range"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 2,
    "Clicks": 1,
    "Date": "2026-08-21",
@@ -1019,38 +1019,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 1,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "what should i charge for wordpress site in 2026 as a freelancer in australia"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 1,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "charges for gdpr servies are costly for your website"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 1,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "if i am connecting a website domain is notion or wordpress more cost effective?"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 3,
    "Clicks": 1,
    "Date": "2026-08-21",
    "Impressions": 1,
    "Query": "vercell meterd databsre conneciton costs"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 1,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "what should i charge for wordpress site in 2026 as a freelancer in australia"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1064,15 +1046,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 1,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how to estimate for a pwa"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 4,
    "Clicks": 1,
    "Date": "2026-08-21",
@@ -1082,11 +1055,47 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 1,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "if i am connecting a website domain is notion or wordpress more cost effective?"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 1,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "charges for gdpr servies are costly for your website"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 1,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how to estimate for a pwa"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 19,
    "Query": "canva teams pricing"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 3,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 8,
+   "Query": "portfolio website pricing middle east europe usa 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1109,15 +1118,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 8,
-   "Query": "portfolio website pricing middle east europe usa 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 5,
    "Clicks": 0,
    "Date": "2026-08-21",
@@ -1131,7 +1131,7 @@
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 6,
-   "Query": "marketing website development cost freelancer agency 2026"
+   "Query": "small business website cost custom development vs website builder 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1149,7 +1149,7 @@
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 6,
-   "Query": "small business website cost custom development vs website builder 2026"
+   "Query": "portfolio website pricing middle east 2026 freelancer agency"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1158,7 +1158,7 @@
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 6,
-   "Query": "portfolio website pricing middle east 2026 freelancer agency"
+   "Query": "marketing website development cost freelancer agency 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1181,6 +1181,15 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 4,
+   "Query": "small business contract scope creep statistics"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 3,
    "Clicks": 0,
    "Date": "2026-08-21",
@@ -1199,20 +1208,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 4,
+   "Query": "vercel pricing official pro functions 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 5,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 4,
    "Query": "canva pro official presentation features education pricing brazil 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 4,
-   "Query": "small business contract scope creep statistics"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1226,20 +1235,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 4,
-   "Query": "vercel pricing official pro functions 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 7,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 3,
    "Query": "how much does wealthuniversity.vercel.app cist?"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 3,
+   "Query": "cloudflare pricing calculator"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1256,44 +1265,8 @@
    "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-21",
-   "Impressions": 3,
-   "Query": "cloudflare pricing calculator"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-21",
    "Impressions": 2,
-   "Query": "web security companies cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "canva teams subscription cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "web-based cost calculator"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "canva for teams pricing"
+   "Query": "add pricing make it more transparent mvp build cost estimate"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1316,6 +1289,24 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "frontwalker - estimation cost calculator"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "canva for teams pricing"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 10,
    "Clicks": 0,
    "Date": "2026-08-21",
@@ -1334,6 +1325,15 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 3,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "image fit & optimization improvement for mosquepay mvp build cost estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 2,
    "Clicks": 0,
    "Date": "2026-08-21",
@@ -1343,11 +1343,38 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
+   "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 2,
-   "Query": "qual o setup do servidor da vercel no pano pro 20 dolares"
+   "Query": "\"landing page agency\" (\"contact us\" or \"about us\" or \"contact\" or \"about\") firm contact"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "estimates websites on the internet"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "web security companies cost"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 2,
+   "Query": "web-based cost calculator"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1379,20 +1406,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
+   "AvgImpressionPosition": 9,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 2,
-   "Query": "image fit & optimization improvement for mosquepay mvp build cost estimate"
+   "Query": "canva teams subscription cost"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
+   "AvgImpressionPosition": 4,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 2,
-   "Query": "add pricing make it more transparent mvp build cost estimate"
+   "Query": "qual o setup do servidor da vercel no pano pro 20 dolares"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1415,33 +1442,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "\"landing page agency\" (\"contact us\" or \"about us\" or \"contact\" or \"about\") firm contact"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "estimates websites on the internet"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 2,
-   "Query": "frontwalker - estimation cost calculator"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 5,
    "Clicks": 0,
    "Date": "2026-08-21",
@@ -1460,20 +1460,92 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
+   "AvgImpressionPosition": 10,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "how much would canva enterprise be for a team of 12"
+   "Query": "is canva business per team member"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
+   "AvgImpressionPosition": 8,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "vercel.com blog pricing changes 2026"
+   "Query": "notion pricing 2026 plus business enterprise per member per month ai credits"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "hueseyin sahin cost estimator"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "website builder pricing wix squarespace shopify wordpress cost per month comparison 2025"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much is it for one team member on canva"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much cost headless"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "notion pricing 2026 plus $12 monthly business $24 per seat annual billing"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "mvp estimate"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "canva pro pricing $15 month official 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "guide pricing costs price cost fee sek api automation online"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1487,11 +1559,11 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
+   "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "vercel blob pricing 2026 free tier storage egress cost per gb"
+   "Query": "how much would canva enterprise be for a team of 12"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1514,11 +1586,137 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "airtable stripe vercel paid oss bounty contributor ai 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much do websites cost to buy for a restaurant"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 7,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "canva pro 1year team"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much will it cost my business if i run out of airtable automation runs and need more?"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 1,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much for web app for road emergency cost per year to pay the app designer"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 7,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
    "Query": "one-off framer website build studio flat fee $5000 faq what's included revisions"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 5,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "canva teams how much every team"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how to calculate cost per landing page view"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "canva teams pro"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 8,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "canva pro for teams"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "whats the teirs in canav membership in cost and feature"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "vercel.com blog pricing changes 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "vercel blob pricing 2026 free tier storage egress cost per gb"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 6,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "scope#TAB#$15k realistic?#N##N#new visual direction for the entire site#TAB#\u2705#N##N#redesigned homepage#TAB#\u2705#N##N#redesigned laureate profile template#TAB#\u2705#N##N#better laureate browsing/search presentation#TAB#\u26a0\ufe0f depends on complexity#N##N#improved navigation/mobile ux#TAB#\u2705#N##N#3\u20135 reusable drupal components#TAB#\u2705#N##N#awards/student story template#TAB#\u2705 likely#N##N#basic accessibility/performance improvements#TAB#\u2705#N##N#technical seo fundamentals#TAB#\u2705#N##N#rewrite/migrate all existing content#TAB#\u274c#N##N#completely rebuild drupal/backend#TAB#\u274c#N##N#custom searchable laureate database from scratch#TAB#\u274c#N##N#full gairdner-level bespoke webs"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 2,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much is it to create a url for a portfolio"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1545,16 +1743,34 @@
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "custom real estate website design cost idx agency pricing 2025"
+   "Query": "website price calculator example"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
+   "AvgImpressionPosition": 5,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "how much is a canva teams subscrition for 6 people uk"
+   "Query": "cloudflare cost model 2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "approximate time/cost analysis for corporation to establish a page on an existing website"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 10,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how many team members it worth upgrading from canva business to canva enterprise"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1568,38 +1784,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 9,
+   "Clicks": 0,
+   "Date": "2026-08-21",
+   "Impressions": 1,
+   "Query": "how much would it cost to refresh a website, keeping exisiting wording but changing style and navigation"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 5,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
    "Query": "smart rendering wp engine cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much is it to create a url for a portfolio"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 7,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "canva pro pricing $15 month official 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "airtable stripe vercel paid oss bounty contributor ai 2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1667,92 +1865,11 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "notion pricing 2026 plus $12 monthly business $24 per seat annual billing"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "mvp estimate"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "scope#TAB#$15k realistic?#N##N#new visual direction for the entire site#TAB#\u2705#N##N#redesigned homepage#TAB#\u2705#N##N#redesigned laureate profile template#TAB#\u2705#N##N#better laureate browsing/search presentation#TAB#\u26a0\ufe0f depends on complexity#N##N#improved navigation/mobile ux#TAB#\u2705#N##N#3\u20135 reusable drupal components#TAB#\u2705#N##N#awards/student story template#TAB#\u2705 likely#N##N#basic accessibility/performance improvements#TAB#\u2705#N##N#technical seo fundamentals#TAB#\u2705#N##N#rewrite/migrate all existing content#TAB#\u274c#N##N#completely rebuild drupal/backend#TAB#\u274c#N##N#custom searchable laureate database from scratch#TAB#\u274c#N##N#full gairdner-level bespoke webs"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 8,
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "website price calculator example"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "cloudflare cost model 2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "guide pricing costs price cost fee sek api automation online"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "approximate time/cost analysis for corporation to establish a page on an existing website"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how many team members it worth upgrading from canva business to canva enterprise"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 9,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much would it cost to refresh a website, keeping exisiting wording but changing style and navigation"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much do websites cost to buy for a restaurant"
+   "Query": "custom real estate website design cost idx agency pricing 2025"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1761,79 +1878,7 @@
    "Clicks": 0,
    "Date": "2026-08-21",
    "Impressions": 1,
-   "Query": "canva pro 1year team"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much will it cost my business if i run out of airtable automation runs and need more?"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much for web app for road emergency cost per year to pay the app designer"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "canva teams pro"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "canva pro for teams"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "hueseyin sahin cost estimator"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 1,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "website builder pricing wix squarespace shopify wordpress cost per month comparison 2025"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "is canva business per team member"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 8,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "notion pricing 2026 plus business enterprise per member per month ai credits"
+   "Query": "how much is a canva teams subscrition for 6 people uk"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -1852,51 +1897,6 @@
    "Date": "2026-08-21",
    "Impressions": 1,
    "Query": "how much do web designers make"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "law firm website design cost"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "canva teams how much every team"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 10,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how to calculate cost per landing page view"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "whats the teirs in canav membership in cost and feature"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
-   "AvgImpressionPosition": 5,
-   "Clicks": 0,
-   "Date": "2026-08-21",
-   "Impressions": 1,
-   "Query": "how much is it for one team member on canva"
   }
  ],
  "page_stats": [
@@ -1975,20 +1975,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 83,
-   "Query": "https://projectcostestimator.com/blog/landing-page-pricing-guide-2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 4,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 83,
    "Query": "https://projectcostestimator.com/blog/vercel-cost-2026"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
+   "AvgImpressionPosition": 3,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 83,
+   "Query": "https://projectcostestimator.com/blog/landing-page-pricing-guide-2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -2092,15 +2092,6 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 2,
-   "Clicks": 0,
-   "Date": "2026-08-14",
-   "Impressions": 5,
-   "Query": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026"
-  },
-  {
-   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
-   "AvgClickPosition": -1,
    "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-14",
@@ -2110,11 +2101,11 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 3,
+   "AvgImpressionPosition": 2,
    "Clicks": 0,
    "Date": "2026-08-14",
-   "Impressions": 3,
-   "Query": "https://projectcostestimator.com/cost-index"
+   "Impressions": 5,
+   "Query": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -2137,20 +2128,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
+   "AvgImpressionPosition": 3,
    "Clicks": 0,
    "Date": "2026-08-14",
-   "Impressions": 2,
-   "Query": "https://projectcostestimator.com/blog/cloudflare-cost-2026"
+   "Impressions": 3,
+   "Query": "https://projectcostestimator.com/cost-index"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 4,
+   "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 2,
-   "Query": "https://projectcostestimator.com/restaurant-website-cost"
+   "Query": "https://projectcostestimator.com/blog/website-maintenance-cost-2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -2164,11 +2155,20 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
+   "AvgImpressionPosition": 4,
+   "Clicks": 0,
+   "Date": "2026-08-14",
+   "Impressions": 2,
+   "Query": "https://projectcostestimator.com/restaurant-website-cost"
+  },
+  {
+   "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
+   "AvgClickPosition": -1,
    "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 2,
-   "Query": "https://projectcostestimator.com/blog/website-maintenance-cost-2026"
+   "Query": "https://projectcostestimator.com/blog/cloudflare-cost-2026"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -2191,11 +2191,11 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 6,
+   "AvgImpressionPosition": 11,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "https://projectcostestimator.com/law-firm-website-cost"
+   "Query": "https://projectcostestimator.com/cost/shopify/uk"
   },
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
@@ -2209,16 +2209,16 @@
   {
    "__type": "QueryStats:#Microsoft.Bing.Webmaster.Api",
    "AvgClickPosition": -1,
-   "AvgImpressionPosition": 11,
+   "AvgImpressionPosition": 6,
    "Clicks": 0,
    "Date": "2026-08-14",
    "Impressions": 1,
-   "Query": "https://projectcostestimator.com/cost/shopify/uk"
+   "Query": "https://projectcostestimator.com/law-firm-website-cost"
   }
  ],
  "url_info": {
   "/": {
-   "LastCrawledDate": "2026-08-22",
+   "LastCrawledDate": "2026-08-23",
    "IsPage": true,
    "DocumentSize": 237588,
    "HttpStatus": 0
@@ -2260,9 +2260,9 @@
    "HttpStatus": 0
   },
   "/calculator": {
-   "LastCrawledDate": "2026-08-20",
+   "LastCrawledDate": "2026-08-23",
    "IsPage": true,
-   "DocumentSize": 104865,
+   "DocumentSize": 119808,
    "HttpStatus": 0
   },
   "/blog/nonprofit-website-cost-2026": {

@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-08-23T09:01:59.677255Z",
+  "generated_utc": "2026-08-23T16:53:10.497924Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-23",
     "totals_28d": {
-      "clicks": 118,
-      "impressions": 33708,
-      "ctr": 0.35,
-      "position": 20.66
+      "clicks": 123,
+      "impressions": 35077,
+      "ctr": 0.351,
+      "position": 20.46
     },
     "totals_7d": {
-      "clicks": 23,
-      "impressions": 7876,
-      "ctr": 0.292,
-      "position": 19.86
+      "clicks": 28,
+      "impressions": 9245,
+      "ctr": 0.303,
+      "position": 19.21
     },
     "totals_90d": {
-      "clicks": 190,
-      "impressions": 59723,
-      "ctr": 0.318,
-      "position": 24.07
+      "clicks": 195,
+      "impressions": 61092,
+      "ctr": 0.319,
+      "position": 23.88
     },
     "totals_28d_prev": {
       "clicks": 51,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 587,
-      "queries": 106,
+      "impressions": 593,
+      "queries": 107,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"stripe connect\" payouts \"tutoring platform\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 118,
-      "impressions": 33121,
-      "ctr": 0.356
+      "clicks": 123,
+      "impressions": 34484,
+      "ctr": 0.357
     },
     "citation_floor_alerts": [
       {
@@ -81,7 +81,39 @@
     ]
   },
   "supabase": {
-    "error": "no supabase creds in .env.vercel"
+    "leads_total": 35,
+    "leads_by_context": {
+      "sys:lastrun": 35
+    },
+    "real_human_leads": 0,
+    "api_keys": 0,
+    "real_human_leads_strict": 0,
+    "bot_lead_share": 0.0,
+    "bot_leads": 0,
+    "last_strict_human_lead_utc": null,
+    "real_human_leads_strict_7d": 0,
+    "real_human_leads_strict_28d": 0,
+    "bot_lead_fleets": [],
+    "real_human_leads_note": "real_human_leads (0) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (0) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
+    "build_intent_count": 0,
+    "drip_stages": {},
+    "affiliate_clicks": {
+      "total": 59,
+      "last7d": 9,
+      "by_slug": {
+        "fiverr": 30,
+        "wix": 12,
+        "shopify": 11,
+        "hostinger": 6
+      },
+      "rows_before_bot_filter": 77,
+      "excluded_by_is_bot_flag": 18,
+      "residual_bot_ua_after_filter": 0,
+      "distinct_ip_hashes": 14,
+      "ip_hash_coverage_pct": 19.5,
+      "note": "user_ip_hash is NULL on 62 of 77 rows (19% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+    },
+    "sales_total": 0
   },
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
@@ -106,17 +138,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 574,
+      "impressions": 595,
       "clicks": 0
     },
     "/cost/app-like/": {
-      "pages_with_data": 32,
-      "impressions": 201,
+      "pages_with_data": 33,
+      "impressions": 208,
       "clicks": 6
     },
     "/cost/industry/": {
       "pages_with_data": 164,
-      "impressions": 1170,
+      "impressions": 1193,
       "clicks": 8
     },
     "/software-development-budget-2027": {
@@ -126,18 +158,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8321,
-      "clicks": 18
+      "impressions": 8650,
+      "clicks": 19
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1529,
+      "impressions": 1595,
       "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 931,
-      "clicks": 10
+      "impressions": 972,
+      "clicks": 11
     }
   }
 }
