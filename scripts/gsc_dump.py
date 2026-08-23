@@ -30,10 +30,24 @@ def q(body):
     return json.loads(urllib.request.urlopen(req, data=json.dumps(body).encode()).read())
 
 today = date.today()
-e = (today - timedelta(days=2)).isoformat()
-s28 = (today - timedelta(days=30)).isoformat()
-s90 = (today - timedelta(days=92)).isoformat()
-s7 = (today - timedelta(days=9)).isoformat()
+# GSC ranges are INCLUSIVE on both ends, so a 28-day window is end-27, not
+# end-28. Before 2026-08-23 these were end-28/end-7/end-90, i.e. every "28d"
+# figure the owner read was really 29 days and every "7d" was 8 days.
+_end = today - timedelta(days=2)            # GSC's own reporting lag
+e = _end.isoformat()
+s28 = (_end - timedelta(days=27)).isoformat()
+s90 = (_end - timedelta(days=89)).isoformat()
+s7 = (_end - timedelta(days=6)).isoformat()
+
+# PREVIOUS, NON-OVERLAPPING periods — the only honest baseline for a trend.
+# The daily report used to compare against its own stored snapshot from ~8 days
+# earlier, so two 28-day windows shared 20 days and any real movement was
+# diluted roughly 3.5x. Measured on the live API the day this was added:
+# true 28d clicks 51 -> 118 (+131%), which the old method reported as "+3%".
+_e28p = _end - timedelta(days=28)
+s28p, e28p = (_e28p - timedelta(days=27)).isoformat(), _e28p.isoformat()
+_e7p = _end - timedelta(days=7)
+s7p, e7p = (_e7p - timedelta(days=6)).isoformat(), _e7p.isoformat()
 
 dump = {
     'generated': today.isoformat(),
@@ -41,6 +55,9 @@ dump = {
     'totals_28d': None,
     'totals_7d': None,
     'totals_90d': None,
+    'totals_28d_prev': None,
+    'totals_7d_prev': None,
+    'windows': None,
     'queries_28d': [],
     'pages_28d': [],
     'page_query_28d': [],
@@ -52,8 +69,15 @@ dump = {
     'daily_28d': [],
 }
 
+dump['windows'] = {
+    'current_28d': [s28, e], 'previous_28d': [s28p, e28p],
+    'current_7d': [s7, e], 'previous_7d': [s7p, e7p],
+    'current_90d': [s90, e],
+}
+
 # Totals
-for k, start, end in [('totals_28d', s28, e), ('totals_7d', s7, e), ('totals_90d', s90, e)]:
+for k, start, end in [('totals_28d', s28, e), ('totals_7d', s7, e), ('totals_90d', s90, e),
+                     ('totals_28d_prev', s28p, e28p), ('totals_7d_prev', s7p, e7p)]:
     r = q({'startDate': start, 'endDate': end, 'dimensions': []})
     if r.get('rows'):
         row = r['rows'][0]

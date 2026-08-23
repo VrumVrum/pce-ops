@@ -323,7 +323,14 @@ def gsc():
     out = {'generated': d.get('generated'),
            'totals_28d': d.get('totals_28d'),
            'totals_7d': d.get('totals_7d'),
-           'totals_90d': d.get('totals_90d')}
+           'totals_90d': d.get('totals_90d'),
+           # True previous, non-overlapping periods (added 2026-08-23). The
+           # daily report used to trend against its own ~8-day-old snapshot,
+           # so two 28-day windows overlapped by 20 days and +131% real growth
+           # printed as "+3%". These are the honest baselines.
+           'totals_28d_prev': d.get('totals_28d_prev'),
+           'totals_7d_prev': d.get('totals_7d_prev'),
+           'windows': d.get('windows')}
     # Clean totals: junk carries 0 clicks, so only impressions/CTR change.
     # Position is left as-is (recomputing it without per-query weighting would lie).
     try:
