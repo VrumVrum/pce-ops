@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-23T13:14:50Z",
+ "generated_utc": "2026-08-23T18:59:41Z",
  "all_alive": true,
  "silent": [],
  "routines": {
@@ -8,8 +8,8 @@
    "expected_every_h": 12,
    "alert_after_h": 26,
    "last_report_utc": "2026-08-23T00:00:00Z",
-   "last_commit_utc": "2026-08-22T04:26:00Z",
-   "hours_since": 13.2,
+   "last_commit_utc": "2026-08-23T15:21:00Z",
+   "hours_since": 3.6,
    "silent": false,
    "last_alerted_utc": "2026-08-23T07:17:30Z"
   },
@@ -19,7 +19,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-23T00:00:00Z",
    "last_commit_utc": "2026-08-23T08:29:00Z",
-   "hours_since": 4.8,
+   "hours_since": 10.5,
    "silent": false,
    "last_alerted_utc": "2026-08-21T13:28:12Z"
   },
@@ -29,7 +29,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-23T08:30:00Z",
    "last_commit_utc": "2026-08-23T08:29:00Z",
-   "hours_since": 4.7,
+   "hours_since": 10.5,
    "silent": false,
    "last_alerted_utc": "2026-08-22T07:10:46Z"
   },
@@ -39,7 +39,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-23T00:00:00Z",
    "last_commit_utc": "2026-08-23T06:11:00Z",
-   "hours_since": 7.1,
+   "hours_since": 12.8,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -47,9 +47,9 @@
    "cron": "0 15 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
-   "last_report_utc": "2026-08-22T15:24:00Z",
-   "last_commit_utc": "2026-08-22T15:26:00Z",
-   "hours_since": 21.8,
+   "last_report_utc": "2026-08-23T15:22:00Z",
+   "last_commit_utc": "2026-08-23T15:23:00Z",
+   "hours_since": 3.6,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -59,7 +59,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-20T09:14:00Z",
    "last_commit_utc": "2026-08-20T09:15:00Z",
-   "hours_since": 76.0,
+   "hours_since": 81.7,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -69,7 +69,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-19T00:00:00Z",
    "last_commit_utc": "2026-08-22T04:26:00Z",
-   "hours_since": 32.8,
+   "hours_since": 38.6,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -79,7 +79,7 @@
    "alert_after_h": 204,
    "last_report_utc": "2026-08-17T05:30:00Z",
    "last_commit_utc": "2026-08-17T05:34:00Z",
-   "hours_since": 151.7,
+   "hours_since": 157.4,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   }
@@ -91,9 +91,7 @@
   "new_silent": [],
   "daily_reminder": [],
   "silent_but_already_reported": [],
-  "recovered_since_last_run": [
-   "pce-operating-loop"
-  ],
+  "recovered_since_last_run": [],
   "policy": "Mail fires when a routine goes silent, or once every 24h while it stays silent. Repetition alone never mails."
  }
 }
