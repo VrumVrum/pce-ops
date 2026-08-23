@@ -1,8 +1,8 @@
 {
- "generated_utc": "2026-08-23T02:10:49Z",
+ "generated_utc": "2026-08-23T07:17:30Z",
  "all_alive": false,
  "silent": [
-  "pce-content-engine"
+  "pce-operating-loop"
  ],
  "routines": {
   "pce-operating-loop": {
@@ -11,17 +11,17 @@
    "alert_after_h": 26,
    "last_report_utc": "2026-08-22T00:48:00Z",
    "last_commit_utc": "2026-08-22T04:26:00Z",
-   "hours_since": 21.7,
-   "silent": false,
-   "last_alerted_utc": "2026-08-21T19:08:01Z"
+   "hours_since": 26.9,
+   "silent": true,
+   "last_alerted_utc": "2026-08-23T07:17:30Z"
   },
   "pce-supervisor": {
    "cron": "0 3 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
-   "last_report_utc": "2026-08-22T00:00:00Z",
-   "last_commit_utc": "2026-08-22T04:03:00Z",
-   "hours_since": 22.1,
+   "last_report_utc": "2026-08-23T00:00:00Z",
+   "last_commit_utc": "2026-08-23T03:11:00Z",
+   "hours_since": 4.1,
    "silent": false,
    "last_alerted_utc": "2026-08-21T13:28:12Z"
   },
@@ -30,18 +30,18 @@
    "expected_every_h": 24,
    "alert_after_h": 54,
    "last_report_utc": "2026-08-20T00:00:00Z",
-   "last_commit_utc": "2026-08-19T12:56:00Z",
-   "hours_since": 74.2,
-   "silent": true,
+   "last_commit_utc": "2026-08-23T03:11:00Z",
+   "hours_since": 4.1,
+   "silent": false,
    "last_alerted_utc": "2026-08-22T07:10:46Z"
   },
   "pce-growth-engine": {
    "cron": "0 6 * * *",
    "expected_every_h": 24,
    "alert_after_h": 54,
-   "last_report_utc": "2026-08-22T00:00:00Z",
-   "last_commit_utc": "2026-08-22T12:53:00Z",
-   "hours_since": 13.3,
+   "last_report_utc": "2026-08-23T00:00:00Z",
+   "last_commit_utc": "2026-08-23T06:11:00Z",
+   "hours_since": 1.1,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -51,7 +51,7 @@
    "alert_after_h": 54,
    "last_report_utc": "2026-08-22T15:24:00Z",
    "last_commit_utc": "2026-08-22T15:26:00Z",
-   "hours_since": 10.7,
+   "hours_since": 15.9,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -61,7 +61,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-20T09:14:00Z",
    "last_commit_utc": "2026-08-20T09:15:00Z",
-   "hours_since": 64.9,
+   "hours_since": 70.0,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   },
@@ -71,7 +71,7 @@
    "alert_after_h": 192,
    "last_report_utc": "2026-08-19T00:00:00Z",
    "last_commit_utc": "2026-08-22T04:26:00Z",
-   "hours_since": 21.7,
+   "hours_since": 26.9,
    "silent": false,
    "last_alerted_utc": null
   },
@@ -81,21 +81,23 @@
    "alert_after_h": 204,
    "last_report_utc": "2026-08-17T05:30:00Z",
    "last_commit_utc": "2026-08-17T05:34:00Z",
-   "hours_since": 140.6,
+   "hours_since": 145.7,
    "silent": false,
    "last_alerted_utc": "2026-08-14T08:25:25Z"
   }
  },
  "note": "Guard for F29 (silent fleet death). Runs on GitHub Actions so it survives the Anthropic-side outage it exists to detect. A run that dies before writing its report leaves no trace in SCORECARD.json \u2014 this file is the only place that absence becomes visible. Exit 1 = owner email.",
  "alert": {
-  "firing": false,
+  "firing": true,
   "partially_blind": false,
-  "new_silent": [],
+  "new_silent": [
+   "pce-operating-loop"
+  ],
   "daily_reminder": [],
-  "silent_but_already_reported": [
+  "silent_but_already_reported": [],
+  "recovered_since_last_run": [
    "pce-content-engine"
   ],
-  "recovered_since_last_run": [],
   "policy": "Mail fires when a routine goes silent, or once every 24h while it stays silent. Repetition alone never mails."
  }
 }
