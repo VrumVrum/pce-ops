@@ -1,28 +1,28 @@
 {
-  "generated_utc": "2026-08-22T16:51:21.155479Z",
+  "generated_utc": "2026-08-23T05:02:26.367621Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-22",
+    "generated": "2026-08-23",
     "totals_28d": {
-      "clicks": 130,
-      "impressions": 35639,
-      "ctr": 0.365,
-      "position": 20.83
+      "clicks": 122,
+      "impressions": 34654,
+      "ctr": 0.352,
+      "position": 20.74
     },
     "totals_7d": {
-      "clicks": 32,
-      "impressions": 10680,
-      "ctr": 0.3,
-      "position": 21.1
+      "clicks": 27,
+      "impressions": 8896,
+      "ctr": 0.304,
+      "position": 19.51
     },
     "totals_90d": {
       "clicks": 190,
-      "impressions": 59973,
+      "impressions": 59874,
       "ctr": 0.317,
-      "position": 24.21
+      "position": 24.16
     },
     "junk_28d": {
-      "impressions": 593,
+      "impressions": 592,
       "queries": 106,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
@@ -31,9 +31,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 130,
-      "impressions": 35046,
-      "ctr": 0.371
+      "clicks": 122,
+      "impressions": 34062,
+      "ctr": 0.358
     },
     "citation_floor_alerts": [
       {
@@ -64,20 +64,20 @@
     "build_intent_count": 0,
     "drip_stages": {},
     "affiliate_clicks": {
-      "total": 57,
-      "last7d": 8,
+      "total": 59,
+      "last7d": 9,
       "by_slug": {
-        "fiverr": 29,
-        "wix": 11,
+        "fiverr": 30,
+        "wix": 12,
         "shopify": 11,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 75,
+      "rows_before_bot_filter": 77,
       "excluded_by_is_bot_flag": 18,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 12,
-      "ip_hash_coverage_pct": 17.3,
-      "note": "user_ip_hash is NULL on 62 of 75 rows (17% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 14,
+      "ip_hash_coverage_pct": 19.5,
+      "note": "user_ip_hash is NULL on 62 of 77 rows (19% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -108,13 +108,13 @@
       "clicks": 0
     },
     "/cost/app-like/": {
-      "pages_with_data": 33,
-      "impressions": 215,
+      "pages_with_data": 32,
+      "impressions": 210,
       "clicks": 6
     },
     "/cost/industry/": {
-      "pages_with_data": 174,
-      "impressions": 1384,
+      "pages_with_data": 169,
+      "impressions": 1270,
       "clicks": 8
     },
     "/software-development-budget-2027": {
@@ -124,18 +124,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8653,
-      "clicks": 19
+      "impressions": 8492,
+      "clicks": 18
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1643,
-      "clicks": 15
+      "impressions": 1585,
+      "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1004,
-      "clicks": 11
+      "impressions": 970,
+      "clicks": 10
     }
   }
 }
