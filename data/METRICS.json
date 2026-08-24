@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-08-24T05:12:03.153892Z",
+  "generated_utc": "2026-08-24T17:05:47.161299Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-08-24",
     "totals_28d": {
-      "clicks": 116,
-      "impressions": 34138,
-      "ctr": 0.34,
-      "position": 20.27
+      "clicks": 119,
+      "impressions": 35543,
+      "ctr": 0.335,
+      "position": 20.23
     },
     "totals_7d": {
-      "clicks": 25,
-      "impressions": 8180,
-      "ctr": 0.306,
-      "position": 19.13
+      "clicks": 28,
+      "impressions": 9585,
+      "ctr": 0.292,
+      "position": 19.16
     },
     "totals_90d": {
-      "clicks": 195,
-      "impressions": 60958,
-      "ctr": 0.32,
-      "position": 23.8
+      "clicks": 198,
+      "impressions": 62363,
+      "ctr": 0.317,
+      "position": 23.7
     },
     "totals_28d_prev": {
       "clicks": 58,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 591,
-      "queries": 107,
+      "impressions": 602,
+      "queries": 108,
       "sample": [
         "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"stripe connect\" payouts \"tutoring platform\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 116,
-      "impressions": 33547,
-      "ctr": 0.346
+      "clicks": 119,
+      "impressions": 34941,
+      "ctr": 0.341
     },
     "citation_floor_alerts": [
       {
@@ -81,9 +81,9 @@
     ]
   },
   "supabase": {
-    "leads_total": 35,
+    "leads_total": 36,
     "leads_by_context": {
-      "sys:lastrun": 35
+      "sys:lastrun": 36
     },
     "real_human_leads": 0,
     "api_keys": 0,
@@ -98,20 +98,20 @@
     "build_intent_count": 0,
     "drip_stages": {},
     "affiliate_clicks": {
-      "total": 62,
-      "last7d": 12,
+      "total": 65,
+      "last7d": 15,
       "by_slug": {
-        "fiverr": 30,
+        "fiverr": 33,
         "shopify": 14,
         "wix": 12,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 80,
+      "rows_before_bot_filter": 83,
       "excluded_by_is_bot_flag": 18,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 17,
-      "ip_hash_coverage_pct": 22.5,
-      "note": "user_ip_hash is NULL on 62 of 80 rows (22% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 20,
+      "ip_hash_coverage_pct": 25.3,
+      "note": "user_ip_hash is NULL on 62 of 83 rows (25% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -138,17 +138,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 595,
+      "impressions": 618,
       "clicks": 0
     },
     "/cost/app-like/": {
       "pages_with_data": 33,
-      "impressions": 193,
+      "impressions": 198,
       "clicks": 4
     },
     "/cost/industry/": {
       "pages_with_data": 158,
-      "impressions": 1104,
+      "impressions": 1118,
       "clicks": 7
     },
     "/software-development-budget-2027": {
@@ -158,17 +158,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8431,
+      "impressions": 8797,
       "clicks": 18
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1559,
-      "clicks": 13
+      "impressions": 1609,
+      "clicks": 14
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 938,
+      "impressions": 970,
       "clicks": 10
     }
   }
