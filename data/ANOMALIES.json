@@ -1,29 +1,27 @@
 {
- "generated_utc": "2026-08-23T07:08:25Z",
- "gsc_window_end": "2026-08-20",
+ "generated_utc": "2026-08-24T07:34:08Z",
+ "gsc_window_end": "2026-08-21",
  "all_clear": false,
  "unanswered_questions": [],
  "counts": {
-  "high": 6,
-  "medium": 3,
+  "high": 5,
+  "medium": 4,
   "low": 3
  },
  "alert": {
-  "firing": true,
+  "firing": false,
   "new": [],
-  "escalated": [
-   "bot_kpi_contamination"
-  ],
+  "escalated": [],
   "weekly_reminder": [],
   "persisting_silently": [
+   "bot_kpi_contamination",
    "ctr_vs_expected_pages",
    "ctr_vs_expected_sitewide",
-   "funnel_break",
    "geo_anomaly:iran",
    "revenue_silence"
   ],
   "resolved_since_last_run": [
-   "signup_vs_usage"
+   "funnel_break"
   ],
   "policy": "Mail fires on NEW, ESCALATED, or once every 7 days while a HIGH stays open. Persisting findings remain in this file and remain binding on pce-operating-loop STEP 0A-bis; they simply stop re-mailing daily, because an alert that arrives every morning stops being read."
  },
@@ -32,7 +30,7 @@
    "id": "bot_kpi_contamination",
    "severity": "high",
    "question": "Are the rows counted as \"real human leads\" actually people -- or is a single bot fleet supplying the headline conversion KPI?",
-   "answer": "There are ZERO lead-context rows in the table at all (35 rows total after test-row exclusion). The conversion KPI is not contaminated; it is empty.",
+   "answer": "There are ZERO lead-context rows in the table at all (36 rows total after test-row exclusion). The conversion KPI is not contaminated; it is empty.",
    "why_it_matters": "On 2026-08-13 the headline \"26 real human leads\" turned out to be 23 rows from ONE byte-identical user_agent seen across 45 distinct ip_hash values, plus 3 genuine captures. The system had even run a three-fire investigation into why the number was STUCK at 26 without ever asking whether the 26 were people. A KPI that measures a bot sends every downstream decision -- content, pricing, drip, roadmap -- chasing an audience that will never buy anything, and it does it silently, because the number looks healthy.",
    "headline_leads": 0,
    "strict_human_leads": 0,
@@ -40,63 +38,73 @@
    "last_strict_human_lead_utc": null,
    "first_seen_utc": "2026-08-13T11:00:12Z",
    "last_alerted_utc": "2026-08-23T07:08:25Z",
-   "state": "escalated"
+   "state": "persisting"
   },
   {
    "id": "ctr_vs_expected_pages",
    "severity": "high",
    "question": "Which specific pages rank but do not get clicked?",
-   "answer": "5 of the top 15 pages by impressions (judged only where avg position is inside 20, so this is a click problem and not a ranking problem) earn under 40% of the clicks their position predicts. Worst by lost clicks: /blog/cloudflare-cost-2026 -- 3621 impressions at avg position 8.3, 1 clicks where ~145 were expected (0.03% vs 4.00% CTR). Total missing clicks across the 5 flagged pages: ~336 in 28 days.",
+   "answer": "6 of the top 15 pages by impressions (judged only where avg position is inside 20, so this is a click problem and not a ranking problem) earn under 40% of the clicks their position predicts. Worst by lost clicks: /blog/cloudflare-cost-2026 -- 3676 impressions at avg position 8.3, 1 clicks where ~147 were expected (0.03% vs 4.00% CTR). Total missing clicks across the 6 flagged pages: ~349 in 28 days.",
    "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
    "pages": [
     {
      "page": "/blog/cloudflare-cost-2026",
-     "impressions": 3621,
+     "impressions": 3676,
      "clicks": 1,
      "avg_position": 8.3,
      "actual_ctr_pct": 0.03,
      "expected_ctr_pct": 4.0,
-     "expected_clicks": 144.8,
+     "expected_clicks": 147.0,
      "ratio_of_expected": 0.01
     },
     {
      "page": "/freelance-website-cost",
-     "impressions": 8492,
-     "clicks": 18,
-     "avg_position": 12.4,
-     "actual_ctr_pct": 0.21,
+     "impressions": 8650,
+     "clicks": 19,
+     "avg_position": 12.2,
+     "actual_ctr_pct": 0.22,
      "expected_ctr_pct": 1.5,
-     "expected_clicks": 127.4,
-     "ratio_of_expected": 0.14
+     "expected_clicks": 129.8,
+     "ratio_of_expected": 0.15
     },
     {
      "page": "/restaurant-website-cost",
-     "impressions": 1584,
+     "impressions": 1594,
      "clicks": 13,
      "avg_position": 6.4,
      "actual_ctr_pct": 0.82,
      "expected_ctr_pct": 5.0,
-     "expected_clicks": 79.2,
+     "expected_clicks": 79.7,
      "ratio_of_expected": 0.16
     },
     {
      "page": "/website-cost-calculator",
-     "impressions": 948,
-     "clicks": 5,
-     "avg_position": 13.4,
-     "actual_ctr_pct": 0.53,
+     "impressions": 983,
+     "clicks": 4,
+     "avg_position": 12.9,
+     "actual_ctr_pct": 0.41,
      "expected_ctr_pct": 1.5,
-     "expected_clicks": 14.2,
-     "ratio_of_expected": 0.35
+     "expected_clicks": 14.7,
+     "ratio_of_expected": 0.27
+    },
+    {
+     "page": "/blog/vercel-cost-2026",
+     "impressions": 506,
+     "clicks": 0,
+     "avg_position": 11.6,
+     "actual_ctr_pct": 0.0,
+     "expected_ctr_pct": 1.5,
+     "expected_clicks": 7.6,
+     "ratio_of_expected": 0.0
     },
     {
      "page": "/real-estate-website-cost",
-     "impressions": 690,
+     "impressions": 699,
      "clicks": 3,
-     "avg_position": 12.3,
+     "avg_position": 12.6,
      "actual_ctr_pct": 0.43,
      "expected_ctr_pct": 1.5,
-     "expected_clicks": 10.3,
+     "expected_clicks": 10.5,
      "ratio_of_expected": 0.29
     }
    ],
@@ -108,45 +116,77 @@
    "id": "ctr_vs_expected_sitewide",
    "severity": "high",
    "question": "For the positions we already hold, are we getting the clicks those positions should produce?",
-   "answer": "Sitewide 28d: 122 clicks on 35028 impressions = 0.35% CTR. Weighting every page by its own average position, that traffic should have produced ~595 clicks (1.70% CTR). Actual is 21% of expected. Last 7d: 27 clicks vs ~161 expected (17% of expected, 0.30% CTR).",
+   "answer": "Sitewide 28d: 123 clicks on 35445 impressions = 0.35% CTR. Weighting every page by its own average position, that traffic should have produced ~607 clicks (1.71% CTR). Actual is 20% of expected. Last 7d: 28 clicks vs ~170 expected (16% of expected, 0.30% CTR).",
    "why_it_matters": "Impressions without clicks means the ranking is real but the result is not worth clicking -- title, meta, SERP feature theft, or a query the page does not actually answer. It is the cheapest growth lever on the site and it is invisible unless you compare CTR against what the POSITION predicts, which is exactly the comparison nobody was making.",
-   "window": "2026-07-24..2026-08-20",
-   "clicks": 122,
-   "impressions": 35028,
-   "actual_ctr_pct": 0.348,
-   "expected_clicks": 595,
-   "expected_ctr_pct": 1.698,
-   "ratio_of_expected": 0.205,
-   "ratio_of_expected_7d": 0.167,
+   "window": "2026-07-25..2026-08-21",
+   "clicks": 123,
+   "impressions": 35445,
+   "actual_ctr_pct": 0.347,
+   "expected_clicks": 607,
+   "expected_ctr_pct": 1.712,
+   "ratio_of_expected": 0.203,
+   "ratio_of_expected_7d": 0.165,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-21T07:15:05Z",
+   "state": "persisting"
+  },
+  {
+   "id": "geo_anomaly:iran",
+   "severity": "high",
+   "question": "Is any single country more than 12% of the last 7 days of sessions while engaging with the site in a way that does not look human?",
+   "answer": "Iran = 19.0% of 7d sessions (33 of 174) at 100.0% engagement vs the site average of 44.3% (+55.7 points). 100% of those sessions are Direct/Unassigned. Last 2 days: 0.0% of sessions. MITIGATION FAILED: Iran was blocked 2026-08-13 via Vercel firewall deny rule, 11 days ago, and it is STILL above the threshold. The rule is not doing anything.",
+   "why_it_matters": "A bot farm shows up as one country dominating traffic on Direct/Unassigned with engagement far off the site average -- abnormally HIGH engagement is the giveaway, because real Direct traffic engages LESS than organic, not more. It poisons every metric downstream and can be a scrape/harvest campaign.",
+   "country": "Iran",
+   "share_pct_7d": 19.0,
+   "sessions_7d": 33,
+   "engagement_pct": 100.0,
+   "site_engagement_pct": 44.3,
+   "deviation_points": 55.7,
+   "direct_unassigned_pct": 100.0,
+   "share_pct_last2d": 0.0,
+   "first_seen_utc": "2026-08-13T10:36:09Z",
+   "last_alerted_utc": "2026-08-20T07:14:19Z",
+   "state": "persisting"
+  },
+  {
+   "id": "revenue_silence",
+   "severity": "high",
+   "question": "How many days since the last sale, and how much traffic arrived in that time?",
+   "answer": "The `sales` table has NEVER contained a row -- 0 sales, all time. Days since last sale is therefore undefined (null), not a large number. Against that: 966 sessions in the last 28 days (204 of them organic). Every visitor so far has been free.",
+   "why_it_matters": "Rule #1 is revenue. Traffic that produces no sale for weeks is not a marketing problem to optimise around the edges -- it is the whole business failing, and it must be stated plainly instead of being buried under impression charts.",
+   "sales_total": 0,
+   "days_since_last_sale": null,
+   "sessions_28d": 966,
+   "organic_sessions_28d": 204,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": "2026-08-21T07:15:05Z",
    "state": "persisting"
   },
   {
    "id": "funnel_break",
-   "severity": "high",
+   "severity": "medium",
    "question": "Of the REAL people (bot fleet excluded) who open the calculator in the last 7 days, how many reach a result screen, leave an email, and pay -- and at which step do they vanish?",
-   "answer": "Last 7 days: begin_checkout 13 users -> step_completed 3 users -> view_item 3 users -> generate_lead 1 users -> purchase 0 users. Last 28 days: begin_checkout 60 users -> step_completed 18 users -> view_item 17 users -> generate_lead 2 users -> purchase 0 users. BROKEN: 1 users reached generate_lead and 0 went on to purchase (paid (paywall_converted)) -- the step is at zero while the one above it is not.",
+   "answer": "Last 7 days: begin_checkout 9 users -> step_completed 2 users -> view_item 2 users -> generate_lead 1 users -> purchase 0 users. Last 28 days: begin_checkout 58 users -> step_completed 17 users -> view_item 17 users -> generate_lead 2 users -> purchase 0 users. BROKEN: 1 users reached generate_lead and 0 went on to purchase (paid (paywall_converted)) -- the step is at zero while the one above it is not. Downgraded to medium: only 9 users entered the funnel this week (floor 10), so these rates are small-sample noise as much as signal.",
    "why_it_matters": "This is the question that answers \"why is revenue zero\", and until 2026-08-13 no file in either repo contained the number. Everything the system optimised -- impressions, sessions, lead counts -- measures the TOP of a funnel whose middle is falling out. A step that drops below 20% of the step above it, or a step sitting at zero while the one above it is not, is a broken product path: more traffic poured into it changes nothing, and shipping more content is the wrong response.",
    "window_days": 7,
    "steps": [
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 13,
-     "events": 23
+     "users": 9,
+     "events": 18
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 3,
-     "events": 19
+     "users": 2,
+     "events": 15
     },
     {
      "event": "view_item",
      "means": "reached a result screen (results_viewed)",
-     "users": 3,
-     "events": 10
+     "users": 2,
+     "events": 9
     },
     {
      "event": "generate_lead",
@@ -165,14 +205,14 @@
     {
      "event": "begin_checkout",
      "means": "opened the calculator (wizard_started)",
-     "users": 60,
-     "events": 94
+     "users": 58,
+     "events": 92
     },
     {
      "event": "step_completed",
      "means": "advanced past a wizard step",
-     "users": 18,
-     "events": 70
+     "users": 17,
+     "events": 67
     },
     {
      "event": "view_item",
@@ -197,7 +237,7 @@
     {
      "from": "begin_checkout",
      "to": "step_completed",
-     "users_pct": 23.1
+     "users_pct": 22.2
     },
     {
      "from": "step_completed",
@@ -207,7 +247,7 @@
     {
      "from": "view_item",
      "to": "generate_lead",
-     "users_pct": 33.3
+     "users_pct": 50.0
     },
     {
      "from": "generate_lead",
@@ -226,55 +266,22 @@
    "weak_steps": [],
    "note": "Users are distinct per window (undated GA4 query). A ratio above 100%% is not a bug: GA4 de-duplicates users per event, and a visitor can reach a result from a shared config link without firing the step above it.",
    "first_seen_utc": "2026-08-13T11:00:12Z",
-   "last_alerted_utc": "2026-08-21T07:15:05Z",
-   "state": "persisting"
-  },
-  {
-   "id": "geo_anomaly:iran",
-   "severity": "high",
-   "question": "Is any single country more than 12% of the last 7 days of sessions while engaging with the site in a way that does not look human?",
-   "answer": "Iran = 19.6% of 7d sessions (41 of 209) at 100.0% engagement vs the site average of 46.9% (+53.1 points). 100% of those sessions are Direct/Unassigned. Last 2 days: 0.0% of sessions. MITIGATION FAILED: Iran was blocked 2026-08-13 via Vercel firewall deny rule, 10 days ago, and it is STILL above the threshold. The rule is not doing anything.",
-   "why_it_matters": "A bot farm shows up as one country dominating traffic on Direct/Unassigned with engagement far off the site average -- abnormally HIGH engagement is the giveaway, because real Direct traffic engages LESS than organic, not more. It poisons every metric downstream and can be a scrape/harvest campaign.",
-   "country": "Iran",
-   "share_pct_7d": 19.6,
-   "sessions_7d": 41,
-   "engagement_pct": 100.0,
-   "site_engagement_pct": 46.9,
-   "deviation_points": 53.1,
-   "direct_unassigned_pct": 100.0,
-   "share_pct_last2d": 0.0,
-   "first_seen_utc": "2026-08-13T10:36:09Z",
-   "last_alerted_utc": "2026-08-20T07:14:19Z",
-   "state": "persisting"
-  },
-  {
-   "id": "revenue_silence",
-   "severity": "high",
-   "question": "How many days since the last sale, and how much traffic arrived in that time?",
-   "answer": "The `sales` table has NEVER contained a row -- 0 sales, all time. Days since last sale is therefore undefined (null), not a large number. Against that: 979 sessions in the last 28 days (210 of them organic). Every visitor so far has been free.",
-   "why_it_matters": "Rule #1 is revenue. Traffic that produces no sale for weeks is not a marketing problem to optimise around the edges -- it is the whole business failing, and it must be stated plainly instead of being buried under impression charts.",
-   "sales_total": 0,
-   "days_since_last_sale": null,
-   "sessions_28d": 979,
-   "organic_sessions_28d": 210,
-   "first_seen_utc": "2026-08-13T10:36:09Z",
-   "last_alerted_utc": "2026-08-21T07:15:05Z",
-   "state": "persisting"
+   "last_alerted_utc": "2026-08-21T07:15:05Z"
   },
   {
    "id": "geo_anomaly:united_states",
    "severity": "medium",
    "question": "Is any single country more than 12% of the last 7 days of sessions while engaging with the site in a way that does not look human?",
-   "answer": "United States = 34.0% of 7d sessions (71 of 209) at 25.4% engagement vs the site average of 46.9% (-21.5 points). 81% of those sessions are Direct/Unassigned. Last 2 days: 44.0% of sessions.",
+   "answer": "United States = 33.3% of 7d sessions (58 of 174) at 19.0% engagement vs the site average of 44.3% (-25.3 points). 79% of those sessions are Direct/Unassigned. Last 2 days: 47.1% of sessions.",
    "why_it_matters": "A bot farm shows up as one country dominating traffic on Direct/Unassigned with engagement far off the site average -- abnormally HIGH engagement is the giveaway, because real Direct traffic engages LESS than organic, not more. It poisons every metric downstream and can be a scrape/harvest campaign.",
    "country": "United States",
-   "share_pct_7d": 34.0,
-   "sessions_7d": 71,
-   "engagement_pct": 25.4,
-   "site_engagement_pct": 46.9,
-   "deviation_points": -21.5,
-   "direct_unassigned_pct": 81.3,
-   "share_pct_last2d": 44.0,
+   "share_pct_7d": 33.3,
+   "sessions_7d": 58,
+   "engagement_pct": 19.0,
+   "site_engagement_pct": 44.3,
+   "deviation_points": -25.3,
+   "direct_unassigned_pct": 79.4,
+   "share_pct_last2d": 47.1,
    "first_seen_utc": "2026-08-20T07:14:19Z",
    "last_alerted_utc": null
   },
@@ -282,33 +289,33 @@
    "id": "growth_plateau",
    "severity": "medium",
    "question": "Have organic sessions been flat or falling for 3 weeks or more WHILE search impressions rose?",
-   "answer": "Sessions are flat (65 -> 52 -> 52 over 3 weeks) but impressions are NOT rising (+8%), so this is a visibility problem rather than a click problem. Full series: w/e 2026-07-23: 48 sessions, 5077 impressions | w/e 2026-07-30: 51 sessions, 7974 impressions | w/e 2026-08-06: 65 sessions, 8203 impressions | w/e 2026-08-13: 52 sessions, 9581 impressions | w/e 2026-08-20: 52 sessions, 8896 impressions",
+   "answer": "Sessions are flat (63 -> 58 -> 45 over 3 weeks) but impressions are NOT rising (+14%), so this is a visibility problem rather than a click problem. Full series: w/e 2026-07-24: 49 sessions, 5558 impressions | w/e 2026-07-31: 51 sessions, 8167 impressions | w/e 2026-08-07: 63 sessions, 8095 impressions | w/e 2026-08-14: 58 sessions, 9570 impressions | w/e 2026-08-21: 45 sessions, 9245 impressions",
    "why_it_matters": "Rising impressions with flat sessions is the signature of \"visible but not clicked\": more content is indexed, more queries match, and none of it converts into a visit. Chasing more content in that state makes the divergence worse. It is only detectable by looking at the two curves TOGETHER, which no existing guard did.",
    "weeks_ending": [
-    "2026-07-23",
-    "2026-07-30",
-    "2026-08-06",
-    "2026-08-13",
-    "2026-08-20"
+    "2026-07-24",
+    "2026-07-31",
+    "2026-08-07",
+    "2026-08-14",
+    "2026-08-21"
    ],
    "organic_sessions_by_week": [
-    48,
+    49,
     51,
-    65,
-    52,
-    52
+    63,
+    58,
+    45
    ],
    "impressions_by_week": [
-    5077,
-    7974,
-    8203,
-    9581,
-    8896
+    5558,
+    8167,
+    8095,
+    9570,
+    9245
    ],
-   "impressions_change_pct": 8.4,
-   "sessions_change_pct": -20.0,
+   "impressions_change_pct": 14.2,
+   "sessions_change_pct": -28.6,
    "sessions_flat": true,
-   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-20), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence.",
+   "note": "Both series are cut to the same days and end on the GSC window end (2026-08-21), because comparing a fresh GA4 week against a 3-day-lagged GSC week manufactures a fake divergence.",
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": "2026-08-15T07:04:18Z"
   },
@@ -316,11 +323,11 @@
    "id": "junk_in_good_positions",
    "severity": "medium",
    "question": "How much of our position 1-10 visibility is junk?",
-   "answer": "36.8% of position 1-10 impressions are junk queries (1411 of 3837 impressions, 126 of 702 queries). Those rankings produce no clicks by construction, so the top-10 footprint is 37% smaller than it looks.",
+   "answer": "38.4% of position 1-10 impressions are junk queries (1561 of 4065 impressions, 131 of 717 queries). Those rankings produce no clicks by construction, so the top-10 footprint is 38% smaller than it looks.",
    "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
-   "good_position_impressions": 3837,
-   "junk_impressions": 1411,
-   "junk_share_pct": 36.8,
+   "good_position_impressions": 4065,
+   "junk_impressions": 1561,
+   "junk_share_pct": 38.4,
    "first_seen_utc": "2026-08-13T10:36:09Z",
    "last_alerted_utc": null
   },
@@ -328,14 +335,14 @@
    "id": "junk_query_share",
    "severity": "low",
    "question": "What share of our impressions comes from queries that are AI/LLM fanout rather than human searches -- and how much of that sits in the GOOD positions we congratulate ourselves for?",
-   "answer": "21.9% of visible query impressions are AI-fanout junk (3315 impressions across 244 queries, all with zero clicks). Denominator is the 15160 impressions GSC exposes at query level = 44% of the 34654 sitewide (the rest are anonymised and cannot be judged). Sample: \"dealerrater\" \"google business profile\" \"third-party reviews\"; \"stripe connect\" payouts \"tutoring platform\"; cloudflare bot management pricing official 2026",
+   "answer": "22.7% of visible query impressions are AI-fanout junk (3482 impressions across 253 queries, all with zero clicks). Denominator is the 15335 impressions GSC exposes at query level = 44% of the 35077 sitewide (the rest are anonymised and cannot be judged). Sample: \"dealerrater\" \"google business profile\" \"third-party reviews\"; \"stripe connect\" payouts \"tutoring platform\"; cloudflare bot management pricing official 2026",
    "why_it_matters": "Junk impressions inflate every visibility number while producing exactly zero clicks, which drags sitewide CTR down and makes rank tracking lie. Junk sitting in positions 1-10 is the worst case: it looks like we won, and it converts nothing. It also explains a chunk of the CTR gap above, so the two findings must be read together.",
-   "junk_impressions": 3315,
-   "junk_queries": 244,
-   "visible_query_impressions": 15160,
-   "sitewide_impressions": 34654,
+   "junk_impressions": 3482,
+   "junk_queries": 253,
+   "visible_query_impressions": 15335,
+   "sitewide_impressions": 35077,
    "query_dimension_coverage_pct": 43.7,
-   "junk_share_pct": 21.9,
+   "junk_share_pct": 22.7,
    "sample": [
     "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
     "\"stripe connect\" payouts \"tutoring platform\"",
@@ -359,13 +366,13 @@
    "id": "tracking_reconciliation",
    "severity": "low",
    "question": "Does Search Console agree with Analytics on how many people Google actually sent us, and does Analytics claim MORE visitors than Google says it sent?",
-   "answer": "Search Console: 122 Google clicks (28d). Analytics google/organic: 172 raw (+41% vs GSC), 129 after removing the bot slice (+6%). Within normal drift, so the human-traffic numbers are corroborated by a source the bots do not control. Note: the RAW figure is +41% over GSC, which is impossible for real organic traffic - the excess of 43 sessions is the bot fleet arriving with a google referrer.",
+   "answer": "Search Console: 123 Google clicks (28d). Analytics google/organic: 168 raw (+37% vs GSC), 126 after removing the bot slice (+2%). Within normal drift, so the human-traffic numbers are corroborated by a source the bots do not control. Note: the RAW figure is +37% over GSC, which is impossible for real organic traffic - the excess of 42 sessions is the bot fleet arriving with a google referrer.",
    "why_it_matters": "These are independent systems: GSC counts clicks at the search result, GA4 counts sessions on the page. GA4 should land slightly BELOW GSC (consent banners, people who leave before the tag loads). GA4 reading ABOVE GSC is structurally impossible for real organic traffic and means the number is inflated. On 2026-08-13 the raw figure was +33% over GSC and the excess was exactly the bot fleet arriving with a google referrer, while the human-filtered figure landed at -4%. So this is two guards in one: it catches a broken analytics tag AND it re-validates the bot filter every day against a source the bots do not control. The owner spotted this reconciliation by hand; it should never have needed a human to notice.",
-   "gsc_clicks": 122,
-   "ga4_raw": 172,
-   "ga4_human": 129,
-   "gap_raw_pct": 41.0,
-   "gap_human_pct": 5.7,
+   "gsc_clicks": 123,
+   "ga4_raw": 168,
+   "ga4_human": 126,
+   "gap_raw_pct": 36.6,
+   "gap_human_pct": 2.4,
    "first_seen_utc": "2026-08-13T11:22:45Z",
    "last_alerted_utc": null
   }
