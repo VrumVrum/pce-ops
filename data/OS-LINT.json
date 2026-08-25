@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-24T17:06:11+00:00",
+ "generated_utc": "2026-08-25T05:06:04+00:00",
  "source": "VrumVrum/scopebit@master",
  "note": "structure only, never style — every check here is chosen for ~0 false-positive rate (SWE-agent ACI / EVOLUTION.md meta-rule); a missing file is reported, not guessed at",
  "files_checked": [
@@ -25,308 +25,230 @@
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
+   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor — 2026-08-25T~02:00Z (2x/day, twenty-sixth fire)",
+   "line": 9
+  },
+  {
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
+   "rule": "report-header-not-canonical",
+   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-25T~09:00:00Z (12h cloud CEO cycle, 16th fire of the ongoing cycle)",
+   "line": 46
+  },
+  {
+   "file": "docs/OS/ledger/routine-reports-2026-08.md",
+   "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-24T~09:30:00Z (12h cloud CEO cycle, 15th fire of the ongoing cycle)",
-   "line": 29
+   "line": 108
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-seo-audit — 2026-08-24T05:40:00Z (3rd confirmed fire, 2-auditor adversarial audit)",
-   "line": 167
+   "line": 246
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor — 2026-08-24T02:15:00Z (2x/day, twenty-fifth fire)",
-   "line": 199
+   "line": 278
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-24T~00:00:00Z (14th fire)",
-   "line": 247
+   "line": 326
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-23T~11:00:00Z (12h cloud CEO cycle, 13th fire of the ongoing cycle)",
-   "line": 319
+   "line": 398
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-23T~06:20:00Z (daily 06:00 UTC / 09:00 RO, 10th fire)",
-   "line": 407
+   "line": 486
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor — 2026-08-23T~03:08Z (2x/day, twenty-fourth fire)",
-   "line": 450
+   "line": 529
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-22T~12:52:00Z (12h cloud CEO cycle, 12th fire of the ongoing cycle)",
-   "line": 524
+   "line": 603
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-content-engine — 2026-08-22T~07:10:00Z (daily 08:20 UTC, throttled)",
-   "line": 571
+   "line": 650
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-22T~06:24:00Z (daily 06:00 UTC / 09:00 RO, 9th fire)",
-   "line": 618
+   "line": 697
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor — 2026-08-22T~01:20Z (2x/day, twenty-third fire)",
-   "line": 722
+   "line": 801
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-22T00:48:30Z (12h cloud CEO cycle, 11th fire of the ongoing cycle)",
-   "line": 814
+   "line": 893
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-20T~09:45:00Z (12h cloud CEO cycle, 10th fire of the ongoing cycle)",
-   "line": 899
+   "line": 978
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-content-engine — 2026-08-20T~13:10:00Z",
-   "line": 984
+   "line": 1063
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-20T~06:24:00Z (daily 06:00 UTC / 09:00 RO, 8th fire)",
-   "line": 1019
+   "line": 1098
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## pce-growth-engine — 2026-08-20T~06:24:00Z (daily 06:00 UTC / 09:00 RO, 8th fire)' has no '### Prompt critique' subsection",
-   "line": 1019
+   "line": 1098
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 0 — the eyes",
-   "line": 1025
+   "line": 1104
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 1 — arithmetic (unchanged) + pool re-confirmation",
-   "line": 1028
+   "line": 1107
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 2 — SHIPPED: E-088, STARVED-PAGE METHOD, redesign cluster (a genuinely new discovery, not a repeat of E-085's shape)",
-   "line": 1031
+   "line": 1110
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 3 — VERIFY LIKE A BUYER",
-   "line": 1042
+   "line": 1121
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-format",
    "evidence": "header lacks ' — <timestamp>': ## Ledger",
-   "line": 1045
+   "line": 1124
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-20T (12h cloud CEO cycle, 9th fire of the ongoing cycle)",
-   "line": 1064
+   "line": 1143
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-tech-scan — 2026-08-19T15:19:38Z (daily 15:00 UTC / 18:00 RO, 7th fire)",
-   "line": 1106
+   "line": 1185
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop — 2026-08-19T12:30Z (8th fire of the ongoing cycle)",
-   "line": 1147
+   "line": 1226
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-19T06:24:00Z (daily 06:00 UTC / 09:00 RO, 7th fire)",
-   "line": 1215
+   "line": 1294
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "prompt-critique-missing",
    "evidence": "entry '## pce-growth-engine — 2026-08-19T06:24:00Z (daily 06:00 UTC / 09:00 RO, 7th fire)' has no '### Prompt critique' subsection",
-   "line": 1215
+   "line": 1294
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 0 — the eyes",
-   "line": 1221
+   "line": 1300
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 1 — arithmetic (unchanged) + pool re-confirmation",
-   "line": 1224
+   "line": 1303
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 2 — SHIPPED: E-085, first live application of P-030's STARVED-PAGE METHOD",
-   "line": 1227
+   "line": 1306
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-date",
    "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 3 — VERIFY LIKE A BUYER",
-   "line": 1239
+   "line": 1318
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-format",
    "evidence": "header lacks ' — <timestamp>': ## Ledger",
-   "line": 1242
+   "line": 1321
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-deep-verify — 2026-08-19T~05:00Z (2x/wk, 5th fire)",
-   "line": 1261
+   "line": 1340
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-19T~03:10Z (2x/day, twenty-second fire)",
-   "line": 1327
+   "line": 1406
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor (Verifier) — 2026-08-19T~03:10Z (2x/day, twenty-second fire)",
-   "line": 1327
+   "line": 1406
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-19T~08:00Z (12h cloud cycle, 7th+ fir",
-   "line": 1370
+   "line": 1449
   },
   {
    "file": "docs/OS/ledger/routine-reports-2026-08.md",
    "rule": "report-header-not-canonical",
    "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-19T~08:00Z (12h cloud cycle, 7th+ fire of the ongoing cycle)",
-   "line": 1370
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-tech-scan — 2026-08-18T15:30:22Z (daily 15:00 UTC / 18:00 RO, 6th fire)",
-   "line": 1416
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-18T12:43:42Z (12h cloud cycle, 6th+ f",
-   "line": 1451
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-18T12:43:42Z (12h cloud cycle, 6th+ fire of the ongoing cycle)",
-   "line": 1451
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-link-hunter — 2026-08-18T06:10:00Z (cron 10 6 * * 2,5, 2nd fire)",
-   "line": 1529
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-growth-engine — 2026-08-18T06:24:00Z (daily 06:00 UTC / 09:00 RO, 6th fire)",
-   "line": 1573
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "prompt-critique-missing",
-   "evidence": "entry '## pce-growth-engine — 2026-08-18T06:24:00Z (daily 06:00 UTC / 09:00 RO, 6th fire)' has no '### Prompt critique' subsection",
-   "line": 1573
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-date",
-   "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 0 — the eyes",
-   "line": 1579
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-date",
-   "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 1 — arithmetic (unchanged) + a fresh discovery pass",
-   "line": 1582
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-date",
-   "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 2 — SHIPPED: E-082, 3 contextual internal links closing the marketplace cluster's own cross-link gap",
-   "line": 1587
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-date",
-   "evidence": "no YYYY-MM-DD parseable in stamp: ## STEP 3 — VERIFY LIKE A BUYER",
-   "line": 1597
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-format",
-   "evidence": "header lacks ' — <timestamp>': ## Ledger",
-   "line": 1600
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "header name 'pce-supervisor (Verifier)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-supervisor (Verifier) — 2026-08-18T~01:15Z (2x/day, twenty-first fire)",
-   "line": 1614
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-supervisor (Verifier) — 2026-08-18T~01:15Z (2x/day, twenty-first fire)",
-   "line": 1614
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "header name 'pce-operating-loop (CEO Brain)' is not a docs/OS/prompts/ filename stem (aliases fragment the scorecard): ## pce-operating-loop (CEO Brain) — 2026-08-18T~00:00Z (12h cloud CEO cycle, 5th+",
-   "line": 1646
-  },
-  {
-   "file": "docs/OS/ledger/routine-reports-2026-08.md",
-   "rule": "report-header-not-canonical",
-   "evidence": "stamp is not a bare UTC ISO (YYYY-MM-DDTHH:MM[:SS]Z): ## pce-operating-loop (CEO Brain) — 2026-08-18T~00:00Z (12h cloud CEO cycle, 5th+ fire)",
-   "line": 1646
+   "line": 1449
   },
   {
    "file": "docs/OS/ledger/prompt-experiments.md",
@@ -518,13 +440,13 @@
    "file": "docs/OS/ledger/prompt-experiments.md",
    "rule": "p-entry-fields-missing",
    "evidence": "## P-043 — pce-growth-engine.md STEP 0: the curl block omits `gsc_dump.json`, the only page/query-level source STARVED-PAGE candidate scoring actually needs lacks required field(s): Diff",
-   "line": 2098
+   "line": 2099
   },
   {
    "file": "docs/OS/ledger/prompt-experiments.md",
    "rule": "p-entry-fields-missing",
    "evidence": "## P-044 — pce-content-engine.md STEP 2(b) asserts GSC-TRENDS.json as the input but it's absent from this sandbox in every fire that has checked lacks required field(s): Diff",
-   "line": 2127
+   "line": 2128
   },
   {
    "file": "docs/OS/ledger/run-status.md",

@@ -1,13 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-24T17:05:51Z",
+  "generated_utc": "2026-08-25T05:05:46Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "108",
       "users": "108",
-      "engagementRate": "0.47222222222222221",
-      "avgDuration": "46.953007990740744"
+      "engagementRate": "0.48148148148148145",
+      "avgDuration": "46.983016481481478"
     },
     {
       "channel": "Organic Search",
@@ -25,10 +25,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "6",
-      "users": "4",
-      "engagementRate": "0.5",
-      "avgDuration": "56.354513000000004"
+      "sessions": "5",
+      "users": "3",
+      "engagementRate": "0.6",
+      "avgDuration": "67.625415600000011"
     },
     {
       "channel": "Email",
@@ -50,8 +50,8 @@
       "channel": "Direct",
       "sessions": "646",
       "users": "637",
-      "engagementRate": "0.57120743034055732",
-      "avgDuration": "31.186074140866872"
+      "engagementRate": "0.5727554179566563",
+      "avgDuration": "31.191091040247674"
     },
     {
       "channel": "Organic Search",
@@ -83,10 +83,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "18",
-      "users": "15",
-      "engagementRate": "0.33333333333333331",
-      "avgDuration": "126.07173077777777"
+      "sessions": "17",
+      "users": "14",
+      "engagementRate": "0.35294117647058826",
+      "avgDuration": "133.48771494117648"
     },
     {
       "channel": "Referral",
@@ -145,7 +145,7 @@
     {
       "source": "(direct)",
       "sessions": "646",
-      "engagementRate": "0.57120743034055732"
+      "engagementRate": "0.5727554179566563"
     },
     {
       "source": "google",
@@ -339,7 +339,7 @@
     {
       "landing": "/freelance-website-cost",
       "sessions": "63",
-      "engagementRate": "0.33333333333333331"
+      "engagementRate": "0.34920634920634919"
     },
     {
       "landing": "(not set)",

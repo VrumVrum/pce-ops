@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-08-24T17:06:17+00:00",
+ "generated_utc": "2026-08-25T05:06:09+00:00",
  "note": "advisory only — the VERDICT stays with the routine that reads this. A Win is never proposed here; §3: no estimated/invented numbers.",
  "delta_note": "prev-28d control NOT derivable from gsc_dump (no per-page prev-window series; 90d totals overlap the 28d window; daily_28d is site-level only) — 28d numbers are point-in-time, advisory only",
- "gsc_generated": "2026-08-24",
- "gsc_pages_rows": 396,
+ "gsc_generated": "2026-08-25",
+ "gsc_pages_rows": 389,
  "gsc_truncated": false,
- "due_count": 2,
+ "due_count": 5,
  "due": [
   {
    "id": "E-059",
@@ -33,7 +33,7 @@
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 328,
+     "impressions_28d": 309,
      "clicks_28d": 2
     },
     "/cost/industry": {
@@ -58,7 +58,7 @@
     },
     "/website-cost": {
      "pages_matched": 1,
-     "impressions_28d": 941,
+     "impressions_28d": 923,
      "clicks_28d": 1
     },
     "/cost/hire/*": {
@@ -67,18 +67,18 @@
      "clicks_28d": 0
     },
     "/cost/industry/*": {
-     "pages_matched": 158,
-     "impressions_28d": 1118,
+     "pages_matched": 155,
+     "impressions_28d": 1069,
      "clicks_28d": 7
     },
     "/cost/app-like/*": {
-     "pages_matched": 33,
-     "impressions_28d": 198,
+     "pages_matched": 31,
+     "impressions_28d": 192,
      "clicks_28d": 4
     }
    },
    "totals_28d": {
-    "impressions": 3833,
+    "impressions": 3741,
     "clicks": 14
    }
   },
@@ -95,18 +95,177 @@
    "metrics_28d": {
     "/mvp-cost-calculator": {
      "pages_matched": 1,
-     "impressions_28d": 1950,
+     "impressions_28d": 1889,
      "clicks_28d": 0
     },
     "/": {
      "pages_matched": 1,
-     "impressions_28d": 328,
+     "impressions_28d": 309,
      "clicks_28d": 2
     }
    },
    "totals_28d": {
-    "impressions": 2278,
+    "impressions": 2198,
     "clicks": 2
+   }
+  },
+  {
+   "id": "E-060",
+   "title": "E-016/E-017 Loss-remedy execution: fold `/software-development-budget-2027` + `/tools/fixed-price-vs-time-and-materials`",
+   "due": "2026-08-25",
+   "target_paths": [
+    "/software-development-budget-2027",
+    "/web-app-development-cost",
+    "/mvp-cost-calculator",
+    "/saas-cost-estimator",
+    "/ecommerce-cost-calculator",
+    "/tools/fixed-price-vs-time-and-materials",
+    "/website-cost",
+    "/"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/software-development-budget-2027": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    },
+    "/web-app-development-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 2211,
+     "clicks_28d": 6
+    },
+    "/mvp-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 1889,
+     "clicks_28d": 0
+    },
+    "/saas-cost-estimator": {
+     "pages_matched": 1,
+     "impressions_28d": 310,
+     "clicks_28d": 2
+    },
+    "/ecommerce-cost-calculator": {
+     "pages_matched": 1,
+     "impressions_28d": 449,
+     "clicks_28d": 4
+    },
+    "/tools/fixed-price-vs-time-and-materials": {
+     "pages_matched": 1,
+     "impressions_28d": 6,
+     "clicks_28d": 0
+    },
+    "/website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 923,
+     "clicks_28d": 1
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 309,
+     "clicks_28d": 2
+    }
+   },
+   "totals_28d": {
+    "impressions": 6097,
+    "clicks": 15
+   }
+  },
+  {
+   "id": "E-061",
+   "title": "CTR sprint batch 2: extractable-passage title/meta refit on 7 of the 8 remaining `sprint-rewrites.json` worklist pages (",
+   "due": "2026-08-25",
+   "target_paths": [
+    "/blog/cloudflare-cost-2026",
+    "/real-estate-website-cost",
+    "/blog/website-security-cost-2026",
+    "/blog/website-builder-comparison-2026",
+    "/saas-cost-estimator",
+    "/blog/progressive-web-app-cost-2026",
+    "/cost/hire/bulgaria",
+    "/blog/vercel-cost-2026",
+    "/",
+    "/api/admin/sprint"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "needs-routine-judgment",
+   "metrics_28d": {
+    "/blog/cloudflare-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 3708,
+     "clicks_28d": 1
+    },
+    "/real-estate-website-cost": {
+     "pages_matched": 1,
+     "impressions_28d": 678,
+     "clicks_28d": 3
+    },
+    "/blog/website-security-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 389,
+     "clicks_28d": 3
+    },
+    "/blog/website-builder-comparison-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 263,
+     "clicks_28d": 0
+    },
+    "/saas-cost-estimator": {
+     "pages_matched": 1,
+     "impressions_28d": 310,
+     "clicks_28d": 2
+    },
+    "/blog/progressive-web-app-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 371,
+     "clicks_28d": 2
+    },
+    "/cost/hire/bulgaria": {
+     "pages_matched": 1,
+     "impressions_28d": 168,
+     "clicks_28d": 0
+    },
+    "/blog/vercel-cost-2026": {
+     "pages_matched": 1,
+     "impressions_28d": 522,
+     "clicks_28d": 0
+    },
+    "/": {
+     "pages_matched": 1,
+     "impressions_28d": 309,
+     "clicks_28d": 2
+    },
+    "/api/admin/sprint": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 6718,
+    "clicks": 13
+   }
+  },
+  {
+   "id": "E-083",
+   "title": "/api/keys` no longer returns a working API key to an unverified requester (closes `ANOMALIES.json::signup_vs_usage`'s es",
+   "due": "2026-08-25",
+   "target_paths": [
+    "/api/keys"
+   ],
+   "delta_prev_28d": null,
+   "proposed": "likely-loss (0 imp delta)",
+   "metrics_28d": {
+    "/api/keys": {
+     "pages_matched": 0,
+     "impressions_28d": 0,
+     "clicks_28d": 0
+    }
+   },
+   "totals_28d": {
+    "impressions": 0,
+    "clicks": 0
    }
   }
  ]
