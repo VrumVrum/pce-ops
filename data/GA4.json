@@ -1,6 +1,6 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-08-31T07:44:31Z",
+  "generated_utc": "2026-08-31T16:35:13Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -422,24 +422,10 @@
   ],
   "ai_wow_alerts": [
     {
-      "engine": "gemini",
-      "sessions_then": 12,
-      "sessions_now": 8,
-      "ref_date": "2026-08-24",
-      "drop_pct": 33.3
-    },
-    {
-      "engine": "copilot",
-      "sessions_then": 5,
-      "sessions_now": 3,
-      "ref_date": "2026-08-24",
-      "drop_pct": 40.0
-    },
-    {
       "engine": "perplexity",
       "sessions_then": 5,
       "sessions_now": 3,
-      "ref_date": "2026-08-24",
+      "ref_date": "2026-08-25",
       "drop_pct": 40.0
     }
   ],
