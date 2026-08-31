@@ -1,73 +1,73 @@
 {
-  "generated_utc": "2026-08-25T05:05:43.529007Z",
+  "generated_utc": "2026-08-31T07:44:25.634174Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-25",
+    "generated": "2026-08-31",
     "totals_28d": {
-      "clicks": 117,
-      "impressions": 34636,
-      "ctr": 0.338,
-      "position": 20.03
+      "clicks": 118,
+      "impressions": 37549,
+      "ctr": 0.314,
+      "position": 18.63
     },
     "totals_7d": {
-      "clicks": 27,
-      "impressions": 8395,
-      "ctr": 0.322,
-      "position": 18.69
+      "clicks": 32,
+      "impressions": 10375,
+      "ctr": 0.308,
+      "position": 15.95
     },
     "totals_90d": {
-      "clicks": 198,
-      "impressions": 62205,
-      "ctr": 0.318,
-      "position": 23.61
+      "clicks": 225,
+      "impressions": 71604,
+      "ctr": 0.314,
+      "position": 22.3
     },
     "totals_28d_prev": {
-      "clicks": 58,
-      "impressions": 18308,
-      "ctr": 0.317,
-      "position": 27.59
+      "clicks": 85,
+      "impressions": 22715,
+      "ctr": 0.374,
+      "position": 25.76
     },
     "totals_7d_prev": {
-      "clicks": 22,
-      "impressions": 9495,
-      "ctr": 0.232,
-      "position": 21.5
+      "clicks": 28,
+      "impressions": 9585,
+      "ctr": 0.292,
+      "position": 19.16
     },
     "windows": {
       "current_28d": [
-        "2026-07-27",
-        "2026-08-23"
+        "2026-08-02",
+        "2026-08-29"
       ],
       "previous_28d": [
-        "2026-06-29",
-        "2026-07-26"
+        "2026-07-05",
+        "2026-08-01"
       ],
       "current_7d": [
-        "2026-08-17",
-        "2026-08-23"
+        "2026-08-23",
+        "2026-08-29"
       ],
       "previous_7d": [
-        "2026-08-10",
-        "2026-08-16"
+        "2026-08-16",
+        "2026-08-22"
       ],
       "current_90d": [
-        "2026-05-26",
-        "2026-08-23"
+        "2026-06-01",
+        "2026-08-29"
       ]
     },
     "junk_28d": {
-      "impressions": 594,
-      "queries": 108,
+      "impressions": 479,
+      "queries": 102,
       "sample": [
-        "\"dealerrater\" \"google business profile\" \"third-party reviews\"",
         "\"stripe connect\" payouts \"tutoring platform\"",
-        "cloudflare bot management pricing official 2026"
+        "cloudflare bot management pricing official 2026",
+        "cloudflare browser rendering pricing official 2026"
       ]
     },
     "totals_28d_clean": {
-      "clicks": 117,
-      "impressions": 34042,
-      "ctr": 0.344
+      "clicks": 118,
+      "impressions": 37070,
+      "ctr": 0.318
     },
     "citation_floor_alerts": [
       {
@@ -81,75 +81,79 @@
     ]
   },
   "supabase": {
-    "leads_total": 36,
+    "leads_total": 45,
     "leads_by_context": {
-      "sys:lastrun": 36
+      "sys:lastrun": 43,
+      "drip:1": 1,
+      "results": 1
     },
-    "real_human_leads": 0,
+    "real_human_leads": 1,
     "api_keys": 0,
-    "real_human_leads_strict": 0,
+    "real_human_leads_strict": 1,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
-    "last_strict_human_lead_utc": null,
-    "real_human_leads_strict_7d": 0,
-    "real_human_leads_strict_28d": 0,
+    "last_strict_human_lead_utc": "2026-08-27T00:50:14",
+    "real_human_leads_strict_7d": 1,
+    "real_human_leads_strict_28d": 1,
     "bot_lead_fleets": [],
-    "real_human_leads_note": "real_human_leads (0) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (0) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
+    "real_human_leads_note": "real_human_leads (1) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (1) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 0,
-    "drip_stages": {},
+    "drip_stages": {
+      "drip:1": 1
+    },
     "affiliate_clicks": {
-      "total": 66,
-      "last7d": 15,
+      "total": 94,
+      "last7d": 29,
       "by_slug": {
-        "fiverr": 34,
-        "shopify": 14,
-        "wix": 12,
+        "fiverr": 48,
+        "wix": 21,
+        "shopify": 19,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 84,
-      "excluded_by_is_bot_flag": 18,
+      "rows_before_bot_filter": 113,
+      "excluded_by_is_bot_flag": 19,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 21,
-      "ip_hash_coverage_pct": 26.2,
-      "note": "user_ip_hash is NULL on 62 of 84 rows (26% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 18 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 50,
+      "ip_hash_coverage_pct": 45.1,
+      "note": "user_ip_hash is NULL on 62 of 113 rows (45% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 19 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
-      "pages_with_data": 4,
-      "impressions": 17,
+      "pages_with_data": 3,
+      "impressions": 12,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
       "pages_with_data": 1,
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0
     },
     "/tools/fixed-price-vs-time-and-materials": {
       "pages_with_data": 1,
-      "impressions": 6,
+      "impressions": 4,
       "clicks": 0
     },
     "/cost/ai/": {
-      "pages_with_data": 1,
-      "impressions": 1,
+      "pages_with_data": 0,
+      "impressions": 0,
       "clicks": 0
     },
     "/cost/hire/": {
-      "pages_with_data": 10,
-      "impressions": 618,
-      "clicks": 0
+      "pages_with_data": 9,
+      "impressions": 553,
+      "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 31,
-      "impressions": 192,
-      "clicks": 4
+      "pages_with_data": 28,
+      "impressions": 132,
+      "clicks": 3
     },
     "/cost/industry/": {
-      "pages_with_data": 155,
-      "impressions": 1069,
-      "clicks": 7
+      "pages_with_data": 153,
+      "impressions": 936,
+      "clicks": 4
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -158,18 +162,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8619,
-      "clicks": 17
+      "impressions": 9007,
+      "clicks": 15
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1568,
-      "clicks": 14
+      "impressions": 1678,
+      "clicks": 15
     },
     "/nonprofit-website-cost": {
-      "pages_with_data": 2,
-      "impressions": 945,
-      "clicks": 10
+      "pages_with_data": 3,
+      "impressions": 1416,
+      "clicks": 11
     }
   }
 }
