@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-01T04:35:09.523473Z",
+  "generated_utc": "2026-09-01T12:53:08.218179Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-01",
@@ -81,9 +81,10 @@
     ]
   },
   "supabase": {
-    "leads_total": 45,
+    "leads_total": 47,
     "leads_by_context": {
-      "sys:lastrun": 43,
+      "drip:2": 1,
+      "sys:lastrun": 44,
       "drip:1": 1,
       "results": 1
     },
@@ -99,11 +100,12 @@
     "real_human_leads_note": "real_human_leads (1) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (1) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 0,
     "drip_stages": {
-      "drip:1": 1
+      "drip:1": 1,
+      "drip:2": 1
     },
     "affiliate_clicks": {
       "total": 100,
-      "last7d": 34,
+      "last7d": 27,
       "by_slug": {
         "fiverr": 50,
         "wix": 23,
