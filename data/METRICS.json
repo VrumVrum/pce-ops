@@ -1,78 +1,78 @@
 {
-  "generated_utc": "2026-08-31T16:35:08.293463Z",
+  "generated_utc": "2026-09-01T04:35:09.523473Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-08-31",
+    "generated": "2026-09-01",
     "totals_28d": {
-      "clicks": 122,
-      "impressions": 38970,
-      "ctr": 0.313,
-      "position": 18.53
+      "clicks": 119,
+      "impressions": 37807,
+      "ctr": 0.315,
+      "position": 18.46
     },
     "totals_7d": {
-      "clicks": 36,
-      "impressions": 11796,
-      "ctr": 0.305,
-      "position": 15.94
+      "clicks": 33,
+      "impressions": 10347,
+      "ctr": 0.319,
+      "position": 15.9
     },
     "totals_90d": {
-      "clicks": 229,
-      "impressions": 73025,
-      "ctr": 0.314,
-      "position": 22.18
+      "clicks": 227,
+      "impressions": 72804,
+      "ctr": 0.312,
+      "position": 22.12
     },
     "totals_28d_prev": {
-      "clicks": 85,
-      "impressions": 22715,
-      "ctr": 0.374,
-      "position": 25.76
+      "clicks": 88,
+      "impressions": 23314,
+      "ctr": 0.377,
+      "position": 25.39
     },
     "totals_7d_prev": {
-      "clicks": 28,
-      "impressions": 9585,
-      "ctr": 0.292,
-      "position": 19.16
+      "clicks": 30,
+      "impressions": 9844,
+      "ctr": 0.305,
+      "position": 18.34
     },
     "windows": {
       "current_28d": [
-        "2026-08-02",
-        "2026-08-29"
+        "2026-08-03",
+        "2026-08-30"
       ],
       "previous_28d": [
-        "2026-07-05",
-        "2026-08-01"
+        "2026-07-06",
+        "2026-08-02"
       ],
       "current_7d": [
-        "2026-08-23",
-        "2026-08-29"
+        "2026-08-24",
+        "2026-08-30"
       ],
       "previous_7d": [
-        "2026-08-16",
-        "2026-08-22"
+        "2026-08-17",
+        "2026-08-23"
       ],
       "current_90d": [
-        "2026-06-01",
-        "2026-08-29"
+        "2026-06-02",
+        "2026-08-30"
       ]
     },
     "junk_28d": {
-      "impressions": 479,
-      "queries": 102,
+      "impressions": 453,
+      "queries": 99,
       "sample": [
-        "\"stripe connect\" payouts \"tutoring platform\"",
         "cloudflare bot management pricing official 2026",
-        "cloudflare browser rendering pricing official 2026"
+        "cloudflare browser rendering pricing official 2026",
+        "cloudflare browser run pricing official 2026"
       ]
     },
     "totals_28d_clean": {
-      "clicks": 122,
-      "impressions": 38491,
-      "ctr": 0.317
+      "clicks": 119,
+      "impressions": 37354,
+      "ctr": 0.319
     },
     "citation_floor_alerts": [
       {
         "page": "/website-costs-2026-report",
-        "impressions": 2
+        "impressions": 1
       },
       {
         "page": "/rate-database",
@@ -102,20 +102,20 @@
       "drip:1": 1
     },
     "affiliate_clicks": {
-      "total": 99,
+      "total": 100,
       "last7d": 34,
       "by_slug": {
-        "fiverr": 49,
+        "fiverr": 50,
         "wix": 23,
         "shopify": 21,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 118,
+      "rows_before_bot_filter": 119,
       "excluded_by_is_bot_flag": 19,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 55,
-      "ip_hash_coverage_pct": 47.5,
-      "note": "user_ip_hash is NULL on 62 of 118 rows (47% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 19 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 56,
+      "ip_hash_coverage_pct": 47.9,
+      "note": "user_ip_hash is NULL on 62 of 119 rows (48% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 19 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -142,17 +142,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 570,
+      "impressions": 561,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 29,
-      "impressions": 134,
+      "pages_with_data": 28,
+      "impressions": 126,
       "clicks": 3
     },
     "/cost/industry/": {
-      "pages_with_data": 154,
-      "impressions": 954,
+      "pages_with_data": 152,
+      "impressions": 910,
       "clicks": 4
     },
     "/software-development-budget-2027": {
@@ -162,18 +162,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 9358,
-      "clicks": 16
+      "impressions": 9057,
+      "clicks": 15
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1773,
+      "impressions": 1729,
       "clicks": 16
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 3,
-      "impressions": 1453,
-      "clicks": 11
+      "impressions": 1427,
+      "clicks": 10
     }
   }
 }
