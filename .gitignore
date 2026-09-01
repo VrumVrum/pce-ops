@@ -1,1 +1,18 @@
 __pycache__/
+
+# Credentials. This repo is PUBLIC and, since 2026-08-31, the data plane runs on
+# Flo's PC instead of GitHub Actions - so scripts/*.py now read a real Google
+# service-account key from disk (GSC_KEY_PATH, normally C:\Users\Flo\Downloads\
+# gsc-key.json) and Supabase creds from an env file, instead of Actions secrets.
+# Nothing stops a stray copy landing in this folder, and a commit here is public
+# immediately. Audit 2026-09-01 confirmed no credential has ever been committed
+# to this repo; this keeps it that way.
+.env
+.env.*
+*key*.json
+!data/*.json
+gsc-key.json
+*service-account*.json
+*credentials*.json
+*.pem
+*.p12
