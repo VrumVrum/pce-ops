@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-09-02T06:27:38.968023Z",
+  "generated_utc": "2026-09-02T16:35:09.695634Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-02",
     "totals_28d": {
-      "clicks": 120,
-      "impressions": 38208,
-      "ctr": 0.314,
-      "position": 18.43
+      "clicks": 129,
+      "impressions": 39978,
+      "ctr": 0.323,
+      "position": 18.27
     },
     "totals_7d": {
-      "clicks": 35,
-      "impressions": 9655,
-      "ctr": 0.363,
-      "position": 16.13
+      "clicks": 44,
+      "impressions": 11425,
+      "ctr": 0.385,
+      "position": 15.94
     },
     "totals_90d": {
-      "clicks": 233,
-      "impressions": 74100,
-      "ctr": 0.314,
-      "position": 21.97
+      "clicks": 242,
+      "impressions": 75870,
+      "ctr": 0.319,
+      "position": 21.81
     },
     "totals_28d_prev": {
       "clicks": 92,
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 120,
-      "impressions": 37778,
-      "ctr": 0.318
+      "clicks": 129,
+      "impressions": 39548,
+      "ctr": 0.326
     },
     "citation_floor_alerts": [
       {
@@ -105,7 +105,7 @@
     },
     "affiliate_clicks": {
       "total": 100,
-      "last7d": 27,
+      "last7d": 17,
       "by_slug": {
         "fiverr": 50,
         "wix": 23,
@@ -134,7 +134,7 @@
     },
     "/tools/fixed-price-vs-time-and-materials": {
       "pages_with_data": 1,
-      "impressions": 4,
+      "impressions": 5,
       "clicks": 0
     },
     "/cost/ai/": {
@@ -144,18 +144,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 567,
+      "impressions": 599,
       "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 28,
-      "impressions": 109,
+      "impressions": 112,
       "clicks": 3
     },
     "/cost/industry/": {
-      "pages_with_data": 150,
-      "impressions": 882,
-      "clicks": 4
+      "pages_with_data": 153,
+      "impressions": 912,
+      "clicks": 6
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -164,18 +164,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 9142,
+      "impressions": 9600,
       "clicks": 13
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1775,
-      "clicks": 15
+      "impressions": 1891,
+      "clicks": 17
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 3,
-      "impressions": 1430,
-      "clicks": 11
+      "impressions": 1480,
+      "clicks": 12
     }
   }
 }
