@@ -1,20 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-01T16:35:15Z",
+  "generated_utc": "2026-09-02T04:35:19Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "76",
       "users": "72",
-      "engagementRate": "0.092105263157894732",
-      "avgDuration": "14.607758473684211"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "7",
-      "users": "7",
-      "engagementRate": "0",
-      "avgDuration": "0.00018714285714285713"
+      "engagementRate": "0.14473684210526316",
+      "avgDuration": "15.431910578947369"
     },
     {
       "channel": "AI Assistant",
@@ -43,8 +36,8 @@
       "channel": "Direct",
       "sessions": "529",
       "users": "517",
-      "engagementRate": "0.52362948960302458",
-      "avgDuration": "31.547612321361058"
+      "engagementRate": "0.5311909262759924",
+      "avgDuration": "31.666016026465027"
     },
     {
       "channel": "Organic Search",
@@ -62,10 +55,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "21",
-      "users": "18",
-      "engagementRate": "0.2857142857142857",
-      "avgDuration": "107.83733257142859"
+      "sessions": "14",
+      "users": "11",
+      "engagementRate": "0.42857142857142855",
+      "avgDuration": "161.75590528571431"
     },
     {
       "channel": "Email",
@@ -133,7 +126,7 @@
     {
       "source": "(direct)",
       "sessions": "529",
-      "engagementRate": "0.52362948960302458"
+      "engagementRate": "0.5311909262759924"
     },
     {
       "source": "google",
@@ -154,11 +147,6 @@
       "source": "drip",
       "sessions": "12",
       "engagementRate": "0.58333333333333337"
-    },
-    {
-      "source": "(not set)",
-      "sessions": "8",
-      "engagementRate": "0"
     },
     {
       "source": "gemini.google.com",
@@ -187,6 +175,11 @@
     },
     {
       "source": "github.com",
+      "sessions": "3",
+      "engagementRate": "0.66666666666666663"
+    },
+    {
+      "source": "magicfire.ro",
       "sessions": "3",
       "engagementRate": "0.66666666666666663"
     }
@@ -322,7 +315,7 @@
     {
       "landing": "/",
       "sessions": "127",
-      "engagementRate": "0.63779527559055116"
+      "engagementRate": "0.64566929133858264"
     },
     {
       "landing": "/freelance-website-cost",
@@ -337,7 +330,7 @@
     {
       "landing": "/website-costs-2026-report",
       "sessions": "23",
-      "engagementRate": "0.043478260869565216"
+      "engagementRate": "0.086956521739130432"
     },
     {
       "landing": "/calculator",
@@ -412,7 +405,7 @@
     {
       "landing": "/mobile-app-cost",
       "sessions": "8",
-      "engagementRate": "0"
+      "engagementRate": "0.125"
     },
     {
       "landing": "/quote-analyzer",
