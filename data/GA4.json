@@ -1,27 +1,20 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-03T16:35:16Z",
+  "generated_utc": "2026-09-04T04:35:15Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "95",
       "users": "93",
-      "engagementRate": "0.12631578947368421",
-      "avgDuration": "12.67156967368421"
+      "engagementRate": "0.14736842105263157",
+      "avgDuration": "13.225871021052631"
     },
     {
       "channel": "Organic Search",
-      "sessions": "6",
-      "users": "5",
-      "engagementRate": "0",
-      "avgDuration": "137.63309716666666"
-    },
-    {
-      "channel": "Unassigned",
       "sessions": "5",
       "users": "5",
-      "engagementRate": "0",
-      "avgDuration": "0"
+      "engagementRate": "0.2",
+      "avgDuration": "165.1597166"
     },
     {
       "channel": "AI Assistant",
@@ -43,15 +36,15 @@
       "channel": "Direct",
       "sessions": "509",
       "users": "499",
-      "engagementRate": "0.48919449901768175",
-      "avgDuration": "29.84297985265226"
+      "engagementRate": "0.49312377210216107",
+      "avgDuration": "29.946434917485263"
     },
     {
       "channel": "Organic Search",
-      "sessions": "134",
+      "sessions": "133",
       "users": "85",
-      "engagementRate": "0.47761194029850745",
-      "avgDuration": "216.18684353731345"
+      "engagementRate": "0.48872180451127817",
+      "avgDuration": "217.81230852631577"
     },
     {
       "channel": "AI Assistant",
@@ -62,10 +55,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "17",
-      "users": "15",
-      "engagementRate": "0.35294117647058826",
-      "avgDuration": "133.21074552941178"
+      "sessions": "12",
+      "users": "10",
+      "engagementRate": "0.5",
+      "avgDuration": "188.71522283333334"
     },
     {
       "channel": "Email",
@@ -133,12 +126,12 @@
     {
       "source": "(direct)",
       "sessions": "509",
-      "engagementRate": "0.48919449901768175"
+      "engagementRate": "0.49312377210216107"
     },
     {
       "source": "google",
-      "sessions": "107",
-      "engagementRate": "0.46728971962616822"
+      "sessions": "106",
+      "engagementRate": "0.47169811320754718"
     },
     {
       "source": "chatgpt.com",
@@ -161,11 +154,6 @@
       "engagementRate": "0.14285714285714285"
     },
     {
-      "source": "(not set)",
-      "sessions": "6",
-      "engagementRate": "0"
-    },
-    {
       "source": "claude.ai",
       "sessions": "6",
       "engagementRate": "0.33333333333333331"
@@ -183,12 +171,17 @@
     {
       "source": "duckduckgo",
       "sessions": "3",
-      "engagementRate": "0"
+      "engagementRate": "0.33333333333333331"
     },
     {
       "source": "magicfire.ro",
       "sessions": "3",
       "engagementRate": "0.66666666666666663"
+    },
+    {
+      "source": "cn.bing.com",
+      "sessions": "2",
+      "engagementRate": "0"
     }
   ],
   "ai_landings_28d": [
@@ -317,7 +310,7 @@
     {
       "landing": "/",
       "sessions": "103",
-      "engagementRate": "0.52427184466019416"
+      "engagementRate": "0.5436893203883495"
     },
     {
       "landing": "/freelance-website-cost",
@@ -385,11 +378,6 @@
       "engagementRate": "0.33333333333333331"
     },
     {
-      "landing": "/website-cost-calculator",
-      "sessions": "9",
-      "engagementRate": "0.55555555555555558"
-    },
-    {
       "landing": "/contact",
       "sessions": "8",
       "engagementRate": "0.875"
@@ -410,6 +398,11 @@
       "engagementRate": "0.375"
     },
     {
+      "landing": "/website-cost-calculator",
+      "sessions": "8",
+      "engagementRate": "0.625"
+    },
+    {
       "landing": "/api-docs",
       "sessions": "7",
       "engagementRate": "0.8571428571428571"
@@ -417,18 +410,11 @@
   ],
   "ai_wow_alerts": [
     {
-      "engine": "gemini",
-      "sessions_then": 11,
-      "sessions_now": 7,
-      "ref_date": "2026-08-25",
-      "drop_pct": 36.4
-    },
-    {
       "engine": "perplexity",
-      "sessions_then": 5,
+      "sessions_then": 3,
       "sessions_now": 1,
-      "ref_date": "2026-08-25",
-      "drop_pct": 80.0
+      "ref_date": "2026-08-31",
+      "drop_pct": 66.7
     }
   ],
   "funnel_28d": {

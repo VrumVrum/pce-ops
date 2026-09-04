@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-03T16:35:15Z",
+ "generated_utc": "2026-09-04T04:35:15Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "64a8c59ca989",
+    "sha": "81217786d333",
     "generated": "2026-09-03"
    },
    {
@@ -44,59 +44,59 @@
  "refit_candidates": [
   {
    "page": "https://projectcostestimator.com/freelance-website-cost",
-   "impressions_28d": 9364,
-   "position": 11.6,
-   "ctr_pct": 0.13,
+   "impressions_28d": 9985,
+   "position": 11.4,
+   "ctr_pct": 0.12,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 18.1
+   "headroom_clicks_28d_at_clean_ctr": 20.3
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-   "impressions_28d": 3140,
+   "impressions_28d": 3244,
    "position": 8.4,
    "ctr_pct": 0.03,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 9.2
+   "headroom_clicks_28d_at_clean_ctr": 9.5
   },
   {
    "page": "https://projectcostestimator.com/compare/free-estimators",
-   "impressions_28d": 1732,
+   "impressions_28d": 1873,
    "position": 10.1,
-   "ctr_pct": 0.17,
+   "ctr_pct": 0.16,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 2.6
+   "headroom_clicks_28d_at_clean_ctr": 3.1
   },
   {
    "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
-   "impressions_28d": 901,
-   "position": 12.3,
-   "ctr_pct": 0,
+   "impressions_28d": 938,
+   "position": 12.1,
+   "ctr_pct": 0.11,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 2.9
+   "headroom_clicks_28d_at_clean_ctr": 2.0
   },
   {
    "page": "https://projectcostestimator.com/real-estate-website-cost",
-   "impressions_28d": 729,
-   "position": 10.9,
-   "ctr_pct": 0.14,
+   "impressions_28d": 780,
+   "position": 10.4,
+   "ctr_pct": 0.26,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 1.3
+   "headroom_clicks_28d_at_clean_ctr": 0.5
   },
   {
    "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
-   "impressions_28d": 206,
+   "impressions_28d": 209,
    "position": 7.8,
    "ctr_pct": 0,
    "site_clean_ctr_pct": 0.323,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
-   "page": "https://projectcostestimator.com/quote-analyzer",
-   "impressions_28d": 148,
-   "position": 12.2,
+   "page": "https://projectcostestimator.com/tools/cloudflare-cost-calculator",
+   "impressions_28d": 104,
+   "position": 13.6,
    "ctr_pct": 0,
    "site_clean_ctr_pct": 0.323,
-   "headroom_clicks_28d_at_clean_ctr": 0.5
+   "headroom_clicks_28d_at_clean_ctr": 0.3
   }
  ],
  "refit_note": "site clean avg CTR source: METRICS.json gsc.totals_28d_clean.ctr (junk-filtered)",
@@ -111,8 +111,8 @@
    {
     "page": "https://projectcostestimator.com/compare/free-estimators",
     "impressions_prev_28d": 342,
-    "impressions_curr_28d": 1732,
-    "impressions_delta_pct": 406.4,
+    "impressions_curr_28d": 1873,
+    "impressions_delta_pct": 447.7,
     "position_prev": 10.3,
     "position_curr": 10.1,
     "position_delta": -0.2
@@ -120,328 +120,346 @@
    {
     "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
     "impressions_prev_28d": 522,
-    "impressions_curr_28d": 901,
-    "impressions_delta_pct": 72.6,
+    "impressions_curr_28d": 938,
+    "impressions_delta_pct": 79.7,
     "position_prev": 12.1,
-    "position_curr": 12.3,
-    "position_delta": 0.2
+    "position_curr": 12.1,
+    "position_delta": 0.0
    },
    {
     "page": "https://projectcostestimator.com/website-cost-calculator",
     "impressions_prev_28d": 1015,
-    "impressions_curr_28d": 1689,
-    "impressions_delta_pct": 66.4,
+    "impressions_curr_28d": 1800,
+    "impressions_delta_pct": 77.3,
     "position_prev": 12.6,
-    "position_curr": 11.1,
-    "position_delta": -1.5
+    "position_curr": 10.9,
+    "position_delta": -1.7
    },
    {
     "page": "https://projectcostestimator.com/",
     "impressions_prev_28d": 309,
-    "impressions_curr_28d": 490,
-    "impressions_delta_pct": 58.6,
+    "impressions_curr_28d": 523,
+    "impressions_delta_pct": 69.3,
     "position_prev": 31.4,
-    "position_curr": 26.9,
-    "position_delta": -4.5
+    "position_curr": 26.0,
+    "position_delta": -5.4
    },
    {
     "page": "https://projectcostestimator.com/nonprofit-website-cost",
     "impressions_prev_28d": 905,
-    "impressions_curr_28d": 1399,
-    "impressions_delta_pct": 54.6,
+    "impressions_curr_28d": 1452,
+    "impressions_delta_pct": 60.4,
     "position_prev": 11.8,
-    "position_curr": 8.5,
-    "position_delta": -3.3
+    "position_curr": 8.4,
+    "position_delta": -3.4
    },
    {
     "page": "https://projectcostestimator.com/ecommerce-cost-calculator",
     "impressions_prev_28d": 449,
-    "impressions_curr_28d": 674,
-    "impressions_delta_pct": 50.1,
+    "impressions_curr_28d": 695,
+    "impressions_delta_pct": 54.8,
     "position_prev": 30.6,
-    "position_curr": 35.8,
-    "position_delta": 5.2
+    "position_curr": 35.7,
+    "position_delta": 5.1
    },
    {
     "page": "https://projectcostestimator.com/blog/saas-development-cost-2026",
     "impressions_prev_28d": 111,
-    "impressions_curr_28d": 162,
-    "impressions_delta_pct": 45.9,
+    "impressions_curr_28d": 171,
+    "impressions_delta_pct": 54.1,
     "position_prev": 44.3,
-    "position_curr": 45.1,
-    "position_delta": 0.8
-   },
-   {
-    "page": "https://projectcostestimator.com/mobile-app-cost",
-    "impressions_prev_28d": 436,
-    "impressions_curr_28d": 251,
-    "impressions_delta_pct": -42.4,
-    "position_prev": 33.2,
-    "position_curr": 28.0,
-    "position_delta": -5.2
+    "position_curr": 44.2,
+    "position_delta": -0.1
    },
    {
     "page": "https://projectcostestimator.com/law-firm-website-cost",
     "impressions_prev_28d": 642,
-    "impressions_curr_28d": 884,
-    "impressions_delta_pct": 37.7,
+    "impressions_curr_28d": 927,
+    "impressions_delta_pct": 44.4,
     "position_prev": 22.0,
-    "position_curr": 17.1,
-    "position_delta": -4.9
+    "position_curr": 16.9,
+    "position_delta": -5.1
+   },
+   {
+    "page": "https://projectcostestimator.com/mobile-app-cost",
+    "impressions_prev_28d": 436,
+    "impressions_curr_28d": 257,
+    "impressions_delta_pct": -41.1,
+    "position_prev": 33.2,
+    "position_curr": 27.5,
+    "position_delta": -5.7
    },
    {
     "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
     "impressions_prev_28d": 389,
-    "impressions_curr_28d": 506,
-    "impressions_delta_pct": 30.1,
+    "impressions_curr_28d": 515,
+    "impressions_delta_pct": 32.4,
     "position_prev": 32.0,
-    "position_curr": 34.9,
-    "position_delta": 2.9
-   },
-   {
-    "page": "https://projectcostestimator.com/cost/hire/bulgaria",
-    "impressions_prev_28d": 168,
-    "impressions_curr_28d": 118,
-    "impressions_delta_pct": -29.8,
-    "position_prev": 12.5,
-    "position_curr": 17.1,
-    "position_delta": 4.6
+    "position_curr": 34.4,
+    "position_delta": 2.4
    },
    {
     "page": "https://projectcostestimator.com/web-app-development-cost",
     "impressions_prev_28d": 2211,
-    "impressions_curr_28d": 2710,
-    "impressions_delta_pct": 22.6,
+    "impressions_curr_28d": 2844,
+    "impressions_delta_pct": 28.6,
     "position_prev": 40.7,
-    "position_curr": 32.7,
-    "position_delta": -8.0
+    "position_curr": 32.1,
+    "position_delta": -8.6
+   },
+   {
+    "page": "https://projectcostestimator.com/cost/hire/bulgaria",
+    "impressions_prev_28d": 168,
+    "impressions_curr_28d": 121,
+    "impressions_delta_pct": -28.0,
+    "position_prev": 12.5,
+    "position_curr": 17.2,
+    "position_delta": 4.7
+   },
+   {
+    "page": "https://projectcostestimator.com/cost/hire/ukraine",
+    "impressions_prev_28d": 195,
+    "impressions_curr_28d": 246,
+    "impressions_delta_pct": 26.2,
+    "position_prev": 14.3,
+    "position_curr": 15.8,
+    "position_delta": 1.5
+   },
+   {
+    "page": "https://projectcostestimator.com/restaurant-website-cost",
+    "impressions_prev_28d": 1567,
+    "impressions_curr_28d": 1955,
+    "impressions_delta_pct": 24.8,
+    "position_prev": 6.3,
+    "position_curr": 5.6,
+    "position_delta": -0.7
    },
    {
     "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
     "impressions_prev_28d": 263,
-    "impressions_curr_28d": 206,
-    "impressions_delta_pct": -21.7,
+    "impressions_curr_28d": 209,
+    "impressions_delta_pct": -20.5,
     "position_prev": 8.9,
     "position_curr": 7.8,
     "position_delta": -1.1
    },
    {
-    "page": "https://projectcostestimator.com/cost/hire/ukraine",
-    "impressions_prev_28d": 195,
-    "impressions_curr_28d": 235,
-    "impressions_delta_pct": 20.5,
-    "position_prev": 14.3,
-    "position_curr": 15.5,
-    "position_delta": 1.2
+    "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
+    "impressions_prev_28d": 146,
+    "impressions_curr_28d": 171,
+    "impressions_delta_pct": 17.1,
+    "position_prev": 18.7,
+    "position_curr": 18.6,
+    "position_delta": -0.1
+   },
+   {
+    "page": "https://projectcostestimator.com/freelance-website-cost",
+    "impressions_prev_28d": 8619,
+    "impressions_curr_28d": 9985,
+    "impressions_delta_pct": 15.8,
+    "position_prev": 12.0,
+    "position_curr": 11.4,
+    "position_delta": -0.6
+   },
+   {
+    "page": "https://projectcostestimator.com/real-estate-website-cost",
+    "impressions_prev_28d": 678,
+    "impressions_curr_28d": 780,
+    "impressions_delta_pct": 15.0,
+    "position_prev": 12.2,
+    "position_curr": 10.4,
+    "position_delta": -1.8
+   },
+   {
+    "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
+    "impressions_prev_28d": 222,
+    "impressions_curr_28d": 253,
+    "impressions_delta_pct": 14.0,
+    "position_prev": 37.8,
+    "position_curr": 49.5,
+    "position_delta": 11.7
    },
    {
     "page": "https://projectcostestimator.com/website-redesign-cost",
     "impressions_prev_28d": 462,
-    "impressions_curr_28d": 371,
-    "impressions_delta_pct": -19.7,
+    "impressions_curr_28d": 398,
+    "impressions_delta_pct": -13.9,
     "position_prev": 28.1,
-    "position_curr": 29.3,
-    "position_delta": 1.2
+    "position_curr": 29.8,
+    "position_delta": 1.7
    },
    {
-    "page": "https://projectcostestimator.com/restaurant-website-cost",
-    "impressions_prev_28d": 1567,
-    "impressions_curr_28d": 1842,
-    "impressions_delta_pct": 17.5,
-    "position_prev": 6.3,
-    "position_curr": 5.7,
-    "position_delta": -0.6
+    "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
+    "impressions_prev_28d": 371,
+    "impressions_curr_28d": 419,
+    "impressions_delta_pct": 12.9,
+    "position_prev": 13.8,
+    "position_curr": 13.6,
+    "position_delta": -0.2
    },
    {
     "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
     "impressions_prev_28d": 3708,
-    "impressions_curr_28d": 3140,
-    "impressions_delta_pct": -15.3,
+    "impressions_curr_28d": 3244,
+    "impressions_delta_pct": -12.5,
     "position_prev": 8.3,
     "position_curr": 8.4,
     "position_delta": 0.1
    },
    {
-    "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
-    "impressions_prev_28d": 222,
-    "impressions_curr_28d": 251,
-    "impressions_delta_pct": 13.1,
-    "position_prev": 37.8,
-    "position_curr": 49.9,
-    "position_delta": 12.1
+    "page": "https://projectcostestimator.com/landing-page-cost",
+    "impressions_prev_28d": 653,
+    "impressions_curr_28d": 727,
+    "impressions_delta_pct": 11.3,
+    "position_prev": 26.9,
+    "position_curr": 26.6,
+    "position_delta": -0.3
    },
    {
     "page": "https://projectcostestimator.com/quote-analyzer",
     "impressions_prev_28d": 170,
-    "impressions_curr_28d": 148,
-    "impressions_delta_pct": -12.9,
+    "impressions_curr_28d": 152,
+    "impressions_delta_pct": -10.6,
     "position_prev": 14.5,
-    "position_curr": 12.2,
-    "position_delta": -2.3
-   },
-   {
-    "page": "https://projectcostestimator.com/website-cost",
-    "impressions_prev_28d": 923,
-    "impressions_curr_28d": 814,
-    "impressions_delta_pct": -11.8,
-    "position_prev": 28.8,
-    "position_curr": 22.4,
-    "position_delta": -6.4
-   },
-   {
-    "page": "https://projectcostestimator.com/mvp-cost-calculator",
-    "impressions_prev_28d": 1889,
-    "impressions_curr_28d": 1670,
-    "impressions_delta_pct": -11.6,
-    "position_prev": 46.0,
-    "position_curr": 45.1,
-    "position_delta": -0.9
-   },
-   {
-    "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
-    "impressions_prev_28d": 146,
-    "impressions_curr_28d": 162,
-    "impressions_delta_pct": 11.0,
-    "position_prev": 18.7,
-    "position_curr": 19.1,
-    "position_delta": 0.4
+    "position_curr": 12.0,
+    "position_delta": -2.5
    },
    {
     "page": "https://projectcostestimator.com/compare/woocommerce-vs-shopify-cost",
     "impressions_prev_28d": 410,
-    "impressions_curr_28d": 449,
-    "impressions_delta_pct": 9.5,
+    "impressions_curr_28d": 453,
+    "impressions_delta_pct": 10.5,
     "position_prev": 74.5,
-    "position_curr": 71.9,
-    "position_delta": -2.6
-   },
-   {
-    "page": "https://projectcostestimator.com/freelance-website-cost",
-    "impressions_prev_28d": 8619,
-    "impressions_curr_28d": 9364,
-    "impressions_delta_pct": 8.6,
-    "position_prev": 12.0,
-    "position_curr": 11.6,
-    "position_delta": -0.4
-   },
-   {
-    "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
-    "impressions_prev_28d": 371,
-    "impressions_curr_28d": 401,
-    "impressions_delta_pct": 8.1,
-    "position_prev": 13.8,
-    "position_curr": 13.9,
-    "position_delta": 0.1
-   },
-   {
-    "page": "https://projectcostestimator.com/real-estate-website-cost",
-    "impressions_prev_28d": 678,
-    "impressions_curr_28d": 729,
-    "impressions_delta_pct": 7.5,
-    "position_prev": 12.2,
-    "position_curr": 10.9,
-    "position_delta": -1.3
-   },
-   {
-    "page": "https://projectcostestimator.com/landing-page-cost",
-    "impressions_prev_28d": 653,
-    "impressions_curr_28d": 696,
-    "impressions_delta_pct": 6.6,
-    "position_prev": 26.9,
-    "position_curr": 27.4,
-    "position_delta": 0.5
-   },
-   {
-    "page": "https://projectcostestimator.com/wordpress-website-cost",
-    "impressions_prev_28d": 743,
-    "impressions_curr_28d": 700,
-    "impressions_delta_pct": -5.8,
-    "position_prev": 40.4,
-    "position_curr": 34.0,
-    "position_delta": -6.4
-   },
-   {
-    "page": "https://projectcostestimator.com/saas-cost-estimator",
-    "impressions_prev_28d": 310,
-    "impressions_curr_28d": 294,
-    "impressions_delta_pct": -5.2,
-    "position_prev": 9.1,
-    "position_curr": 9.6,
-    "position_delta": 0.5
+    "position_curr": 71.5,
+    "position_delta": -3.0
    },
    {
     "page": "https://projectcostestimator.com/api-docs",
     "impressions_prev_28d": 126,
-    "impressions_curr_28d": 132,
-    "impressions_delta_pct": 4.8,
+    "impressions_curr_28d": 139,
+    "impressions_delta_pct": 10.3,
     "position_prev": 23.8,
-    "position_curr": 22.2,
-    "position_delta": -1.6
+    "position_curr": 21.6,
+    "position_delta": -2.2
+   },
+   {
+    "page": "https://projectcostestimator.com/mvp-cost-calculator",
+    "impressions_prev_28d": 1889,
+    "impressions_curr_28d": 1699,
+    "impressions_delta_pct": -10.1,
+    "position_prev": 46.0,
+    "position_curr": 44.9,
+    "position_delta": -1.1
    },
    {
     "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
     "impressions_prev_28d": 1067,
-    "impressions_curr_28d": 1113,
-    "impressions_delta_pct": 4.3,
+    "impressions_curr_28d": 1162,
+    "impressions_delta_pct": 8.9,
     "position_prev": 18.5,
-    "position_curr": 19.3,
-    "position_delta": 0.8
+    "position_curr": 19.2,
+    "position_delta": 0.7
    },
    {
-    "page": "https://projectcostestimator.com/marketplace-cost-estimator",
-    "impressions_prev_28d": 199,
-    "impressions_curr_28d": 191,
-    "impressions_delta_pct": -4.0,
-    "position_prev": 22.3,
-    "position_curr": 23.3,
-    "position_delta": 1.0
-   },
-   {
-    "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
-    "impressions_prev_28d": 175,
-    "impressions_curr_28d": 168,
-    "impressions_delta_pct": -4.0,
-    "position_prev": 12,
-    "position_curr": 16,
-    "position_delta": 4
+    "page": "https://projectcostestimator.com/website-cost",
+    "impressions_prev_28d": 923,
+    "impressions_curr_28d": 841,
+    "impressions_delta_pct": -8.9,
+    "position_prev": 28.8,
+    "position_curr": 22.2,
+    "position_delta": -6.6
    },
    {
     "page": "https://projectcostestimator.com/calculators",
     "impressions_prev_28d": 195,
-    "impressions_curr_28d": 201,
-    "impressions_delta_pct": 3.1,
+    "impressions_curr_28d": 207,
+    "impressions_delta_pct": 6.2,
     "position_prev": 43.7,
-    "position_curr": 51.3,
-    "position_delta": 7.6
+    "position_curr": 50.2,
+    "position_delta": 6.5
+   },
+   {
+    "page": "https://projectcostestimator.com/shopify-store-cost",
+    "impressions_prev_28d": 608,
+    "impressions_curr_28d": 646,
+    "impressions_delta_pct": 6.2,
+    "position_prev": 42.8,
+    "position_curr": 40.8,
+    "position_delta": -2.0
+   },
+   {
+    "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
+    "impressions_prev_28d": 175,
+    "impressions_curr_28d": 171,
+    "impressions_delta_pct": -2.3,
+    "position_prev": 12,
+    "position_curr": 15.9,
+    "position_delta": 3.9
    },
    {
     "page": "https://projectcostestimator.com/healthcare-website-cost",
     "impressions_prev_28d": 219,
-    "impressions_curr_28d": 213,
-    "impressions_delta_pct": -2.7,
+    "impressions_curr_28d": 224,
+    "impressions_delta_pct": 2.3,
     "position_prev": 19.1,
     "position_curr": 21.2,
     "position_delta": 2.1
    },
    {
-    "page": "https://projectcostestimator.com/shopify-store-cost",
-    "impressions_prev_28d": 608,
-    "impressions_curr_28d": 623,
-    "impressions_delta_pct": 2.5,
-    "position_prev": 42.8,
-    "position_curr": 41.4,
-    "position_delta": -1.4
+    "page": "https://projectcostestimator.com/wordpress-website-cost",
+    "impressions_prev_28d": 743,
+    "impressions_curr_28d": 730,
+    "impressions_delta_pct": -1.7,
+    "position_prev": 40.4,
+    "position_curr": 33.3,
+    "position_delta": -7.1
+   },
+   {
+    "page": "https://projectcostestimator.com/marketplace-cost-estimator",
+    "impressions_prev_28d": 199,
+    "impressions_curr_28d": 202,
+    "impressions_delta_pct": 1.5,
+    "position_prev": 22.3,
+    "position_curr": 22.8,
+    "position_delta": 0.5
+   },
+   {
+    "page": "https://projectcostestimator.com/saas-cost-estimator",
+    "impressions_prev_28d": 310,
+    "impressions_curr_28d": 310,
+    "impressions_delta_pct": 0.0,
+    "position_prev": 9.1,
+    "position_curr": 9.7,
+    "position_delta": 0.6
    }
   ],
   "queries": [
    {
     "query": "cost estimator",
     "impressions_prev_28d": 81,
-    "impressions_curr_28d": 143,
-    "impressions_delta_pct": 76.5,
+    "impressions_curr_28d": 151,
+    "impressions_delta_pct": 86.4,
     "position_prev": 43.7,
-    "position_curr": 31.7,
-    "position_delta": -12.0
+    "position_curr": 30.1,
+    "position_delta": -13.6
+   },
+   {
+    "query": "cost to hire developer in poland",
+    "impressions_prev_28d": 53,
+    "impressions_curr_28d": 88,
+    "impressions_delta_pct": 66.0,
+    "position_prev": 25.7,
+    "position_curr": 26.4,
+    "position_delta": 0.7
+   },
+   {
+    "query": "website price calculator",
+    "impressions_prev_28d": 120,
+    "impressions_curr_28d": 198,
+    "impressions_delta_pct": 65.0,
+    "position_prev": 14.5,
+    "position_curr": 10.4,
+    "position_delta": -4.1
    },
    {
     "query": "cloudflare workers pricing official 2026",
@@ -453,31 +471,13 @@
     "position_delta": -0.4
    },
    {
-    "query": "cost to hire developer in poland",
-    "impressions_prev_28d": 53,
-    "impressions_curr_28d": 85,
-    "impressions_delta_pct": 60.4,
-    "position_prev": 25.7,
-    "position_curr": 26.3,
-    "position_delta": 0.6
-   },
-   {
-    "query": "website price calculator",
-    "impressions_prev_28d": 120,
-    "impressions_curr_28d": 183,
-    "impressions_delta_pct": 52.5,
-    "position_prev": 14.5,
-    "position_curr": 10.8,
-    "position_delta": -3.7
-   },
-   {
     "query": "cost of developing a web application",
     "impressions_prev_28d": 58,
-    "impressions_curr_28d": 36,
-    "impressions_delta_pct": -37.9,
+    "impressions_curr_28d": 37,
+    "impressions_delta_pct": -36.2,
     "position_prev": 71.2,
-    "position_curr": 62.8,
-    "position_delta": -8.4
+    "position_curr": 62.1,
+    "position_delta": -9.1
    },
    {
     "query": "cloudflare pages pricing official 2026",
@@ -489,40 +489,31 @@
     "position_delta": 0.0
    },
    {
-    "query": "cost of web application development",
-    "impressions_prev_28d": 105,
-    "impressions_curr_28d": 118,
-    "impressions_delta_pct": 12.4,
-    "position_prev": 74.1,
-    "position_curr": 62.9,
-    "position_delta": -11.2
-   },
-   {
     "query": "cost estimation for web apps",
     "impressions_prev_28d": 99,
-    "impressions_curr_28d": 110,
-    "impressions_delta_pct": 11.1,
+    "impressions_curr_28d": 116,
+    "impressions_delta_pct": 17.2,
     "position_prev": 17.0,
-    "position_curr": 15.6,
-    "position_delta": -1.4
+    "position_curr": 15.2,
+    "position_delta": -1.8
+   },
+   {
+    "query": "cost of web application development",
+    "impressions_prev_28d": 105,
+    "impressions_curr_28d": 123,
+    "impressions_delta_pct": 17.1,
+    "position_prev": 74.1,
+    "position_curr": 62.4,
+    "position_delta": -11.7
    },
    {
     "query": "cloudflare pages pricing free tier 2026",
     "impressions_prev_28d": 62,
-    "impressions_curr_28d": 59,
-    "impressions_delta_pct": -4.8,
+    "impressions_curr_28d": 60,
+    "impressions_delta_pct": -3.2,
     "position_prev": 6.4,
     "position_curr": 6.6,
     "position_delta": 0.2
-   },
-   {
-    "query": "cost estimate api",
-    "impressions_prev_28d": 58,
-    "impressions_curr_28d": 56,
-    "impressions_delta_pct": -3.4,
-    "position_prev": 22.6,
-    "position_curr": 21.7,
-    "position_delta": -0.9
    },
    {
     "query": "cloudflare connect 2026 price",
@@ -532,6 +523,15 @@
     "position_prev": 8.1,
     "position_curr": 8.1,
     "position_delta": 0.0
+   },
+   {
+    "query": "cost estimate api",
+    "impressions_prev_28d": 58,
+    "impressions_curr_28d": 58,
+    "impressions_delta_pct": 0.0,
+    "position_prev": 22.6,
+    "position_curr": 21.7,
+    "position_delta": -0.9
    }
   ]
  },
@@ -539,11 +539,11 @@
   {
    "page": "https://projectcostestimator.com/mobile-app-cost",
    "impressions_prev_28d": 436,
-   "impressions_curr_28d": 251,
-   "impressions_delta_pct": -42.4,
+   "impressions_curr_28d": 257,
+   "impressions_delta_pct": -41.1,
    "position_prev": 33.2,
-   "position_curr": 28.0,
-   "position_delta": -5.2
+   "position_curr": 27.5,
+   "position_delta": -5.7
   }
  ],
  "decaying_status": "ok"
