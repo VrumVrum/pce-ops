@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-09-05T04:35:10.599527Z",
+  "generated_utc": "2026-09-05T16:35:09.085072Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-05",
     "totals_28d": {
-      "clicks": 122,
-      "impressions": 40373,
-      "ctr": 0.302,
-      "position": 17.64
+      "clicks": 129,
+      "impressions": 42563,
+      "ctr": 0.303,
+      "position": 17.41
     },
     "totals_7d": {
-      "clicks": 34,
-      "impressions": 10260,
-      "ctr": 0.331,
-      "position": 13.89
+      "clicks": 41,
+      "impressions": 12450,
+      "ctr": 0.329,
+      "position": 13.76
     },
     "totals_90d": {
-      "clicks": 253,
-      "impressions": 79563,
+      "clicks": 260,
+      "impressions": 81753,
       "ctr": 0.318,
-      "position": 21.23
+      "position": 21.02
     },
     "totals_28d_prev": {
       "clicks": 105,
@@ -56,17 +56,17 @@
       ]
     },
     "junk_28d": {
-      "impressions": 322,
-      "queries": 77,
+      "impressions": 327,
+      "queries": 78,
       "sample": [
+        "+cloudflare pages pricing official 2026",
         "cloudflare browser run pricing official 2026",
-        "cloudflare business plan pricing official 2026",
-        "cloudflare d1 free plan official 2026"
+        "cloudflare business plan pricing official 2026"
       ]
     },
     "totals_28d_clean": {
-      "clicks": 122,
-      "impressions": 40051,
+      "clicks": 129,
+      "impressions": 42236,
       "ctr": 0.305
     },
     "citation_floor_alerts": [
@@ -76,14 +76,15 @@
       },
       {
         "page": "/rate-database",
-        "impressions": 2
+        "impressions": 4
       }
     ]
   },
   "supabase": {
-    "leads_total": 50,
+    "leads_total": 52,
     "leads_by_context": {
-      "sys:lastrun": 46,
+      "drip:3": 1,
+      "sys:lastrun": 47,
       "results": 2,
       "drip:2": 1,
       "drip:1": 1
@@ -101,11 +102,12 @@
     "build_intent_count": 0,
     "drip_stages": {
       "drip:1": 1,
-      "drip:2": 1
+      "drip:2": 1,
+      "drip:3": 1
     },
     "affiliate_clicks": {
       "total": 103,
-      "last7d": 18,
+      "last7d": 14,
       "by_slug": {
         "fiverr": 51,
         "wix": 25,
@@ -124,7 +126,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 4,
-      "impressions": 13,
+      "impressions": 15,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -144,17 +146,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 613,
+      "impressions": 633,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 27,
-      "impressions": 95,
+      "pages_with_data": 28,
+      "impressions": 98,
       "clicks": 2
     },
     "/cost/industry/": {
       "pages_with_data": 147,
-      "impressions": 812,
+      "impressions": 848,
       "clicks": 7
     },
     "/software-development-budget-2027": {
@@ -164,18 +166,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 9973,
-      "clicks": 12
+      "impressions": 10577,
+      "clicks": 13
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1933,
-      "clicks": 18
+      "impressions": 2050,
+      "clicks": 19
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 3,
-      "impressions": 1519,
-      "clicks": 13
+      "impressions": 1575,
+      "clicks": 14
     }
   }
 }
