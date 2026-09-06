@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-06T04:38:15.415Z",
-  "passed": 15,
+  "generated_utc": "2026-09-06T16:38:58.491Z",
+  "passed": 14,
   "total": 15,
-  "all_green": true,
+  "all_green": false,
   "checks": [
     {
       "name": "load /",
@@ -46,8 +46,8 @@
     },
     {
       "name": "mobile menu iPhone SE /",
-      "ok": true,
-      "detail": "drawer=true links=12"
+      "ok": false,
+      "detail": "drawer=false links=12"
     },
     {
       "name": "mobile menu iPhone SE /calculator",
