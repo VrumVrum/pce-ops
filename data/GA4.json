@@ -1,27 +1,20 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-05T16:35:14Z",
+  "generated_utc": "2026-09-06T04:35:15Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "81",
-      "users": "80",
-      "engagementRate": "0.13580246913580246",
-      "avgDuration": "25.751132086419748"
+      "sessions": "82",
+      "users": "81",
+      "engagementRate": "0.17073170731707318",
+      "avgDuration": "25.636761097560978"
     },
     {
       "channel": "Organic Search",
       "sessions": "9",
       "users": "6",
-      "engagementRate": "0.33333333333333331",
-      "avgDuration": "148.55703244444442"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "4",
-      "users": "4",
-      "engagementRate": "0",
-      "avgDuration": "3.12506375"
+      "engagementRate": "0.44444444444444442",
+      "avgDuration": "148.82187855555557"
     },
     {
       "channel": "AI Assistant",
@@ -36,22 +29,29 @@
       "users": "1",
       "engagementRate": "0",
       "avgDuration": "0"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "1",
+      "users": "1",
+      "engagementRate": "1",
+      "avgDuration": "12.500255"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "485",
-      "users": "474",
-      "engagementRate": "0.46804123711340206",
-      "avgDuration": "29.573186119587625"
+      "sessions": "486",
+      "users": "475",
+      "engagementRate": "0.47325102880658437",
+      "avgDuration": "29.546024648148144"
     },
     {
       "channel": "Organic Search",
       "sessions": "116",
       "users": "72",
-      "engagementRate": "0.47413793103448276",
-      "avgDuration": "233.29042207758619"
+      "engagementRate": "0.48275862068965519",
+      "avgDuration": "233.31097048275865"
     },
     {
       "channel": "AI Assistant",
@@ -62,10 +62,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "14",
-      "users": "12",
-      "engagementRate": "0.35714285714285715",
-      "avgDuration": "160.24821185714288"
+      "sessions": "11",
+      "users": "9",
+      "engagementRate": "0.54545454545454541",
+      "avgDuration": "203.95226963636367"
     },
     {
       "channel": "Email",
@@ -132,8 +132,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "485",
-      "engagementRate": "0.46804123711340206"
+      "sessions": "486",
+      "engagementRate": "0.47325102880658437"
     },
     {
       "source": "google",
@@ -148,7 +148,7 @@
     {
       "source": "bing",
       "sessions": "19",
-      "engagementRate": "0.631578947368421"
+      "engagementRate": "0.68421052631578949"
     },
     {
       "source": "drip",
@@ -164,11 +164,6 @@
       "source": "claude.ai",
       "sessions": "5",
       "engagementRate": "0.2"
-    },
-    {
-      "source": "(not set)",
-      "sessions": "4",
-      "engagementRate": "0"
     },
     {
       "source": "tonys.ro",
@@ -189,6 +184,11 @@
       "source": "magicfire.ro",
       "sessions": "3",
       "engagementRate": "0.66666666666666663"
+    },
+    {
+      "source": "copilot.com",
+      "sessions": "2",
+      "engagementRate": "1"
     }
   ],
   "ai_landings_28d": [
@@ -307,12 +307,12 @@
     {
       "landing": "/",
       "sessions": "91",
-      "engagementRate": "0.43956043956043955"
+      "engagementRate": "0.45054945054945056"
     },
     {
       "landing": "/freelance-website-cost",
       "sessions": "56",
-      "engagementRate": "0.21428571428571427"
+      "engagementRate": "0.23214285714285715"
     },
     {
       "landing": "/website-costs-2026-report",
@@ -321,8 +321,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "20",
-      "engagementRate": "0.05"
+      "sessions": "21",
+      "engagementRate": "0.047619047619047616"
     },
     {
       "landing": "/calculator",
@@ -382,7 +382,7 @@
     {
       "landing": "/mobile-app-cost",
       "sessions": "8",
-      "engagementRate": "0.125"
+      "engagementRate": "0.25"
     },
     {
       "landing": "/website-cost-calculator",
