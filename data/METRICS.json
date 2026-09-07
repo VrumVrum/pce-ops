@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-07T04:35:09.697257Z",
+  "generated_utc": "2026-09-07T16:35:08.978422Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-07",
@@ -81,13 +81,13 @@
     ]
   },
   "supabase": {
-    "leads_total": 54,
+    "leads_total": 56,
     "leads_by_context": {
-      "sys:lastrun": 48,
+      "drip:2": 2,
+      "sys:lastrun": 49,
       "results:build": 1,
       "drip:3": 1,
       "results": 2,
-      "drip:2": 1,
       "drip:1": 1
     },
     "real_human_leads": 3,
@@ -103,24 +103,24 @@
     "build_intent_count": 1,
     "drip_stages": {
       "drip:1": 1,
-      "drip:2": 1,
+      "drip:2": 2,
       "drip:3": 1
     },
     "affiliate_clicks": {
-      "total": 108,
+      "total": 113,
       "last7d": 14,
       "by_slug": {
-        "fiverr": 54,
+        "fiverr": 57,
         "wix": 26,
-        "shopify": 22,
+        "shopify": 24,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 127,
+      "rows_before_bot_filter": 132,
       "excluded_by_is_bot_flag": 19,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 63,
-      "ip_hash_coverage_pct": 51.2,
-      "note": "user_ip_hash is NULL on 62 of 127 rows (51% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 19 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 68,
+      "ip_hash_coverage_pct": 53.0,
+      "note": "user_ip_hash is NULL on 62 of 132 rows (53% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 19 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
