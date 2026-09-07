@@ -1,27 +1,20 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-06T16:35:15Z",
+  "generated_utc": "2026-09-07T04:35:15Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "86",
-      "users": "85",
-      "engagementRate": "0.13953488372093023",
-      "avgDuration": "24.23201024418605"
+      "sessions": "87",
+      "users": "86",
+      "engagementRate": "0.17241379310344829",
+      "avgDuration": "24.471948839080461"
     },
     {
       "channel": "Organic Search",
-      "sessions": "9",
-      "users": "6",
-      "engagementRate": "0.44444444444444442",
-      "avgDuration": "148.82187855555557"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "5",
-      "users": "5",
-      "engagementRate": "0.2",
-      "avgDuration": "6.8697241999999985"
+      "sessions": "10",
+      "users": "7",
+      "engagementRate": "0.4",
+      "avgDuration": "133.9396907"
     },
     {
       "channel": "AI Assistant",
@@ -38,27 +31,27 @@
       "avgDuration": "0"
     },
     {
-      "channel": "Cross-network",
+      "channel": "Unassigned",
       "sessions": "1",
       "users": "1",
-      "engagementRate": "0",
-      "avgDuration": "0"
+      "engagementRate": "1",
+      "avgDuration": "12.500255"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "475",
-      "users": "465",
-      "engagementRate": "0.45263157894736844",
-      "avgDuration": "29.111677631578946"
+      "sessions": "477",
+      "users": "466",
+      "engagementRate": "0.45702306079664567",
+      "avgDuration": "29.08417933542977"
     },
     {
       "channel": "Organic Search",
-      "sessions": "113",
-      "users": "70",
-      "engagementRate": "0.48672566371681414",
-      "avgDuration": "239.05157130088497"
+      "sessions": "114",
+      "users": "71",
+      "engagementRate": "0.48245614035087719",
+      "avgDuration": "236.95462769298246"
     },
     {
       "channel": "AI Assistant",
@@ -69,10 +62,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "13",
-      "users": "11",
-      "engagementRate": "0.46153846153846156",
-      "avgDuration": "174.25564092307695"
+      "sessions": "9",
+      "users": "7",
+      "engagementRate": "0.66666666666666663",
+      "avgDuration": "249.27499622222226"
     },
     {
       "channel": "Email",
@@ -92,13 +85,6 @@
       "channel": "Organic Social",
       "sessions": "2",
       "users": "2",
-      "engagementRate": "0",
-      "avgDuration": "0"
-    },
-    {
-      "channel": "Cross-network",
-      "sessions": "1",
-      "users": "1",
       "engagementRate": "0",
       "avgDuration": "0"
     },
@@ -141,13 +127,13 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "475",
-      "engagementRate": "0.45263157894736844"
+      "sessions": "477",
+      "engagementRate": "0.45702306079664567"
     },
     {
       "source": "google",
-      "sessions": "85",
-      "engagementRate": "0.43529411764705883"
+      "sessions": "86",
+      "engagementRate": "0.43023255813953487"
     },
     {
       "source": "chatgpt.com",
@@ -168,11 +154,6 @@
       "source": "gemini.google.com",
       "sessions": "7",
       "engagementRate": "0.14285714285714285"
-    },
-    {
-      "source": "(not set)",
-      "sessions": "5",
-      "engagementRate": "0"
     },
     {
       "source": "claude.ai",
@@ -198,6 +179,11 @@
       "source": "tonys.ro",
       "sessions": "3",
       "engagementRate": "0.66666666666666663"
+    },
+    {
+      "source": "copilot.com",
+      "sessions": "2",
+      "engagementRate": "1"
     }
   ],
   "ai_landings_28d": [
@@ -310,8 +296,8 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "83",
-      "engagementRate": "0.3493975903614458"
+      "sessions": "84",
+      "engagementRate": "0.38095238095238093"
     },
     {
       "landing": "/freelance-website-cost",
@@ -394,17 +380,17 @@
       "engagementRate": "0"
     },
     {
-      "landing": "/blog/vercel-cost-2026",
-      "sessions": "7",
-      "engagementRate": "0.2857142857142857"
-    },
-    {
       "landing": "/mobile-app-cost",
       "sessions": "7",
       "engagementRate": "0.2857142857142857"
     },
     {
       "landing": "/blog/cloudflare-cost-2026",
+      "sessions": "6",
+      "engagementRate": "1"
+    },
+    {
+      "landing": "/blog/cost-estimate-api-2026",
       "sessions": "6",
       "engagementRate": "1"
     }
