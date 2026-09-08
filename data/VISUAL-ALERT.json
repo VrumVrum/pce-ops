@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-08T04:38:13.267Z",
+  "generated_utc": "2026-09-08T16:38:52.578Z",
   "status": "red",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -7,8 +7,8 @@
   "alerts": [
     {
       "page": "/",
-      "diff_pct": 11.04,
-      "ts": "2026-09-08T04:38:13.267Z"
+      "diff_pct": 11.08,
+      "ts": "2026-09-08T16:38:52.578Z"
     }
   ],
   "pages": [
@@ -16,7 +16,7 @@
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 11.04,
+      "diff_pct": 11.08,
       "alert": true
     },
     {

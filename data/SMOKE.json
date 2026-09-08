@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-08T04:38:12.903Z",
+  "generated_utc": "2026-09-08T16:38:52.215Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -7,37 +7,37 @@
     {
       "name": "load /",
       "ok": true,
-      "detail": "HTTP 200, 8667 chars, 0 JS err"
+      "detail": "HTTP 200, 8774 chars, 0 JS err"
     },
     {
       "name": "load /calculator",
       "ok": true,
-      "detail": "HTTP 200, 2150 chars, 0 JS err"
+      "detail": "HTTP 200, 2185 chars, 0 JS err"
     },
     {
       "name": "load /tools/rfp-generator",
       "ok": true,
-      "detail": "HTTP 200, 9407 chars, 0 JS err"
+      "detail": "HTTP 200, 9442 chars, 0 JS err"
     },
     {
       "name": "load /tools/freelancer-quote-generator",
       "ok": true,
-      "detail": "HTTP 200, 8646 chars, 0 JS err"
+      "detail": "HTTP 200, 8681 chars, 0 JS err"
     },
     {
       "name": "load /cost/industry/dentist",
       "ok": true,
-      "detail": "HTTP 200, 5789 chars, 0 JS err"
+      "detail": "HTTP 200, 5824 chars, 0 JS err"
     },
     {
       "name": "load /cost/app-like/uber",
       "ok": true,
-      "detail": "HTTP 200, 6163 chars, 0 JS err"
+      "detail": "HTTP 200, 6198 chars, 0 JS err"
     },
     {
       "name": "load /cost/hire/india",
       "ok": true,
-      "detail": "HTTP 200, 7908 chars, 0 JS err"
+      "detail": "HTTP 200, 7943 chars, 0 JS err"
     },
     {
       "name": "uber calculator reacts to clicks",
