@@ -1,16 +1,23 @@
 {
-  "generated_utc": "2026-09-07T16:38:52.119Z",
-  "status": "green",
+  "generated_utc": "2026-09-08T04:38:13.267Z",
+  "status": "red",
   "threshold_pct": 5,
   "viewport": "1280x800",
   "comparator": "pixelmatch@5 (pure JS; per-pixel threshold 0.1)",
-  "alerts": [],
+  "alerts": [
+    {
+      "page": "/",
+      "diff_pct": 11.04,
+      "ts": "2026-09-08T04:38:13.267Z"
+    }
+  ],
   "pages": [
     {
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 11.04,
+      "alert": true
     },
     {
       "page": "/calculator",

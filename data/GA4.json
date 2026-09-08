@@ -1,13 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-07T16:35:15Z",
+  "generated_utc": "2026-09-08T04:35:17Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "96",
-      "users": "90",
-      "engagementRate": "0.14583333333333334",
-      "avgDuration": "32.725748520833328"
+      "sessions": "97",
+      "users": "91",
+      "engagementRate": "0.19587628865979381",
+      "avgDuration": "33.48228612371134"
     },
     {
       "channel": "Organic Search",
@@ -15,13 +15,6 @@
       "users": "8",
       "engagementRate": "0.30769230769230771",
       "avgDuration": "103.03053130769231"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "7",
-      "users": "6",
-      "engagementRate": "0.14285714285714285",
-      "avgDuration": "1.7857507142857141"
     },
     {
       "channel": "AI Assistant",
@@ -36,15 +29,22 @@
       "users": "1",
       "engagementRate": "0",
       "avgDuration": "0"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "1",
+      "users": "1",
+      "engagementRate": "1",
+      "avgDuration": "12.500255"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "480",
-      "users": "464",
-      "engagementRate": "0.44791666666666669",
-      "avgDuration": "30.835268816666666"
+      "sessions": "481",
+      "users": "465",
+      "engagementRate": "0.45738045738045741",
+      "avgDuration": "30.991764923076921"
     },
     {
       "channel": "Organic Search",
@@ -62,10 +62,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "14",
-      "users": "11",
-      "engagementRate": "0.35714285714285715",
-      "avgDuration": "145.42432592857142"
+      "sessions": "8",
+      "users": "6",
+      "engagementRate": "0.625",
+      "avgDuration": "254.49257037499999"
     },
     {
       "channel": "Email",
@@ -127,8 +127,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "480",
-      "engagementRate": "0.44791666666666669"
+      "sessions": "481",
+      "engagementRate": "0.45738045738045741"
     },
     {
       "source": "google",
@@ -144,11 +144,6 @@
       "source": "bing",
       "sessions": "20",
       "engagementRate": "0.65"
-    },
-    {
-      "source": "(not set)",
-      "sessions": "7",
-      "engagementRate": "0"
     },
     {
       "source": "drip",
@@ -184,6 +179,11 @@
       "source": "tonys.ro",
       "sessions": "2",
       "engagementRate": "0.5"
+    },
+    {
+      "source": "(not set)",
+      "sessions": "1",
+      "engagementRate": "0"
     }
   ],
   "ai_landings_28d": [
@@ -292,7 +292,7 @@
     {
       "landing": "/",
       "sessions": "82",
-      "engagementRate": "0.34146341463414637"
+      "engagementRate": "0.35365853658536583"
     },
     {
       "landing": "/freelance-website-cost",
@@ -306,8 +306,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "20",
-      "engagementRate": "0.05"
+      "sessions": "22",
+      "engagementRate": "0.045454545454545456"
     },
     {
       "landing": "/calculator",
@@ -335,11 +335,6 @@
       "engagementRate": "0.3"
     },
     {
-      "landing": "",
-      "sessions": "9",
-      "engagementRate": "0"
-    },
-    {
       "landing": "/blog/canva-pro-cost-2026",
       "sessions": "9",
       "engagementRate": "0.1111111111111111"
@@ -360,6 +355,11 @@
       "engagementRate": "1"
     },
     {
+      "landing": "/mobile-app-cost",
+      "sessions": "8",
+      "engagementRate": "0.25"
+    },
+    {
       "landing": "/nonprofit-website-cost",
       "sessions": "8",
       "engagementRate": "0.5"
@@ -372,12 +372,7 @@
     {
       "landing": "/blog/vercel-cost-2026",
       "sessions": "7",
-      "engagementRate": "0.2857142857142857"
-    },
-    {
-      "landing": "/mobile-app-cost",
-      "sessions": "7",
-      "engagementRate": "0.2857142857142857"
+      "engagementRate": "0.42857142857142855"
     },
     {
       "landing": "/web-app-development-cost",
@@ -386,6 +381,11 @@
     },
     {
       "landing": "/blog",
+      "sessions": "6",
+      "engagementRate": "0.16666666666666666"
+    },
+    {
+      "landing": "/blog/average-website-cost-2026",
       "sessions": "6",
       "engagementRate": "0"
     }

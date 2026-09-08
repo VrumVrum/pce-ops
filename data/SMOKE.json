@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-07T16:38:51.755Z",
+  "generated_utc": "2026-09-08T04:38:12.903Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -7,7 +7,7 @@
     {
       "name": "load /",
       "ok": true,
-      "detail": "HTTP 200, 13205 chars, 0 JS err"
+      "detail": "HTTP 200, 8667 chars, 0 JS err"
     },
     {
       "name": "load /calculator",
