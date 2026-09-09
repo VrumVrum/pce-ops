@@ -1,34 +1,27 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-08T16:35:15Z",
+  "generated_utc": "2026-09-09T04:35:16Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "95",
-      "users": "89",
-      "engagementRate": "0.16842105263157894",
-      "avgDuration": "33.717126221052631"
+      "sessions": "96",
+      "users": "90",
+      "engagementRate": "0.1875",
+      "avgDuration": "33.591182114583333"
     },
     {
       "channel": "Organic Search",
       "sessions": "15",
       "users": "9",
       "engagementRate": "0.26666666666666666",
-      "avgDuration": "89.293127133333343"
+      "avgDuration": "89.7459174"
     },
     {
       "channel": "AI Assistant",
       "sessions": "4",
       "users": "3",
-      "engagementRate": "0.25",
+      "engagementRate": "0.5",
       "avgDuration": "92.82581325"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "4",
-      "users": "4",
-      "engagementRate": "0.25",
-      "avgDuration": "3.12506375"
     },
     {
       "channel": "Email",
@@ -36,36 +29,43 @@
       "users": "1",
       "engagementRate": "0",
       "avgDuration": "0"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "1",
+      "users": "1",
+      "engagementRate": "1",
+      "avgDuration": "12.500255"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "458",
-      "users": "441",
-      "engagementRate": "0.44323144104803491",
-      "avgDuration": "31.178768840611355"
+      "sessions": "459",
+      "users": "442",
+      "engagementRate": "0.44662309368191722",
+      "avgDuration": "31.157957779956426"
     },
     {
       "channel": "Organic Search",
       "sessions": "100",
       "users": "63",
       "engagementRate": "0.44",
-      "avgDuration": "200.25912595000003"
+      "avgDuration": "200.32704449000002"
     },
     {
       "channel": "AI Assistant",
       "sessions": "37",
       "users": "23",
-      "engagementRate": "0.32432432432432434",
+      "engagementRate": "0.35135135135135137",
       "avgDuration": "200.84115937837839"
     },
     {
       "channel": "Unassigned",
-      "sessions": "10",
-      "users": "8",
-      "engagementRate": "0.5",
-      "avgDuration": "200.8527948"
+      "sessions": "7",
+      "users": "5",
+      "engagementRate": "0.7142857142857143",
+      "avgDuration": "286.932564"
     },
     {
       "channel": "Email",
@@ -100,7 +100,7 @@
     {
       "source": "chatgpt.com",
       "sessions": "23",
-      "engagementRate": "0.391304347826087"
+      "engagementRate": "0.43478260869565216"
     },
     {
       "source": "gemini.google.com",
@@ -127,8 +127,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "458",
-      "engagementRate": "0.44323144104803491"
+      "sessions": "459",
+      "engagementRate": "0.44662309368191722"
     },
     {
       "source": "google",
@@ -138,7 +138,7 @@
     {
       "source": "chatgpt.com",
       "sessions": "23",
-      "engagementRate": "0.391304347826087"
+      "engagementRate": "0.43478260869565216"
     },
     {
       "source": "bing",
@@ -166,11 +166,6 @@
       "engagementRate": "0.25"
     },
     {
-      "source": "(not set)",
-      "sessions": "3",
-      "engagementRate": "0"
-    },
-    {
       "source": "duckduckgo",
       "sessions": "3",
       "engagementRate": "0.33333333333333331"
@@ -182,6 +177,11 @@
     },
     {
       "source": "copilot.com",
+      "sessions": "2",
+      "engagementRate": "0.5"
+    },
+    {
+      "source": "tonys.ro",
       "sessions": "2",
       "engagementRate": "0.5"
     }
@@ -302,12 +302,12 @@
     {
       "landing": "/",
       "sessions": "81",
-      "engagementRate": "0.345679012345679"
+      "engagementRate": "0.35802469135802467"
     },
     {
       "landing": "/freelance-website-cost",
-      "sessions": "59",
-      "engagementRate": "0.1864406779661017"
+      "sessions": "60",
+      "engagementRate": "0.2"
     },
     {
       "landing": "/website-costs-2026-report",
