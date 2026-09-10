@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-09-09T16:40:11.153Z",
-  "passed": 15,
+  "generated_utc": "2026-09-10T04:39:42.202Z",
+  "passed": 11,
   "total": 15,
-  "all_green": true,
+  "all_green": false,
   "checks": [
     {
       "name": "load /",
@@ -46,8 +46,8 @@
     },
     {
       "name": "mobile menu iPhone SE /",
-      "ok": true,
-      "detail": "drawer=true links=12"
+      "ok": false,
+      "detail": "drawer=false links=12"
     },
     {
       "name": "mobile menu iPhone SE /calculator",
@@ -56,18 +56,18 @@
     },
     {
       "name": "mobile menu iPhone SE /cost/industry/dentist",
-      "ok": true,
-      "detail": "drawer=true links=12"
+      "ok": false,
+      "detail": "drawer=false links=12"
     },
     {
       "name": "mobile menu iPhone 14 /",
-      "ok": true,
-      "detail": "drawer=true links=12"
+      "ok": false,
+      "detail": "drawer=false links=12"
     },
     {
       "name": "mobile menu iPhone 14 /calculator",
-      "ok": true,
-      "detail": "drawer=true links=12"
+      "ok": false,
+      "detail": "drawer=false links=12"
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",

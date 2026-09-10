@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-09T16:35:20Z",
+ "generated_utc": "2026-09-10T04:35:33Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "a1e291d546dd",
+    "sha": "f2a09295fc75",
     "generated": "2026-09-09"
    },
    {
@@ -51,15 +51,15 @@
    "impressions_28d": 10860,
    "position": 11.1,
    "ctr_pct": 0.14,
-   "site_clean_ctr_pct": 0.341,
-   "headroom_clicks_28d_at_clean_ctr": 21.8
+   "site_clean_ctr_pct": 0.343,
+   "headroom_clicks_28d_at_clean_ctr": 22.0
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 2544,
    "position": 8.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 8.7
   },
   {
@@ -67,15 +67,15 @@
    "impressions_28d": 2383,
    "position": 10.4,
    "ctr_pct": 0.08,
-   "site_clean_ctr_pct": 0.341,
-   "headroom_clicks_28d_at_clean_ctr": 6.2
+   "site_clean_ctr_pct": 0.343,
+   "headroom_clicks_28d_at_clean_ctr": 6.3
   },
   {
    "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
    "impressions_28d": 1078,
    "position": 11.4,
    "ctr_pct": 0.09,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 2.7
   },
   {
@@ -83,7 +83,7 @@
    "impressions_28d": 1068,
    "position": 14.9,
    "ctr_pct": 0.28,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -91,7 +91,7 @@
    "impressions_28d": 811,
    "position": 10.1,
    "ctr_pct": 0.12,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 1.8
   },
   {
@@ -99,7 +99,7 @@
    "impressions_28d": 296,
    "position": 10.7,
    "ctr_pct": 0.34,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 0.0
   },
   {
@@ -107,7 +107,7 @@
    "impressions_28d": 200,
    "position": 7.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.341,
+   "site_clean_ctr_pct": 0.343,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   }
  ],

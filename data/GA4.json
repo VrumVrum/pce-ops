@@ -1,13 +1,13 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-09T16:35:21Z",
+  "generated_utc": "2026-09-10T04:35:34Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "88",
-      "users": "82",
-      "engagementRate": "0.18181818181818182",
-      "avgDuration": "35.817968909090908"
+      "sessions": "90",
+      "users": "84",
+      "engagementRate": "0.18888888888888888",
+      "avgDuration": "35.227161755555557"
     },
     {
       "channel": "Organic Search",
@@ -15,13 +15,6 @@
       "users": "10",
       "engagementRate": "0.23529411764705882",
       "avgDuration": "79.04594941176471"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "4",
-      "users": "4",
-      "engagementRate": "0.25",
-      "avgDuration": "3.12506375"
     },
     {
       "channel": "AI Assistant",
@@ -34,17 +27,24 @@
       "channel": "Email",
       "sessions": "3",
       "users": "1",
-      "engagementRate": "0",
-      "avgDuration": "18.237055666666667"
+      "engagementRate": "0.33333333333333331",
+      "avgDuration": "113.21160166666665"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "1",
+      "users": "1",
+      "engagementRate": "1",
+      "avgDuration": "12.500255"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "429",
-      "users": "412",
-      "engagementRate": "0.39627039627039629",
-      "avgDuration": "30.847197687645686"
+      "sessions": "431",
+      "users": "414",
+      "engagementRate": "0.39675174013921116",
+      "avgDuration": "30.74689350812065"
     },
     {
       "channel": "Organic Search",
@@ -62,17 +62,17 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "10",
-      "users": "8",
-      "engagementRate": "0.5",
-      "avgDuration": "200.8527948"
+      "sessions": "7",
+      "users": "5",
+      "engagementRate": "0.7142857142857143",
+      "avgDuration": "286.932564"
     },
     {
       "channel": "Email",
       "sessions": "6",
       "users": "1",
-      "engagementRate": "0.33333333333333331",
-      "avgDuration": "18.392326166666667"
+      "engagementRate": "0.5",
+      "avgDuration": "65.879599166666665"
     },
     {
       "channel": "Referral",
@@ -127,8 +127,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "429",
-      "engagementRate": "0.39627039627039629"
+      "sessions": "431",
+      "engagementRate": "0.39675174013921116"
     },
     {
       "source": "google",
@@ -148,7 +148,7 @@
     {
       "source": "drip",
       "sessions": "6",
-      "engagementRate": "0.33333333333333331"
+      "engagementRate": "0.5"
     },
     {
       "source": "gemini.google.com",
@@ -171,17 +171,17 @@
       "engagementRate": "0.25"
     },
     {
-      "source": "(not set)",
-      "sessions": "3",
-      "engagementRate": "0"
-    },
-    {
       "source": "magicfire.ro",
       "sessions": "3",
       "engagementRate": "0.66666666666666663"
     },
     {
       "source": "copilot.com",
+      "sessions": "2",
+      "engagementRate": "0.5"
+    },
+    {
+      "source": "tonys.ro",
       "sessions": "2",
       "engagementRate": "0.5"
     }
@@ -301,8 +301,8 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "84",
-      "engagementRate": "0.34523809523809523"
+      "sessions": "85",
+      "engagementRate": "0.35294117647058826"
     },
     {
       "landing": "/freelance-website-cost",
@@ -350,14 +350,14 @@
       "engagementRate": "0.33333333333333331"
     },
     {
+      "landing": "/mobile-app-cost",
+      "sessions": "9",
+      "engagementRate": "0.22222222222222221"
+    },
+    {
       "landing": "/blog/canva-pro-cost-2026",
       "sessions": "8",
       "engagementRate": "0.125"
-    },
-    {
-      "landing": "/mobile-app-cost",
-      "sessions": "8",
-      "engagementRate": "0.25"
     },
     {
       "landing": "/website-cost-calculator",
