@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-11T08:21:08.049934Z",
+  "generated_utc": "2026-09-11T16:35:09.363832Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-11",
@@ -81,14 +81,14 @@
     ]
   },
   "supabase": {
-    "leads_total": 62,
+    "leads_total": 65,
     "leads_by_context": {
+      "drip:3": 2,
+      "drip:2": 3,
+      "drip:1": 3,
       "sys:lastrun": 53,
       "results": 3,
-      "drip:1": 2,
-      "drip:2": 2,
-      "results:build": 1,
-      "drip:3": 1
+      "results:build": 1
     },
     "real_human_leads": 4,
     "api_keys": 0,
@@ -102,25 +102,25 @@
     "real_human_leads_note": "real_human_leads (4) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (4) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 1,
     "drip_stages": {
-      "drip:1": 2,
-      "drip:2": 2,
-      "drip:3": 1
+      "drip:1": 3,
+      "drip:2": 3,
+      "drip:3": 2
     },
     "affiliate_clicks": {
-      "total": 124,
-      "last7d": 24,
+      "total": 128,
+      "last7d": 28,
       "by_slug": {
-        "fiverr": 64,
-        "wix": 29,
+        "fiverr": 65,
+        "wix": 32,
         "shopify": 25,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 145,
+      "rows_before_bot_filter": 149,
       "excluded_by_is_bot_flag": 21,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 81,
-      "ip_hash_coverage_pct": 57.2,
-      "note": "user_ip_hash is NULL on 62 of 145 rows (57% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 21 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 85,
+      "ip_hash_coverage_pct": 58.4,
+      "note": "user_ip_hash is NULL on 62 of 149 rows (58% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 21 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
