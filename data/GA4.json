@@ -1,12 +1,12 @@
 {
   "property": "532207725",
-  "generated_utc": "2026-09-12T16:35:16Z",
+  "generated_utc": "2026-09-13T04:35:18Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "87",
       "users": "81",
-      "engagementRate": "0.21839080459770116",
+      "engagementRate": "0.22988505747126436",
       "avgDuration": "17.033804"
     },
     {
@@ -36,7 +36,7 @@
       "channel": "Direct",
       "sessions": "384",
       "users": "368",
-      "engagementRate": "0.3046875",
+      "engagementRate": "0.30729166666666669",
       "avgDuration": "29.027673776041667"
     },
     {
@@ -109,7 +109,7 @@
     {
       "source": "(direct)",
       "sessions": "384",
-      "engagementRate": "0.3046875"
+      "engagementRate": "0.30729166666666669"
     },
     {
       "source": "google",
@@ -308,7 +308,7 @@
     {
       "landing": "/blog/api-integration-cost-2026",
       "sessions": "8",
-      "engagementRate": "0.125"
+      "engagementRate": "0.25"
     },
     {
       "landing": "/blog/wcag-accessibility-cost-2026",
