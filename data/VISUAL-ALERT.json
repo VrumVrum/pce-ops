@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-15T15:46:48.393Z",
+  "generated_utc": "2026-09-15T16:38:15.246Z",
   "status": "red",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -8,7 +8,12 @@
     {
       "page": "/",
       "diff_pct": 11.08,
-      "ts": "2026-09-15T15:46:48.393Z"
+      "ts": "2026-09-15T16:38:15.246Z"
+    },
+    {
+      "page": "/website-costs-2026-report",
+      "diff_pct": 8.76,
+      "ts": "2026-09-15T16:38:15.246Z"
     }
   ],
   "pages": [
@@ -41,7 +46,8 @@
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 8.76,
+      "alert": true
     }
   ],
   "note": "Pixel diff of money pages vs committed baseline. status=red -> a page changed >5% visually (or failed to shoot); baseline is kept until re-seeded via workflow_dispatch reseed=true. Supervisor: treat red as a finding — text gates cannot see rendering."
