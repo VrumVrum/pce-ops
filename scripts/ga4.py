@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""GA4 pulse for projectcostestimator.com (property 532207725) — server edition.
+"""GA4 pulse for projectcostestimator.com (property 532181981, the owner's complete property; 532207725 dropped most traffic from 2026-08-19 and was retired as the data source on 2026-09-17) — server edition.
 
 Why this exists: AI-assistant traffic is the site's highest-quality channel
 (64.7% engagement, 128s dwell per the 2026-07-28 audits) and the whole GEO
@@ -11,7 +11,7 @@ Key is injected as the GSC_KEY_JSON secret (same service account as GSC).
 """
 import json, os, io, time, base64, datetime, urllib.request
 
-PROPERTY = os.environ.get('GA4_PROPERTY', '532207725')
+PROPERTY = os.environ.get('GA4_PROPERTY', '532181981')
 OUT = os.environ.get('GA4_OUT', 'data/GA4.json')
 HISTORY = os.environ.get('AI_HISTORY_OUT', 'data/AI_HISTORY.jsonl')
 

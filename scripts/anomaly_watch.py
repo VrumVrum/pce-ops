@@ -67,7 +67,7 @@ from ga4 import FUNNEL_STEPS      # noqa: E402  — one definition of the funnel
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.environ.get('ANOMALY_OUT', os.path.join(ROOT, 'data', 'ANOMALIES.json'))
 SITE = 'sc-domain:projectcostestimator.com'
-GA4_PROPERTY = os.environ.get('GA4_PROPERTY', '532207725')
+GA4_PROPERTY = os.environ.get('GA4_PROPERTY', '532181981')
 API_PROVIDER_ID = '8f3b107d-53b5-4e20-93c6-dfce70c3793d'   # usageLane __api_usage__ system row
 
 NOW = datetime.datetime.now(datetime.timezone.utc)
