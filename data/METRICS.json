@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-19T04:35:13.601867Z",
+  "generated_utc": "2026-09-19T16:35:09.380208Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-19",
@@ -77,12 +77,12 @@
     ]
   },
   "supabase": {
-    "leads_total": 83,
+    "leads_total": 85,
     "leads_by_context": {
+      "drip:1": 6,
+      "sys:lastrun": 61,
       "drip:3": 4,
       "drip:2": 5,
-      "drip:1": 5,
-      "sys:lastrun": 60,
       "results:build": 2,
       "results": 6,
       "api_key": 1
@@ -93,13 +93,13 @@
     "bot_lead_share": 0.0,
     "bot_leads": 0,
     "last_strict_human_lead_utc": "2026-09-16T16:36:00",
-    "real_human_leads_strict_7d": 4,
+    "real_human_leads_strict_7d": 3,
     "real_human_leads_strict_28d": 8,
     "bot_lead_fleets": [],
     "real_human_leads_note": "real_human_leads (8) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (8) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 2,
     "drip_stages": {
-      "drip:1": 5,
+      "drip:1": 6,
       "drip:2": 5,
       "drip:3": 4
     },

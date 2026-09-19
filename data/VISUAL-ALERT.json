@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-19T04:38:15.120Z",
+  "generated_utc": "2026-09-19T16:38:38.657Z",
   "status": "red",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -7,13 +7,18 @@
   "alerts": [
     {
       "page": "/",
-      "diff_pct": 16.83,
-      "ts": "2026-09-19T04:38:15.120Z"
+      "diff_pct": 21.7,
+      "ts": "2026-09-19T16:38:38.657Z"
+    },
+    {
+      "page": "/pricing",
+      "diff_pct": 11.64,
+      "ts": "2026-09-19T16:38:38.657Z"
     },
     {
       "page": "/website-costs-2026-report",
-      "diff_pct": 8.76,
-      "ts": "2026-09-19T04:38:15.120Z"
+      "diff_pct": 10.19,
+      "ts": "2026-09-19T16:38:38.657Z"
     }
   ],
   "pages": [
@@ -21,32 +26,33 @@
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 16.83,
+      "diff_pct": 21.7,
       "alert": true
     },
     {
       "page": "/calculator",
       "name": "calculator",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 2.5
     },
     {
       "page": "/website-cost",
       "name": "website-cost",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 1.25
     },
     {
       "page": "/pricing",
       "name": "pricing",
       "seeded": false,
-      "diff_pct": 0
+      "diff_pct": 11.64,
+      "alert": true
     },
     {
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
       "seeded": false,
-      "diff_pct": 8.76,
+      "diff_pct": 10.19,
       "alert": true
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-19T04:38:14.701Z",
+  "generated_utc": "2026-09-19T16:38:38.269Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -7,7 +7,7 @@
     {
       "name": "load /",
       "ok": true,
-      "detail": "HTTP 200, 10337 chars, 0 JS err"
+      "detail": "HTTP 200, 10553 chars, 0 JS err"
     },
     {
       "name": "load /calculator",
@@ -32,7 +32,7 @@
     {
       "name": "load /cost/app-like/uber",
       "ok": true,
-      "detail": "HTTP 200, 6198 chars, 0 JS err"
+      "detail": "HTTP 200, 6197 chars, 0 JS err"
     },
     {
       "name": "load /cost/hire/india",
@@ -47,32 +47,32 @@
     {
       "name": "mobile menu iPhone SE /",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "mobile menu iPhone SE /calculator",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "mobile menu iPhone SE /cost/industry/dentist",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "mobile menu iPhone 14 /",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "mobile menu iPhone 14 /calculator",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
       "ok": true,
-      "detail": "drawer=true links=12"
+      "detail": "drawer=true links=13"
     },
     {
       "name": "llms-coverage",
