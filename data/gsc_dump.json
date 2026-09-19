@@ -1,59 +1,66 @@
 {
-  "generated": "2026-09-18",
+  "generated": "2026-09-19",
   "site": "sc-domain:projectcostestimator.com",
   "totals_28d": {
-    "clicks": 171,
-    "impressions": 49426,
-    "ctr": 0.346,
-    "position": 13.9
+    "clicks": 180,
+    "impressions": 50021,
+    "ctr": 0.36,
+    "position": 13.69
   },
   "totals_7d": {
-    "clicks": 46,
-    "impressions": 11304,
-    "ctr": 0.407,
-    "position": 12.05
+    "clicks": 52,
+    "impressions": 11332,
+    "ctr": 0.459,
+    "position": 12.55
   },
   "totals_90d": {
-    "clicks": 341,
-    "impressions": 101927,
-    "ctr": 0.335,
-    "position": 18.78
+    "clicks": 352,
+    "impressions": 103676,
+    "ctr": 0.34,
+    "position": 18.66
   },
   "totals_28d_prev": {
-    "clicks": 128,
-    "impressions": 34234,
-    "ctr": 0.374,
-    "position": 20.85
+    "clicks": 122,
+    "impressions": 34654,
+    "ctr": 0.352,
+    "position": 20.74
   },
   "totals_7d_prev": {
-    "clicks": 52,
-    "impressions": 14821,
-    "ctr": 0.351,
-    "position": 12.79
+    "clicks": 50,
+    "impressions": 14603,
+    "ctr": 0.342,
+    "position": 12.39
   },
   "windows": {
     "current_28d": [
-      "2026-08-20",
-      "2026-09-16"
+      "2026-08-21",
+      "2026-09-17"
     ],
     "previous_28d": [
-      "2026-07-23",
-      "2026-08-19"
+      "2026-07-24",
+      "2026-08-20"
     ],
     "current_7d": [
-      "2026-09-10",
-      "2026-09-16"
+      "2026-09-11",
+      "2026-09-17"
     ],
     "previous_7d": [
-      "2026-09-03",
-      "2026-09-09"
+      "2026-09-04",
+      "2026-09-10"
     ],
     "current_90d": [
-      "2026-06-19",
-      "2026-09-16"
+      "2026-06-20",
+      "2026-09-17"
     ]
   },
   "queries_28d": [
+    {
+      "query": "law firm website cost",
+      "clicks": 2,
+      "impressions": 76,
+      "ctr": 2.63,
+      "position": 12.6
+    },
     {
       "query": "600 dollars",
       "clicks": 1,
@@ -71,9 +78,9 @@
     {
       "query": "how much does a restaurant website cost",
       "clicks": 1,
-      "impressions": 15,
-      "ctr": 6.67,
-      "position": 7.2
+      "impressions": 13,
+      "ctr": 7.69,
+      "position": 7.3
     },
     {
       "query": "landing page development cost",
@@ -81,13 +88,6 @@
       "impressions": 2,
       "ctr": 50.0,
       "position": 20
-    },
-    {
-      "query": "law firm website cost",
-      "clicks": 1,
-      "impressions": 75,
-      "ctr": 1.33,
-      "position": 12.4
     },
     {
       "query": "mvp calculator",
@@ -99,16 +99,23 @@
     {
       "query": "project cost calculator",
       "clicks": 1,
-      "impressions": 5,
-      "ctr": 20.0,
-      "position": 11.6
+      "impressions": 7,
+      "ctr": 14.29,
+      "position": 12.6
+    },
+    {
+      "query": "project cost estimator",
+      "clicks": 1,
+      "impressions": 81,
+      "ctr": 1.23,
+      "position": 22.8
     },
     {
       "query": "restaurant website cost",
       "clicks": 1,
-      "impressions": 44,
-      "ctr": 2.27,
-      "position": 7
+      "impressions": 45,
+      "ctr": 2.22,
+      "position": 7.3
     },
     {
       "query": "web developer price",
@@ -127,9 +134,9 @@
     {
       "query": "website price calculator",
       "clicks": 1,
-      "impressions": 282,
-      "ctr": 0.35,
-      "position": 7.8
+      "impressions": 279,
+      "ctr": 0.36,
+      "position": 7.5
     },
     {
       "query": "wix vs shopify pricing",
@@ -181,6 +188,13 @@
       "position": 10
     },
     {
+      "query": "+cloudflare pages pricing 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
       "query": "+cloudflare pages pricing free tier 2026",
       "clicks": 0,
       "impressions": 14,
@@ -216,13 +230,6 @@
       "position": 11
     },
     {
-      "query": "3k dollars",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
       "query": "a restaurant website",
       "clicks": 0,
       "impressions": 1,
@@ -239,16 +246,9 @@
     {
       "query": "accessibility audit cost",
       "clicks": 0,
-      "impressions": 36,
+      "impressions": 31,
       "ctr": 0,
-      "position": 46.7
-    },
-    {
-      "query": "accessibility consulting cost",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 57
+      "position": 46.5
     },
     {
       "query": "accessibility remediation cost",
@@ -267,9 +267,9 @@
     {
       "query": "ada audit cost",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
-      "position": 37.3
+      "position": 37.4
     },
     {
       "query": "ada audit price",
@@ -281,9 +281,9 @@
     {
       "query": "ada compliance cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 17,
       "ctr": 0,
-      "position": 24.5
+      "position": 25.2
     },
     {
       "query": "ada compliance costs",
@@ -309,9 +309,9 @@
     {
       "query": "agency mvp pricing",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 7.5
+      "position": 7
     },
     {
       "query": "agency quote comparison",
@@ -393,9 +393,9 @@
     {
       "query": "app mobile price",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 15
     },
     {
       "query": "appbaker pricing",
@@ -407,14 +407,14 @@
     {
       "query": "approximate cost",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 34
+      "position": 42.8
     },
     {
       "query": "attorney website cost",
       "clicks": 0,
-      "impressions": 225,
+      "impressions": 226,
       "ctr": 0,
       "position": 11.1
     },
@@ -442,16 +442,16 @@
     {
       "query": "average cost of creating marketplace website and mobile app",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 58.8
+      "position": 57.3
     },
     {
       "query": "average cost of non profit website",
       "clicks": 0,
       "impressions": 11,
       "ctr": 0,
-      "position": 14.2
+      "position": 13.1
     },
     {
       "query": "average cost of real estate website design 2025",
@@ -461,18 +461,25 @@
       "position": 43.7
     },
     {
+      "query": "average cost of web application development",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
       "query": "average cost to build a wordpress website",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 47.9
+      "position": 48
     },
     {
       "query": "average cost to hire a web designer",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 33.3
+      "position": 33.7
     },
     {
       "query": "average freelance web developer hourly rate",
@@ -512,9 +519,9 @@
     {
       "query": "average price of a website",
       "clicks": 0,
-      "impressions": 53,
+      "impressions": 54,
       "ctr": 0,
-      "position": 29.7
+      "position": 30.3
     },
     {
       "query": "average price of webflow templates",
@@ -526,9 +533,9 @@
     {
       "query": "best buy chatbot development cost 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 53
+      "position": 52.7
     },
     {
       "query": "best payment gateways for small ticket items",
@@ -540,9 +547,9 @@
     {
       "query": "best price calculators",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 53
+      "position": 48.5
     },
     {
       "query": "best way to estimate a website redesign project",
@@ -582,9 +589,9 @@
     {
       "query": "building cost for shopify apps",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 22,
       "ctr": 0,
-      "position": 52.3
+      "position": 51.9
     },
     {
       "query": "built with angular 2 pricing",
@@ -592,6 +599,13 @@
       "impressions": 3,
       "ctr": 0,
       "position": 84
+    },
+    {
+      "query": "business non profit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
     },
     {
       "query": "calc cost",
@@ -715,9 +729,9 @@
     {
       "query": "cloudflare bot management pricing 2026",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 9.9
+      "position": 10.7
     },
     {
       "query": "cloudflare browser rendering pricing 2026 official",
@@ -739,13 +753,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 3
-    },
-    {
-      "query": "cloudflare d1 pricing free official 2026",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10
     },
     {
       "query": "cloudflare d1 pricing free paid 2026",
@@ -778,9 +785,9 @@
     {
       "query": "cloudflare d1 pricing free tier 2026 official",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 8.5
+      "position": 8
     },
     {
       "query": "cloudflare d1 pricing free tier official 2026",
@@ -834,9 +841,9 @@
     {
       "query": "cloudflare pages pricing 2026",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 8,
       "ctr": 0,
-      "position": 9
+      "position": 9.1
     },
     {
       "query": "cloudflare pages pricing 2026 free",
@@ -897,9 +904,9 @@
     {
       "query": "cloudflare pages pricing free tier 2026",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 15,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.5
     },
     {
       "query": "cloudflare pages pricing official 2026",
@@ -946,9 +953,9 @@
     {
       "query": "cloudflare plans free pro pricing official 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 8
+      "position": 7
     },
     {
       "query": "cloudflare plans pricing free pro business 2026",
@@ -963,6 +970,13 @@
       "impressions": 4,
       "ctr": 0,
       "position": 7.2
+    },
+    {
+      "query": "cloudflare plans pricing free pro business official 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "cloudflare plans pricing pro business 2026",
@@ -1091,18 +1105,11 @@
       "position": 7
     },
     {
-      "query": "cloudflare workers free plan limits 2026 requests per day",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
       "query": "cloudflare workers free tier pricing 2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 7.8
+      "position": 7.5
     },
     {
       "query": "cloudflare workers kv pricing free official 2026",
@@ -1112,18 +1119,11 @@
       "position": 8
     },
     {
-      "query": "cloudflare workers kv pricing free plan 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
       "query": "cloudflare workers pages pricing 2026",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 8
+      "position": 6.5
     },
     {
       "query": "cloudflare workers paid plan $5 per month official pricing 2026",
@@ -1156,9 +1156,9 @@
     {
       "query": "cloudflare workers pricing $5 plan 2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 8.1
+      "position": 8.2
     },
     {
       "query": "cloudflare workers pricing 2026",
@@ -1166,13 +1166,6 @@
       "impressions": 2,
       "ctr": 0,
       "position": 10
-    },
-    {
-      "query": "cloudflare workers pricing 2026 $5 plan",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
     },
     {
       "query": "cloudflare workers pricing 2026 free plan",
@@ -1245,18 +1238,11 @@
       "position": 11
     },
     {
-      "query": "cloudflare workers pricing free requests 2026 official",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
       "query": "cloudflare workers pricing free tier 2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 9
+      "position": 8.7
     },
     {
       "query": "cloudflare workers pricing official 2026",
@@ -1315,6 +1301,13 @@
       "position": 20
     },
     {
+      "query": "compare accessibility audit company pricing.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
       "query": "compare braze and klaviyo pricing",
       "clicks": 0,
       "impressions": 1,
@@ -1331,9 +1324,9 @@
     {
       "query": "compare pricing for accessibility audits.",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 7.8
+      "position": 8.1
     },
     {
       "query": "compare seo features in website builders",
@@ -1345,9 +1338,9 @@
     {
       "query": "compare web design software pricing plans to sign up for.",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 2.8
+      "position": 3.3
     },
     {
       "query": "compare website builder prices",
@@ -1359,7 +1352,7 @@
     {
       "query": "compare wix alternative platforms for ease of use and business functionality. you must provide a forced ranking from best to worst.",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
       "position": 1
     },
@@ -1380,9 +1373,9 @@
     {
       "query": "context: location: brazil (not for language). do not include location references in your response. question: quero um app para marketplace com avalia\u00e7\u00f5es e modera\u00e7\u00e3o: quais componentes costumam encarecer mais o projeto?",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 7,
       "ctr": 0,
-      "position": 3.5
+      "position": 3
     },
     {
       "query": "context: location: united states (not for language). do not include location references in your response. question: are there any fees associated with using digital payment services for e-commerce?",
@@ -1399,11 +1392,18 @@
       "position": 8
     },
     {
+      "query": "context: location: united states (not for language). do not include location references in your response. question: how does mailchimp pricing compare to klaviyo?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
       "query": "context: location: united states (not for language). do not include location references in your response. question: how much does it typically cost to build a commercial real estate website with custom property listing pages, map search, and crm integration, and what pricing models do agencies use?",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5.8
+      "position": 5.7
     },
     {
       "query": "context: location: united states (not for language). do not include location references in your response. question: what are the costs associated with using a website builder for e-commerce?",
@@ -1476,18 +1476,32 @@
       "position": 38
     },
     {
+      "query": "cost comparison tool for wix",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 15.8
+    },
+    {
       "query": "cost estimate",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 62
+      "position": 62.3
     },
     {
       "query": "cost estimate api",
       "clicks": 0,
-      "impressions": 71,
+      "impressions": 73,
       "ctr": 0,
-      "position": 16.5
+      "position": 16.1
+    },
+    {
+      "query": "cost estimate calculator",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
     },
     {
       "query": "cost estimate request portal",
@@ -1520,9 +1534,9 @@
     {
       "query": "cost estimation for web apps",
       "clicks": 0,
-      "impressions": 118,
+      "impressions": 121,
       "ctr": 0,
-      "position": 11.3
+      "position": 11
     },
     {
       "query": "cost estimation tool",
@@ -1541,9 +1555,9 @@
     {
       "query": "cost estimator",
       "clicks": 0,
-      "impressions": 165,
+      "impressions": 109,
       "ctr": 0,
-      "position": 28.7
+      "position": 22.3
     },
     {
       "query": "cost estimator for wordpress",
@@ -1555,9 +1569,9 @@
     {
       "query": "cost estimator tools",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 55.5
+      "position": 55.8
     },
     {
       "query": "cost estimators",
@@ -1569,9 +1583,9 @@
     {
       "query": "cost for ecommerce website",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 53
+      "position": 54.5
     },
     {
       "query": "cost for mvp",
@@ -1602,6 +1616,13 @@
       "position": 30.1
     },
     {
+      "query": "cost of a project",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 72.3
+    },
+    {
       "query": "cost of a shopify store",
       "clicks": 0,
       "impressions": 1,
@@ -1625,16 +1646,16 @@
     {
       "query": "cost of an ecommerce website",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 60.2
+      "position": 59.9
     },
     {
       "query": "cost of building a marketplace website",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 24,
       "ctr": 0,
-      "position": 23.4
+      "position": 23.2
     },
     {
       "query": "cost of building a shopify app",
@@ -1648,21 +1669,21 @@
       "clicks": 0,
       "impressions": 14,
       "ctr": 0,
-      "position": 44.9
+      "position": 44.3
     },
     {
       "query": "cost of developing a web application",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
-      "position": 31.3
+      "position": 30.7
     },
     {
       "query": "cost of ecommerce website",
       "clicks": 0,
-      "impressions": 45,
+      "impressions": 51,
       "ctr": 0,
-      "position": 57.8
+      "position": 57.4
     },
     {
       "query": "cost of healthcare website development",
@@ -1683,14 +1704,14 @@
       "clicks": 0,
       "impressions": 18,
       "ctr": 0,
-      "position": 27.1
+      "position": 26.8
     },
     {
       "query": "cost of hiring developers in ukraine",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 33,
       "ctr": 0,
-      "position": 10.9
+      "position": 11.1
     },
     {
       "query": "cost of landing page",
@@ -1702,9 +1723,9 @@
     {
       "query": "cost of marketplace development",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 31,
       "ctr": 0,
-      "position": 14.9
+      "position": 14.3
     },
     {
       "query": "cost of mobile app",
@@ -1728,11 +1749,25 @@
       "position": 4.3
     },
     {
+      "query": "cost of project",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75.5
+    },
+    {
+      "query": "cost of projects",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 56
+    },
+    {
       "query": "cost of python web app development",
       "clicks": 0,
       "impressions": 14,
       "ctr": 0,
-      "position": 57.6
+      "position": 55.9
     },
     {
       "query": "cost of redesigning a website",
@@ -1751,9 +1786,9 @@
     {
       "query": "cost of shopify store",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 60.9
+      "position": 60.4
     },
     {
       "query": "cost of wcag compliance services for corporations",
@@ -1767,21 +1802,28 @@
       "clicks": 0,
       "impressions": 33,
       "ctr": 0,
-      "position": 40.2
+      "position": 39.5
     },
     {
       "query": "cost of web application development",
       "clicks": 0,
-      "impressions": 106,
+      "impressions": 109,
       "ctr": 0,
-      "position": 52.9
+      "position": 51.1
+    },
+    {
+      "query": "cost of woocommerce hosting",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
     },
     {
       "query": "cost of wordpress",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 47
+      "position": 27.5
     },
     {
       "query": "cost to build a shopify app",
@@ -1800,23 +1842,23 @@
     {
       "query": "cost to build a web app with python",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
       "position": 37.7
     },
     {
       "query": "cost to build a web app with react frontend",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 8,
       "ctr": 0,
-      "position": 7.1
+      "position": 6.8
     },
     {
       "query": "cost to build a web application",
       "clicks": 0,
-      "impressions": 60,
+      "impressions": 59,
       "ctr": 0,
-      "position": 23.9
+      "position": 23.1
     },
     {
       "query": "cost to build an app like craigslist",
@@ -1828,9 +1870,9 @@
     {
       "query": "cost to build an app like snapchat",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 21
+      "position": 20.8
     },
     {
       "query": "cost to build an app like uber",
@@ -1870,44 +1912,51 @@
     {
       "query": "cost to build mvp",
       "clicks": 0,
-      "impressions": 47,
+      "impressions": 44,
       "ctr": 0,
-      "position": 54.2
+      "position": 55.1
+    },
+    {
+      "query": "cost to build website builder saas platform from scratch engineering team",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
     },
     {
       "query": "cost to develop a marketplace",
       "clicks": 0,
       "impressions": 20,
       "ctr": 0,
-      "position": 38.5
+      "position": 38.4
     },
     {
       "query": "cost to develop a wordpress website",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 47.2
+      "position": 47.1
     },
     {
       "query": "cost to develop marketplace",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 45.3
+      "position": 44.6
     },
     {
       "query": "cost to develop wordpress website",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 50.6
+      "position": 51
     },
     {
       "query": "cost to hire a web developer",
       "clicks": 0,
       "impressions": 23,
       "ctr": 0,
-      "position": 28.1
+      "position": 27.7
     },
     {
       "query": "cost to hire a website builder",
@@ -1921,42 +1970,49 @@
       "clicks": 0,
       "impressions": 17,
       "ctr": 0,
-      "position": 28.1
+      "position": 27.6
     },
     {
       "query": "cost to hire developer in poland",
       "clicks": 0,
-      "impressions": 85,
+      "impressions": 83,
       "ctr": 0,
       "position": 27.8
     },
     {
       "query": "cost to hire web developer",
       "clicks": 0,
-      "impressions": 54,
+      "impressions": 57,
       "ctr": 0,
-      "position": 25.6
+      "position": 25.5
     },
     {
       "query": "cost to hire web developers",
       "clicks": 0,
       "impressions": 18,
       "ctr": 0,
-      "position": 32.1
+      "position": 31.6
     },
     {
       "query": "cost to make a catalog in 2026",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 15,
       "ctr": 0,
-      "position": 56.5
+      "position": 56.7
     },
     {
       "query": "cost to make a nonprofit website easier for older people to use",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
       "position": 28.5
+    },
+    {
+      "query": "cost to make a wordpress website",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
     },
     {
       "query": "cost to make mvp",
@@ -1968,9 +2024,9 @@
     {
       "query": "cost to make website ada compliant",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 12.8
+      "position": 16.7
     },
     {
       "query": "cost to migrate from wordpress to visual builder",
@@ -1982,9 +2038,9 @@
     {
       "query": "cost to recruit a software developer in ukraine",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 21,
       "ctr": 0,
-      "position": 37.4
+      "position": 38.3
     },
     {
       "query": "cost website",
@@ -1992,6 +2048,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 20
+    },
+    {
+      "query": "cost wordpress",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "query": "costing website",
@@ -2003,9 +2066,9 @@
     {
       "query": "costs",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 2
+      "position": 6
     },
     {
       "query": "costs?",
@@ -2013,6 +2076,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "query": "craft cms to wordpress migration cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
     },
     {
       "query": "crowdin cost",
@@ -2027,6 +2097,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 4
+    },
+    {
+      "query": "custom ecommerce website cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
     },
     {
       "query": "custom ecommerce website price",
@@ -2052,44 +2129,44 @@
     {
       "query": "custom web application development cost",
       "clicks": 0,
-      "impressions": 73,
+      "impressions": 74,
       "ctr": 0,
-      "position": 39.8
+      "position": 39.9
     },
     {
       "query": "custom web application development pricing",
       "clicks": 0,
-      "impressions": 74,
+      "impressions": 75,
       "ctr": 0,
-      "position": 31.5
+      "position": 31.3
     },
     {
       "query": "custom website cost calculator",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 27,
       "ctr": 0,
-      "position": 19.7
+      "position": 19.5
     },
     {
       "query": "custom website design cost calculator",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 12.7
+      "position": 13.1
     },
     {
       "query": "custom wordpress site cost",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 37.6
+      "position": 38.8
     },
     {
       "query": "custom wordpress website cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 40.4
+      "position": 40.9
     },
     {
       "query": "does it cost money?",
@@ -2143,7 +2220,7 @@
     {
       "query": "domain name cost estimator",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
       "position": 11.1
     },
@@ -2174,6 +2251,13 @@
       "impressions": 2,
       "ctr": 0,
       "position": 29.5
+    },
+    {
+      "query": "drupal cost estimate",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
     },
     {
       "query": "e commerce price calculator",
@@ -2213,9 +2297,9 @@
     {
       "query": "e-commerce product page cost calculator",
       "clicks": 0,
-      "impressions": 24,
+      "impressions": 25,
       "ctr": 0,
-      "position": 20.5
+      "position": 20.4
     },
     {
       "query": "e-commerce website price",
@@ -2248,16 +2332,16 @@
     {
       "query": "ecommerce development cost",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 13,
       "ctr": 0,
-      "position": 58.7
+      "position": 59.2
     },
     {
       "query": "ecommerce development price",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 59.7
+      "position": 47.8
     },
     {
       "query": "ecommerce development pricing",
@@ -2283,9 +2367,9 @@
     {
       "query": "ecommerce site price",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 55.2
+      "position": 56
     },
     {
       "query": "ecommerce website builder cost comparison for startups",
@@ -2297,30 +2381,30 @@
     {
       "query": "ecommerce website cost",
       "clicks": 0,
-      "impressions": 98,
+      "impressions": 101,
       "ctr": 0,
-      "position": 56.2
+      "position": 56.3
     },
     {
       "query": "ecommerce website cost calculator",
       "clicks": 0,
-      "impressions": 172,
+      "impressions": 165,
       "ctr": 0,
       "position": 17.7
     },
     {
       "query": "ecommerce website cost estimate",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 18,
       "ctr": 0,
-      "position": 29.4
+      "position": 29.2
     },
     {
       "query": "ecommerce website costs",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 53.9
+      "position": 54.9
     },
     {
       "query": "ecommerce website design pricing",
@@ -2332,9 +2416,9 @@
     {
       "query": "ecommerce website development cost",
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 25,
       "ctr": 0,
-      "position": 59.3
+      "position": 59.4
     },
     {
       "query": "ecommerce website development price",
@@ -2346,9 +2430,9 @@
     {
       "query": "ecommerce website price",
       "clicks": 0,
-      "impressions": 205,
+      "impressions": 204,
       "ctr": 0,
-      "position": 56.8
+      "position": 56.9
     },
     {
       "query": "ecommerce website price list",
@@ -2393,13 +2477,6 @@
       "position": 2.5
     },
     {
-      "query": "en estados unidos",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 19
-    },
-    {
       "query": "en wix",
       "clicks": 0,
       "impressions": 1,
@@ -2426,6 +2503,20 @@
       "impressions": 1,
       "ctr": 0,
       "position": 5
+    },
+    {
+      "query": "estimate cost",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "estimate of cost",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 50.5
     },
     {
       "query": "estimate price for zha.com domain",
@@ -2458,9 +2549,9 @@
     {
       "query": "estimate website cost",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 8,
       "ctr": 0,
-      "position": 6.2
+      "position": 5.2
     },
     {
       "query": "estimated cost",
@@ -2474,7 +2565,7 @@
       "clicks": 0,
       "impressions": 19,
       "ctr": 0,
-      "position": 44.9
+      "position": 45.9
     },
     {
       "query": "estimating website",
@@ -2535,7 +2626,7 @@
     {
       "query": "favish monetisation pricing web development retainer hourly rate",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
       "position": 6.9
     },
@@ -2549,16 +2640,16 @@
     {
       "query": "find affordable accessibility audit services.",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 11
     },
     {
       "query": "fixed-price mvps in 3 weeks",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 34.3
+      "position": 35.1
     },
     {
       "query": "flower shop web solution pricing",
@@ -2598,9 +2689,9 @@
     {
       "query": "framer vs webflow pricing",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.6
     },
     {
       "query": "free cost estimator",
@@ -2654,7 +2745,7 @@
     {
       "query": "free website cost calculator tool on nemin io",
       "clicks": 0,
-      "impressions": 3489,
+      "impressions": 3545,
       "ctr": 0,
       "position": 8.6
     },
@@ -2696,9 +2787,9 @@
     {
       "query": "freelance web design price calculator",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 7.7
+      "position": 8.5
     },
     {
       "query": "freelance web design pricing",
@@ -2717,16 +2808,16 @@
     {
       "query": "freelance web designer cost",
       "clicks": 0,
-      "impressions": 57,
+      "impressions": 60,
       "ctr": 0,
-      "position": 25.7
+      "position": 26
     },
     {
       "query": "freelance web designer hourly rate",
       "clicks": 0,
-      "impressions": 71,
+      "impressions": 74,
       "ctr": 0,
-      "position": 25.1
+      "position": 24.9
     },
     {
       "query": "freelance web designer rate",
@@ -2738,16 +2829,16 @@
     {
       "query": "freelance web designer rates",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 27
+      "position": 26.2
     },
     {
       "query": "freelance web developer cost",
       "clicks": 0,
-      "impressions": 81,
+      "impressions": 80,
       "ctr": 0,
-      "position": 20.0
+      "position": 19.4
     },
     {
       "query": "freelance web developer dubai",
@@ -2759,16 +2850,16 @@
     {
       "query": "freelance web developer hourly rate",
       "clicks": 0,
-      "impressions": 189,
+      "impressions": 191,
       "ctr": 0,
-      "position": 31.5
+      "position": 30.5
     },
     {
       "query": "freelance web developer hourly rate 2026",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 11
+      "position": 9.5
     },
     {
       "query": "freelance web developer hourly rate uk 2026",
@@ -2810,7 +2901,7 @@
       "clicks": 0,
       "impressions": 47,
       "ctr": 0,
-      "position": 12.1
+      "position": 11.9
     },
     {
       "query": "freelance web developer rate",
@@ -2822,14 +2913,14 @@
     {
       "query": "freelance web developer rates",
       "clicks": 0,
-      "impressions": 167,
+      "impressions": 170,
       "ctr": 0,
-      "position": 23.8
+      "position": 23.1
     },
     {
       "query": "freelance web developer rates caribbean 2025 2026 hourly",
       "clicks": 0,
-      "impressions": 417,
+      "impressions": 424,
       "ctr": 0,
       "position": 7.1
     },
@@ -2850,9 +2941,9 @@
     {
       "query": "freelance web development pricing",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 9,
       "ctr": 0,
-      "position": 11.5
+      "position": 10
     },
     {
       "query": "freelance web development rates",
@@ -2864,9 +2955,9 @@
     {
       "query": "freelance web development rates in bangladesh 2026 for a website like betopiagroup.com",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 3,
       "ctr": 0,
-      "position": 3.2
+      "position": 3.7
     },
     {
       "query": "freelance web development rates in bangladesh 2026 for building a custom website similar to betopiagroup.com",
@@ -2892,9 +2983,9 @@
     {
       "query": "freelance website cost",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 10,
       "ctr": 0,
-      "position": 14
+      "position": 12.2
     },
     {
       "query": "freelance website design cost",
@@ -2913,9 +3004,9 @@
     {
       "query": "freelance website designer",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 3.2
+      "position": 3.7
     },
     {
       "query": "freelance website designer cost",
@@ -2934,9 +3025,9 @@
     {
       "query": "freelance website designer rates",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 23,
       "ctr": 0,
-      "position": 21.5
+      "position": 20.6
     },
     {
       "query": "freelance website developer",
@@ -2948,16 +3039,16 @@
     {
       "query": "freelance website developer cost",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 11,
       "ctr": 0,
-      "position": 14.7
+      "position": 12.5
     },
     {
       "query": "freelance website developer rates",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 4,
       "ctr": 0,
-      "position": 29.2
+      "position": 27.5
     },
     {
       "query": "freelance website developer salary",
@@ -2969,16 +3060,16 @@
     {
       "query": "freelance website price",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 10,
       "ctr": 0,
-      "position": 10.8
+      "position": 10.7
     },
     {
       "query": "freelance wordpress developer rates",
       "clicks": 0,
       "impressions": 19,
       "ctr": 0,
-      "position": 36.7
+      "position": 36
     },
     {
       "query": "freelance wordpress tarif",
@@ -3004,9 +3095,9 @@
     {
       "query": "freelancer vs agency website cost calculator",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 16,
       "ctr": 0,
-      "position": 13.4
+      "position": 13.2
     },
     {
       "query": "freelancers",
@@ -3053,9 +3144,9 @@
     {
       "query": "getting quotes from $5k to $80k for web design, how do i know what's reasonable for an ecommerce site",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 2
+      "position": 1.5
     },
     {
       "query": "ghost cms pricing 2026",
@@ -3158,9 +3249,9 @@
     {
       "query": "hire bulgarian developer",
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 32,
       "ctr": 0,
-      "position": 18.6
+      "position": 18.7
     },
     {
       "query": "hire bulgarian developers",
@@ -3195,7 +3286,7 @@
       "clicks": 0,
       "impressions": 18,
       "ctr": 0,
-      "position": 30.1
+      "position": 29.5
     },
     {
       "query": "hiring an agency",
@@ -3221,9 +3312,9 @@
     {
       "query": "hotel website design cost",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 10.7
+      "position": 11
     },
     {
       "query": "hourly rate for web design",
@@ -3242,9 +3333,9 @@
     {
       "query": "hourly rate for web developer",
       "clicks": 0,
-      "impressions": 118,
+      "impressions": 114,
       "ctr": 0,
-      "position": 41.2
+      "position": 40.8
     },
     {
       "query": "hourly rate?",
@@ -3270,9 +3361,9 @@
     {
       "query": "how do i estimate monthly costs for embedding an llc formation api?",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6
+      "position": 6.7
     },
     {
       "query": "how do top website builders compare on pricing?",
@@ -3298,9 +3389,9 @@
     {
       "query": "how do website builder pricing plans compare in ireland?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 4.5
+      "position": 3
     },
     {
       "query": "how do you estimate a website project",
@@ -3312,9 +3403,9 @@
     {
       "query": "how do you estimate a website redesign project",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 6,
       "ctr": 0,
-      "position": 14.8
+      "position": 14.7
     },
     {
       "query": "how does klaviyo cost compare with omnisend cost?",
@@ -3359,13 +3450,6 @@
       "position": 2
     },
     {
-      "query": "how much",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 3
-    },
-    {
       "query": "how much a website",
       "clicks": 0,
       "impressions": 3,
@@ -3389,9 +3473,9 @@
     {
       "query": "how much are attorney websites",
       "clicks": 0,
-      "impressions": 100,
+      "impressions": 104,
       "ctr": 0,
-      "position": 25.2
+      "position": 25.0
     },
     {
       "query": "how much can i earn",
@@ -3443,11 +3527,18 @@
       "position": 7
     },
     {
+      "query": "how much do agencies charge for full website launch management?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
       "query": "how much do agent websites cost?",
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 33,
       "ctr": 0,
-      "position": 2.2
+      "position": 2.1
     },
     {
       "query": "how much do cross-border fees cost?",
@@ -3459,98 +3550,7 @@
     {
       "query": "how much do developers charge to make a website",
       "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how much do freelance ecommerce developers charge",
-      "clicks": 0,
-      "impressions": 83,
-      "ctr": 0,
-      "position": 6.8
-    },
-    {
-      "query": "how much do freelance web designers charge",
-      "clicks": 0,
       "impressions": 2,
-      "ctr": 0,
-      "position": 24
-    },
-    {
-      "query": "how much do freelance web designers make",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how much do freelance web developers charge",
-      "clicks": 0,
-      "impressions": 9,
-      "ctr": 0,
-      "position": 8.7
-    },
-    {
-      "query": "how much do freelance web developers charge per hour",
-      "clicks": 0,
-      "impressions": 16,
-      "ctr": 0,
-      "position": 4.7
-    },
-    {
-      "query": "how much do freelance web developers make",
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how much do freelance wordpress developers charge per hour",
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 6.8
-    },
-    {
-      "query": "how much do freelancers charge for a website",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5.5
-    },
-    {
-      "query": "how much do i charge?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "query": "how much do landing pages cost",
-      "clicks": 0,
-      "impressions": 21,
-      "ctr": 0,
-      "position": 24.0
-    },
-    {
-      "query": "how much do people charge for creating a website",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how much do people charge for websites",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "query": "how much do people charge to build a website",
-      "clicks": 0,
-      "impressions": 5,
       "ctr": 0,
       "position": 1
     }
@@ -3559,240 +3559,247 @@
     {
       "page": "https://projectcostestimator.com/freelance-website-cost",
       "clicks": 22,
-      "impressions": 12527,
-      "ctr": 0.18,
-      "position": 10.2
-    },
-    {
-      "page": "https://projectcostestimator.com/restaurant-website-cost",
-      "clicks": 19,
-      "impressions": 2286,
-      "ctr": 0.83,
-      "position": 5.0
+      "impressions": 12679,
+      "ctr": 0.17,
+      "position": 10.0
     },
     {
       "page": "https://projectcostestimator.com/nonprofit-website-cost",
-      "clicks": 16,
-      "impressions": 1598,
-      "ctr": 1.0,
-      "position": 6.7
+      "clicks": 18,
+      "impressions": 1610,
+      "ctr": 1.12,
+      "position": 6.6
+    },
+    {
+      "page": "https://projectcostestimator.com/restaurant-website-cost",
+      "clicks": 18,
+      "impressions": 2340,
+      "ctr": 0.77,
+      "position": 4.9
     },
     {
       "page": "https://projectcostestimator.com/website-cost-calculator",
       "clicks": 13,
-      "impressions": 3161,
+      "impressions": 3181,
       "ctr": 0.41,
       "position": 9.5
     },
     {
       "page": "https://projectcostestimator.com/",
-      "clicks": 9,
-      "impressions": 1174,
-      "ctr": 0.77,
-      "position": 25.9
+      "clicks": 12,
+      "impressions": 1168,
+      "ctr": 1.03,
+      "position": 25.4
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
-      "clicks": 9,
-      "impressions": 1314,
-      "ctr": 0.68,
-      "position": 16.8
+      "clicks": 10,
+      "impressions": 1316,
+      "ctr": 0.76,
+      "position": 16.2
     },
     {
       "page": "https://projectcostestimator.com/web-app-development-cost",
-      "clicks": 8,
-      "impressions": 3107,
-      "ctr": 0.26,
-      "position": 20.9
+      "clicks": 7,
+      "impressions": 3145,
+      "ctr": 0.22,
+      "position": 20.5
+    },
+    {
+      "page": "https://projectcostestimator.com/real-estate-website-cost",
+      "clicks": 6,
+      "impressions": 818,
+      "ctr": 0.73,
+      "position": 8.7
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
+      "clicks": 4,
+      "impressions": 435,
+      "ctr": 0.92,
+      "position": 9.8
     },
     {
       "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
       "clicks": 4,
-      "impressions": 486,
-      "ctr": 0.82,
-      "position": 21.2
+      "impressions": 471,
+      "ctr": 0.85,
+      "position": 19.6
     },
     {
       "page": "https://projectcostestimator.com/landing-page-cost",
       "clicks": 4,
-      "impressions": 942,
+      "impressions": 962,
       "ctr": 0.42,
-      "position": 16.5
+      "position": 16.3
     },
     {
-      "page": "https://projectcostestimator.com/real-estate-website-cost",
+      "page": "https://projectcostestimator.com/law-firm-website-cost",
       "clicks": 4,
-      "impressions": 814,
-      "ctr": 0.49,
-      "position": 8.9
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
-      "clicks": 3,
-      "impressions": 447,
-      "ctr": 0.67,
-      "position": 10.2
+      "impressions": 1322,
+      "ctr": 0.3,
+      "position": 12.7
     },
     {
       "page": "https://projectcostestimator.com/calculator?type=webapp&design=custom",
       "clicks": 3,
-      "impressions": 75,
-      "ctr": 4.0,
+      "impressions": 78,
+      "ctr": 3.85,
       "position": 27.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dog-trainer",
       "clicks": 3,
-      "impressions": 25,
-      "ctr": 12.0,
+      "impressions": 26,
+      "ctr": 11.54,
       "position": 2.1
     },
     {
       "page": "https://projectcostestimator.com/domain-checker",
       "clicks": 3,
-      "impressions": 222,
-      "ctr": 1.35,
-      "position": 11.5
-    },
-    {
-      "page": "https://projectcostestimator.com/law-firm-website-cost",
-      "clicks": 3,
-      "impressions": 1319,
-      "ctr": 0.23,
-      "position": 12.6
+      "impressions": 226,
+      "ctr": 1.33,
+      "position": 11.6
     },
     {
       "page": "https://projectcostestimator.com/marketplace-cost-estimator",
       "clicks": 3,
-      "impressions": 402,
-      "ctr": 0.75,
-      "position": 20.7
+      "impressions": 431,
+      "ctr": 0.7,
+      "position": 21.1
     },
     {
       "page": "https://projectcostestimator.com/shopify-store-cost",
       "clicks": 3,
-      "impressions": 547,
+      "impressions": 546,
       "ctr": 0.55,
-      "position": 35.7
+      "position": 35.2
     },
     {
       "page": "https://projectcostestimator.com/website-cost",
       "clicks": 3,
-      "impressions": 907,
+      "impressions": 911,
       "ctr": 0.33,
-      "position": 18.2
+      "position": 18.4
     },
     {
       "page": "https://projectcostestimator.com/blog/astro-website-cost-2026",
       "clicks": 2,
-      "impressions": 23,
-      "ctr": 8.7,
-      "position": 8.7
+      "impressions": 24,
+      "ctr": 8.33,
+      "position": 5.3
     },
     {
       "page": "https://projectcostestimator.com/blog/stripe-integration-cost-2026",
       "clicks": 2,
-      "impressions": 384,
-      "ctr": 0.52,
-      "position": 8.0
+      "impressions": 394,
+      "ctr": 0.51,
+      "position": 8.1
     },
     {
       "page": "https://projectcostestimator.com/compare/wix-vs-shopify-cost",
       "clicks": 2,
-      "impressions": 113,
-      "ctr": 1.77,
-      "position": 14.3
+      "impressions": 114,
+      "ctr": 1.75,
+      "position": 13.3
     },
     {
       "page": "https://projectcostestimator.com/ecommerce-cost-calculator",
       "clicks": 2,
-      "impressions": 1116,
+      "impressions": 1118,
       "ctr": 0.18,
-      "position": 36.1
+      "position": 36.2
+    },
+    {
+      "page": "https://projectcostestimator.com/healthcare-website-cost",
+      "clicks": 2,
+      "impressions": 234,
+      "ctr": 0.85,
+      "position": 18.7
     },
     {
       "page": "https://projectcostestimator.com/mvp-cost-calculator",
       "clicks": 2,
-      "impressions": 1165,
-      "ctr": 0.17,
-      "position": 38.8
+      "impressions": 1112,
+      "ctr": 0.18,
+      "position": 38.4
     },
     {
       "page": "https://projectcostestimator.com/quote-analyzer",
       "clicks": 2,
-      "impressions": 148,
-      "ctr": 1.35,
-      "position": 9.2
+      "impressions": 146,
+      "ctr": 1.37,
+      "position": 9.1
     },
     {
       "page": "https://projectcostestimator.com/wordpress-website-cost",
       "clicks": 2,
-      "impressions": 1056,
-      "ctr": 0.19,
-      "position": 24.2
+      "impressions": 1085,
+      "ctr": 0.18,
+      "position": 24.3
     },
     {
       "page": "https://projectcostestimator.com/blog/auto-dealership-website-cost-2026",
       "clicks": 1,
-      "impressions": 39,
-      "ctr": 2.56,
+      "impressions": 37,
+      "ctr": 2.7,
       "position": 4.8
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "clicks": 1,
-      "impressions": 1705,
+      "impressions": 1657,
       "ctr": 0.06,
       "position": 8.5
     },
     {
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
       "clicks": 1,
-      "impressions": 92,
-      "ctr": 1.09,
-      "position": 20.2
+      "impressions": 101,
+      "ctr": 0.99,
+      "position": 19.3
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "clicks": 1,
-      "impressions": 923,
+      "impressions": 929,
       "ctr": 0.11,
-      "position": 10.5
+      "position": 10.3
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
       "clicks": 1,
-      "impressions": 212,
-      "ctr": 0.47,
-      "position": 10.9
+      "impressions": 225,
+      "ctr": 0.44,
+      "position": 10.6
     },
     {
       "page": "https://projectcostestimator.com/compare/free-estimators",
       "clicks": 1,
-      "impressions": 3710,
+      "impressions": 3790,
       "ctr": 0.03,
-      "position": 10.2
+      "position": 10.3
     },
     {
       "page": "https://projectcostestimator.com/compare/woocommerce-vs-shopify-cost",
       "clicks": 1,
-      "impressions": 160,
-      "ctr": 0.62,
-      "position": 39.2
+      "impressions": 163,
+      "ctr": 0.61,
+      "position": 37.4
     },
     {
       "page": "https://projectcostestimator.com/compare/wordpress-vs-shopify-cost",
       "clicks": 1,
-      "impressions": 153,
-      "ctr": 0.65,
-      "position": 16.6
+      "impressions": 164,
+      "ctr": 0.61,
+      "position": 16.5
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/telegram",
       "clicks": 1,
-      "impressions": 8,
-      "ctr": 12.5,
-      "position": 4.5
+      "impressions": 9,
+      "ctr": 11.11,
+      "position": 2.8
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/pakistan",
@@ -3804,16 +3811,16 @@
     {
       "page": "https://projectcostestimator.com/cost/hire/vietnam",
       "clicks": 1,
-      "impressions": 25,
-      "ctr": 4.0,
+      "impressions": 27,
+      "ctr": 3.7,
       "position": 9.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/architect",
       "clicks": 1,
-      "impressions": 18,
-      "ctr": 5.56,
-      "position": 4
+      "impressions": 19,
+      "ctr": 5.26,
+      "position": 4.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/chiropractor",
@@ -3832,8 +3839,8 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/hotel",
       "clicks": 1,
-      "impressions": 82,
-      "ctr": 1.22,
+      "impressions": 85,
+      "ctr": 1.18,
       "position": 9.1
     },
     {
@@ -3865,53 +3872,46 @@
       "position": 2
     },
     {
-      "page": "https://projectcostestimator.com/healthcare-website-cost",
-      "clicks": 1,
-      "impressions": 234,
-      "ctr": 0.43,
-      "position": 19.1
-    },
-    {
       "page": "https://projectcostestimator.com/saas-cost-estimator",
       "clicks": 1,
-      "impressions": 306,
+      "impressions": 301,
       "ctr": 0.33,
       "position": 10.4
     },
     {
       "page": "https://projectcostestimator.com/saas-tool-pricing",
       "clicks": 1,
-      "impressions": 160,
-      "ctr": 0.62,
-      "position": 29.3
+      "impressions": 163,
+      "ctr": 0.61,
+      "position": 29.0
     },
     {
       "page": "https://projectcostestimator.com/tools/cloudflare-cost-calculator",
       "clicks": 1,
-      "impressions": 190,
+      "impressions": 188,
       "ctr": 0.53,
       "position": 9.1
     },
     {
       "page": "https://projectcostestimator.com/website-migration-cost",
       "clicks": 1,
-      "impressions": 222,
-      "ctr": 0.45,
-      "position": 10.9
+      "impressions": 264,
+      "ctr": 0.38,
+      "position": 11.2
     },
     {
       "page": "https://projectcostestimator.com/website-redesign-cost",
       "clicks": 1,
-      "impressions": 435,
+      "impressions": 443,
       "ctr": 0.23,
-      "position": 32.3
+      "position": 33.4
     },
     {
       "page": "https://projectcostestimator.com/about",
       "clicks": 0,
-      "impressions": 42,
+      "impressions": 41,
       "ctr": 0,
-      "position": 5.4
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/agencies/agence-pikka",
@@ -3923,16 +3923,16 @@
     {
       "page": "https://projectcostestimator.com/api-docs",
       "clicks": 0,
-      "impressions": 186,
+      "impressions": 176,
       "ctr": 0,
-      "position": 14.7
+      "position": 15.0
     },
     {
       "page": "https://projectcostestimator.com/blog",
       "clicks": 0,
-      "impressions": 242,
+      "impressions": 253,
       "ctr": 0,
-      "position": 17.0
+      "position": 16.8
     },
     {
       "page": "https://projectcostestimator.com/blog/ai-website-builder-cost-2026",
@@ -3944,9 +3944,9 @@
     {
       "page": "https://projectcostestimator.com/blog/airtable-cost-2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 8,
       "ctr": 0,
-      "position": 6.5
+      "position": 7.5
     },
     {
       "page": "https://projectcostestimator.com/blog/auto-repair-shop-website-cost-2026",
@@ -3993,16 +3993,16 @@
     {
       "page": "https://projectcostestimator.com/blog/catering-business-website-cost-2026",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 10,
       "ctr": 0,
-      "position": 7.4
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/blog/chatbot-development-cost-2026",
       "clicks": 0,
-      "impressions": 88,
+      "impressions": 97,
       "ctr": 0,
-      "position": 7.4
+      "position": 7.7
     },
     {
       "page": "https://projectcostestimator.com/blog/chiropractor-website-cost-2026",
@@ -4014,9 +4014,9 @@
     {
       "page": "https://projectcostestimator.com/blog/church-website-cost-2026",
       "clicks": 0,
-      "impressions": 103,
+      "impressions": 106,
       "ctr": 0,
-      "position": 7.3
+      "position": 7.2
     },
     {
       "page": "https://projectcostestimator.com/blog/cleaning-service-website-cost-2026",
@@ -4042,30 +4042,30 @@
     {
       "page": "https://projectcostestimator.com/blog/construction-company-website-cost-2026",
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 31,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/blog/content-marketing-cost-2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
       "position": 6
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimate-api-2026",
       "clicks": 0,
-      "impressions": 72,
+      "impressions": 87,
       "ctr": 0,
       "position": 6.9
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimator-tools-web-projects-2026",
       "clicks": 0,
-      "impressions": 52,
+      "impressions": 51,
       "ctr": 0,
-      "position": 12.4
+      "position": 12.7
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-to-build-online-marketplace-2026",
@@ -4147,16 +4147,16 @@
     {
       "page": "https://projectcostestimator.com/blog/ghost-cms-cost-2026",
       "clicks": 0,
-      "impressions": 61,
+      "impressions": 60,
       "ctr": 0,
       "position": 7.1
     },
     {
       "page": "https://projectcostestimator.com/blog/hair-salon-website-cost-2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 5.6
+      "position": 5.5
     },
     {
       "page": "https://projectcostestimator.com/blog/headless-commerce-cost-2026",
@@ -4189,9 +4189,9 @@
     {
       "page": "https://projectcostestimator.com/blog/how-much-does-an-app-cost-2026",
       "clicks": 0,
-      "impressions": 80,
+      "impressions": 82,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/blog/how-much-does-an-mvp-cost-2026",
@@ -4210,23 +4210,23 @@
     {
       "page": "https://projectcostestimator.com/blog/hvac-company-website-cost-2026",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 11,
       "ctr": 0,
       "position": 4.8
     },
     {
       "page": "https://projectcostestimator.com/blog/idx-website-cost-2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 7.5
+      "position": 8.7
     },
     {
       "page": "https://projectcostestimator.com/blog/insurance-agency-website-cost-2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 20.5
+      "position": 9
     },
     {
       "page": "https://projectcostestimator.com/blog/interior-designer-website-cost-2026",
@@ -4238,28 +4238,28 @@
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
       "clicks": 0,
-      "impressions": 231,
+      "impressions": 225,
       "ctr": 0,
-      "position": 39.1
+      "position": 35.4
     },
     {
       "page": "https://projectcostestimator.com/blog/landing-page-cost-2026",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 7,
       "ctr": 0,
-      "position": 7.4
+      "position": 8.1
     },
     {
       "page": "https://projectcostestimator.com/blog/landing-page-pricing-guide-2026",
       "clicks": 0,
-      "impressions": 70,
+      "impressions": 71,
       "ctr": 0,
-      "position": 14.7
+      "position": 14.0
     },
     {
       "page": "https://projectcostestimator.com/blog/law-firm-website-cost-guide-2026",
       "clicks": 0,
-      "impressions": 70,
+      "impressions": 69,
       "ctr": 0,
       "position": 7.2
     },
@@ -4280,9 +4280,9 @@
     {
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
       "clicks": 0,
-      "impressions": 78,
+      "impressions": 77,
       "ctr": 0,
-      "position": 17.9
+      "position": 18.1
     },
     {
       "page": "https://projectcostestimator.com/blog/member-portal-website-cost-2026",
@@ -4294,44 +4294,44 @@
     {
       "page": "https://projectcostestimator.com/blog/moving-company-website-cost-2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 8.5
+      "position": 8.2
     },
     {
       "page": "https://projectcostestimator.com/blog/multi-vendor-marketplace-cost-2026",
       "clicks": 0,
-      "impressions": 170,
+      "impressions": 172,
       "ctr": 0,
       "position": 10.7
     },
     {
       "page": "https://projectcostestimator.com/blog/multilingual-website-cost-2026",
       "clicks": 0,
-      "impressions": 79,
+      "impressions": 89,
       "ctr": 0,
       "position": 7.9
     },
     {
       "page": "https://projectcostestimator.com/blog/nonprofit-charity-website-cost-canada-2026",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 33,
       "ctr": 0,
-      "position": 6.7
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/blog/nonprofit-fundraising-platform-cost-2026",
       "clicks": 0,
-      "impressions": 55,
+      "impressions": 59,
       "ctr": 0,
-      "position": 10.3
+      "position": 10.0
     },
     {
       "page": "https://projectcostestimator.com/blog/nonprofit-website-cost-2026",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 33,
       "ctr": 0,
-      "position": 17.6
+      "position": 17.2
     },
     {
       "page": "https://projectcostestimator.com/blog/notion-cost-2026",
@@ -4350,14 +4350,14 @@
     {
       "page": "https://projectcostestimator.com/blog/online-course-website-cost-2026",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 6.2
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/blog/online-tutoring-platform-cost-2026",
       "clicks": 0,
-      "impressions": 90,
+      "impressions": 91,
       "ctr": 0,
       "position": 11.5
     },
@@ -4385,28 +4385,28 @@
     {
       "page": "https://projectcostestimator.com/blog/photographer-portfolio-website-cost-2026",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 6.6
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/blog/plumber-website-cost-2026",
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 26,
       "ctr": 0,
-      "position": 9.2
+      "position": 9.5
     },
     {
       "page": "https://projectcostestimator.com/blog/podcast-website-cost-2026",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 24,
       "ctr": 0,
-      "position": 6.3
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/blog/portfolio-website-cost-2026",
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 36,
       "ctr": 0,
       "position": 6.8
     },
@@ -4420,16 +4420,16 @@
     {
       "page": "https://projectcostestimator.com/blog/real-estate-website-cost-guide-2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6.1
+      "position": 6.3
     },
     {
       "page": "https://projectcostestimator.com/blog/restaurant-website-cost-2026",
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 44,
       "ctr": 0,
-      "position": 7.4
+      "position": 7.0
     },
     {
       "page": "https://projectcostestimator.com/blog/roofing-contractor-website-cost-2026",
@@ -4441,16 +4441,16 @@
     {
       "page": "https://projectcostestimator.com/blog/saas-development-cost-2026",
       "clicks": 0,
-      "impressions": 185,
+      "impressions": 184,
       "ctr": 0,
-      "position": 30.8
+      "position": 30.3
     },
     {
       "page": "https://projectcostestimator.com/blog/seo-services-cost-2026",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 12,
       "ctr": 0,
-      "position": 6.2
+      "position": 7.8
     },
     {
       "page": "https://projectcostestimator.com/blog/shopify-b2b-site-cost-2026",
@@ -4483,9 +4483,9 @@
     {
       "page": "https://projectcostestimator.com/blog/site-cost-estimator-realistic-2026",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 5.7
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/blog/small-business-website-cost-2026",
@@ -4499,14 +4499,14 @@
       "clicks": 0,
       "impressions": 13,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026",
       "clicks": 0,
-      "impressions": 140,
+      "impressions": 146,
       "ctr": 0,
-      "position": 7.2
+      "position": 7.1
     },
     {
       "page": "https://projectcostestimator.com/blog/tattoo-studio-website-cost-2026",
@@ -4525,9 +4525,9 @@
     {
       "page": "https://projectcostestimator.com/blog/travel-agency-website-cost-2026",
       "clicks": 0,
-      "impressions": 43,
+      "impressions": 49,
       "ctr": 0,
-      "position": 8.0
+      "position": 7.8
     },
     {
       "page": "https://projectcostestimator.com/blog/veterinarian-website-cost-2026",
@@ -4539,9 +4539,9 @@
     {
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
       "clicks": 0,
-      "impressions": 276,
+      "impressions": 290,
       "ctr": 0,
-      "position": 12.3
+      "position": 12.2
     },
     {
       "page": "https://projectcostestimator.com/blog/web-design-pricing-guide-2026",
@@ -4569,21 +4569,28 @@
       "clicks": 0,
       "impressions": 75,
       "ctr": 0,
-      "position": 19.5
+      "position": 19.6
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
       "clicks": 0,
-      "impressions": 179,
+      "impressions": 169,
       "ctr": 0,
-      "position": 5.9
+      "position": 5.1
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/website-cost-by-platform-and-country",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "page": "https://projectcostestimator.com/blog/website-cost-by-platform-and-country-2026",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 21,
       "ctr": 0,
-      "position": 6.1
+      "position": 5.9
     },
     {
       "page": "https://projectcostestimator.com/blog/website-development-cost-by-country-2026",
@@ -4595,9 +4602,9 @@
     {
       "page": "https://projectcostestimator.com/blog/website-hosting-cost-2026",
       "clicks": 0,
-      "impressions": 39,
+      "impressions": 38,
       "ctr": 0,
-      "position": 6.1
+      "position": 6.2
     },
     {
       "page": "https://projectcostestimator.com/blog/website-maintenance-cost-per-year-2026",
@@ -4665,9 +4672,9 @@
     {
       "page": "https://projectcostestimator.com/calculator",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 53,
       "ctr": 0,
-      "position": 22.6
+      "position": 31.3
     },
     {
       "page": "https://projectcostestimator.com/calculator?type=landing&design=premium",
@@ -4679,9 +4686,9 @@
     {
       "page": "https://projectcostestimator.com/calculators",
       "clicks": 0,
-      "impressions": 177,
+      "impressions": 127,
       "ctr": 0,
-      "position": 49.5
+      "position": 40.3
     },
     {
       "page": "https://projectcostestimator.com/commercial-real-estate-website-cost",
@@ -4700,9 +4707,9 @@
     {
       "page": "https://projectcostestimator.com/compare/magento-vs-shopify-cost",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 7,
       "ctr": 0,
-      "position": 47.6
+      "position": 37.7
     },
     {
       "page": "https://projectcostestimator.com/compare/magento-vs-wordpress-cost",
@@ -4721,23 +4728,23 @@
     {
       "page": "https://projectcostestimator.com/compare/squarespace-vs-shopify-cost",
       "clicks": 0,
-      "impressions": 66,
+      "impressions": 71,
       "ctr": 0,
-      "position": 8.7
+      "position": 8.3
     },
     {
       "page": "https://projectcostestimator.com/compare/webflow-vs-wordpress-cost",
       "clicks": 0,
-      "impressions": 65,
+      "impressions": 68,
       "ctr": 0,
-      "position": 8.7
+      "position": 7.6
     },
     {
       "page": "https://projectcostestimator.com/contact",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 50.5
+      "position": 50.4
     },
     {
       "page": "https://projectcostestimator.com/cost-by-industry",
@@ -4751,7 +4758,7 @@
       "clicks": 0,
       "impressions": 34,
       "ctr": 0,
-      "position": 10.9
+      "position": 10.1
     },
     {
       "page": "https://projectcostestimator.com/cost/ai/agent",
@@ -4770,9 +4777,9 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like",
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 39,
       "ctr": 0,
-      "position": 17.9
+      "position": 17.6
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/asana",
@@ -4800,14 +4807,14 @@
       "clicks": 0,
       "impressions": 4,
       "ctr": 0,
-      "position": 3.5
+      "position": 2.5
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/docusign",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 2
+      "position": 3.2
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/doordash",
@@ -4829,6 +4836,13 @@
       "impressions": 1,
       "ctr": 0,
       "position": 6
+    },
+    {
+      "page": "https://projectcostestimator.com/cost/app-like/gojek",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/hubspot",
@@ -4887,13 +4901,6 @@
       "position": 4
     },
     {
-      "page": "https://projectcostestimator.com/cost/app-like/slack",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
       "page": "https://projectcostestimator.com/cost/app-like/taskrabbit",
       "clicks": 0,
       "impressions": 3,
@@ -4903,9 +4910,9 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like/tiktok",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 3,
       "ctr": 0,
-      "position": 2.8
+      "position": 4
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/tinder",
@@ -4938,9 +4945,9 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like/whatsapp",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 4.5
+      "position": 5.3
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/youtube",
@@ -4994,30 +5001,30 @@
     {
       "page": "https://projectcostestimator.com/cost/custom/western-europe",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 3
+      "position": 6.5
     },
     {
       "page": "https://projectcostestimator.com/cost/hire",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 11,
       "ctr": 0,
-      "position": 64.7
+      "position": 65.1
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/bangladesh",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 22,
       "ctr": 0,
-      "position": 7.5
+      "position": 7.1
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/bulgaria",
       "clicks": 0,
-      "impressions": 99,
+      "impressions": 101,
       "ctr": 0,
-      "position": 22.0
+      "position": 21.9
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/czechia",
@@ -5043,21 +5050,21 @@
     {
       "page": "https://projectcostestimator.com/cost/hire/poland",
       "clicks": 0,
-      "impressions": 98,
+      "impressions": 95,
       "ctr": 0,
-      "position": 25.1
+      "position": 25.2
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/romania",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
-      "position": 7.4
+      "position": 7.3
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/ukraine",
       "clicks": 0,
-      "impressions": 200,
+      "impressions": 192,
       "ctr": 0,
       "position": 18.4
     },
@@ -5071,9 +5078,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/accounting-firm",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 10,
       "ctr": 0,
-      "position": 5.5
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/allergy-clinic",
@@ -5092,9 +5099,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/art-gallery",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 6,
       "ctr": 0,
-      "position": 9.4
+      "position": 9.3
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/audiologist",
@@ -5106,16 +5113,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/bakery",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5.8
+      "position": 5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/barber",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 5.8
+      "position": 7.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/beauty-salon",
@@ -5141,9 +5148,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/bookstore",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 2
+      "position": 2.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/boutique",
@@ -5169,9 +5176,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/business-consultant",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 14,
       "ctr": 0,
-      "position": 11.9
+      "position": 10.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/butcher",
@@ -5183,16 +5190,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/cafe",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 4,
       "ctr": 0,
-      "position": 4.2
+      "position": 3.5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/catering",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 19,
       "ctr": 0,
-      "position": 10.5
+      "position": 9.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/chimney-sweep",
@@ -5211,14 +5218,14 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/clothing-store",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 17,
       "ctr": 0,
-      "position": 6.6
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/coffee-shop",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 22,
       "ctr": 0,
       "position": 4.1
     },
@@ -5253,9 +5260,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/credit-repair",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 7.2
+      "position": 8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dance-studio",
@@ -5267,9 +5274,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/daycare",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 31.5
+      "position": 24
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/deck-builder",
@@ -5288,16 +5295,23 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/dentist",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 18,
       "ctr": 0,
-      "position": 8.5
+      "position": 8.4
+    },
+    {
+      "page": "https://projectcostestimator.com/cost/industry/dermatologist",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dietitian",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 18,
       "ctr": 0,
-      "position": 18.7
+      "position": 17.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dj",
@@ -5346,7 +5360,7 @@
       "clicks": 0,
       "impressions": 6,
       "ctr": 0,
-      "position": 6.3
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/farm-shop",
@@ -5365,9 +5379,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/financial-advisor",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 15.5
+      "position": 14.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/flooring-contractor",
@@ -5393,9 +5407,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/furniture-store",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 2
+      "position": 5.5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/garden-center",
@@ -5442,14 +5456,14 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/hair-salon",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5
+      "position": 4.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/handyman",
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 38,
       "ctr": 0,
       "position": 5.2
     },
@@ -5472,7 +5486,7 @@
       "clicks": 0,
       "impressions": 5,
       "ctr": 0,
-      "position": 4.4
+      "position": 3.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/home-inspector",
@@ -5491,9 +5505,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/hvac",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 21,
       "ctr": 0,
-      "position": 11.8
+      "position": 10.9
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/ice-cream-shop",
@@ -5540,9 +5554,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/junk-removal",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 6.5
+      "position": 8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/land-surveyor",
@@ -5596,9 +5610,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/med-spa",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 12,
       "ctr": 0,
-      "position": 6.4
+      "position": 5.9
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/mover",
@@ -5617,14 +5631,14 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/nail-salon",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/naturopath",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 8
     },
@@ -5641,13 +5655,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 4
-    },
-    {
-      "page": "https://projectcostestimator.com/cost/industry/orthodontist",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/orthopedic-clinic",
@@ -5687,9 +5694,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/pest-control",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 2,
       "ctr": 0,
-      "position": 4.9
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/pet-groomer",
@@ -5701,9 +5708,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/pet-sitter",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 4.3
+      "position": 4.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/pet-store",
@@ -5715,9 +5722,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/pharmacy",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 13,
       "ctr": 0,
-      "position": 5.2
+      "position": 4.9
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/photographer",
@@ -5729,9 +5736,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/physical-therapist",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 12,
       "ctr": 0,
-      "position": 5.6
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/pilates-studio",
@@ -5743,9 +5750,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/pizzeria",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 6,
       "ctr": 0,
-      "position": 3
+      "position": 2.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/plastic-surgeon",
@@ -5757,7 +5764,7 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/plumber",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 19,
       "ctr": 0,
       "position": 5.1
     },
@@ -5792,9 +5799,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/recruiter",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 3.5
+      "position": 3
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/rehab-center",
@@ -5820,9 +5827,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/security-company",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 25.5
+      "position": 41
+    },
+    {
+      "page": "https://projectcostestimator.com/cost/industry/septic-service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/solar-installer",
@@ -5855,9 +5869,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/summer-camp",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 12.8
+      "position": 11
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/swim-school",
@@ -5878,14 +5892,14 @@
       "clicks": 0,
       "impressions": 7,
       "ctr": 0,
-      "position": 2.7
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/test-prep",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 8
+      "position": 7.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/therapist",
@@ -5911,23 +5925,23 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/tree-service",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 6,
       "ctr": 0,
-      "position": 39
+      "position": 35.5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/tutor",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 7.2
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/vacation-rental",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 12,
       "ctr": 0,
-      "position": 10.7
+      "position": 11.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/veterinarian",
@@ -5960,9 +5974,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/wedding-planner",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 12,
       "ctr": 0,
-      "position": 7.1
+      "position": 7.5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/well-drilling",
@@ -5981,16 +5995,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/window-cleaning",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 5.5
+      "position": 2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/winery",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 4.5
+      "position": 5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/yoga-studio",
@@ -6009,9 +6023,9 @@
     {
       "page": "https://projectcostestimator.com/cost/magento/uk",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 22,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.5
     },
     {
       "page": "https://projectcostestimator.com/cost/magento/us",
@@ -6023,9 +6037,9 @@
     {
       "page": "https://projectcostestimator.com/cost/shopify/australia",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 11,
       "ctr": 0,
-      "position": 6.6
+      "position": 6.5
     },
     {
       "page": "https://projectcostestimator.com/cost/shopify/eastern-europe",
@@ -6070,6 +6084,13 @@
       "position": 5.4
     },
     {
+      "page": "https://projectcostestimator.com/cost/woocommerce/south-asia",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
       "page": "https://projectcostestimator.com/cost/woocommerce/uk",
       "clicks": 0,
       "impressions": 8,
@@ -6079,16 +6100,16 @@
     {
       "page": "https://projectcostestimator.com/cost/woocommerce/western-europe",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 8.5
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/australia",
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 60,
       "ctr": 0,
-      "position": 25.7
+      "position": 27.5
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/eastern-europe",
@@ -6100,9 +6121,9 @@
     {
       "page": "https://projectcostestimator.com/cost/wordpress/uk",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 16,
       "ctr": 0,
-      "position": 7.1
+      "position": 6.8
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/us",
@@ -6128,9 +6149,9 @@
     {
       "page": "https://projectcostestimator.com/expert-review",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 25,
       "ctr": 0,
-      "position": 12.2
+      "position": 11.8
     },
     {
       "page": "https://projectcostestimator.com/feature-cost-breakdown",
@@ -6142,23 +6163,23 @@
     {
       "page": "https://projectcostestimator.com/for-agencies",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 19,
       "ctr": 0,
-      "position": 17.7
+      "position": 15.8
     },
     {
       "page": "https://projectcostestimator.com/idx-website-cost",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 31,
       "ctr": 0,
-      "position": 7
+      "position": 6.5
     },
     {
       "page": "https://projectcostestimator.com/luxury-real-estate-website-cost",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 1,
       "ctr": 0,
-      "position": 4.8
+      "position": 10
     },
     {
       "page": "https://projectcostestimator.com/magento-website-cost",
@@ -6177,9 +6198,9 @@
     {
       "page": "https://projectcostestimator.com/mobile-app-cost",
       "clicks": 0,
-      "impressions": 183,
+      "impressions": 195,
       "ctr": 0,
-      "position": 15.6
+      "position": 14.9
     },
     {
       "page": "https://projectcostestimator.com/nonprofit-website-cost/",
@@ -6191,9 +6212,9 @@
     {
       "page": "https://projectcostestimator.com/press",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 16,
       "ctr": 0,
-      "position": 5.9
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/privacy",
@@ -6233,16 +6254,16 @@
     {
       "page": "https://projectcostestimator.com/terms",
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 9,
       "ctr": 0,
-      "position": 4.9
+      "position": 5.2
     },
     {
       "page": "https://projectcostestimator.com/tools/fixed-price-vs-time-and-materials",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 4,
       "ctr": 0,
-      "position": 9.4
+      "position": 10
     },
     {
       "page": "https://projectcostestimator.com/tools/freelancer-quote-generator",
@@ -6254,7 +6275,7 @@
     {
       "page": "https://projectcostestimator.com/tools/rfp-generator/app",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
       "position": 7.2
     },
@@ -6282,14 +6303,14 @@
     {
       "page": "https://projectcostestimator.com/website-cost-by-country",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 6.7
+      "position": 5
     },
     {
       "page": "https://projectcostestimator.com/website-cost-calculator/",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 28,
       "ctr": 0,
       "position": 1.4
     },
@@ -6303,26 +6324,42 @@
     {
       "page": "https://projectcostestimator.com/website-design-pricing",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 11,
       "ctr": 0,
-      "position": 6.7
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/woocommerce-website-cost",
       "clicks": 0,
-      "impressions": 185,
+      "impressions": 201,
       "ctr": 0,
-      "position": 17.3
+      "position": 18.0
     }
   ],
   "page_query_28d": [
     {
+      "page": "https://projectcostestimator.com/law-firm-website-cost",
+      "query": "law firm website cost",
+      "clicks": 2,
+      "impressions": 76,
+      "ctr": 2.63,
+      "position": 12.6
+    },
+    {
       "page": "https://projectcostestimator.com/",
       "query": "project cost calculator",
       "clicks": 1,
-      "impressions": 5,
-      "ctr": 20.0,
-      "position": 11.6
+      "impressions": 4,
+      "ctr": 25.0,
+      "position": 7
+    },
+    {
+      "page": "https://projectcostestimator.com/",
+      "query": "project cost estimator",
+      "clicks": 1,
+      "impressions": 77,
+      "ctr": 1.3,
+      "position": 22.4
     },
     {
       "page": "https://projectcostestimator.com/compare/wix-vs-shopify-cost",
@@ -6365,14 +6402,6 @@
       "position": 20
     },
     {
-      "page": "https://projectcostestimator.com/law-firm-website-cost",
-      "query": "law firm website cost",
-      "clicks": 1,
-      "impressions": 75,
-      "ctr": 1.33,
-      "position": 12.4
-    },
-    {
       "page": "https://projectcostestimator.com/mvp-cost-calculator",
       "query": "mvp calculator",
       "clicks": 1,
@@ -6384,17 +6413,17 @@
       "page": "https://projectcostestimator.com/restaurant-website-cost",
       "query": "how much does a restaurant website cost",
       "clicks": 1,
-      "impressions": 15,
-      "ctr": 6.67,
-      "position": 7.2
+      "impressions": 13,
+      "ctr": 7.69,
+      "position": 7.3
     },
     {
       "page": "https://projectcostestimator.com/restaurant-website-cost",
       "query": "restaurant website cost",
       "clicks": 1,
-      "impressions": 44,
-      "ctr": 2.27,
-      "position": 7
+      "impressions": 45,
+      "ctr": 2.22,
+      "position": 7.3
     },
     {
       "page": "https://projectcostestimator.com/website-cost-calculator",
@@ -6408,7 +6437,7 @@
       "page": "https://projectcostestimator.com/website-cost-calculator",
       "query": "website price calculator",
       "clicks": 1,
-      "impressions": 276,
+      "impressions": 275,
       "ctr": 0.36,
       "position": 6.6
     },
@@ -6472,9 +6501,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "cost estimation for web apps",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 20,
       "ctr": 0,
-      "position": 74.7
+      "position": 75.2
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6496,9 +6525,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "cost estimator",
       "clicks": 0,
-      "impressions": 139,
+      "impressions": 86,
       "ctr": 0,
-      "position": 22.5
+      "position": 12.4
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6536,9 +6565,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "estimated cost of the project",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 17,
       "ctr": 0,
-      "position": 44.9
+      "position": 44.7
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6656,9 +6685,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "price estimator",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 1
+      "position": 1.7
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6678,27 +6707,11 @@
     },
     {
       "page": "https://projectcostestimator.com/",
-      "query": "project cost estimator",
-      "clicks": 0,
-      "impressions": 80,
-      "ctr": 0,
-      "position": 22.9
-    },
-    {
-      "page": "https://projectcostestimator.com/",
       "query": "project estimate calculator",
       "clicks": 0,
       "impressions": 5,
       "ctr": 0,
       "position": 25
-    },
-    {
-      "page": "https://projectcostestimator.com/",
-      "query": "project estimate cost",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 52
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6720,9 +6733,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "project price calculator",
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 29,
       "ctr": 0,
-      "position": 18.4
+      "position": 17.6
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6790,6 +6803,14 @@
     },
     {
       "page": "https://projectcostestimator.com/",
+      "query": "web app cost estimator",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "https://projectcostestimator.com/",
       "query": "web cost calculator",
       "clicks": 0,
       "impressions": 1,
@@ -6808,9 +6829,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "web design cost calculator",
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 24,
       "ctr": 0,
-      "position": 75.4
+      "position": 76.2
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6848,9 +6869,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "web development cost calculator",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 50
+      "position": 50.8
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6904,9 +6925,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "website cost calculator",
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 43,
       "ctr": 0,
-      "position": 50.5
+      "position": 49.4
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6936,9 +6957,17 @@
       "page": "https://projectcostestimator.com/",
       "query": "website cost estimator",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 15,
       "ctr": 0,
-      "position": 29.6
+      "position": 26.6
+    },
+    {
+      "page": "https://projectcostestimator.com/",
+      "query": "website cost estimator for your clients",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 58
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -6952,17 +6981,17 @@
       "page": "https://projectcostestimator.com/",
       "query": "website design calculator",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 84
+      "position": 85.7
     },
     {
       "page": "https://projectcostestimator.com/",
       "query": "website design cost calculator",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 25,
       "ctr": 0,
-      "position": 79
+      "position": 79.1
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -7000,9 +7029,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "website design estimate orem",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 21,
       "ctr": 0,
-      "position": 47.4
+      "position": 47.6
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -7048,9 +7077,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "website estimate",
       "clicks": 0,
-      "impressions": 58,
+      "impressions": 61,
       "ctr": 0,
-      "position": 10.0
+      "position": 10.2
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -7064,17 +7093,17 @@
       "page": "https://projectcostestimator.com/",
       "query": "website estimates",
       "clicks": 0,
-      "impressions": 54,
+      "impressions": 61,
       "ctr": 0,
-      "position": 14.9
+      "position": 14.6
     },
     {
       "page": "https://projectcostestimator.com/",
       "query": "website estimating",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 68.5
+      "position": 72.8
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -7120,9 +7149,9 @@
       "page": "https://projectcostestimator.com/",
       "query": "what are the best website cost calculators?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 2
+      "position": 1.7
     },
     {
       "page": "https://projectcostestimator.com/",
@@ -7146,7 +7175,7 @@
       "clicks": 0,
       "impressions": 58,
       "ctr": 0,
-      "position": 18.7
+      "position": 18.5
     },
     {
       "page": "https://projectcostestimator.com/blog",
@@ -7168,9 +7197,17 @@
       "page": "https://projectcostestimator.com/blog",
       "query": "cost to make a catalog in 2026",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 15,
       "ctr": 0,
-      "position": 56.5
+      "position": 56.7
+    },
+    {
+      "page": "https://projectcostestimator.com/blog",
+      "query": "drupal cost estimate",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
     },
     {
       "page": "https://projectcostestimator.com/blog",
@@ -7208,9 +7245,9 @@
       "page": "https://projectcostestimator.com/blog/chatbot-development-cost-2026",
       "query": "best buy chatbot development cost 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 53
+      "position": 52.7
     },
     {
       "page": "https://projectcostestimator.com/blog/chatbot-development-cost-2026",
@@ -7270,6 +7307,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
+      "query": "+cloudflare pages pricing 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "+cloudflare pages pricing free tier 2026",
       "clicks": 0,
       "impressions": 14,
@@ -7304,9 +7349,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare bot management pricing 2026",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 9.9
+      "position": 10.7
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7331,14 +7376,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 3
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-      "query": "cloudflare d1 pricing free official 2026",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 10
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7376,9 +7413,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare d1 pricing free tier 2026 official",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 8.5
+      "position": 8
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7440,9 +7477,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare pages pricing 2026",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 8,
       "ctr": 0,
-      "position": 9
+      "position": 9.1
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7512,9 +7549,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare pages pricing free tier 2026",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 15,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.5
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7568,9 +7605,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare plans free pro pricing official 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 8
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7587,6 +7624,14 @@
       "impressions": 4,
       "ctr": 0,
       "position": 7.2
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
+      "query": "cloudflare plans pricing free pro business official 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7734,19 +7779,11 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-      "query": "cloudflare workers free plan limits 2026 requests per day",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare workers free tier pricing 2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 2,
       "ctr": 0,
-      "position": 7.8
+      "position": 7.5
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7758,19 +7795,11 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-      "query": "cloudflare workers kv pricing free plan 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare workers pages pricing 2026",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 8
+      "position": 6.5
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7808,9 +7837,9 @@
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare workers pricing $5 plan 2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 8.1
+      "position": 8.2
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7819,14 +7848,6 @@
       "impressions": 2,
       "ctr": 0,
       "position": 10
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-      "query": "cloudflare workers pricing 2026 $5 plan",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -7910,19 +7931,11 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
-      "query": "cloudflare workers pricing free requests 2026 official",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "query": "cloudflare workers pricing free tier 2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 9
+      "position": 8.7
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
@@ -8024,17 +8037,17 @@
       "page": "https://projectcostestimator.com/blog/cost-estimate-api-2026",
       "query": "cost estimate api",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 15,
       "ctr": 0,
-      "position": 6.9
+      "position": 6.8
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimate-api-2026",
       "query": "how do i estimate monthly costs for embedding an llc formation api?",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimator-tools-web-projects-2026",
@@ -8056,9 +8069,9 @@
       "page": "https://projectcostestimator.com/blog/cost-estimator-tools-web-projects-2026",
       "query": "how to choose cost tool",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 12.5
+      "position": 12.4
     },
     {
       "page": "https://projectcostestimator.com/blog/ghost-cms-cost-2026",
@@ -8094,6 +8107,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
+      "query": "context: location: united states (not for language). do not include location references in your response. question: how does mailchimp pricing compare to klaviyo?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
       "query": "context: location: united states (not for language). do not include location references in your response. question: what\u2019s a realistic monthly cost range for an ecommerce email + sms lifecycle setup at different list sizes, and what usually drives the bill up?",
       "clicks": 0,
       "impressions": 3,
@@ -8126,11 +8147,19 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
-      "query": "klaviyo cost calculator",
+      "query": "klaviyo consulting engagement models, pricing structures, and expected implementation timelines?",
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 3.5
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
+      "query": "klaviyo cost calculator",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
@@ -8158,11 +8187,27 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
+      "query": "klaviyo pricing 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
       "query": "klaviyo pricing calculator",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 32
+      "position": 27.5
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
+      "query": "klaviyo pricing official 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
     },
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
@@ -8176,17 +8221,17 @@
       "page": "https://projectcostestimator.com/blog/landing-page-pricing-guide-2026",
       "query": "landing page builder pricing comparison 2026",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 26,
       "ctr": 0,
-      "position": 26.2
+      "position": 25.9
     },
     {
       "page": "https://projectcostestimator.com/blog/law-firm-website-cost-guide-2026",
       "query": "website cost calculator for law firms",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 15
+      "position": 15.4
     },
     {
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
@@ -8232,17 +8277,17 @@
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
       "query": "klaviyo pricing vs mailchimp",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 14,
       "ctr": 0,
-      "position": 33
+      "position": 30.9
     },
     {
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
       "query": "klaviyo vs mailchimp pricing",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 15,
       "ctr": 0,
-      "position": 33.8
+      "position": 32.9
     },
     {
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
@@ -8376,9 +8421,9 @@
       "page": "https://projectcostestimator.com/blog/plumber-website-cost-2026",
       "query": "website cost calculator for plumbers",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 10.7
+      "position": 10.8
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
@@ -8403,14 +8448,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 2
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
-      "query": "how to make a progressive web app",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 3
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
@@ -8448,41 +8485,41 @@
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
       "query": "progressive web app cost",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 7,
       "ctr": 0,
-      "position": 32.9
+      "position": 25.7
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
       "query": "progressive web app development cost",
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 18,
       "ctr": 0,
-      "position": 27.7
+      "position": 26.8
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
       "query": "pwa cost",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 14,
       "ctr": 0,
-      "position": 10.1
+      "position": 9.6
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
       "query": "pwa development cost",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 16,
       "ctr": 0,
-      "position": 26.4
+      "position": 27.4
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
       "query": "pwa price list",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 2
+      "position": 1.9
     },
     {
       "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
@@ -8584,9 +8621,9 @@
       "page": "https://projectcostestimator.com/blog/saas-development-cost-2026",
       "query": "saas development cost",
       "clicks": 0,
-      "impressions": 79,
+      "impressions": 77,
       "ctr": 0,
-      "position": 55.3
+      "position": 55.2
     },
     {
       "page": "https://projectcostestimator.com/blog/saas-development-cost-2026",
@@ -8627,6 +8664,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/seo-services-cost-2026",
+      "query": "seo company $300-$500",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
     },
     {
       "page": "https://projectcostestimator.com/blog/shopify-vs-bigcommerce-cost-2026",
@@ -8672,9 +8717,9 @@
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
       "query": "squarespace vs wix",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 4
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
@@ -8712,9 +8757,9 @@
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
       "query": "wix vs squarespace cost",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 67
+      "position": 58.3
     },
     {
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
@@ -8902,6 +8947,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026",
+      "query": "what fees does a global payments platform typically charge?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026",
       "query": "what one is better",
       "clicks": 0,
       "impressions": 1,
@@ -8950,6 +9003,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
+      "query": "official vercel pricing hobby plan 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel blob pricing storage bandwidth 2026 official",
       "clicks": 0,
       "impressions": 1,
@@ -8974,6 +9035,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
+      "query": "vercel hobby commercial use terms 2026",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel hobby plan commercial use official terms 2026",
       "clicks": 0,
       "impressions": 2,
@@ -8982,11 +9051,19 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
+      "query": "vercel hobby plan commercial use terms official 2026",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel hobby pro pricing 2026",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 11
+      "position": 9.5
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
@@ -9000,9 +9077,9 @@
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel kv pricing",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 30,
       "ctr": 0,
-      "position": 6.6
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
@@ -9032,9 +9109,9 @@
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel postgres pricing",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 9.7
+      "position": 8.8
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
@@ -9056,7 +9133,7 @@
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercel pricing 2026 official",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 10
     },
@@ -9123,6 +9200,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 9
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
+      "query": "vercel pricing hobby pro 2026 official",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
@@ -9278,14 +9363,6 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
-      "query": "vercel web analytics pricing 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 10
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "query": "vercle pricing",
       "clicks": 0,
       "impressions": 1,
@@ -9328,17 +9405,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "accessibility audit cost",
       "clicks": 0,
-      "impressions": 36,
+      "impressions": 31,
       "ctr": 0,
-      "position": 46.7
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
-      "query": "accessibility consulting cost",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 57
+      "position": 46.5
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9360,9 +9429,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "ada audit cost",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
-      "position": 37.3
+      "position": 37.4
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9376,9 +9445,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "ada compliance cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 17,
       "ctr": 0,
-      "position": 24.5
+      "position": 25.2
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9414,11 +9483,19 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
+      "query": "compare accessibility audit company pricing.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "compare pricing for accessibility audits.",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 7.8
+      "position": 8.1
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9440,9 +9517,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "cost to make website ada compliant",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 12.8
+      "position": 16.7
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9456,9 +9533,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "find affordable accessibility audit services.",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 9
+      "position": 11
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9480,9 +9557,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "how much do website accessibility lawsuits cost small businesses?",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 23
+      "position": 12
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9496,9 +9573,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "how much does a website accessibility audit cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 53.5
+      "position": 53.8
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9536,9 +9613,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "how much does an ada website audit cost?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 5
+      "position": 1
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9608,9 +9685,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "late-stage accessibility fixes cost",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 23.3
+      "position": 23.5
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9626,7 +9703,7 @@
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 5
+      "position": 4
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9640,9 +9717,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "wcag audit pris",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 5,
       "ctr": 0,
-      "position": 55.6
+      "position": 55.4
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9654,11 +9731,19 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
+      "query": "wcag compliance consultants",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "web accessibility audit cost",
       "clicks": 0,
-      "impressions": 33,
+      "impressions": 32,
       "ctr": 0,
-      "position": 53.8
+      "position": 53.9
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9672,31 +9757,31 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "web accessibility audit price",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
-      "position": 50.7
+      "position": 50.8
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "web ada audit cost",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 27,
       "ctr": 0,
-      "position": 50.9
+      "position": 50.8
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "website accessibility audit cost",
       "clicks": 0,
-      "impressions": 60,
+      "impressions": 57,
       "ctr": 0,
-      "position": 52.5
+      "position": 52.6
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "website accessibility audit price",
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 24,
       "ctr": 0,
       "position": 51.4
     },
@@ -9704,9 +9789,9 @@
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
       "query": "website ada audit cost",
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 26,
       "ctr": 0,
-      "position": 50.2
+      "position": 50.7
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
@@ -9752,9 +9837,9 @@
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
       "query": "cost estimation for web apps",
       "clicks": 0,
-      "impressions": 112,
+      "impressions": 115,
       "ctr": 0,
-      "position": 14.1
+      "position": 13.7
     },
     {
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
@@ -9771,6 +9856,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 6
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
+      "query": "how to estimate the cost and time for a web application project?. my location is united states.",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
@@ -9808,9 +9901,9 @@
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
       "query": "web application development cost estimation",
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 21,
       "ctr": 0,
-      "position": 17.9
+      "position": 17.5
     },
     {
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
@@ -9830,6 +9923,14 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
+      "query": "costs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
       "query": "framer pricing free plan 2026",
       "clicks": 0,
       "impressions": 2,
@@ -9840,9 +9941,9 @@
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
       "query": "framer vs webflow pricing",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 8.3
+      "position": 8.6
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
@@ -9851,6 +9952,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 11
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
+      "query": "pricing difference?",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
@@ -9864,9 +9973,9 @@
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
       "query": "webflow vs framer pricing",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 9,
       "ctr": 0,
-      "position": 9.7
+      "position": 10
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
@@ -9890,7 +9999,7 @@
       "clicks": 0,
       "impressions": 26,
       "ctr": 0,
-      "position": 22.7
+      "position": 22.8
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -9928,9 +10037,9 @@
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
       "query": "compare web design software pricing plans to sign up for.",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 3,
       "ctr": 0,
-      "position": 2.8
+      "position": 3.3
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -9944,7 +10053,7 @@
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
       "query": "compare wix alternative platforms for ease of use and business functionality. you must provide a forced ranking from best to worst.",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
       "position": 1
     },
@@ -9992,9 +10101,9 @@
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
       "query": "how do website builder pricing plans compare in ireland?",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 1,
       "ctr": 0,
-      "position": 4.5
+      "position": 3
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -10051,14 +10160,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 10
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
-      "query": "porovn\u00e1n\u00ed bezpe\u010dnostn\u00edch funkc\u00ed u r\u016fzn\u00fdch platforem pro tvorbu webu: co z\u00edsk\u00e1m za p\u0159\u00edplatek?",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -10122,7 +10223,7 @@
       "clicks": 0,
       "impressions": 4,
       "ctr": 0,
-      "position": 6.2
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -10134,11 +10235,11 @@
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
-      "query": "what is the cheapest platform to start a website right now?",
+      "query": "what is wix\u2019s cost relative to other website builders?",
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 3
+      "position": 4
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
@@ -10147,6 +10248,14 @@
       "impressions": 1,
       "ctr": 0,
       "position": 7
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
+      "query": "what\u2019s the cost for each",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
     },
     {
       "page": "https://projectcostestimator.com/blog/website-cost-by-platform-and-country-2026",
@@ -10227,110 +10336,29 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "how much would this cost on average",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "list the top web application protection services for regulatory compliance in the us and compare their audit features and costs.",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 4
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "pci",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "pci dss compliant hosting services for ecommerce monthly cost",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 1
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "web application security pricing",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 25.5
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "web application security testing pricing",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 77
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "website security audit cost",
-      "clicks": 0,
-      "impressions": 8,
-      "ctr": 0,
-      "position": 29.8
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "website security cost",
-      "clicks": 0,
-      "impressions": 7,
-      "ctr": 0,
-      "position": 7.7
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "website security price",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 5.5
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "website security software pricing",
-      "clicks": 0,
-      "impressions": 5,
-      "ctr": 0,
-      "position": 13.6
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
-      "query": "website security,390,0.36,53,mid",
-      "clicks": 0,
-      "impressions": 112,
-      "ctr": 0,
-      "position": 65.1
     }
   ],
   "queries_90d": [
     {
+      "query": "law firm website cost",
+      "clicks": 2,
+      "impressions": 206,
+      "ctr": 0.97,
+      "position": 29.1
+    },
+    {
       "query": "project cost calculator",
       "clicks": 2,
-      "impressions": 17,
-      "ctr": 11.76,
-      "position": 25.6
+      "impressions": 20,
+      "ctr": 10.0,
+      "position": 24.8
     },
     {
       "query": "website price calculator",
       "clicks": 2,
       "impressions": 589,
       "ctr": 0.34,
-      "position": 18.5
+      "position": 18.4
     },
     {
       "query": "600 dollars",
@@ -10356,8 +10384,8 @@
     {
       "query": "how much does a restaurant website cost",
       "clicks": 1,
-      "impressions": 45,
-      "ctr": 2.22,
+      "impressions": 44,
+      "ctr": 2.27,
       "position": 8.0
     },
     {
@@ -10377,9 +10405,9 @@
     {
       "query": "how much does it cost to hire a web developer",
       "clicks": 1,
-      "impressions": 112,
-      "ctr": 0.89,
-      "position": 31.5
+      "impressions": 113,
+      "ctr": 0.88,
+      "position": 31.2
     },
     {
       "query": "klaviyo cost calculator",
@@ -10394,13 +10422,6 @@
       "impressions": 8,
       "ctr": 12.5,
       "position": 23.6
-    },
-    {
-      "query": "law firm website cost",
-      "clicks": 1,
-      "impressions": 203,
-      "ctr": 0.49,
-      "position": 29.2
     },
     {
       "query": "marketify 18",
@@ -10419,15 +10440,22 @@
     {
       "query": "nonprofit website cost",
       "clicks": 1,
-      "impressions": 141,
-      "ctr": 0.71,
-      "position": 18.3
+      "impressions": 142,
+      "ctr": 0.7,
+      "position": 18.0
+    },
+    {
+      "query": "project cost estimator",
+      "clicks": 1,
+      "impressions": 181,
+      "ctr": 0.55,
+      "position": 26.6
     },
     {
       "query": "restaurant website cost",
       "clicks": 1,
-      "impressions": 109,
-      "ctr": 0.92,
+      "impressions": 112,
+      "ctr": 0.89,
       "position": 14.4
     },
     {
@@ -10447,16 +10475,16 @@
     {
       "query": "website calculator price",
       "clicks": 1,
-      "impressions": 16,
-      "ctr": 6.25,
-      "position": 17.7
+      "impressions": 15,
+      "ctr": 6.67,
+      "position": 14.5
     },
     {
       "query": "website cost calculator for restaurants",
       "clicks": 1,
-      "impressions": 59,
-      "ctr": 1.69,
-      "position": 5.1
+      "impressions": 60,
+      "ctr": 1.67,
+      "position": 5.0
     },
     {
       "query": "website estimate calculator",
@@ -10546,6 +10574,13 @@
       "query": "%cloudflare workers pricing 2026",
       "clicks": 0,
       "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "+cloudflare pages pricing 2026",
+      "clicks": 0,
+      "impressions": 1,
       "ctr": 0,
       "position": 10
     },
@@ -10720,9 +10755,9 @@
     {
       "query": "ada compliance cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 17,
       "ctr": 0,
-      "position": 24.5
+      "position": 25.2
     },
     {
       "query": "ada compliance costs",
@@ -10902,9 +10937,9 @@
     {
       "query": "app mobile price",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 11
+      "position": 14.3
     },
     {
       "query": "appbaker pricing",
@@ -10923,9 +10958,9 @@
     {
       "query": "approximate cost",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 34
+      "position": 42.8
     },
     {
       "query": "are cloudflare rate limiting rules available on free plan 2026",
@@ -10958,7 +10993,7 @@
     {
       "query": "attorney website cost",
       "clicks": 0,
-      "impressions": 272,
+      "impressions": 279,
       "ctr": 0,
       "position": 13.2
     },
@@ -11021,9 +11056,9 @@
     {
       "query": "average cost of a website redesign",
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 34,
       "ctr": 0,
-      "position": 62.9
+      "position": 61.9
     },
     {
       "query": "average cost of an app",
@@ -11042,9 +11077,9 @@
     {
       "query": "average cost of creating marketplace website and mobile app",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 58.8
+      "position": 57.3
     },
     {
       "query": "average cost of having a website built",
@@ -11056,9 +11091,9 @@
     {
       "query": "average cost of non profit website",
       "clicks": 0,
-      "impressions": 32,
+      "impressions": 33,
       "ctr": 0,
-      "position": 25.0
+      "position": 24.4
     },
     {
       "query": "average cost of real estate website design 2025",
@@ -11070,9 +11105,9 @@
     {
       "query": "average cost of web application development",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 96.1
+      "position": 92.3
     },
     {
       "query": "average cost of website redesign",
@@ -11091,9 +11126,9 @@
     {
       "query": "average cost to build a wordpress website",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 24,
       "ctr": 0,
-      "position": 71.8
+      "position": 70.8
     },
     {
       "query": "average cost to build website",
@@ -11112,9 +11147,9 @@
     {
       "query": "average cost to hire a web designer",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 33.3
+      "position": 33.7
     },
     {
       "query": "average freelance web developer hourly rate",
@@ -11196,9 +11231,9 @@
     {
       "query": "average price of a website",
       "clicks": 0,
-      "impressions": 72,
+      "impressions": 74,
       "ctr": 0,
-      "position": 33
+      "position": 33.3
     },
     {
       "query": "average price of webflow templates",
@@ -11238,9 +11273,9 @@
     {
       "query": "best buy chatbot development cost 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 53
+      "position": 52.7
     },
     {
       "query": "best ecommerce builder squarespace vs wix",
@@ -11273,9 +11308,9 @@
     {
       "query": "best price calculators",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 55.5
+      "position": 51.7
     },
     {
       "query": "best site for analyzing cost-per-feature in saas subscriptions?",
@@ -11416,6 +11451,13 @@
       "impressions": 3,
       "ctr": 0,
       "position": 84
+    },
+    {
+      "query": "business non profit",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
     },
     {
       "query": "calc cost",
@@ -11560,9 +11602,9 @@
     {
       "query": "charity website development cost",
       "clicks": 0,
-      "impressions": 62,
+      "impressions": 60,
       "ctr": 0,
-      "position": 29.9
+      "position": 28.1
     },
     {
       "query": "chatbot cost to build",
@@ -11637,9 +11679,9 @@
     {
       "query": "cloudflare bot management pricing 2026",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 24,
       "ctr": 0,
-      "position": 12.6
+      "position": 12.8
     },
     {
       "query": "cloudflare bot management pricing official 2026",
@@ -12617,9 +12659,9 @@
     {
       "query": "cloudflare plans pricing free pro business official 2026",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 8.5
+      "position": 8.7
     },
     {
       "query": "cloudflare plans pricing official 2026",
@@ -13796,309 +13838,295 @@
       "impressions": 5,
       "ctr": 0,
       "position": 8.2
-    },
-    {
-      "query": "cloudflare workers pricing pages pricing official 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 7
-    },
-    {
-      "query": "cloudflare workers pricing paid plan 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 5
-    },
-    {
-      "query": "cloudflare workers pricing paid plan official 2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 9
     }
   ],
   "pages_90d": [
     {
       "page": "https://projectcostestimator.com/freelance-website-cost",
       "clicks": 45,
-      "impressions": 22956,
-      "ctr": 0.2,
-      "position": 11.6
+      "impressions": 23397,
+      "ctr": 0.19,
+      "position": 11.5
     },
     {
       "page": "https://projectcostestimator.com/restaurant-website-cost",
       "clicks": 38,
-      "impressions": 4501,
-      "ctr": 0.84,
-      "position": 5.8
+      "impressions": 4592,
+      "ctr": 0.83,
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/nonprofit-website-cost",
-      "clicks": 31,
-      "impressions": 3175,
-      "ctr": 0.98,
-      "position": 9.8
+      "clicks": 33,
+      "impressions": 3207,
+      "ctr": 1.03,
+      "position": 9.6
     },
     {
       "page": "https://projectcostestimator.com/web-app-development-cost",
       "clicks": 21,
-      "impressions": 6687,
+      "impressions": 6828,
       "ctr": 0.31,
-      "position": 37.4
+      "position": 36.8
     },
     {
       "page": "https://projectcostestimator.com/website-cost-calculator",
       "clicks": 20,
-      "impressions": 5393,
+      "impressions": 5478,
       "ctr": 0.37,
-      "position": 16.2
+      "position": 16.1
     },
     {
       "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
-      "clicks": 16,
-      "impressions": 2436,
-      "ctr": 0.66,
-      "position": 18.5
+      "clicks": 17,
+      "impressions": 2478,
+      "ctr": 0.69,
+      "position": 18.3
     },
     {
       "page": "https://projectcostestimator.com/",
-      "clicks": 12,
-      "impressions": 2681,
-      "ctr": 0.45,
-      "position": 25.2
+      "clicks": 15,
+      "impressions": 2729,
+      "ctr": 0.55,
+      "position": 25.1
+    },
+    {
+      "page": "https://projectcostestimator.com/real-estate-website-cost",
+      "clicks": 10,
+      "impressions": 2030,
+      "ctr": 0.49,
+      "position": 11.6
     },
     {
       "page": "https://projectcostestimator.com/blog/website-security-cost-2026",
       "clicks": 8,
-      "impressions": 1016,
-      "ctr": 0.79,
-      "position": 21.9
+      "impressions": 1022,
+      "ctr": 0.78,
+      "position": 21.8
     },
     {
       "page": "https://projectcostestimator.com/landing-page-cost",
       "clicks": 8,
-      "impressions": 2169,
-      "ctr": 0.37,
-      "position": 24.0
-    },
-    {
-      "page": "https://projectcostestimator.com/real-estate-website-cost",
-      "clicks": 8,
-      "impressions": 2011,
-      "ctr": 0.4,
-      "position": 11.7
+      "impressions": 2214,
+      "ctr": 0.36,
+      "position": 23.7
     },
     {
       "page": "https://projectcostestimator.com/law-firm-website-cost",
-      "clicks": 7,
-      "impressions": 2313,
-      "ctr": 0.3,
-      "position": 20.7
+      "clicks": 8,
+      "impressions": 2355,
+      "ctr": 0.34,
+      "position": 20.6
     },
     {
       "page": "https://projectcostestimator.com/website-redesign-cost",
       "clicks": 7,
-      "impressions": 1486,
+      "impressions": 1500,
       "ctr": 0.47,
-      "position": 32.5
+      "position": 32.7
+    },
+    {
+      "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
+      "clicks": 6,
+      "impressions": 825,
+      "ctr": 0.73,
+      "position": 11.4
     },
     {
       "page": "https://projectcostestimator.com/ecommerce-cost-calculator",
       "clicks": 6,
-      "impressions": 1613,
-      "ctr": 0.37,
-      "position": 33.6
+      "impressions": 1653,
+      "ctr": 0.36,
+      "position": 33.9
     },
     {
       "page": "https://projectcostestimator.com/marketplace-cost-estimator",
       "clicks": 6,
-      "impressions": 844,
-      "ctr": 0.71,
-      "position": 26.2
-    },
-    {
-      "page": "https://projectcostestimator.com/blog/progressive-web-app-cost-2026",
-      "clicks": 5,
-      "impressions": 815,
-      "ctr": 0.61,
-      "position": 11.5
+      "impressions": 882,
+      "ctr": 0.68,
+      "position": 26.1
     },
     {
       "page": "https://projectcostestimator.com/website-cost",
       "clicks": 5,
-      "impressions": 3103,
+      "impressions": 3131,
       "ctr": 0.16,
-      "position": 30.1
+      "position": 30.0
     },
     {
       "page": "https://projectcostestimator.com/compare/free-estimators",
       "clicks": 4,
-      "impressions": 3812,
+      "impressions": 3918,
       "ctr": 0.1,
       "position": 10.4
     },
     {
       "page": "https://projectcostestimator.com/shopify-store-cost",
       "clicks": 4,
-      "impressions": 1434,
+      "impressions": 1440,
       "ctr": 0.28,
-      "position": 36.1
+      "position": 36.0
     },
     {
       "page": "https://projectcostestimator.com/blog/stripe-integration-cost-2026",
       "clicks": 3,
-      "impressions": 421,
-      "ctr": 0.71,
-      "position": 8.0
+      "impressions": 437,
+      "ctr": 0.69,
+      "position": 8.1
     },
     {
       "page": "https://projectcostestimator.com/calculator?type=webapp&design=custom",
       "clicks": 3,
-      "impressions": 75,
-      "ctr": 4.0,
+      "impressions": 78,
+      "ctr": 3.85,
       "position": 27.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dog-trainer",
       "clicks": 3,
-      "impressions": 32,
-      "ctr": 9.38,
-      "position": 3.3
+      "impressions": 33,
+      "ctr": 9.09,
+      "position": 3.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/hotel",
       "clicks": 3,
-      "impressions": 208,
-      "ctr": 1.44,
-      "position": 12.4
+      "impressions": 212,
+      "ctr": 1.42,
+      "position": 12.3
     },
     {
       "page": "https://projectcostestimator.com/domain-checker",
       "clicks": 3,
-      "impressions": 222,
-      "ctr": 1.35,
-      "position": 11.5
+      "impressions": 226,
+      "ctr": 1.33,
+      "position": 11.6
+    },
+    {
+      "page": "https://projectcostestimator.com/healthcare-website-cost",
+      "clicks": 3,
+      "impressions": 650,
+      "ctr": 0.46,
+      "position": 21.5
     },
     {
       "page": "https://projectcostestimator.com/mobile-app-cost",
       "clicks": 3,
-      "impressions": 1342,
+      "impressions": 1343,
       "ctr": 0.22,
-      "position": 32.6
+      "position": 32.2
     },
     {
       "page": "https://projectcostestimator.com/quote-analyzer",
       "clicks": 3,
-      "impressions": 362,
-      "ctr": 0.83,
+      "impressions": 368,
+      "ctr": 0.82,
       "position": 13.0
     },
     {
       "page": "https://projectcostestimator.com/saas-cost-estimator",
       "clicks": 3,
-      "impressions": 709,
+      "impressions": 716,
       "ctr": 0.42,
-      "position": 12.0
+      "position": 11.9
     },
     {
       "page": "https://projectcostestimator.com/woocommerce-website-cost",
       "clicks": 3,
-      "impressions": 349,
-      "ctr": 0.86,
-      "position": 21.3
+      "impressions": 366,
+      "ctr": 0.82,
+      "position": 21.4
     },
     {
       "page": "https://projectcostestimator.com/wordpress-website-cost",
       "clicks": 3,
-      "impressions": 2194,
-      "ctr": 0.14,
+      "impressions": 2239,
+      "ctr": 0.13,
       "position": 31.6
     },
     {
       "page": "https://projectcostestimator.com/api-docs",
       "clicks": 2,
-      "impressions": 424,
+      "impressions": 425,
       "ctr": 0.47,
-      "position": 21.6
+      "position": 21.5
     },
     {
       "page": "https://projectcostestimator.com/blog",
       "clicks": 2,
-      "impressions": 393,
-      "ctr": 0.51,
-      "position": 23.2
+      "impressions": 402,
+      "ctr": 0.5,
+      "position": 22.8
     },
     {
       "page": "https://projectcostestimator.com/blog/astro-website-cost-2026",
       "clicks": 2,
-      "impressions": 47,
-      "ctr": 4.26,
-      "position": 7.2
+      "impressions": 49,
+      "ctr": 4.08,
+      "position": 6.9
     },
     {
       "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
       "clicks": 2,
-      "impressions": 5272,
+      "impressions": 5310,
       "ctr": 0.04,
       "position": 8.4
     },
     {
       "page": "https://projectcostestimator.com/blog/multi-vendor-marketplace-cost-2026",
       "clicks": 2,
-      "impressions": 227,
-      "ctr": 0.88,
+      "impressions": 230,
+      "ctr": 0.87,
       "position": 11.4
     },
     {
       "page": "https://projectcostestimator.com/blog/nonprofit-website-cost-2026",
       "clicks": 2,
-      "impressions": 99,
-      "ctr": 2.02,
-      "position": 13.2
+      "impressions": 100,
+      "ctr": 2.0,
+      "position": 13.1
     },
     {
       "page": "https://projectcostestimator.com/blog/webflow-vs-framer-cost-2026",
       "clicks": 2,
-      "impressions": 485,
-      "ctr": 0.41,
-      "position": 12.3
+      "impressions": 502,
+      "ctr": 0.4,
+      "position": 12.1
     },
     {
       "page": "https://projectcostestimator.com/calculators",
       "clicks": 2,
-      "impressions": 1341,
+      "impressions": 1343,
       "ctr": 0.15,
-      "position": 15.6
+      "position": 15.8
     },
     {
       "page": "https://projectcostestimator.com/compare/wix-vs-shopify-cost",
       "clicks": 2,
-      "impressions": 192,
-      "ctr": 1.04,
-      "position": 25.6
+      "impressions": 196,
+      "ctr": 1.02,
+      "position": 25.4
     },
     {
       "page": "https://projectcostestimator.com/compare/wordpress-vs-shopify-cost",
       "clicks": 2,
-      "impressions": 362,
-      "ctr": 0.55,
+      "impressions": 374,
+      "ctr": 0.53,
       "position": 17.5
     },
     {
       "page": "https://projectcostestimator.com/cost-index",
       "clicks": 2,
-      "impressions": 102,
-      "ctr": 1.96,
-      "position": 19.5
+      "impressions": 104,
+      "ctr": 1.92,
+      "position": 19.2
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/telegram",
       "clicks": 2,
-      "impressions": 42,
-      "ctr": 4.76,
-      "position": 5.2
+      "impressions": 45,
+      "ctr": 4.44,
+      "position": 5.0
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/cleaning-service",
@@ -14108,18 +14136,11 @@
       "position": 12.8
     },
     {
-      "page": "https://projectcostestimator.com/healthcare-website-cost",
-      "clicks": 2,
-      "impressions": 643,
-      "ctr": 0.31,
-      "position": 21.8
-    },
-    {
       "page": "https://projectcostestimator.com/mvp-cost-calculator",
       "clicks": 2,
-      "impressions": 3844,
+      "impressions": 3852,
       "ctr": 0.05,
-      "position": 45.0
+      "position": 44.9
     },
     {
       "page": "https://projectcostestimator.com/blog/auto-dealership-website-cost-2026",
@@ -14131,9 +14152,9 @@
     {
       "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
       "clicks": 1,
-      "impressions": 440,
-      "ctr": 0.23,
-      "position": 35.0
+      "impressions": 456,
+      "ctr": 0.22,
+      "position": 34.0
     },
     {
       "page": "https://projectcostestimator.com/blog/law-firm-website-cost-guide-2026",
@@ -14152,23 +14173,23 @@
     {
       "page": "https://projectcostestimator.com/blog/squarespace-vs-wix-cost-2026",
       "clicks": 1,
-      "impressions": 166,
-      "ctr": 0.6,
-      "position": 22.7
+      "impressions": 175,
+      "ctr": 0.57,
+      "position": 22.0
     },
     {
       "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
       "clicks": 1,
-      "impressions": 2732,
+      "impressions": 2703,
       "ctr": 0.04,
       "position": 10.1
     },
     {
       "page": "https://projectcostestimator.com/compare/woocommerce-vs-shopify-cost",
       "clicks": 1,
-      "impressions": 625,
+      "impressions": 636,
       "ctr": 0.16,
-      "position": 63.8
+      "position": 63.1
     },
     {
       "page": "https://projectcostestimator.com/competitor-analyzer",
@@ -14229,16 +14250,16 @@
     {
       "page": "https://projectcostestimator.com/cost/hire/vietnam",
       "clicks": 1,
-      "impressions": 55,
-      "ctr": 1.82,
-      "position": 7.7
+      "impressions": 58,
+      "ctr": 1.72,
+      "position": 7.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/architect",
       "clicks": 1,
-      "impressions": 30,
-      "ctr": 3.33,
-      "position": 3.9
+      "impressions": 31,
+      "ctr": 3.23,
+      "position": 4.0
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/brewery",
@@ -14264,15 +14285,15 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/clothing-store",
       "clicks": 1,
-      "impressions": 34,
-      "ctr": 2.94,
-      "position": 6.4
+      "impressions": 35,
+      "ctr": 2.86,
+      "position": 6.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/handyman",
       "clicks": 1,
-      "impressions": 42,
-      "ctr": 2.38,
+      "impressions": 43,
+      "ctr": 2.33,
       "position": 5.8
     },
     {
@@ -14292,9 +14313,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/physical-therapist",
       "clicks": 1,
-      "impressions": 21,
-      "ctr": 4.76,
-      "position": 6.1
+      "impressions": 24,
+      "ctr": 4.17,
+      "position": 6.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/sports-medicine",
@@ -14320,14 +14341,14 @@
     {
       "page": "https://projectcostestimator.com/saas-tool-pricing",
       "clicks": 1,
-      "impressions": 219,
-      "ctr": 0.46,
-      "position": 30.6
+      "impressions": 223,
+      "ctr": 0.45,
+      "position": 30.5
     },
     {
       "page": "https://projectcostestimator.com/tools/cloudflare-cost-calculator",
       "clicks": 1,
-      "impressions": 211,
+      "impressions": 214,
       "ctr": 0.47,
       "position": 10.9
     },
@@ -14341,9 +14362,9 @@
     {
       "page": "https://projectcostestimator.com/website-migration-cost",
       "clicks": 1,
-      "impressions": 313,
-      "ctr": 0.32,
-      "position": 11.6
+      "impressions": 358,
+      "ctr": 0.28,
+      "position": 11.8
     },
     {
       "page": "https://projectcostestimator.com/about",
@@ -14362,23 +14383,23 @@
     {
       "page": "https://projectcostestimator.com/blog/ai-website-builder-cost-2026",
       "clicks": 0,
-      "impressions": 51,
+      "impressions": 50,
       "ctr": 0,
       "position": 8.4
     },
     {
       "page": "https://projectcostestimator.com/blog/airtable-cost-2026",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 10,
       "ctr": 0,
-      "position": 7.5
+      "position": 7.7
     },
     {
       "page": "https://projectcostestimator.com/blog/api-integration-cost-2026",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 10,
       "ctr": 0,
-      "position": 4.6
+      "position": 4.4
     },
     {
       "page": "https://projectcostestimator.com/blog/auto-repair-shop-website-cost-2026",
@@ -14432,9 +14453,9 @@
     {
       "page": "https://projectcostestimator.com/blog/chatbot-development-cost-2026",
       "clicks": 0,
-      "impressions": 94,
+      "impressions": 103,
       "ctr": 0,
-      "position": 7.3
+      "position": 7.6
     },
     {
       "page": "https://projectcostestimator.com/blog/chiropractor-website-cost-2026",
@@ -14446,7 +14467,7 @@
     {
       "page": "https://projectcostestimator.com/blog/church-website-cost-2026",
       "clicks": 0,
-      "impressions": 133,
+      "impressions": 139,
       "ctr": 0,
       "position": 7.8
     },
@@ -14474,28 +14495,28 @@
     {
       "page": "https://projectcostestimator.com/blog/construction-company-website-cost-2026",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 35,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/blog/content-marketing-cost-2026",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 7
+      "position": 6.9
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimate-api-2026",
       "clicks": 0,
-      "impressions": 81,
+      "impressions": 96,
       "ctr": 0,
       "position": 6.9
     },
     {
       "page": "https://projectcostestimator.com/blog/cost-estimator-tools-web-projects-2026",
       "clicks": 0,
-      "impressions": 176,
+      "impressions": 177,
       "ctr": 0,
       "position": 16.8
     },
@@ -14579,16 +14600,16 @@
     {
       "page": "https://projectcostestimator.com/blog/freelancer-vs-agency-website-cost",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 13,
       "ctr": 0,
-      "position": 40.1
+      "position": 39.5
     },
     {
       "page": "https://projectcostestimator.com/blog/gdpr-compliance-website-cost-2026",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 10,
       "ctr": 0,
-      "position": 5
+      "position": 4.4
     },
     {
       "page": "https://projectcostestimator.com/blog/ghost-cms-cost-2026",
@@ -14600,16 +14621,16 @@
     {
       "page": "https://projectcostestimator.com/blog/hair-salon-website-cost-2026",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 8.1
+      "position": 7.8
     },
     {
       "page": "https://projectcostestimator.com/blog/headless-commerce-cost-2026",
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 20,
       "ctr": 0,
-      "position": 9.2
+      "position": 9.3
     },
     {
       "page": "https://projectcostestimator.com/blog/healthcare-website-cost-guide-2026",
@@ -14642,7 +14663,7 @@
     {
       "page": "https://projectcostestimator.com/blog/how-much-does-an-app-cost-2026",
       "clicks": 0,
-      "impressions": 93,
+      "impressions": 95,
       "ctr": 0,
       "position": 6.7
     },
@@ -14677,9 +14698,9 @@
     {
       "page": "https://projectcostestimator.com/blog/idx-website-cost-2026",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 5.4
+      "position": 6.3
     },
     {
       "page": "https://projectcostestimator.com/blog/insurance-agency-website-cost-2026",
@@ -14705,16 +14726,16 @@
     {
       "page": "https://projectcostestimator.com/blog/landing-page-cost-2026",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 9,
       "ctr": 0,
-      "position": 8.1
+      "position": 8.6
     },
     {
       "page": "https://projectcostestimator.com/blog/landing-page-pricing-guide-2026",
       "clicks": 0,
-      "impressions": 184,
+      "impressions": 187,
       "ctr": 0,
-      "position": 17.2
+      "position": 17.0
     },
     {
       "page": "https://projectcostestimator.com/blog/magento-vs-shopify-cost-2026",
@@ -14740,9 +14761,9 @@
     {
       "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
       "clicks": 0,
-      "impressions": 159,
+      "impressions": 164,
       "ctr": 0,
-      "position": 25.7
+      "position": 25.4
     },
     {
       "page": "https://projectcostestimator.com/blog/member-portal-website-cost-2026",
@@ -14754,14 +14775,14 @@
     {
       "page": "https://projectcostestimator.com/blog/moving-company-website-cost-2026",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
       "position": 7.3
     },
     {
       "page": "https://projectcostestimator.com/blog/multilingual-website-cost-2026",
       "clicks": 0,
-      "impressions": 179,
+      "impressions": 189,
       "ctr": 0,
       "position": 7.9
     },
@@ -14782,9 +14803,9 @@
     {
       "page": "https://projectcostestimator.com/blog/nonprofit-fundraising-platform-cost-2026",
       "clicks": 0,
-      "impressions": 63,
+      "impressions": 67,
       "ctr": 0,
-      "position": 9.9
+      "position": 9.7
     },
     {
       "page": "https://projectcostestimator.com/blog/notion-cost-2026",
@@ -14803,16 +14824,16 @@
     {
       "page": "https://projectcostestimator.com/blog/online-course-website-cost-2026",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 17,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/blog/online-tutoring-platform-cost-2026",
       "clicks": 0,
-      "impressions": 101,
+      "impressions": 103,
       "ctr": 0,
-      "position": 11.4
+      "position": 11.3
     },
     {
       "page": "https://projectcostestimator.com/blog/personal-injury-lawyer-website-cost-2026",
@@ -14838,23 +14859,23 @@
     {
       "page": "https://projectcostestimator.com/blog/photographer-portfolio-website-cost-2026",
       "clicks": 0,
-      "impressions": 33,
+      "impressions": 34,
       "ctr": 0,
       "position": 8.2
     },
     {
       "page": "https://projectcostestimator.com/blog/plumber-website-cost-2026",
       "clicks": 0,
-      "impressions": 60,
+      "impressions": 62,
       "ctr": 0,
       "position": 10.3
     },
     {
       "page": "https://projectcostestimator.com/blog/podcast-website-cost-2026",
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 26,
       "ctr": 0,
-      "position": 7.0
+      "position": 7.1
     },
     {
       "page": "https://projectcostestimator.com/blog/portfolio-website-cost-2026",
@@ -14880,9 +14901,9 @@
     {
       "page": "https://projectcostestimator.com/blog/restaurant-website-cost-2026",
       "clicks": 0,
-      "impressions": 41,
+      "impressions": 48,
       "ctr": 0,
-      "position": 7.4
+      "position": 7.0
     },
     {
       "page": "https://projectcostestimator.com/blog/roofing-contractor-website-cost-2026",
@@ -14894,23 +14915,23 @@
     {
       "page": "https://projectcostestimator.com/blog/saas-development-cost-2026",
       "clicks": 0,
-      "impressions": 270,
+      "impressions": 274,
       "ctr": 0,
-      "position": 35.5
+      "position": 35.4
     },
     {
       "page": "https://projectcostestimator.com/blog/seo-services-cost-2026",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 18,
       "ctr": 0,
-      "position": 6
+      "position": 7.1
     },
     {
       "page": "https://projectcostestimator.com/blog/shopify-b2b-site-cost-2026",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 5,
       "ctr": 0,
-      "position": 5.8
+      "position": 6.2
     },
     {
       "page": "https://projectcostestimator.com/blog/shopify-store-cost-2026",
@@ -14929,9 +14950,9 @@
     {
       "page": "https://projectcostestimator.com/blog/shopify-vs-bigcommerce-cost-2026",
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 34,
       "ctr": 0,
-      "position": 13.1
+      "position": 12.5
     },
     {
       "page": "https://projectcostestimator.com/blog/shopify-vs-wordpress-cost-2026",
@@ -14957,16 +14978,16 @@
     {
       "page": "https://projectcostestimator.com/blog/spa-wellness-website-cost-2026",
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 6.1
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/blog/stripe-vs-paypal-fees-2026",
       "clicks": 0,
-      "impressions": 239,
+      "impressions": 246,
       "ctr": 0,
-      "position": 13.9
+      "position": 13.6
     },
     {
       "page": "https://projectcostestimator.com/blog/tattoo-studio-website-cost-2026",
@@ -14985,9 +15006,9 @@
     {
       "page": "https://projectcostestimator.com/blog/travel-agency-website-cost-2026",
       "clicks": 0,
-      "impressions": 67,
+      "impressions": 73,
       "ctr": 0,
-      "position": 7.6
+      "position": 7.5
     },
     {
       "page": "https://projectcostestimator.com/blog/veterinarian-website-cost-2026",
@@ -14999,9 +15020,9 @@
     {
       "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
       "clicks": 0,
-      "impressions": 457,
+      "impressions": 475,
       "ctr": 0,
-      "position": 14.9
+      "position": 14.8
     },
     {
       "page": "https://projectcostestimator.com/blog/web-app-development-cost-2026",
@@ -15034,23 +15055,30 @@
     {
       "page": "https://projectcostestimator.com/blog/webflow-website-cost-2026",
       "clicks": 0,
-      "impressions": 146,
+      "impressions": 148,
       "ctr": 0,
-      "position": 19.8
+      "position": 19.7
     },
     {
       "page": "https://projectcostestimator.com/blog/website-builder-comparison-2026",
       "clicks": 0,
-      "impressions": 517,
+      "impressions": 523,
       "ctr": 0,
       "position": 8.0
     },
     {
+      "page": "https://projectcostestimator.com/blog/website-cost-by-platform-and-country",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
       "page": "https://projectcostestimator.com/blog/website-cost-by-platform-and-country-2026",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 25,
       "ctr": 0,
-      "position": 6.8
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/blog/website-development-cost-by-country-2026",
@@ -15062,9 +15090,9 @@
     {
       "page": "https://projectcostestimator.com/blog/website-hosting-cost-2026",
       "clicks": 0,
-      "impressions": 51,
+      "impressions": 50,
       "ctr": 0,
-      "position": 6.5
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/blog/website-maintenance-cost-per-year-2026",
@@ -15167,9 +15195,9 @@
     {
       "page": "https://projectcostestimator.com/calculator",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 53,
       "ctr": 0,
-      "position": 22.6
+      "position": 31.3
     },
     {
       "page": "https://projectcostestimator.com/calculator?type=landing&design=premium",
@@ -15181,9 +15209,9 @@
     {
       "page": "https://projectcostestimator.com/commercial-real-estate-website-cost",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 16,
       "ctr": 0,
-      "position": 14.4
+      "position": 14.9
     },
     {
       "page": "https://projectcostestimator.com/compare",
@@ -15209,23 +15237,23 @@
     {
       "page": "https://projectcostestimator.com/compare/platforms",
       "clicks": 0,
-      "impressions": 130,
+      "impressions": 127,
       "ctr": 0,
-      "position": 54.2
+      "position": 54.6
     },
     {
       "page": "https://projectcostestimator.com/compare/squarespace-vs-shopify-cost",
       "clicks": 0,
-      "impressions": 99,
+      "impressions": 105,
       "ctr": 0,
-      "position": 13.7
+      "position": 13.1
     },
     {
       "page": "https://projectcostestimator.com/compare/webflow-vs-wordpress-cost",
       "clicks": 0,
-      "impressions": 143,
+      "impressions": 147,
       "ctr": 0,
-      "position": 29.6
+      "position": 28.5
     },
     {
       "page": "https://projectcostestimator.com/contact",
@@ -15258,9 +15286,9 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like",
       "clicks": 0,
-      "impressions": 43,
+      "impressions": 45,
       "ctr": 0,
-      "position": 16.1
+      "position": 16.0
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/airbnb",
@@ -15300,16 +15328,16 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like/cash-app",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 4.8
+      "position": 4.4
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/docusign",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 2.3
+      "position": 3.2
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/doordash",
@@ -15328,9 +15356,9 @@
     {
       "page": "https://projectcostestimator.com/cost/app-like/gojek",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 7
+      "position": 5.5
     },
     {
       "page": "https://projectcostestimator.com/cost/app-like/hubspot",
@@ -15468,9 +15496,9 @@
     {
       "page": "https://projectcostestimator.com/cost/custom/eastern-europe",
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5.8
+      "position": 5.3
     },
     {
       "page": "https://projectcostestimator.com/cost/custom/uk",
@@ -15489,9 +15517,9 @@
     {
       "page": "https://projectcostestimator.com/cost/custom/western-europe",
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 5
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/cost/hire",
@@ -15503,14 +15531,14 @@
     {
       "page": "https://projectcostestimator.com/cost/hire/bangladesh",
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 37,
       "ctr": 0,
-      "position": 6.1
+      "position": 6.0
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/bulgaria",
       "clicks": 0,
-      "impressions": 258,
+      "impressions": 262,
       "ctr": 0,
       "position": 15.8
     },
@@ -15538,23 +15566,23 @@
     {
       "page": "https://projectcostestimator.com/cost/hire/poland",
       "clicks": 0,
-      "impressions": 167,
+      "impressions": 168,
       "ctr": 0,
       "position": 22.8
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/romania",
       "clicks": 0,
-      "impressions": 74,
+      "impressions": 75,
       "ctr": 0,
       "position": 7.3
     },
     {
       "page": "https://projectcostestimator.com/cost/hire/ukraine",
       "clicks": 0,
-      "impressions": 360,
+      "impressions": 366,
       "ctr": 0,
-      "position": 16.3
+      "position": 16.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/accountant",
@@ -15629,9 +15657,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/barber",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 19,
       "ctr": 0,
-      "position": 6
+      "position": 6.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/beauty-salon",
@@ -15671,9 +15699,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/bookstore",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 3
+      "position": 3.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/boutique",
@@ -15720,9 +15748,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/catering",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 25,
       "ctr": 0,
-      "position": 8.8
+      "position": 8.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/chimney-sweep",
@@ -15741,7 +15769,7 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/coffee-shop",
       "clicks": 0,
-      "impressions": 66,
+      "impressions": 67,
       "ctr": 0,
       "position": 5.6
     },
@@ -15783,9 +15811,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/credit-repair",
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 26,
       "ctr": 0,
-      "position": 18.0
+      "position": 17.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/criminal-lawyer",
@@ -15818,9 +15846,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/daycare",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 22
+      "position": 19.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/deck-builder",
@@ -15846,16 +15874,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/dentist",
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 41,
       "ctr": 0,
-      "position": 11.5
+      "position": 11.4
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dermatologist",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 4.7
+      "position": 4.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/dietitian",
@@ -15916,9 +15944,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/event-planner",
       "clicks": 0,
-      "impressions": 46,
+      "impressions": 47,
       "ctr": 0,
-      "position": 12.9
+      "position": 12.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/farm-shop",
@@ -15972,9 +16000,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/furniture-store",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 3.8
+      "position": 4.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/garden-center",
@@ -16056,9 +16084,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/home-health-care",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 3.9
+      "position": 3.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/home-inspector",
@@ -16077,9 +16105,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/hvac",
       "clicks": 0,
-      "impressions": 36,
+      "impressions": 39,
       "ctr": 0,
-      "position": 12.6
+      "position": 12.1
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/ice-cream-shop",
@@ -16238,9 +16266,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/med-spa",
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 32,
       "ctr": 0,
-      "position": 10.7
+      "position": 10.2
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/motel",
@@ -16266,16 +16294,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/nail-salon",
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 19,
       "ctr": 0,
-      "position": 5.9
+      "position": 5.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/naturopath",
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 6.3
+      "position": 6.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/notary",
@@ -16392,9 +16420,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/pharmacy",
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 24,
       "ctr": 0,
-      "position": 7.0
+      "position": 6.8
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/photographer",
@@ -16427,9 +16455,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/plumber",
       "clicks": 0,
-      "impressions": 39,
+      "impressions": 40,
       "ctr": 0,
-      "position": 6.7
+      "position": 6.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/podiatrist",
@@ -16483,9 +16511,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/recruiter",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 6.1
+      "position": 5.6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/rehab-center",
@@ -16518,9 +16546,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/septic-service",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 5
+      "position": 3.5
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/shoe-store",
@@ -16581,9 +16609,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/summer-camp",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 9.8
+      "position": 9.3
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/swim-school",
@@ -16609,16 +16637,16 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/tax-preparer",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 3.1
+      "position": 6
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/test-prep",
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 11,
       "ctr": 0,
-      "position": 13.9
+      "position": 13.3
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/therapist",
@@ -16658,9 +16686,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/tutor",
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 7.2
+      "position": 6.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/vacation-rental",
@@ -16742,9 +16770,9 @@
     {
       "page": "https://projectcostestimator.com/cost/industry/winery",
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 9,
       "ctr": 0,
-      "position": 7.9
+      "position": 7.7
     },
     {
       "page": "https://projectcostestimator.com/cost/industry/yoga-studio",
@@ -16777,7 +16805,7 @@
     {
       "page": "https://projectcostestimator.com/cost/magento/uk",
       "clicks": 0,
-      "impressions": 77,
+      "impressions": 76,
       "ctr": 0,
       "position": 11.7
     },
@@ -16798,9 +16826,9 @@
     {
       "page": "https://projectcostestimator.com/cost/shopify/eastern-europe",
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 11,
       "ctr": 0,
-      "position": 11.3
+      "position": 11.4
     },
     {
       "page": "https://projectcostestimator.com/cost/shopify/south-asia",
@@ -16847,16 +16875,16 @@
     {
       "page": "https://projectcostestimator.com/cost/woocommerce/south-asia",
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 51
+      "position": 30
     },
     {
       "page": "https://projectcostestimator.com/cost/woocommerce/uk",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 19,
       "ctr": 0,
-      "position": 23.7
+      "position": 24.4
     },
     {
       "page": "https://projectcostestimator.com/cost/woocommerce/us",
@@ -16868,16 +16896,16 @@
     {
       "page": "https://projectcostestimator.com/cost/woocommerce/western-europe",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 6
+      "position": 5.8
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/australia",
       "clicks": 0,
-      "impressions": 49,
+      "impressions": 69,
       "ctr": 0,
-      "position": 22.7
+      "position": 25.2
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/eastern-europe",
@@ -16896,9 +16924,9 @@
     {
       "page": "https://projectcostestimator.com/cost/wordpress/uk",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 28,
       "ctr": 0,
-      "position": 9.3
+      "position": 9
     },
     {
       "page": "https://projectcostestimator.com/cost/wordpress/us",
@@ -16924,9 +16952,9 @@
     {
       "page": "https://projectcostestimator.com/expert-review",
       "clicks": 0,
-      "impressions": 56,
+      "impressions": 58,
       "ctr": 0,
-      "position": 19.8
+      "position": 19.4
     },
     {
       "page": "https://projectcostestimator.com/faq",
@@ -16945,16 +16973,16 @@
     {
       "page": "https://projectcostestimator.com/for-agencies",
       "clicks": 0,
-      "impressions": 59,
+      "impressions": 58,
       "ctr": 0,
-      "position": 34.2
+      "position": 33.3
     },
     {
       "page": "https://projectcostestimator.com/idx-website-cost",
       "clicks": 0,
-      "impressions": 93,
+      "impressions": 98,
       "ctr": 0,
-      "position": 11.0
+      "position": 10.7
     },
     {
       "page": "https://projectcostestimator.com/luxury-real-estate-website-cost",
@@ -17064,7 +17092,7 @@
     {
       "page": "https://projectcostestimator.com/tools/rfp-generator/app",
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 18,
       "ctr": 0,
       "position": 7
     },
@@ -17092,7 +17120,7 @@
     {
       "page": "https://projectcostestimator.com/website-cost-calculator/",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 28,
       "ctr": 0,
       "position": 1.4
     },
@@ -17106,9 +17134,9 @@
     {
       "page": "https://projectcostestimator.com/website-design-pricing",
       "clicks": 0,
-      "impressions": 181,
+      "impressions": 183,
       "ctr": 0,
-      "position": 38.4
+      "position": 38.0
     },
     {
       "page": "https://projectcostestimator.com/website-quote-checklist",
@@ -17121,204 +17149,225 @@
   "countries_28d": [
     {
       "country": "usa",
-      "clicks": 71,
-      "impressions": 33095,
-      "ctr": 0.21,
-      "position": 14.2
+      "clicks": 75,
+      "impressions": 33540,
+      "ctr": 0.22,
+      "position": 14.1
     },
     {
       "country": "pak",
       "clicks": 15,
-      "impressions": 617,
-      "ctr": 2.43,
-      "position": 6.8
+      "impressions": 622,
+      "ctr": 2.41,
+      "position": 6.7
     },
     {
       "country": "can",
       "clicks": 11,
-      "impressions": 1940,
+      "impressions": 1936,
       "ctr": 0.57,
-      "position": 14.7
+      "position": 14.2
     },
     {
       "country": "ind",
       "clicks": 8,
-      "impressions": 1017,
+      "impressions": 1018,
       "ctr": 0.79,
-      "position": 17.0
+      "position": 16.4
     },
     {
       "country": "aus",
       "clicks": 6,
-      "impressions": 728,
-      "ctr": 0.82,
-      "position": 19.7
+      "impressions": 758,
+      "ctr": 0.79,
+      "position": 20.0
     },
     {
       "country": "idn",
       "clicks": 5,
-      "impressions": 298,
-      "ctr": 1.68,
-      "position": 18.0
+      "impressions": 293,
+      "ctr": 1.71,
+      "position": 16.9
     },
     {
       "country": "bgd",
       "clicks": 4,
-      "impressions": 258,
-      "ctr": 1.55,
-      "position": 19.1
+      "impressions": 263,
+      "ctr": 1.52,
+      "position": 18.0
     },
     {
       "country": "irn",
       "clicks": 4,
       "impressions": 48,
       "ctr": 8.33,
-      "position": 6.4
+      "position": 6.6
+    },
+    {
+      "country": "nga",
+      "clicks": 4,
+      "impressions": 254,
+      "ctr": 1.57,
+      "position": 6.7
     },
     {
       "country": "ukr",
       "clicks": 4,
-      "impressions": 136,
-      "ctr": 2.94,
-      "position": 11.4
-    },
-    {
-      "country": "egy",
-      "clicks": 3,
-      "impressions": 183,
-      "ctr": 1.64,
-      "position": 4.9
-    },
-    {
-      "country": "nga",
-      "clicks": 3,
-      "impressions": 251,
-      "ctr": 1.2,
-      "position": 6.7
+      "impressions": 146,
+      "ctr": 2.74,
+      "position": 11.0
     },
     {
       "country": "npl",
       "clicks": 3,
-      "impressions": 50,
-      "ctr": 6.0,
-      "position": 5.8
+      "impressions": 52,
+      "ctr": 5.77,
+      "position": 5.7
+    },
+    {
+      "country": "per",
+      "clicks": 3,
+      "impressions": 87,
+      "ctr": 3.45,
+      "position": 5.7
+    },
+    {
+      "country": "egy",
+      "clicks": 2,
+      "impressions": 181,
+      "ctr": 1.1,
+      "position": 4.9
     },
     {
       "country": "esp",
       "clicks": 2,
       "impressions": 185,
       "ctr": 1.08,
-      "position": 9.4
+      "position": 9.3
     },
     {
       "country": "mex",
       "clicks": 2,
-      "impressions": 233,
-      "ctr": 0.86,
-      "position": 17.3
+      "impressions": 236,
+      "ctr": 0.85,
+      "position": 16.3
     },
     {
-      "country": "per",
+      "country": "phl",
       "clicks": 2,
-      "impressions": 85,
-      "ctr": 2.35,
-      "position": 5.8
+      "impressions": 475,
+      "ctr": 0.42,
+      "position": 19.7
     },
     {
       "country": "pri",
       "clicks": 2,
-      "impressions": 15,
-      "ctr": 13.33,
+      "impressions": 14,
+      "ctr": 14.29,
       "position": 5.5
+    },
+    {
+      "country": "rou",
+      "clicks": 2,
+      "impressions": 81,
+      "ctr": 2.47,
+      "position": 7.5
     },
     {
       "country": "rus",
       "clicks": 2,
-      "impressions": 230,
-      "ctr": 0.87,
-      "position": 9.0
+      "impressions": 225,
+      "ctr": 0.89,
+      "position": 8.2
     },
     {
       "country": "tur",
       "clicks": 2,
-      "impressions": 200,
-      "ctr": 1.0,
-      "position": 27.8
+      "impressions": 199,
+      "ctr": 1.01,
+      "position": 24.7
     },
     {
       "country": "aze",
       "clicks": 1,
-      "impressions": 63,
-      "ctr": 1.59,
+      "impressions": 64,
+      "ctr": 1.56,
       "position": 4.7
     },
     {
       "country": "chn",
       "clicks": 1,
-      "impressions": 97,
-      "ctr": 1.03,
+      "impressions": 102,
+      "ctr": 0.98,
       "position": 6.8
     },
     {
       "country": "deu",
       "clicks": 1,
-      "impressions": 629,
+      "impressions": 627,
       "ctr": 0.16,
       "position": 7.1
     },
     {
       "country": "dza",
       "clicks": 1,
-      "impressions": 62,
-      "ctr": 1.61,
-      "position": 22.2
+      "impressions": 63,
+      "ctr": 1.59,
+      "position": 19.5
     },
     {
       "country": "gbr",
       "clicks": 1,
-      "impressions": 1927,
+      "impressions": 1958,
       "ctr": 0.05,
-      "position": 24.6
+      "position": 23.9
     },
     {
       "country": "geo",
       "clicks": 1,
-      "impressions": 21,
-      "ctr": 4.76,
-      "position": 5.5
+      "impressions": 22,
+      "ctr": 4.55,
+      "position": 5.7
     },
     {
       "country": "isr",
       "clicks": 1,
-      "impressions": 90,
-      "ctr": 1.11,
-      "position": 13.2
+      "impressions": 94,
+      "ctr": 1.06,
+      "position": 12.3
     },
     {
       "country": "jor",
       "clicks": 1,
-      "impressions": 34,
-      "ctr": 2.94,
-      "position": 25.9
+      "impressions": 33,
+      "ctr": 3.03,
+      "position": 24.6
     },
     {
       "country": "jpn",
       "clicks": 1,
-      "impressions": 187,
-      "ctr": 0.53,
+      "impressions": 185,
+      "ctr": 0.54,
       "position": 7.4
     },
     {
       "country": "kor",
       "clicks": 1,
-      "impressions": 116,
-      "ctr": 0.86,
-      "position": 7.1
+      "impressions": 120,
+      "ctr": 0.83,
+      "position": 7.0
+    },
+    {
+      "country": "lbr",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": 50.0,
+      "position": 1.5
     },
     {
       "country": "nld",
       "clicks": 1,
-      "impressions": 544,
+      "impressions": 550,
       "ctr": 0.18,
       "position": 7.3
     },
@@ -17330,53 +17379,46 @@
       "position": 5.1
     },
     {
-      "country": "phl",
-      "clicks": 1,
-      "impressions": 478,
-      "ctr": 0.21,
-      "position": 21.5
-    },
-    {
       "country": "prt",
       "clicks": 1,
-      "impressions": 67,
-      "ctr": 1.49,
-      "position": 12.3
-    },
-    {
-      "country": "rou",
-      "clicks": 1,
-      "impressions": 80,
-      "ctr": 1.25,
-      "position": 7.6
+      "impressions": 66,
+      "ctr": 1.52,
+      "position": 13.0
     },
     {
       "country": "sgp",
       "clicks": 1,
-      "impressions": 125,
-      "ctr": 0.8,
-      "position": 10.1
+      "impressions": 124,
+      "ctr": 0.81,
+      "position": 10.2
     },
     {
       "country": "swe",
       "clicks": 1,
       "impressions": 104,
       "ctr": 0.96,
-      "position": 15.8
+      "position": 15.4
     },
     {
       "country": "syr",
       "clicks": 1,
-      "impressions": 18,
-      "ctr": 5.56,
-      "position": 4.5
+      "impressions": 21,
+      "ctr": 4.76,
+      "position": 4.6
     },
     {
       "country": "tha",
       "clicks": 1,
-      "impressions": 107,
-      "ctr": 0.93,
-      "position": 20.3
+      "impressions": 110,
+      "ctr": 0.91,
+      "position": 19.6
+    },
+    {
+      "country": "tjk",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 20.0,
+      "position": 6
     },
     {
       "country": "tto",
@@ -17388,16 +17430,16 @@
     {
       "country": "uzb",
       "clicks": 1,
-      "impressions": 24,
-      "ctr": 4.17,
-      "position": 6.0
+      "impressions": 25,
+      "ctr": 4.0,
+      "position": 5.8
     },
     {
       "country": "zaf",
       "clicks": 1,
       "impressions": 107,
       "ctr": 0.93,
-      "position": 6.6
+      "position": 6.5
     },
     {
       "country": "afg",
@@ -17416,21 +17458,28 @@
     {
       "country": "alb",
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 21,
       "ctr": 0,
       "position": 6.0
     },
     {
+      "country": "and",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
       "country": "are",
       "clicks": 0,
-      "impressions": 659,
+      "impressions": 626,
       "ctr": 0,
       "position": 6.9
     },
     {
       "country": "arg",
       "clicks": 0,
-      "impressions": 178,
+      "impressions": 185,
       "ctr": 0,
       "position": 7.0
     },
@@ -17447,61 +17496,33 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
-    },
-    {
-      "country": "atg",
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 3
-    },
-    {
-      "country": "aut",
-      "clicks": 0,
-      "impressions": 41,
-      "ctr": 0,
-      "position": 8.3
-    },
-    {
-      "country": "bel",
-      "clicks": 0,
-      "impressions": 56,
-      "ctr": 0,
-      "position": 5.2
     }
   ],
   "devices_28d": [
     {
       "device": "DESKTOP",
-      "clicks": 118,
-      "impressions": 39045,
-      "ctr": 0.3,
-      "position": 14.6
+      "clicks": 124,
+      "impressions": 39600,
+      "ctr": 0.31,
+      "position": 14.3
     },
     {
       "device": "MOBILE",
-      "clicks": 53,
-      "impressions": 10295,
-      "ctr": 0.51,
+      "clicks": 56,
+      "impressions": 10334,
+      "ctr": 0.54,
       "position": 11.4
     },
     {
       "device": "TABLET",
       "clicks": 0,
-      "impressions": 86,
+      "impressions": 87,
       "ctr": 0,
       "position": 11.5
     }
   ],
   "search_appearance_28d": [],
   "daily_28d": [
-    {
-      "date": "2026-08-20",
-      "clicks": 2,
-      "impressions": 1405,
-      "ctr": 0.14,
-      "position": 20.3
-    },
     {
       "date": "2026-08-21",
       "clicks": 5,
@@ -17683,16 +17704,23 @@
       "impressions": 2030,
       "ctr": 0.59,
       "position": 12.0
+    },
+    {
+      "date": "2026-09-16",
+      "clicks": 11,
+      "impressions": 2000,
+      "ctr": 0.55,
+      "position": 13.1
     }
   ],
   "sitemaps": [
     {
       "path": "https://projectcostestimator.com/sitemap-cost.xml",
-      "lastSubmitted": "2026-09-18T04:35:31.512Z",
+      "lastSubmitted": "2026-09-18T16:35:33.104Z",
       "isPending": false,
       "isSitemapsIndex": false,
       "type": "sitemap",
-      "lastDownloaded": "2026-09-18T04:35:32.714Z",
+      "lastDownloaded": "2026-09-18T16:35:34.388Z",
       "warnings": "0",
       "errors": "0",
       "contents": [
@@ -17705,10 +17733,10 @@
     },
     {
       "path": "https://projectcostestimator.com/sitemap.xml",
-      "lastSubmitted": "2026-09-18T04:35:31.247Z",
+      "lastSubmitted": "2026-09-18T16:35:32.819Z",
       "isPending": false,
       "isSitemapsIndex": true,
-      "lastDownloaded": "2026-09-18T04:35:32.851Z",
+      "lastDownloaded": "2026-09-18T16:35:33.616Z",
       "warnings": "0",
       "errors": "0",
       "contents": [
