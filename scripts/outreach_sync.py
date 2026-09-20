@@ -63,6 +63,23 @@ if os.path.exists(sent_log):
         elif e.get('error') and p['status'] in ('found', 'sent'):
             p['status'] = 'bounced'; p['notes'] = (p['notes'] + ' send error: ' + str(e['error'])[:120]).strip()
 
+# 2b. delivery state from Resend (delivered / bounced / complained) for every send id
+try:
+    RKEY = re.search(r'^RESEND_API_KEY="?([^"
+]+)"?', env, re.M).group(1)
+    for p in prospects.values():
+        if not p.get('resend_id'): continue
+        try:
+            r = urllib.request.Request('https://api.resend.com/emails/' + p['resend_id'], headers={'Authorization': 'Bearer ' + RKEY, 'User-Agent': 'pce-outreach-sync/1.0'})
+            ev = json.load(urllib.request.urlopen(r, timeout=20)).get('last_event')
+        except Exception:
+            continue
+        p['delivery'] = ev
+        if ev in ('bounced', 'complained') and p['status'] in ('found', 'sent', 'clicked'):
+            p['status'] = 'bounced'
+except Exception as e:
+    print('resend events: skipped —', str(e)[:120])
+
 # 3. replies (Thunderbird, read-only)
 PROF = os.path.join(os.environ['APPDATA'], 'Thunderbird', 'Profiles', '3vcu35zk.default-release')
 by_domain = {p['domain']: p for p in prospects.values() if p['domain']}
