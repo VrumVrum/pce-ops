@@ -1,6 +1,6 @@
 # Outreach kit — agencies and freelancers, 2026-09-20
 
-**Owner sends. Nothing here is sent by the system** (the site never writes as Florin; every message goes from your own mailbox or the agency's contact form).
+**Sending, as authorised by the owner on 2026-09-20 ("poți singur prin Thunderbird să trimiți"):** `scripts/outreach_send.py` sends from hello@projectcostestimator.com through Resend, the same identity Thunderbird uses (hello@ has no mailbox of its own). Every send is logged in `outreach-sent-2026-09-20.jsonl` with the Resend id, address and full body; the CSV row gets `sent`. Replies come back to hello@ → Gmail → the Thunderbird "Project Cost Estimator" local Inbox. The 7 agencies without a public address (contact form only) stay for the owner.
 
 ## The list
 
