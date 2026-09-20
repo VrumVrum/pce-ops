@@ -19,6 +19,8 @@ D = 'C:/Users/Flo/Downloads/pce-ops/data/'
 SD = D + 'discover/'; os.makedirs(SD, exist_ok=True)
 MASTER = D + 'outreach-discovered.csv'          # the merged list (python outreach_discover.py merge)
 SRC = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith('-') else 'merge'
+if '--market' in sys.argv and sys.argv[sys.argv.index('--market') + 1] != 'all':
+    SRC += '-' + sys.argv[sys.argv.index('--market') + 1]      # a single-market run keeps its own files too (runs beside the "all" run)
 STORE_P = SD + f'{SRC}.csv'                     # each source keeps its own file, so sources run in parallel
 FIELDS = ['domain', 'name', 'website', 'city', 'country', 'market', 'sources', 'tags', 'blurb', 'size', 'rate', 'found_at']
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36 pce-outreach-discovery (+https://projectcostestimator.com/for-agencies)',
