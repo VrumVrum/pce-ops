@@ -14,6 +14,8 @@ import csv, io, json, re, sys, time, datetime, urllib.request, urllib.error
 sys.stdout.reconfigure(encoding='utf-8')
 D = 'C:/Users/Flo/Downloads/pce-ops/data/'
 CSV = D + 'outreach-agencies-2026-09-20.csv'
+if '--csv' in sys.argv:
+    CSV = sys.argv[sys.argv.index('--csv') + 1]
 LOG = D + 'outreach-sent-2026-09-20.jsonl'
 TEST_TO = 'florin.florea84@yahoo.com'
 FROM = 'Florin Florea (Project Cost Estimator) <hello@projectcostestimator.com>'  # no comma: a bare comma splits the display name into two addresses in some MTAs
@@ -66,9 +68,19 @@ SPECIFIC = {
     'Austin Web Design': 'your affordable website design for small and home-based businesses in Austin since 2001',
 }
 FIRST_NAME = {'Visible': 'Frank', 'Chris Flynn Design': 'Chris', 'Sweans': 'Ajay'}
+# Extra lists carry their specific lines in data/outreach-specific-*.json ({name: {line, first_name?}}).
+import glob as _glob
+for _f in _glob.glob(D + 'outreach-specific-*.json'):
+    for _n, _v in json.load(open(_f, encoding='utf-8')).items():
+        SPECIFIC[_n] = _v['line'] if isinstance(_v, dict) else _v
+        if isinstance(_v, dict) and _v.get('first_name'): FIRST_NAME[_n] = _v['first_name']
+
+def slug_of(name):
+    return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', name.lower())).strip('-')[:40]
 
 def compose(row):
     name = row['name']
+    slug = slug_of(name)
     market = MARKET.get(row['market'].split(',')[0], row['market'])
     platform = PLATFORM.get(row['platforms'].split(',')[0], row['platforms'].split(',')[0])
     specific = SPECIFIC.get(name)
@@ -82,7 +94,7 @@ I run projectcostestimator.com, an independent website cost calculator (we don't
 
 I'm listing a small number of {platform} agencies that serve {market}, and {name} fits: {specific}.
 
-The listing is free, no commission, no contract; requests are routed to listed agencies at no charge right now. If it's useful, the form takes two minutes: https://projectcostestimator.com/for-agencies
+The listing is free, no commission, no contract; requests are routed to listed agencies at no charge right now. If it's useful, the form takes two minutes: https://projectcostestimator.com/for-agencies?ref=out-{slug}
 
 If it's not for you, reply "no" and I won't write again.
 
