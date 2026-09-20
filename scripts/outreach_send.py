@@ -23,7 +23,7 @@ REPLY_TO = 'hello@projectcostestimator.com'
 env = open('C:/Users/Flo/Downloads/scopebit/.env.vercel', encoding='utf-8').read()
 KEY = re.search(r'^RESEND_API_KEY="?([^"\r\n]+)"?', env, re.M).group(1)
 
-MARKET = {'eastern_europe': 'Eastern Europe', 'uk': 'the UK and Ireland', 'western_europe': 'Western Europe', 'us': 'the US'}
+MARKET = {'eastern_europe': 'Eastern Europe', 'uk': 'the UK and Ireland', 'western_europe': 'Western Europe', 'us': 'the US', 'australia': 'Australia', 'south_asia': 'South and Southeast Asia'}
 PLATFORM = {'shopify': 'Shopify', 'shopify_plus': 'Shopify Plus', 'wordpress': 'WordPress', 'woocommerce': 'WooCommerce', 'webflow': 'Webflow', 'magento2': 'Magento', 'custom': 'custom-build'}
 
 # One true line per agency, from their own site (harvested 2026-09-20). Never a number we do not have.
