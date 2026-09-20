@@ -41,7 +41,7 @@ def emails_in(h, site_host):
     found += [m.group(0).lower() for m in EMAIL_RE.finditer(html.unescape(re.sub(r'<[^>]+>', ' ', h)))]
     out = []
     for e in found:
-        if any(s in e for s in SKIP) or e in out or len(e) > 60: continue
+        if '@' not in e or any(s in e for s in SKIP) or e in out or len(e) > 60: continue
         out.append(e)
     root = site_host.split('.', 1)[-1] if site_host.count('.') >= 2 and site_host.split('.')[-2] in ('com', 'co', 'net', 'org') else site_host
     own = [e for e in out if e.split('@')[1].replace('www.', '') in (site_host, root)] if site_host else []
