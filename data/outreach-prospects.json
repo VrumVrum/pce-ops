@@ -1,8 +1,9 @@
 {
- "generated": "2026-09-20T18:38:44.771071+00:00",
+ "generated": "2026-09-20T18:40:00.373690+00:00",
  "counts": {
-  "sent": 38,
-  "found": 106
+  "sent": 36,
+  "found": 106,
+  "bounced": 2
  },
  "total": 144,
  "prospects": [
@@ -29,7 +30,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-ajmer",
@@ -54,7 +56,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-austin-web-design",
@@ -79,7 +82,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-blocks-colors",
@@ -104,7 +108,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-brand-active",
@@ -129,7 +134,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-brandability",
@@ -154,7 +160,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-brandweb",
@@ -179,7 +186,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-broker-media",
@@ -204,32 +212,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
-  },
-  {
-   "ref": "out-charle",
-   "name": "Charle",
-   "website": "https://www.charle.co.uk/",
-   "domain": "charle.co.uk",
-   "contact": "https://www.charle.co.uk/contact/",
-   "email": "hello@charle.co.uk",
-   "tagline": "Leading Shopify Partner & Ecommerce Web Design Agency creating visually engaging ecommerce websites built with cutting-edge technology. We help brands sell more online.",
-   "city": "Manchester",
-   "market": "uk",
-   "platforms": "shopify",
-   "niche": "",
-   "site_status": "200",
-   "list": "outreach-agencies-2026-09-20.csv",
-   "status": "sent",
-   "sent_at": "2026-09-20 17:54:09Z",
-   "resend_id": "01a0bff4-3edb-707f-9f34-7036cef4a8f9",
-   "clicks": 0,
-   "first_click": null,
-   "reply_at": null,
-   "reply_from": null,
-   "reply_excerpt": null,
-   "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-chris-flynn-design",
@@ -254,7 +238,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-create8",
@@ -279,7 +264,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-eclipso-studio",
@@ -304,7 +290,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-flex-commerce",
@@ -329,7 +316,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-flowtrix",
@@ -354,7 +342,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-grapefruit",
@@ -379,7 +368,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-hallwil",
@@ -404,7 +394,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-jcd-pl",
@@ -429,7 +420,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-madebyshape",
@@ -454,32 +446,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
-  },
-  {
-   "ref": "out-mooshfy",
-   "name": "Mooshfy",
-   "website": "https://mooshfy.com/",
-   "domain": "mooshfy.com",
-   "contact": "https://mooshfy.com/contact/",
-   "email": "hello@mooshfy.com",
-   "tagline": "Mooshfy designs, builds, and grows high-converting Shopify stores for ecommerce brands in 60+ countries — built to convert and rank on Google.",
-   "city": "Lisbon",
-   "market": "western_europe",
-   "platforms": "shopify",
-   "niche": "",
-   "site_status": "200",
-   "list": "outreach-agencies-2026-09-20.csv",
-   "status": "sent",
-   "sent_at": "2026-09-20 18:30:15Z",
-   "resend_id": "01a0c015-4b28-7109-80e8-3f12c7d8984d",
-   "clicks": 0,
-   "first_click": null,
-   "reply_at": null,
-   "reply_from": null,
-   "reply_excerpt": null,
-   "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-nineline-digital",
@@ -504,7 +472,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-osom-studio",
@@ -529,7 +498,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-pixel-kicks",
@@ -554,7 +524,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-pp-design-studio",
@@ -579,7 +550,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-prowp",
@@ -604,7 +576,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-shopcommerce",
@@ -629,7 +602,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-softsite",
@@ -654,7 +628,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-stepholt",
@@ -679,7 +654,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-sweans",
@@ -704,7 +680,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-the-new-look",
@@ -729,7 +706,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-the-weather",
@@ -754,7 +732,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-upqode",
@@ -779,7 +758,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-visible",
@@ -804,7 +784,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-weblogic",
@@ -829,7 +810,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-webpanda",
@@ -854,7 +836,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-wedigify",
@@ -879,7 +862,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-wezz-e-commerce",
@@ -904,7 +888,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-wolfpack-digital",
@@ -929,7 +914,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-zdobywcy-sieci",
@@ -954,7 +940,8 @@
    "reply_from": null,
    "reply_excerpt": null,
    "listed_at": null,
-   "notes": ""
+   "notes": "",
+   "delivery": "delivered"
   },
   {
    "ref": "out-23-digital",
@@ -3605,6 +3592,58 @@
    "reply_excerpt": null,
    "listed_at": null,
    "notes": ""
+  },
+  {
+   "ref": "out-charle",
+   "name": "Charle",
+   "website": "https://www.charle.co.uk/",
+   "domain": "charle.co.uk",
+   "contact": "https://www.charle.co.uk/contact/",
+   "email": "hello@charle.co.uk",
+   "tagline": "Leading Shopify Partner & Ecommerce Web Design Agency creating visually engaging ecommerce websites built with cutting-edge technology. We help brands sell more online.",
+   "city": "Manchester",
+   "market": "uk",
+   "platforms": "shopify",
+   "niche": "",
+   "site_status": "200",
+   "list": "outreach-agencies-2026-09-20.csv",
+   "status": "bounced",
+   "sent_at": "2026-09-20 17:54:09Z",
+   "resend_id": "01a0bff4-3edb-707f-9f34-7036cef4a8f9",
+   "clicks": 0,
+   "first_click": null,
+   "reply_at": null,
+   "reply_from": null,
+   "reply_excerpt": null,
+   "listed_at": null,
+   "notes": "",
+   "delivery": "bounced"
+  },
+  {
+   "ref": "out-mooshfy",
+   "name": "Mooshfy",
+   "website": "https://mooshfy.com/",
+   "domain": "mooshfy.com",
+   "contact": "https://mooshfy.com/contact/",
+   "email": "hello@mooshfy.com",
+   "tagline": "Mooshfy designs, builds, and grows high-converting Shopify stores for ecommerce brands in 60+ countries — built to convert and rank on Google.",
+   "city": "Lisbon",
+   "market": "western_europe",
+   "platforms": "shopify",
+   "niche": "",
+   "site_status": "200",
+   "list": "outreach-agencies-2026-09-20.csv",
+   "status": "bounced",
+   "sent_at": "2026-09-20 18:30:15Z",
+   "resend_id": "01a0c015-4b28-7109-80e8-3f12c7d8984d",
+   "clicks": 0,
+   "first_click": null,
+   "reply_at": null,
+   "reply_from": null,
+   "reply_excerpt": null,
+   "listed_at": null,
+   "notes": "",
+   "delivery": "bounced"
   }
  ]
 }

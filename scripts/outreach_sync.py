@@ -65,8 +65,7 @@ if os.path.exists(sent_log):
 
 # 2b. delivery state from Resend (delivered / bounced / complained) for every send id
 try:
-    RKEY = re.search(r'^RESEND_API_KEY="?([^"
-]+)"?', env, re.M).group(1)
+    RKEY = re.search(r'^RESEND_API_KEY="?([^"' + chr(13) + chr(10) + ']+)"?', env, re.M).group(1).strip()
     for p in prospects.values():
         if not p.get('resend_id'): continue
         try:
