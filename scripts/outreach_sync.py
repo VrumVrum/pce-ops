@@ -128,9 +128,16 @@ except Exception as e:
     print('providers: skipped —', str(e)[:120])
 
 # 6. manual overrides from the admin page
+overrides = {}
+try:
+    overrides = json.loads(sb('GET', '/storage/v1/object/ops/outreach/overrides.json', raw=True)) or {}
+except Exception:
+    overrides = {}
 ov_path = D + 'outreach-status.json'
 if os.path.exists(ov_path):
-    for ref, ov in json.load(open(ov_path, encoding='utf-8')).items():
+    overrides.update(json.load(open(ov_path, encoding='utf-8')))
+if overrides:
+    for ref, ov in overrides.items():
         if ref in prospects:
             if ov.get('status'): prospects[ref]['status'] = ov['status']
             if ov.get('notes') is not None: prospects[ref]['notes'] = ov['notes']
