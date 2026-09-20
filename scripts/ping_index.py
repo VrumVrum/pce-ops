@@ -87,6 +87,7 @@ def google_index(tok, urls):
     print(f'[Google Indexing API] notified {ok}/{len(urls)} URLs')
 
 
+    return ok
 def indexnow(urls):
     body = {'host': HOST, 'key': INDEXNOW_KEY,
             'keyLocation': f'https://{HOST}/{INDEXNOW_KEY}.txt', 'urlList': urls}
@@ -119,5 +120,19 @@ if __name__ == '__main__':
     tok = token()
     indexnow(all_urls)          # FULL set -> Bing/Yandex (= ChatGPT's index), one batch
     resubmit_sitemaps(tok)      # tells Google to recrawl the whole set
-    google_index(tok, urls)     # per-URL nudge, filtered list only (quota ~200/day)
+    # Priority queue first: URLs a session asked to be re-notified (one per line
+    # in data/reindex-queue.txt); the ones that go through are removed from it.
+    q_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'reindex-queue.txt')
+    queued = []
+    if os.path.exists(q_path):
+        queued = [l.strip() for l in open(q_path, encoding='utf-8') if l.strip().startswith('http')]
+    if queued:
+        print(f'[queue] {len(queued)} URLs from reindex-queue.txt first')
+        urls = queued + [u for u in urls if u not in queued]
+    sent = google_index(tok, urls)     # per-URL nudge, queue first, then the filtered list (quota ~200/day)
+    if queued and isinstance(sent, int) and sent >= len(queued):
+        open(q_path, 'w', encoding='utf-8').write('')
+        print('[queue] cleared')
+    elif queued:
+        print('[queue] kept for the next run (quota or errors)')
     print('Done.')
