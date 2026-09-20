@@ -43,20 +43,23 @@ for f in sorted(glob.glob(D + 'outreach-agencies-*.csv')):
                                        'contact': r.get('contact', ''), 'email': r.get('email', ''), 'tagline': r.get('tagline', ''),
                                        'city': r.get('city', ''), 'market': r.get('market', ''), 'platforms': r.get('platforms', ''),
                                        'niche': r.get('niche', ''), 'site_status': r.get('status', ''), 'list': os.path.basename(f),
-                                       'status': 'found', 'sent_at': None, 'resend_id': None, 'clicks': 0, 'first_click': None,
+                                       'score': int(r.get('score') or 0), 'sources': r.get('sources', ''), 'signals': r.get('signals', ''),
+                                       'status': 'found', 'sent_at': None, 'resend_id': None, 'clicks': 0, 'first_click': None, 'followup_at': None,
                                        'reply_at': None, 'reply_from': None, 'reply_excerpt': None, 'listed_at': None, 'notes': ''})
         if r.get('sent'): p['status'] = 'sent'; p['sent_at'] = r['sent']
 
-# 2. send log
-sent_log = D + 'outreach-sent-2026-09-20.jsonl'
-if os.path.exists(sent_log):
+# 2. send logs (one file per day; `ref` is in every entry since 21 Sep, older ones derive it from the name)
+for sent_log in sorted(glob.glob(D + 'outreach-sent-*.jsonl')):
     for line in open(sent_log, encoding='utf-8'):
         try: e = json.loads(line)
         except Exception: continue
-        if e.get('mode') != 'send': continue
-        ref = 'out-' + re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', e['agency'].lower())).strip('-')[:40]
+        if e.get('mode') not in ('send', 'daily', 'followup'): continue
+        ref = e.get('ref') or ('out-' + re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', e['agency'].lower())).strip('-')[:40])
         p = prospects.get(ref)
         if not p: continue
+        if e.get('mode') == 'followup':
+            if e.get('resend'): p['followup_at'] = e['ts'][:19].replace('T', ' ') + 'Z'
+            continue
         if e.get('resend'):
             p['resend_id'] = e['resend'].get('id'); p['sent_at'] = e['ts'][:19].replace('T', ' ') + 'Z'
             if p['status'] == 'found': p['status'] = 'sent'
@@ -159,7 +162,7 @@ if overrides:
             if ov.get('notes') is not None: prospects[ref]['notes'] = ov['notes']
 
 ORDER = {'listed': 0, 'replied': 1, 'clicked': 2, 'sent': 3, 'found': 4, 'declined': 5, 'bounced': 6}
-rows = sorted(prospects.values(), key=lambda p: (ORDER.get(p['status'], 9), -(p['clicks'] or 0), p['name'].lower()))
+rows = sorted(prospects.values(), key=lambda p: (ORDER.get(p['status'], 9), -(p['clicks'] or 0), -(p.get('score') or 0), p['name'].lower()))
 counts = {}
 for p in rows: counts[p['status']] = counts.get(p['status'], 0) + 1
 doc = {'generated': NOW.isoformat(), 'counts': counts, 'total': len(rows), 'prospects': rows}
