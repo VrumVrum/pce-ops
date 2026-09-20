@@ -185,10 +185,22 @@ def board():
     try: return {p['ref']: p for p in json.load(open(D + 'outreach-prospects.json', encoding='utf-8'))['prospects']}
     except Exception: return {}
 
-def write_csv(path, rows, fields):
+def mark(path, row, col, value):
+    """Read-modify-write one row (matched by ref, else email): the verifier may be adding rows
+    to the same file while we send, so never write back the list we loaded at start."""
+    import os
+    fresh = list(csv.DictReader(open(path, encoding='utf-8', newline='')))
+    fields = list(fresh[0].keys()) if fresh else list(row.keys())
+    for r in fresh:
+        if (row.get('ref') and r.get('ref') == row['ref']) or (r.get('email') and r['email'].lower() == row['email'].lower()):
+            r[col] = value
     with io.open(path + '.tmp', 'w', encoding='utf-8', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore'); w.writeheader(); w.writerows(rows)
-    import os; os.replace(path + '.tmp', path)
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore'); w.writeheader(); w.writerows(fresh)
+    for attempt in range(6):
+        try: os.replace(path + '.tmp', path); break
+        except PermissionError:
+            if attempt == 5: raise
+            time.sleep(2)
 
 def us_blocked(market_key):
     return market_key == 'us' and not CFG.get('postal_address', '').strip()
@@ -213,10 +225,9 @@ def deliver(rows, path, fields, pick, mode, tag, limit, gap, composer=compose):
             log({'ts': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'mode': mode, 'to': row['email'], 'agency': row['name'], 'ref': row.get('ref'), 'error': err})
             if e.code == 429: print('rate limited by Resend, stopping for today'); break
             continue
-        if mode == 'followup': row['reply'] = (row.get('reply') or '') + f' followup:{TODAY}'
-        else: row['sent'] = TODAY
+        if mode == 'followup': row['reply'] = ((row.get('reply') or '') + f' followup:{TODAY}').strip(); mark(path, row, 'reply', row['reply'])
+        else: row['sent'] = TODAY; mark(path, row, 'sent', TODAY)
         log({'ts': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'mode': mode, 'to': row['email'], 'agency': row['name'], 'ref': row.get('ref'), 'market': row['market'], 'subject': subject, 'body': body, 'resend': res})
-        write_csv(path, rows, fields)
         n += 1
         print(f'{mode} {n}: {row["name"]} <{row["email"]}> ref={row.get("ref")} id={res.get("id")}')
         if n >= limit: break
