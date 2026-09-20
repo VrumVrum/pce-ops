@@ -36,8 +36,8 @@ REPLY_TO = 'hello@projectcostestimator.com'
 env = open('C:/Users/Flo/Downloads/scopebit/.env.vercel', encoding='utf-8').read()
 KEY = re.search(r'^RESEND_API_KEY="?([^"' + chr(13) + chr(10) + r']+)"?', env, re.M).group(1).strip()
 CFG = {'postal_address': '', 'daily_cap': {'us': 25, 'australia': 25}, 'min_score': 60, 'followup_after_days': 6}
-try: CFG.update(json.load(open(D + 'outreach-config.json', encoding='utf-8')))
-except Exception: pass
+try: CFG.update(json.load(open(D + 'outreach-config.json', encoding='utf-8-sig')))     # -sig: PowerShell writes a BOM
+except Exception as _e: print('outreach-config.json not read:', _e)
 TODAY = datetime.date.today().isoformat()
 LOG = D + f'outreach-sent-{TODAY}.jsonl'
 
@@ -124,15 +124,20 @@ def compose(row):
     if not specific:
         return None
     greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else f"Hi {name} team,"
-    subject = f"Quote requests with a budget attached — free listing for {name}"
+    # Since 21 Sep the product in the first message is Embed Pro (value on day one, whatever our
+    # traffic does); the listing is the free part. Every claim below is what the licence does today
+    # (src/app/embed/EmbedProOffer.tsx): own CTA target, own brand line, own colours, no credit, stats.
+    subject = f"A website cost calculator on {name}'s site, and a free agency listing"
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
     body = f"""{greet}
 
-I run projectcostestimator.com, an independent website cost calculator (we don't build sites). People price their project on it, then ask for quotes: the request comes with the type, platform, market, size, budget band and deadline already filled in.
+I run projectcostestimator.com, an independent website cost calculator (we don't build sites). Two things for {name}, since {specific}:
 
-I'm listing a small number of {platform} agencies that serve {market}, and {name} fits: {specific}.
+1. The calculator on your own site. The visitor prices their project on your page and the button sends them to your contact form; your name on it, your colours, no credit line, loads and clicks counted per day. Embed Pro is $29 a month for one domain, cancel any time.
 
-The listing is free, no commission, no contract; requests are routed to listed agencies at no charge right now. If it's useful, the form takes two minutes: https://projectcostestimator.com/for-agencies?ref={ref}
+2. A free listing here. People who finish an estimate can ask for quotes, and the request, with type, platform, budget band and deadline already filled in, goes to listed {platform} agencies that serve {market}. No commission, no contract, nothing billed for requests right now.
+
+Both start from one two-minute form: https://projectcostestimator.com/for-agencies?ref={ref}
 
 If it's not for you, reply "no" and I won't write again.
 
@@ -141,16 +146,28 @@ founder, Project Cost Estimator
 hello@projectcostestimator.com{postal}"""
     return subject, body
 
+# Cost pages that exist today, per niche tag: the follow-up can offer the single "featured builder"
+# slot on the page their prospects read. Only real pages; never a page we do not have.
+NICHE_PAGE = {'law': '/law-firm-website-cost', 'restaurant': '/restaurant-website-cost', 'nonprofit': '/nonprofit-website-cost', 'real-estate': '/real-estate-website-cost',
+              'healthcare': '/healthcare-website-cost', 'medical': '/healthcare-website-cost', 'dental': '/healthcare-website-cost', 'ecommerce': '/ecommerce-cost-calculator', 'shopify': '/ecommerce-cost-calculator', 'wordpress': '/wordpress-website-cost'}
+
 def compose_followup(row):
     name = row['name']; ref = row.get('ref') or ('out-' + slug_of(name))
     greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else f"Hi {name} team,"
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
-    subject = f"Re: Quote requests with a budget attached — free listing for {name}"
+    subject = f"Re: A website cost calculator on {name}'s site, and a free agency listing"
+    tags = [t for t in (row.get('niche') or '').split(',') + (row.get('platforms') or '').split(',') if t in NICHE_PAGE]
+    slot = ''
+    if tags:
+        page = NICHE_PAGE[tags[0]]; price = CFG.get('slot_price', '$79')
+        slot = f"""
+There is also one "featured builder" slot on our {page.strip('/').replace('-', ' ')} page, the page your prospects read before they ask for quotes: one agency per country, {price} a month, and I send you the page's real visitor numbers before you decide. Reply "slot" if you want them.
+"""
     body = f"""{greet}
 
-A short follow-up on my note from last week: the free agency listing on projectcostestimator.com is still open, and quote requests keep coming in with the budget band already set.
-
-If you want in, the form is two minutes: https://projectcostestimator.com/for-agencies?ref={ref}
+A short follow-up on my note from last week. Still open for {name}: the free listing (quote requests with the budget band already set) and the calculator on your own site at $29 a month.
+{slot}
+The form is two minutes: https://projectcostestimator.com/for-agencies?ref={ref}
 
 If not, no reply needed; this is the last message from me.
 

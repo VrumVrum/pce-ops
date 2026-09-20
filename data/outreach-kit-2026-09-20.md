@@ -41,3 +41,5 @@ Rules that keep it honest and keep replies coming:
 - `/admin/leads` → providers: applications land as `pending`; approve within 24–48 h (the receipt email promises that).
 - `/for-agencies` live numbers: listings count goes up as you approve; the estimates counter is real and updates daily.
 - When the first request routes to a new listing, the brief email goes out automatically; the reply link works once; the 72 h reminder is automatic.
+
+**21 Sep, 02:20 — first message now leads with Embed Pro ($29/mo: own CTA target, own brand line, own colours, no credit, daily stats) and the free listing; the follow-up adds the single featured-builder slot on the niche cost page ($79/mo, real GSC numbers sent on request). Rule kept: one true line per agency, nothing billed for requests, opt-out honoured.**
