@@ -374,25 +374,31 @@ def src_search(store, market, max_pages, limit):
     for niche, tag in NICHES:
         for city in CITIES[market]:
             q = f'{niche} website design agency {city}'; key = f'search|{market}|{q}'
-            if state.get(key, {}).get('done'): continue
+            done = state.get(key, {})
+            if done.get('done') and 'bing' not in done: done['bing'] = True      # first run (21 Sep): Bing answered, DDG had blocked us
+            if done.get('ddg') and done.get('bing'): continue
             n = 0
-            try:
-                _, h = get('https://lite.duckduckgo.com/lite/?q=' + urllib.parse.quote(q) + '&kl=' + kl, gap=3.0)
-                for m in re.finditer(r'href="//duckduckgo\.com/l/\?uddg=([^&"]+)[^"]*"[^>]*class=\'result-link\'>(.*?)</a>', h, re.S):
-                    u = urllib.parse.unquote(m.group(1))
-                    if 'duckduckgo.com/y.js' in u or 'bing.com/aclick' in u: continue
-                    if store.add(title_name(m.group(2)), u, market, 'search', tag, city=city): n += 1
-            except Exception as e: print(f'  ddg {q}: {str(e)[:60]}')
-            try:
-                _, h = get(f'https://www.bing.com/search?q={urllib.parse.quote(q)}&mkt={mkt}&setlang=en&first=1', gap=3.0)
-                for blk in re.findall(r'<li class="b_algo".*?</li>', h, re.S):
-                    c = re.search(r'<cite>([^<]+)', blk); t = re.search(r'<h2[^>]*><a[^>]*>(.*?)</a>', blk, re.S)
-                    if not c: continue
-                    u = clean(c.group(1)).split(' ')[0]
-                    if not u.startswith('http'): u = 'https://' + u
-                    if store.add(title_name(t.group(1) if t else u), u, market, 'search', tag, city=city): n += 1
-            except Exception as e: print(f'  bing {q}: {str(e)[:60]}')
-            state[key] = {'done': True, 'n': n, 'at': now()}; state_save()
+            if not done.get('ddg'):
+                try:
+                    _, h = get('https://lite.duckduckgo.com/lite/?q=' + urllib.parse.quote(q) + '&kl=' + kl, gap=8.0)
+                    for m in re.finditer(r'href="//duckduckgo\.com/l/\?uddg=([^&"]+)[^"]*"[^>]*class=\'result-link\'>(.*?)</a>', h, re.S):
+                        u = urllib.parse.unquote(m.group(1))
+                        if 'duckduckgo.com/y.js' in u or 'bing.com/aclick' in u: continue
+                        if store.add(title_name(m.group(2)), u, market, 'search', tag, city=city): n += 1
+                    done['ddg'] = True
+                except Exception as e: print(f'  ddg {q}: {str(e)[:60]}')
+            if not done.get('bing'):
+                try:
+                    _, h = get(f'https://www.bing.com/search?q={urllib.parse.quote(q)}&mkt={mkt}&setlang=en&first=1', gap=3.0)
+                    for blk in re.findall(r'<li class="b_algo".*?</li>', h, re.S):
+                        c = re.search(r'<cite>([^<]+)', blk); t = re.search(r'<h2[^>]*><a[^>]*>(.*?)</a>', blk, re.S)
+                        if not c: continue
+                        u = clean(c.group(1)).split(' ')[0]
+                        if not u.startswith('http'): u = 'https://' + u
+                        if store.add(title_name(t.group(1) if t else u), u, market, 'search', tag, city=city): n += 1
+                    done['bing'] = True
+                except Exception as e: print(f'  bing {q}: {str(e)[:60]}')
+            done.update({'n': done.get('n', 0) + n, 'at': now()}); state[key] = done; state_save()
             print(f'  {q}: +{n}')
             if limit and store.added >= limit: return
 
