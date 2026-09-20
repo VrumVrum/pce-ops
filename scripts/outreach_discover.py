@@ -102,7 +102,12 @@ class Store:
         with io.open(tmp, 'w', encoding='utf-8', newline='') as f:
             w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction='ignore'); w.writeheader()
             for r in self.rows.values(): w.writerow({k: r.get(k, '') for k in FIELDS})
-        os.replace(tmp, self.path); self.dirty = 0
+        for attempt in range(6):          # Windows refuses the replace while merge/verify has the file open
+            try: os.replace(tmp, self.path); break
+            except PermissionError:
+                if attempt == 5: raise
+                time.sleep(2)
+        self.dirty = 0
     def save(self):
         with self.lock: self._save()
         print(f'store {os.path.basename(self.path)}: {len(self.rows)} domains (+{self.added} new this run, {self.n0} before)')

@@ -160,10 +160,23 @@ if __name__ == '__main__':
     print(f'discovered {len(rows)}, verified before {len(done)}, to verify {len(todo)}')
     t0 = time.time(); n = 0
     def flush():
+        # the sender marks `sent` / `reply` in this file while we run: keep what it wrote
+        if os.path.exists(DST):
+            try:
+                for r in csv.DictReader(open(DST, encoding='utf-8', newline='')):
+                    k = host_of(r['website']) or r['website']
+                    if k in done:
+                        for col in ('sent', 'reply'):
+                            if r.get(col) and not done[k].get(col): done[k][col] = r[col]
+            except Exception: pass
         with io.open(DST + '.tmp', 'w', encoding='utf-8', newline='') as f:
             w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction='ignore'); w.writeheader()
             for r in sorted(done.values(), key=lambda r: -int(r.get('score') or 0)): w.writerow(r)
-        os.replace(DST + '.tmp', DST)
+        for attempt in range(6):          # Windows refuses the replace while the sender/sync has the file open
+            try: os.replace(DST + '.tmp', DST); break
+            except PermissionError:
+                if attempt == 5: raise
+                time.sleep(2)
     with cf.ThreadPoolExecutor(a.threads) as ex:
         for out in ex.map(verify, todo):
             base = 'out-' + slug(out['name'] or host_of(out['website'])); ref = base; k = 2
