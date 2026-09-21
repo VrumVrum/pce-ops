@@ -168,8 +168,8 @@ for p in rows: counts[p['status']] = counts.get(p['status'], 0) + 1
 # 12k+ rows: keep the board under ~6 MB (the API reads it whole on every cache miss) — short taglines, no empty keys
 for p in rows:
     if p.get('tagline') and len(p['tagline']) > 160: p['tagline'] = p['tagline'][:157].rsplit(' ', 1)[0] + '…'
-    for k in [k for k, v in p.items() if v in (None, '', 0, [])]:
-        if k not in ('status', 'name', 'ref', 'clicks', 'score'): del p[k]
+    for k in [k for k, v in p.items() if v is None]:      # only nulls: the page does p.market.split etc. on strings
+        del p[k]
 doc = {'generated': NOW.isoformat(), 'counts': counts, 'total': len(rows), 'prospects': rows}
 json.dump(doc, open(D + 'outreach-prospects.json', 'w', encoding='utf-8'), ensure_ascii=False)
 
