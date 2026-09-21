@@ -1,6 +1,6 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-09-20T16:35:16Z",
+  "generated_utc": "2026-09-21T04:35:16Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "692",
+      "sessions": "693",
       "users": "634",
-      "engagementRate": "0.22109826589595374",
-      "avgDuration": "48.800871767341036"
+      "engagementRate": "0.22077922077922077",
+      "avgDuration": "48.730452038961033"
     },
     {
       "channel": "Organic Search",
@@ -118,8 +118,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "692",
-      "engagementRate": "0.22109826589595374"
+      "sessions": "693",
+      "engagementRate": "0.22077922077922077"
     },
     {
       "source": "google",
@@ -317,8 +317,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "55",
-      "engagementRate": "0.036363636363636362"
+      "sessions": "56",
+      "engagementRate": "0.035714285714285712"
     },
     {
       "landing": "/nonprofit-website-cost",

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-20T16:38:49.146Z",
+  "generated_utc": "2026-09-21T04:38:25.546Z",
   "passed": 15,
   "total": 15,
   "all_green": true,
@@ -7,7 +7,7 @@
     {
       "name": "load /",
       "ok": true,
-      "detail": "HTTP 200, 10568 chars, 0 JS err"
+      "detail": "HTTP 200, 10716 chars, 0 JS err"
     },
     {
       "name": "load /calculator",
@@ -27,7 +27,7 @@
     {
       "name": "load /cost/industry/dentist",
       "ok": true,
-      "detail": "HTTP 200, 5979 chars, 0 JS err"
+      "detail": "HTTP 200, 5990 chars, 0 JS err"
     },
     {
       "name": "load /cost/app-like/uber",
