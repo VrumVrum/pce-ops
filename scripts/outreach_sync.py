@@ -131,6 +131,13 @@ try:
                 if not m or body.get('bot'): continue
                 p = prospects.get(m.group(1))
                 if not p: continue
+                # mail scanners (Safe Links, Mimecast, ...) open every link within seconds of delivery: a hit
+                # inside 5 minutes of the send is counted apart and does not make the row 'clicked'
+                sent_ts = (p.get('sent_at') or '').replace(' ', 'T').rstrip('Z')
+                fast = bool(sent_ts) and body['ts'][:19] < (datetime.datetime.fromisoformat(sent_ts[:19]) + datetime.timedelta(minutes=5)).isoformat()
+                if fast:
+                    p['scanner_clicks'] = p.get('scanner_clicks', 0) + 1
+                    continue
                 p['clicks'] += 1
                 if not p['first_click'] or body['ts'] < p['first_click']: p['first_click'] = body['ts']
                 if p['status'] in ('found', 'sent'): p['status'] = 'clicked'
