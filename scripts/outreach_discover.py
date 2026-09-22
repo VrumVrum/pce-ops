@@ -33,7 +33,8 @@ JUNK = ('reddit.', 'yelp.', 'clutch.co', 'designrush', 'upwork', 'fiverr', 'link
         'yellowpages', 'truelocal', 'hotfrog', 'localsearch', 'oneflare', 'hipages', 'airtasker', 'freelancer', 'peopleperhour', 'toptal', 'dribbble', 'behance', 'awwwards', 'mailchimp', 'canva', 'zoho', 'salesforce', 'adobe.',
         'envato', 'themeforest', 'etsy', 'ebay', 'nytimes', 'cnn.', 'bbc.', 'techbehemoths', 'selectedfirms', 'topdevelopers', 'agencyspotter', 'duckduckgo', 'bing.com', 'yahoo', 'msn.com', 'wikihow', 'youtu.be', 'vimeo',
         'craigslist', 'gumtree', 'seek.com', 'linktr.ee', 'eventbrite', 'meetup', 'crunchbase', 'zoominfo', 'apollo.io', 'wordpress.', 'elementor.com', 'wpengine', 'kinsta', 'hostinger', 'bluehost', 'siteground', 'cloudways',
-        'weebly', 'jimdo', 'strikingly', 'carrd', 'duda.co', 'webnode', 'site123', 'ionos', 'namecheap', 'hostgator', 'dreamhost', 'network solutions', 'web.com', 'vistaprint', 'fbcdn', 'ada.gov', 'nih.gov')
+        'weebly', 'jimdo', 'strikingly', 'carrd', 'duda.co', 'webnode', 'site123', 'ionos', 'namecheap', 'hostgator', 'dreamhost', 'network solutions', 'web.com', 'vistaprint', 'fbcdn', 'ada.gov', 'nih.gov',
+        'booking.com', 'tripadvisor', 'expedia', 'airbnb', 'hotels.com', 'opentable', 'zocdoc', 'healthgrades', 'webmd', 'avvo', 'findlaw', 'justia', 'lawyers.com', 'realtor.com', 'redfin', 'zillow', 'trulia', 'loopnet', 'yelp', 'nextdoor', 'patch.com', 'mapquest', 'chamberofcommerce', 'manta.com', 'bizapedia', 'dnb.com', 'opencorporates')
 now = lambda: datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M')
 
 # ---------- polite HTTP ----------

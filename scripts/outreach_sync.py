@@ -101,6 +101,7 @@ for P in [os.path.join(PROF, 'Mail', 'ProjectCostEstimator', 'Inbox'), os.path.j
         dom = addr.split('@')[-1]
         p = by_email_domain.get(dom) or by_domain.get(dom)
         if not p or addr.endswith('projectcostestimator.com'): continue
+        if not p.get('sent_at'): continue      # a reply needs a send: with 23k found domains, any newsletter would otherwise match
         try:
             d = email.utils.parsedate_to_datetime(m.get('Date', ''))
             if d.tzinfo is None: d = d.replace(tzinfo=datetime.timezone.utc)
