@@ -114,8 +114,15 @@ def their_line(row):
     if plats: return f'your {plats[0]} work' + (f' in {city}' if city else '')
     return None
 
+def junk_name(name):
+    """A name scraped from a page title is sometimes a tagline ("Professional Websites from $495");
+    then the greeting says "Hi there" and the subject says "your site" instead of repeating it."""
+    import re as _re
+    return bool(_re.search(r'[$€£]|\d{3,}|(from|website|websites|web design|services|professional|agency in|company in|best|top|cheap|affordable)', name, _re.I)) or len(name.split()) > 5
+
 def compose(row):
     name = row['name']
+    junk = junk_name(name)
     ref = row.get('ref') or ('out-' + slug_of(name))
     market_key = row['market'].split(',')[0]
     market = MARKET.get(market_key, row['market'])
@@ -123,15 +130,17 @@ def compose(row):
     specific = SPECIFIC.get(name) or their_line(row)
     if not specific:
         return None
-    greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else f"Hi {name} team,"
+    greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else ("Hi there," if junk else f"Hi {name} team,")
+    who = 'your site' if junk else f"{name}'s site"
+    you = 'you' if junk else name
     # Since 21 Sep the product in the first message is Embed Pro (value on day one, whatever our
     # traffic does); the listing is the free part. Every claim below is what the licence does today
     # (src/app/embed/EmbedProOffer.tsx): own CTA target, own brand line, own colours, no credit, stats.
-    subject = f"A website cost calculator on {name}'s site, and a free agency listing"
+    subject = f"A website cost calculator on {who}, and a free agency listing"
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
     body = f"""{greet}
 
-I run projectcostestimator.com, an independent website cost calculator (we don't build sites). Two things for {name}, since {specific}:
+I run projectcostestimator.com, an independent website cost calculator (we don't build sites). Two things for {you}, since {specific}:
 
 1. The calculator on your own site. The visitor prices their project on your page and the button sends them to your contact form; your name on it, your colours, no credit line, loads and clicks counted per day. Embed Pro is $29 a month for one domain, cancel any time.
 
@@ -152,10 +161,11 @@ NICHE_PAGE = {'law': '/law-firm-website-cost', 'restaurant': '/restaurant-websit
               'healthcare': '/healthcare-website-cost', 'medical': '/healthcare-website-cost', 'dental': '/healthcare-website-cost', 'ecommerce': '/ecommerce-cost-calculator', 'shopify': '/ecommerce-cost-calculator', 'wordpress': '/wordpress-website-cost'}
 
 def compose_followup(row):
-    name = row['name']; ref = row.get('ref') or ('out-' + slug_of(name))
-    greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else f"Hi {name} team,"
+    name = row['name']; ref = row.get('ref') or ('out-' + slug_of(name)); junk = junk_name(name)
+    greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else ("Hi there," if junk else f"Hi {name} team,")
+    who = 'your site' if junk else f"{name}'s site"; you = 'you' if junk else name
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
-    subject = f"Re: A website cost calculator on {name}'s site, and a free agency listing"
+    subject = f"Re: A website cost calculator on {who}, and a free agency listing"
     tags = [t for t in (row.get('niche') or '').split(',') + (row.get('platforms') or '').split(',') if t in NICHE_PAGE]
     slot = ''
     if tags:
@@ -165,7 +175,7 @@ There is also one "featured builder" slot on our {page.strip('/').replace('-', '
 """
     body = f"""{greet}
 
-A short follow-up on my note from last week. Still open for {name}: the free listing (quote requests with the budget band already set) and the calculator on your own site at $29 a month.
+A short follow-up on my note from last week. Still open for {you}: the free listing (quote requests with the budget band already set) and the calculator on your own site at $29 a month.
 {slot}
 The form is two minutes: https://projectcostestimator.com/for-agencies?ref={ref}
 
