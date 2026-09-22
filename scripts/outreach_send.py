@@ -219,6 +219,21 @@ def mark(path, row, col, value):
             if attempt == 5: raise
             time.sleep(2)
 
+_MX = {}
+def has_mx(email):
+    """9 of the first 120 sends bounced (7.5%): a dead mailbox costs domain reputation. A domain with
+    no MX (or one that resolves nowhere) is skipped before we ever send; cached per domain per run."""
+    import subprocess
+    dom = email.rsplit('@', 1)[-1].lower()
+    if dom in _MX: return _MX[dom]
+    try:
+        out = subprocess.run(['nslookup', '-type=MX', dom], capture_output=True, text=True, timeout=8).stdout.lower()
+        ok = ('mail exchanger' in out) or ('mx preference' in out)
+    except Exception:
+        ok = True          # DNS trouble on our side must not stop the run
+    _MX[dom] = ok
+    return ok
+
 def us_blocked(market_key):
     return market_key == 'us' and not CFG.get('postal_address', '').strip()
 
@@ -280,6 +295,7 @@ def main():
         if not r['email'] or r.get('sent') or r.get('status') != '200': return False
         if market and r['market'].split(',')[0] != market: return False
         if int(r.get('score') or 0) < minscore or 'offshore' in (r.get('signals') or ''): return False
+        if not has_mx(r['email']): return False
         p = b.get(r.get('ref'))
         if p and p['status'] in ('declined', 'bounced', 'listed', 'replied'): return False
         return True
