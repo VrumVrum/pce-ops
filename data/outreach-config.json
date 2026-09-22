@@ -2,7 +2,9 @@
  "postal_address": "",
  "daily_cap": {
   "us": 25,
-  "australia": 25
+  "australia": 25,
+  "uk": 25,
+  "ireland": 15
  },
  "min_score": 60,
  "followup_after_days": 6,

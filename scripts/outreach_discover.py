@@ -25,8 +25,8 @@ STORE_P = SD + f'{SRC}.csv'                     # each source keeps its own file
 FIELDS = ['domain', 'name', 'website', 'city', 'country', 'market', 'sources', 'tags', 'blurb', 'size', 'rate', 'found_at']
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36 pce-outreach-discovery (+https://projectcostestimator.com/for-agencies)',
       'Accept': 'text/html,application/xhtml+xml,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.9', 'Accept-Encoding': 'gzip'}
-MARKET = {'us': 'us', 'au': 'australia'}
-COUNTRY_NAME = {'us': 'United States', 'au': 'Australia'}
+MARKET = {'us': 'us', 'au': 'australia', 'uk': 'uk', 'ie': 'ireland'}
+COUNTRY_NAME = {'us': 'United States', 'au': 'Australia', 'uk': 'United Kingdom', 'ie': 'Ireland'}
 JUNK = ('reddit.', 'yelp.', 'clutch.co', 'designrush', 'upwork', 'fiverr', 'linkedin', 'facebook', 'instagram', 'youtube', 'wikipedia', 'quora', 'medium.com', 'forbes', 'g2.com', 'capterra', 'goodfirms',
         'sortlist', 'semrush', 'hubspot', 'wix.com', 'wixsite', 'squarespace', 'godaddy', 'wordpress.com', 'wordpress.org', 'webflow.com', 'webflow.io', 'shopify.com', 'myshopify', 'bigcommerce', 'expertise.com', 'themanifest', 'upcity',
         'indeed', 'glassdoor', 'ziprecruiter', 'thumbtack', 'bark.com', 'houzz', 'angi.com', 'homeadvisor', 'amazon.', 'apple.com', 'google.', 'microsoft', 'pinterest', 'tiktok', 'x.com', 'twitter', 'trustpilot', 'bbb.org',
@@ -164,7 +164,8 @@ def walk_pages(key, url_of, parse, max_pages, first=1):
 # ---------- sources ----------
 def src_selectedfirms(store, market, max_pages, limit):
     cats = ['web-design', 'web-development', 'ecommerce-development', 'shopify-development', 'wordpress-development', 'magento-development', 'woocommerce-development', 'bigcommerce-development', 'webflow-development', 'squarespace-development', 'wix-development', 'ui-ux-design']
-    country = {'us': 'usa', 'au': 'australia'}[market]
+    country = {'us': 'usa', 'au': 'australia', 'uk': 'uk'}.get(market)
+    if not country: return          # selectedfirms has no Ireland country page
     for cat in cats:
         tag = cat.replace('-development', '').replace('-design', '') if cat != 'web-design' else 'web-design'
         def parse(h, p, cat=cat, tag=tag):
@@ -216,7 +217,7 @@ def nuxt_resolver(h):
 
 def src_techbehemoths(store, market, max_pages, limit):
     services = ['web-design', 'web-development', 'ecommerce', 'e-commerce-development', 'shopify', 'wordpress', 'webflow', 'wix', 'wix-studio', 'squarespace', 'woocommerce', 'magento', 'bigcommerce', 'ux-ui-design']
-    country = {'us': 'united-states', 'au': 'australia'}[market]
+    country = {'us': 'united-states', 'au': 'australia', 'uk': 'united-kingdom', 'ie': 'ireland'}[market]
     STR = r'("(?:[^"\\]|\\.)*"|[a-zA-Z_$][\w$]*|-?\d+(?:\.\d+)?)'
     rx = re.compile(r'\{id:(\d+),name:' + STR + r',slug:' + STR + r',logo:[^,]*,description:' + STR + r',company_size:' + STR + r',hourly_rate:' + STR + r',is_featured:[^,]+,website:' + STR + r',')
     for svc in services:
@@ -264,7 +265,7 @@ def fetch_profiles(source, items, fetch_one, store, market, tag, limit, workers=
     return n
 
 def src_shopify(store, market, max_pages, limit):
-    country = {'us': 'united-states', 'au': 'australia'}[market]
+    country = {'us': 'united-states', 'au': 'australia', 'uk': 'united-kingdom', 'ie': 'ireland'}[market]
     def fetch_one(slug):
         _, h = get(f'https://www.shopify.com/partners/directory/partner/{slug}', gap=1.0)
         m = re.search(r'Contact information.*?<a class="[^"]*" href="(https?://[^"]+)" rel="nofollow"', h, re.S)
@@ -286,7 +287,8 @@ def src_shopify(store, market, max_pages, limit):
 
 def src_sortlist(store, market, max_pages, limit):
     cats = ['web-design', 'web-development', 'ecommerce']
-    locs = {'us': ['united-states-us'], 'au': ['australia-au', 'sydney-au', 'melbourne-au', 'brisbane-au', 'perth-au']}[market]
+    locs = {'us': ['united-states-us'], 'au': ['australia-au', 'sydney-au', 'melbourne-au', 'brisbane-au', 'perth-au'], 'ie': ['ireland-ie', 'dublin-ie'], 'uk': []}[market]
+    if not locs: return          # sortlist has no United Kingdom country page (404 on every slug tried)
     def fetch_one(slug):
         _, h = get(f'https://www.sortlist.com/agency/{slug}', gap=1.0)
         if COUNTRY_NAME[market] not in h: return '', '', '', ''      # listed as "serving" the place, based elsewhere
@@ -312,7 +314,7 @@ def src_sortlist(store, market, max_pages, limit):
 
 def src_wix(store, market, max_pages, limit):
     cats = ['web-design', 'online-store', 'web-developer']
-    loc = {'us': 'United States', 'au': 'Australia'}[market]; cc = {'us': 'US', 'au': 'AU'}[market]
+    loc = {'us': 'United States', 'au': 'Australia', 'uk': 'United Kingdom', 'ie': 'Ireland'}[market]; cc = {'us': 'US', 'au': 'AU', 'uk': 'GB', 'ie': 'IE'}[market]
     def fetch_one(slug):
         _, h = get(f'https://www.wix.com/studio/community/partners/{slug}', gap=5.0)     # wix answers 429 to anything faster
         for blob in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
@@ -341,8 +343,11 @@ def src_wix(store, market, max_pages, limit):
 def src_semrush(store, market, max_pages, limit):
     services = ['web-design', 'web-development', 'ux']
     locs = {'us': ['united-states', 'arizona', 'atlanta', 'austin', 'boston', 'california', 'charlotte', 'chicago', 'cleveland', 'colorado', 'connecticut', 'dallas', 'denver', 'florida', 'georgia-state', 'houston', 'illinois', 'indiana', 'indianapolis', 'las-vegas', 'los-angeles', 'massachusetts', 'miami', 'michigan', 'minneapolis', 'minnesota', 'nevada', 'new-jersey', 'new-york', 'new-york-city', 'north-carolina', 'ohio', 'oregon', 'pennsylvania', 'philadelphia', 'phoenix', 'portland', 'san-diego', 'seattle', 'south-carolina', 'tampa', 'tennessee', 'texas', 'utah', 'virginia', 'washington'],
-            'au': ['australia', 'sydney', 'melbourne']}[market]
-    CITIES = {'atlanta', 'austin', 'boston', 'charlotte', 'chicago', 'cleveland', 'dallas', 'denver', 'houston', 'indianapolis', 'las-vegas', 'los-angeles', 'miami', 'minneapolis', 'new-york-city', 'philadelphia', 'phoenix', 'portland', 'san-diego', 'seattle', 'tampa', 'sydney', 'melbourne'}
+            'au': ['australia', 'sydney', 'melbourne'],
+            'uk': ['united-kingdom', 'london-city', 'manchester'],
+            'ie': []}[market]
+    if not locs: return          # semrush has no Ireland list
+    CITIES = {'london-city', 'manchester', 'atlanta', 'austin', 'boston', 'charlotte', 'chicago', 'cleveland', 'dallas', 'denver', 'houston', 'indianapolis', 'las-vegas', 'los-angeles', 'miami', 'minneapolis', 'new-york-city', 'philadelphia', 'phoenix', 'portland', 'san-diego', 'seattle', 'tampa', 'sydney', 'melbourne'}
     def fetch_one(slug):
         _, h = get(f'https://agencies.semrush.com/{slug}/', gap=1.0)
         m = re.search(r'&quot;slot&quot;:\[0,&quot;website&quot;\],&quot;agencyId&quot;:\[0,\d+\],&quot;href&quot;:\[0,&quot;(https?://[^&?]+)', h)
@@ -366,14 +371,16 @@ NICHES = [('dental', 'dental'), ('law firm', 'law'), ('medical practice', 'medic
           ('healthcare', 'healthcare'), ('veterinary', 'veterinary'), ('salon spa', 'beauty'), ('financial advisor', 'finance'), ('SaaS startup', 'saas'), ('chiropractor', 'medical'), ('landscaping', 'trades'), ('roofing', 'trades')]
 CITIES = {'us': ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'Austin', 'San Jose', 'Jacksonville', 'Columbus', 'Charlotte', 'Indianapolis', 'San Francisco', 'Seattle', 'Denver', 'Nashville', 'Boston',
                 'Las Vegas', 'Portland', 'Miami', 'Atlanta', 'Minneapolis', 'Tampa', 'Orlando', 'Raleigh', 'Salt Lake City', 'Kansas City', 'Pittsburgh', 'Cincinnati', 'Sacramento', 'St. Louis', 'Cleveland', 'Milwaukee', 'Baltimore', 'Detroit', 'Oklahoma City', 'Richmond'],
-          'au': ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast', 'Canberra', 'Newcastle', 'Hobart', 'Sunshine Coast', 'Geelong', 'Wollongong']}
+          'au': ['Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast', 'Canberra', 'Newcastle', 'Hobart', 'Sunshine Coast', 'Geelong', 'Wollongong'],
+          'uk': ['London', 'Manchester', 'Birmingham', 'Leeds', 'Glasgow', 'Edinburgh', 'Bristol', 'Liverpool', 'Sheffield', 'Nottingham', 'Newcastle', 'Cardiff', 'Belfast', 'Brighton', 'Leicester', 'Southampton', 'Reading', 'Oxford', 'Cambridge', 'York'],
+          'ie': ['Dublin', 'Cork', 'Galway', 'Limerick', 'Waterford']}
 def title_name(t):
     t = clean(re.sub(r'<[^>]+>', '', t)); parts = [p.strip() for p in re.split(r'\s[|\-–—:]\s', t) if p.strip()]
     if not parts: return t[:60]
     cand = [p for p in parts if len(p) <= 40 and not re.search(r'\b(web|website|design|agency|company|best|top|services?)\b', p, re.I)]
     return (cand[-1] if cand else (parts[-1] if len(parts[-1]) <= 40 else parts[0]))[:60]
 def src_search(store, market, max_pages, limit):
-    kl = {'us': 'us-en', 'au': 'au-en'}[market]; mkt = {'us': 'en-US', 'au': 'en-AU'}[market]
+    kl = {'us': 'us-en', 'au': 'au-en', 'uk': 'uk-en', 'ie': 'ie-en'}[market]; mkt = {'us': 'en-US', 'au': 'en-AU', 'uk': 'en-GB', 'ie': 'en-IE'}[market]
     for niche, tag in NICHES:
         for city in CITIES[market]:
             q = f'{niche} website design agency {city}'; key = f'search|{market}|{q}'
@@ -413,7 +420,7 @@ if __name__ == '__main__':
         merge(); sys.exit(0)
     store = Store(); t0 = time.time()
     try:
-        for mk in (['us', 'au'] if a.market == 'all' else [a.market]):
+        for mk in (['us', 'au'] if a.market == 'all' else ([a.market] if a.market != 'ukie' else ['uk', 'ie'])):
             print(f'== {a.source} / {mk}')
             SOURCES[a.source](store, mk, a.max_pages, a.limit)
             if a.limit and store.added >= a.limit: break

@@ -41,7 +41,7 @@ except Exception as _e: print('outreach-config.json not read:', _e)
 TODAY = datetime.date.today().isoformat()
 LOG = D + f'outreach-sent-{TODAY}.jsonl'
 
-MARKET = {'eastern_europe': 'Eastern Europe', 'uk': 'the UK and Ireland', 'western_europe': 'Western Europe', 'us': 'the US', 'australia': 'Australia', 'south_asia': 'South and Southeast Asia'}
+MARKET = {'eastern_europe': 'Eastern Europe', 'uk': 'the UK', 'ireland': 'Ireland', 'western_europe': 'Western Europe', 'us': 'the US', 'australia': 'Australia', 'south_asia': 'South and Southeast Asia'}
 PLATFORM = {'shopify': 'Shopify', 'shopify_plus': 'Shopify Plus', 'wordpress': 'WordPress', 'woocommerce': 'WooCommerce', 'webflow': 'Webflow', 'magento2': 'Magento', 'magento': 'Magento', 'bigcommerce': 'BigCommerce', 'wix': 'Wix', 'squarespace': 'Squarespace', 'custom': 'custom-build', 'ecommerce': 'ecommerce', 'web-design': 'web design'}
 NICHE = {'dental': 'dental practices', 'law': 'law firms', 'medical': 'medical practices', 'restaurant': 'restaurants', 'real-estate': 'real estate', 'trades': 'trades and home services', 'accounting': 'accounting firms', 'fitness': 'gyms and fitness studios',
          'hospitality': 'hotels and hospitality', 'nonprofit': 'churches and nonprofits', 'construction': 'construction companies', 'healthcare': 'healthcare', 'veterinary': 'veterinary clinics', 'beauty': 'salons and spas', 'finance': 'financial advisors', 'saas': 'SaaS and startups', 'smb': 'small businesses'}
@@ -283,7 +283,7 @@ def main():
     limit = int(sys.argv[sys.argv.index('--limit') + 1]) if '--limit' in sys.argv else None
     gap = int(sys.argv[sys.argv.index('--gap') + 1]) if '--gap' in sys.argv else 120
     market = sys.argv[sys.argv.index('--market') + 1] if '--market' in sys.argv else None
-    market = {'au': 'australia'}.get(market, market)
+    market = {'au': 'australia', 'ie': 'ireland'}.get(market, market)
     if mode in ('daily', 'preview', 'followup'):
         path = DISCOVERED
     else:

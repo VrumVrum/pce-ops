@@ -27,6 +27,8 @@ PLATFORMS = ('shopify', 'wordpress', 'webflow', 'bigcommerce', 'magento', 'wix',
 NICHES = ('dental', 'law', 'medical', 'restaurant', 'real-estate', 'trades', 'accounting', 'fitness', 'hospitality', 'nonprofit', 'construction', 'healthcare', 'veterinary', 'beauty', 'finance', 'saas', 'smb')
 OFFSHORE = re.compile(r'\+91[\s\d-]{8,}|\+92[\s\d-]{8,}|\+380[\s\d-]{7,}|\+94[\s\d-]{8,}|\+880[\s\d-]{7,}|\+63[\s\d-]{8,}|\bPvt\.?\s*Ltd|Private Limited|\bAhmedabad\b|\bBangalore\b|\bBengaluru\b|\bHyderabad\b|\bJaipur\b|\bIndore\b|\bMohali\b|\bNoida\b|\bGurgaon\b|\bKolkata\b|\bChennai\b|\bPune\b|\bLahore\b|\bKarachi\b|\bIslamabad\b|\bDhaka\b|\bKyiv\b|\bKharkiv\b|\bLviv\b|\bColombo\b|\bCebu\b|\bManila\b|\bMakati\b|offshore development|outsourc', re.I)
 ENTERPRISE = re.compile(r'Fortune\s*500|enterprise[- ]grade|global enterprises|\b(?:500|1000)\+\s*(?:employees|engineers|developers)\b', re.I)
+UK_SIGNAL = re.compile(r'\+44[\s\d-]{8,}|\b0[12][\d]{2,3}\s?\d{3,4}\s?\d{3,4}\b|\b[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d[A-Z]{2}\b|\.co\.uk\b|\bUnited Kingdom\b|\bEngland\b|\bScotland\b|\bWales\b|\bVAT (?:No|number)\b', re.I)
+IE_SIGNAL = re.compile(r'\+353[\s\d-]{7,}|\.ie\b|\bIreland\b|\bDublin\b|\bCork\b|\bGalway\b|\bCRO\b', re.I)
 AU_SIGNAL = re.compile(r'\+61[\s\d-]{8,}|\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT)\s+\d{4}\b|\bABN\s*:?\s*\d{2}\s?\d{3}|\.com\.au\b|\bAustralia\b', re.I)
 US_SIGNAL = re.compile(r'\+1[\s.(-]{1,3}\d{3}[\s.)-]{1,3}\d{3}[\s.-]?\d{4}|\(\d{3}\)\s?\d{3}-\d{4}\b|\b(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\s+\d{5}\b|\bUnited States\b|\bUSA\b')
 
@@ -109,6 +111,8 @@ def verify(row):
     if ENTERPRISE.search(text): sig.append('enterprise')
     if market == 'australia' and (dom.endswith('.au') or AU_SIGNAL.search(text)): sig.append('au-confirmed')
     if market == 'us' and US_SIGNAL.search(text): sig.append('us-confirmed')
+    if market == 'uk' and (dom.endswith(('.uk', '.scot', '.wales')) or UK_SIGNAL.search(text)): sig.append('uk-confirmed')
+    if market == 'ireland' and (dom.endswith('.ie') or IE_SIGNAL.search(text)): sig.append('ie-confirmed')
     if market == 'us' and dom.endswith(('.au', '.uk', '.in', '.pk', '.ua', '.ca', '.nz', '.ie', '.de', '.nl', '.pl', '.ro')): sig.append('other-tld')
     if market == 'australia' and dom.endswith(('.in', '.pk', '.ua', '.uk', '.ca', '.nz', '.ie', '.de', '.nl', '.pl', '.ro')): sig.append('other-tld')
     if re.search(r'href="[^"]*/pricing[^"]*"', h, re.I): sig.append('has-pricing')
@@ -129,7 +133,7 @@ def verify(row):
     if 'offshore' in sig: s -= 30
     if 'other-tld' in sig: s -= 15
     if 'enterprise' in sig: s -= 10
-    if 'au-confirmed' in sig or 'us-confirmed' in sig: s += 10
+    if any(x in sig for x in ('au-confirmed', 'us-confirmed', 'uk-confirmed', 'ie-confirmed')): s += 10
     if out['niche']: s += 10
     if out['platforms']: s += 5
     if 'smb' in sig: s += 5
@@ -145,7 +149,7 @@ if __name__ == '__main__':
     a = ap.parse_args()
     subprocess.run([sys.executable, os.path.dirname(os.path.abspath(__file__)) + '/outreach_discover.py', 'merge'], check=False)
     rows = list(csv.DictReader(open(SRC, encoding='utf-8', newline='')))
-    if a.market != 'all': rows = [r for r in rows if r['market'] == {'us': 'us', 'au': 'australia'}.get(a.market, a.market)]
+    if a.market != 'all': rows = [r for r in rows if r['market'] == {'us': 'us', 'au': 'australia', 'uk': 'uk', 'ie': 'ireland'}.get(a.market, a.market)]
     done = {}
     if os.path.exists(DST) and not a.refresh:
         for r in csv.DictReader(open(DST, encoding='utf-8', newline='')): done[host_of(r['website']) or r['website']] = r
