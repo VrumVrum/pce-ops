@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-09-23T04:35:10.136967Z",
+  "generated_utc": "2026-09-23T16:35:09.380583Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-23",
     "totals_28d": {
-      "clicks": 183,
-      "impressions": 50016,
-      "ctr": 0.366,
-      "position": 13.02
+      "clicks": 188,
+      "impressions": 51637,
+      "ctr": 0.364,
+      "position": 12.99
     },
     "totals_7d": {
-      "clicks": 41,
-      "impressions": 10390,
-      "ctr": 0.395,
-      "position": 11.7
+      "clicks": 46,
+      "impressions": 12011,
+      "ctr": 0.383,
+      "position": 11.76
     },
     "totals_90d": {
-      "clicks": 369,
-      "impressions": 108825,
+      "clicks": 374,
+      "impressions": 110446,
       "ctr": 0.339,
-      "position": 18.11
+      "position": 18.02
     },
     "totals_28d_prev": {
       "clicks": 121,
@@ -56,7 +56,7 @@
       ]
     },
     "junk_28d": {
-      "impressions": 4625,
+      "impressions": 4715,
       "queries": 35,
       "sample": [
         "\"stripe connect custom\" payouts",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 183,
-      "impressions": 45391,
-      "ctr": 0.403
+      "clicks": 188,
+      "impressions": 46922,
+      "ctr": 0.401
     },
     "citation_floor_alerts": [
       {
@@ -77,11 +77,11 @@
     ]
   },
   "supabase": {
-    "leads_total": 91,
+    "leads_total": 92,
     "leads_by_context": {
+      "sys:lastrun": 65,
       "drip:3": 5,
       "drip:2": 7,
-      "sys:lastrun": 64,
       "drip:1": 6,
       "results:build": 2,
       "results": 6,
@@ -104,27 +104,27 @@
       "drip:3": 5
     },
     "affiliate_clicks": {
-      "total": 155,
+      "total": 156,
       "last7d": 19,
       "by_slug": {
-        "fiverr": 72,
+        "fiverr": 73,
         "wix": 42,
         "shopify": 35,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 184,
+      "rows_before_bot_filter": 185,
       "excluded_by_is_bot_flag": 29,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 106,
-      "ip_hash_coverage_pct": 66.3,
-      "note": "user_ip_hash is NULL on 62 of 184 rows (66% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 29 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 107,
+      "ip_hash_coverage_pct": 66.5,
+      "note": "user_ip_hash is NULL on 62 of 185 rows (66% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 29 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 26,
+      "impressions": 27,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -144,17 +144,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 484,
+      "impressions": 493,
       "clicks": 2
     },
     "/cost/app-like/": {
       "pages_with_data": 28,
-      "impressions": 99,
+      "impressions": 102,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 147,
-      "impressions": 876,
+      "pages_with_data": 148,
+      "impressions": 910,
       "clicks": 14
     },
     "/software-development-budget-2027": {
@@ -164,17 +164,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 12769,
+      "impressions": 13168,
       "clicks": 21
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2432,
-      "clicks": 17
+      "impressions": 2515,
+      "clicks": 19
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 3,
-      "impressions": 1213,
+      "impressions": 1247,
       "clicks": 17
     }
   }
