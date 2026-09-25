@@ -41,6 +41,7 @@ except Exception as _e: print('outreach-config.json not read:', _e)
 TODAY = datetime.date.today().isoformat()
 LOG = D + f'outreach-sent-{TODAY}.jsonl'
 
+OFFSHORE_NAME = re.compile(r'(Pakistan|India|Bangladesh|Ukraine|Philippines|Nigeria|Egypt|Vietnam|Sri Lanka|Nepal|Lahore|Karachi|Islamabad|Dhaka|Ahmedabad|Bangalore|Bengaluru|Hyderabad|Noida|Gurgaon|Mohali|Pune|Kolkata|Chennai|Kyiv|Lviv|Manila|Cebu|Lagos|Cairo|Hanoi|Ho Chi Minh)', re.I)
 MARKET = {'eastern_europe': 'Eastern Europe', 'uk': 'the UK', 'ireland': 'Ireland', 'western_europe': 'Western Europe', 'us': 'the US', 'australia': 'Australia', 'south_asia': 'South and Southeast Asia'}
 PLATFORM = {'shopify': 'Shopify', 'shopify_plus': 'Shopify Plus', 'wordpress': 'WordPress', 'woocommerce': 'WooCommerce', 'webflow': 'Webflow', 'magento2': 'Magento', 'magento': 'Magento', 'bigcommerce': 'BigCommerce', 'wix': 'Wix', 'squarespace': 'Squarespace', 'custom': 'custom-build', 'ecommerce': 'ecommerce', 'web-design': 'web design'}
 NICHE = {'dental': 'dental practices', 'law': 'law firms', 'medical': 'medical practices', 'restaurant': 'restaurants', 'real-estate': 'real estate', 'trades': 'trades and home services', 'accounting': 'accounting firms', 'fitness': 'gyms and fitness studios',
@@ -244,6 +245,17 @@ def has_mx(email):
     _MX[dom] = ok
     return ok
 
+def _due(r, b):
+    """One follow-up, 6+ days after the send, only when nothing happened (no click, reply, listing, decline, bounce)."""
+    by_ref, _ = sent_log(); days = int(CFG.get('followup_after_days', 6))
+    cutoff = (datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=days)).isoformat()
+    if not r.get('email') or 'followup:' in (r.get('reply') or ''): return False
+    if junk_name(r.get('name') or '') and not (r.get('tagline') or ''): return False
+    es = by_ref.get(r.get('ref')) or []
+    if not es or any(e.get('mode') == 'followup' for e in es) or es[0]['ts'] > cutoff: return False
+    p = b.get(r.get('ref'))
+    return not (p and p['status'] in ('clicked', 'replied', 'listed', 'declined', 'bounced'))
+
 def us_blocked(market_key):
     return market_key == 'us' and not CFG.get('postal_address', '').strip()
 
@@ -256,6 +268,8 @@ def deliver(rows, path, fields, pick, mode, tag, limit, gap, composer=compose):
             print('skip (no true line):', row['name']); continue
         if us_blocked(row['market'].split(',')[0]) and mode != 'followup':
             skipped_us += 1; continue
+        if mode in ('daily', 'send') and not has_mx(row['email']):
+            print('skip (no MX):', row['name'], row['email']); continue
         if mode != 'followup' and (row.get('ref') in by_ref or row['email'].lower() in by_email):
             row['sent'] = row.get('sent') or by_ref.get(row.get('ref'), by_email.get(row['email'].lower()))[0]['ts'][:10]; continue
         subject, body = c
@@ -284,12 +298,18 @@ def main():
     gap = int(sys.argv[sys.argv.index('--gap') + 1]) if '--gap' in sys.argv else 120
     market = sys.argv[sys.argv.index('--market') + 1] if '--market' in sys.argv else None
     market = {'au': 'australia', 'ie': 'ireland'}.get(market, market)
-    if mode in ('daily', 'preview', 'followup'):
+    if mode in ('daily', 'preview'):
         path = DISCOVERED
     else:
         path = CSV
     rows = list(csv.DictReader(open(path, encoding='utf-8', newline='')))
     fields = list(rows[0].keys())
+    if mode == 'followup':
+        # every list we ever sent from: the hand-made ones (EU/UK 20 Sep, US/AU 21 Sep) and the discovered one
+        for lp in sorted(glob.glob(D + 'outreach-agencies-*.csv')):
+            lrows = list(csv.DictReader(open(lp, encoding='utf-8', newline='')))
+            n = deliver(lrows, lp, list(lrows[0].keys()) if lrows else [], lambda r, _b=board(): _due(r, _b), 'followup', 'outreach-followup-' + TODAY, limit or 40, gap, composer=compose_followup)
+        return
     if mode == 'test':
         row = next(r for r in rows if r['email'] and compose(r))
         subject, body = compose(row)
@@ -305,7 +325,7 @@ def main():
         if not r['email'] or r.get('sent') or r.get('status') != '200': return False
         if market and r['market'].split(',')[0] != market: return False
         if int(r.get('score') or 0) < minscore or 'offshore' in (r.get('signals') or ''): return False
-        if not has_mx(r['email']): return False
+        if OFFSHORE_NAME.search((r.get('name') or '') + ' ' + (r.get('tagline') or '')): return False
         p = b.get(r.get('ref'))
         if p and p['status'] in ('declined', 'bounced', 'listed', 'replied'): return False
         return True
