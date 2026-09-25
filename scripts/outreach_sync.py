@@ -114,7 +114,9 @@ for P in [os.path.join(PROF, 'Mail', 'ProjectCostEstimator', 'Inbox'), os.path.j
                 except Exception: pass
         excerpt = re.sub(r'\s+', ' ', body).strip()[:240]
         if p['status'] not in ('listed', 'declined'):
-            p['status'] = 'declined' if re.match(r'^\W*(no|not interested|unsubscribe|remove)\b', excerpt.lower()) else 'replied'
+            low = excerpt.lower()[:400]
+            polite_no = re.match(r'^\W*(no|nope|not interested|unsubscribe|remove|stop)\b', low) or re.search(r"\b(no thanks?|not for (us|me)|not interested|unsubscribe|remove me|take me off|please stop|we build our own|i(?:'| a)m a developer|not looking|no need|do not (contact|email)|don't (contact|email))\b", low)
+            p['status'] = 'declined' if polite_no else 'replied'
         p['reply_at'] = d.isoformat(); p['reply_from'] = addr; p['reply_excerpt'] = excerpt
 
 # 4. clicks on the per-agency link (search-hits bucket, q contains ref=out-)

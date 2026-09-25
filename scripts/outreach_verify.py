@@ -107,7 +107,7 @@ def verify(row):
     if es: out['email'], out['email_alts'], out['email_source'] = es[0], ' '.join(es[1:4]), src
     # signals from the pages themselves
     sig = []
-    if OFFSHORE.search(text): sig.append('offshore')
+    if OFFSHORE.search(text) or re.search(r'\b(Pakistan|India|Bangladesh|Ukraine|Philippines|Nigeria|Egypt|Vietnam|Sri Lanka|Nepal)\b', row['name'] + ' ' + row.get('blurb', ''), re.I): sig.append('offshore')
     if ENTERPRISE.search(text): sig.append('enterprise')
     if market == 'australia' and (dom.endswith('.au') or AU_SIGNAL.search(text)): sig.append('au-confirmed')
     if market == 'us' and US_SIGNAL.search(text): sig.append('us-confirmed')
