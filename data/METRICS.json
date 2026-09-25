@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-09-25T04:35:10.657493Z",
+  "generated_utc": "2026-09-25T16:35:10.280501Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-09-25",
     "totals_28d": {
-      "clicks": 179,
-      "impressions": 49537,
-      "ctr": 0.361,
-      "position": 12.65
+      "clicks": 187,
+      "impressions": 51108,
+      "ctr": 0.366,
+      "position": 12.6
     },
     "totals_7d": {
-      "clicks": 29,
-      "impressions": 9454,
-      "ctr": 0.307,
-      "position": 11.28
+      "clicks": 37,
+      "impressions": 11025,
+      "ctr": 0.336,
+      "position": 11.26
     },
     "totals_90d": {
-      "clicks": 378,
-      "impressions": 111105,
-      "ctr": 0.34,
-      "position": 17.85
+      "clicks": 386,
+      "impressions": 112676,
+      "ctr": 0.343,
+      "position": 17.75
     },
     "totals_28d_prev": {
       "clicks": 121,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 4431,
-      "queries": 37,
+      "impressions": 4487,
+      "queries": 38,
       "sample": [
         "\"stripe connect custom\" payouts",
         "\"stripe connect\" payouts \"tutoring platform\"",
@@ -65,17 +65,17 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 179,
-      "impressions": 45106,
-      "ctr": 0.397
+      "clicks": 187,
+      "impressions": 46621,
+      "ctr": 0.401
     },
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 93,
+    "leads_total": 95,
     "leads_by_context": {
-      "sys:lastrun": 66,
-      "drip:3": 5,
+      "drip:3": 6,
+      "sys:lastrun": 67,
       "drip:2": 7,
       "drip:1": 6,
       "results:build": 2,
@@ -96,7 +96,7 @@
     "drip_stages": {
       "drip:1": 6,
       "drip:2": 7,
-      "drip:3": 5
+      "drip:3": 6
     },
     "affiliate_clicks": {
       "total": 157,
@@ -119,7 +119,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 25,
+      "impressions": 28,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -129,7 +129,7 @@
     },
     "/tools/fixed-price-vs-time-and-materials": {
       "pages_with_data": 1,
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0
     },
     "/cost/ai/": {
@@ -139,18 +139,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 460,
+      "impressions": 473,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 27,
-      "impressions": 101,
+      "pages_with_data": 28,
+      "impressions": 102,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 148,
-      "impressions": 868,
-      "clicks": 13
+      "pages_with_data": 151,
+      "impressions": 910,
+      "clicks": 14
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -159,18 +159,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 12690,
-      "clicks": 19
+      "impressions": 13111,
+      "clicks": 20
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2445,
+      "impressions": 2541,
       "clicks": 20
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1201,
-      "clicks": 14
+      "impressions": 1236,
+      "clicks": 15
     }
   }
 }
