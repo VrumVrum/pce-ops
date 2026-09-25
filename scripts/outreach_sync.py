@@ -13,7 +13,7 @@ Sources merged, in this order:
 Status ladder (highest wins): found < sent < clicked < replied < listed; `declined` and `bounced`
 are terminal. Runs from Task Scheduler every 30 min (PCE-OutreachSync) and after each send.
 """
-import csv, io, os, re, sys, json, glob, email, datetime, urllib.request, urllib.error, urllib.parse
+import csv, io, os, re, sys, json, glob, html, email, datetime, urllib.request, urllib.error, urllib.parse
 from email.header import decode_header, make_header
 sys.stdout.reconfigure(encoding='utf-8')
 D = 'C:/Users/Flo/Downloads/pce-ops/data/'
@@ -107,11 +107,16 @@ for P in [os.path.join(PROF, 'Mail', 'ProjectCostEstimator', 'Inbox'), os.path.j
             if d.tzinfo is None: d = d.replace(tzinfo=datetime.timezone.utc)
         except Exception: d = NOW
         if d < datetime.datetime(2026, 9, 20, 17, 0, tzinfo=datetime.timezone.utc): continue
-        body = ''
+        body = ''; html_body = ''
         for part in m.walk():
-            if part.get_content_type() == 'text/plain':
-                try: body = part.get_payload(decode=True).decode(part.get_content_charset() or 'utf-8', 'replace'); break
-                except Exception: pass
+            ct = part.get_content_type()
+            if ct not in ('text/plain', 'text/html'): continue
+            try: t = part.get_payload(decode=True).decode(part.get_content_charset() or 'utf-8', 'replace')
+            except Exception: continue
+            if ct == 'text/plain' and not body: body = t
+            elif ct == 'text/html' and not html_body: html_body = t
+        if not body and html_body:      # HTML-only replies (Gmail app, Outlook) used to yield an empty excerpt and no decline detection
+            body = html.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'<(script|style).*?</\1>', ' ', html_body, flags=re.S | re.I)))
         excerpt = re.sub(r'\s+', ' ', body).strip()[:240]
         if p['status'] not in ('listed', 'declined'):
             low = excerpt.lower()[:400]
