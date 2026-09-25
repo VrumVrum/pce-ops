@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-24T16:35:16Z",
+ "generated_utc": "2026-09-25T04:35:18Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "5aa442692f39",
+    "sha": "a6d5e66ccaed",
     "generated": "2026-09-24"
    },
    {
@@ -55,55 +55,47 @@
    "impressions_28d": 12764,
    "position": 9.5,
    "ctr_pct": 0.16,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 31.1
+   "site_clean_ctr_pct": 0.397,
+   "headroom_clicks_28d_at_clean_ctr": 30.3
   },
   {
    "page": "https://projectcostestimator.com/compare/free-estimators",
    "impressions_28d": 3794,
    "position": 10.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 15.3
+   "site_clean_ctr_pct": 0.397,
+   "headroom_clicks_28d_at_clean_ctr": 15.1
   },
   {
    "page": "https://projectcostestimator.com/website-cost-calculator",
    "impressions_28d": 3135,
    "position": 9.8,
    "ctr_pct": 0.35,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 1.7
+   "site_clean_ctr_pct": 0.397,
+   "headroom_clicks_28d_at_clean_ctr": 1.5
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 1427,
    "position": 8.6,
    "ctr_pct": 0.07,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 4.8
+   "site_clean_ctr_pct": 0.397,
+   "headroom_clicks_28d_at_clean_ctr": 4.7
   },
   {
    "page": "https://projectcostestimator.com/law-firm-website-cost",
    "impressions_28d": 1246,
    "position": 12.8,
    "ctr_pct": 0.16,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 3.0
-  },
-  {
-   "page": "https://projectcostestimator.com/landing-page-cost",
-   "impressions_28d": 1004,
-   "position": 12.9,
-   "ctr_pct": 0.4,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 0.0
   },
   {
    "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
    "impressions_28d": 892,
    "position": 9.4,
    "ctr_pct": 0.11,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 2.6
   },
   {
@@ -111,7 +103,7 @@
    "impressions_28d": 498,
    "position": 13.5,
    "ctr_pct": 0.2,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 1.0
   },
   {
@@ -119,7 +111,7 @@
    "impressions_28d": 368,
    "position": 10.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 1.5
   },
   {
@@ -127,7 +119,7 @@
    "impressions_28d": 242,
    "position": 14.8,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 1.0
   },
   {
@@ -135,7 +127,7 @@
    "impressions_28d": 207,
    "position": 13.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -143,15 +135,15 @@
    "impressions_28d": 188,
    "position": 6.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
-   "headroom_clicks_28d_at_clean_ctr": 0.8
+   "site_clean_ctr_pct": 0.397,
+   "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
    "page": "https://projectcostestimator.com/blog/multi-vendor-marketplace-cost-2026",
    "impressions_28d": 185,
    "position": 10.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -159,7 +151,7 @@
    "impressions_28d": 164,
    "position": 13.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -167,7 +159,7 @@
    "impressions_28d": 114,
    "position": 7.4,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.404,
+   "site_clean_ctr_pct": 0.397,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   }
  ],
