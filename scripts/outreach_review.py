@@ -23,7 +23,9 @@ THROWAWAY = ('atomicmail', 'mailinator', 'guerrillamail', '10minutemail', 'tempm
 FREEHOST = ('surge.sh', 'netlify.app', 'vercel.app', 'github.io', 'pages.dev', 'wixsite.com', 'weebly.com', 'wordpress.com', 'blogspot.', 'carrd.co', 'webflow.io', 'glitch.me', 'repl.co', 'herokuapp.com', 'notion.site', 'godaddysites.com', 'mystrikingly.com', 'square.site')
 OFFSHORE = re.compile(r'\+91[\s\d-]{8,}|\+92[\s\d-]{8,}|\+880[\s\d-]{7,}|\+380[\s\d-]{7,}|\+94[\s\d-]{8,}|\+63[\s\d-]{8,}|\bPvt\.?\s*Ltd\b|Private Limited', re.I)
 COUNTRY_OK = {'us': re.compile(r'\+1[\s.(-]{1,3}\d{3}|\bUnited States\b|\bUSA\b|\b(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)\s+\d{5}\b'),
-              'australia': re.compile(r'\+61|\bAustralia\b|\.com\.au\b|\bABN\b', re.I), 'uk': re.compile(r'\+44|\bUnited Kingdom\b|\.co\.uk\b|\bLondon\b|\bManchester\b', re.I),
+              'australia': re.compile(r'\+61|\bAustralia\b|\.com\.au\b|\bABN\b|\b(?:Melbourne|Sydney|Brisbane|Perth|Adelaide|Canberra|Gold Coast|Hobart|Darwin)\b|\b(?:NSW|VIC|QLD|WA|SA|TAS|ACT)\s+\d{4}\b', re.I),
+              'uk': re.compile(r'\+44|\bUnited Kingdom\b|\.co\.uk\b|\b(?:London|Manchester|Birmingham|Leeds|Glasgow|Edinburgh|Bristol|Liverpool|Sheffield|Cardiff|Belfast|Nottingham|Brighton)\b|\b[A-Z]{1,2}\d{1,2}[A-Z]?\s?\d[A-Z]{2}\b', re.I),
+              'ireland': re.compile(r'\+353|\bIreland\b|\.ie\b|\b(?:Dublin|Cork|Galway|Limerick|Waterford)\b', re.I),
               'western_europe': re.compile(r'\+3[1-4]|\+49|\+35[0-1]|\+4[1-3]|\bGmbH\b|\bB\.V\.\b|\bS\.L\.\b|\bSARL\b|\bLda\b', re.I), 'eastern_europe': re.compile(r'\+4[08]|\+42[01]|\+3[56][0-9]|\bS\.R\.L\b|\bSp\. z o\.o\b|\bs\.r\.o\b', re.I)}
 
 def token():
