@@ -1,71 +1,40 @@
 {
-  "generated_utc": "2026-09-21T04:38:25.912Z",
-  "status": "red",
+  "generated_utc": "2026-09-26T04:37:30.723Z",
+  "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
   "comparator": "pixelmatch@5 (pure JS; per-pixel threshold 0.1)",
-  "alerts": [
-    {
-      "page": "/",
-      "diff_pct": 21.74,
-      "ts": "2026-09-21T04:38:25.912Z"
-    },
-    {
-      "page": "/calculator",
-      "diff_pct": 5.42,
-      "ts": "2026-09-21T04:38:25.912Z"
-    },
-    {
-      "page": "/website-cost",
-      "diff_pct": 9.74,
-      "ts": "2026-09-21T04:38:25.912Z"
-    },
-    {
-      "page": "/pricing",
-      "diff_pct": 11.05,
-      "ts": "2026-09-21T04:38:25.912Z"
-    },
-    {
-      "page": "/website-costs-2026-report",
-      "diff_pct": 12.39,
-      "ts": "2026-09-21T04:38:25.912Z"
-    }
-  ],
+  "alerts": [],
   "pages": [
     {
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 21.74,
-      "alert": true
+      "diff_pct": 0
     },
     {
       "page": "/calculator",
       "name": "calculator",
       "seeded": false,
-      "diff_pct": 5.42,
-      "alert": true
+      "diff_pct": 0
     },
     {
       "page": "/website-cost",
       "name": "website-cost",
       "seeded": false,
-      "diff_pct": 9.74,
-      "alert": true
+      "diff_pct": 0
     },
     {
       "page": "/pricing",
       "name": "pricing",
       "seeded": false,
-      "diff_pct": 11.05,
-      "alert": true
+      "diff_pct": 0
     },
     {
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
       "seeded": false,
-      "diff_pct": 12.39,
-      "alert": true
+      "diff_pct": 0
     }
   ],
   "note": "Pixel diff of money pages vs committed baseline. status=red -> a page changed >5% visually (or failed to shoot); baseline is kept until re-seeded via workflow_dispatch reseed=true. Supervisor: treat red as a finding — text gates cannot see rendering."
