@@ -245,6 +245,19 @@ def has_mx(email):
     _MX[dom] = ok
     return ok
 
+def replies_are_readable(max_age_h=24):
+    """Replies only reach the board through the local Thunderbird mboxes, and only while Thunderbird
+    runs. On 2026-09-21 Studio Slate asked a question, the mbox had not been refreshed, and on the
+    27th the loop sent them a canned follow-up over their question. So: no follow-ups at all while
+    the reply source is stale — a silent prospect is cheap, writing over an answer is not."""
+    import os
+    prof = os.path.join(os.environ.get('APPDATA', ''), 'Thunderbird', 'Profiles', '3vcu35zk.default-release')
+    paths = [os.path.join(prof, 'Mail', 'ProjectCostEstimator', 'Inbox'), os.path.join(prof, 'ImapMail', 'imap.gmail.com', 'INBOX-1')]
+    newest = max([os.path.getmtime(x) for x in paths if os.path.exists(x)] or [0])
+    if not newest: return False, 'no Thunderbird mbox found'
+    age_h = (time.time() - newest) / 3600
+    return (age_h <= max_age_h), f'reply mbox is {age_h:.1f}h old'
+
 def _due(r, b):
     """One follow-up, 6+ days after the send, only when nothing happened (no click, reply, listing, decline, bounce)."""
     by_ref, _ = sent_log(); days = int(CFG.get('followup_after_days', 6))
@@ -305,6 +318,10 @@ def main():
     rows = list(csv.DictReader(open(path, encoding='utf-8', newline='')))
     fields = list(rows[0].keys())
     if mode == 'followup':
+        ok, why = replies_are_readable()
+        if not ok:
+            print('followup skipped:', why, '- replies would be invisible, so a follow-up could write over an answer')
+            return
         # every list we ever sent from: the hand-made ones (EU/UK 20 Sep, US/AU 21 Sep) and the discovered one
         for lp in sorted(glob.glob(D + 'outreach-agencies-*.csv')):
             lrows = list(csv.DictReader(open(lp, encoding='utf-8', newline='')))
