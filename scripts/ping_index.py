@@ -18,7 +18,12 @@ from cryptography.hazmat.primitives.asymmetric import padding
 
 KEY = os.environ.get('GSC_KEY_PATH', 'C:/Users/Flo/Downloads/gsc-key.json')
 SITE = 'sc-domain:projectcostestimator.com'
-INDEXNOW_KEY = 'a8f3e92d4c1b7e6f5a9d2c8b4e1f6a3d'
+# Two key files sit in public/; only this one is the key Bing bound to the verified site.
+# The other (a8f3e92d4c1b7e6f5a9d2c8b4e1f6a3d) answers 403 "UserForbiddedToAccessSite" at both
+# api.indexnow.org and bing.com/indexnow, so every deploy since the script was written submitted
+# nothing to Bing — which is why Bing Webmaster still recommended "Set up IndexNow" (2026-10-01).
+# Yandex accepts either. Verify a key change with a two-URL POST before trusting it.
+INDEXNOW_KEY = 'dea5aa52b12d8b95db45199f5d85e8c8'
 HOST = 'projectcostestimator.com'
 UA = 'Mozilla/5.0 (compatible; pce-indexer/1.0)'
 
@@ -97,8 +102,13 @@ def indexnow(urls):
                                      headers={'Content-Type': 'application/json; charset=utf-8'}, method='POST')
         r = urllib.request.urlopen(req, timeout=20)
         print(f'[IndexNow Bing/Yandex] batch {len(urls)} URLs -> HTTP {r.status}')
+        return r.status < 300
+    except urllib.error.HTTPError as e:
+        print(f'[IndexNow] REJECTED HTTP {e.code}:', e.read()[:200].decode('utf-8', 'replace'))
+        return False
     except Exception as e:
         print('[IndexNow] error', str(e)[:80])
+        return False
 
 
 def resubmit_sitemaps(tok):
