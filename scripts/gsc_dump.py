@@ -1,4 +1,10 @@
-"""Full GSC dump for agent analysis — 28d + 90d, all dimensions, save as JSON."""
+"""Full GSC dump for agent analysis — 28d + 90d, all dimensions, save as JSON.
+
+rowLimit 25000 on the query / page / page+query pulls since 2026-10-02: at 500 rows the API returns
+an arbitrary slice, and the 28-day query pull summed to 7,970 of the 47,693 impressions the totals
+reported — every analysis built on it was reading a sixth of the data. GSC still withholds the
+queries it anonymises (about half the impressions here); that part is not ours to fix.
+"""
 import json, time, urllib.request, urllib.parse, base64
 from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import padding
@@ -84,23 +90,23 @@ for k, start, end in [('totals_28d', s28, e), ('totals_7d', s7, e), ('totals_90d
         dump[k] = {'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 3), 'position': round(row['position'], 2)}
 
 # Top 500 queries 28d
-r = q({'startDate': s28, 'endDate': e, 'dimensions': ['query'], 'rowLimit': 500})
+r = q({'startDate': s28, 'endDate': e, 'dimensions': ['query'], 'rowLimit': 25000})
 dump['queries_28d'] = [{'query': row['keys'][0], 'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 2), 'position': round(row['position'], 1)} for row in r.get('rows', [])]
 
 # Top 500 pages 28d
-r = q({'startDate': s28, 'endDate': e, 'dimensions': ['page'], 'rowLimit': 500})
+r = q({'startDate': s28, 'endDate': e, 'dimensions': ['page'], 'rowLimit': 25000})
 dump['pages_28d'] = [{'page': row['keys'][0], 'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 2), 'position': round(row['position'], 1)} for row in r.get('rows', [])]
 
 # Top 500 page+query 28d (for content gap analysis)
-r = q({'startDate': s28, 'endDate': e, 'dimensions': ['page', 'query'], 'rowLimit': 500})
+r = q({'startDate': s28, 'endDate': e, 'dimensions': ['page', 'query'], 'rowLimit': 25000})
 dump['page_query_28d'] = [{'page': row['keys'][0], 'query': row['keys'][1], 'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 2), 'position': round(row['position'], 1)} for row in r.get('rows', [])]
 
 # Top 500 queries 90d (trend)
-r = q({'startDate': s90, 'endDate': e, 'dimensions': ['query'], 'rowLimit': 500})
+r = q({'startDate': s90, 'endDate': e, 'dimensions': ['query'], 'rowLimit': 25000})
 dump['queries_90d'] = [{'query': row['keys'][0], 'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 2), 'position': round(row['position'], 1)} for row in r.get('rows', [])]
 
 # Top 500 pages 90d
-r = q({'startDate': s90, 'endDate': e, 'dimensions': ['page'], 'rowLimit': 500})
+r = q({'startDate': s90, 'endDate': e, 'dimensions': ['page'], 'rowLimit': 25000})
 dump['pages_90d'] = [{'page': row['keys'][0], 'clicks': row['clicks'], 'impressions': row['impressions'], 'ctr': round(row['ctr']*100, 2), 'position': round(row['position'], 1)} for row in r.get('rows', [])]
 
 # Countries 28d
