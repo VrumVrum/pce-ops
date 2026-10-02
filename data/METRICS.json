@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-02T04:35:14.771688Z",
+  "generated_utc": "2026-10-02T16:35:12.682888Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-02",
@@ -72,9 +72,9 @@
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 102,
+    "leads_total": 103,
     "leads_by_context": {
-      "sys:lastrun": 73,
+      "sys:lastrun": 74,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
