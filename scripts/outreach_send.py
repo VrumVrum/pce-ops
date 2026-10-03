@@ -35,6 +35,18 @@ FROM = 'Florin Florea (Project Cost Estimator) <hello@projectcostestimator.com>'
 REPLY_TO = 'hello@projectcostestimator.com'
 env = open('C:/Users/Flo/Downloads/scopebit/.env.vercel', encoding='utf-8').read()
 KEY = re.search(r'^RESEND_API_KEY="?([^"' + chr(13) + chr(10) + r']+)"?', env, re.M).group(1).strip()
+_sec = re.search(r'^PCE_ACCESS_SECRET="?([^"' + chr(13) + chr(10) + r']+)"?', env, re.M)
+SECRET = _sec.group(1).strip() if _sec else 'pce-default-salt'   # same fallback as dripSig.ts
+
+def unsub_url(email):
+    """One-click unsubscribe link, byte-identical to what src/lib/dripSig.ts signs:
+    HMAC-SHA256 over 'unsub:<lowercased email>', hex, first 32 chars. The endpoint at
+    /api/unsubscribe has accepted RFC 8058 POSTs since it was written; cold outreach
+    simply never sent the header, so the one-click path existed and was unreachable."""
+    import hmac, hashlib, urllib.parse
+    e = (email or '').strip().lower()
+    sig = hmac.new(SECRET.encode(), ('unsub:' + e).encode(), hashlib.sha256).hexdigest()[:32]
+    return 'https://projectcostestimator.com/api/unsubscribe?e=' + urllib.parse.quote(e, safe='') + '&s=' + sig
 CFG = {'postal_address': '', 'daily_cap': {'us': 25, 'australia': 25}, 'min_score': 60, 'followup_after_days': 6}
 try: CFG.update(json.load(open(D + 'outreach-config.json', encoding='utf-8-sig')))     # -sig: PowerShell writes a BOM
 except Exception as _e: print('outreach-config.json not read:', _e)
@@ -139,6 +151,7 @@ def compose(row):
     # (src/app/embed/EmbedProOffer.tsx): own CTA target, own brand line, own colours, no credit, stats.
     subject = f"A website cost calculator on {who}, and a free agency listing"
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
+    unsub = unsub_url(row['email'])
     body = f"""{greet}
 
 I run projectcostestimator.com, an independent website cost calculator (we don't build sites). Two things for {you}, since {specific}:
@@ -149,7 +162,8 @@ I run projectcostestimator.com, an independent website cost calculator (we don't
 
 Both start from one two-minute form: https://projectcostestimator.com/for-agencies?ref={ref}
 
-If it's not for you, reply "no" and I won't write again.
+If it's not for you, reply "no" and I won't write again, or use this link and the system
+stops on its own: {unsub}
 
 Florin Florea
 founder, Project Cost Estimator
@@ -188,10 +202,43 @@ hello@projectcostestimator.com{postal}"""
     return subject, body
 
 def send(to, subject, body, tag):
-    payload = {'from': FROM, 'to': [to], 'reply_to': REPLY_TO, 'subject': subject, 'text': body, 'tags': [{'name': 'campaign', 'value': tag}]}
+    # Gmail and Yahoo have required one-click unsubscribe from bulk senders since
+    # February 2024 (RFC 8058). We sent 665 cold emails without either header, which
+    # is both a deliverability penalty and a weaker opt-out than the one we had already
+    # built. mailto: stays as the fallback for clients that do not do one-click.
+    payload = {'from': FROM, 'to': [to], 'reply_to': REPLY_TO, 'subject': subject, 'text': body,
+               'tags': [{'name': 'campaign', 'value': tag}],
+               'headers': {'List-Unsubscribe': '<' + unsub_url(to) + '>, <mailto:' + REPLY_TO + '?subject=unsubscribe>',
+                           'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click'}}
     req = urllib.request.Request('https://api.resend.com/emails', data=json.dumps(payload).encode(), headers={'Authorization': 'Bearer ' + KEY, 'Content-Type': 'application/json', 'User-Agent': 'pce-outreach/1.0 (+https://projectcostestimator.com)'}, method='POST')
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())
+
+_unsub = None
+def unsubscribed():
+    """Lowercased emails that used the one-click link, or None when we cannot tell.
+
+    /api/unsubscribe records the opt-out as a row in Supabase `leads` with context='unsub'.
+    The outreach loop runs off CSVs and never looked there, so before 2026-10-03 a one-click
+    opt-out would have shown the recipient a page reading "No more emails from us" and changed
+    nothing. Adding the List-Unsubscribe header without this check would have turned a missing
+    feature into a broken promise.
+    """
+    global _unsub
+    if _unsub is not None:
+        return _unsub
+    try:
+        e = open('C:/Users/Flo/Downloads/scopebit/.env.local', encoding='utf-8').read()
+        url = re.search(r'^SUPABASE_URL="?([^"' + chr(13) + chr(10) + r']+)"?', e, re.M).group(1).strip()
+        key = re.search(r'^SUPABASE_SERVICE_ROLE_KEY="?([^"' + chr(13) + chr(10) + r']+)"?', e, re.M).group(1).strip()
+        req = urllib.request.Request(url.rstrip('/') + '/rest/v1/leads?select=email&context=eq.unsub',
+                                     headers={'apikey': key, 'Authorization': 'Bearer ' + key})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            _unsub = {(x.get('email') or '').strip().lower() for x in json.loads(r.read()) if x.get('email')}
+    except Exception as ex:
+        print('unsubscribe list UNREADABLE:', str(ex)[:120])
+        _unsub = None
+    return _unsub
 
 def log(entry):
     with io.open(LOG, 'a', encoding='utf-8') as f:
@@ -274,8 +321,17 @@ def us_blocked(market_key):
 
 def deliver(rows, path, fields, pick, mode, tag, limit, gap, composer=compose):
     by_ref, by_email = sent_log(); n = 0; skipped_us = 0
+    # Fail closed, for the same reason replies_are_readable() does: a missed day of cold
+    # outreach costs nothing, while writing to someone who pressed unsubscribe breaks a
+    # promise we made them in the header of the last message.
+    opted_out = unsubscribed()
+    if opted_out is None:
+        print('ABORT: cannot read the unsubscribe list, so no send can be proven safe.')
+        return 0
     for row in rows:
         if not pick(row): continue
+        if (row.get('email') or '').strip().lower() in opted_out:
+            print('skip (unsubscribed):', row.get('name'), row.get('email')); continue
         c = composer(row)
         if not c:
             print('skip (no true line):', row['name']); continue
