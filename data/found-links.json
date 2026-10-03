@@ -1,0 +1,258 @@
+{
+ "generated_utc": "2026-10-03T08:22:49Z",
+ "source": "GitHub code search (gh api search/code)",
+ "scope": "public repositories only; silence here is not evidence of absence",
+ "queries": [
+  "projectcostestimator.com in:file",
+  "\"projectcostestimator.com/api-docs\" in:file"
+ ],
+ "third_party_repo_count": 7,
+ "own_repo_count": 4,
+ "repos": [
+  {
+   "repo": "awesomedata/apd-core",
+   "html_url": "https://github.com/awesomedata/apd-core",
+   "stars": null,
+   "files": [
+    "core/Economics/Project-Cost-Estimator-Website-Cost-Data.yml"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "awesomedata/awesome-public-datasets",
+   "html_url": "https://github.com/awesomedata/awesome-public-datasets",
+   "stars": null,
+   "files": [
+    "README.rst"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "dolphilia/libx",
+   "html_url": "https://github.com/dolphilia/libx",
+   "stars": null,
+   "files": [
+    "apps/awesome/science/src/awesome-content/v2026-08-23/en/big-data/awesomedata-awesome-public-datasets.md",
+    "apps/awesome/science/src/awesome-content/v2026-08-23/ja/big-data/awesomedata-awesome-public-datasets.md"
+   ],
+   "found_by": [
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "engrshuvodas/open-free-api-directory",
+   "html_url": "https://github.com/engrshuvodas/open-free-api-directory",
+   "stars": null,
+   "files": [
+    "README.md"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "harrysun-code/awesome-with-star",
+   "html_url": "https://github.com/harrysun-code/awesome-with-star",
+   "stars": null,
+   "files": [
+    "awesome/awesome-public-datasets.md"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "marcelscruz/public-apis",
+   "html_url": "https://github.com/marcelscruz/public-apis",
+   "stars": null,
+   "files": [
+    "README.md"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "public-api-lists/public-api-lists",
+   "html_url": "https://github.com/public-api-lists/public-api-lists",
+   "stars": null,
+   "files": [
+    "README.md"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": false
+  },
+  {
+   "repo": "VrumVrum/claude-memory",
+   "html_url": "https://github.com/VrumVrum/claude-memory",
+   "stars": null,
+   "files": [
+    "reference_gsc_api.md"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file"
+   ],
+   "ours": true
+  },
+  {
+   "repo": "VrumVrum/pce-ops",
+   "html_url": "https://github.com/VrumVrum/pce-ops",
+   "stars": null,
+   "files": [
+    "README.md",
+    "data/aimode-pce.txt",
+    "dataset/README_body.md",
+    "data/outreach-kit-2026-09-20.md",
+    "scripts/ping_index.py",
+    "data/disavow-fiverr-2026-09-hardreject.txt",
+    "data/GSC-TRENDS.json"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": true
+  },
+  {
+   "repo": "VrumVrum/scopebit",
+   "html_url": "https://github.com/VrumVrum/scopebit",
+   "stars": null,
+   "files": [
+    "UTM_LINKS.md",
+    "LAUNCH_COPY.md",
+    "_outreach_kit.md",
+    "PRESS_RELEASE.md",
+    "public/humans.txt",
+    "OUTREACH_TARGETS.md",
+    "docs/OS/growth/azi.md",
+    "_quora_answers_ready.md",
+    "src/lib/og.ts",
+    "_gsc_inspect.py",
+    "GA4_SETUP.md",
+    "docs/brand/email/README.md",
+    "docs/OS/growth/copy-pack.md",
+    "docs/OS/growth/sos-queue.md",
+    "src/app/robots.ts",
+    "docs/OS/growth/pr-pitches.md",
+    "_phase0_targets.py",
+    "_gsc_full_audit.py",
+    "src/app/layout.tsx",
+    "src/lib/dripSig.ts",
+    "_gsc_check_jun25.py",
+    "_gsc_full_audit.log",
+    "_gsc_fresh_check.py",
+    "src/app/pro/page.tsx",
+    "public/.well-known/security.txt",
+    "src/app/blog/page.tsx",
+    "_gsc_reindex_10new.py",
+    "_gsc_sweep_sitemap.py",
+    "src/lib/animations.ts",
+    "_indexnow_submit.py",
+    "src/app/press/page.tsx",
+    "src/app/terms/page.tsx",
+    "src/app/embed/page.tsx",
+    "_gsc_reindex_5pages.py",
+    "src/app/faq/layout.tsx",
+    "src/lib/pdfDelivery.ts",
+    "_gsc_reindex_gamma10.py",
+    "docs/OS/growth/queue-ready.md",
+    ".claude/agents/pce-growth.md",
+    "src/app/press/layout.tsx",
+    "src/app/saved/layout.tsx",
+    "_gsc_reindex_homepage.py",
+    "src/app/compare/page.tsx",
+    "scripts/render-emails.ts",
+    "src/app/privacy/page.tsx",
+    "_gsc_reindex_go_final.py",
+    "src/app/budget/layout.tsx",
+    "_gsc_force_index_new10.py",
+    "automation/_ping_index.py",
+    "_gsc_reindex_fix_alpha.py",
+    "_gsc_reindex_fix_delta.py",
+    "_gsc_force_index_titles.py",
+    "src/app/contact/layout.tsx",
+    "src/app/account/layout.tsx",
+    "src/app/pricing/layout.tsx",
+    "src/app/results/layout.tsx",
+    "src/app/cost/hire/page.tsx",
+    "src/app/page.tsx",
+    "src/lib/providerApproval.ts",
+    "src/lib/providerBrief.ts",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/api/contact/route.ts",
+    "LINK_BUILDING.md",
+    "src/lib/urlState.ts",
+    "src/app/calculator/layout.tsx",
+    "src/app/sponsorships/page.tsx",
+    "src/app/api-docs/page.tsx",
+    "src/app/api/cost-data/route.ts",
+    "src/app/embed/license/page.tsx",
+    "src/app/cost/app-like/page.tsx",
+    "src/app/methodology/layout.tsx",
+    "src/app/embed/[niche]/page.tsx",
+    "automation/e2e-email-click.mjs",
+    "src/app/calculators/layout.tsx",
+    "src/app/atom.xml/route.ts",
+    "scripts/gen-openapi.mjs",
+    "src/lib/subscriptionServer.ts",
+    "src/app/rates-2026.csv/route.ts",
+    "src/app/website-cost/layout.tsx",
+    "src/app/api/auth/magic/route.ts",
+    "automation/mastodon_publish.py",
+    "src/app/expert-review/layout.tsx",
+    "public/llms-full.txt",
+    "docs/OS/growth/video-kit.md",
+    "src/app/llms.txt/route.ts",
+    "src/app/api/v1/estimate/route.ts",
+    "docs/OS/growth/distribution-package-2026-07-28.md",
+    "src/lib/emailTemplates.ts",
+    "docs/OS/worklog/offsite-submissions.md",
+    "_sitemap_fetched.xml",
+    "docs/OS/ledger/_audit_brief.json",
+    "docs/OS/seo-review-2026-09-17/gsc_page_country_device.csv"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": true
+  },
+  {
+   "repo": "VrumVrum/website-cost-api",
+   "html_url": "https://github.com/VrumVrum/website-cost-api",
+   "stars": null,
+   "files": [
+    "README.md",
+    "examples/curl.sh",
+    "examples/fetch.js",
+    "examples/fetch.py",
+    "docs/index.html"
+   ],
+   "found_by": [
+    "projectcostestimator.com in:file",
+    "\"projectcostestimator.com/api-docs\" in:file"
+   ],
+   "ours": true
+  }
+ ],
+ "errors": [],
+ "complete": true
+}
