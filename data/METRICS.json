@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-04T04:35:11.463963Z",
+  "generated_utc": "2026-10-04T16:35:10.139863Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-04",
@@ -72,9 +72,9 @@
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 104,
+    "leads_total": 105,
     "leads_by_context": {
-      "sys:lastrun": 75,
+      "sys:lastrun": 76,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
@@ -99,20 +99,20 @@
       "drip:3": 7
     },
     "affiliate_clicks": {
-      "total": 200,
-      "last7d": 42,
+      "total": 201,
+      "last7d": 38,
       "by_slug": {
         "fiverr": 104,
         "wix": 49,
-        "shopify": 41,
+        "shopify": 42,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 233,
+      "rows_before_bot_filter": 234,
       "excluded_by_is_bot_flag": 33,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 148,
-      "ip_hash_coverage_pct": 73.4,
-      "note": "user_ip_hash is NULL on 62 of 233 rows (73% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 33 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 149,
+      "ip_hash_coverage_pct": 73.5,
+      "note": "user_ip_hash is NULL on 62 of 234 rows (74% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 33 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
