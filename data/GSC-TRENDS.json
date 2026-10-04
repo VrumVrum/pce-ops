@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-03T16:35:20Z",
+ "generated_utc": "2026-10-04T04:35:18Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "faa294e9062f",
+    "sha": "4607ba88ea57",
     "generated": "2026-10-03"
    },
    {
@@ -55,39 +55,39 @@
    "impressions_28d": 10822,
    "position": 8.9,
    "ctr_pct": 0.18,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 30.1
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 31.0
   },
   {
    "page": "https://projectcostestimator.com/website-cost-calculator",
    "impressions_28d": 2843,
    "position": 10.8,
    "ctr_pct": 0.28,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 5.1
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 5.3
   },
   {
    "page": "https://projectcostestimator.com/compare/free-estimators",
    "impressions_28d": 2648,
    "position": 10.8,
    "ctr_pct": 0.04,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 11.1
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 11.3
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 922,
    "position": 8.5,
    "ctr_pct": 0.11,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 3.2
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 3.3
   },
   {
    "page": "https://projectcostestimator.com/law-firm-website-cost",
    "impressions_28d": 918,
    "position": 13.0,
    "ctr_pct": 0.33,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 1.2
   },
   {
@@ -95,15 +95,15 @@
    "impressions_28d": 823,
    "position": 12.9,
    "ctr_pct": 0.24,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 1.8
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 1.9
   },
   {
    "page": "https://projectcostestimator.com/blog/vercel-cost-2026",
    "impressions_28d": 586,
    "position": 7.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 2.7
   },
   {
@@ -111,7 +111,7 @@
    "impressions_28d": 382,
    "position": 9.5,
    "ctr_pct": 0.26,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -119,7 +119,7 @@
    "impressions_28d": 279,
    "position": 6.1,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 1.3
   },
   {
@@ -127,7 +127,7 @@
    "impressions_28d": 240,
    "position": 7.4,
    "ctr_pct": 0.42,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.1
   },
   {
@@ -135,15 +135,15 @@
    "impressions_28d": 228,
    "position": 12.4,
    "ctr_pct": 0.44,
-   "site_clean_ctr_pct": 0.458,
-   "headroom_clicks_28d_at_clean_ctr": 0.0
+   "site_clean_ctr_pct": 0.466,
+   "headroom_clicks_28d_at_clean_ctr": 0.1
   },
   {
    "page": "https://projectcostestimator.com/mobile-app-cost",
    "impressions_28d": 203,
    "position": 12.4,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.9
   },
   {
@@ -151,7 +151,7 @@
    "impressions_28d": 189,
    "position": 12.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.9
   },
   {
@@ -159,7 +159,7 @@
    "impressions_28d": 179,
    "position": 10.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -167,7 +167,7 @@
    "impressions_28d": 169,
    "position": 12.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -175,7 +175,7 @@
    "impressions_28d": 157,
    "position": 10.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -183,7 +183,7 @@
    "impressions_28d": 155,
    "position": 7.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -191,7 +191,7 @@
    "impressions_28d": 150,
    "position": 9.0,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -199,7 +199,7 @@
    "impressions_28d": 133,
    "position": 6.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.6
   },
   {
@@ -207,7 +207,7 @@
    "impressions_28d": 111,
    "position": 7.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   },
   {
@@ -215,7 +215,7 @@
    "impressions_28d": 102,
    "position": 8.7,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.458,
+   "site_clean_ctr_pct": 0.466,
    "headroom_clicks_28d_at_clean_ctr": 0.5
   }
  ],
