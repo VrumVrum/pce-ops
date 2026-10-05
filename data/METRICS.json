@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-05T04:35:10.908078Z",
+  "generated_utc": "2026-10-05T16:35:11.808440Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-05",
     "totals_28d": {
-      "clicks": 186,
-      "impressions": 44424,
-      "ctr": 0.419,
-      "position": 11.58
+      "clicks": 193,
+      "impressions": 45495,
+      "ctr": 0.424,
+      "position": 11.66
     },
     "totals_7d": {
-      "clicks": 44,
-      "impressions": 7358,
-      "ctr": 0.598,
-      "position": 10.65
+      "clicks": 51,
+      "impressions": 8429,
+      "ctr": 0.605,
+      "position": 11.23
     },
     "totals_90d": {
-      "clicks": 442,
-      "impressions": 118914,
-      "ctr": 0.372,
-      "position": 16.63
+      "clicks": 449,
+      "impressions": 119985,
+      "ctr": 0.374,
+      "position": 16.62
     },
     "totals_28d_prev": {
       "clicks": 139,
@@ -56,25 +56,25 @@
       ]
     },
     "junk_28d": {
-      "impressions": 4731,
-      "queries": 112,
+      "impressions": 4778,
+      "queries": 114,
       "sample": [
+        "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "\"saas\" \"rate card\"",
-        "+site.developer.apple.com \"small business program\" \"15%\"",
-        "cloudflare d1 pricing official 2026"
+        "+site.developer.apple.com \"small business program\" \"15%\""
       ]
     },
     "totals_28d_clean": {
-      "clicks": 186,
-      "impressions": 39693,
-      "ctr": 0.469
+      "clicks": 193,
+      "impressions": 40717,
+      "ctr": 0.474
     },
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 105,
+    "leads_total": 106,
     "leads_by_context": {
-      "sys:lastrun": 76,
+      "sys:lastrun": 77,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
@@ -100,7 +100,7 @@
     },
     "affiliate_clicks": {
       "total": 201,
-      "last7d": 26,
+      "last7d": 24,
       "by_slug": {
         "fiverr": 104,
         "wix": 49,
@@ -119,7 +119,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 35,
+      "impressions": 36,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -139,18 +139,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 307,
+      "impressions": 310,
       "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 30,
-      "impressions": 119,
+      "impressions": 121,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 152,
-      "impressions": 878,
-      "clicks": 13
+      "pages_with_data": 153,
+      "impressions": 923,
+      "clicks": 15
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -159,18 +159,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 10334,
-      "clicks": 19
+      "impressions": 10506,
+      "clicks": 20
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2303,
-      "clicks": 14
+      "impressions": 2361,
+      "clicks": 15
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 1006,
-      "clicks": 16
+      "impressions": 1023,
+      "clicks": 17
     }
   }
 }
