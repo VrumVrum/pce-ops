@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-06T16:35:20Z",
+ "generated_utc": "2026-10-07T04:35:20Z",
  "site": "sc-domain:projectcostestimator.com",
  "method": {
   "source": "git history of data/gsc_dump.json in this repo (git-scraping)",
@@ -15,7 +15,7 @@
  "history": {
   "snapshots_used": [
    {
-    "sha": "18a11833981a",
+    "sha": "686ca4dcff30",
     "generated": "2026-10-06"
    },
    {
@@ -55,55 +55,55 @@
    "impressions_28d": 10024,
    "position": 8.8,
    "ctr_pct": 0.19,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 28.8
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 30.0
   },
   {
    "page": "https://projectcostestimator.com/website-cost-calculator",
    "impressions_28d": 2614,
    "position": 11.2,
    "ctr_pct": 0.23,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 6.5
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 6.8
   },
   {
    "page": "https://projectcostestimator.com/compare/free-estimators",
    "impressions_28d": 2275,
    "position": 11.1,
    "ctr_pct": 0.04,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 9.9
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 10.2
   },
   {
    "page": "https://projectcostestimator.com/blog/wcag-accessibility-cost-2026",
    "impressions_28d": 1106,
    "position": 12.6,
    "ctr_pct": 0.36,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 1.3
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 1.4
   },
   {
    "page": "https://projectcostestimator.com/website-migration-cost",
    "impressions_28d": 962,
    "position": 13.5,
    "ctr_pct": 0.21,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 2.6
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 2.7
   },
   {
    "page": "https://projectcostestimator.com/law-firm-website-cost",
    "impressions_28d": 846,
    "position": 14.4,
    "ctr_pct": 0.35,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 1.1
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 1.2
   },
   {
    "page": "https://projectcostestimator.com/blog/cloudflare-cost-2026",
    "impressions_28d": 658,
    "position": 8.6,
    "ctr_pct": 0.15,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 2.2
   },
   {
@@ -111,7 +111,7 @@
    "impressions_28d": 538,
    "position": 7.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 2.6
   },
   {
@@ -119,15 +119,15 @@
    "impressions_28d": 408,
    "position": 5.0,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 1.9
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 2.0
   },
   {
    "page": "https://projectcostestimator.com/blog/web-app-cost-estimation-2026",
    "impressions_28d": 395,
    "position": 9.7,
    "ctr_pct": 0.25,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.9
   },
   {
@@ -135,7 +135,7 @@
    "impressions_28d": 368,
    "position": 11.4,
    "ctr_pct": 0.27,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -143,31 +143,39 @@
    "impressions_28d": 318,
    "position": 6.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 1.5
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 1.6
   },
   {
    "page": "https://projectcostestimator.com/blog/klaviyo-cost-2026",
    "impressions_28d": 276,
    "position": 7.6,
    "ctr_pct": 0.36,
-   "site_clean_ctr_pct": 0.477,
-   "headroom_clicks_28d_at_clean_ctr": 0.3
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 0.4
   },
   {
    "page": "https://projectcostestimator.com/mobile-app-cost",
    "impressions_28d": 210,
    "position": 11.9,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 1.0
+  },
+  {
+   "page": "https://projectcostestimator.com/blog/cost-estimate-api-2026",
+   "impressions_28d": 209,
+   "position": 7.6,
+   "ctr_pct": 0.48,
+   "site_clean_ctr_pct": 0.489,
+   "headroom_clicks_28d_at_clean_ctr": 0.0
   },
   {
    "page": "https://projectcostestimator.com/blog/mailchimp-vs-klaviyo-cost-2026",
    "impressions_28d": 204,
    "position": 12.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 1.0
   },
   {
@@ -175,7 +183,7 @@
    "impressions_28d": 170,
    "position": 8.8,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -183,7 +191,7 @@
    "impressions_28d": 165,
    "position": 7.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -191,7 +199,7 @@
    "impressions_28d": 158,
    "position": 8.6,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.8
   },
   {
@@ -199,7 +207,7 @@
    "impressions_28d": 149,
    "position": 8.5,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -207,7 +215,7 @@
    "impressions_28d": 148,
    "position": 5.4,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -215,7 +223,7 @@
    "impressions_28d": 146,
    "position": 6.4,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -223,7 +231,7 @@
    "impressions_28d": 142,
    "position": 14.1,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.7
   },
   {
@@ -231,7 +239,7 @@
    "impressions_28d": 118,
    "position": 7.2,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.6
   },
   {
@@ -239,7 +247,7 @@
    "impressions_28d": 117,
    "position": 6.3,
    "ctr_pct": 0,
-   "site_clean_ctr_pct": 0.477,
+   "site_clean_ctr_pct": 0.489,
    "headroom_clicks_28d_at_clean_ctr": 0.6
   }
  ],
