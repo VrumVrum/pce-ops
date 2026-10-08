@@ -1,63 +1,63 @@
 {
-  "generated_utc": "2026-10-07T16:35:11.101543Z",
+  "generated_utc": "2026-10-08T04:35:11.688158Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-10-07",
+    "generated": "2026-10-08",
     "totals_28d": {
       "clicks": 187,
-      "impressions": 42359,
-      "ctr": 0.441,
-      "position": 11.64
+      "impressions": 41518,
+      "ctr": 0.45,
+      "position": 11.88
     },
     "totals_7d": {
-      "clicks": 44,
-      "impressions": 6982,
-      "ctr": 0.63,
-      "position": 12.89
+      "clicks": 40,
+      "impressions": 7154,
+      "ctr": 0.559,
+      "position": 14.87
     },
     "totals_90d": {
-      "clicks": 454,
-      "impressions": 119480,
-      "ctr": 0.38,
-      "position": 16.51
+      "clicks": 458,
+      "impressions": 120096,
+      "ctr": 0.381,
+      "position": 16.45
     },
     "totals_28d_prev": {
-      "clicks": 145,
-      "impressions": 45781,
-      "ctr": 0.317,
-      "position": 16.42
+      "clicks": 147,
+      "impressions": 46564,
+      "ctr": 0.316,
+      "position": 16.11
     },
     "totals_7d_prev": {
-      "clicks": 46,
-      "impressions": 9530,
-      "ctr": 0.483,
-      "position": 9.83
+      "clicks": 50,
+      "impressions": 9305,
+      "ctr": 0.537,
+      "position": 9.52
     },
     "windows": {
       "current_28d": [
-        "2026-09-08",
-        "2026-10-05"
+        "2026-09-09",
+        "2026-10-06"
       ],
       "previous_28d": [
-        "2026-08-11",
-        "2026-09-07"
+        "2026-08-12",
+        "2026-09-08"
       ],
       "current_7d": [
-        "2026-09-29",
-        "2026-10-05"
+        "2026-09-30",
+        "2026-10-06"
       ],
       "previous_7d": [
-        "2026-09-22",
-        "2026-09-28"
+        "2026-09-23",
+        "2026-09-29"
       ],
       "current_90d": [
-        "2026-07-08",
-        "2026-10-05"
+        "2026-07-09",
+        "2026-10-06"
       ]
     },
     "junk_28d": {
-      "impressions": 4097,
-      "queries": 109,
+      "impressions": 3772,
+      "queries": 107,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "\"saas\" \"rate card\"",
@@ -66,8 +66,8 @@
     },
     "totals_28d_clean": {
       "clicks": 187,
-      "impressions": 38262,
-      "ctr": 0.489
+      "impressions": 37746,
+      "ctr": 0.495
     },
     "citation_floor_alerts": []
   },
@@ -101,7 +101,7 @@
     },
     "affiliate_clicks": {
       "total": 203,
-      "last7d": 14,
+      "last7d": 13,
       "by_slug": {
         "fiverr": 106,
         "wix": 49,
@@ -135,23 +135,23 @@
     },
     "/cost/ai/": {
       "pages_with_data": 2,
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 290,
+      "impressions": 295,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 30,
-      "impressions": 117,
+      "pages_with_data": 29,
+      "impressions": 113,
       "clicks": 2
     },
     "/cost/industry/": {
-      "pages_with_data": 151,
-      "impressions": 875,
-      "clicks": 15
+      "pages_with_data": 148,
+      "impressions": 880,
+      "clicks": 17
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -160,18 +160,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 9693,
-      "clicks": 21
+      "impressions": 9279,
+      "clicks": 20
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2241,
+      "impressions": 2234,
       "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 959,
-      "clicks": 16
+      "impressions": 938,
+      "clicks": 17
     }
   }
 }
