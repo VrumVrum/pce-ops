@@ -52,3 +52,9 @@ pending applications: 0
 done: 0 reviewed, 0 held for the owner
 pending applications: 0
 done: 0 reviewed, 0 held for the owner
+pending applications: 0
+done: 0 reviewed, 0 held for the owner
+pending applications: 1
+approve  CodeFirst                        contact@codefirst.co.uk            uk                     | live site, own-domain address, market visible
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '1410f0a5-332c-41c6-9c38-c65c9781f24f', 'name': 'CodeFirst', 'application_status': 'approved', 'active': True}}
+done: 1 reviewed, 0 held for the owner
