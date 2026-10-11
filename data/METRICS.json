@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-11T04:35:10.993587Z",
+  "generated_utc": "2026-10-11T16:35:09.960155Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-11",
     "totals_28d": {
-      "clicks": 180,
-      "impressions": 39269,
-      "ctr": 0.458,
-      "position": 12.36
+      "clicks": 186,
+      "impressions": 40322,
+      "ctr": 0.461,
+      "position": 12.37
     },
     "totals_7d": {
-      "clicks": 41,
-      "impressions": 7423,
-      "ctr": 0.552,
-      "position": 16.72
+      "clicks": 47,
+      "impressions": 8476,
+      "ctr": 0.555,
+      "position": 16.22
     },
     "totals_90d": {
-      "clicks": 475,
-      "impressions": 122007,
-      "ctr": 0.389,
-      "position": 16.24
+      "clicks": 481,
+      "impressions": 123060,
+      "ctr": 0.391,
+      "position": 16.21
     },
     "totals_28d_prev": {
       "clicks": 163,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 3303,
-      "queries": 109,
+      "impressions": 3379,
+      "queries": 113,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "\"saas\" \"rate card\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 180,
-      "impressions": 35966,
-      "ctr": 0.5
+      "clicks": 186,
+      "impressions": 36943,
+      "ctr": 0.503
     },
     "citation_floor_alerts": [
       {
@@ -77,10 +77,10 @@
     ]
   },
   "supabase": {
-    "leads_total": 115,
+    "leads_total": 117,
     "leads_by_context": {
-      "sys:lastrun": 82,
-      "unsub": 4,
+      "unsub": 5,
+      "sys:lastrun": 83,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
@@ -106,7 +106,7 @@
     },
     "affiliate_clicks": {
       "total": 212,
-      "last7d": 12,
+      "last7d": 11,
       "by_slug": {
         "fiverr": 110,
         "wix": 51,
@@ -125,7 +125,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 33,
+      "impressions": 34,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -145,18 +145,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 258,
+      "impressions": 265,
       "clicks": 0
     },
     "/cost/app-like/": {
       "pages_with_data": 27,
-      "impressions": 108,
+      "impressions": 114,
       "clicks": 1
     },
     "/cost/industry/": {
       "pages_with_data": 152,
-      "impressions": 872,
-      "clicks": 20
+      "impressions": 900,
+      "clicks": 21
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -165,17 +165,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 8035,
-      "clicks": 12
+      "impressions": 8239,
+      "clicks": 13
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2180,
+      "impressions": 2233,
       "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 907,
+      "impressions": 926,
       "clicks": 15
     }
   }

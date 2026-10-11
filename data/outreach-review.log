@@ -66,3 +66,9 @@ pending applications: 0
 done: 0 reviewed, 0 held for the owner
 pending applications: 0
 done: 0 reviewed, 0 held for the owner
+pending applications: 1
+approve  SLASH Digital Lab                jean.martial@slash-digital.io      us,remote              | none of the claimed platforms appears on the site (fine for custom-only shops)
+   -> {'ok': True, 'emailed': True, 'provider': {'id': 'd588fe57-e417-40bd-bddb-762a55fa10c4', 'name': 'SLASH Digital Lab', 'application_status': 'approved', 'active': True}}
+done: 1 reviewed, 0 held for the owner
+pending applications: 0
+done: 0 reviewed, 0 held for the owner
