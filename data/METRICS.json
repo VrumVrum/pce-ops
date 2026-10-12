@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-12T04:35:09.628750Z",
+  "generated_utc": "2026-10-12T16:35:10.813234Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-12",
     "totals_28d": {
-      "clicks": 180,
-      "impressions": 38606,
-      "ctr": 0.466,
-      "position": 12.34
+      "clicks": 186,
+      "impressions": 39487,
+      "ctr": 0.471,
+      "position": 12.36
     },
     "totals_7d": {
-      "clicks": 40,
-      "impressions": 7405,
-      "ctr": 0.54,
-      "position": 16.37
+      "clicks": 46,
+      "impressions": 8286,
+      "ctr": 0.555,
+      "position": 16.04
     },
     "totals_90d": {
-      "clicks": 480,
-      "impressions": 122518,
-      "ctr": 0.392,
-      "position": 16.12
+      "clicks": 486,
+      "impressions": 123399,
+      "ctr": 0.394,
+      "position": 16.1
     },
     "totals_28d_prev": {
       "clicks": 166,
@@ -56,7 +56,7 @@
       ]
     },
     "junk_28d": {
-      "impressions": 3171,
+      "impressions": 3239,
       "queries": 112,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
@@ -65,22 +65,22 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 180,
-      "impressions": 35435,
-      "ctr": 0.508
+      "clicks": 186,
+      "impressions": 36248,
+      "ctr": 0.513
     },
     "citation_floor_alerts": [
       {
         "page": "/rate-database",
-        "impressions": 6
+        "impressions": 7
       }
     ]
   },
   "supabase": {
-    "leads_total": 117,
+    "leads_total": 118,
     "leads_by_context": {
+      "sys:lastrun": 84,
       "unsub": 5,
-      "sys:lastrun": 83,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
@@ -145,8 +145,8 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 251,
-      "clicks": 0
+      "impressions": 254,
+      "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 27,
@@ -155,7 +155,7 @@
     },
     "/cost/industry/": {
       "pages_with_data": 150,
-      "impressions": 857,
+      "impressions": 879,
       "clicks": 19
     },
     "/software-development-budget-2027": {
@@ -165,18 +165,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 7822,
-      "clicks": 13
+      "impressions": 7981,
+      "clicks": 14
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2155,
+      "impressions": 2219,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 887,
-      "clicks": 14
+      "impressions": 907,
+      "clicks": 15
     }
   }
 }

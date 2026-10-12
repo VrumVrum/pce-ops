@@ -1,41 +1,48 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-12T04:35:19Z",
+  "generated_utc": "2026-10-12T16:35:21Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "580",
-      "users": "552",
-      "engagementRate": "0.33620689655172414",
-      "avgDuration": "30.164766412068971"
+      "sessions": "573",
+      "users": "548",
+      "engagementRate": "0.31588132635253052",
+      "avgDuration": "27.898561883071554"
     },
     {
       "channel": "Organic Search",
-      "sessions": "85",
-      "users": "69",
-      "engagementRate": "0.44705882352941179",
-      "avgDuration": "166.67509749411767"
+      "sessions": "83",
+      "users": "70",
+      "engagementRate": "0.38554216867469882",
+      "avgDuration": "142.09263413253012"
     },
     {
       "channel": "Unassigned",
-      "sessions": "23",
-      "users": "23",
+      "sessions": "38",
+      "users": "38",
       "engagementRate": "0",
-      "avgDuration": "22.343280217391303"
+      "avgDuration": "25.106223894736839"
     },
     {
       "channel": "AI Assistant",
-      "sessions": "6",
-      "users": "5",
-      "engagementRate": "0.66666666666666663",
-      "avgDuration": "157.72754566666666"
+      "sessions": "5",
+      "users": "4",
+      "engagementRate": "0.4",
+      "avgDuration": "12.850948800000001"
     },
     {
       "channel": "Referral",
-      "sessions": "5",
-      "users": "5",
-      "engagementRate": "0.6",
-      "avgDuration": "28.106665000000003"
+      "sessions": "4",
+      "users": "4",
+      "engagementRate": "0.75",
+      "avgDuration": "34.35032575"
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": "3",
+      "users": "3",
+      "engagementRate": "0",
+      "avgDuration": "387.66667433333333"
     },
     {
       "channel": "Organic Social",
@@ -48,31 +55,31 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "914",
-      "users": "866",
-      "engagementRate": "0.30743982494529543",
-      "avgDuration": "30.778217842450765"
+      "sessions": "945",
+      "users": "896",
+      "engagementRate": "0.291005291005291",
+      "avgDuration": "28.533257705820105"
     },
     {
       "channel": "Organic Search",
-      "sessions": "173",
-      "users": "145",
-      "engagementRate": "0.46242774566473988",
-      "avgDuration": "178.69018420809249"
+      "sessions": "178",
+      "users": "150",
+      "engagementRate": "0.43820224719101125",
+      "avgDuration": "168.91112010112357"
     },
     {
       "channel": "Unassigned",
-      "sessions": "33",
-      "users": "33",
-      "engagementRate": "0.030303030303030304",
-      "avgDuration": "19.638313303030305"
+      "sessions": "48",
+      "users": "48",
+      "engagementRate": "0.020833333333333332",
+      "avgDuration": "22.583754770833334"
     },
     {
       "channel": "AI Assistant",
-      "sessions": "19",
+      "sessions": "18",
       "users": "14",
-      "engagementRate": "0.47368421052631576",
-      "avgDuration": "93.016141368421046"
+      "engagementRate": "0.5",
+      "avgDuration": "98.192563277777765"
     },
     {
       "channel": "Referral",
@@ -80,6 +87,13 @@
       "users": "7",
       "engagementRate": "0.5714285714285714",
       "avgDuration": "28.591464142857145"
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": "3",
+      "users": "3",
+      "engagementRate": "0",
+      "avgDuration": "387.66667433333333"
     },
     {
       "channel": "Organic Social",
@@ -92,59 +106,59 @@
   "ai_sources_28d": [
     {
       "source": "chatgpt.com",
-      "sessions": "10",
-      "engagementRate": "0.4"
+      "sessions": "9",
+      "engagementRate": "0.44444444444444442"
     },
     {
-      "source": "copilot.com",
+      "source": "gemini.google.com",
       "sessions": "5",
       "engagementRate": "0.4"
     },
     {
-      "source": "gemini.google.com",
-      "sessions": "4",
-      "engagementRate": "0.5"
-    },
-    {
-      "source": "perplexity",
-      "sessions": "2",
-      "engagementRate": "0.5"
+      "source": "copilot.com",
+      "sessions": "3",
+      "engagementRate": "0.66666666666666663"
     },
     {
       "source": "gemini",
       "sessions": "1",
       "engagementRate": "1"
+    },
+    {
+      "source": "perplexity",
+      "sessions": "1",
+      "engagementRate": "1"
     }
   ],
-  "ai_sessions_28d": 22,
+  "ai_sessions_28d": 19,
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "914",
-      "engagementRate": "0.30743982494529543"
+      "sessions": "945",
+      "engagementRate": "0.291005291005291"
     },
     {
       "source": "google",
-      "sessions": "114",
-      "engagementRate": "0.46491228070175439"
+      "sessions": "117",
+      "engagementRate": "0.44444444444444442"
     },
     {
       "source": "bing",
-      "sessions": "52",
-      "engagementRate": "0.48076923076923078"
+      "sessions": "53",
+      "engagementRate": "0.45283018867924529"
     },
     {
       "source": "(not set)",
-      "sessions": "30",
+      "sessions": "47",
       "engagementRate": "0"
     },
     {
       "source": "chatgpt.com",
-      "sessions": "10",
-      "engagementRate": "0.4"
+      "sessions": "9",
+      "engagementRate": "0.44444444444444442"
     },
     {
-      "source": "copilot.com",
+      "source": "gemini.google.com",
       "sessions": "5",
       "engagementRate": "0.4"
     },
@@ -154,9 +168,19 @@
       "engagementRate": "0.25"
     },
     {
-      "source": "gemini.google.com",
-      "sessions": "4",
-      "engagementRate": "0.5"
+      "source": "(data not available)",
+      "sessions": "3",
+      "engagementRate": "0"
+    },
+    {
+      "source": "cn.bing.com",
+      "sessions": "3",
+      "engagementRate": "0"
+    },
+    {
+      "source": "copilot.com",
+      "sessions": "3",
+      "engagementRate": "0.66666666666666663"
     },
     {
       "source": "app.prntscr.com",
@@ -164,26 +188,16 @@
       "engagementRate": "1"
     },
     {
-      "source": "cn.bing.com",
-      "sessions": "2",
-      "engagementRate": "0"
-    },
-    {
       "source": "facebook.com",
       "sessions": "2",
       "engagementRate": "1"
-    },
-    {
-      "source": "perplexity",
-      "sessions": "2",
-      "engagementRate": "0.5"
     }
   ],
   "ai_landings_28d": [
     {
       "source": "chatgpt.com",
       "landing": "/calculator",
-      "sessions": "5"
+      "sessions": "4"
     },
     {
       "source": "chatgpt.com",
@@ -226,16 +240,6 @@
       "sessions": "1"
     },
     {
-      "source": "copilot.com",
-      "landing": "/cost/industry/barber",
-      "sessions": "1"
-    },
-    {
-      "source": "copilot.com",
-      "landing": "/web-app-development-cost",
-      "sessions": "1"
-    },
-    {
       "source": "gemini",
       "landing": "/website-cost-calculator",
       "sessions": "1"
@@ -247,6 +251,11 @@
     },
     {
       "source": "gemini.google.com",
+      "landing": "/",
+      "sessions": "1"
+    },
+    {
+      "source": "gemini.google.com",
       "landing": "/blog/website-builder-comparison-2026",
       "sessions": "1"
     },
@@ -258,11 +267,6 @@
     {
       "source": "gemini.google.com",
       "landing": "/restaurant-website-cost",
-      "sessions": "1"
-    },
-    {
-      "source": "perplexity",
-      "landing": "/calculator",
       "sessions": "1"
     },
     {
@@ -274,28 +278,28 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "106",
-      "engagementRate": "0.59433962264150941"
+      "sessions": "110",
+      "engagementRate": "0.57272727272727275"
     },
     {
       "landing": "/blog/api-integration-cost-2026",
-      "sessions": "45",
-      "engagementRate": "0.53333333333333333"
-    },
-    {
-      "landing": "(not set)",
-      "sessions": "36",
-      "engagementRate": "0.027777777777777776"
+      "sessions": "47",
+      "engagementRate": "0.51063829787234039"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
-      "sessions": "36",
-      "engagementRate": "0.69444444444444442"
+      "sessions": "41",
+      "engagementRate": "0.6097560975609756"
+    },
+    {
+      "landing": "(not set)",
+      "sessions": "35",
+      "engagementRate": "0.028571428571428571"
     },
     {
       "landing": "/freelance-website-cost",
-      "sessions": "35",
-      "engagementRate": "0.2857142857142857"
+      "sessions": "34",
+      "engagementRate": "0.29411764705882354"
     },
     {
       "landing": "/calculator",
@@ -304,8 +308,13 @@
     },
     {
       "landing": "/blog/website-builder-comparison-2026",
-      "sessions": "21",
-      "engagementRate": "0.095238095238095233"
+      "sessions": "20",
+      "engagementRate": "0.1"
+    },
+    {
+      "landing": "/restaurant-website-cost",
+      "sessions": "18",
+      "engagementRate": "0.44444444444444442"
     },
     {
       "landing": "/blog/website-maintenance-cost-2026",
@@ -313,19 +322,14 @@
       "engagementRate": "0.35294117647058826"
     },
     {
-      "landing": "/restaurant-website-cost",
-      "sessions": "17",
-      "engagementRate": "0.47058823529411764"
-    },
-    {
-      "landing": "/nonprofit-website-cost",
+      "landing": "/blog/cloudflare-cost-2026",
       "sessions": "16",
-      "engagementRate": "0.625"
+      "engagementRate": "0.0625"
     },
     {
       "landing": "/blog/wcag-accessibility-cost-2026",
-      "sessions": "15",
-      "engagementRate": "0.13333333333333333"
+      "sessions": "14",
+      "engagementRate": "0"
     },
     {
       "landing": "/blog/web-design-pricing-guide-2026",
@@ -333,14 +337,14 @@
       "engagementRate": "0.5"
     },
     {
-      "landing": "/web-app-development-cost",
-      "sessions": "13",
-      "engagementRate": "0.23076923076923078"
+      "landing": "/nonprofit-website-cost",
+      "sessions": "14",
+      "engagementRate": "0.6428571428571429"
     },
     {
-      "landing": "/blog/cloudflare-cost-2026",
-      "sessions": "12",
-      "engagementRate": "0.083333333333333329"
+      "landing": "/for-agencies",
+      "sessions": "13",
+      "engagementRate": "0.53846153846153844"
     },
     {
       "landing": "/blog/stripe-vs-paypal-fees-2026",
@@ -348,52 +352,52 @@
       "engagementRate": "0.083333333333333329"
     },
     {
-      "landing": "/for-agencies",
+      "landing": "/web-app-development-cost",
       "sessions": "12",
-      "engagementRate": "0.58333333333333337"
+      "engagementRate": "0.16666666666666666"
     },
     {
-      "landing": "/blog/web-project-cost-index-2026",
-      "sessions": "10",
-      "engagementRate": "0"
+      "landing": "/blog/landing-page-pricing-guide-2026",
+      "sessions": "11",
+      "engagementRate": "0.090909090909090912"
+    },
+    {
+      "landing": "/website-cost-calculator",
+      "sessions": "11",
+      "engagementRate": "0.27272727272727271"
     },
     {
       "landing": "/blog/wp-engine-cost-2026",
       "sessions": "10",
-      "engagementRate": "0.6"
+      "engagementRate": "0.5"
     },
     {
-      "landing": "/blog/hubspot-cost-2026",
+      "landing": "",
       "sessions": "9",
       "engagementRate": "0"
-    },
-    {
-      "landing": "/blog/landing-page-pricing-guide-2026",
-      "sessions": "9",
-      "engagementRate": "0.1111111111111111"
     }
   ],
   "ai_wow_alerts": [
     {
       "engine": "chatgpt",
-      "sessions_then": 23,
-      "sessions_now": 10,
-      "ref_date": "2026-10-05",
-      "drop_pct": 56.5
+      "sessions_then": 19,
+      "sessions_now": 9,
+      "ref_date": "2026-10-06",
+      "drop_pct": 52.6
     },
     {
       "engine": "copilot",
-      "sessions_then": 9,
-      "sessions_now": 5,
-      "ref_date": "2026-10-05",
-      "drop_pct": 44.4
+      "sessions_then": 10,
+      "sessions_now": 3,
+      "ref_date": "2026-10-06",
+      "drop_pct": 70.0
     },
     {
       "engine": "perplexity",
       "sessions_then": 5,
-      "sessions_now": 2,
-      "ref_date": "2026-10-05",
-      "drop_pct": 60.0
+      "sessions_now": 1,
+      "ref_date": "2026-10-06",
+      "drop_pct": 80.0
     }
   ],
   "funnel_28d": {
@@ -404,13 +408,12 @@
         "step": 1,
         "event": "begin_checkout",
         "means": "opened the calculator (wizard_started)",
-        "events": 95,
-        "users": 86,
+        "events": 96,
+        "users": 87,
         "users_from_prev_pct": null,
         "events_from_prev_pct": null,
         "fired_on_days": 14,
         "by_date": {
-          "20260913": 3,
           "20260914": 6,
           "20260915": 7,
           "20260916": 12,
@@ -423,7 +426,8 @@
           "20261007": 12,
           "20261008": 11,
           "20261009": 6,
-          "20261010": 5
+          "20261010": 5,
+          "20261011": 4
         },
         "users_from_top_pct": 100.0
       },
@@ -431,11 +435,11 @@
         "step": 2,
         "event": "step_completed",
         "means": "advanced past a wizard step",
-        "events": 81,
-        "users": 24,
-        "users_from_prev_pct": 27.9,
-        "events_from_prev_pct": 85.3,
-        "fired_on_days": 13,
+        "events": 85,
+        "users": 25,
+        "users_from_prev_pct": 28.7,
+        "events_from_prev_pct": 88.5,
+        "fired_on_days": 14,
         "by_date": {
           "20260914": 1,
           "20260915": 9,
@@ -449,19 +453,20 @@
           "20261007": 12,
           "20261008": 9,
           "20261009": 5,
-          "20261010": 8
+          "20261010": 8,
+          "20261011": 4
         },
-        "users_from_top_pct": 27.9
+        "users_from_top_pct": 28.7
       },
       {
         "step": 3,
         "event": "view_item",
         "means": "reached a result screen (results_viewed)",
-        "events": 30,
-        "users": 26,
-        "users_from_prev_pct": 108.3,
-        "events_from_prev_pct": 37.0,
-        "fired_on_days": 10,
+        "events": 32,
+        "users": 28,
+        "users_from_prev_pct": 112.0,
+        "events_from_prev_pct": 37.6,
+        "fired_on_days": 11,
         "by_date": {
           "20260915": 3,
           "20261002": 1,
@@ -472,9 +477,10 @@
           "20261007": 4,
           "20261008": 4,
           "20261009": 2,
-          "20261010": 3
+          "20261010": 3,
+          "20261011": 2
         },
-        "users_from_top_pct": 30.2
+        "users_from_top_pct": 32.2
       },
       {
         "step": 4,
@@ -482,15 +488,15 @@
         "means": "submitted an email (email_capture_submitted)",
         "events": 3,
         "users": 3,
-        "users_from_prev_pct": 11.5,
-        "events_from_prev_pct": 10.0,
+        "users_from_prev_pct": 10.7,
+        "events_from_prev_pct": 9.4,
         "fired_on_days": 3,
         "by_date": {
           "20260915": 1,
           "20260916": 1,
           "20261007": 1
         },
-        "users_from_top_pct": 3.5
+        "users_from_top_pct": 3.4
       },
       {
         "step": 5,
@@ -510,7 +516,7 @@
       "to": "purchase",
       "users_pct": 0.0
     },
-    "headline": "begin_checkout 86 users (95 ev) -> step_completed 24 users (81 ev) -> view_item 26 users (30 ev) -> generate_lead 3 users (3 ev) -> purchase 0 users (0 ev)",
+    "headline": "begin_checkout 87 users (96 ev) -> step_completed 25 users (85 ev) -> view_item 28 users (32 ev) -> generate_lead 3 users (3 ev) -> purchase 0 users (0 ev)",
     "note": "Users are DISTINCT per window (separate undated query); events are raw counts. A step with 0 is a genuine zero: the query succeeded and GA4 has no such event in the window. Percentages are of the step immediately above, null where that step is itself 0."
   },
   "funnel_7d": {
@@ -521,19 +527,19 @@
         "step": 1,
         "event": "begin_checkout",
         "means": "opened the calculator (wizard_started)",
-        "events": 53,
-        "users": 49,
+        "events": 51,
+        "users": 48,
         "users_from_prev_pct": null,
         "events_from_prev_pct": null,
         "fired_on_days": 7,
         "by_date": {
-          "20261004": 6,
           "20261005": 8,
           "20261006": 5,
           "20261007": 12,
           "20261008": 11,
           "20261009": 6,
-          "20261010": 5
+          "20261010": 5,
+          "20261011": 4
         },
         "users_from_top_pct": 100.0
       },
@@ -541,21 +547,21 @@
         "step": 2,
         "event": "step_completed",
         "means": "advanced past a wizard step",
-        "events": 48,
-        "users": 15,
-        "users_from_prev_pct": 30.6,
-        "events_from_prev_pct": 90.6,
+        "events": 44,
+        "users": 14,
+        "users_from_prev_pct": 29.2,
+        "events_from_prev_pct": 86.3,
         "fired_on_days": 7,
         "by_date": {
-          "20261004": 8,
           "20261005": 5,
           "20261006": 1,
           "20261007": 12,
           "20261008": 9,
           "20261009": 5,
-          "20261010": 8
+          "20261010": 8,
+          "20261011": 4
         },
-        "users_from_top_pct": 30.6
+        "users_from_top_pct": 29.2
       },
       {
         "step": 3,
@@ -563,19 +569,19 @@
         "means": "reached a result screen (results_viewed)",
         "events": 23,
         "users": 20,
-        "users_from_prev_pct": 133.3,
-        "events_from_prev_pct": 47.9,
+        "users_from_prev_pct": 142.9,
+        "events_from_prev_pct": 52.3,
         "fired_on_days": 7,
         "by_date": {
-          "20261004": 2,
           "20261005": 5,
           "20261006": 3,
           "20261007": 4,
           "20261008": 4,
           "20261009": 2,
-          "20261010": 3
+          "20261010": 3,
+          "20261011": 2
         },
-        "users_from_top_pct": 40.8
+        "users_from_top_pct": 41.7
       },
       {
         "step": 4,
@@ -589,7 +595,7 @@
         "by_date": {
           "20261007": 1
         },
-        "users_from_top_pct": 2.0
+        "users_from_top_pct": 2.1
       },
       {
         "step": 5,
@@ -609,7 +615,7 @@
       "to": "purchase",
       "users_pct": 0.0
     },
-    "headline": "begin_checkout 49 users (53 ev) -> step_completed 15 users (48 ev) -> view_item 20 users (23 ev) -> generate_lead 1 users (1 ev) -> purchase 0 users (0 ev)",
+    "headline": "begin_checkout 48 users (51 ev) -> step_completed 14 users (44 ev) -> view_item 20 users (23 ev) -> generate_lead 1 users (1 ev) -> purchase 0 users (0 ev)",
     "note": "Users are DISTINCT per window (separate undated query); events are raw counts. A step with 0 is a genuine zero: the query succeeded and GA4 has no such event in the window. Percentages are of the step immediately above, null where that step is itself 0."
   },
   "funnel_28d_human": {
@@ -626,7 +632,6 @@
         "events_from_prev_pct": null,
         "fired_on_days": 14,
         "by_date": {
-          "20260913": 3,
           "20260914": 5,
           "20260915": 6,
           "20260916": 11,
@@ -639,7 +644,8 @@
           "20261007": 10,
           "20261008": 6,
           "20261009": 3,
-          "20261010": 5
+          "20261010": 5,
+          "20261011": 3
         },
         "users_from_top_pct": 100.0
       },
@@ -672,11 +678,11 @@
         "step": 3,
         "event": "view_item",
         "means": "reached a result screen (results_viewed)",
-        "events": 24,
-        "users": 20,
-        "users_from_prev_pct": 117.6,
-        "events_from_prev_pct": 38.7,
-        "fired_on_days": 10,
+        "events": 25,
+        "users": 21,
+        "users_from_prev_pct": 123.5,
+        "events_from_prev_pct": 40.3,
+        "fired_on_days": 11,
         "by_date": {
           "20260915": 2,
           "20261002": 1,
@@ -687,9 +693,10 @@
           "20261007": 4,
           "20261008": 3,
           "20261009": 1,
-          "20261010": 3
+          "20261010": 3,
+          "20261011": 1
         },
-        "users_from_top_pct": 30.3
+        "users_from_top_pct": 31.8
       },
       {
         "step": 4,
@@ -697,8 +704,8 @@
         "means": "submitted an email (email_capture_submitted)",
         "events": 3,
         "users": 3,
-        "users_from_prev_pct": 15.0,
-        "events_from_prev_pct": 12.5,
+        "users_from_prev_pct": 14.3,
+        "events_from_prev_pct": 12.0,
         "fired_on_days": 3,
         "by_date": {
           "20260915": 1,
@@ -725,7 +732,7 @@
       "to": "purchase",
       "users_pct": 0.0
     },
-    "headline": "begin_checkout 66 users (74 ev) -> step_completed 17 users (62 ev) -> view_item 20 users (24 ev) -> generate_lead 3 users (3 ev) -> purchase 0 users (0 ev)",
+    "headline": "begin_checkout 66 users (74 ev) -> step_completed 17 users (62 ev) -> view_item 21 users (25 ev) -> generate_lead 3 users (3 ev) -> purchase 0 users (0 ev)",
     "note": "Users are DISTINCT per window (separate undated query); events are raw counts. A step with 0 is a genuine zero: the query succeeded and GA4 has no such event in the window. Percentages are of the step immediately above, null where that step is itself 0."
   },
   "funnel_7d_human": {
@@ -736,19 +743,19 @@
         "step": 1,
         "event": "begin_checkout",
         "means": "opened the calculator (wizard_started)",
-        "events": 38,
-        "users": 35,
+        "events": 35,
+        "users": 33,
         "users_from_prev_pct": null,
         "events_from_prev_pct": null,
         "fired_on_days": 7,
         "by_date": {
-          "20261004": 6,
           "20261005": 7,
           "20261006": 1,
           "20261007": 10,
           "20261008": 6,
           "20261009": 3,
-          "20261010": 5
+          "20261010": 5,
+          "20261011": 3
         },
         "users_from_top_pct": 100.0
       },
@@ -756,40 +763,39 @@
         "step": 2,
         "event": "step_completed",
         "means": "advanced past a wizard step",
-        "events": 38,
-        "users": 10,
-        "users_from_prev_pct": 28.6,
-        "events_from_prev_pct": 100.0,
-        "fired_on_days": 6,
+        "events": 30,
+        "users": 8,
+        "users_from_prev_pct": 24.2,
+        "events_from_prev_pct": 85.7,
+        "fired_on_days": 5,
         "by_date": {
-          "20261004": 8,
           "20261005": 5,
           "20261007": 8,
           "20261008": 5,
           "20261009": 4,
           "20261010": 8
         },
-        "users_from_top_pct": 28.6
+        "users_from_top_pct": 24.2
       },
       {
         "step": 3,
         "event": "view_item",
         "means": "reached a result screen (results_viewed)",
-        "events": 19,
-        "users": 16,
-        "users_from_prev_pct": 160.0,
-        "events_from_prev_pct": 50.0,
+        "events": 18,
+        "users": 15,
+        "users_from_prev_pct": 187.5,
+        "events_from_prev_pct": 60.0,
         "fired_on_days": 7,
         "by_date": {
-          "20261004": 2,
           "20261005": 4,
           "20261006": 2,
           "20261007": 4,
           "20261008": 3,
           "20261009": 1,
-          "20261010": 3
+          "20261010": 3,
+          "20261011": 1
         },
-        "users_from_top_pct": 45.7
+        "users_from_top_pct": 45.5
       },
       {
         "step": 4,
@@ -797,13 +803,13 @@
         "means": "submitted an email (email_capture_submitted)",
         "events": 1,
         "users": 1,
-        "users_from_prev_pct": 6.2,
-        "events_from_prev_pct": 5.3,
+        "users_from_prev_pct": 6.7,
+        "events_from_prev_pct": 5.6,
         "fired_on_days": 1,
         "by_date": {
           "20261007": 1
         },
-        "users_from_top_pct": 2.9
+        "users_from_top_pct": 3.0
       },
       {
         "step": 5,
@@ -823,7 +829,7 @@
       "to": "purchase",
       "users_pct": 0.0
     },
-    "headline": "begin_checkout 35 users (38 ev) -> step_completed 10 users (38 ev) -> view_item 16 users (19 ev) -> generate_lead 1 users (1 ev) -> purchase 0 users (0 ev)",
+    "headline": "begin_checkout 33 users (35 ev) -> step_completed 8 users (30 ev) -> view_item 15 users (18 ev) -> generate_lead 1 users (1 ev) -> purchase 0 users (0 ev)",
     "note": "Users are DISTINCT per window (separate undated query); events are raw counts. A step with 0 is a genuine zero: the query succeeded and GA4 has no such event in the window. Percentages are of the step immediately above, null where that step is itself 0."
   }
 }
