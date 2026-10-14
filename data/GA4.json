@@ -1,20 +1,20 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-14T07:35:24Z",
+  "generated_utc": "2026-10-14T16:35:20Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "571",
-      "users": "548",
-      "engagementRate": "0.30122591943957966",
-      "avgDuration": "29.044976245183886"
+      "sessions": "573",
+      "users": "550",
+      "engagementRate": "0.30017452006980805",
+      "avgDuration": "28.95097990052356"
     },
     {
       "channel": "Organic Search",
       "sessions": "73",
       "users": "66",
       "engagementRate": "0.36986301369863012",
-      "avgDuration": "178.7700730821918"
+      "avgDuration": "178.77007308219177"
     },
     {
       "channel": "Unassigned",
@@ -55,10 +55,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "1061",
-      "users": "1007",
-      "engagementRate": "0.28180961357210177",
-      "avgDuration": "29.630039997172478"
+      "sessions": "1063",
+      "users": "1009",
+      "engagementRate": "0.2812793979303857",
+      "avgDuration": "29.578271386641582"
     },
     {
       "channel": "Organic Search",
@@ -134,8 +134,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "1061",
-      "engagementRate": "0.28180961357210177"
+      "sessions": "1063",
+      "engagementRate": "0.2812793979303857"
     },
     {
       "source": "google",
@@ -377,22 +377,22 @@
       "engine": "chatgpt",
       "sessions_then": 14,
       "sessions_now": 6,
-      "ref_date": "2026-10-07",
+      "ref_date": "2026-10-08",
       "drop_pct": 57.1
     },
     {
       "engine": "copilot",
       "sessions_then": 7,
       "sessions_now": 4,
-      "ref_date": "2026-10-07",
+      "ref_date": "2026-10-08",
       "drop_pct": 42.9
     },
     {
       "engine": "perplexity",
-      "sessions_then": 5,
+      "sessions_then": 4,
       "sessions_now": 1,
-      "ref_date": "2026-10-07",
-      "drop_pct": 80.0
+      "ref_date": "2026-10-08",
+      "drop_pct": 75.0
     }
   ],
   "funnel_28d": {
