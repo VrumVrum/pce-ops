@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-15T04:35:10.684515Z",
+  "generated_utc": "2026-10-15T16:35:24.756956Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-15",
     "totals_28d": {
-      "clicks": 169,
-      "impressions": 35746,
-      "ctr": 0.473,
-      "position": 12.35
+      "clicks": 174,
+      "impressions": 36916,
+      "ctr": 0.471,
+      "position": 12.48
     },
     "totals_7d": {
-      "clicks": 33,
-      "impressions": 6494,
-      "ctr": 0.508,
-      "position": 13.96
+      "clicks": 38,
+      "impressions": 7664,
+      "ctr": 0.496,
+      "position": 14.35
     },
     "totals_90d": {
-      "clicks": 488,
-      "impressions": 123929,
+      "clicks": 493,
+      "impressions": 125099,
       "ctr": 0.394,
-      "position": 15.86
+      "position": 15.87
     },
     "totals_28d_prev": {
       "clicks": 179,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 2514,
-      "queries": 104,
+      "impressions": 2629,
+      "queries": 112,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "\"saas\" \"rate card\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 169,
-      "impressions": 33232,
-      "ctr": 0.509
+      "clicks": 174,
+      "impressions": 34287,
+      "ctr": 0.507
     },
     "citation_floor_alerts": [
       {
@@ -77,11 +77,11 @@
     ]
   },
   "supabase": {
-    "leads_total": 123,
+    "leads_total": 125,
     "leads_by_context": {
-      "sys:lastrun": 86,
+      "sys:lastrun": 87,
+      "unsub": 8,
       "results:build": 3,
-      "unsub": 7,
       "drip:3": 7,
       "drip:2": 7,
       "drip:1": 6,
@@ -105,20 +105,20 @@
       "drip:3": 7
     },
     "affiliate_clicks": {
-      "total": 220,
-      "last7d": 17,
+      "total": 221,
+      "last7d": 18,
       "by_slug": {
         "fiverr": 113,
+        "shopify": 51,
         "wix": 51,
-        "shopify": 50,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 278,
+      "rows_before_bot_filter": 279,
       "excluded_by_is_bot_flag": 58,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 171,
-      "ip_hash_coverage_pct": 77.7,
-      "note": "user_ip_hash is NULL on 62 of 278 rows (78% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 58 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 172,
+      "ip_hash_coverage_pct": 77.8,
+      "note": "user_ip_hash is NULL on 62 of 279 rows (78% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 58 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -145,17 +145,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 214,
+      "impressions": 231,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 25,
-      "impressions": 99,
+      "pages_with_data": 27,
+      "impressions": 102,
       "clicks": 1
     },
     "/cost/industry/": {
-      "pages_with_data": 149,
-      "impressions": 846,
+      "pages_with_data": 150,
+      "impressions": 875,
       "clicks": 17
     },
     "/software-development-budget-2027": {
@@ -165,17 +165,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 6842,
-      "clicks": 11
+      "impressions": 6981,
+      "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 2,
-      "impressions": 2080,
+      "impressions": 2153,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 838,
+      "impressions": 879,
       "clicks": 15
     }
   }
