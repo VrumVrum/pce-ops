@@ -95,3 +95,9 @@ hold     Web R Solution                   office@webrsolution.com            eas
 approve  New-website.bg                   support@new-website.bg             eastern_europe         | none of the claimed platforms appears on the site (fine for custom-only shops)
    -> {'ok': True, 'emailed': True, 'provider': {'id': 'da251486-0f3f-4cd2-b292-e0a658d919c7', 'name': 'New-website.bg', 'application_status': 'approved', 'active': True}}
 done: 2 reviewed, 1 held for the owner
+pending applications: 1
+hold     Web R Solution                   office@webrsolution.com            eastern_europe,western | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+done: 1 reviewed, 1 held for the owner
+pending applications: 1
+hold     Web R Solution                   office@webrsolution.com            eastern_europe,western | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+done: 1 reviewed, 1 held for the owner
