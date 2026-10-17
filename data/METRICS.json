@@ -1,63 +1,63 @@
 {
-  "generated_utc": "2026-10-16T16:35:11.595618Z",
+  "generated_utc": "2026-10-17T04:35:11.776919Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-10-16",
+    "generated": "2026-10-17",
     "totals_28d": {
-      "clicks": 170,
-      "impressions": 36243,
-      "ctr": 0.469,
-      "position": 12.68
+      "clicks": 162,
+      "impressions": 34260,
+      "ctr": 0.473,
+      "position": 12.83
     },
     "totals_7d": {
-      "clicks": 36,
-      "impressions": 7581,
-      "ctr": 0.475,
-      "position": 14.56
+      "clicks": 30,
+      "impressions": 6478,
+      "ctr": 0.463,
+      "position": 14.79
     },
     "totals_90d": {
-      "clicks": 499,
-      "impressions": 125995,
+      "clicks": 497,
+      "impressions": 125530,
       "ctr": 0.396,
-      "position": 15.85
+      "position": 15.8
     },
     "totals_28d_prev": {
-      "clicks": 182,
-      "impressions": 51426,
-      "ctr": 0.354,
-      "position": 13.87
+      "clicks": 188,
+      "impressions": 52004,
+      "ctr": 0.362,
+      "position": 13.55
     },
     "totals_7d_prev": {
-      "clicks": 48,
-      "impressions": 8753,
-      "ctr": 0.548,
-      "position": 16.46
+      "clicks": 45,
+      "impressions": 8660,
+      "ctr": 0.52,
+      "position": 16.49
     },
     "windows": {
       "current_28d": [
-        "2026-09-17",
-        "2026-10-14"
+        "2026-09-18",
+        "2026-10-15"
       ],
       "previous_28d": [
-        "2026-08-20",
-        "2026-09-16"
+        "2026-08-21",
+        "2026-09-17"
       ],
       "current_7d": [
-        "2026-10-08",
-        "2026-10-14"
+        "2026-10-09",
+        "2026-10-15"
       ],
       "previous_7d": [
-        "2026-10-01",
-        "2026-10-07"
+        "2026-10-02",
+        "2026-10-08"
       ],
       "current_90d": [
-        "2026-07-17",
-        "2026-10-14"
+        "2026-07-18",
+        "2026-10-15"
       ]
     },
     "junk_28d": {
-      "impressions": 2507,
-      "queries": 108,
+      "impressions": 2207,
+      "queries": 106,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "\"saas\" \"rate card\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 170,
-      "impressions": 33736,
-      "ctr": 0.504
+      "clicks": 162,
+      "impressions": 32053,
+      "ctr": 0.505
     },
     "citation_floor_alerts": [
       {
@@ -106,27 +106,27 @@
       "drip:3": 7
     },
     "affiliate_clicks": {
-      "total": 224,
-      "last7d": 16,
+      "total": 227,
+      "last7d": 18,
       "by_slug": {
-        "fiverr": 114,
-        "shopify": 53,
+        "fiverr": 115,
+        "shopify": 55,
         "wix": 51,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 288,
-      "excluded_by_is_bot_flag": 64,
+      "rows_before_bot_filter": 294,
+      "excluded_by_is_bot_flag": 67,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 175,
-      "ip_hash_coverage_pct": 78.5,
-      "note": "user_ip_hash is NULL on 62 of 288 rows (78% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 64 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 178,
+      "ip_hash_coverage_pct": 78.9,
+      "note": "user_ip_hash is NULL on 62 of 294 rows (79% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 67 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 4,
-      "impressions": 29,
+      "impressions": 28,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -136,7 +136,7 @@
     },
     "/tools/fixed-price-vs-time-and-materials": {
       "pages_with_data": 1,
-      "impressions": 7,
+      "impressions": 6,
       "clicks": 0
     },
     "/cost/ai/": {
@@ -146,18 +146,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 232,
+      "impressions": 221,
       "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 26,
-      "impressions": 98,
+      "impressions": 92,
       "clicks": 1
     },
     "/cost/industry/": {
-      "pages_with_data": 147,
-      "impressions": 874,
-      "clicks": 20
+      "pages_with_data": 145,
+      "impressions": 848,
+      "clicks": 19
     },
     "/software-development-budget-2027": {
       "pages_with_data": 0,
@@ -166,17 +166,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 6745,
+      "impressions": 6207,
       "clicks": 12
     },
     "/restaurant-website-cost": {
-      "pages_with_data": 2,
-      "impressions": 2109,
+      "pages_with_data": 1,
+      "impressions": 2013,
       "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 846,
+      "impressions": 795,
       "clicks": 13
     }
   }
