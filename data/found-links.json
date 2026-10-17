@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-03T08:22:49Z",
+ "generated_utc": "2026-10-17T10:24:16Z",
  "source": "GitHub code search (gh api search/code)",
  "scope": "public repositories only; silence here is not evidence of absence",
  "queries": [
@@ -123,7 +123,7 @@
     "data/outreach-kit-2026-09-20.md",
     "scripts/ping_index.py",
     "data/disavow-fiverr-2026-09-hardreject.txt",
-    "data/GSC-TRENDS.json"
+    "data/found-links.json"
    ],
    "found_by": [
     "projectcostestimator.com in:file",
@@ -219,6 +219,7 @@
     "automation/mastodon_publish.py",
     "src/app/expert-review/layout.tsx",
     "public/llms-full.txt",
+    "automation/v3/found_links.py",
     "docs/OS/growth/video-kit.md",
     "src/app/llms.txt/route.ts",
     "src/app/api/v1/estimate/route.ts",

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-17T04:35:11.776919Z",
+  "generated_utc": "2026-10-17T16:35:11.121177Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-17",
@@ -77,20 +77,20 @@
     ]
   },
   "supabase": {
-    "leads_total": 129,
+    "leads_total": 131,
     "leads_by_context": {
+      "api_key": 2,
+      "sys:lastrun": 89,
       "drip:1": 7,
-      "sys:lastrun": 88,
       "quotes": 1,
       "unsub": 9,
       "results:build": 3,
       "drip:3": 7,
       "drip:2": 7,
-      "results": 6,
-      "api_key": 1
+      "results": 6
     },
     "real_human_leads": 10,
-    "api_keys": 1,
+    "api_keys": 2,
     "real_human_leads_strict": 10,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
@@ -106,20 +106,20 @@
       "drip:3": 7
     },
     "affiliate_clicks": {
-      "total": 227,
-      "last7d": 18,
+      "total": 231,
+      "last7d": 19,
       "by_slug": {
-        "fiverr": 115,
-        "shopify": 55,
+        "fiverr": 118,
+        "shopify": 56,
         "wix": 51,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 294,
+      "rows_before_bot_filter": 298,
       "excluded_by_is_bot_flag": 67,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 178,
-      "ip_hash_coverage_pct": 78.9,
-      "note": "user_ip_hash is NULL on 62 of 294 rows (79% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 67 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 182,
+      "ip_hash_coverage_pct": 79.2,
+      "note": "user_ip_hash is NULL on 62 of 298 rows (79% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 67 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
