@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-19T07:21:55.474486Z",
+  "generated_utc": "2026-10-19T16:35:17.041461Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-10-19",
     "totals_28d": {
-      "clicks": 168,
-      "impressions": 33711,
-      "ctr": 0.498,
-      "position": 13.31
+      "clicks": 171,
+      "impressions": 34757,
+      "ctr": 0.492,
+      "position": 13.53
     },
     "totals_7d": {
-      "clicks": 30,
-      "impressions": 7001,
-      "ctr": 0.429,
-      "position": 16.27
+      "clicks": 33,
+      "impressions": 8047,
+      "ctr": 0.41,
+      "position": 16.82
     },
     "totals_90d": {
-      "clicks": 503,
-      "impressions": 126959,
-      "ctr": 0.396,
-      "position": 15.72
+      "clicks": 506,
+      "impressions": 128005,
+      "ctr": 0.395,
+      "position": 15.76
     },
     "totals_28d_prev": {
       "clicks": 186,
@@ -56,7 +56,7 @@
       ]
     },
     "junk_28d": {
-      "impressions": 1758,
+      "impressions": 1835,
       "queries": 96,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 168,
-      "impressions": 31953,
-      "ctr": 0.526
+      "clicks": 171,
+      "impressions": 32922,
+      "ctr": 0.519
     },
     "citation_floor_alerts": [
       {
@@ -77,8 +77,9 @@
     ]
   },
   "supabase": {
-    "leads_total": 133,
+    "leads_total": 134,
     "leads_by_context": {
+      "drip:2": 8,
       "sys:lastrun": 91,
       "api_key": 2,
       "drip:1": 7,
@@ -86,7 +87,6 @@
       "unsub": 9,
       "results:build": 3,
       "drip:3": 7,
-      "drip:2": 7,
       "results": 6
     },
     "real_human_leads": 10,
@@ -102,24 +102,24 @@
     "build_intent_count": 3,
     "drip_stages": {
       "drip:1": 7,
-      "drip:2": 7,
+      "drip:2": 8,
       "drip:3": 7
     },
     "affiliate_clicks": {
-      "total": 249,
-      "last7d": 35,
+      "total": 252,
+      "last7d": 38,
       "by_slug": {
         "fiverr": 133,
-        "shopify": 59,
+        "shopify": 62,
         "wix": 51,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 322,
+      "rows_before_bot_filter": 325,
       "excluded_by_is_bot_flag": 73,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 200,
-      "ip_hash_coverage_pct": 80.7,
-      "note": "user_ip_hash is NULL on 62 of 322 rows (81% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 73 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 203,
+      "ip_hash_coverage_pct": 80.9,
+      "note": "user_ip_hash is NULL on 62 of 325 rows (81% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 73 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -146,17 +146,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 233,
+      "impressions": 238,
       "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 26,
-      "impressions": 91,
+      "impressions": 94,
       "clicks": 0
     },
     "/cost/industry/": {
-      "pages_with_data": 138,
-      "impressions": 840,
+      "pages_with_data": 139,
+      "impressions": 855,
       "clicks": 18
     },
     "/software-development-budget-2027": {
@@ -166,17 +166,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 5962,
+      "impressions": 6138,
       "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 2000,
+      "impressions": 2042,
       "clicks": 14
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 2,
-      "impressions": 792,
+      "impressions": 807,
       "clicks": 14
     }
   }
