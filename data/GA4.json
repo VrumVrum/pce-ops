@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-19T16:35:29Z",
+  "generated_utc": "2026-10-20T04:35:58Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "621",
-      "users": "579",
-      "engagementRate": "0.25281803542673109",
-      "avgDuration": "26.198167539452495"
+      "sessions": "642",
+      "users": "599",
+      "engagementRate": "0.24610591900311526",
+      "avgDuration": "25.410477049844236"
     },
     {
       "channel": "Organic Search",
@@ -48,10 +48,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "1479",
-      "users": "1387",
-      "engagementRate": "0.28870858688302908",
-      "avgDuration": "28.30749595402299"
+      "sessions": "1500",
+      "users": "1407",
+      "engagementRate": "0.28533333333333333",
+      "avgDuration": "27.940833826666669"
     },
     {
       "channel": "Organic Search",
@@ -127,8 +127,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "1479",
-      "engagementRate": "0.28870858688302908"
+      "sessions": "1500",
+      "engagementRate": "0.28533333333333333"
     },
     {
       "source": "google",
