@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-20T04:39:43.835Z",
+  "generated_utc": "2026-10-20T16:38:19.306Z",
   "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
@@ -10,7 +10,7 @@
       "page": "/",
       "name": "home",
       "seeded": false,
-      "diff_pct": 2.31
+      "diff_pct": 0.04
     },
     {
       "page": "/calculator",
@@ -22,7 +22,7 @@
       "page": "/website-cost",
       "name": "website-cost",
       "seeded": false,
-      "diff_pct": 0.84
+      "diff_pct": 0
     },
     {
       "page": "/pricing",
