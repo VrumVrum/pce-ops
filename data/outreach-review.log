@@ -127,3 +127,13 @@ pending applications: 2
 hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
 hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
 done: 2 reviewed, 2 held for the owner
+pending applications: 3
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+approve  Ecomgrowth                       contact@ecomgrowth.ma              remote                 | live site, own-domain address
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '4b018e2e-aa73-4c0a-b278-7aee2d01cbc5', 'name': 'Ecomgrowth', 'application_status': 'approved', 'active': True}}
+done: 3 reviewed, 2 held for the owner
+pending applications: 2
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+done: 2 reviewed, 2 held for the owner
