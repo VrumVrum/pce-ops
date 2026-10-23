@@ -1,27 +1,27 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-22T16:35:23Z",
+  "generated_utc": "2026-10-23T04:35:25Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "767",
+      "sessions": "768",
       "users": "726",
-      "engagementRate": "0.16036505867014342",
-      "avgDuration": "24.102518196870925"
+      "engagementRate": "0.16015625",
+      "avgDuration": "24.123024397135413"
     },
     {
       "channel": "Organic Search",
       "sessions": "78",
       "users": "63",
-      "engagementRate": "0.44871794871794873",
-      "avgDuration": "143.95719637179485"
+      "engagementRate": "0.46153846153846156",
+      "avgDuration": "153.6218738974359"
     },
     {
       "channel": "Unassigned",
-      "sessions": "14",
-      "users": "14",
-      "engagementRate": "0.14285714285714285",
-      "avgDuration": "54.061014928571424"
+      "sessions": "12",
+      "users": "12",
+      "engagementRate": "0.16666666666666666",
+      "avgDuration": "63.071184083333343"
     },
     {
       "channel": "AI Assistant",
@@ -51,21 +51,21 @@
       "sessions": "1892",
       "users": "1776",
       "engagementRate": "0.257399577167019",
-      "avgDuration": "28.910968029069767"
+      "avgDuration": "28.932031073467229"
     },
     {
       "channel": "Organic Search",
       "sessions": "245",
       "users": "202",
-      "engagementRate": "0.46122448979591835",
-      "avgDuration": "181.02668806938777"
+      "engagementRate": "0.46530612244897956",
+      "avgDuration": "184.10360581224489"
     },
     {
       "channel": "Unassigned",
-      "sessions": "58",
-      "users": "58",
-      "engagementRate": "0.051724137931034482",
-      "avgDuration": "44.140371293103442"
+      "sessions": "56",
+      "users": "56",
+      "engagementRate": "0.053571428571428568",
+      "avgDuration": "45.716813125"
     },
     {
       "channel": "AI Assistant",
@@ -138,7 +138,7 @@
     {
       "source": "google",
       "sessions": "152",
-      "engagementRate": "0.47368421052631576"
+      "engagementRate": "0.48026315789473684"
     },
     {
       "source": "bing",
@@ -147,7 +147,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "55",
+      "sessions": "53",
       "engagementRate": "0"
     },
     {
@@ -291,8 +291,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "70",
-      "engagementRate": "0.014285714285714285"
+      "sessions": "72",
+      "engagementRate": "0.013888888888888888"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -357,7 +357,7 @@
     {
       "landing": "/blog/wcag-accessibility-cost-2026",
       "sessions": "18",
-      "engagementRate": "0.055555555555555552"
+      "engagementRate": "0.1111111111111111"
     },
     {
       "landing": "/blog/website-security-cost-2026",
