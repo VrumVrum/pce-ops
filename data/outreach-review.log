@@ -147,3 +147,17 @@ hold     RANT                             rantovov5@gmail.com                eas
 hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
 hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
 done: 3 reviewed, 3 held for the owner
+pending applications: 4
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+approve  Giraffe Digital                  michael@giraffedigital.co.uk       uk                     | live site, own-domain address, market visible
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '70d1fe5c-fc62-4743-9a07-3308de365696', 'name': 'Giraffe Digital', 'application_status': 'approved', 'active': True}}
+done: 4 reviewed, 3 held for the owner
+pending applications: 4
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+approve  kaliber5 GmbH                    marketing@kaliber5.de              western_europe         | live site, own-domain address, market visible
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '1b4dcaba-645c-493c-9d1a-3ab2228c5c68', 'name': 'kaliber5 GmbH', 'application_status': 'approved', 'active': True}}
+done: 4 reviewed, 3 held for the owner
