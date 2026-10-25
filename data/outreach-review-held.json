@@ -9,7 +9,7 @@
    "contact address not on own domain nor on the site"
   ],
   "dry": false,
-  "ts": "2026-10-24T21:37:04.095145+00:00"
+  "ts": "2026-10-25T15:00:05.836269+00:00"
  },
  {
   "id": "a7ddd95d-c5da-4054-b9c0-2e32ecb4be1d",
@@ -18,10 +18,11 @@
   "website": "https://carlosmanzano.es/",
   "verdict": "hold",
   "reasons": [
-   "claimed market not visible on the site"
+   "claimed market not visible on the site",
+   "none of the claimed platforms appears on the site (fine for custom-only shops)"
   ],
   "dry": false,
-  "ts": "2026-10-24T21:37:05.919174+00:00"
+  "ts": "2026-10-25T15:00:06.582938+00:00"
  },
  {
   "id": "4ab5c2b5-191b-4402-b523-a8cd361d09f6",
@@ -33,6 +34,6 @@
    "claimed market not visible on the site"
   ],
   "dry": false,
-  "ts": "2026-10-24T21:37:08.026150+00:00"
+  "ts": "2026-10-25T15:00:07.361434+00:00"
  }
 ]
