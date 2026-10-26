@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-25T17:46:53Z",
+  "generated_utc": "2026-10-26T04:35:20Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "692",
       "users": "661",
       "engagementRate": "0.13872832369942195",
-      "avgDuration": "25.590114874277461"
+      "avgDuration": "25.590114874277457"
     },
     {
       "channel": "Organic Search",
@@ -18,24 +18,24 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "13",
-      "users": "10",
-      "engagementRate": "0.15384615384615385",
-      "avgDuration": "171.38920892307689"
+      "sessions": "11",
+      "users": "9",
+      "engagementRate": "0.18181818181818182",
+      "avgDuration": "53.486388727272725"
     },
     {
       "channel": "AI Assistant",
       "sessions": "5",
       "users": "3",
       "engagementRate": "0.6",
-      "avgDuration": "137.160928"
+      "avgDuration": "137.16092799999998"
     },
     {
       "channel": "Referral",
       "sessions": "5",
       "users": "3",
       "engagementRate": "0.4",
-      "avgDuration": "102.55074139999999"
+      "avgDuration": "690.86898300000007"
     }
   ],
   "channels_28d": [
@@ -51,14 +51,14 @@
       "sessions": "270",
       "users": "220",
       "engagementRate": "0.47407407407407409",
-      "avgDuration": "182.2836210703704"
+      "avgDuration": "182.28362107037037"
     },
     {
       "channel": "Unassigned",
-      "sessions": "62",
-      "users": "59",
-      "engagementRate": "0.064516129032258063",
-      "avgDuration": "68.569933919354838"
+      "sessions": "60",
+      "users": "58",
+      "engagementRate": "0.066666666666666666",
+      "avgDuration": "43.52710771666667"
     },
     {
       "channel": "AI Assistant",
@@ -72,7 +72,7 @@
       "sessions": "11",
       "users": "9",
       "engagementRate": "0.45454545454545453",
-      "avgDuration": "59.38973018181818"
+      "avgDuration": "326.80711272727274"
     },
     {
       "channel": "Organic Social",
@@ -140,7 +140,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "56",
+      "sessions": "54",
       "engagementRate": "0"
     },
     {
@@ -188,7 +188,7 @@
     {
       "source": "gemini.google.com",
       "landing": "(not set)",
-      "sessions": "2"
+      "sessions": "3"
     },
     {
       "source": "gemini.google.com",
@@ -267,11 +267,6 @@
     },
     {
       "source": "gemini.google.com",
-      "landing": "",
-      "sessions": "1"
-    },
-    {
-      "source": "gemini.google.com",
       "landing": "/blog/website-builder-comparison-2026",
       "sessions": "1"
     },
@@ -309,8 +304,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "76",
-      "engagementRate": "0.013157894736842105"
+      "sessions": "81",
+      "engagementRate": "0.024691358024691357"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
