@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-27T16:35:21Z",
+  "generated_utc": "2026-10-28T04:35:21Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "481",
       "users": "450",
       "engagementRate": "0.18711018711018712",
-      "avgDuration": "35.124967133056131"
+      "avgDuration": "35.146232010395011"
     },
     {
       "channel": "Organic Search",
@@ -25,10 +25,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "9",
-      "users": "7",
-      "engagementRate": "0.22222222222222221",
-      "avgDuration": "70.321760111111118"
+      "sessions": "8",
+      "users": "6",
+      "engagementRate": "0.25",
+      "avgDuration": "71.392390625"
     },
     {
       "channel": "AI Assistant",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "2171",
+      "sessions": "2170",
       "users": "2031",
-      "engagementRate": "0.25011515430677106",
-      "avgDuration": "28.636107962690005"
+      "engagementRate": "0.25023041474654378",
+      "avgDuration": "28.654017876958527"
     },
     {
       "channel": "Organic Search",
@@ -55,10 +55,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "61",
-      "users": "59",
-      "engagementRate": "0.065573770491803282",
-      "avgDuration": "43.825953754098357"
+      "sessions": "60",
+      "users": "58",
+      "engagementRate": "0.066666666666666666",
+      "avgDuration": "43.52710771666667"
     },
     {
       "channel": "AI Assistant",
@@ -125,8 +125,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "2171",
-      "engagementRate": "0.25011515430677106"
+      "sessions": "2170",
+      "engagementRate": "0.25023041474654378"
     },
     {
       "source": "google",
@@ -140,7 +140,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "55",
+      "sessions": "54",
       "engagementRate": "0"
     },
     {
@@ -309,8 +309,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "85",
-      "engagementRate": "0.023529411764705882"
+      "sessions": "90",
+      "engagementRate": "0.033333333333333333"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -329,8 +329,8 @@
     },
     {
       "landing": "/calculator",
-      "sessions": "49",
-      "engagementRate": "0.44897959183673469"
+      "sessions": "48",
+      "engagementRate": "0.45833333333333331"
     },
     {
       "landing": "/blog/web-design-pricing-guide-2026",
