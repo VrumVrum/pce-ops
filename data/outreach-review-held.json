@@ -9,7 +9,7 @@
    "site does not answer: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] ce"
   ],
   "dry": false,
-  "ts": "2026-10-27T15:00:05.795943+00:00"
+  "ts": "2026-10-28T15:00:04.691231+00:00"
  },
  {
   "id": "a7ddd95d-c5da-4054-b9c0-2e32ecb4be1d",
@@ -22,7 +22,7 @@
    "none of the claimed platforms appears on the site (fine for custom-only shops)"
   ],
   "dry": false,
-  "ts": "2026-10-27T15:00:06.513559+00:00"
+  "ts": "2026-10-28T15:00:05.312467+00:00"
  },
  {
   "id": "4ab5c2b5-191b-4402-b523-a8cd361d09f6",
@@ -34,6 +34,19 @@
    "claimed market not visible on the site"
   ],
   "dry": false,
-  "ts": "2026-10-27T15:00:07.410086+00:00"
+  "ts": "2026-10-28T15:00:06.326009+00:00"
+ },
+ {
+  "id": "00547f08-e888-417d-ac8b-9339c4ae11e0",
+  "name": "House Call SEO",
+  "email": "liorqm@gmail.com",
+  "website": "https://housecallseo.com/",
+  "verdict": "hold",
+  "reasons": [
+   "claimed market not visible on the site",
+   "none of the claimed platforms appears on the site (fine for custom-only shops)"
+  ],
+  "dry": false,
+  "ts": "2026-10-28T15:00:07.901958+00:00"
  }
 ]
