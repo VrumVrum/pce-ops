@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-10-29T10:06:38.188Z",
-  "passed": 15,
+  "generated_utc": "2026-10-29T16:39:14.320Z",
+  "passed": 11,
   "total": 15,
-  "all_green": true,
+  "all_green": false,
   "checks": [
     {
       "name": "load /",
@@ -46,13 +46,13 @@
     },
     {
       "name": "mobile menu iPhone SE /",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "drawer=false links=14"
     },
     {
       "name": "mobile menu iPhone SE /calculator",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "drawer=false links=14"
     },
     {
       "name": "mobile menu iPhone SE /cost/industry/dentist",
@@ -66,13 +66,13 @@
     },
     {
       "name": "mobile menu iPhone 14 /calculator",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "drawer=false links=14"
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "drawer=false links=14"
     },
     {
       "name": "llms-coverage",
