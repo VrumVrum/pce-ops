@@ -1,6 +1,6 @@
 {
-  "generated_utc": "2026-10-29T16:39:14.320Z",
-  "passed": 11,
+  "generated_utc": "2026-10-29T18:42:22.017Z",
+  "passed": 10,
   "total": 15,
   "all_green": false,
   "checks": [
@@ -41,8 +41,8 @@
     },
     {
       "name": "uber calculator reacts to clicks",
-      "ok": true,
-      "detail": "$57,500–$131,000 -> $18,000–$41,500"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https:"
     },
     {
       "name": "mobile menu iPhone SE /",
@@ -56,8 +56,8 @@
     },
     {
       "name": "mobile menu iPhone SE /cost/industry/dentist",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "drawer=false links=14"
     },
     {
       "name": "mobile menu iPhone 14 /",
@@ -71,8 +71,8 @@
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
-      "ok": false,
-      "detail": "drawer=false links=14"
+      "ok": true,
+      "detail": "drawer=true links=14"
     },
     {
       "name": "llms-coverage",
