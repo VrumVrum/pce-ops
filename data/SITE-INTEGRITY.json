@@ -1,28 +1,29 @@
 {
- "generated_utc": "2026-10-30T04:57:42Z",
+ "generated_utc": "2026-10-30T16:39:18Z",
  "base": "https://projectcostestimator.com",
- "pass": 0,
+ "pass": 4,
  "fail": [],
- "unknown": [
-  "breakdown_reconciles",
-  "paid_no_fake_success",
-  "admin_endpoint_protected"
- ],
+ "unknown": [],
  "results": [
   {
    "id": "breakdown_reconciles",
-   "status": "UNKNOWN",
-   "detail": "page.goto: net::ERR_TIMED_OUT at https://projectcostestimator.com/calculator\nCall log:\n\u001b[2m  - navig"
+   "status": "PASS",
+   "detail": "Development + extras = 2350 vs Total 2350"
+  },
+  {
+   "id": "currency_consistent",
+   "status": "PASS",
+   "detail": "all rows in one currency"
   },
   {
    "id": "paid_no_fake_success",
-   "status": "UNKNOWN",
-   "detail": "apiRequestContext.post: getaddrinfo ENOTFOUND projectcostestimator.com\nCall log:"
+   "status": "PASS",
+   "detail": "HTTP 402 (must be 402, never a fake success)"
   },
   {
    "id": "admin_endpoint_protected",
-   "status": "UNKNOWN",
-   "detail": "apiRequestContext.get: getaddrinfo ENOTFOUND projectcostestimator.com\nCall log:\n"
+   "status": "PASS",
+   "detail": "no-auth HTTP 401 (must be 401)"
   }
  ],
  "note": "Live-site invariants the fleet regressed this month (breakdown sums, currency consistency, paid-path no-fake-success, admin endpoint protected). A FAIL or a majority-UNKNOWN exits 1 -> owner email. UNKNOWN is never counted as a pass."
