@@ -994,3 +994,5 @@ skip (no MX): Rallye Sport info@rallye-sport.ouest-france.fr
 skip (no true line): Glare Digital
 skip (no MX): До уроку info@urok.in.ua
 done, daily sent 0
+unsubscribe list UNREADABLE: <urlopen error [Errno 11001] getaddrinfo failed>
+ABORT: cannot read the unsubscribe list, so no send can be proven safe.

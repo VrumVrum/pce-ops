@@ -1,23 +1,23 @@
 {
-  "generated_utc": "2026-10-29T18:42:22.017Z",
-  "passed": 10,
+  "generated_utc": "2026-10-30T04:51:45.711Z",
+  "passed": 3,
   "total": 15,
   "all_green": false,
   "checks": [
     {
       "name": "load /",
-      "ok": true,
-      "detail": "HTTP 200, 10716 chars, 0 JS err"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https:"
     },
     {
       "name": "load /calculator",
-      "ok": true,
-      "detail": "HTTP 200, 1953 chars, 0 JS err"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https:"
     },
     {
       "name": "load /tools/rfp-generator",
-      "ok": true,
-      "detail": "HTTP 200, 9449 chars, 0 JS err"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https:"
     },
     {
       "name": "load /tools/freelancer-quote-generator",
@@ -36,8 +36,8 @@
     },
     {
       "name": "load /cost/hire/india",
-      "ok": true,
-      "detail": "HTTP 200, 9909 chars, 0 JS err"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https:"
     },
     {
       "name": "uber calculator reacts to clicks",
@@ -47,37 +47,37 @@
     {
       "name": "mobile menu iPhone SE /",
       "ok": false,
-      "detail": "drawer=false links=14"
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - n"
     },
     {
       "name": "mobile menu iPhone SE /calculator",
       "ok": false,
-      "detail": "drawer=false links=14"
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - n"
     },
     {
       "name": "mobile menu iPhone SE /cost/industry/dentist",
       "ok": false,
-      "detail": "drawer=false links=14"
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - n"
     },
     {
       "name": "mobile menu iPhone 14 /",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://projectcost"
     },
     {
       "name": "mobile menu iPhone 14 /calculator",
       "ok": false,
-      "detail": "drawer=false links=14"
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - n"
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
-      "ok": true,
-      "detail": "drawer=true links=14"
+      "ok": false,
+      "detail": "TimeoutError: page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - n"
     },
     {
       "name": "llms-coverage",
-      "ok": true,
-      "detail": "all 12 clusters cited"
+      "ok": false,
+      "detail": "TypeError: fetch failed"
     }
   ],
   "note": "Desktop functional smoke test (real browser). The cloud loop reads this to know functionality status without being able to reach production."

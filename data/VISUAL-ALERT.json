@@ -1,40 +1,66 @@
 {
-  "generated_utc": "2026-10-29T18:42:22.392Z",
-  "status": "green",
+  "generated_utc": "2026-10-30T04:51:46.175Z",
+  "status": "red",
   "threshold_pct": 5,
   "viewport": "1280x800",
   "comparator": "pixelmatch@5 (pure JS; per-pixel threshold 0.1)",
-  "alerts": [],
+  "alerts": [
+    {
+      "page": "/",
+      "diff_pct": null,
+      "ts": "2026-10-30T04:51:46.175Z",
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/\", "
+    },
+    {
+      "page": "/calculator",
+      "diff_pct": null,
+      "ts": "2026-10-30T04:51:46.175Z",
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/cal"
+    },
+    {
+      "page": "/website-cost",
+      "diff_pct": null,
+      "ts": "2026-10-30T04:51:46.175Z",
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/web"
+    },
+    {
+      "page": "/pricing",
+      "diff_pct": null,
+      "ts": "2026-10-30T04:51:46.175Z",
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/pri"
+    },
+    {
+      "page": "/website-costs-2026-report",
+      "diff_pct": null,
+      "ts": "2026-10-30T04:51:46.175Z",
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/web"
+    }
+  ],
   "pages": [
     {
       "page": "/",
       "name": "home",
-      "seeded": false,
-      "diff_pct": 2.23
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/\", "
     },
     {
       "page": "/calculator",
       "name": "calculator",
-      "seeded": false,
-      "diff_pct": 0
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/cal"
     },
     {
       "page": "/website-cost",
       "name": "website-cost",
-      "seeded": false,
-      "diff_pct": 0
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/web"
     },
     {
       "page": "/pricing",
       "name": "pricing",
-      "seeded": false,
-      "diff_pct": 0
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/pri"
     },
     {
       "page": "/website-costs-2026-report",
       "name": "website-costs-2026-report",
-      "seeded": false,
-      "diff_pct": 0
+      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/web"
     }
   ],
   "note": "Pixel diff of money pages vs committed baseline. status=red -> a page changed >5% visually (or failed to shoot); baseline is kept until re-seeded via workflow_dispatch reseed=true. Supervisor: treat red as a finding — text gates cannot see rendering."
