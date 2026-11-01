@@ -1,20 +1,20 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-10-31T16:35:33Z",
+  "generated_utc": "2026-11-01T04:35:25Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "526",
       "users": "490",
-      "engagementRate": "0.21673003802281368",
-      "avgDuration": "25.260674456273765"
+      "engagementRate": "0.21863117870722434",
+      "avgDuration": "25.292111045627376"
     },
     {
       "channel": "Organic Search",
       "sessions": "62",
       "users": "54",
       "engagementRate": "0.58064516129032262",
-      "avgDuration": "99.897305225806448"
+      "avgDuration": "99.897305225806463"
     },
     {
       "channel": "Referral",
@@ -32,19 +32,19 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "6",
-      "users": "4",
-      "engagementRate": "0.16666666666666666",
-      "avgDuration": "232.76134433333334"
+      "sessions": "5",
+      "users": "3",
+      "engagementRate": "0.2",
+      "avgDuration": "276.227671"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "2352",
+      "sessions": "2355",
       "users": "2194",
-      "engagementRate": "0.24532312925170069",
-      "avgDuration": "27.467185349914963"
+      "engagementRate": "0.24585987261146497",
+      "avgDuration": "27.439216810615711"
     },
     {
       "channel": "Organic Search",
@@ -55,10 +55,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "57",
-      "users": "54",
-      "engagementRate": "0.070175438596491224",
-      "avgDuration": "67.717385052631585"
+      "sessions": "56",
+      "users": "53",
+      "engagementRate": "0.071428571428571425",
+      "avgDuration": "68.651093517857149"
     },
     {
       "channel": "AI Assistant",
@@ -125,8 +125,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "2352",
-      "engagementRate": "0.24532312925170069"
+      "sessions": "2355",
+      "engagementRate": "0.24585987261146497"
     },
     {
       "source": "google",
@@ -140,7 +140,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "50",
+      "sessions": "49",
       "engagementRate": "0"
     },
     {
@@ -298,14 +298,14 @@
       "engagementRate": "0.51813471502590669"
     },
     {
+      "landing": "(not set)",
+      "sessions": "102",
+      "engagementRate": "0.029411764705882353"
+    },
+    {
       "landing": "/blog/api-integration-cost-2026",
       "sessions": "98",
       "engagementRate": "0.37755102040816324"
-    },
-    {
-      "landing": "(not set)",
-      "sessions": "96",
-      "engagementRate": "0.03125"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -325,7 +325,7 @@
     {
       "landing": "/blog/stripe-integration-cost-2026",
       "sessions": "56",
-      "engagementRate": "0.4107142857142857"
+      "engagementRate": "0.42857142857142855"
     },
     {
       "landing": "/for-agencies",
