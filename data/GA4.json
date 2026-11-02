@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-01T16:35:25Z",
+  "generated_utc": "2026-11-02T04:35:24Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "670",
+      "sessions": "667",
       "users": "631",
-      "engagementRate": "0.26417910447761195",
-      "avgDuration": "18.940446889552238"
+      "engagementRate": "0.26686656671664166",
+      "avgDuration": "19.465554032983508"
     },
     {
       "channel": "Organic Search",
@@ -25,10 +25,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "9",
-      "users": "9",
-      "engagementRate": "0.1111111111111111",
-      "avgDuration": "154.36710900000003"
+      "sessions": "8",
+      "users": "8",
+      "engagementRate": "0.125",
+      "avgDuration": "173.662997625"
     },
     {
       "channel": "AI Assistant",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "2498",
+      "sessions": "2497",
       "users": "2338",
-      "engagementRate": "0.25660528422738188",
-      "avgDuration": "25.89078156164932"
+      "engagementRate": "0.25750901081297556",
+      "avgDuration": "26.018661379655587"
     },
     {
       "channel": "Organic Search",
@@ -55,10 +55,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "61",
-      "users": "58",
-      "engagementRate": "0.065573770491803282",
-      "avgDuration": "63.459890901639348"
+      "sessions": "60",
+      "users": "57",
+      "engagementRate": "0.066666666666666666",
+      "avgDuration": "64.51755575"
     },
     {
       "channel": "AI Assistant",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "2498",
-      "engagementRate": "0.25660528422738188"
+      "sessions": "2497",
+      "engagementRate": "0.25750901081297556"
     },
     {
       "source": "google",
@@ -135,7 +135,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "54",
+      "sessions": "53",
       "engagementRate": "0"
     },
     {
@@ -284,8 +284,8 @@
   "top_landing_28d": [
     {
       "landing": "/",
-      "sessions": "193",
-      "engagementRate": "0.51813471502590669"
+      "sessions": "194",
+      "engagementRate": "0.51546391752577314"
     },
     {
       "landing": "/blog/api-integration-cost-2026",
@@ -299,8 +299,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "100",
-      "engagementRate": "0.02"
+      "sessions": "106",
+      "engagementRate": "0.018867924528301886"
     },
     {
       "landing": "/calculator",
