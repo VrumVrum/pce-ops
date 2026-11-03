@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-11-03T10:12:06.309240Z",
+  "generated_utc": "2026-11-03T16:35:10.263878Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-11-03",
     "totals_28d": {
-      "clicks": 150,
-      "impressions": 34668,
-      "ctr": 0.433,
-      "position": 17.27
+      "clicks": 153,
+      "impressions": 36028,
+      "ctr": 0.425,
+      "position": 17.35
     },
     "totals_7d": {
-      "clicks": 33,
-      "impressions": 8608,
-      "ctr": 0.383,
-      "position": 16.42
+      "clicks": 36,
+      "impressions": 9968,
+      "ctr": 0.361,
+      "position": 16.8
     },
     "totals_90d": {
-      "clicks": 513,
-      "impressions": 131370,
-      "ctr": 0.391,
-      "position": 15.24
+      "clicks": 516,
+      "impressions": 132730,
+      "ctr": 0.389,
+      "position": 15.28
     },
     "totals_28d_prev": {
       "clicks": 193,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 2243,
-      "queries": 88,
+      "impressions": 2419,
+      "queries": 94,
       "sample": [
         "\"rfp\" or \"call for proposals\" \"ios\" or \"android\" app development canada",
         "site.revenuecat.com \"2026\" \"$72\"",
@@ -65,9 +65,9 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 150,
-      "impressions": 32425,
-      "ctr": 0.463
+      "clicks": 153,
+      "impressions": 33609,
+      "ctr": 0.455
     },
     "citation_floor_alerts": []
   },
@@ -102,20 +102,20 @@
       "drip:3": 9
     },
     "affiliate_clicks": {
-      "total": 304,
+      "total": 305,
       "last7d": 25,
       "by_slug": {
         "fiverr": 161,
-        "shopify": 85,
+        "shopify": 86,
         "wix": 52,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 377,
+      "rows_before_bot_filter": 378,
       "excluded_by_is_bot_flag": 73,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 251,
+      "distinct_ip_hashes": 252,
       "ip_hash_coverage_pct": 83.6,
-      "note": "user_ip_hash is NULL on 62 of 377 rows (84% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 73 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "note": "user_ip_hash is NULL on 62 of 378 rows (84% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 73 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "sales_total": 0
   },
@@ -142,17 +142,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 283,
+      "impressions": 286,
       "clicks": 2
     },
     "/cost/app-like/": {
       "pages_with_data": 23,
-      "impressions": 67,
+      "impressions": 68,
       "clicks": 0
     },
     "/cost/industry/": {
-      "pages_with_data": 139,
-      "impressions": 885,
+      "pages_with_data": 140,
+      "impressions": 921,
       "clicks": 17
     },
     "/software-development-budget-2027": {
@@ -162,17 +162,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4803,
+      "impressions": 4941,
       "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1623,
+      "impressions": 1669,
       "clicks": 11
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 716,
+      "impressions": 740,
       "clicks": 7
     }
   }

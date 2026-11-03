@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-03T10:12:28Z",
+  "generated_utc": "2026-11-03T16:35:22Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "1475",
-      "users": "1440",
-      "engagementRate": "0.33288135593220342",
-      "avgDuration": "12.505048085423729"
+      "sessions": "1477",
+      "users": "1442",
+      "engagementRate": "0.33243060257278267",
+      "avgDuration": "12.488115048070414"
     },
     {
       "channel": "Organic Search",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3314",
-      "users": "3140",
-      "engagementRate": "0.28696439348219677",
-      "avgDuration": "20.96725158750754"
+      "sessions": "3320",
+      "users": "3142",
+      "engagementRate": "0.28644578313253011",
+      "avgDuration": "20.929358964156624"
     },
     {
       "channel": "Organic Search",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3314",
-      "engagementRate": "0.28696439348219677"
+      "sessions": "3320",
+      "engagementRate": "0.28644578313253011"
     },
     {
       "source": "google",
@@ -368,14 +368,14 @@
       "engagementRate": "0.05"
     },
     {
+      "landing": "/rate-database",
+      "sessions": "20",
+      "engagementRate": "0.3"
+    },
+    {
       "landing": "/blog/website-maintenance-cost-2026",
       "sessions": "19",
       "engagementRate": "0.21052631578947367"
-    },
-    {
-      "landing": "/rate-database",
-      "sessions": "19",
-      "engagementRate": "0.31578947368421051"
     },
     {
       "landing": "/website-cost-calculator",
@@ -388,7 +388,7 @@
       "engine": "copilot",
       "sessions_then": 5,
       "sessions_now": 2,
-      "ref_date": "2026-10-27",
+      "ref_date": "2026-10-28",
       "drop_pct": 60.0
     }
   ],
