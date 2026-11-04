@@ -1,6 +1,6 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-03T18:12:03Z",
+  "generated_utc": "2026-11-04T04:35:26Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -18,10 +18,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "17",
-      "users": "17",
-      "engagementRate": "0.11764705882352941",
-      "avgDuration": "85.407084470588245"
+      "sessions": "16",
+      "users": "16",
+      "engagementRate": "0.125",
+      "avgDuration": "90.74502725"
     },
     {
       "channel": "AI Assistant",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3320",
+      "sessions": "3313",
       "users": "3142",
-      "engagementRate": "0.28644578313253011",
-      "avgDuration": "20.929358964156624"
+      "engagementRate": "0.28705101116812559",
+      "avgDuration": "20.973580368548141"
     },
     {
       "channel": "Organic Search",
@@ -55,17 +55,17 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "65",
-      "users": "62",
-      "engagementRate": "0.076923076923076927",
-      "avgDuration": "60.516294815384612"
+      "sessions": "64",
+      "users": "61",
+      "engagementRate": "0.078125",
+      "avgDuration": "61.461861921875"
     },
     {
       "channel": "AI Assistant",
       "sessions": "26",
       "users": "20",
       "engagementRate": "0.73076923076923073",
-      "avgDuration": "289.26023165384618"
+      "avgDuration": "289.26023165384612"
     },
     {
       "channel": "Referral",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3320",
-      "engagementRate": "0.28644578313253011"
+      "sessions": "3313",
+      "engagementRate": "0.28705101116812559"
     },
     {
       "source": "google",
@@ -135,7 +135,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "57",
+      "sessions": "56",
       "engagementRate": "0"
     },
     {
@@ -304,8 +304,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "107",
-      "engagementRate": "0.018691588785046728"
+      "sessions": "110",
+      "engagementRate": "0.018181818181818181"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
