@@ -1,34 +1,34 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-04T16:35:22Z",
+  "generated_utc": "2026-11-05T04:35:23Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "1564",
+      "sessions": "1563",
       "users": "1523",
-      "engagementRate": "0.32161125319693096",
-      "avgDuration": "13.057406132992327"
+      "engagementRate": "0.32117722328854764",
+      "avgDuration": "13.067579930902111"
     },
     {
       "channel": "Organic Search",
       "sessions": "56",
       "users": "50",
       "engagementRate": "0.5357142857142857",
-      "avgDuration": "132.00940282142855"
+      "avgDuration": "132.00940282142858"
     },
     {
       "channel": "Unassigned",
-      "sessions": "19",
-      "users": "19",
-      "engagementRate": "0.10526315789473684",
-      "avgDuration": "77.065331210526324"
+      "sessions": "15",
+      "users": "15",
+      "engagementRate": "0.13333333333333333",
+      "avgDuration": "96.794695733333342"
     },
     {
       "channel": "AI Assistant",
       "sessions": "12",
       "users": "9",
-      "engagementRate": "0.66666666666666663",
-      "avgDuration": "239.05772741666667"
+      "engagementRate": "0.75",
+      "avgDuration": "240.209593"
     },
     {
       "channel": "Referral",
@@ -41,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3340",
+      "sessions": "3361",
       "users": "3175",
-      "engagementRate": "0.2805389221556886",
-      "avgDuration": "20.519000468562876"
+      "engagementRate": "0.27848854507587029",
+      "avgDuration": "20.391641120202319"
     },
     {
       "channel": "Organic Search",
@@ -55,17 +55,17 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "64",
-      "users": "61",
-      "engagementRate": "0.078125",
-      "avgDuration": "61.064721578125"
+      "sessions": "60",
+      "users": "57",
+      "engagementRate": "0.083333333333333329",
+      "avgDuration": "64.93035540000001"
     },
     {
       "channel": "AI Assistant",
       "sessions": "28",
       "users": "21",
-      "engagementRate": "0.6785714285714286",
-      "avgDuration": "268.07210242857144"
+      "engagementRate": "0.7142857142857143",
+      "avgDuration": "268.56575910714281"
     },
     {
       "channel": "Referral",
@@ -93,7 +93,7 @@
     {
       "source": "chatgpt.com",
       "sessions": "10",
-      "engagementRate": "0.7"
+      "engagementRate": "0.8"
     },
     {
       "source": "gemini.google.com",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3340",
-      "engagementRate": "0.2805389221556886"
+      "sessions": "3361",
+      "engagementRate": "0.27848854507587029"
     },
     {
       "source": "google",
@@ -135,7 +135,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "56",
+      "sessions": "52",
       "engagementRate": "0"
     },
     {
@@ -146,7 +146,7 @@
     {
       "source": "chatgpt.com",
       "sessions": "10",
-      "engagementRate": "0.7"
+      "engagementRate": "0.8"
     },
     {
       "source": "gemini.google.com",
@@ -202,6 +202,11 @@
     },
     {
       "source": "claude.ai",
+      "landing": "(not set)",
+      "sessions": "2"
+    },
+    {
+      "source": "claude.ai",
       "landing": "/website-migration-cost",
       "sessions": "2"
     },
@@ -223,16 +228,6 @@
     {
       "source": "chatgpt.com",
       "landing": "/website-cost-calculator",
-      "sessions": "1"
-    },
-    {
-      "source": "claude.ai",
-      "landing": "",
-      "sessions": "1"
-    },
-    {
-      "source": "claude.ai",
-      "landing": "(not set)",
       "sessions": "1"
     },
     {
@@ -304,18 +299,18 @@
     },
     {
       "landing": "/calculator",
-      "sessions": "221",
-      "engagementRate": "0.37104072398190047"
+      "sessions": "219",
+      "engagementRate": "0.37442922374429222"
     },
     {
       "landing": "/",
       "sessions": "188",
-      "engagementRate": "0.48936170212765956"
+      "engagementRate": "0.49468085106382981"
     },
     {
       "landing": "(not set)",
-      "sessions": "106",
-      "engagementRate": "0.018867924528301886"
+      "sessions": "113",
+      "engagementRate": "0.017699115044247787"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
