@@ -299,3 +299,21 @@ hold     Detailed In Design               coding-box@detailedindesign.com    us 
 hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
 hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
 done: 5 reviewed, 5 held for the owner
+pending applications: 7
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | site does not answer: <urlopen error [WinError 10060] A connection attem
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+approve  Hand On Web Ltd                  outreach@handonweb.com             uk                     | live site, own-domain address, market visible
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '87a1d7da-bc13-4877-9af1-f4080d98f986', 'name': 'Hand On Web Ltd', 'application_status': 'approved', 'active': True}}
+approve  WPShieldPro                      service@wpshieldpro.com            remote                 | live site, own-domain address
+   -> {'ok': True, 'emailed': True, 'provider': {'id': 'dc57b4d9-cd2e-455a-a015-11ca3c9e9d31', 'name': 'WPShieldPro', 'application_status': 'approved', 'active': True}}
+done: 7 reviewed, 5 held for the owner
+pending applications: 5
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | site does not answer: <urlopen error [WinError 10060] A connection attem
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+done: 5 reviewed, 5 held for the owner
