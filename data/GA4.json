@@ -1,27 +1,27 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-05T16:35:22Z",
+  "generated_utc": "2026-11-06T04:35:23Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "1575",
+      "sessions": "1574",
       "users": "1539",
-      "engagementRate": "0.32253968253968252",
-      "avgDuration": "12.090267353650795"
+      "engagementRate": "0.32337992376111818",
+      "avgDuration": "12.116087925031767"
     },
     {
       "channel": "Organic Search",
       "sessions": "60",
       "users": "53",
-      "engagementRate": "0.53333333333333333",
-      "avgDuration": "130.70259255000002"
+      "engagementRate": "0.55",
+      "avgDuration": "159.09135488333334"
     },
     {
       "channel": "Unassigned",
-      "sessions": "20",
-      "users": "20",
-      "engagementRate": "0.1",
-      "avgDuration": "16.78431785"
+      "sessions": "16",
+      "users": "16",
+      "engagementRate": "0.125",
+      "avgDuration": "11.3919785625"
     },
     {
       "channel": "AI Assistant",
@@ -41,24 +41,24 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3324",
+      "sessions": "3343",
       "users": "3163",
-      "engagementRate": "0.2788808664259928",
-      "avgDuration": "21.169339951263538"
+      "engagementRate": "0.27759497457373616",
+      "avgDuration": "21.057564256655695"
     },
     {
       "channel": "Organic Search",
       "sessions": "273",
       "users": "230",
-      "engagementRate": "0.49816849816849818",
-      "avgDuration": "156.96569164102564"
+      "engagementRate": "0.50183150183150182",
+      "avgDuration": "163.20498006593405"
     },
     {
       "channel": "Unassigned",
-      "sessions": "64",
-      "users": "61",
-      "engagementRate": "0.09375",
-      "avgDuration": "64.176019609375"
+      "sessions": "60",
+      "users": "57",
+      "engagementRate": "0.1",
+      "avgDuration": "65.89750925"
     },
     {
       "channel": "AI Assistant",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3324",
-      "engagementRate": "0.2788808664259928"
+      "sessions": "3343",
+      "engagementRate": "0.27759497457373616"
     },
     {
       "source": "google",
@@ -131,11 +131,11 @@
     {
       "source": "bing",
       "sessions": "66",
-      "engagementRate": "0.51515151515151514"
+      "engagementRate": "0.53030303030303028"
     },
     {
       "source": "(not set)",
-      "sessions": "54",
+      "sessions": "50",
       "engagementRate": "0"
     },
     {
@@ -304,13 +304,13 @@
     },
     {
       "landing": "/",
-      "sessions": "186",
-      "engagementRate": "0.489247311827957"
+      "sessions": "187",
+      "engagementRate": "0.49197860962566847"
     },
     {
       "landing": "(not set)",
-      "sessions": "103",
-      "engagementRate": "0.019417475728155338"
+      "sessions": "104",
+      "engagementRate": "0.019230769230769232"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -355,7 +355,7 @@
     {
       "landing": "/web-app-development-cost",
       "sessions": "28",
-      "engagementRate": "0.32142857142857145"
+      "engagementRate": "0.35714285714285715"
     },
     {
       "landing": "/blog/website-security-cost-2026",
