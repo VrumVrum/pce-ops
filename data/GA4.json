@@ -1,19 +1,19 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-08T16:41:19Z",
+  "generated_utc": "2026-11-09T04:35:24Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "1488",
       "users": "1446",
       "engagementRate": "0.30981182795698925",
-      "avgDuration": "20.007615237903224"
+      "avgDuration": "20.007615237903227"
     },
     {
       "channel": "Organic Search",
       "sessions": "75",
       "users": "61",
-      "engagementRate": "0.46666666666666667",
+      "engagementRate": "0.45333333333333331",
       "avgDuration": "124.33120557333334"
     },
     {
@@ -41,16 +41,16 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3449",
+      "sessions": "3441",
       "users": "3234",
-      "engagementRate": "0.2632647144099739",
-      "avgDuration": "22.396162487677586"
+      "engagementRate": "0.26416739319965127",
+      "avgDuration": "22.448231450159838"
     },
     {
       "channel": "Organic Search",
       "sessions": "278",
       "users": "226",
-      "engagementRate": "0.50359712230215825",
+      "engagementRate": "0.5",
       "avgDuration": "144.43985133453236"
     },
     {
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3449",
-      "engagementRate": "0.2632647144099739"
+      "sessions": "3441",
+      "engagementRate": "0.26416739319965127"
     },
     {
       "source": "google",
@@ -314,8 +314,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "109",
-      "engagementRate": "0.027522935779816515"
+      "sessions": "111",
+      "engagementRate": "0.027027027027027029"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -365,7 +365,7 @@
     {
       "landing": "/blog/website-maintenance-cost-2026",
       "sessions": "28",
-      "engagementRate": "0.21428571428571427"
+      "engagementRate": "0.17857142857142858"
     },
     {
       "landing": "/web-app-development-cost",

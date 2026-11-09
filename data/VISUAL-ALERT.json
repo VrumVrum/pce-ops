@@ -1,39 +1,28 @@
 {
-  "generated_utc": "2026-11-08T16:49:24.316Z",
-  "status": "red",
+  "generated_utc": "2026-11-09T04:37:32.607Z",
+  "status": "green",
   "threshold_pct": 5,
   "viewport": "1280x800",
   "comparator": "pixelmatch@5 (pure JS; per-pixel threshold 0.1)",
-  "alerts": [
-    {
-      "page": "/",
-      "diff_pct": null,
-      "ts": "2026-11-08T16:49:24.316Z",
-      "error": "TimeoutError: page.screenshot: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting f"
-    },
-    {
-      "page": "/calculator",
-      "diff_pct": null,
-      "ts": "2026-11-08T16:49:24.316Z",
-      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/cal"
-    }
-  ],
+  "alerts": [],
   "pages": [
     {
       "page": "/",
       "name": "home",
-      "error": "TimeoutError: page.screenshot: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting f"
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/calculator",
       "name": "calculator",
-      "error": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://projectcostestimator.com/cal"
+      "seeded": false,
+      "diff_pct": 0
     },
     {
       "page": "/website-cost",
       "name": "website-cost",
       "seeded": false,
-      "diff_pct": 0.73
+      "diff_pct": 0
     },
     {
       "page": "/pricing",
