@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-09T04:35:11.353071Z",
+  "generated_utc": "2026-11-09T16:35:11.728362Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-11-09",
@@ -72,10 +72,10 @@
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 174,
+    "leads_total": 175,
     "leads_by_context": {
+      "sys:lastrun": 112,
       "drip:3": 11,
-      "sys:lastrun": 111,
       "drip:2": 12,
       "drip:1": 11,
       "unsub": 12,
@@ -103,7 +103,7 @@
     },
     "affiliate_clicks": {
       "total": 320,
-      "last7d": 19,
+      "last7d": 18,
       "by_slug": {
         "fiverr": 169,
         "shopify": 92,
