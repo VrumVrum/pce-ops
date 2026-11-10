@@ -77,7 +77,9 @@ def fetch_industry_urls():
 
 
 def google_index(tok, urls):
-    ok = 0
+    """Per-URL nudge. Returns the list of URLs Google accepted. Stops at the first 429: the quota
+    (~200/day, resets at midnight Pacific) is gone and every further call is wasted."""
+    done = []
     for u in urls:
         try:
             req = urllib.request.Request(
@@ -85,14 +87,18 @@ def google_index(tok, urls):
                 data=json.dumps({'url': u, 'type': 'URL_UPDATED'}).encode(),
                 headers={'Authorization': f'Bearer {tok}', 'Content-Type': 'application/json'}, method='POST')
             urllib.request.urlopen(req, timeout=15)
-            ok += 1
+            done.append(u)
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                print(f'  google 429 after {len(done)} URLs - quota spent, stopping'); break
+            print('  google fail', u.rsplit('/', 1)[-1], e.code)
         except Exception as e:
-            print('  google fail', u.split('/cost/industry/')[-1], str(e)[:50])
+            print('  google fail', u.rsplit('/', 1)[-1], str(e)[:50])
         time.sleep(0.15)
-    print(f'[Google Indexing API] notified {ok}/{len(urls)} URLs')
+    print(f'[Google Indexing API] notified {len(done)}/{len(urls)} URLs')
+    return done
 
 
-    return ok
 def indexnow(urls):
     body = {'host': HOST, 'key': INDEXNOW_KEY,
             'keyLocation': f'https://{HOST}/{INDEXNOW_KEY}.txt', 'urlList': urls}
@@ -136,13 +142,17 @@ if __name__ == '__main__':
     queued = []
     if os.path.exists(q_path):
         queued = [l.strip() for l in open(q_path, encoding='utf-8') if l.strip().startswith('http')]
+    # 10 Nov 2026: the per-URL quota used to be spent on the same 274 old /cost/ URLs at every deploy
+    # (four deploys = four 429 walls) while 33 brand-new pages waited in the queue. Now only the queue
+    # is nudged; the old pages are covered by the sitemap resubmit above. Accepted URLs leave the queue,
+    # the rest stay for the next run.
     if queued:
-        print(f'[queue] {len(queued)} URLs from reindex-queue.txt first')
-        urls = queued + [u for u in urls if u not in queued]
-    sent = google_index(tok, urls)     # per-URL nudge, queue first, then the filtered list (quota ~200/day)
-    if queued and isinstance(sent, int) and sent >= len(queued):
-        open(q_path, 'w', encoding='utf-8').write('')
-        print('[queue] cleared')
-    elif queued:
-        print('[queue] kept for the next run (quota or errors)')
+        print(f'[queue] {len(queued)} URLs from reindex-queue.txt')
+        sent = google_index(tok, queued[:190])
+        left = [u for u in queued if u not in sent]
+        open(q_path, 'w', encoding='utf-8').write(''.join(u + '
+' for u in left))
+        print(f'[queue] {len(sent)} accepted, {len(left)} kept for the next run')
+    else:
+        print('[queue] empty - nothing to nudge')
     print('Done.')
