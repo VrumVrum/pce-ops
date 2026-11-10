@@ -175,6 +175,40 @@ hello@projectcostestimator.com{postal}"""
 NICHE_PAGE = {'law': '/law-firm-website-cost', 'restaurant': '/restaurant-website-cost', 'nonprofit': '/nonprofit-website-cost', 'real-estate': '/real-estate-website-cost',
               'healthcare': '/healthcare-website-cost', 'medical': '/healthcare-website-cost', 'dental': '/healthcare-website-cost', 'ecommerce': '/ecommerce-cost-calculator', 'shopify': '/ecommerce-cost-calculator', 'wordpress': '/wordpress-website-cost'}
 
+def compose_writer(row):
+    """Contract v4 `authority` lane (10 Nov 2026): one message to a writer or editor who has
+    published a cost/pricing article, offering the one thing the site has that they do not -
+    an open, sourced rate dataset and a calculator they can cite - and asking for a citation.
+    Row fields: name, email, market, article_url, article_title (both read at discovery, [P]),
+    optional first_name. Every claim below is true of the site today: /rate-database holds the
+    rate rows under CC BY 4.0; the calculator is free and needs no account. No number we do
+    not publish. The engine adds the one-click unsubscribe header; the body carries the line.
+    """
+    name = (row.get('first_name') or row.get('name') or '').strip()
+    title = (row.get('article_title') or '').strip().rstrip('.')
+    url = (row.get('article_url') or '').strip()
+    if not (name and title and url and row.get('email')):
+        return None
+    greet = f"Hi {name.split()[0]}," if row.get('first_name') else f"Hi {name},"
+    postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
+    unsub = unsub_url(row['email'])
+    subject = f'A sourced rate dataset for "{title[:70]}"'
+    body = f"""{greet}
+I read "{title}" ({url}). One thing that might be useful the next time it is updated: we publish the developer
+rate data behind projectcostestimator.com as an open dataset - hourly rates for 12 platforms across 6 markets,
+freelancer and agency, with the sources listed, under CC BY 4.0:
+https://projectcostestimator.com/rate-database
+The calculator itself is free and needs no account, if a worked example helps the piece:
+https://projectcostestimator.com/calculator
+If you use either, a link back to the page is the only thing I would ask. If a specific number or a custom cut of
+the data would help, reply and I will send it.
+If this is not useful, reply "no" and I will not write again, or use this link and it stops on its own: {unsub}
+Florin Florea
+founder, Project Cost Estimator
+hello@projectcostestimator.com{postal}"""
+    return subject, body
+
+
 def compose_followup(row):
     name = row['name']; ref = row.get('ref') or ('out-' + slug_of(name)); junk = junk_name(name)
     greet = f"Hi {FIRST_NAME[name]}," if name in FIRST_NAME else ("Hi there," if junk else f"Hi {name} team,")
@@ -392,6 +426,23 @@ def main():
         return
     if mode == 'send':
         deliver(rows, path, fields, lambda r: bool(r['email']) and not r.get('sent'), 'send', 'outreach-' + TODAY, limit or 999, gap)
+        return
+    if mode == 'writers':
+        # python outreach_send.py writers --csv data/outreach-writers.csv [--limit N] [--dry]
+        # Same delivery rules as `send` (unsubscribe list, MX, US postal skip, dedupe), writer template.
+        pick = lambda r: bool(r.get('email')) and not r.get('sent')
+        if '--dry' in sys.argv:
+            k = 0
+            for r in rows:
+                if not pick(r): continue
+                c = compose_writer(r)
+                if not c: print('skip (row incomplete):', r.get('name'), r.get('email')); continue
+                print('=' * 70); print('TO:', r['email'], '|', r.get('market'), '|', r.get('article_url')); print('SUBJECT:', c[0]); print(c[1])
+                k += 1
+                if k >= (limit or 3): break
+            print('would send:', sum(1 for r in rows if pick(r) and compose_writer(r)))
+            return
+        deliver(rows, path, fields, pick, 'send', 'outreach-writers-' + TODAY, limit or 25, gap, composer=compose_writer)
         return
     minscore = int(CFG.get('min_score', 60)); b = board()
     def eligible(r):
