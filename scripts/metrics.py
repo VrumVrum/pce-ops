@@ -109,6 +109,9 @@ def split_human_leads(rows, min_ips=BOT_UA_MIN_IPS):
 # rows (no DDL access — see scopebit src/lib/affiliateLane.ts, checked-in truth,
 # ids stable in production). usageLane.ts system rows (__api_usage__/__embed_usage__)
 # are distribution events, NOT affiliate clicks — excluded by the id filter.
+# own agency lane (scopebit src/lib/ownLane.ts), counted separately below
+SCOPEBIT_PROVIDER_ID = 'a7ba9105-06da-4883-91e5-1055077ff115'
+
 AFFILIATE_PROVIDER_IDS = {
     'a7255fb7-cb58-4b8c-a5f3-ff6eaa04967d': 'fiverr',
     'fb5103d9-4583-4bdc-a318-e1dde707280d': 'hostinger',
@@ -260,6 +263,33 @@ def supabase():
         }
     except Exception as e:
         out['affiliate_clicks'] = {'error': str(e)[:200]}
+    # clicks sent to the owner's own agency (scopebit.eu) — logged by /api/outbound/scopebit
+    # against ONE system row (scopebit src/lib/ownLane.ts, checked-in truth), kept out of the
+    # affiliate filter above on purpose: they are not affiliate clicks. Same is_bot filter.
+    try:
+        _, body = sb_get(
+            f'{url}/rest/v1/provider_clicks'
+            f'?select=user_inputs,created_at,user_agent,source_page'
+            f'&provider_id=eq.{SCOPEBIT_PROVIDER_ID}&order=created_at.desc&limit=10000', key)
+        raw = json.loads(body)
+        clicks = [x for x in raw if not (x.get('user_inputs') or {}).get('is_bot')]
+        cutoff7 = (datetime.datetime.now(datetime.timezone.utc)
+                   .replace(tzinfo=None) - datetime.timedelta(days=7)).isoformat()
+        cutoff28 = (datetime.datetime.now(datetime.timezone.utc)
+                    .replace(tzinfo=None) - datetime.timedelta(days=28)).isoformat()
+        by_placement = {}
+        for x in clicks:
+            k = (x.get('user_inputs') or {}).get('placement') or 'other'
+            by_placement[k] = by_placement.get(k, 0) + 1
+        out['scopebit_clicks'] = {
+            'total': len(clicks),
+            'last7d': sum(1 for x in clicks if (x.get('created_at') or '') >= cutoff7),
+            'last28d': sum(1 for x in clicks if (x.get('created_at') or '') >= cutoff28),
+            'by_placement': dict(sorted(by_placement.items(), key=lambda kv: -kv[1])),
+            'excluded_by_is_bot_flag': len(raw) - len(clicks),
+        }
+    except Exception as e:
+        out['scopebit_clicks'] = {'error': str(e)[:200]}
     # sales
     try:
         r, _ = sb_get(f'{url}/rest/v1/sales?select=count', key, 'count=exact')
