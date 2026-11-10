@@ -150,8 +150,7 @@ if __name__ == '__main__':
         print(f'[queue] {len(queued)} URLs from reindex-queue.txt')
         sent = google_index(tok, queued[:190])
         left = [u for u in queued if u not in sent]
-        open(q_path, 'w', encoding='utf-8').write(''.join(u + '
-' for u in left))
+        open(q_path, 'w', encoding='utf-8').write(''.join(u + chr(10) for u in left))
         print(f'[queue] {len(sent)} accepted, {len(left)} kept for the next run')
     else:
         print('[queue] empty - nothing to nudge')
