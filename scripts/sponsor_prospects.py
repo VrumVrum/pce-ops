@@ -23,7 +23,8 @@ D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data') + os.
 OUT = D + 'sponsor-prospects.csv'
 CACHE = D + 'sponsor-email-cache.json'
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36'
-FIELDS = ['name', 'email', 'market', 'website', 'topic', 'page_slug', 'partner_status', 'found_at', 'sent']
+FIELDS = ['name', 'email', 'market', 'website', 'topic', 'page_slug', 'partner_status', 'found_at', 'sent',
+          'status', 'last_in', 'last_out', 'quoted', 'note']  # the last five belong to sponsor_replies.py and are carried through untouched
 VENDOR_PAGE = {
     'hubspot': ('HubSpot', 'hubspot-cost-2026'), 'klaviyo': ('Klaviyo', 'mailchimp-vs-klaviyo-cost-2026'),
     'mailchimp': ('Mailchimp', 'mailchimp-cost-2026'), 'shopify': ('Shopify', 'shopify-store-cost-2026'),
