@@ -350,6 +350,68 @@ def _due(r, b):
     p = b.get(r.get('ref'))
     return not (p and p['status'] in ('clicked', 'replied', 'listed', 'declined', 'bounced'))
 
+VENDOR_LABEL = {'hubspot': 'HubSpot', 'klaviyo': 'Klaviyo', 'mailchimp': 'Mailchimp', 'shopify': 'Shopify', 'bigcommerce': 'BigCommerce',
+                'woocommerce': 'WooCommerce', 'magento': 'Magento', 'webflow': 'Webflow', 'framer': 'Framer', 'bubble': 'Bubble',
+                'wix': 'Wix', 'squarespace': 'Squarespace', 'airtable': 'Airtable', 'notion': 'Notion', 'clickup': 'ClickUp'}
+SPONSOR_EXAMPLE = 'https://projectcostestimator.com/blog/klaviyo-cost-2026'
+SPONSOR_TAKEN = {'klaviyo-cost-2026'}  # sold 10 Nov 2026; never pitch a slot that is not free
+SPONSOR_ROOT_PAGES = {'shopify-store-cost', 'ecommerce-cost-calculator', 'wordpress-website-cost', 'saas-cost-estimator',
+                      'marketplace-cost-estimator', 'freelance-website-cost'}  # pages that are not under /blog/
+
+def compose_sponsor(row):
+    """Sponsor lane (owner, 11 Nov 2026: "sute, mii; trimiti zilnic emailuri personalizate"). One message to a
+    partner agency or vendor of the product a PCE article prices, offering the single labelled sponsor card on
+    that article. Row fields: name, email, market, page_slug, topic (e.g. "HubSpot"), partner_status (optional,
+    read at discovery). True today: one after-intro card per article, labelled Sponsored, rel="sponsored"; a live
+    example exists. Never a traffic or impression number (owner rule, 5 Nov), never a price in the first message
+    (the owner sets it in the reply)."""
+    name = (row.get('name') or '').strip()
+    slug = (row.get('page_slug') or '').strip()
+    topic = (row.get('topic') or '').strip()
+    if not (name and slug and topic and row.get('email')) or slug in SPONSOR_TAKEN:
+        return None
+    url = 'https://projectcostestimator.com/' + ('' if slug in SPONSOR_ROOT_PAGES else 'blog/') + slug
+    # the research note may carry a remark after the status ("Webflow Premium Partner - badge on own site",
+    # "tier not stated"); only a clean, short status is repeated to the company, otherwise the neutral line
+    status = re.split(r'\s+-\s+|\s+in\s+|[(;,]', (row.get('partner_status') or '').strip().replace('"', ''))[0].strip().rstrip('.')
+    status = status.strip("'‘’ ").replace('Verified ', '')
+    # only a status that reads as a title is repeated: at most six words, ends in Partner/Expert, no research remarks
+    clean = bool(re.match(r"^[A-Z][A-Za-z+&. ]{3,48}\b(Partner|Expert)$", status)) and len(status.split()) <= 6 \
+        and not re.search(r'(?i)\b(not|unverified|unknown|claims?|site|seen|stated|tier|competitor|alternative|with|logos?|badge|page|agency|google)\b', status)
+    name = re.sub(r'\s*\(.*?\)\s*', ' ', name).strip()
+    # 11 Nov preview: the fallback used to say "<name> works with <topic>", which was false for a competitor
+    # (Pressable on the WP Engine guide) and nonsense for a comparison page. The neutral line claims only what
+    # is true of every row: research turned the company up for this reader.
+    who = (f"{name} is {('an ' if status[:1].lower() in 'aeiou' else 'a ') + status}" if clean
+           else f"{name} came up when I looked at who serves that reader")
+    m = re.match(r'^([a-z0-9-]+)-vs-([a-z0-9-]+?)-cost', slug)
+    guide = f'a {topic} cost comparison' if m else f'a guide to what {topic} costs'
+    first = (row.get('first_name') or '').strip()
+    greet = f"Hi {first}," if first else f"Hi {name} team,"
+    postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
+    unsub = unsub_url(row['email'])
+    subject = f'The sponsor spot on our {topic} cost guide'
+    body = f"""{greet}
+
+I run Project Cost Estimator. We publish {guide}:
+{url}
+
+The people who read it are pricing {topic} right now, and the next thing they do is choose who to work
+with. {who}, so I thought of you first.
+
+Each article has one sponsor card, right after the intro: your logo, a headline, two lines of copy and a
+button to your site. It is labelled "Sponsored" and the link carries rel="sponsored". You can see a live one
+on our Klaviyo guide: {SPONSOR_EXAMPLE}
+
+There is one spot per article. If you want this one, reply and I will send the price and the start date.
+
+If this is not for you, reply "no" and I will not write again, or use this link and it stops on its own: {unsub}
+
+Florin Florea
+founder, Project Cost Estimator
+hello@projectcostestimator.com{postal}"""
+    return subject, body
+
 def us_blocked(market_key):
     return market_key == 'us' and not CFG.get('postal_address', '').strip()
 
@@ -426,6 +488,31 @@ def main():
         return
     if mode == 'send':
         deliver(rows, path, fields, lambda r: bool(r['email']) and not r.get('sent'), 'send', 'outreach-' + TODAY, limit or 999, gap)
+        return
+    if mode == 'sponsors':
+        # python outreach_send.py sponsors --csv data/sponsor-prospects.csv [--limit N] [--dry]
+        # Same delivery rules as `send` (unsubscribe list, MX, US postal skip, dedupe); one company per article
+        # per day so two partners of the same product never get the same "one spot" message on the same day.
+        pick = lambda r: bool(r.get('email')) and not r.get('sent')
+        if '--dry' in sys.argv:
+            k = 0
+            for r in rows:
+                if not pick(r): continue
+                c = compose_sponsor(r)
+                if not c: continue
+                print('=' * 70); print('TO:', r['email'], '|', r.get('market'), '|', r.get('page_slug')); print('SUBJECT:', c[0]); print(c[1])
+                k += 1
+                if k >= (limit or 3): break
+            ok = [r for r in rows if pick(r) and compose_sponsor(r)]
+            print('would send:', len(ok), '| held as US (no postal address):', sum(1 for r in ok if us_blocked(r['market'].split(',')[0])))
+            return
+        seen_pages = set(); todays = []
+        for r in rows:
+            if not pick(r) or not compose_sponsor(r) or us_blocked(r['market'].split(',')[0]): continue
+            if r['page_slug'] in seen_pages: continue
+            seen_pages.add(r['page_slug']); todays.append(r)
+        rest = [r for r in rows if pick(r) and compose_sponsor(r) and r not in todays]
+        deliver(todays + rest, path, fields, pick, 'send', 'outreach-sponsors-' + TODAY, limit or 20, gap, composer=compose_sponsor)
         return
     if mode == 'writers':
         # python outreach_send.py writers --csv data/outreach-writers.csv [--limit N] [--dry]
