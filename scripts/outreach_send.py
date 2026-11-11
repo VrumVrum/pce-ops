@@ -352,7 +352,7 @@ def _due(r, b):
 
 VENDOR_LABEL = {'hubspot': 'HubSpot', 'klaviyo': 'Klaviyo', 'mailchimp': 'Mailchimp', 'shopify': 'Shopify', 'bigcommerce': 'BigCommerce',
                 'woocommerce': 'WooCommerce', 'magento': 'Magento', 'webflow': 'Webflow', 'framer': 'Framer', 'bubble': 'Bubble',
-                'wix': 'Wix', 'squarespace': 'Squarespace', 'airtable': 'Airtable', 'notion': 'Notion', 'clickup': 'ClickUp'}
+                'wix': 'Wix', 'squarespace': 'Squarespace', 'wordpress': 'WordPress', 'drupal': 'Drupal', 'airtable': 'Airtable', 'notion': 'Notion', 'clickup': 'ClickUp'}
 SPONSOR_EXAMPLE = 'https://projectcostestimator.com/blog/klaviyo-cost-2026'
 SPONSOR_TAKEN = {'klaviyo-cost-2026'}  # sold 10 Nov 2026; never pitch a slot that is not free
 SPONSOR_ROOT_PAGES = {'shopify-store-cost', 'ecommerce-cost-calculator', 'wordpress-website-cost', 'saas-cost-estimator',
