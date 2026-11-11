@@ -385,7 +385,8 @@ def compose_sponsor(row):
     who = (f"{name} is {('an ' if status[:1].lower() in 'aeiou' else 'a ') + status}" if clean
            else f"{name} came up when I looked at who serves that reader")
     m = re.match(r'^([a-z0-9-]+)-vs-([a-z0-9-]+?)-cost', slug)
-    guide = f'a {topic} cost comparison' if m else f'a guide to what {topic} costs'
+    lab = lambda w: VENDOR_LABEL.get(w, w.replace('-', ' ').title())
+    guide = f'a {lab(m.group(1))} vs {lab(m.group(2))} cost comparison' if m else f'a guide to what {topic} costs'
     first = (row.get('first_name') or '').strip()
     greet = f"Hi {first}," if first else f"Hi {name} team,"
     postal = ('\n' + CFG['postal_address'].strip() + '\n') if CFG.get('postal_address', '').strip() else ''
@@ -397,13 +398,14 @@ I run Project Cost Estimator. We publish {guide}:
 {url}
 
 The people who read it are pricing {topic} right now, and the next thing they do is choose who to work
-with. {who}, so I thought of you first.
+with. {who}, which is why I am writing to you.
 
 Each article has one sponsor card, right after the intro: your logo, a headline, two lines of copy and a
 button to your site. It is labelled "Sponsored" and the link carries rel="sponsored". You can see a live one
 on our Klaviyo guide: {SPONSOR_EXAMPLE}
 
-There is one spot per article. If you want this one, reply and I will send the price and the start date.
+There is one spot per article and it goes to the first company that confirms. If you want this one, reply
+and I will send the price and the start date.
 
 If this is not for you, reply "no" and I will not write again, or use this link and it stops on its own: {unsub}
 

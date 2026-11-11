@@ -34,6 +34,16 @@ VENDOR_PAGE = {
     'wix': ('Wix', 'wix-website-cost-calculator'), 'squarespace': ('Squarespace', 'squarespace-website-cost-calculator'),
     'airtable': ('Airtable', 'airtable-cost-2026'), 'notion': ('Notion', 'notion-cost-2026'), 'clickup': ('ClickUp', 'clickup-cost-2026'),
 }
+VENDOR_PAGES = {  # every article about the product; bulk partners are dealt across them in turn
+    'shopify': ['shopify-store-cost-2026', 'shopify-b2b-site-cost-2026', 'shopify-subscription-box-cost-2026', 'shopify-fees-calculator',
+                'shopify-cost-per-month-calculator', 'wordpress-vs-shopify-cost-2026', 'shopify-vs-wordpress-cost-2026', 'magento-vs-shopify-cost-2026',
+                'woocommerce-vs-shopify-cost-2026', 'ecommerce-website-cost-by-platform-2026', 'headless-commerce-cost-2026'],
+    'webflow': ['webflow-website-cost-2026', 'webflow-website-cost-calculator', 'webflow-vs-wordpress-cost-2026', 'webflow-vs-framer-cost-2026'],
+    'framer': ['framer-website-cost-2026', 'webflow-vs-framer-cost-2026'],
+    'klaviyo': ['mailchimp-vs-klaviyo-cost-2026'],
+    'mailchimp': ['mailchimp-cost-2026', 'mailchimp-vs-klaviyo-cost-2026'],
+    'notion': ['notion-cost-2026', 'notion-vs-wordpress-cost-2026'],
+}
 SLUG_TOPIC = {'seo-services-cost-2026': 'SEO services', 'content-marketing-cost-2026': 'content marketing', 'calendly-cost-2026': 'Calendly',
               'chatbot-development-cost-2026': 'chatbot development', 'headless-commerce-cost-2026': 'headless commerce',
               'wp-engine-cost-2026': 'WP Engine', 'website-hosting-cost-2026': 'website hosting', 'wordpress-migration-cost-2026': 'WordPress migration',
@@ -180,12 +190,26 @@ def main():
                           'found_at': (r.get('found_at') or '').strip(), 'country': ''}
     bulk = D + 'sponsor-directory-bulk.csv'
     if os.path.exists(bulk):
-        for r in csv.DictReader(open(bulk, encoding='utf-8', newline='')):
+        # The directories hold thousands of partners per product (11 Nov: 3,762 Shopify, 1,968 Webflow). Highest
+        # tiers first, freelancers and unranked last, and each product's partners are spread over every article
+        # we have about it, so one article is not offered to a thousand companies while its siblings get none.
+        TIER_RANK = ('elite', 'diamond', 'platinum', 'plus', 'premium', 'enterprise', 'gold', 'ruby', 'sapphire', 'pro', 'silver', 'certified', 'select')
+        def rank(r):
+            t = (r.get('tier') or '').lower()
+            return next((i for i, k in enumerate(TIER_RANK) if k in t), len(TIER_RANK) + (5 if 'freelanc' in t else 0))
+        bulk_rows = sorted(csv.DictReader(open(bulk, encoding='utf-8', newline='')), key=rank)
+        turn = {}
+        for r in bulk_rows:
             dom = domain(r.get('website') or '')
             v = (r.get('vendor') or '').strip().lower()
             if not dom or v not in VENDOR_PAGE or dom in items or dom in have or 'stickydigital' in dom:
                 continue
-            lab, slug = VENDOR_PAGE[v]
+            if 'freelanc' in (r.get('tier') or '').lower():
+                continue
+            lab = VENDOR_PAGE[v][0]
+            pages = VENDOR_PAGES.get(v) or [VENDOR_PAGE[v][1]]
+            slug = pages[turn.get(v, 0) % len(pages)]
+            turn[v] = turn.get(v, 0) + 1
             tier = (r.get('tier') or '').strip()
             items[dom] = {'dom': dom, 'name': (r.get('company') or '').strip(), 'website': 'https://' + dom, 'topic': lab, 'page_slug': slug,
                           'partner_status': (f'{lab} {tier} partner' if tier else f'{lab} partner'), 'email': '', 'found_at': '',
