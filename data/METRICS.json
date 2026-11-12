@@ -1,63 +1,63 @@
 {
-  "generated_utc": "2026-11-11T17:37:42.013446Z",
+  "generated_utc": "2026-11-12T04:35:42.373769Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-11-11",
+    "generated": "2026-11-12",
     "totals_28d": {
-      "clicks": 161,
-      "impressions": 38852,
+      "clicks": 156,
+      "impressions": 37682,
       "ctr": 0.414,
-      "position": 17.98
-    },
-    "totals_7d": {
-      "clicks": 42,
-      "impressions": 10530,
-      "ctr": 0.399,
       "position": 18.03
     },
+    "totals_7d": {
+      "clicks": 39,
+      "impressions": 9016,
+      "ctr": 0.433,
+      "position": 18.34
+    },
     "totals_90d": {
-      "clicks": 534,
-      "impressions": 134767,
-      "ctr": 0.396,
-      "position": 15.25
+      "clicks": 531,
+      "impressions": 133299,
+      "ctr": 0.398,
+      "position": 15.18
     },
     "totals_28d_prev": {
-      "clicks": 181,
-      "impressions": 37776,
-      "ctr": 0.479,
-      "position": 12.33
+      "clicks": 174,
+      "impressions": 36916,
+      "ctr": 0.471,
+      "position": 12.48
     },
     "totals_7d_prev": {
-      "clicks": 36,
-      "impressions": 10069,
-      "ctr": 0.358,
-      "position": 16.61
+      "clicks": 35,
+      "impressions": 10099,
+      "ctr": 0.347,
+      "position": 16.53
     },
     "windows": {
       "current_28d": [
-        "2026-10-13",
-        "2026-11-09"
+        "2026-10-14",
+        "2026-11-10"
       ],
       "previous_28d": [
-        "2026-09-15",
-        "2026-10-12"
+        "2026-09-16",
+        "2026-10-13"
       ],
       "current_7d": [
-        "2026-11-03",
-        "2026-11-09"
+        "2026-11-04",
+        "2026-11-10"
       ],
       "previous_7d": [
-        "2026-10-27",
-        "2026-11-02"
+        "2026-10-28",
+        "2026-11-03"
       ],
       "current_90d": [
-        "2026-08-12",
-        "2026-11-09"
+        "2026-08-13",
+        "2026-11-10"
       ]
     },
     "junk_28d": {
-      "impressions": 3139,
-      "queries": 104,
+      "impressions": 3079,
+      "queries": 101,
       "sample": [
         "site.revenuecat.com \"2026\" \"$72\"",
         "free website cost calculator tool on nemin io",
@@ -65,11 +65,16 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 161,
-      "impressions": 35713,
+      "clicks": 156,
+      "impressions": 34603,
       "ctr": 0.451
     },
-    "citation_floor_alerts": []
+    "citation_floor_alerts": [
+      {
+        "page": "/website-costs-2026-report",
+        "impressions": 9
+      }
+    ]
   },
   "supabase": {
     "leads_total": 180,
@@ -103,7 +108,7 @@
     },
     "affiliate_clicks": {
       "total": 327,
-      "last7d": 17,
+      "last7d": 16,
       "by_slug": {
         "fiverr": 174,
         "shopify": 94,
@@ -149,17 +154,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 265,
+      "impressions": 248,
       "clicks": 1
     },
     "/cost/app-like/": {
-      "pages_with_data": 23,
-      "impressions": 71,
+      "pages_with_data": 21,
+      "impressions": 68,
       "clicks": 0
     },
     "/cost/industry/": {
       "pages_with_data": 139,
-      "impressions": 999,
+      "impressions": 970,
       "clicks": 14
     },
     "/software-development-budget-2027": {
@@ -169,17 +174,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4649,
-      "clicks": 12
+      "impressions": 4510,
+      "clicks": 11
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1530,
+      "impressions": 1457,
       "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 744,
+      "impressions": 703,
       "clicks": 6
     }
   }

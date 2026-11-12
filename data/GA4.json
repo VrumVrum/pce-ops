@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-11T17:38:19Z",
+  "generated_utc": "2026-11-12T04:35:56Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "680",
+      "sessions": "679",
       "users": "642",
-      "engagementRate": "0.20441176470588235",
-      "avgDuration": "38.532040942647058"
+      "engagementRate": "0.20471281296023564",
+      "avgDuration": "38.588789162002939"
     },
     {
       "channel": "Organic Search",
@@ -21,7 +21,7 @@
       "sessions": "7",
       "users": "5",
       "engagementRate": "0.5714285714285714",
-      "avgDuration": "206.84242571428567"
+      "avgDuration": "273.46585657142856"
     },
     {
       "channel": "Referral",
@@ -32,40 +32,40 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "4",
-      "users": "4",
-      "engagementRate": "0.25",
-      "avgDuration": "133.43080325"
+      "sessions": "2",
+      "users": "2",
+      "engagementRate": "0.5",
+      "avgDuration": "43.873288"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3466",
+      "sessions": "3455",
       "users": "3260",
-      "engagementRate": "0.24841315637622619",
-      "avgDuration": "22.150961501442588"
+      "engagementRate": "0.2492040520984081",
+      "avgDuration": "22.22148554674385"
     },
     {
       "channel": "Organic Search",
       "sessions": "283",
       "users": "227",
       "engagementRate": "0.48763250883392228",
-      "avgDuration": "130.00711391519437"
+      "avgDuration": "130.00711391519434"
     },
     {
       "channel": "Unassigned",
-      "sessions": "40",
-      "users": "37",
-      "engagementRate": "0.15",
-      "avgDuration": "97.362225099999989"
+      "sessions": "38",
+      "users": "35",
+      "engagementRate": "0.15789473684210525",
+      "avgDuration": "90.750325447368411"
     },
     {
       "channel": "AI Assistant",
       "sessions": "30",
       "users": "22",
       "engagementRate": "0.7",
-      "avgDuration": "274.84263336666669"
+      "avgDuration": "290.38810056666659"
     },
     {
       "channel": "Referral",
@@ -120,8 +120,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3466",
-      "engagementRate": "0.24841315637622619"
+      "sessions": "3455",
+      "engagementRate": "0.2492040520984081"
     },
     {
       "source": "google",
@@ -135,7 +135,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "30",
+      "sessions": "28",
       "engagementRate": "0"
     },
     {
@@ -314,13 +314,13 @@
     },
     {
       "landing": "/",
-      "sessions": "196",
-      "engagementRate": "0.44897959183673469"
+      "sessions": "195",
+      "engagementRate": "0.45128205128205129"
     },
     {
       "landing": "(not set)",
-      "sessions": "111",
-      "engagementRate": "0.027027027027027029"
+      "sessions": "114",
+      "engagementRate": "0.026315789473684209"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
