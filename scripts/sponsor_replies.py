@@ -282,6 +282,17 @@ def main():
     if '--status' in sys.argv:
         return status()
     rows, fields = load_rows()
+    # Since 12 Nov the offers are sent by the Vercel cron, whose record is the marker rows in Supabase, not this
+    # csv. Without them the desk would not recognise a reply from a company the cron wrote to.
+    try:
+        import sponsor_export
+        mk = sponsor_export.markers()
+        for r in rows:
+            m = mk.get((r.get('email') or '').strip().lower())
+            if m and m[0] == 'sponsor-offer' and not r.get('sent'):
+                r['sent'] = m[1]
+    except Exception as e:  # noqa: BLE001
+        print('markers unreadable, using the csv only:', str(e)[:100])
     sent = [r for r in rows if r.get('sent') and r.get('email')]
     by_addr = {r['email'].lower(): r for r in sent}
     by_dom = {r['email'].split('@')[1].lower(): r for r in sent if r['email'].split('@')[1].lower() not in ('gmail.com', 'outlook.com', 'yahoo.com', 'hotmail.com', 'icloud.com')}
