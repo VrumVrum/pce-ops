@@ -1,63 +1,63 @@
 {
-  "generated_utc": "2026-11-13T16:35:13.452829Z",
+  "generated_utc": "2026-11-14T04:35:17.883961Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
-    "generated": "2026-11-13",
+    "generated": "2026-11-14",
     "totals_28d": {
-      "clicks": 157,
-      "impressions": 38110,
-      "ctr": 0.412,
-      "position": 17.96
+      "clicks": 147,
+      "impressions": 36747,
+      "ctr": 0.4,
+      "position": 17.99
     },
     "totals_7d": {
-      "clicks": 39,
-      "impressions": 9011,
-      "ctr": 0.433,
-      "position": 18.22
+      "clicks": 31,
+      "impressions": 7490,
+      "ctr": 0.414,
+      "position": 18.45
     },
     "totals_90d": {
-      "clicks": 534,
-      "impressions": 133270,
+      "clicks": 530,
+      "impressions": 132250,
       "ctr": 0.401,
-      "position": 15.03
+      "position": 15.01
     },
     "totals_28d_prev": {
-      "clicks": 170,
-      "impressions": 36243,
-      "ctr": 0.469,
-      "position": 12.68
+      "clicks": 172,
+      "impressions": 35623,
+      "ctr": 0.483,
+      "position": 13.0
     },
     "totals_7d_prev": {
-      "clicks": 39,
-      "impressions": 10384,
-      "ctr": 0.376,
-      "position": 16.81
+      "clicks": 40,
+      "impressions": 10379,
+      "ctr": 0.385,
+      "position": 17.11
     },
     "windows": {
       "current_28d": [
-        "2026-10-15",
-        "2026-11-11"
+        "2026-10-16",
+        "2026-11-12"
       ],
       "previous_28d": [
-        "2026-09-17",
-        "2026-10-14"
+        "2026-09-18",
+        "2026-10-15"
       ],
       "current_7d": [
-        "2026-11-05",
-        "2026-11-11"
+        "2026-11-06",
+        "2026-11-12"
       ],
       "previous_7d": [
-        "2026-10-29",
-        "2026-11-04"
+        "2026-10-30",
+        "2026-11-05"
       ],
       "current_90d": [
-        "2026-08-14",
-        "2026-11-11"
+        "2026-08-15",
+        "2026-11-12"
       ]
     },
     "junk_28d": {
-      "impressions": 3176,
-      "queries": 97,
+      "impressions": 2897,
+      "queries": 93,
       "sample": [
         "site.revenuecat.com \"2026\" \"$72\"",
         "free website cost calculator tool on nemin io",
@@ -65,11 +65,16 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 157,
-      "impressions": 34934,
-      "ctr": 0.449
+      "clicks": 147,
+      "impressions": 33850,
+      "ctr": 0.434
     },
-    "citation_floor_alerts": []
+    "citation_floor_alerts": [
+      {
+        "page": "/website-costs-2026-report",
+        "impressions": 9
+      }
+    ]
   },
   "supabase": {
     "leads_total": 293,
@@ -104,7 +109,7 @@
     },
     "affiliate_clicks": {
       "total": 330,
-      "last7d": 15,
+      "last7d": 14,
       "by_slug": {
         "fiverr": 175,
         "shopify": 96,
@@ -134,8 +139,8 @@
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
-      "pages_with_data": 1,
-      "impressions": 3,
+      "pages_with_data": 0,
+      "impressions": 0,
       "clicks": 0
     },
     "/tools/fixed-price-vs-time-and-materials": {
@@ -150,18 +155,18 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 236,
+      "impressions": 222,
       "clicks": 1
     },
     "/cost/app-like/": {
       "pages_with_data": 21,
-      "impressions": 67,
+      "impressions": 65,
       "clicks": 0
     },
     "/cost/industry/": {
       "pages_with_data": 142,
-      "impressions": 969,
-      "clicks": 11
+      "impressions": 936,
+      "clicks": 10
     },
     "/software-development-budget-2027": {
       "pages_with_data": 1,
@@ -170,18 +175,18 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4422,
+      "impressions": 4199,
       "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1432,
-      "clicks": 14
+      "impressions": 1366,
+      "clicks": 12
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 724,
-      "clicks": 6
+      "impressions": 691,
+      "clicks": 4
     }
   }
 }
