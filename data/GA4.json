@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-17T16:35:28Z",
+  "generated_utc": "2026-11-18T04:35:27Z",
   "channels_7d": [
     {
       "channel": "Direct",
       "sessions": "747",
       "users": "704",
-      "engagementRate": "0.19143239625167335",
-      "avgDuration": "17.806188488621149"
+      "engagementRate": "0.19277108433734941",
+      "avgDuration": "18.275803983935742"
     },
     {
       "channel": "Organic Search",
@@ -24,27 +24,27 @@
       "avgDuration": "154.61403485714285"
     },
     {
-      "channel": "Unassigned",
-      "sessions": "5",
-      "users": "5",
-      "engagementRate": "0.2",
-      "avgDuration": "88.3362292"
-    },
-    {
       "channel": "Email",
       "sessions": "4",
       "users": "4",
       "engagementRate": "0",
       "avgDuration": "2.4803475"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "3",
+      "users": "3",
+      "engagementRate": "0.33333333333333331",
+      "avgDuration": "29.974422"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3479",
+      "sessions": "3472",
       "users": "3239",
-      "engagementRate": "0.25208393216441505",
-      "avgDuration": "21.659045657372808"
+      "engagementRate": "0.25259216589861749",
+      "avgDuration": "21.803750753744239"
     },
     {
       "channel": "Organic Search",
@@ -54,18 +54,18 @@
       "avgDuration": "112.67306244727273"
     },
     {
-      "channel": "Unassigned",
-      "sessions": "31",
-      "users": "28",
-      "engagementRate": "0.19354838709677419",
-      "avgDuration": "82.3382994516129"
-    },
-    {
       "channel": "AI Assistant",
       "sessions": "30",
       "users": "21",
       "engagementRate": "0.7",
       "avgDuration": "208.29021749999998"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "29",
+      "users": "26",
+      "engagementRate": "0.20689655172413793",
+      "avgDuration": "75.887220793103452"
     },
     {
       "channel": "Referral",
@@ -108,8 +108,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3479",
-      "engagementRate": "0.25208393216441505"
+      "sessions": "3472",
+      "engagementRate": "0.25259216589861749"
     },
     {
       "source": "google",
@@ -123,7 +123,7 @@
     },
     {
       "source": "(not set)",
-      "sessions": "19",
+      "sessions": "17",
       "engagementRate": "0"
     },
     {
@@ -312,8 +312,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "104",
-      "engagementRate": "0.028846153846153848"
+      "sessions": "110",
+      "engagementRate": "0.027272727272727271"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
@@ -358,7 +358,7 @@
     {
       "landing": "/for-agencies",
       "sessions": "30",
-      "engagementRate": "0.46666666666666667"
+      "engagementRate": "0.5"
     },
     {
       "landing": "/web-app-development-cost",
