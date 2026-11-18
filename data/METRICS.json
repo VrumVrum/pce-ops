@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-11-18T04:35:13.051857Z",
+  "generated_utc": "2026-11-18T16:35:15.518013Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-11-18",
     "totals_28d": {
-      "clicks": 159,
-      "impressions": 40497,
-      "ctr": 0.393,
-      "position": 17.38
+      "clicks": 167,
+      "impressions": 42924,
+      "ctr": 0.389,
+      "position": 17.39
     },
     "totals_7d": {
-      "clicks": 36,
-      "impressions": 10132,
-      "ctr": 0.355,
-      "position": 16.1
+      "clicks": 44,
+      "impressions": 12559,
+      "ctr": 0.35,
+      "position": 16.38
     },
     "totals_90d": {
-      "clicks": 545,
-      "impressions": 135556,
-      "ctr": 0.402,
-      "position": 14.87
+      "clicks": 553,
+      "impressions": 137983,
+      "ctr": 0.401,
+      "position": 14.92
     },
     "totals_28d_prev": {
       "clicks": 173,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 3415,
-      "queries": 103,
+      "impressions": 3570,
+      "queries": 107,
       "sample": [
         "site.revenuecat.com \"2026\" \"$72\"",
         "free website cost calculator tool on nemin io",
@@ -65,59 +65,59 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 159,
-      "impressions": 37082,
-      "ctr": 0.429
+      "clicks": 167,
+      "impressions": 39354,
+      "ctr": 0.424
     },
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 507,
+    "leads_total": 609,
     "leads_by_context": {
-      "unsub": 28,
-      "sponsor-offer": 198,
+      "sponsor-offer": 243,
+      "unsub": 29,
+      "drip:2": 67,
+      "sys:lastrun": 121,
       "sponsor-skip": 2,
-      "sys:lastrun": 120,
       "drip:1": 116,
       "quotes": 3,
       "api_key": 3,
       "drip:3": 12,
-      "drip:2": 12,
       "unknown": 2,
       "results": 7,
       "results:build": 4
     },
-    "real_human_leads": 216,
+    "real_human_leads": 261,
     "api_keys": 3,
-    "real_human_leads_strict": 216,
+    "real_human_leads_strict": 261,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
-    "last_strict_human_lead_utc": "2026-11-17T14:11:31",
-    "real_human_leads_strict_7d": 201,
-    "real_human_leads_strict_28d": 204,
+    "last_strict_human_lead_utc": "2026-11-18T14:11:29",
+    "real_human_leads_strict_7d": 246,
+    "real_human_leads_strict_28d": 249,
     "bot_lead_fleets": [],
-    "real_human_leads_note": "real_human_leads (216) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (216) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
+    "real_human_leads_note": "real_human_leads (261) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (261) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 4,
     "drip_stages": {
       "drip:1": 116,
-      "drip:2": 12,
+      "drip:2": 67,
       "drip:3": 12
     },
     "affiliate_clicks": {
-      "total": 346,
-      "last7d": 21,
+      "total": 347,
+      "last7d": 20,
       "by_slug": {
         "fiverr": 184,
-        "shopify": 102,
+        "shopify": 103,
         "wix": 54,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 420,
+      "rows_before_bot_filter": 421,
       "excluded_by_is_bot_flag": 74,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 291,
-      "ip_hash_coverage_pct": 85.2,
-      "note": "user_ip_hash is NULL on 62 of 420 rows (85% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 74 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 292,
+      "ip_hash_coverage_pct": 85.3,
+      "note": "user_ip_hash is NULL on 62 of 421 rows (85% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 74 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "scopebit_clicks": {
       "total": 2,
@@ -133,7 +133,7 @@
   "shipped_asset_performance": {
     "/tools/rfp-generator": {
       "pages_with_data": 3,
-      "impressions": 9,
+      "impressions": 10,
       "clicks": 0
     },
     "/tools/freelancer-quote-generator": {
@@ -153,37 +153,37 @@
     },
     "/cost/hire/": {
       "pages_with_data": 9,
-      "impressions": 209,
+      "impressions": 222,
       "clicks": 2
     },
     "/cost/app-like/": {
       "pages_with_data": 18,
-      "impressions": 60,
+      "impressions": 63,
       "clicks": 0
     },
     "/cost/industry/": {
-      "pages_with_data": 137,
-      "impressions": 993,
+      "pages_with_data": 138,
+      "impressions": 1029,
       "clicks": 10
     },
     "/software-development-budget-2027": {
       "pages_with_data": 1,
-      "impressions": 16,
+      "impressions": 17,
       "clicks": 1
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4338,
-      "clicks": 12
+      "impressions": 4528,
+      "clicks": 14
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1443,
-      "clicks": 12
+      "impressions": 1506,
+      "clicks": 13
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 849,
+      "impressions": 937,
       "clicks": 4
     }
   }
