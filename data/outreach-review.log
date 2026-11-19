@@ -544,3 +544,31 @@ hold     The WebDesign                    thewebdesignseo7@gmail.com         eas
 approve  MxD Digital                      kim_compass@mxd.digital            uk,western_europe,remo | none of the claimed platforms appears on the site (fine for custom-only shops)
    -> {'ok': True, 'emailed': True, 'provider': {'id': '107236bd-03d7-45cd-b66c-329fb69e02d1', 'name': 'MxD Digital', 'application_status': 'approved', 'active': True}}
 done: 11 reviewed, 10 held for the owner
+pending applications: 10
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; near-empty site; contact address not on own domain nor on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+done: 10 reviewed, 10 held for the owner
+pending applications: 12
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; near-empty site; contact address not on own domain nor on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+approve  JuegoTech                        marketing@juegotech.com            western_europe,uk,us,s | live site, own-domain address, market visible
+   -> {'ok': True, 'emailed': True, 'provider': {'id': 'eb472c16-b328-4a3e-b4a9-0f6a86c758a3', 'name': 'JuegoTech', 'application_status': 'approved', 'active': True}}
+approve  Landing Page Gods                richard@landingpagegods.com        remote                 | live site, own-domain address
+   -> {'ok': True, 'emailed': True, 'provider': {'id': 'aec523b8-5fab-46f0-b567-b81269353842', 'name': 'Landing Page Gods', 'application_status': 'approved', 'active': True}}
+done: 12 reviewed, 10 held for the owner
