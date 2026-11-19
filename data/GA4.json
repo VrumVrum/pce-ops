@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-18T16:35:31Z",
+  "generated_utc": "2026-11-19T04:35:30Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "701",
+      "sessions": "702",
       "users": "659",
-      "engagementRate": "0.21825962910128388",
-      "avgDuration": "21.480929142653352"
+      "engagementRate": "0.22079772079772081",
+      "avgDuration": "25.567600619658123"
     },
     {
       "channel": "Organic Search",
@@ -17,18 +17,11 @@
       "avgDuration": "73.230776123287669"
     },
     {
-      "channel": "Unassigned",
-      "sessions": "10",
-      "users": "10",
-      "engagementRate": "0.1",
-      "avgDuration": "91.7930565"
-    },
-    {
       "channel": "AI Assistant",
       "sessions": "7",
       "users": "5",
-      "engagementRate": "0.5714285714285714",
-      "avgDuration": "20.64998385714286"
+      "engagementRate": "0.7142857142857143",
+      "avgDuration": "49.985488999999994"
     },
     {
       "channel": "Email",
@@ -36,15 +29,22 @@
       "users": "4",
       "engagementRate": "0",
       "avgDuration": "2.4803475"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "3",
+      "users": "3",
+      "engagementRate": "0.33333333333333331",
+      "avgDuration": "29.974422"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3414",
+      "sessions": "3417",
       "users": "3176",
-      "engagementRate": "0.25659050966608082",
-      "avgDuration": "21.424949776508491"
+      "engagementRate": "0.25695054141059409",
+      "avgDuration": "22.252005514486392"
     },
     {
       "channel": "Organic Search",
@@ -54,18 +54,18 @@
       "avgDuration": "109.58993581294963"
     },
     {
-      "channel": "Unassigned",
-      "sessions": "35",
-      "users": "32",
-      "engagementRate": "0.17142857142857143",
-      "avgDuration": "86.535334342857141"
-    },
-    {
       "channel": "AI Assistant",
       "sessions": "32",
       "users": "23",
-      "engagementRate": "0.6875",
-      "avgDuration": "195.82594234375"
+      "engagementRate": "0.71875",
+      "avgDuration": "202.24308409374999"
+    },
+    {
+      "channel": "Unassigned",
+      "sessions": "28",
+      "users": "25",
+      "engagementRate": "0.21428571428571427",
+      "avgDuration": "78.597478678571434"
     },
     {
       "channel": "Referral",
@@ -86,7 +86,7 @@
     {
       "source": "claude.ai",
       "sessions": "17",
-      "engagementRate": "0.52941176470588236"
+      "engagementRate": "0.58823529411764708"
     },
     {
       "source": "chatgpt.com",
@@ -108,8 +108,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3414",
-      "engagementRate": "0.25659050966608082"
+      "sessions": "3417",
+      "engagementRate": "0.25695054141059409"
     },
     {
       "source": "google",
@@ -122,19 +122,19 @@
       "engagementRate": "0.41666666666666669"
     },
     {
-      "source": "(not set)",
-      "sessions": "23",
-      "engagementRate": "0"
-    },
-    {
       "source": "claude.ai",
       "sessions": "17",
-      "engagementRate": "0.52941176470588236"
+      "engagementRate": "0.58823529411764708"
     },
     {
       "source": "duckduckgo",
       "sessions": "17",
       "engagementRate": "0.52941176470588236"
+    },
+    {
+      "source": "(not set)",
+      "sessions": "16",
+      "engagementRate": "0"
     },
     {
       "source": "chatgpt.com",
@@ -307,8 +307,8 @@
     },
     {
       "landing": "/calculator",
-      "sessions": "243",
-      "engagementRate": "0.38683127572016462"
+      "sessions": "241",
+      "engagementRate": "0.39004149377593361"
     },
     {
       "landing": "/",
@@ -317,8 +317,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "103",
-      "engagementRate": "0.029126213592233011"
+      "sessions": "105",
+      "engagementRate": "0.028571428571428571"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
