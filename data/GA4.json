@@ -1,13 +1,13 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-20T16:35:33Z",
+  "generated_utc": "2026-11-21T04:35:29Z",
   "channels_7d": [
     {
       "channel": "Direct",
-      "sessions": "504",
+      "sessions": "505",
       "users": "458",
-      "engagementRate": "0.251984126984127",
-      "avgDuration": "38.8457804484127"
+      "engagementRate": "0.25742574257425743",
+      "avgDuration": "47.602649065346533"
     },
     {
       "channel": "Organic Search",
@@ -21,7 +21,7 @@
       "sessions": "10",
       "users": "10",
       "engagementRate": "0.3",
-      "avgDuration": "3.0118275999999997"
+      "avgDuration": "3.0118276"
     },
     {
       "channel": "AI Assistant",
@@ -29,13 +29,6 @@
       "users": "5",
       "engagementRate": "1",
       "avgDuration": "103.76843899999999"
-    },
-    {
-      "channel": "Unassigned",
-      "sessions": "5",
-      "users": "4",
-      "engagementRate": "0",
-      "avgDuration": "2.1860738"
     },
     {
       "channel": "Referral",
@@ -48,10 +41,10 @@
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3374",
+      "sessions": "3369",
       "users": "3125",
-      "engagementRate": "0.26289270895080025",
-      "avgDuration": "23.054680117071722"
+      "engagementRate": "0.26417334520629265",
+      "avgDuration": "24.4130469418225"
     },
     {
       "channel": "Organic Search",
@@ -69,10 +62,10 @@
     },
     {
       "channel": "Unassigned",
-      "sessions": "30",
-      "users": "27",
-      "engagementRate": "0.16666666666666666",
-      "avgDuration": "56.400185833333332"
+      "sessions": "25",
+      "users": "23",
+      "engagementRate": "0.2",
+      "avgDuration": "67.24300824"
     },
     {
       "channel": "Referral",
@@ -115,8 +108,8 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3374",
-      "engagementRate": "0.26289270895080025"
+      "sessions": "3369",
+      "engagementRate": "0.26417334520629265"
     },
     {
       "source": "google",
@@ -129,11 +122,6 @@
       "engagementRate": "0.40677966101694918"
     },
     {
-      "source": "(not set)",
-      "sessions": "19",
-      "engagementRate": "0"
-    },
-    {
       "source": "claude.ai",
       "sessions": "18",
       "engagementRate": "0.61111111111111116"
@@ -142,6 +130,11 @@
       "source": "duckduckgo",
       "sessions": "16",
       "engagementRate": "0.625"
+    },
+    {
+      "source": "(not set)",
+      "sessions": "14",
+      "engagementRate": "0"
     },
     {
       "source": "chatgpt.com",
@@ -319,13 +312,13 @@
     },
     {
       "landing": "/",
-      "sessions": "176",
-      "engagementRate": "0.44886363636363635"
+      "sessions": "174",
+      "engagementRate": "0.45402298850574713"
     },
     {
       "landing": "(not set)",
-      "sessions": "105",
-      "engagementRate": "0.028571428571428571"
+      "sessions": "109",
+      "engagementRate": "0.027522935779816515"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
