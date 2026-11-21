@@ -1,24 +1,24 @@
 {
-  "generated_utc": "2026-11-21T04:35:15.039851Z",
+  "generated_utc": "2026-11-21T16:36:32.256091Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-11-21",
     "totals_28d": {
-      "clicks": 172,
-      "impressions": 42866,
-      "ctr": 0.401,
-      "position": 16.83
+      "clicks": 179,
+      "impressions": 45003,
+      "ctr": 0.398,
+      "position": 16.73
     },
     "totals_7d": {
-      "clicks": 42,
-      "impressions": 11953,
-      "ctr": 0.351,
-      "position": 15.06
+      "clicks": 49,
+      "impressions": 14090,
+      "ctr": 0.348,
+      "position": 15.02
     },
     "totals_90d": {
-      "clicks": 558,
-      "impressions": 138074,
-      "ctr": 0.404,
+      "clicks": 565,
+      "impressions": 140211,
+      "ctr": 0.403,
       "position": 14.76
     },
     "totals_28d_prev": {
@@ -56,28 +56,28 @@
       ]
     },
     "junk_28d": {
-      "impressions": 3974,
-      "queries": 116,
+      "impressions": 4129,
+      "queries": 118,
       "sample": [
-        "site.revenuecat.com \"2026\" \"$72\"",
-        "free website cost calculator tool on nemin io",
-        "freelance web developer rates caribbean 2025 2026 hourly"
+        "\"ai app development cost",
+        "\"how do i estimate total cost including delivery fees, install kits",
+        "site.revenuecat.com \"2026\" \"$72\""
       ]
     },
     "totals_28d_clean": {
-      "clicks": 172,
-      "impressions": 38892,
-      "ctr": 0.442
+      "clicks": 179,
+      "impressions": 40874,
+      "ctr": 0.438
     },
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 841,
+    "leads_total": 888,
     "leads_by_context": {
-      "unsub": 37,
+      "drip:1": 252,
+      "unsub": 38,
+      "sys:lastrun": 124,
       "sponsor-offer": 333,
-      "drip:1": 207,
-      "sys:lastrun": 123,
       "drip:2": 108,
       "sponsor-skip": 2,
       "quotes": 3,
@@ -99,25 +99,25 @@
     "real_human_leads_note": "real_human_leads (351) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (351) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
     "build_intent_count": 4,
     "drip_stages": {
-      "drip:1": 207,
+      "drip:1": 252,
       "drip:2": 108,
       "drip:3": 12
     },
     "affiliate_clicks": {
-      "total": 359,
-      "last7d": 29,
+      "total": 360,
+      "last7d": 28,
       "by_slug": {
         "fiverr": 192,
-        "shopify": 106,
+        "shopify": 107,
         "wix": 55,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 433,
+      "rows_before_bot_filter": 434,
       "excluded_by_is_bot_flag": 74,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 304,
+      "distinct_ip_hashes": 305,
       "ip_hash_coverage_pct": 85.7,
-      "note": "user_ip_hash is NULL on 62 of 433 rows (86% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 74 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "note": "user_ip_hash is NULL on 62 of 434 rows (86% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 74 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "scopebit_clicks": {
       "total": 3,
@@ -153,17 +153,17 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 189,
+      "impressions": 199,
       "clicks": 2
     },
     "/cost/app-like/": {
-      "pages_with_data": 18,
-      "impressions": 58,
+      "pages_with_data": 20,
+      "impressions": 61,
       "clicks": 0
     },
     "/cost/industry/": {
-      "pages_with_data": 130,
-      "impressions": 979,
+      "pages_with_data": 132,
+      "impressions": 1003,
       "clicks": 11
     },
     "/software-development-budget-2027": {
@@ -173,17 +173,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4218,
+      "impressions": 4393,
       "clicks": 14
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1443,
-      "clicks": 13
+      "impressions": 1482,
+      "clicks": 14
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 939,
+      "impressions": 1019,
       "clicks": 6
     }
   }

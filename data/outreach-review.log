@@ -596,3 +596,29 @@ hold     Digital Country                  info@digitalcountry.in             sou
 hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; site does not answer: HTTP Error 503: Service Unavailable
 hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
 done: 10 reviewed, 10 held for the owner
+pending applications: 11
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | site does not answer: <urlopen error [WinError 10060] A connection attem
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; site does not answer: HTTP Error 503: Service Unavailable
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+approve  Despres AI Connect               david@despresai.com                uk,western_europe      | none of the claimed platforms appears on the site (fine for custom-only shops)
+   -> {'ok': True, 'emailed': True, 'provider': {'id': '6b0c4ac4-77b3-44d6-9d7a-64da1b5b58d1', 'name': 'Despres AI Connect', 'application_status': 'approved', 'active': True}}
+done: 11 reviewed, 10 held for the owner
+pending applications: 10
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | site does not answer: <urlopen error [WinError 10060] A connection attem
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; site does not answer: HTTP Error 503: Service Unavailable
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+done: 10 reviewed, 10 held for the owner
