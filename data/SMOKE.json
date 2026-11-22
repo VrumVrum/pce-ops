@@ -1,8 +1,8 @@
 {
-  "generated_utc": "2026-11-22T04:36:40.608Z",
-  "passed": 14,
+  "generated_utc": "2026-11-22T16:36:24.250Z",
+  "passed": 15,
   "total": 15,
-  "all_green": false,
+  "all_green": true,
   "checks": [
     {
       "name": "load /",
@@ -66,8 +66,8 @@
     },
     {
       "name": "mobile menu iPhone 14 /calculator",
-      "ok": false,
-      "detail": "drawer=false links=14"
+      "ok": true,
+      "detail": "drawer=true links=14"
     },
     {
       "name": "mobile menu iPhone 14 /cost/industry/dentist",
