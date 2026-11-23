@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-11-23T04:35:14.437878Z",
+  "generated_utc": "2026-11-23T16:35:13.119066Z",
   "note": "REAL numbers pulled by the desktop for the blind cloud loop. See docs/OS/ledger/KPIS.md for interpretation.",
   "gsc": {
     "generated": "2026-11-23",
     "totals_28d": {
-      "clicks": 169,
-      "impressions": 44330,
-      "ctr": 0.381,
-      "position": 16.43
+      "clicks": 174,
+      "impressions": 45894,
+      "ctr": 0.379,
+      "position": 16.42
     },
     "totals_7d": {
-      "clicks": 44,
-      "impressions": 12754,
-      "ctr": 0.345,
-      "position": 14.98
+      "clicks": 49,
+      "impressions": 14318,
+      "ctr": 0.342,
+      "position": 15.11
     },
     "totals_90d": {
-      "clicks": 564,
-      "impressions": 139383,
-      "ctr": 0.405,
-      "position": 14.69
+      "clicks": 569,
+      "impressions": 140947,
+      "ctr": 0.404,
+      "position": 14.7
     },
     "totals_28d_prev": {
       "clicks": 171,
@@ -56,8 +56,8 @@
       ]
     },
     "junk_28d": {
-      "impressions": 3953,
-      "queries": 115,
+      "impressions": 4057,
+      "queries": 120,
       "sample": [
         "\"ai app development cost",
         "\"how do i estimate total cost including delivery fees, install kits",
@@ -65,66 +65,63 @@
       ]
     },
     "totals_28d_clean": {
-      "clicks": 169,
-      "impressions": 40377,
-      "ctr": 0.419
+      "clicks": 174,
+      "impressions": 41837,
+      "ctr": 0.416
     },
     "citation_floor_alerts": []
   },
   "supabase": {
-    "leads_total": 1036,
+    "leads_total": 1216,
     "leads_by_context": {
-      "quotes": 5,
-      "unsub": 41,
-      "drip:3": 66,
-      "drip:2": 151,
-      "drip:1": 297,
-      "sys:lastrun": 89,
-      "sponsor-offer": 333,
+      "sponsor-offer": 343,
+      "unsub": 33,
+      "drip:3": 95,
+      "drip:2": 182,
+      "drip:1": 330,
+      "sys:lastrun": 11,
+      "quotes": 3,
       "sponsor-skip": 2,
-      "api_key": 3,
-      "unknown": 2,
-      "results": 7,
-      "results:build": 4
+      "api_key": 1
     },
-    "real_human_leads": 353,
-    "api_keys": 3,
-    "real_human_leads_strict": 353,
+    "real_human_leads": 348,
+    "api_keys": 1,
+    "real_human_leads_strict": 348,
     "bot_lead_share": 0.0,
     "bot_leads": 0,
-    "last_strict_human_lead_utc": "2026-11-22T18:55:42",
+    "last_strict_human_lead_utc": "2026-11-23T14:11:31",
     "real_human_leads_strict_7d": 229,
-    "real_human_leads_strict_28d": 341,
+    "real_human_leads_strict_28d": 348,
     "bot_lead_fleets": [],
-    "real_human_leads_note": "real_human_leads (353) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (353) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
-    "build_intent_count": 4,
+    "real_human_leads_note": "real_human_leads (348) is the ORIGINAL field and still counts every lead-context row regardless of who sent it. real_human_leads_strict (348) additionally drops every row whose user_agent is shared across >=5 distinct ip_hash values, i.e. a bot fleet. 0.0% of the headline was that fleet. Quote the strict number as the conversion KPI; the gross number is kept only so the two can be compared over time.",
+    "build_intent_count": 0,
     "drip_stages": {
-      "drip:1": 297,
-      "drip:2": 151,
-      "drip:3": 66
+      "drip:1": 330,
+      "drip:2": 182,
+      "drip:3": 95
     },
     "affiliate_clicks": {
-      "total": 365,
-      "last7d": 25,
+      "total": 369,
+      "last7d": 28,
       "by_slug": {
-        "fiverr": 194,
-        "shopify": 110,
+        "fiverr": 197,
+        "shopify": 111,
         "wix": 55,
         "hostinger": 6
       },
-      "rows_before_bot_filter": 440,
+      "rows_before_bot_filter": 444,
       "excluded_by_is_bot_flag": 75,
       "residual_bot_ua_after_filter": 0,
-      "distinct_ip_hashes": 311,
-      "ip_hash_coverage_pct": 85.9,
-      "note": "user_ip_hash is NULL on 62 of 440 rows (86% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 75 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
+      "distinct_ip_hashes": 315,
+      "ip_hash_coverage_pct": 86.0,
+      "note": "user_ip_hash is NULL on 62 of 444 rows (86% coverage), so these clicks CANNOT be de-duplicated per visitor: \"total\" is click events, never unique people, and no unique-clicker number can honestly be derived until the /go route starts stamping the hash. is_bot excluded 75 row(s); 0 row(s) still carry a non-browser user_agent after that filter."
     },
     "scopebit_clicks": {
-      "total": 5,
+      "total": 6,
       "last7d": 4,
-      "last28d": 5,
+      "last28d": 6,
       "by_placement": {
-        "footer": 5
+        "footer": 6
       },
       "excluded_by_is_bot_flag": 1
     },
@@ -153,7 +150,7 @@
     },
     "/cost/hire/": {
       "pages_with_data": 10,
-      "impressions": 179,
+      "impressions": 188,
       "clicks": 1
     },
     "/cost/app-like/": {
@@ -163,8 +160,8 @@
     },
     "/cost/industry/": {
       "pages_with_data": 128,
-      "impressions": 969,
-      "clicks": 11
+      "impressions": 994,
+      "clicks": 12
     },
     "/software-development-budget-2027": {
       "pages_with_data": 1,
@@ -173,17 +170,17 @@
     },
     "/freelance-website-cost": {
       "pages_with_data": 1,
-      "impressions": 4100,
+      "impressions": 4181,
       "clicks": 12
     },
     "/restaurant-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1405,
+      "impressions": 1445,
       "clicks": 10
     },
     "/nonprofit-website-cost": {
       "pages_with_data": 1,
-      "impressions": 1022,
+      "impressions": 1051,
       "clicks": 7
     }
   }
