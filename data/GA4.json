@@ -1,6 +1,6 @@
 {
   "property": "532181981",
-  "generated_utc": "2026-11-23T16:35:28Z",
+  "generated_utc": "2026-11-24T04:35:30Z",
   "channels_7d": [
     {
       "channel": "Direct",
@@ -42,23 +42,23 @@
       "sessions": "3",
       "users": "3",
       "engagementRate": "0.33333333333333331",
-      "avgDuration": "503.08072466666664"
+      "avgDuration": "924.54504333333341"
     }
   ],
   "channels_28d": [
     {
       "channel": "Direct",
-      "sessions": "3310",
+      "sessions": "3311",
       "users": "3094",
-      "engagementRate": "0.27673716012084593",
-      "avgDuration": "25.33820279063444"
+      "engagementRate": "0.27665357897916037",
+      "avgDuration": "25.330550056478405"
     },
     {
       "channel": "Organic Search",
-      "sessions": "285",
+      "sessions": "286",
       "users": "234",
-      "engagementRate": "0.48771929824561405",
-      "avgDuration": "119.56631536140353"
+      "engagementRate": "0.48951048951048953",
+      "avgDuration": "119.14825132167833"
     },
     {
       "channel": "AI Assistant",
@@ -79,7 +79,7 @@
       "sessions": "24",
       "users": "24",
       "engagementRate": "0.20833333333333334",
-      "avgDuration": "130.7846855"
+      "avgDuration": "183.46772533333333"
     },
     {
       "channel": "Referral",
@@ -115,13 +115,13 @@
   "top_sources_28d": [
     {
       "source": "(direct)",
-      "sessions": "3310",
-      "engagementRate": "0.27673716012084593"
+      "sessions": "3311",
+      "engagementRate": "0.27665357897916037"
     },
     {
       "source": "google",
-      "sessions": "196",
-      "engagementRate": "0.49489795918367346"
+      "sessions": "197",
+      "engagementRate": "0.49746192893401014"
     },
     {
       "source": "bing",
@@ -314,8 +314,8 @@
     },
     {
       "landing": "(not set)",
-      "sessions": "106",
-      "engagementRate": "0.018867924528301886"
+      "sessions": "109",
+      "engagementRate": "0.01834862385321101"
     },
     {
       "landing": "/?subject=hafhcfdevcf",
