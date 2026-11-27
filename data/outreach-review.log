@@ -759,3 +759,35 @@ hold     Swan Web                         hello@swanweb.co.uk                uk 
 approve  Albion Web Studio                partners@albionsite.com            eastern_europe,uk,us   | live site, own-domain address, market visible
    -> {'ok': True, 'emailed': True, 'provider': {'id': 'c4f6ff97-4197-40dd-85ea-ad377aa3c2bc', 'name': 'Albion Web Studio', 'application_status': 'approved', 'active': True}}
 done: 13 reviewed, 12 held for the owner
+pending applications: 14
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; site does not answer: HTTP Error 503: Service Unavailable
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+hold     Cascon Digital                   info@cascondigital.com             south_asia             | offshore signals (+91 82816 63376) and no sign of the claimed market
+hold     Swan Web                         hello@swanweb.co.uk                uk                     | claimed market not visible on the site
+hold     Orange Dice Solutions            info@orangedice.org                south_asia             | offshore signals (+91 9809558855) and no sign of the claimed market
+hold     Orange Dice Solutions            info@orangedice.org                us,south_asia          | offshore signals (+91 9809558855) and no sign of the claimed market; claimed market not visible on the site
+done: 14 reviewed, 14 held for the owner
+pending applications: 14
+hold     RANT                             rantovov5@gmail.com                eastern_europe,remote  | contact address not on own domain nor on the site
+hold     Carlos Manzano Sánchez           hola@carlosmanzano.es              western_europe         | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     Detailed In Design               coding-box@detailedindesign.com    us                     | claimed market not visible on the site
+hold     House Call SEO                   liorqm@gmail.com                   us                     | claimed market not visible on the site; none of the claimed platforms appears on the site (fine for custom-only shops)
+hold     March Code                       info@march-code.tech               western_europe,us      | claimed market not visible on the site
+hold     Experts IT Solution              expertsits786@gmail.com            remote                 | contact address not on own domain nor on the site
+hold     madsalt (Denys Zaichenko)        yes@madsalt.tech                   western_europe,uk,us   | claimed market not visible on the site
+hold     Digital Country                  info@digitalcountry.in             south_asia             | offshore signals (+91 9549495491) and no sign of the claimed market
+hold     CPC AI Inc.                      yyhak12345@gmail.com               remote                 | free-hosting site; site does not answer: HTTP Error 503: Service Unavailable
+hold     The WebDesign                    thewebdesignseo7@gmail.com         eastern_europe         | contact address not on own domain nor on the site; claimed market not visible on the site
+hold     Cascon Digital                   info@cascondigital.com             south_asia             | offshore signals (+91 82816 63376) and no sign of the claimed market
+hold     Swan Web                         hello@swanweb.co.uk                uk                     | claimed market not visible on the site
+hold     Orange Dice Solutions            info@orangedice.org                south_asia             | offshore signals (+91 9809558855) and no sign of the claimed market
+hold     Orange Dice Solutions            info@orangedice.org                us,south_asia          | offshore signals (+91 9809558855) and no sign of the claimed market; claimed market not visible on the site
+done: 14 reviewed, 14 held for the owner
